@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name='generator' content='Pluto 1.6.2 on Ruby 3.0.4 (2022-04-12) [x86_64-linux]'>
+
+  <title>Theory of Computing Report</title>
+
+  <link rel="alternate" type="application/rss+xml" title="Posts (RSS)" href="rss20.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Posts (Atom)" href="atom.xml" />
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel='stylesheet' type='text/css' href='css/font-awesome.css'>
+  <link rel='stylesheet' type='text/css' href='css/blank.css'>
+</head>
+<body>
+  <div id='navwrap'>
+    <div id='nav'>
+      <p>
+        Last Update
+      </p>
+      <p class='small'>
+        
+          <time class='timeago' datetime="2022-08-17T09:45:35Z">just now</time>
+        
+      </p>
+
+      <p>Feeds</p>
+      <ul class='subscriptions small' >
+      
+        <li>
+          <a href='http://arxiv.org/rss/cs.CC'><img src='i/feed.png'></a>
+          <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a>
+          
+        </li>
+      
+        <li>
+          <a href='http://arxiv.org/rss/cs.CG'><img src='i/feed.png'></a>
+          <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a>
+          
+        </li>
+      
+        <li>
+          <a href='http://arxiv.org/rss/cs.DS'><img src='i/feed.png'></a>
+          <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a>
+          
+        </li>
+      
+      </ul>
+
+      <p class='small'><a href="opml.xml">OPML feed</a> of all feeds.</p>
+      <p class='small'>Subscribe to the <a href="atom.xml">Atom feed</a> or <a href="rss20.xml">RSS feed</a> to stay up to date.</p>
+      <p class='small'>Powered by <a href='https://github.com/feedreader'>Pluto</a>.</p>
+    </div>
+  </div>
+
+  <div id='opts'>
+    <div style='width: 100%; text-align: right;'>
+    <img src='i/view-headlines.png' id='show-headlines' title='Show Headlines Only' width='24' height='24'>
+    <img src='i/view-snippets.png' id='show-snippets' title='Show Snippets' width='24' height='24'>
+    <img src='i/view-standard.png' id='show-fulltext' title='Show Full Text' width='24' height='24'>
+    </div>
+  </div>
+
+  <h1>
+    Theory of Computing Report
+  </h1>
+
+  <div id="articles">
+    
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Wednesday, August 17
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07730'>Direct Sum Theorems From Fortification</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Hao Wu</p><p>We revisit the direct sum theorems in communication complexity which askes
+whether the resource to solve $n$ communication problems together is
+(approximately) the sum of resources to solve these problems separately. Our
+work starts with the observation that Meir and Dinur's fortification lemma for
+protocol size over rectangles can be generalized to a general fortification
+
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Wu_H/0/1/0/all/0/1">Hao Wu</a></p><p>We revisit the direct sum theorems in communication complexity which askes
+whether the resource to solve $n$ communication problems together is
+(approximately) the sum of resources to solve these problems separately. Our
+work starts with the observation that Meir and Dinur's fortification lemma for
+protocol size over rectangles can be generalized to a general fortification
+lemma for a sub-additive measure over set. By applying this lemma to the case
+of cover number, we obtain a dual form of cover number, called
+``$\delta$-fooling set'' which is a generalized fooling set. Given a
+communication problem $S\subseteq (X\times Y) \times Z$, let $\Lambda \subseteq
+X\times Y$ be a $\delta$-fooling set of $S$, then given any subset
+$\tilde{\Lambda} \subseteq \Lambda$ such that $|\tilde{\Lambda}|/{|\Lambda|} &gt;
+\delta$, there is no monochromatic rectangle that covers the subset
+$\tilde{\Lambda}$. Particularly, there is a $\frac{16\log|X| |Y|}{\mathsf{
+Cov}(S)}$-fooling set of communication problem $S$. With this fact, we are able
+to reprove the classic direct sum theorem of cover number with a simple double
+counting argument. And we prove a new direct sum theorem about protocol size
+which imply a better direct sum theorem for two functions in terms of protocol
+size. Formally, let $\mathsf{L}$ denote the protocol szie, given a
+communication problem $F:A \times B \rightarrow
+</p>
+<p>\{0,1\}$, $
+</p>
+<p>\log\mathsf{L}\left(F\times F\right)\geq
+</p>
+<p>\log \mathsf{L}\left(F\right)
++\Omega\left(\sqrt{\log\mathsf{L}\left(F\right)}\right)-\log\log|A||B| -4$.We
+also prove a tight cover number lower bound for the agree problem introduced by
+Amos Beimel et al.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07567'>Computing Smallest Convex Intersecting Polygons</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Antonios Antoniadis, Mark de Berg, S&#xe1;ndor Kisfaludi-Bak, Antonis Skarlatos</p><p>A polygon C is an intersecting polygon for a set O of objects in the plane if
+C intersects each object in O, where the polygon includes its interior. We
+study the problem of computing the minimum-perimeter intersecting polygon and
+the minimum-area convex intersecting polygon for a given set O of object
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Antoniadis_A/0/1/0/all/0/1">Antonios Antoniadis</a>, <a href="http://arxiv.org/find/cs/1/au:+Berg_M/0/1/0/all/0/1">Mark de Berg</a>, <a href="http://arxiv.org/find/cs/1/au:+Kisfaludi_Bak_S/0/1/0/all/0/1">S&#xe1;ndor Kisfaludi-Bak</a>, <a href="http://arxiv.org/find/cs/1/au:+Skarlatos_A/0/1/0/all/0/1">Antonis Skarlatos</a></p><p>A polygon C is an intersecting polygon for a set O of objects in the plane if
+C intersects each object in O, where the polygon includes its interior. We
+study the problem of computing the minimum-perimeter intersecting polygon and
+the minimum-area convex intersecting polygon for a given set O of objects. We
+present an FPTAS for both problems for the case where O is a set of possibly
+intersecting convex polygons in the plane of total complexity n.
+</p>
+<p>Furthermore, we present an exact polynomial-time algorithm for the
+minimum-perimeter intersecting polygon for the case where O is a set of n
+possibly intersecting segments in the plane. So far, polynomial-time exact
+algorithms were only known for the minimum perimeter intersecting polygon of
+lines or of disjoint segments.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07544'>Mean estimation when you have the source code; or, quantum Monte Carlo methods</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Robin Kothari, Ryan O&#x27;Donnell</p><p>Suppose $\boldsymbol{y}$ is a real random variable, and one is given access
+to ``the code'' that generates it (for example, a randomized or quantum circuit
+whose output is $\boldsymbol{y}$). We give a quantum procedure that runs the
+code $O(n)$ times and returns an estimate $\widehat{\boldsymbol{\mu}}$ for $\mu
+= \mathrm{E}[\boldsymbol{y}]$ that 
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+Kothari_R/0/1/0/all/0/1">Robin Kothari</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+ODonnell_R/0/1/0/all/0/1">Ryan O&#x27;Donnell</a></p><p>Suppose $\boldsymbol{y}$ is a real random variable, and one is given access
+to ``the code'' that generates it (for example, a randomized or quantum circuit
+whose output is $\boldsymbol{y}$). We give a quantum procedure that runs the
+code $O(n)$ times and returns an estimate $\widehat{\boldsymbol{\mu}}$ for $\mu
+= \mathrm{E}[\boldsymbol{y}]$ that with high probability satisfies
+$|\widehat{\boldsymbol{\mu}} - \mu| \leq \sigma/n$, where $\sigma =
+\mathrm{stddev}[\boldsymbol{y}]$. This dependence on $n$ is optimal for quantum
+algorithms. One may compare with classical algorithms, which can only achieve
+the quadratically worse $|\widehat{\boldsymbol{\mu}} - \mu| \leq
+\sigma/\sqrt{n}$. Our method improves upon previous works, which either made
+additional assumptions about $\boldsymbol{y}$, and/or assumed the algorithm
+knew an a priori bound on $\sigma$, and/or used additional logarithmic factors
+beyond $O(n)$. The central subroutine for our result is essentially Grover's
+algorithm but with complex phases.ally Grover's algorithm but with complex
+phases.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07410'>Private Query Release via the Johnson-Lindenstrauss Transform</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Aleksandar Nikolov</p><p>We introduce a new method for releasing answers to statistical queries with
+differential privacy, based on the Johnson-Lindenstrauss lemma. The key idea is
+to randomly project the query answers to a lower dimensional space so that the
+distance between any two vectors of feasible query answers is preserved up to
+an additive error. Then we answer the projected que
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Nikolov_A/0/1/0/all/0/1">Aleksandar Nikolov</a></p><p>We introduce a new method for releasing answers to statistical queries with
+differential privacy, based on the Johnson-Lindenstrauss lemma. The key idea is
+to randomly project the query answers to a lower dimensional space so that the
+distance between any two vectors of feasible query answers is preserved up to
+an additive error. Then we answer the projected queries using a simple
+noise-adding mechanism, and lift the answers up to the original dimension.
+Using this method, we give, for the first time, purely differentially private
+mechanisms with optimal worst case sample complexity under average error for
+answering a workload of $k$ queries over a universe of size $N$. As other
+applications, we give the first purely private efficient mechanisms with
+optimal sample complexity for computing the covariance of a bounded
+high-dimensional distribution, and for answering 2-way marginal queries. We
+also show that, up to the dependence on the error, a variant of our mechanism
+is nearly optimal for every given query workload.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07438'>Archimedes Meets Privacy: On Privately Estimating Quantiles in High Dimensions Under Minimal Assumptions</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Omri Ben-Eliezer, Dan Mikulincer, Ilias Zadik</p><p>The last few years have seen a surge of work on high dimensional statistics
+under privacy constraints, mostly following two main lines of work: the ``worst
+case'' line, which does not make any distributional assumptions on the input
+data; and the ``strong assumptions'' line, which assumes that the data is
+generated from specific famili
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Ben_Eliezer_O/0/1/0/all/0/1">Omri Ben-Eliezer</a>, <a href="http://arxiv.org/find/math/1/au:+Mikulincer_D/0/1/0/all/0/1">Dan Mikulincer</a>, <a href="http://arxiv.org/find/math/1/au:+Zadik_I/0/1/0/all/0/1">Ilias Zadik</a></p><p>The last few years have seen a surge of work on high dimensional statistics
+under privacy constraints, mostly following two main lines of work: the ``worst
+case'' line, which does not make any distributional assumptions on the input
+data; and the ``strong assumptions'' line, which assumes that the data is
+generated from specific families, e.g., subgaussian distributions. In this work
+we take a middle ground, obtaining new differentially private algorithms with
+polynomial sample complexity for estimating quantiles in high-dimensions, as
+well as estimating and sampling points of high Tukey depth, all working under
+very mild distributional assumptions. From the technical perspective, our work
+relies upon deep robustness results in the convex geometry literature,
+demonstrating how such results can be used in a private context.
+</p>
+<p>Our main object of interest is the (convex) floating body (FB), a notion
+going back to Archimedes, which is a robust and well studied high-dimensional
+analogue of the interquantile range. We show how one can privately, and with
+polynomially many samples, (a) output an approximate interior point of the FB
+-- e.g., ``a typical user'' in a high-dimensional database -- by leveraging the
+robustness of the Steiner point of the FB; and at the expense of polynomially
+many more samples, (b) produce an approximate uniform sample from the FB, by
+constructing a private noisy projection oracle.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07572'>Fine-Grained Complexity Lower Bounds for Families of Dynamic Graphs</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Monika Henzinger, Ami Paz, A. R. Sricharan</p><p>A dynamic graph algorithm is a data structure that answers queries about a
+property of the current graph while supporting graph modifications such as edge
+insertions and deletions. Prior work has shown strong conditional lower bounds
+for general dynamic graphs, yet graph families that arise in practice often
+exhibit structural properties 
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Henzinger_M/0/1/0/all/0/1">Monika Henzinger</a>, <a href="http://arxiv.org/find/cs/1/au:+Paz_A/0/1/0/all/0/1">Ami Paz</a>, <a href="http://arxiv.org/find/cs/1/au:+Sricharan_A/0/1/0/all/0/1">A. R. Sricharan</a></p><p>A dynamic graph algorithm is a data structure that answers queries about a
+property of the current graph while supporting graph modifications such as edge
+insertions and deletions. Prior work has shown strong conditional lower bounds
+for general dynamic graphs, yet graph families that arise in practice often
+exhibit structural properties that the existing lower bound constructions do
+not possess. We study three specific graph families that are ubiquitous, namely
+constant-degree graphs, power-law graphs, and expander graphs, and give the
+first conditional lower bounds for them. Our results show that even when
+restricting our attention to one of these graph classes, any algorithm for
+fundamental graph problems such as distance computation or approximation or
+maximum matching, cannot simultaneously achieve a sub-polynomial update time
+and query time. For example, we show that the same lower bounds as for general
+graphs hold for maximum matching and ($s,t$)-distance in constant-degree
+graphs, power-law graphs or expanders. Namely, in an $m$-edge graph, there
+exists no dynamic algorithms with both $O(m^{1/2 - \epsilon})$ update time and
+$ O(m^{1 -\epsilon})$ query time, for any small $\epsilon &gt; 0$. Note that for
+($s,t$)-distance the trivial dynamic algorithm achieves an almost matching
+upper bound of constant update time and $O(m)$ query time. We prove similar
+bounds for the other graph families and for other fundamental problems such as
+densest subgraph detection and perfect matching.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07582'>Deletion Robust Non-Monotone Submodular Maximization over Matroids</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Paul D&#xfc;tting, Federico Fusco, Silvio Lattanzi, Ashkan Norouzi-Fard, Morteza Zadimoghaddam</p><p>Maximizing a submodular function is a fundamental task in machine learning
+and in this paper we study the deletion robust version of the problem under the
+classic matroids constraint. Here the goal is to extract a small size summary
+of the dataset that contains a high value independent s
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Dutting_P/0/1/0/all/0/1">Paul D&#xfc;tting</a>, <a href="http://arxiv.org/find/cs/1/au:+Fusco_F/0/1/0/all/0/1">Federico Fusco</a>, <a href="http://arxiv.org/find/cs/1/au:+Lattanzi_S/0/1/0/all/0/1">Silvio Lattanzi</a>, <a href="http://arxiv.org/find/cs/1/au:+Norouzi_Fard_A/0/1/0/all/0/1">Ashkan Norouzi-Fard</a>, <a href="http://arxiv.org/find/cs/1/au:+Zadimoghaddam_M/0/1/0/all/0/1">Morteza Zadimoghaddam</a></p><p>Maximizing a submodular function is a fundamental task in machine learning
+and in this paper we study the deletion robust version of the problem under the
+classic matroids constraint. Here the goal is to extract a small size summary
+of the dataset that contains a high value independent set even after an
+adversary deleted some elements. We present constant-factor approximation
+algorithms, whose space complexity depends on the rank $k$ of the matroid and
+the number $d$ of deleted elements. In the centralized setting we present a
+$(4.597+O(\varepsilon))$-approximation algorithm with summary size $O(
+\frac{k+d}{\varepsilon^2}\log \frac{k}{\varepsilon})$ that is improved to a
+$(3.582+O(\varepsilon))$-approximation with $O(k + \frac{d}{\varepsilon^2}\log
+\frac{k}{\varepsilon})$ summary size when the objective is monotone. In the
+streaming setting we provide a $(9.435 + O(\varepsilon))$-approximation
+algorithm with summary size and memory $O(k + \frac{d}{\varepsilon^2}\log
+\frac{k}{\varepsilon})$; the approximation factor is then improved to
+$(5.582+O(\varepsilon))$ in the monotone case.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07728'>O(n log n) algorithm for finding a solution of Erd\H{o}s-Ginzburg-Ziv theorem</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Seokhwan Choi, Hanpil Kang, Dongjae Lim</p><p>Erd\H{o}s-Ginzburg-Ziv theorem is a popular theorem in additive number
+theory, which states any sequence of $2n-1$ integers contains a subsequence of
+$n$ elements, with their sum is a multiple of $n$. In this article, we provide
+an algorithm finding a solution of Erd\H{o}s-Ginzburg-Ziv in $O(n \log n)$
+time. This is the first known quasi-lin
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Choi_S/0/1/0/all/0/1">Seokhwan Choi</a>, <a href="http://arxiv.org/find/cs/1/au:+Kang_H/0/1/0/all/0/1">Hanpil Kang</a>, <a href="http://arxiv.org/find/cs/1/au:+Lim_D/0/1/0/all/0/1">Dongjae Lim</a></p><p>Erd\H{o}s-Ginzburg-Ziv theorem is a popular theorem in additive number
+theory, which states any sequence of $2n-1$ integers contains a subsequence of
+$n$ elements, with their sum is a multiple of $n$. In this article, we provide
+an algorithm finding a solution of Erd\H{o}s-Ginzburg-Ziv in $O(n \log n)$
+time. This is the first known quasi-linear time algorithm finding a solution of
+Erd\H{o}s-Ginzburg-Ziv theorem.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07789'>Polynomial kernel for immersion hitting in tournaments</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: &#x141;ukasz Bo&#x17c;yk, Micha&#x142; Pilipczuk</p><p>For a fixed simple digraph $H$ without isolated vertices, we consider the
+problem of deleting arcs from a given tournament to get a digraph which does
+not contain $H$ as an immersion. We prove that for every $H$, this problem
+admits a polynomial kernel when parameterized by the number of deleted arcs.
+The degree of the bound on the 
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bozyk_L/0/1/0/all/0/1">&#x141;ukasz Bo&#x17c;yk</a>, <a href="http://arxiv.org/find/cs/1/au:+Pilipczuk_M/0/1/0/all/0/1">Micha&#x142; Pilipczuk</a></p><p>For a fixed simple digraph $H$ without isolated vertices, we consider the
+problem of deleting arcs from a given tournament to get a digraph which does
+not contain $H$ as an immersion. We prove that for every $H$, this problem
+admits a polynomial kernel when parameterized by the number of deleted arcs.
+The degree of the bound on the kernel size depends on $H$.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07800'>New Parallel Order Maintenance Data Structure</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Bin Guo, Emil Sekerinski</p><p>The \emph{Order-Maintenance} (OM) data structure maintains a total order list
+of items for insertions, deletions, and comparisons. As a basic data structure,
+OM has many applications, such as maintaining the topological order, core
+numbers, and truss in graphs, and maintaining ordered sets in Unified Modeling
+Language (UML) Specification. The prevalence of
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Guo_B/0/1/0/all/0/1">Bin Guo</a>, <a href="http://arxiv.org/find/cs/1/au:+Sekerinski_E/0/1/0/all/0/1">Emil Sekerinski</a></p><p>The \emph{Order-Maintenance} (OM) data structure maintains a total order list
+of items for insertions, deletions, and comparisons. As a basic data structure,
+OM has many applications, such as maintaining the topological order, core
+numbers, and truss in graphs, and maintaining ordered sets in Unified Modeling
+Language (UML) Specification. The prevalence of multicore machines suggests
+parallelizing such a basic data structure. This paper proposes a new parallel
+OM data structure that supports insertions, deletions, and comparisons in
+parallel. Specifically, parallel insertions and deletions are synchronized by
+using locks efficiently, which achieve up to $7$x and $5.6$x speedups with $64$
+workers. One big advantage is that the comparisons are lock-free so that they
+can execute highly in parallel with other insertions and deletions, which
+achieve up to $34.4$x speedups with $64$ workers. Typical real applications
+maintain order lists that always have a much larger portion of comparisons than
+insertions and deletions. For example, in core maintenance, the number of
+comparisons is up to 297 times larger compared with insertions and deletions in
+certain graphs. This is why the lock-free order comparison is a breakthrough in
+practice.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <h3 class='item-title'>
+          <span class='item-caret'>
+            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+          </span>
+          <a href='http://arxiv.org/abs/2208.07851'>Optimal algorithms for learning quantum phase states</a>
+        </h3>
+        <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Discrete Structures and Algorithms</a></p>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Srinivasan Arunachalam, Sergey Bravyi, Arkopal Dutt, Theodore J. Yoder</p><p>We analyze the complexity of learning $n$-qubit quantum phase states. A
+degree-$d$ phase state is defined as a superposition of all $2^n$ basis vectors
+$x$ with amplitudes proportional to $(-1)^{f(x)}$, where $f$ is a degree-$d$
+Boolean polynomial over $n$ variables. We show that the sample complexity of
+learni
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+Arunachalam_S/0/1/0/all/0/1">Srinivasan Arunachalam</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Bravyi_S/0/1/0/all/0/1">Sergey Bravyi</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Dutt_A/0/1/0/all/0/1">Arkopal Dutt</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Yoder_T/0/1/0/all/0/1">Theodore J. Yoder</a></p><p>We analyze the complexity of learning $n$-qubit quantum phase states. A
+degree-$d$ phase state is defined as a superposition of all $2^n$ basis vectors
+$x$ with amplitudes proportional to $(-1)^{f(x)}$, where $f$ is a degree-$d$
+Boolean polynomial over $n$ variables. We show that the sample complexity of
+learning an unknown degree-$d$ phase state is $\Theta(n^d)$ if we allow
+separable measurements and $\Theta(n^{d-1})$ if we allow entangled
+measurements. Our learning algorithm based on separable measurements has
+runtime $\textsf{poly}(n)$ (for constant $d$) and is well-suited for near-term
+demonstrations as it requires only single-qubit measurements in the Pauli $X$
+and $Z$ bases. We show similar bounds on the sample complexity for learning
+generalized phase states with complex-valued amplitudes. We further consider
+learning phase states when $f$ has sparsity-$s$, degree-$d$ in its
+$\mathbb{F}_2$ representation (with sample complexity $O(2^d sn)$), $f$ has
+Fourier-degree-$t$ (with sample complexity $O(2^{2t})$), and learning quadratic
+phase states with $\varepsilon$-global depolarizing noise (with sample
+complexity $O(n^{1+\varepsilon})$). These learning algorithms give us a
+procedure to learn the diagonal unitaries of the Clifford hierarchy and IQP
+circuits.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-17T00:30:00Z">9 hours ago</time>
+        </div>
+      </div>
+    </article>
+  
+  </div>
+
+  <script src='js/jquery-2.0.3.min.js'></script>
+  <script src="js/jquery.timeago.js" type="text/javascript"></script>
+  <script>
+    jQuery(document).ready(function() {
+      jQuery("time.timeago").timeago();
+    });
+  </script>
+  <script src='js/blank.js'></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

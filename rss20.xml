@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+<channel>
+  <title>Theory of Computing Report</title>
+  <link></link>
+  <language>en</language>
+  <description></description>
+
+
+<item>
+  <title>Direct Sum Theorems From Fortification</title>
+  <guid>http://arxiv.org/abs/2208.07730</guid>
+  <link>http://arxiv.org/abs/2208.07730</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wu_H/0/1/0/all/0/1&quot;&gt;Hao Wu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We revisit the direct sum theorems in communication complexity which askes
+whether the resource to solve $n$ communication problems together is
+(approximately) the sum of resources to solve these problems separately. Our
+work starts with the observation that Meir and Dinur&#39;s fortification lemma for
+protocol size over rectangles can be generalized to a general fortification
+lemma for a sub-additive measure over set. By applying this lemma to the case
+of cover number, we obtain a dual form of cover number, called
+``$\delta$-fooling set&#39;&#39; which is a generalized fooling set. Given a
+communication problem $S\subseteq (X\times Y) \times Z$, let $\Lambda \subseteq
+X\times Y$ be a $\delta$-fooling set of $S$, then given any subset
+$\tilde{\Lambda} \subseteq \Lambda$ such that $|\tilde{\Lambda}|/{|\Lambda|} &amp;gt;
+\delta$, there is no monochromatic rectangle that covers the subset
+$\tilde{\Lambda}$. Particularly, there is a $\frac{16\log|X| |Y|}{\mathsf{
+Cov}(S)}$-fooling set of communication problem $S$. With this fact, we are able
+to reprove the classic direct sum theorem of cover number with a simple double
+counting argument. And we prove a new direct sum theorem about protocol size
+which imply a better direct sum theorem for two functions in terms of protocol
+size. Formally, let $\mathsf{L}$ denote the protocol szie, given a
+communication problem $F:A \times B \rightarrow
+&lt;/p&gt;
+&lt;p&gt;\{0,1\}$, $
+&lt;/p&gt;
+&lt;p&gt;\log\mathsf{L}\left(F\times F\right)\geq
+&lt;/p&gt;
+&lt;p&gt;\log \mathsf{L}\left(F\right)
++\Omega\left(\sqrt{\log\mathsf{L}\left(F\right)}\right)-\log\log|A||B| -4$.We
+also prove a tight cover number lower bound for the agree problem introduced by
+Amos Beimel et al.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Computing Smallest Convex Intersecting Polygons</title>
+  <guid>http://arxiv.org/abs/2208.07567</guid>
+  <link>http://arxiv.org/abs/2208.07567</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Antoniadis_A/0/1/0/all/0/1&quot;&gt;Antonios Antoniadis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Berg_M/0/1/0/all/0/1&quot;&gt;Mark de Berg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kisfaludi_Bak_S/0/1/0/all/0/1&quot;&gt;S&amp;#xe1;ndor Kisfaludi-Bak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Skarlatos_A/0/1/0/all/0/1&quot;&gt;Antonis Skarlatos&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A polygon C is an intersecting polygon for a set O of objects in the plane if
+C intersects each object in O, where the polygon includes its interior. We
+study the problem of computing the minimum-perimeter intersecting polygon and
+the minimum-area convex intersecting polygon for a given set O of objects. We
+present an FPTAS for both problems for the case where O is a set of possibly
+intersecting convex polygons in the plane of total complexity n.
+&lt;/p&gt;
+&lt;p&gt;Furthermore, we present an exact polynomial-time algorithm for the
+minimum-perimeter intersecting polygon for the case where O is a set of n
+possibly intersecting segments in the plane. So far, polynomial-time exact
+algorithms were only known for the minimum perimeter intersecting polygon of
+lines or of disjoint segments.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Mean estimation when you have the source code; or, quantum Monte Carlo methods</title>
+  <guid>http://arxiv.org/abs/2208.07544</guid>
+  <link>http://arxiv.org/abs/2208.07544</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Kothari_R/0/1/0/all/0/1&quot;&gt;Robin Kothari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+ODonnell_R/0/1/0/all/0/1&quot;&gt;Ryan O&amp;#x27;Donnell&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Suppose $\boldsymbol{y}$ is a real random variable, and one is given access
+to ``the code&#39;&#39; that generates it (for example, a randomized or quantum circuit
+whose output is $\boldsymbol{y}$). We give a quantum procedure that runs the
+code $O(n)$ times and returns an estimate $\widehat{\boldsymbol{\mu}}$ for $\mu
+= \mathrm{E}[\boldsymbol{y}]$ that with high probability satisfies
+$|\widehat{\boldsymbol{\mu}} - \mu| \leq \sigma/n$, where $\sigma =
+\mathrm{stddev}[\boldsymbol{y}]$. This dependence on $n$ is optimal for quantum
+algorithms. One may compare with classical algorithms, which can only achieve
+the quadratically worse $|\widehat{\boldsymbol{\mu}} - \mu| \leq
+\sigma/\sqrt{n}$. Our method improves upon previous works, which either made
+additional assumptions about $\boldsymbol{y}$, and/or assumed the algorithm
+knew an a priori bound on $\sigma$, and/or used additional logarithmic factors
+beyond $O(n)$. The central subroutine for our result is essentially Grover&#39;s
+algorithm but with complex phases.ally Grover&#39;s algorithm but with complex
+phases.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Private Query Release via the Johnson-Lindenstrauss Transform</title>
+  <guid>http://arxiv.org/abs/2208.07410</guid>
+  <link>http://arxiv.org/abs/2208.07410</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nikolov_A/0/1/0/all/0/1&quot;&gt;Aleksandar Nikolov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce a new method for releasing answers to statistical queries with
+differential privacy, based on the Johnson-Lindenstrauss lemma. The key idea is
+to randomly project the query answers to a lower dimensional space so that the
+distance between any two vectors of feasible query answers is preserved up to
+an additive error. Then we answer the projected queries using a simple
+noise-adding mechanism, and lift the answers up to the original dimension.
+Using this method, we give, for the first time, purely differentially private
+mechanisms with optimal worst case sample complexity under average error for
+answering a workload of $k$ queries over a universe of size $N$. As other
+applications, we give the first purely private efficient mechanisms with
+optimal sample complexity for computing the covariance of a bounded
+high-dimensional distribution, and for answering 2-way marginal queries. We
+also show that, up to the dependence on the error, a variant of our mechanism
+is nearly optimal for every given query workload.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Archimedes Meets Privacy: On Privately Estimating Quantiles in High Dimensions Under Minimal Assumptions</title>
+  <guid>http://arxiv.org/abs/2208.07438</guid>
+  <link>http://arxiv.org/abs/2208.07438</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Ben_Eliezer_O/0/1/0/all/0/1&quot;&gt;Omri Ben-Eliezer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mikulincer_D/0/1/0/all/0/1&quot;&gt;Dan Mikulincer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Zadik_I/0/1/0/all/0/1&quot;&gt;Ilias Zadik&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The last few years have seen a surge of work on high dimensional statistics
+under privacy constraints, mostly following two main lines of work: the ``worst
+case&#39;&#39; line, which does not make any distributional assumptions on the input
+data; and the ``strong assumptions&#39;&#39; line, which assumes that the data is
+generated from specific families, e.g., subgaussian distributions. In this work
+we take a middle ground, obtaining new differentially private algorithms with
+polynomial sample complexity for estimating quantiles in high-dimensions, as
+well as estimating and sampling points of high Tukey depth, all working under
+very mild distributional assumptions. From the technical perspective, our work
+relies upon deep robustness results in the convex geometry literature,
+demonstrating how such results can be used in a private context.
+&lt;/p&gt;
+&lt;p&gt;Our main object of interest is the (convex) floating body (FB), a notion
+going back to Archimedes, which is a robust and well studied high-dimensional
+analogue of the interquantile range. We show how one can privately, and with
+polynomially many samples, (a) output an approximate interior point of the FB
+-- e.g., ``a typical user&#39;&#39; in a high-dimensional database -- by leveraging the
+robustness of the Steiner point of the FB; and at the expense of polynomially
+many more samples, (b) produce an approximate uniform sample from the FB, by
+constructing a private noisy projection oracle.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Fine-Grained Complexity Lower Bounds for Families of Dynamic Graphs</title>
+  <guid>http://arxiv.org/abs/2208.07572</guid>
+  <link>http://arxiv.org/abs/2208.07572</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Henzinger_M/0/1/0/all/0/1&quot;&gt;Monika Henzinger&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Paz_A/0/1/0/all/0/1&quot;&gt;Ami Paz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sricharan_A/0/1/0/all/0/1&quot;&gt;A. R. Sricharan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A dynamic graph algorithm is a data structure that answers queries about a
+property of the current graph while supporting graph modifications such as edge
+insertions and deletions. Prior work has shown strong conditional lower bounds
+for general dynamic graphs, yet graph families that arise in practice often
+exhibit structural properties that the existing lower bound constructions do
+not possess. We study three specific graph families that are ubiquitous, namely
+constant-degree graphs, power-law graphs, and expander graphs, and give the
+first conditional lower bounds for them. Our results show that even when
+restricting our attention to one of these graph classes, any algorithm for
+fundamental graph problems such as distance computation or approximation or
+maximum matching, cannot simultaneously achieve a sub-polynomial update time
+and query time. For example, we show that the same lower bounds as for general
+graphs hold for maximum matching and ($s,t$)-distance in constant-degree
+graphs, power-law graphs or expanders. Namely, in an $m$-edge graph, there
+exists no dynamic algorithms with both $O(m^{1/2 - \epsilon})$ update time and
+$ O(m^{1 -\epsilon})$ query time, for any small $\epsilon &amp;gt; 0$. Note that for
+($s,t$)-distance the trivial dynamic algorithm achieves an almost matching
+upper bound of constant update time and $O(m)$ query time. We prove similar
+bounds for the other graph families and for other fundamental problems such as
+densest subgraph detection and perfect matching.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Deletion Robust Non-Monotone Submodular Maximization over Matroids</title>
+  <guid>http://arxiv.org/abs/2208.07582</guid>
+  <link>http://arxiv.org/abs/2208.07582</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dutting_P/0/1/0/all/0/1&quot;&gt;Paul D&amp;#xfc;tting&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fusco_F/0/1/0/all/0/1&quot;&gt;Federico Fusco&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lattanzi_S/0/1/0/all/0/1&quot;&gt;Silvio Lattanzi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Norouzi_Fard_A/0/1/0/all/0/1&quot;&gt;Ashkan Norouzi-Fard&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zadimoghaddam_M/0/1/0/all/0/1&quot;&gt;Morteza Zadimoghaddam&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Maximizing a submodular function is a fundamental task in machine learning
+and in this paper we study the deletion robust version of the problem under the
+classic matroids constraint. Here the goal is to extract a small size summary
+of the dataset that contains a high value independent set even after an
+adversary deleted some elements. We present constant-factor approximation
+algorithms, whose space complexity depends on the rank $k$ of the matroid and
+the number $d$ of deleted elements. In the centralized setting we present a
+$(4.597+O(\varepsilon))$-approximation algorithm with summary size $O(
+\frac{k+d}{\varepsilon^2}\log \frac{k}{\varepsilon})$ that is improved to a
+$(3.582+O(\varepsilon))$-approximation with $O(k + \frac{d}{\varepsilon^2}\log
+\frac{k}{\varepsilon})$ summary size when the objective is monotone. In the
+streaming setting we provide a $(9.435 + O(\varepsilon))$-approximation
+algorithm with summary size and memory $O(k + \frac{d}{\varepsilon^2}\log
+\frac{k}{\varepsilon})$; the approximation factor is then improved to
+$(5.582+O(\varepsilon))$ in the monotone case.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>O(n log n) algorithm for finding a solution of Erd\H{o}s-Ginzburg-Ziv theorem</title>
+  <guid>http://arxiv.org/abs/2208.07728</guid>
+  <link>http://arxiv.org/abs/2208.07728</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Choi_S/0/1/0/all/0/1&quot;&gt;Seokhwan Choi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kang_H/0/1/0/all/0/1&quot;&gt;Hanpil Kang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lim_D/0/1/0/all/0/1&quot;&gt;Dongjae Lim&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Erd\H{o}s-Ginzburg-Ziv theorem is a popular theorem in additive number
+theory, which states any sequence of $2n-1$ integers contains a subsequence of
+$n$ elements, with their sum is a multiple of $n$. In this article, we provide
+an algorithm finding a solution of Erd\H{o}s-Ginzburg-Ziv in $O(n \log n)$
+time. This is the first known quasi-linear time algorithm finding a solution of
+Erd\H{o}s-Ginzburg-Ziv theorem.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Polynomial kernel for immersion hitting in tournaments</title>
+  <guid>http://arxiv.org/abs/2208.07789</guid>
+  <link>http://arxiv.org/abs/2208.07789</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bozyk_L/0/1/0/all/0/1&quot;&gt;&amp;#x141;ukasz Bo&amp;#x17c;yk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pilipczuk_M/0/1/0/all/0/1&quot;&gt;Micha&amp;#x142; Pilipczuk&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For a fixed simple digraph $H$ without isolated vertices, we consider the
+problem of deleting arcs from a given tournament to get a digraph which does
+not contain $H$ as an immersion. We prove that for every $H$, this problem
+admits a polynomial kernel when parameterized by the number of deleted arcs.
+The degree of the bound on the kernel size depends on $H$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>New Parallel Order Maintenance Data Structure</title>
+  <guid>http://arxiv.org/abs/2208.07800</guid>
+  <link>http://arxiv.org/abs/2208.07800</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Guo_B/0/1/0/all/0/1&quot;&gt;Bin Guo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sekerinski_E/0/1/0/all/0/1&quot;&gt;Emil Sekerinski&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The \emph{Order-Maintenance} (OM) data structure maintains a total order list
+of items for insertions, deletions, and comparisons. As a basic data structure,
+OM has many applications, such as maintaining the topological order, core
+numbers, and truss in graphs, and maintaining ordered sets in Unified Modeling
+Language (UML) Specification. The prevalence of multicore machines suggests
+parallelizing such a basic data structure. This paper proposes a new parallel
+OM data structure that supports insertions, deletions, and comparisons in
+parallel. Specifically, parallel insertions and deletions are synchronized by
+using locks efficiently, which achieve up to $7$x and $5.6$x speedups with $64$
+workers. One big advantage is that the comparisons are lock-free so that they
+can execute highly in parallel with other insertions and deletions, which
+achieve up to $34.4$x speedups with $64$ workers. Typical real applications
+maintain order lists that always have a much larger portion of comparisons than
+insertions and deletions. For example, in core maintenance, the number of
+comparisons is up to 297 times larger compared with insertions and deletions in
+certain graphs. This is why the lock-free order comparison is a breakthrough in
+practice.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Optimal algorithms for learning quantum phase states</title>
+  <guid>http://arxiv.org/abs/2208.07851</guid>
+  <link>http://arxiv.org/abs/2208.07851</link>
+  <description>
+    &lt;p&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Arunachalam_S/0/1/0/all/0/1&quot;&gt;Srinivasan Arunachalam&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Bravyi_S/0/1/0/all/0/1&quot;&gt;Sergey Bravyi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Dutt_A/0/1/0/all/0/1&quot;&gt;Arkopal Dutt&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Yoder_T/0/1/0/all/0/1&quot;&gt;Theodore J. Yoder&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We analyze the complexity of learning $n$-qubit quantum phase states. A
+degree-$d$ phase state is defined as a superposition of all $2^n$ basis vectors
+$x$ with amplitudes proportional to $(-1)^{f(x)}$, where $f$ is a degree-$d$
+Boolean polynomial over $n$ variables. We show that the sample complexity of
+learning an unknown degree-$d$ phase state is $\Theta(n^d)$ if we allow
+separable measurements and $\Theta(n^{d-1})$ if we allow entangled
+measurements. Our learning algorithm based on separable measurements has
+runtime $\textsf{poly}(n)$ (for constant $d$) and is well-suited for near-term
+demonstrations as it requires only single-qubit measurements in the Pauli $X$
+and $Z$ bases. We show similar bounds on the sample complexity for learning
+generalized phase states with complex-valued amplitudes. We further consider
+learning phase states when $f$ has sparsity-$s$, degree-$d$ in its
+$\mathbb{F}_2$ representation (with sample complexity $O(2^d sn)$), $f$ has
+Fourier-degree-$t$ (with sample complexity $O(2^{2t})$), and learning quadratic
+phase states with $\varepsilon$-global depolarizing noise (with sample
+complexity $O(n^{1+\varepsilon})$). These learning algorithms give us a
+procedure to learn the diagonal unitaries of the Clifford hierarchy and IQP
+circuits.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-08-17 00:30:00 UTC</pubDate>
+  <author>arXiv: Discrete Structures and Algorithms</author>
+</item>
+
+</channel>
+</rss>
