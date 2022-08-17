@@ -1,0 +1,23 @@
+name: build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            planet.db
+          key: ${{ runner.os }}-${{ hashFiles('planet.db') }}
+      - name: Build
+        run: |
+          make install
+          make build
+      - name: Publish
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secret.GITHUB_TOKEN }}
+          publish_dir: ./build
+          cname: theory.report
