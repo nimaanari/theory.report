@@ -9,7 +9,6 @@ class Feed < ActiveRecord::Base
     ARXIV_UPDATE_RE = %r{\([^(]*UPDATED\)\z}
     TITLE_RE = %r{(.*)\. \([^(]*\)\z}
     def fix_dates(data)
-        puts self.inspect
         old_fix_dates(data)
         if self.location == 'arxiv' then
             date = DateTime.parse(self.http_last_modified)
