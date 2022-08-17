@@ -1,5 +1,13 @@
-name: build
-on: [push]
+name: Build
+
+on:
+  push:
+    branches:
+      - 'main'
+  schedule:
+    - cron: '15,45 0,1 * * *'
+    - cron: '30 3,9,15,21 * * *'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +22,8 @@ jobs:
         with:
           path: |
             ./planet.db
-          key: ${{ runner.os }}-${{ hashFiles('./planet.db') }}
+            ./planet.db-journal
+          key: ${{ runner.os }}-${{ hashFiles('./theory.ini') }}
       - name: Build
         run: |
           make build
