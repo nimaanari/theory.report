@@ -1,0 +1,110 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (6.1.6.1)
+      activesupport (= 6.1.6.1)
+    activerecord (6.1.6.1)
+      activemodel (= 6.1.6.1)
+      activesupport (= 6.1.6.1)
+    activerecord-utils (0.4.1)
+      activerecord
+      logutils
+    activesupport (6.1.6.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    activityutils (0.1.2)
+      logutils (>= 0.6.1)
+    concurrent-ruby (1.1.10)
+    date-formatter (0.1.1)
+    feedfilter (1.1.1)
+      textutils (>= 1.0.1)
+    feedparser (2.2.0)
+      logutils (>= 0.6.1)
+      textutils (>= 1.0.0)
+    fetcher (0.4.5)
+      logutils (>= 0.6)
+    ffi (1.14.2)
+    gli (2.21.0)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
+    iniparser (1.0.1)
+    liquid (5.4.0)
+    logutils (0.6.1)
+    logutils-activerecord (0.2.1)
+      activerecord
+      logutils (>= 0.6.1)
+    minitest (5.16.2)
+    opmlparser (1.0.1)
+    pakman (1.1.0)
+      fetcher (>= 0.4.5)
+      liquid (>= 4.0.0)
+      logutils (>= 0.6.1)
+    pluto (1.3.4)
+      gli (>= 2.12.2)
+      pluto-merge (>= 1.1.0)
+      pluto-models (>= 1.5.4)
+      pluto-tasks (>= 1.5.3)
+      pluto-update (>= 1.6.3)
+      sqlite3
+    pluto-feedfetcher (0.1.6)
+      fetcher (>= 0.4.5)
+      pluto-models (>= 1.5.4)
+    pluto-merge (1.1.0)
+      fetcher (>= 0.4.4)
+      pakman (>= 0.5.0)
+      pluto-models (>= 1.2.2)
+    pluto-models (1.6.2)
+      activerecord
+      activerecord-utils (>= 0.4.0)
+      activityutils (>= 0.1.1)
+      date-formatter (>= 0.1.1)
+      feedfilter (>= 1.1.1)
+      feedparser (>= 2.1.2)
+      logutils (>= 0.6.1)
+      logutils-activerecord (>= 0.2.1)
+      props (>= 1.2.0)
+      props-activerecord (>= 0.2.0)
+      textutils (>= 1.4.0)
+    pluto-tasks (1.5.3)
+      pluto-models (>= 1.4.0)
+      pluto-update (>= 1.6.0)
+    pluto-update (1.6.4)
+      opmlparser (>= 1.0.0)
+      pluto-feedfetcher (>= 0.1.4)
+      pluto-models (>= 1.6.2)
+    props (1.2.0)
+      iniparser (>= 0.1.0)
+    props-activerecord (0.2.0)
+      activerecord
+      props (>= 1.2.0)
+    rexml (3.2.4)
+    rss (0.2.9)
+      rexml
+    rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sqlite3 (1.4.4)
+    textutils (1.4.0)
+      activesupport
+      logutils (>= 0.6.1)
+      props (>= 1.1.2)
+      rubyzip (>= 1.0.0)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
+    zeitwerk (2.6.0)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  activerecord
+  pluto
+  rss
+  sassc
+  sqlite3
+
+BUNDLED WITH
+   2.2.4

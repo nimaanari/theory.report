@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+<channel>
+  <title><%= site.title %></title>
+  <link><%= site.url %></link>
+  <language>en</language>
+  <description><%= site.url %></description>
+
+<%
+   items = site.items.latest.limit(50)
+   ItemCursor.new( items ).each do |item, new_date, new_feed|
+%>
+<item>
+  <title><%= CGI.escapeHTML(item.title) %></title>
+  <guid><%= CGI.escapeHTML(item.guid) %></guid>
+  <link><%= CGI.escapeHTML(item.url) %></link>
+  <description><% if item.content %>
+    <%= CGI.escapeHTML(item.content) %>
+  <% elsif item.summary %>
+    <%= CGI.escapeHTML(item.summary) %>
+  <% end %></description>
+  <pubDate><%= item.published %></pubDate>
+  <author><%= CGI.escapeHTML(item.feed.title) %></author>
+</item>
+<% end %>
+</channel>
+</rss>

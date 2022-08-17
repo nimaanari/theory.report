@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><%= site.title %></title>
+  <link rel="self" href="<%= site.url %>"/>
+  <link href="<%= site.url %>"/>
+  <id></id>
+  <updated><%= site.fetched.to_datetime.rfc3339 if site.fetched %></updated>
+  <generator uri="http://feedreader.github.io/"><%= Pluto.generator %></generator>
+
+<%
+   items = site.items.latest.limit(50)
+   ItemCursor.new( items ).each do |item, new_date, new_feed|
+%>
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en"><%= CGI.escapeHTML(item.feed.title) %>: <%= CGI.escapeHTML(item.title) %></title>
+    <link href="<%= CGI.escapeHTML(item.url) %>"/>
+    <id><%= CGI.escapeHTML(item.guid) %></id>
+    <updated><%= item.published.to_datetime.rfc3339 %></updated>
+    <content type="html" xml:lang="en"><% if item.content %>
+    <%= CGI.escapeHTML(item.content) %>
+  <% elsif item.summary %>
+    <%= CGI.escapeHTML(item.summary) %>
+  <% end %></content>
+    <author>
+      <name><%= item.feed.title %></name>
+      <uri><%= item.feed.url %></uri>
+    </author>
+  </entry>
+
+<% end %>
+</feed>

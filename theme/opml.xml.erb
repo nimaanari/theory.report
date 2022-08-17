@@ -1,0 +1,11 @@
+<opml version="1.1">
+  <head>
+    <title><%= site.title %></title>
+    <dateModified><%= site.updated %></dateModified>
+    <ownerName><%= site.title %></ownerName>
+  </head>
+  <body>
+    <% site.feeds.each do |feed| %><outline type="rss" text="<%= feed.title %>" xmlUrl="<%= feed.url %>" title="<%= feed.title %>"/>
+    <% end %>
+  </body>
+</opml>

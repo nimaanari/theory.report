@@ -1,0 +1,172 @@
+// use  sass blank.scss blank.css
+//  or  sass --watch blank.scss:blank.css
+
+$primary-color:   #222;          // title, etc.
+$secondary-color: grey;
+
+$small-font-size: 0.75rem;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6666;
+  color: #222;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.small {
+  font-size: $small-font-size;
+}
+
+#articles {
+  margin-right: 210px;
+}
+
+#navwrap {
+  float: right;
+  background-color: white;
+  padding-left: 0.25rem;
+  padding-bottom: 2rem;
+}
+
+
+#nav {
+  width: 180px;
+  padding: 0.25rem 0.5rem;
+  background-color: #eee;
+  border-radius: 0.25rem;
+
+  ul.subscriptions {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  ul.planetarium {
+    list-style-type: square;
+  } 
+}
+
+
+#opts {
+  float: right;
+  width: 200px;
+  background-color: white;
+  padding-left: 1rem;
+
+  font-size: $small-font-size;
+  color:     $secondary-color;
+
+  a {
+    text-decoration: none;
+    color:           $secondary-color; 
+
+    &:hover {
+      text-decoration:  underline;
+    }
+  }
+
+  #show-headlines,
+  #show-snippets,
+  #show-fulltext  {
+    cursor: pointer;
+  }
+}
+
+
+
+.new-date {
+  border-bottom: 1px solid #aac;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.item {
+    padding: 0rem 0rem 1rem 0rem;
+    
+   .item-content,
+   .item-summary,
+   .item-snippet {
+
+     font-size: 1rem;
+     margin-top: 1rem;
+
+     h1, h2, h3, h4, h5, h6 {
+       font-size: 100%;
+     }
+   }
+
+   .item-snippet {
+    display: none;  // hide on startup
+    
+     /* fix/todo: move to scss partial for reuse eg. _snippet.scss or similar */
+     b, h1, h2, h3, h4, h5, h6 {
+       font-weight: normal;
+     }
+     p, ul, ol, h1, h2, h3, h4, h5, h6 {
+        margin: 2px 0px 2px 0px;  // top right bottom left
+     }
+     p, h1, h2, h3, h4, h5, h6 {
+        padding: 0;
+        // note: exclude ul,ol, that is, lists
+     }
+   }
+
+   .item-header {
+    background: #e4e4f0;
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+    border: 1px solid #aac;
+    border-radius: 0.25rem;
+    .item-caret {
+      display: inline-block;
+      width: 1rem;
+    }
+    .item-feed {
+      margin-left: 1.5rem;
+    }
+   }
+
+   .item-title {
+    margin-top: 0;
+    margin-bottom: 0;
+   }
+
+   .item-footer {
+     font-size: $small-font-size;
+     color: $secondary-color;
+     margin-top: 0.75rem;
+   }
+   
+  .item-collapse,
+  .item-close,
+  .item-opened {
+    color: grey;
+    cursor: pointer;
+  }
+
+  .item-expand,
+  .item-open,
+  .item-closed {
+    color: grey;
+    cursor: pointer;
+    display: none;   // hide on startup
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
