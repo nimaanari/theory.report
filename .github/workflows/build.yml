@@ -21,6 +21,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
+            ./theory.db
+            ./theory.db-journal
             ./planet.db
             ./planet.db-journal
           key: ${{ runner.os }}-${{ hashFiles('./theory.ini') }}
