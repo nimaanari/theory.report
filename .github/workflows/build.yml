@@ -13,8 +13,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            planet.db
-          key: ${{ runner.os }}-${{ hashFiles('planet.db') }}
+            ./planet.db
+          key: ${{ runner.os }}-${{ hashFiles('./planet.db') }}
       - name: Build
         run: |
           make build
