@@ -22,11 +22,25 @@ class Feed < ActiveRecord::Base
                 if TITLE_RE.match?(item.title) then
                     item.title = TITLE_RE.match(item.title)[1]
                 end
-                item.summary = '<p><b>Authors:</b> ' + item.authors[0].text + '</p>' +
+                item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors[0].text + '</p>' +
                                item.summary
+            end
+        else    
+            data.items.each do |item|
+                if !item.authors.nil? && !item.authors.empty? then
+                    authors = item.authors.join(", ")
+                    if !item.content.nil? then
+                        item.content = item.content + '<p class="authors">By '+authors+'</p>'
+                    elsif !item.summary.nil? then
+                        item.summary = item.summary + '<p class="authors">By '+authors+'</p>'
+                    end
+                end
             end
         end
     end
+end
+class Item < ActiveRecord::Base
+    
 end
 end
 end

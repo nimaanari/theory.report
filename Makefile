@@ -6,4 +6,4 @@ install:
 	bundler install
 .PHONY: clean
 clean:
-	rm -rf planet.db build/
+	rm -rf planet.db theory.db build/
