@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RQ5M78VX5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0RQ5M78VX5');
+  </script>
   <meta charset='utf-8'>
   <meta name='generator' content='<%= Pluto.generator %>'>
 
@@ -75,14 +84,14 @@
 
     <article class='item'>
       <div class='item-header'>
-        <h3 class='item-title'>
-          <span class='item-caret'>
-            <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-            <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-          </span>
-          <%= link_to item.title, item.url %>
-        </h3>
-        <p class='item-feed'>from <%= link_to item.feed.title, item.feed.url %></p>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><%= link_to item.title, item.url %></h3>
+          <p class='item-feed'>from <%= link_to item.feed.title, item.feed.url %></p>
+        </span>
       </div>
 
       <div class='item-body'>
