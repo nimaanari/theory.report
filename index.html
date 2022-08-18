@@ -37,7 +37,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-08-18T22:37:30Z">just now</time>
+          <time class='timeago' datetime="2022-08-18T23:35:05Z">just now</time>
         
       </p>
 
@@ -393,8 +393,91 @@
     
     
     <h2 class='new-date'>
-      <i class='icon-calendar-empty'></i> Thursday, August 18
+      <i class='icon-calendar-empty'></i> Saturday, August 13
     </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://scottaaronson.blog/?p=6645'>Summer 2022 Quantum Supremacy Updates</a></h3>
+          <p class='item-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          Update: We&#8217;re now finalizing the lecture notes&#8212;basically, a textbook&#8212;for the brand-new Quantum Information Science II course that I taught this past spring! The notes will be freely shared on this blog. But the bibliographies for the various lectures need to be merged, and we don&#8217;t know how. Would any TeXpert like to help us, in [&#8230;]
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p><s><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Update:</mark></strong> We&#8217;re now finalizing the lecture notes&#8212;basically, a textbook&#8212;for the brand-new Quantum Information Science II course that I taught this past spring!  The notes will be freely shared on this blog.  But the bibliographies for the various lectures need to be merged, and we don&#8217;t know how.  Would any TeXpert like to help us, in exchange for a generous acknowledgment?</s>  A reader named Pablo Cingolani has now graciously taken care of this.  Thanks so much, Pablo!</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>I returned last week from the <a href="https://chicagoquantum.org/events/nsf-workshop-quantum-advantage-and-next-steps">NSF Workshop on Quantum Advantage and Next Steps</a> at the University of Chicago.  Thanks so much to Chicago CS professor (and my former summer student) <a href="https://www.billfefferman.com/">Bill Fefferman</a> and the other organizers for making this workshop a reality.  Given how vividly I remember the situation 12 years ago, when the idea of sampling-based quantum supremacy was the weird obsession of me and a few others, it was particularly special to attend a workshop on the topic with well over a hundred participants, some in-person and some on Zoom, delayed by covid but still excited by the dramatic experimental progress of the past few years.</p>
+
+
+
+<p>Of course there&#8217;s a lot still to do.  Many of the <a href="https://chicagoquantum.org/events/nsf-workshop-quantum-advantage-and-next-steps">talks</a> drew an exclamation point on something I&#8217;ve been saying for the past couple years: that there&#8217;s an urgent need for better quantum supremacy experiments, which will require both theoretical <em>and</em> engineering advances.  The experiments by Google and USTC and now Xanadu represent a big step forward for the field, but since they started being done, the classical spoofing attacks have also steadily improved, to the point that whether &#8220;quantum computational supremacy&#8221; still exists depends on exactly how you define it.</p>
+
+
+
+<p>Briefly: if you measure by total operations, energy use, or CO2 footprint, then probably yes, quantum supremacy remains.  But if you measure by number of seconds, then it doesn&#8217;t remain, not if you&#8217;re willing to shell out for enough cores on AWS or your favorite supercomputer.  And even the quantum supremacy that does remain might eventually fall to, e.g., further improvements of the <a href="https://arxiv.org/abs/2112.01657">algorithm due to Gao et al</a>.  For more details, see, e.g., the now-published work of <a href="https://arxiv.org/abs/2111.03011">Pan, Chen, and Zhang</a>, or this <a href="https://www.science.org/content/article/ordinary-computers-can-beat-google-s-quantum-computer-after-all">good popular summary</a> by Adrian Cho for <em>Science</em>.</p>
+
+
+
+<p>If the experimentalists care enough, they could easily regain the quantum lead, at least for a couple more years, by (say) repeating random circuit sampling with 72 qubits rather than 53-60, and hopefully circuit depth of 30-40 rather than just 20-25.  But the point I made in <a href="https://www.scottaaronson.com/talks/whatihope.ppt">my talk</a> was that, as long as we remain in the paradigm of sampling experiments that take ~2<sup>n</sup> time to verify classically and <em>also</em> ~2<sup>n</sup> time to spoof classically (where n is the number of qubits), all quantum speedups that we can achieve will be fragile and contingent, however interesting and impressive.  As soon as we go way beyond what classical computers can keep up with, we&#8217;ve <em>also</em> gone way beyond where classical computers can check what was done.</p>
+
+
+
+<p>I argued that the only solution to this problem is to design new quantum supremacy experiments: ones where some secret has been inserted in the quantum circuit that lets a classical computer efficiently verify the results.  The fundamental problem is that we need three properties&#8212;</p>
+
+
+
+<ol><li>implementability on <em>near-term</em> quantum computers,</li><li>efficient classical verifiability, and</li><li>confidence that quantum computers have a theoretical asymptotic advantage,</li></ol>
+
+
+
+<p>and right now we only know how to get any two out of the three.  We can get 1 and 2 with <a href="https://qiskit.org/textbook/ch-applications/qaoa.html">QAOA</a> and various other heuristic quantum algorithms, 1 and 3 with BosonSampling and Random Circuit Sampling, or 2 and 3 with Shor&#8217;s algorithm or <a href="https://arxiv.org/abs/2204.02063">Yamakawa-Zhandry</a> or recent interactive protocols.  To get all three, there are three obvious approaches:</p>
+
+
+
+<ol><li>Start with the heuristic algorithms and find a real advantage from them,</li><li>Start with BosonSampling or Random Circuit Sampling or the like and figure out how to make them efficiently verifiable classically, or</li><li>Start with protocols like <a href="https://arxiv.org/abs/2104.00687">Kahanamoku-Meyer et al.&#8217;s</a> and figure out how to run them on near-term devices.</li></ol>
+
+
+
+<p>At the Chicago workshop, I&#8217;d say that the most popular approach speakers talked about was 3, although my own focus was more on 2.</p>
+
+
+
+<p>Anyway, until a &#8220;best-of-all-worlds&#8221; quantum supremacy experiment is discovered, there&#8217;s plenty to do in the meantime: for example, better understand the classical hardness of spoofing Random Circuit Sampling with a constant or logarithmic number of gate layers.  Understand the best that classical algorithms can do to spoof the Linear Cross-Entropy Benchmark for BosonSampling, and build on <a href="https://arxiv.org/abs/2110.06964">Grier et al.</a> to understand the power of BosonSampling with a linear number of modes.</p>
+
+
+
+<p>I&#8217;ll be flying back with my family to Austin today after seven weeks at the Jersey shore, but I&#8217;ll try to field any questions about the state of quantum supremacy in general or this workshop in particular in the comments!</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-13T19:22:09Z">5 days ago</time>
+        </div>
+      </div>
+    </article>
+  
     
 
     <article class='item'>
@@ -424,7 +507,7 @@
         </div>
 
         <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-18T14:47:00Z">8 hours ago</time>
+          <time class='timeago' datetime="2022-08-18T14:47:00Z">9 hours ago</time>
         </div>
       </div>
     </article>
@@ -482,7 +565,7 @@ yield significantly weaker solutions.
         </div>
 
         <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-18T00:30:00Z">22 hours ago</time>
+          <time class='timeago' datetime="2022-08-18T00:30:00Z">23 hours ago</time>
         </div>
       </div>
     </article>
@@ -531,7 +614,7 @@ planar.
         </div>
 
         <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-18T00:30:00Z">22 hours ago</time>
+          <time class='timeago' datetime="2022-08-18T00:30:00Z">23 hours ago</time>
         </div>
       </div>
     </article>
@@ -590,7 +673,7 @@ depth $d=3$.
         </div>
 
         <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-18T00:30:00Z">22 hours ago</time>
+          <time class='timeago' datetime="2022-08-18T00:30:00Z">23 hours ago</time>
         </div>
       </div>
     </article>
@@ -644,7 +727,7 @@ good generalization across different samples and laparoscopes.
         </div>
 
         <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-18T00:30:00Z">22 hours ago</time>
+          <time class='timeago' datetime="2022-08-18T00:30:00Z">23 hours ago</time>
         </div>
       </div>
     </article>
@@ -694,7 +777,7 @@ state-of-the-art round complexity exponentially, even in the LOCAL model.
         </div>
 
         <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-18T00:30:00Z">22 hours ago</time>
+          <time class='timeago' datetime="2022-08-18T00:30:00Z">23 hours ago</time>
         </div>
       </div>
     </article>
@@ -741,7 +824,7 @@ obtain the first approximation algorithm for this generalization.
         </div>
 
         <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-18T00:30:00Z">22 hours ago</time>
+          <time class='timeago' datetime="2022-08-18T00:30:00Z">23 hours ago</time>
         </div>
       </div>
     </article>
@@ -1863,89 +1946,6 @@ requirements on the function $f$.
 
         <div class='item-footer'>
           <time class='timeago' datetime="2022-08-14T08:05:23Z">5 days ago</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='https://scottaaronson.blog/?p=6645'>Summer 2022 Quantum Supremacy Updates</a></h3>
-          <p class='item-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          Update: We&#8217;re now finalizing the lecture notes&#8212;basically, a textbook&#8212;for the brand-new Quantum Information Science II course that I taught this past spring! The notes will be freely shared on this blog. But the bibliographies for the various lectures need to be merged, and we don&#8217;t know how. Would any TeXpert like to help us, in [&#8230;]
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Update:</mark></strong> We&#8217;re now finalizing the lecture notes&#8212;basically, a textbook&#8212;for the brand-new Quantum Information Science II course that I taught this past spring!  The notes will be freely shared on this blog.  But the bibliographies for the various lectures need to be merged, and we don&#8217;t know how.  Would any TeXpert like to help us, in exchange for a generous acknowledgment?</p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p>I returned last week from the <a href="https://chicagoquantum.org/events/nsf-workshop-quantum-advantage-and-next-steps">NSF Workshop on Quantum Advantage and Next Steps</a> at the University of Chicago.  Thanks so much to Chicago CS professor (and my former summer student) <a href="https://www.billfefferman.com/">Bill Fefferman</a> and the other organizers for making this workshop a reality.  Given how vividly I remember the situation 12 years ago, when the idea of sampling-based quantum supremacy was the weird obsession of me and a few others, it was particularly special to attend a workshop on the topic with well over a hundred participants, some in-person and some on Zoom, delayed by covid but still excited by the dramatic experimental progress of the past few years.</p>
-
-
-
-<p>Of course there&#8217;s a lot still to do.  Many of the <a href="https://chicagoquantum.org/events/nsf-workshop-quantum-advantage-and-next-steps">talks</a> drew an exclamation point on something I&#8217;ve been saying for the past couple years: that there&#8217;s an urgent need for better quantum supremacy experiments, which will require both theoretical <em>and</em> engineering advances.  The experiments by Google and USTC and now Xanadu represent a big step forward for the field, but since they started being done, the classical spoofing attacks have also steadily improved, to the point that whether &#8220;quantum computational supremacy&#8221; still exists depends on exactly how you define it.</p>
-
-
-
-<p>Briefly: if you measure by total operations, energy use, or CO2 footprint, then probably yes, quantum supremacy remains.  But if you measure by number of seconds, then it doesn&#8217;t remain, not if you&#8217;re willing to shell out for enough cores on AWS or your favorite supercomputer.  And even the quantum supremacy that does remain might eventually fall to, e.g., further improvements of the <a href="https://arxiv.org/abs/2112.01657">algorithm due to Gao et al</a>.  For more details, see, e.g., the now-published work of <a href="https://arxiv.org/abs/2111.03011">Pan, Chen, and Zhang</a>, or this <a href="https://www.science.org/content/article/ordinary-computers-can-beat-google-s-quantum-computer-after-all">good popular summary</a> by Adrian Cho for <em>Science</em>.</p>
-
-
-
-<p>If the experimentalists care enough, they could easily regain the quantum lead, at least for a couple more years, by (say) repeating random circuit sampling with 72 qubits rather than 53-60, and hopefully circuit depth of 30-40 rather than just 20-25.  But the point I made in <a href="https://www.scottaaronson.com/talks/whatihope.ppt">my talk</a> was that, as long as we remain in the paradigm of sampling experiments that take ~2<sup>n</sup> time to verify classically and <em>also</em> ~2<sup>n</sup> time to spoof classically (where n is the number of qubits), all quantum speedups that we can achieve will be fragile and contingent, however interesting and impressive.  As soon as we go way beyond what classical computers can keep up with, we&#8217;ve <em>also</em> gone way beyond where classical computers can check what was done.</p>
-
-
-
-<p>I argued that the only solution to this problem is to design new quantum supremacy experiments: ones where some secret has been inserted in the quantum circuit that lets a classical computer efficiently verify the results.  The fundamental problem is that we need three properties&#8212;</p>
-
-
-
-<ol><li>implementability on <em>near-term</em> quantum computers,</li><li>efficient classical verifiability, and</li><li>confidence that quantum computers have a theoretical asymptotic advantage,</li></ol>
-
-
-
-<p>and right now we only know how to get any two out of the three.  We can get 1 and 2 with <a href="https://qiskit.org/textbook/ch-applications/qaoa.html">QAOA</a> and various other heuristic quantum algorithms, 1 and 3 with BosonSampling and Random Circuit Sampling, or 2 and 3 with Shor&#8217;s algorithm or <a href="https://arxiv.org/abs/2204.02063">Yamakawa-Zhandry</a> or recent interactive protocols.  To get all three, there are three obvious approaches:</p>
-
-
-
-<ol><li>Start with the heuristic algorithms and find a real advantage from them,</li><li>Start with BosonSampling or Random Circuit Sampling or the like and figure out how to make them efficiently verifiable classically, or</li><li>Start with protocols like <a href="https://arxiv.org/abs/2104.00687">Kahanamoku-Meyer et al.&#8217;s</a> and figure out how to run them on near-term devices.</li></ol>
-
-
-
-<p>At the Chicago workshop, I&#8217;d say that the most popular approach speakers talked about was 3, although my own focus was more on 2.</p>
-
-
-
-<p>Anyway, until a &#8220;best-of-all-worlds&#8221; quantum supremacy experiment is discovered, there&#8217;s plenty to do in the meantime: for example, better understand the classical hardness of spoofing Random Circuit Sampling with a constant or logarithmic number of gate layers.  Understand the best that classical algorithms can do to spoof the Linear Cross-Entropy Benchmark for BosonSampling, and build on <a href="https://arxiv.org/abs/2110.06964">Grier et al.</a> to understand the power of BosonSampling with a linear number of modes.</p>
-
-
-
-<p>I&#8217;ll be flying back with my family to Austin today after seven weeks at the Jersey shore, but I&#8217;ll try to field any questions about the state of quantum supremacy in general or this workshop in particular in the comments!</p>
-<p class="authors">By Scott</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-13T19:22:09Z">5 days ago</time>
         </div>
       </div>
     </article>
