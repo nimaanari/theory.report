@@ -37,7 +37,7 @@
       </p>
       <p class='small'>
         <% if site.updated %>
-          <time class='timeago' datetime="<%= site.updated.iso8601 %>"><%= time_ago_in_words(site.updated) %></time>
+          <time class='timeago' datetime="<%= site.updated.iso8601 %>"><%= site.updated.strftime('%A, %B %d %Y, %H:%M') %></time>
         <% end %>
       </p>
 
@@ -78,7 +78,7 @@
     %>
     <% if new_date %>
     <h2 class='new-date'>
-      <i class='icon-calendar-empty'></i> <%= item.published.strftime('%A, %B %d') %>
+      <i class='icon-calendar-empty'></i> <%= item.updated.strftime('%A, %B %d') %>
     </h2>
     <% end %>
 
@@ -118,7 +118,7 @@
         </div>
 
         <div class='item-footer'>
-          <time class='timeago' datetime="<%= item.published.iso8601 %>"><%= time_ago_in_words( item.published ) %></time>
+          <time class='timeago' datetime="<%= item.updated.iso8601 %>"><%= item.updated.strftime('%A, %B %d %Y, %H:%M') %></time>
         </div>
       </div>
     </article>
