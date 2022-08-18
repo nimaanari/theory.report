@@ -10,6 +10,186 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Partitioning Hypergraphs is Hard: Models, Inapproximability, and Applications</title>
+    <link href="http://arxiv.org/abs/2208.08257"/>
+    <id>http://arxiv.org/abs/2208.08257</id>
+    <updated>2022-08-18T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Papp_P/0/1/0/all/0/1&quot;&gt;P&amp;#xe1;l Andr&amp;#xe1;s Papp&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Anegg_G/0/1/0/all/0/1&quot;&gt;Georg Anegg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yzelman_A/0/1/0/all/0/1&quot;&gt;A. N. Yzelman&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the balanced $k$-way hypergraph partitioning problem, with a special
+focus on its practical applications to manycore scheduling. Given a hypergraph
+on $n$ nodes, our goal is to partition the node set into $k$ parts of size at
+most $(1+\epsilon)\cdot \frac{n}{k}$ each, while minimizing the cost of the
+partitioning, defined as the number of cut hyperedges, possibly also weighted
+by the number of partitions they intersect. We show that this problem cannot be
+approximated to within a $n^{1/\text{poly} \log\log n}$ factor of the optimal
+solution in polynomial time if the Exponential Time Hypothesis holds, even for
+hypergraphs of maximal degree 2. We also study the hardness of the partitioning
+problem from a parameterized complexity perspective, and in the more general
+case when we have multiple balance constraints.
+&lt;/p&gt;
+&lt;p&gt;Furthermore, we consider two extensions of the partitioning problem that are
+motivated from practical considerations. Firstly, we introduce the concept of
+hyperDAGs to model precedence-constrained computations as hypergraphs, and we
+analyze the adaptation of the balanced partitioning problem to this case.
+Secondly, we study the hierarchical partitioning problem to model hierarchical
+NUMA (non-uniform memory access) effects in modern computer architectures, and
+we show that ignoring this hierarchical aspect of the communication cost can
+yield significantly weaker solutions.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: The proper conflict-free $k$-coloring problem and the odd $k$-coloring problem are NP-complete on bipartite graphs</title>
+    <link href="http://arxiv.org/abs/2208.08330"/>
+    <id>http://arxiv.org/abs/2208.08330</id>
+    <updated>2022-08-18T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ahn_J/0/1/0/all/0/1&quot;&gt;Jungho Ahn&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Im_S/0/1/0/all/0/1&quot;&gt;Seonghyuk Im&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Oum_S/0/1/0/all/0/1&quot;&gt;Sang-il Oum&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A proper coloring of a graph is \emph{proper conflict-free} if every
+non-isolated vertex $v$ has a neighbor whose color is unique in the
+neighborhood of $v$. A proper coloring of a graph is \emph{odd} if for every
+non-isolated vertex $v$, there is a color appearing an odd number of times in
+the neighborhood of $v$. For an integer $k$, the \textsc{PCF $k$-Coloring}
+problem asks whether an input graph admits a proper conflict-free $k$-coloring
+and the \textsc{Odd $k$-Coloring} asks whether an input graph admits an odd
+$k$-coloring. We show that for every integer $k\geq3$, both problems are
+NP-complete, even if the input graph is bipartite. Furthermore, we show that
+the \textsc{PCF $4$-Coloring} problem is NP-complete when the input graph is
+planar.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Constant-Depth Sorting Networks</title>
+    <link href="http://arxiv.org/abs/2208.08394"/>
+    <id>http://arxiv.org/abs/2208.08394</id>
+    <updated>2022-08-18T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dobrokhotova_Maikova_N/0/1/0/all/0/1&quot;&gt;Natalia Dobrokhotova-Maikova&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kozachinskiy_A/0/1/0/all/0/1&quot;&gt;Alexander Kozachinskiy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Podolskii_V/0/1/0/all/0/1&quot;&gt;Vladimir Podolskii&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we address sorting networks that are constructed from
+comparators of arity $k &amp;gt; 2$. That is, in our setting the arity of the
+comparators -- or, in other words, the number of inputs that can be sorted at
+the unit cost -- is a parameter. We study its relationship with two other
+parameters -- $n$, the number of inputs, and $d$, the depth.
+&lt;/p&gt;
+&lt;p&gt;This model received considerable attention. Partly, its motivation is to
+better understand the structure of sorting networks. In particular, sorting
+networks with large arity are related to recursive constructions of ordinary
+sorting networks. Additionally, studies of this model have natural
+correspondence with a recent line of work on constructing circuits for majority
+functions from majority gates of lower fan-in.
+&lt;/p&gt;
+&lt;p&gt;Motivated by these questions, we obtain the first lower bounds on the arity
+of constant-depth sorting networks. More precisely, we consider sorting
+networks of depth $d$ up to 4, and determine the minimal $k$ for which there is
+such a network with comparators of arity $k$. For depths $d=1,2$ we observe
+that $k=n$. For $d=3$ we show that $k = \lceil \frac n2 \rceil$. For $d=4$ the
+minimal arity becomes sublinear: $k = \Theta(n^{2/3})$. This contrasts with the
+case of majority circuits, in which $k = O(n^{2/3})$ is achievable already for
+depth $d=3$.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Self-Supervised Depth Estimation in Laparoscopic Image using 3D Geometric Consistency</title>
+    <link href="http://arxiv.org/abs/2208.08407"/>
+    <id>http://arxiv.org/abs/2208.08407</id>
+    <updated>2022-08-18T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Huang_B/0/1/0/all/0/1&quot;&gt;Baoru Huang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zheng_J/0/1/0/all/0/1&quot;&gt;Jian-Qing Zheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_A/0/1/0/all/0/1&quot;&gt;Anh Nguyen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xu_C/0/1/0/all/0/1&quot;&gt;Chi Xu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gkouzionis_I/0/1/0/all/0/1&quot;&gt;Ioannis Gkouzionis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vyas_K/0/1/0/all/0/1&quot;&gt;Kunal Vyas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tuch_D/0/1/0/all/0/1&quot;&gt;David Tuch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Giannarou_S/0/1/0/all/0/1&quot;&gt;Stamatia Giannarou&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Elson_D/0/1/0/all/0/1&quot;&gt;Daniel S. Elson&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Depth estimation is a crucial step for image-guided intervention in robotic
+surgery and laparoscopic imaging system. Since per-pixel depth ground truth is
+difficult to acquire for laparoscopic image data, it is rarely possible to
+apply supervised depth estimation to surgical applications. As an alternative,
+self-supervised methods have been introduced to train depth estimators using
+only synchronized stereo image pairs. However, most recent work focused on the
+left-right consistency in 2D and ignored valuable inherent 3D information on
+the object in real world coordinates, meaning that the left-right 3D geometric
+structural consistency is not fully utilized. To overcome this limitation, we
+present M3Depth, a self-supervised depth estimator to leverage 3D geometric
+structural information hidden in stereo pairs while keeping monocular
+inference. The method also removes the influence of border regions unseen in at
+least one of the stereo images via masking, to enhance the correspondences
+between left and right images in overlapping areas. Intensive experiments show
+that our method outperforms previous self-supervised approaches on both a
+public dataset and a newly acquired dataset by a large margin, indicating a
+good generalization across different samples and laparoscopes.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fast Distributed Vertex Splitting with Applications</title>
+    <link href="http://arxiv.org/abs/2208.08119"/>
+    <id>http://arxiv.org/abs/2208.08119</id>
+    <updated>2022-08-18T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Halldorsson_M/0/1/0/all/0/1&quot;&gt;Magn&amp;#xfa;s M. Halld&amp;#xf3;rsson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Maus_Y/0/1/0/all/0/1&quot;&gt;Yannic Maus&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nolin_A/0/1/0/all/0/1&quot;&gt;Alexandre Nolin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present ${\rm poly\log\log n}$-round randomized distributed algorithms to
+compute vertex splittings, a partition of the vertices of a graph into $k$
+parts such that a node of degree $d(u)$ has $\approx d(u)/k$ neighbors in each
+part. Our techniques can be seen as the first progress towards general ${\rm
+poly\log\log n}$-round algorithms for the Lov\&#39;asz Local Lemma.
+&lt;/p&gt;
+&lt;p&gt;As the main application of our result, we obtain a randomized ${\rm
+poly\log\log n}$-round CONGEST algorithm for $(1+\epsilon)\Delta$-edge coloring
+$n$-node graphs of sufficiently large constant maximum degree $\Delta$, for any
+$\epsilon&amp;gt;0$. Further, our results improve the computation of defective
+colorings and certain tight list coloring problems. All the results improve the
+state-of-the-art round complexity exponentially, even in the LOCAL model.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Minimum Cost Adaptive Submodular Cover</title>
+    <link href="http://arxiv.org/abs/2208.08351"/>
+    <id>http://arxiv.org/abs/2208.08351</id>
+    <updated>2022-08-18T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cui_Y/0/1/0/all/0/1&quot;&gt;Yubing Cui&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nagarajan_V/0/1/0/all/0/1&quot;&gt;Viswanath Nagarajan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the problem of minimum cost cover of adaptive-submodular
+functions, and provide a 4(ln Q+1)-approximation algorithm, where Q is the goal
+value. This bound is nearly the best possible as the problem does not admit any
+approximation ratio better than ln Q (unless P=NP). Our result is the first
+O(ln Q)-approximation algorithm for this problem. Previously, O(ln Q)
+approximation algorithms were only known assuming either independent items or
+unit-cost items. Furthermore, our result easily extends to the setting where
+one wants to simultaneously cover multiple adaptive-submodular functions: we
+obtain the first approximation algorithm for this generalization.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR22-116 |  Constant-Depth Sorting Networks | 
 
 	Natalia Dobrokhotova-Maikova, 
@@ -1698,177 +1878,6 @@ Again we give our condolences to his family and surviving colleagues, which set 
     <author>
       <name>Scott Aaronson</name>
       <uri>https://scottaaronson.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">David Eppstein: Midsphere facts and fallacies</title>
-    <link href="https://11011110.github.io/blog/2022/07/27/midsphere-facts-fallacies.html"/>
-    <id>https://11011110.github.io/blog/2022/07/27/midsphere-facts-fallacies</id>
-    <updated>2022-07-27T20:28:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Some three-dimensional convex polyhedra have a &lt;a href=&quot;https://en.wikipedia.org/wiki/Midsphere&quot;&gt;midsphere&lt;/a&gt;, a sphere tangent to all of their edges. More strongly, every three-dimensional convex polyhedron has a combinatorially equivalent form, called a “canonical polyhedron”, that has a midsphere. The literature on midspheres is a little sparse and missing some key facts and counterexamples, so I thought I would collect some of them here.&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2017/midsphere.png&quot; alt=&quot;A canonical polyhedron and its midsphere&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The midsphere, when it exists, has a center equidistant from all the edges, and all of the lines through edges. The set of points equidistant from two &lt;a href=&quot;https://en.wikipedia.org/wiki/Skew_lines&quot;&gt;skew lines&lt;/a&gt; is a curved surface, a &lt;a href=&quot;https://en.wikipedia.org/wiki/Paraboloid&quot;&gt;hyperbolic paraboloid&lt;/a&gt;, but when two lines cross each other the set of points equidistant from both lines is instead the union of two planes, perpendicular to each other and to the plane of the crossing lines, through the crossing point of the two lines. For the midsphere of a polyhedron, and two edges incident on a face of the polyhedron, only one of these two planes is relevant, the one that bisects the interior angle of the face. The center of the midsphere (if it exists) can be found at the point where all of these face-angle-bisecting planes meet.&lt;/p&gt;
-
-&lt;p&gt;A convenient class of examples of polyhedra with midspheres is given by “Crelle’s tetrahedra”, the tetrahedra with midspheres. For every such tetrahedron, one can find four spheres, centered at the tetrahedron vertices, tangent in pairs at the points where the midsphere touches the edges. The tetrahedron’s six edge lengths are sums of radii of two of these four spheres. Conversely, for every four pairwise-externally-tangent spheres whose centers are not coplanar, the convex hull of the centers is one of Crelle’s tetrahedra. The radii of the four spheres can be varied continuously, keeping them in contact, although not every quadruple of radii works: the &lt;a href=&quot;https://en.wikipedia.org/wiki/Cayley%E2%80%93Menger_determinant&quot;&gt;Cayley–Menger determinant&lt;/a&gt; of the six sums of pairs of radii must be positive. For instance, if three radii are equal and the fourth is much smaller, the three large spheres will be too far apart for the fourth sphere to touch all three of them and the determinant will be negative. Because Crelle’s tetrahedra can be parameterized by four radii, they form a four-dimensional subspace of the six-dimensional space of all tetrahedra (as parameterized by edge lengths).&lt;/p&gt;
-
-&lt;p&gt;Some sources either state that the midsphere touches the polyhedron edges at their midpoints, or define a midsphere to be a sphere through all the edge midpoints. But even when a polyhedron has both a midsphere and a sphere through all of its edge midpoints, these two spheres might not be the same as each other. An example is given by the right pyramids over equilateral triangles, parameterized by the quadruples of radii \((1,1,1,x)\) for \(x\ne 1\). These pyramids have an equilateral-triangle base, which both spheres touch at the edge midpoints. But the three edges of length \(1+x\) meeting at the apex of the pyramid are touched by the midsphere at unit distance from the base, rather than at their midpoints.&lt;/p&gt;
-
-&lt;p&gt;Anthony Pugh’s 1976 book &lt;em&gt;Polyhedra: A Visual Approach&lt;/em&gt; &lt;a href=&quot;https://books.google.com/books?id=IDDxpYQTR7kC&amp;amp;pg=PA4&quot;&gt;claims that only the Platonic solids have all three of an insphere, midsphere, and circumsphere&lt;/a&gt;, but this is not true. Crelle’s tetrahedra are counterexamples. Even with the midpoint-based alternative definition of midspheres, the pyramids are counterexamples.&lt;/p&gt;
-
-&lt;p&gt;For a long time the Wikipedia article on midspheres stated that the midsphere gets its name from being between the insphere and circumsphere. But it is not always between them. For a very tall pyramid (with large \(x\)), the circumsphere passes very close to the plane of the equilateral triangle at the base of the pyramid, and the midsphere pokes out past the circumsphere below the base. I briefly thought that the midsphere might be the same as the smallest sphere that touches or contains all of the edges of a polyhedron. In general, even when a midsphere does not exist, this smallest sphere can be found in linear time, as an instance of &lt;a href=&quot;https://arxiv.org/abs/cs.CG/0412046&quot;&gt;quasiconvex programming&lt;/a&gt;. But for very flat pyramids (\(x\) close to its minimum value), the smallest touching sphere has the incircle of the base as its equator, while the midsphere is larger. The same flat pyramids have an insphere that touches their isosceles-triangle faces at points close to the apex of the pyramid, outside the midsphere, so their insphere pokes out of the midsphere.&lt;/p&gt;
-
-&lt;p&gt;For most polyhedra having an insphere and a midsphere, or a midsphere and a circumsphere, these spheres are not concentric. They are concentric for symmetric polyhedra, such as the Platonic solids, but those are not the only cases. For instance, when a polyhedron with concentric midsphere and circumsphere, like a regular icosahedron, is sliced by the plane through a cycle of its edges, the result continues to have the same concentric midsphere and circumsphere. The &lt;a href=&quot;https://en.wikipedia.org/wiki/Metabidiminished_icosahedron&quot;&gt;metabidiminished icosahedron&lt;/a&gt; below is an example. The polar dual of a polyhedron with concentric midsphere and circumsphere instead has concentric insphere and midsphere.&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/metabidiminished.png&quot; alt=&quot;Metabidiminished icosahedron, CC-BY-SA image by AndrewKepert, November 1, 2004, from https://commons.wikimedia.org/wiki/File:Metabidiminished_icosahedron.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It may possibly be the case that the inradius is always less than the midradius (when both exist) and that the midradius is always less than the circumradius (when both exist). I don’t have a proof, but I also don’t have a counterexample.&lt;/p&gt;
-
-&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108722887534301591&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
-  </content>
-    <author>
-      <name>David Eppstein</name>
-      <uri>https://11011110.github.io/blog/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-109 |  Searching for Regularity in Bounded Functions | 
-
-	Siddharth Iyer, 
-
-	Michael Whitmeyer</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/109"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/109</id>
-    <updated>2022-07-27T12:58:49+00:00</updated>
-    <content type="html" xml:lang="en">
-    Given a function $f:\mathbb F_2^n \to [-1,1]$, this work seeks to find a large affine subspace $\mathcal U$ such that $f$, when restricted to $\mathcal U$, has small nontrivial Fourier coefficients.
-
-We show that for any function $f:\mathbb F_2^n \to [-1,1]$ with Fourier degree $d$, there exists an affine subspace of dimension at least $ \tilde\Omega(n^{1/d!}k^{-2})$, wherein all of $f$&amp;#39;s nontrivial Fourier coefficients become smaller than $ 2^{-k}$. 
-To complement this result, we show the existence of degree $d$ functions with coefficients larger than $2^{-d\log n}$ when restricted to any affine subspace of dimension larger than $\Omega(dn^{1/(d-1)})$. In addition, we give explicit examples of functions with analogous but weaker properties.
-
-Along the way, we provide multiple characterizations of the Fourier coefficients of functions restricted to subspaces of $\mathbb F_2^n$ that may be useful in other contexts. Finally, we highlight applications and connections of our results to parity kill number and affine dispersers/extractors.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">TCS+ Seminar Series: TCS+: We want YOU(R feedback)</title>
-    <link href="https://tcsplus.wordpress.com/2022/07/26/tcs-we-want-your-feedback/"/>
-    <id>http://tcsplus.wordpress.com/?p=629</id>
-    <updated>2022-07-27T02:00:47+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;For the new season of TCS+, the organizers&amp;#8217; team has been discussing a range of suggestions to improve our general format, and adapt it to the all-Zoom, COVID/post-COVID world. We would love your feedback on some of these ideas — if you could take a few minutes to answer the following survey (4-5 questions), this would be greatly appreciated!&lt;/p&gt;
-
-
-
-&lt;p class=&quot;has-text-align-center&quot;&gt;&lt;img src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f4cb.png&quot; alt=&quot;📋&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; /&gt; &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSeNhfAeGsbCWHfZpoH3b2A3_pb1iD2h_H4YTgsiomhKNldmZA/viewform&quot;&gt;Link to the survey&lt;/a&gt; &lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By plustcs&lt;/p&gt;
-  </content>
-    <author>
-      <name>TCS+ Seminar Series</name>
-      <uri>https://tcsplus.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: A low-tech solution</title>
-    <link href="https://scottaaronson.blog/?p=6576"/>
-    <id>https://scottaaronson.blog/?p=6576</id>
-    <updated>2022-07-19T18:27:35+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Thanks so much to everyone who offered help and support as this blog&amp;#8217;s comment section endured the weirdest, most motivated and sophisticated troll attack in its 17-year history.  For a week, a parade of self-assured commenters showed up to demand that I explain and defend my personal hygiene, private thoughts, sexual preferences, and behavior around female students (and, absurdly, to cajole me into taking my family on a specific Disney cruise ship).  In many cases, the troll or trolls &lt;em&gt;appropriated the names and email addresses of real academics&lt;/em&gt;, imitating them so convincingly that those academics&amp;#8217; closest colleagues told me they were confident it was really them.  And when some trolls finally &amp;#8220;outed&amp;#8221; themselves, I had no way to know whether that was just another chapter in the trolling campaign.  It was enough to precipitate an epistemic crisis, where one actively doubts the authenticity of just about &lt;em&gt;every&lt;/em&gt; piece of text.&lt;/p&gt;
-
-
-
-&lt;p&gt;The irony isn&amp;#8217;t lost on me that I&amp;#8217;ve endured this just as I&amp;#8217;m &lt;a href=&quot;https://scottaaronson.blog/?p=6484&quot;&gt;starting my year-long gig at OpenAI&lt;/a&gt;, to think, among other things, about the potential avenues for misuse of Large Language Models like GPT-3, and what theoretical computer science could contribute to mitigating them.  To say this episode has given me a more vivid understanding of the risks would be an understatement.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;But why didn&amp;#8217;t I just block and ignore the trolls immediately?  Why did I bother engaging?&lt;/em&gt;&lt;/strong&gt;  &lt;/p&gt;
-
-
-
-&lt;p&gt;At least a hundred people asked some variant of this question, and the answer is this.  For most of my professional life, this blog has been my forum, where anyone in the world could show up to raise any issue they wanted, as if we were tunic-wearing philosophers in the Athenian agora.  I prided myself on my refusal to take the coward&amp;#8217;s way out and ignore anything&amp;#8212;even, &lt;em&gt;especially&lt;/em&gt;, severe personal criticism.  I&amp;#8217;d witnessed how Jon Stewart, let&amp;#8217;s say, would night after night completely eviscerate George W. Bush, his policies and worldview and way of speaking and justifications and lies, and then Bush would just continue the next day, totally oblivious, never deigning to rebut any of it.  And it became a core part of my identity that I&amp;#8217;d never be like that.  If anyone on earth had a narrative of me where I was an arrogant bigot, a clueless idiot, etc., I&amp;#8217;d confront that narrative head-on and refute it&amp;#8212;or if I couldn&amp;#8217;t, I&amp;#8217;d reinvent my whole life.  What I&amp;#8217;d &lt;em&gt;never&lt;/em&gt; do is suffer anyone&amp;#8217;s monstrous caricature of me to strut around the Internet unchallenged, as if conceding that only my academic prestige or tenure or power, rather than a reasoned rebuttal, could protect me from the harsh truths that the caricature revealed.&lt;/p&gt;
-
-
-
-&lt;p&gt;Over the years, of course, I carved out some exceptions: P=NP provers and quantum mechanics deniers enraged that I&amp;#8217;d dismissed their world-changing insights.  Raving antisemites.  &lt;em&gt;Their&lt;/em&gt; caricatures of me had no legs in any community I cared about.  But if an attack carried the implied backing of the whole modern social-justice movement, of thousands of angry grad students on Twitter, of &lt;em&gt;Slate&lt;/em&gt; and &lt;em&gt;Salon&lt;/em&gt; and &lt;em&gt;New York Times&lt;/em&gt; writers and Wikipedia editors and university DEI offices, then the coward&amp;#8217;s way out was closed.  The monstrous caricature then loomed directly over me; I could either parry his attacks or die.&lt;/p&gt;
-
-
-
-&lt;p&gt;With this stance, you might say, the astounding part is not that this blog&amp;#8217;s &amp;#8220;agora&amp;#8221; model eventually broke down, but rather that it survived for so long!  I started blogging in October 2005.  It took until July 2022 for me to endure a full-scale &amp;#8220;social/emotional denial of service attack&amp;#8221; (not counting the comment-171 affair).  Now that I have, though, it&amp;#8217;s obvious even to me that the old way is no longer tenable.&lt;/p&gt;
-
-
-
-&lt;p&gt;So what&amp;#8217;s the solution?  Some of you liked the idea of requiring registration with real email addresses&amp;#8212;but alas, when I tried to implement that, I found that WordPress&amp;#8217;s registration system is a mess and I couldn&amp;#8217;t see how to make it work.  Others liked the idea of moving to Substack, but others actively hated it, and in any case, even if I moved, I&amp;#8217;d &lt;em&gt;still&lt;/em&gt; have to figure out a comment policy!  Still others liked the idea of an army of volunteer moderators.  At least ten people volunteered themselves.&lt;/p&gt;
-
-
-
-&lt;p&gt;On reflection, the following strikes me as most directly addressing the actual problem.  I&amp;#8217;m hereby establishing the &lt;strong&gt;Shtetl-Optimized Committee of Guardians&lt;/strong&gt;, or SOCG (same acronym as the &lt;a href=&quot;https://cse.buffalo.edu/socg21/socg.html&quot;&gt;computational geometry conference&lt;/a&gt; &lt;img src=&quot;https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png&quot; alt=&quot;🙂&quot; class=&quot;wp-smiley&quot; style=&quot;height: 1em; max-height: 1em;&quot; /&gt; ).  If you&amp;#8217;re interested in joining, shoot me an email, or leave a comment on this post with your (real!) email address.  I&amp;#8217;ll accept members only if I know them in real life, personally or by reputation, or if they have an honorable history on this blog.&lt;/p&gt;
-
-
-
-&lt;p&gt;For now, the SOCG&amp;#8217;s only job is this: whenever I get a comment that gives me a feeling of unease&amp;#8212;because, e.g., it seems trollish or nasty or insincere, it asks a too-personal question, or it challenges me to rebut a hostile caricature of myself&amp;#8212;I&amp;#8217;ll email the comment to the SOCG and ask what to do.  I commit to respecting the verdict of those SOCG members who respond, whenever a clear verdict exists.  The verdict could be, e.g., &amp;#8220;this seems fine,&amp;#8221; &amp;#8220;if you won&amp;#8217;t be able to resist responding then don&amp;#8217;t let this appear,&amp;#8221; or &amp;#8220;email the commenter first to confirm their identity.&amp;#8221;  And if I simply need reassurance that the commenter&amp;#8217;s view of me is false, I&amp;#8217;ll seek it from the SOCG before I seek it from the whole world.&lt;/p&gt;
-
-
-
-&lt;p&gt;Here&amp;#8217;s what SOCG members can expect in return: I continue pouring my heart into this subscription-free, ad-free blog, and I credit you for making it possible&amp;#8212;publicly if you&amp;#8217;re comfortable with your name being listed, privately if not.  I buy you a fancy lunch or dinner if we&amp;#8217;re ever in the same town.&lt;/p&gt;
-
-
-
-&lt;p&gt;Eventually, we might move to a model where the SOCG members can log in to WordPress and directly moderate comments themselves.  But let&amp;#8217;s try it this way first and see if it works.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Two 2-year postdocs at University of Oxford (apply by September 12, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/07/26/two-2-year-postdocs-at-university-of-oxford-apply-by-september-12-2022/"/>
-    <id>http://cstheory-jobs.org/2022/07/26/two-2-year-postdocs-at-university-of-oxford-apply-by-september-12-2022/</id>
-    <updated>2022-07-26T13:34:18+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Two postdoc positions are available at Oxford as part of the UKRI Consolidator Grant &amp;#8220;New Approaches to Approximability of Satisfiable Problems&amp;#8221; led by Standa Zivny. Strong candidates with any background in maths or theoretical computer science will be considered. Background in approximation algorithms, universal algebra, category theory, combinatorics, or topology would be particularly useful.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;http://www.cs.ox.ac.uk/news/2075-full.html&quot;&gt;http://www.cs.ox.ac.uk/news/2075-full.html&lt;/a&gt;&lt;br /&gt;
-Email: standa.zivny@cs.ox.ac.uk&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Assistant Professor (3 posts) at Heriot-Watt University, UK (apply by August 15, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/07/26/assistant-professor-3-posts-at-heriot-watt-university-uk-apply-by-august-15-2022/"/>
-    <id>http://cstheory-jobs.org/2022/07/26/assistant-professor-3-posts-at-heriot-watt-university-uk-apply-by-august-15-2022/</id>
-    <updated>2022-07-26T08:26:18+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;We are looking for three assistant professors (T&amp;amp;R) in Computer Science. The vacancy is not restricted to applicants working in any specific area, but the research of the successful candidate will fall into at least one of three themes the department organises itself around: interactive systems, intelligent systems, and rigorous systems.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://enzj.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/2282/?utm_medium=jobshare&quot;&gt;https://enzj.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/2282/?utm_medium=jobshare&lt;/a&gt;&lt;br /&gt;
-Email: j.hage@hw.ac.uk&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
     </author>
   </entry>
 
