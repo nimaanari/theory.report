@@ -94,17 +94,19 @@ a {
     background: #e4e4f0;
     padding: 0.5rem 0.5rem 0rem 0.5rem;
     border: 1px solid #aac;
-    border-radius: 0.25rem; }
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: flex-start; }
     .item .item-header .item-caret {
-      display: inline-block;
-      vertical-align: top;
-      width: 1rem; }
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 1.25rem; }
     .item .item-header .item-info {
-      display: inline-block;
-      vertical-align: top; }
-  .item .item-title {
-    margin-top: 0;
-    margin-bottom: 0; }
+      flex-grow: 1;
+      flex-shrink: 1; }
+      .item .item-header .item-info .item-title {
+        margin-top: 0;
+        margin-bottom: 0; }
   .item .item-footer {
     font-size: 0.75rem;
     color: grey;
