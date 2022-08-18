@@ -131,20 +131,21 @@ a {
     padding: 0.5rem 0.5rem 0rem 0.5rem;
     border: 1px solid #aac;
     border-radius: 0.25rem;
+    display: flex;
+    align-items: flex-start;
     .item-caret {
-      display: inline-block;
-      vertical-align: top;
-      width: 1rem;
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 1.25rem;
     }
     .item-info {
-      display: inline-block;
-      vertical-align: top;
+      flex-grow: 1;
+      flex-shrink: 1;
+      .item-title {
+        margin-top: 0;
+        margin-bottom: 0;
+       }
     }
-   }
-
-   .item-title {
-    margin-top: 0;
-    margin-bottom: 0;
    }
 
    .item-footer {

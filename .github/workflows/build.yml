@@ -1,11 +1,11 @@
 name: Build
 
 on:
+  schedule:
+    - cron: '30 * * * *'
   push:
     branches:
       - 'main'
-  schedule:
-    - cron: '30 * * * *'
 
 jobs:
   build:
