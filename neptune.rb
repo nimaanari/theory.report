@@ -36,6 +36,7 @@ class Feed < ActiveRecord::Base
                         item.summary = item.summary + '<p class="authors">By '+authors+'</p>'
                     end
                 end
+                item.updated = item.published
             end
         end
     end
