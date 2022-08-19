@@ -6,8 +6,8 @@ module Pluto
 module Model
 class Feed < ActiveRecord::Base
     alias_method :old_fix_dates, :fix_dates
-    ARXIV_UPDATE_RE = %r{\([^(]*UPDATED\)\z}
-    TITLE_RE = %r{(.*)\. \([^(]*\)\z}
+    ARXIV_UPDATE_RE = %r{\([^\]\(]*\].+\)\z}
+    TITLE_RE = %r{(.*)\. \([^\(]*\)\z}
     def fix_dates(data)
         old_fix_dates(data)
         if self.location == 'arxiv' then
@@ -19,6 +19,7 @@ class Feed < ActiveRecord::Base
                    item.published_local = date
                    item.published = date
                 end
+                puts item.title
                 if TITLE_RE.match?(item.title) then
                     item.title = TITLE_RE.match(item.title)[1]
                 end
