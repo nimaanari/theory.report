@@ -24,7 +24,6 @@ class Feed < ActiveRecord::Base
                 item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors[0].text + '</p>' +
                                item.summary
             end
-            puts data.items.inspect
         else
             data.items.each do |item|
                 if !item.authors.nil? && !item.authors.empty? then
