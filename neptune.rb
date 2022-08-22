@@ -5,11 +5,10 @@ require 'pluto'
 module Pluto
 module Model
 class Feed < ActiveRecord::Base
-    alias_method :old_fix_dates, :fix_dates
+    alias_method :old_deep_update_from_struct!, :deep_update_from_struct!
     ARXIV_UPDATE_RE = %r{\([^\]\(]*\].+\)\z}
     TITLE_RE = %r{(.*)\. \([^\(]*\)\z}
-    def fix_dates(data)
-        old_fix_dates(data)
+    def deep_update_from_struct!(data)
         if self.location == 'arxiv' then
             date = DateTime.parse(self.http_last_modified)
             data.items = data.items.select {|item| !ARXIV_UPDATE_RE.match?(item.title)}
@@ -19,14 +18,14 @@ class Feed < ActiveRecord::Base
                    item.published_local = date
                    item.published = date
                 end
-                puts item.title
                 if TITLE_RE.match?(item.title) then
                     item.title = TITLE_RE.match(item.title)[1]
                 end
                 item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors[0].text + '</p>' +
                                item.summary
             end
-        else    
+            puts data.items.inspect
+        else
             data.items.each do |item|
                 if !item.authors.nil? && !item.authors.empty? then
                     authors = item.authors.join(", ")
@@ -39,10 +38,8 @@ class Feed < ActiveRecord::Base
                 item.updated = item.published
             end
         end
+        old_deep_update_from_struct!(data)
     end
-end
-class Item < ActiveRecord::Base
-    
 end
 end
 end
