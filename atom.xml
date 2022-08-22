@@ -10,6 +10,491 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: IAN: Iterated Adaptive Neighborhoods for manifold learning and dimensionality estimation</title>
+    <link href="http://arxiv.org/abs/2208.09123"/>
+    <id>http://arxiv.org/abs/2208.09123</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dyballa_L/0/1/0/all/0/1&quot;&gt;Luciano Dyballa&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zucker_S/0/1/0/all/0/1&quot;&gt;Steven W. Zucker&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Invoking the manifold assumption in machine learning requires knowledge of
+the manifold&#39;s geometry and dimension, and theory dictates how many samples are
+required. However, in applications data are limited, sampling may not be
+uniform, and manifold properties are unknown and (possibly) non-pure; this
+implies that neighborhoods must adapt to the local structure. We introduce an
+algorithm for inferring adaptive neighborhoods for data given by a similarity
+kernel. Starting with a locally-conservative neighborhood (Gabriel) graph, we
+sparsify it iteratively according to a weighted counterpart. In each step, a
+linear program yields minimal neighborhoods globally and a volumetric statistic
+reveals neighbor outliers likely to violate manifold geometry. We apply our
+adaptive neighborhoods to non-linear dimensionality reduction, geodesic
+computation and dimension estimation. A comparison against standard algorithms
+using, e.g., k-nearest neighbors, demonstrates their usefulness.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: A heuristic algorithm for straight-line embedding of a hamiltonian cycle onto a given set of points inside simple polygons</title>
+    <link href="http://arxiv.org/abs/2208.09275"/>
+    <id>http://arxiv.org/abs/2208.09275</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fadavian_M/0/1/0/all/0/1&quot;&gt;Maryam Fadavian&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fadavian_H/0/1/0/all/0/1&quot;&gt;Heidar Fadavian&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper investigated the problem of embedding a simple Hamiltonian Cycle
+with n vertices on n points inside a simple polygon. This problem seeks to
+embed a straight-line cycle (without bends), which does not intersect either
+itself or the sides of the polygon, i.e., it is planar. This problem is a
+special case of an open problem to find a simple Hamiltonian (s, X, t)-path (a
+simple path that starts at s and ends at t, where s, t, and all other vertices
+within the path are a member of set X) inside a simple polygon, which does not
+intersect itself or the sides of the polygon. The complexity of the problem in
+this paper is not verified yet, and it is an open problem. However, similar
+problems are resolved that are NP-Complete. A heuristic algorithm with time
+complexity of O(r(n2m + n3)) and space complexity of O(n2 + m) is proposed to
+solve the problem.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Counterexamples expose gaps in the proof of time complexity for cover trees introduced in 2006</title>
+    <link href="http://arxiv.org/abs/2208.09447"/>
+    <id>http://arxiv.org/abs/2208.09447</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Elkin_Y/0/1/0/all/0/1&quot;&gt;Yury Elkin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kurlin_V/0/1/0/all/0/1&quot;&gt;Vitaliy Kurlin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper is motivated by the k-nearest neighbors search: given an arbitrary
+metric space, and its finite subsets (a reference set R and a query set Q),
+design a fast algorithm to find all k-nearest neighbors in R for every point q
+in Q. In 2006, Beygelzimer, Kakade, and Langford introduced cover trees to
+justify a near-linear time complexity for the neighbor search in the sizes of
+Q,R.
+&lt;/p&gt;
+&lt;p&gt;Section 5.3 of Curtin&#39;s PhD (2015) pointed out that the proof of this result
+was wrong. The key step in the original proof attempted to show that the number
+of iterations can be estimated by multiplying the length of the longest
+root-to-leaf path in a cover tree by a constant factor. However, this estimate
+can miss many potential nodes in several branches of a cover tree, that should
+be considered during the neighbor search. The same argument was unfortunately
+repeated in several subsequent papers using cover trees from 2006.
+&lt;/p&gt;
+&lt;p&gt;This paper explicitly constructs challenging datasets that provide
+counterexamples to the past proofs of time complexity for the cover tree
+construction, the k-nearest neighbor search presented at ICML 2006, and the
+dual-tree search algorithm published in NIPS 2009.
+&lt;/p&gt;
+&lt;p&gt;The corrected near-linear time complexities with extra parameters are proved
+in another forthcoming paper by using a new compressed cover tree simplifying
+the original tree structure.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On the parameterized complexity of symmetric directed multicut</title>
+    <link href="http://arxiv.org/abs/2208.09017"/>
+    <id>http://arxiv.org/abs/2208.09017</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Eiben_E/0/1/0/all/0/1&quot;&gt;Eduard Eiben&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rambaud_C/0/1/0/all/0/1&quot;&gt;Cl&amp;#xe9;ment Rambaud&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wahlstrom_M/0/1/0/all/0/1&quot;&gt;Magnus Wahlstr&amp;#xf6;m&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem Symmetric Directed Multicut from a parameterized
+complexity perspective. In this problem, the input is a digraph $D$, a set of
+cut requests $C=\{(s_1,t_1),\ldots,(s_\ell,t_\ell)\}$ and an integer $k$, and
+the task is to find a set $X \subseteq V(D)$ of size at most $k$ such that for
+every $1 \leq i \leq \ell$, $X$ intersects either all $(s_i,t_i)$-paths or all
+$(t_i,s_i)$-paths. Equivalently, every strongly connected component of $D-X$
+contains at most one vertex out of $s_i$ and $t_i$ for every $i$. This problem
+is previously known from research in approximation algorithms, where it is
+known to have an $O(\log k \log \log k)$-approximation. We note that the
+problem, parameterized by $k$, directly generalizes multiple interesting FPT
+problems such as (Undirected) Vertex Multicut and Directed Subset Feedback
+Vertex Set. We are not able to settle the existence of an FPT algorithm
+parameterized purely by $k$, but we give three partial results: An FPT
+algorithm parameterized by $k+\ell$; an FPT-time 2-approximation parameterized
+by $k$; and an FPT algorithm parameterized by $k$ for the special case that the
+cut requests form a clique, Symmetric Directed Multiway Cut. The existence of
+an FPT algorithm parameterized purely by $k$ remains an intriguing open
+possibility.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Verified Implementation of B+-Trees in Isabelle/HOL</title>
+    <link href="http://arxiv.org/abs/2208.09066"/>
+    <id>http://arxiv.org/abs/2208.09066</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mundler_N/0/1/0/all/0/1&quot;&gt;Niels M&amp;#xfc;ndler&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nipkow_T/0/1/0/all/0/1&quot;&gt;Tobias Nipkow&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper we present the verification of an imperative implementation of
+the ubiquitous B+-tree data structure in the interactive theorem prover
+Isabelle/HOL. The implementation supports membership test, insertion and range
+queries with efficient binary search for intra-node navigation. The imperative
+implementation is verified in two steps: an abstract set interface is refined
+to an executable but inefficient purely functional implementation which is
+further refined to the efficient imperative implementation.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Secretary Problems: The Power of a Single Sample</title>
+    <link href="http://arxiv.org/abs/2208.09159"/>
+    <id>http://arxiv.org/abs/2208.09159</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nuti_P/0/1/0/all/0/1&quot;&gt;Pranav Nuti&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vondrak_J/0/1/0/all/0/1&quot;&gt;Jan Vondr&amp;#xe1;k&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we investigate two variants of the secretary problem. In these
+variants, we are presented with a sequence of numbers $X_i$ that come from
+distributions $\mathcal{D}_i$, and that arrive in either random or adversarial
+order. We do not know what the distributions are, but we have access to a
+single sample $Y_i$ from each distribution $\mathcal{D}_i$. After observing
+each number, we have to make an irrevocable decision about whether we would
+like to accept it or not with the goal of maximizing the probability of
+selecting the largest number.
+&lt;/p&gt;
+&lt;p&gt;The random order version of this problem was first studied by Correa et al.
+[SODA 2020] who managed to construct an algorithm that achieves a probability
+of $0.4529$. In this paper, we improve this probability to $0.5009$, almost
+matching an upper bound of $\simeq 0.5024$ which we show follows from earlier
+work. We also show that there is an algorithm which achieves the probability of
+$\simeq 0.5024$ asymptotically if no particular distribution is especially
+likely to yield the largest number. For the adversarial order version of the
+problem, we show that we can select the maximum number with a probability of
+$1/4$, and that this is best possible. Our work demonstrates that unlike in the
+case of the expected value objective studied by Rubinstein et al. [ITCS 2020],
+knowledge of a single sample is not enough to recover the factor of success
+guaranteed by full knowledge of the distribution.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Revisiting Maximum Satisfiability and Related Problems in Data Streams</title>
+    <link href="http://arxiv.org/abs/2208.09160"/>
+    <id>http://arxiv.org/abs/2208.09160</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vu_H/0/1/0/all/0/1&quot;&gt;Hoa T. Vu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We revisit the MaxSAT problem in the data stream model. In this problem, the
+stream consists of $m$ clauses that are disjunctions of literals drawn from $n$
+Boolean variables. The objective is to find an assignment to the variables that
+maximizes the number of satisfied clauses. Chou et al. (FOCS 2020) showed that
+$\Omega(\sqrt{n})$ space is necessary to yield a $\sqrt{2}/2+\epsilon$
+approximation of the optimum value; they also presented an algorithm that
+yields a $\sqrt{2}/2-\epsilon$ approximation of the optimum value using $O(\log
+n/\epsilon^2)$ space.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we focus not only on approximating the optimum value, but also
+on obtaining the corresponding Boolean assignment using sublinear $o(mn)$
+space. We present randomized single-pass algorithms that w.h.p. yield: 1) A
+$1-\epsilon$ approximation using $\tilde{O}(n/\epsilon^3)$ space and
+exponential post-processing time and 2) A $3/4-\epsilon$ approximation using
+$\tilde{O}(n/\epsilon)$ space and polynomial post-processing time. Our ideas
+also extend to dynamic streams. On the other hand, we show that the streaming
+kSAT problem that asks to decide whether one can satisfy all size-$k$ input
+clauses must use $\Omega(n^k)$ space.
+&lt;/p&gt;
+&lt;p&gt;We also consider other related problems in this setting.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Computing a Feedback Arc Set Using PageRank</title>
+    <link href="http://arxiv.org/abs/2208.09234"/>
+    <id>http://arxiv.org/abs/2208.09234</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Geladaris_V/0/1/0/all/0/1&quot;&gt;Vasileios Geladaris&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lionakis_P/0/1/0/all/0/1&quot;&gt;Panagiotis Lionakis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tollis_I/0/1/0/all/0/1&quot;&gt;Ioannis G. Tollis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a new heuristic algorithm for computing a minimum Feedback Arc Set
+in directed graphs. The new technique produces solutions that are better than
+the ones produced by the best previously known heuristics, often reducing the
+FAS size by more than 50%. It is based on computing the PageRank score of the
+nodes of the directed line graph of the input directed graph. Although the time
+required by our heuristic is heavily influenced by the size of the produced
+line graph, our experimental results show that it runs very fast even for very
+large graphs used in graph drawing.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Quancurrent: A Concurrent Quantiles Sketch</title>
+    <link href="http://arxiv.org/abs/2208.09265"/>
+    <id>http://arxiv.org/abs/2208.09265</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Elias_Zada_S/0/1/0/all/0/1&quot;&gt;Shaked Elias-Zada&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rinberg_A/0/1/0/all/0/1&quot;&gt;Arik Rinberg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Keidar_I/0/1/0/all/0/1&quot;&gt;Idit Keidar&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sketches are a family of streaming algorithms widely used in the world of big
+data to perform fast, real-time analytics. A popular sketch type is Quantiles,
+which estimates the data distribution of a large input stream. We present
+Quancurrent, a highly scalable concurrent Quantiles sketch. Quancurrent&#39;s
+throughput increases linearly with the number of available threads, and with
+$32$ threads, it reaches an update speedup of $12$x and a query speedup of
+$30$x over a sequential sketch. Quancurrent allows queries to occur
+concurrently with updates and achieves an order of magnitude better query
+freshness than existing scalable solutions.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Ptolemaic Partitioning Mechanism</title>
+    <link href="http://arxiv.org/abs/2208.09324"/>
+    <id>http://arxiv.org/abs/2208.09324</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Connor_R/0/1/0/all/0/1&quot;&gt;Richard Connor&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For many years, exact metric search relied upon the property of triangle
+inequality to give a lower bound on uncalculated distances. Two exclusion
+mechanisms derive from this property, generally known as pivot exclusion and
+hyperplane exclusion. These mechanisms work in any proper metric space and are
+the basis of many metric indexing mechanisms. More recently, the Ptolemaic and
+four-point lower bound properties have been shown to give tighter bounds in
+some subclasses of metric space.
+&lt;/p&gt;
+&lt;p&gt;Both triangle inequality and the four-point lower bound directly imply
+straightforward partitioning mechanisms: that is, a method of dividing a finite
+space according to a fixed partition, in order that one or more classes of the
+partition can be eliminated from a search at query time. However, up to now, no
+partitioning principle has been identified for the Ptolemaic inequality, which
+has been used only as a filtering mechanism.
+&lt;/p&gt;
+&lt;p&gt;Here, a novel partitioning mechanism for the Ptolemaic lower bound is
+presented. It is always better than either pivot or hyperplane partitioning.
+While the exclusion condition itself is weaker than Hilbert (four-point)
+exclusion, its calculation is cheaper. Furthermore, it can be combined with
+Hilbert exclusion to give a new maximum for exclusion power with respect to the
+number of distances measured per query.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Merging Sorted Lists of Similar Strings</title>
+    <link href="http://arxiv.org/abs/2208.09351"/>
+    <id>http://arxiv.org/abs/2208.09351</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Myers_G/0/1/0/all/0/1&quot;&gt;Gene Myers&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Merging $T$ sorted, non-redundant lists containing $M$ elements into a single
+sorted, non-redundant result of size $N \ge M/T$ is a classic problem typically
+solved practically in $O(M \log T)$ time with a priority-queue data structure
+the most basic of which is the simple *heap*. We revisit this problem in the
+situation where the list elements are *strings* and the lists contain many
+*identical or nearly identical elements*. By keeping simple auxiliary
+information with each heap node, we devise an $O(M \log T+S)$ worst-case method
+that performs no more character comparisons than the sum of the lengths of all
+the strings $S$, and another $O(M \log (T/ \bar e)+S)$ method that becomes
+progressively more efficient as a function of the fraction of equal elements
+$\bar e = M/N$ between input lists, reaching linear time when the lists are all
+identical. The methods perform favorably in practice versus an alternate
+formulation based on a trie.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Simple Differentially Private Algorithm for Global Minimum Cut</title>
+    <link href="http://arxiv.org/abs/2208.09365"/>
+    <id>http://arxiv.org/abs/2208.09365</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_G/0/1/0/all/0/1&quot;&gt;George Z. Li&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this note, we present a simple differentially private algorithm for the
+global minimum cut problem using only one call to the exponential mechanism.
+This problem was first studied by Gupta et al. [2010], and they gave a
+differentially private algorithm with near-optimal utility guarantees. We
+improve upon their work in many aspects: our algorithm is simpler, more
+natural, and more efficient than the one given in Gupta et al. [2010], and
+furthermore provides slightly better privacy and utility guarantees.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: An $O(\sqrt{k})$-approximation algorithm for minimum power $k$ edge disjoint $st$ -paths</title>
+    <link href="http://arxiv.org/abs/2208.09373"/>
+    <id>http://arxiv.org/abs/2208.09373</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nutov_Z/0/1/0/all/0/1&quot;&gt;Zeev Nutov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In minimum power network design problems we are given an undirected graph
+$G=(V,E)$ with edge costs $\{c_e:e \in E\}$. The goal is to find an edge set
+$F\subseteq E$ that satisfies a prescribed property of minimum power
+$p_c(F)=\sum_{v \in V} \max \{c_e: e \in F \mbox{ is incident to } v\}$. In the
+Min-Power $k$ Edge Disjoint $st$-Paths problem $F$ should contains $k$ edge
+disjoint $st$-paths. The problem admits a $k$-approximation algorithm, and it
+was an open question whether it admits approximation ratio sublinear in $k$
+even for unit costs. We give a $4\sqrt{2k}$-approximation algorithm for general
+costs.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Learning in Stackelberg Games with Non-myopic Agents</title>
+    <link href="http://arxiv.org/abs/2208.09407"/>
+    <id>http://arxiv.org/abs/2208.09407</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Haghtalab_N/0/1/0/all/0/1&quot;&gt;Nika Haghtalab&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lykouris_T/0/1/0/all/0/1&quot;&gt;Thodoris Lykouris&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nietert_S/0/1/0/all/0/1&quot;&gt;Sloan Nietert&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wei_A/0/1/0/all/0/1&quot;&gt;Alex Wei&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study Stackelberg games where a principal repeatedly interacts with a
+long-lived, non-myopic agent, without knowing the agent&#39;s payoff function.
+Although learning in Stackelberg games is well-understood when the agent is
+myopic, non-myopic agents pose additional complications. In particular,
+non-myopic agents may strategically select actions that are inferior in the
+present to mislead the principal&#39;s learning algorithm and obtain better
+outcomes in the future.
+&lt;/p&gt;
+&lt;p&gt;We provide a general framework that reduces learning in presence of
+non-myopic agents to robust bandit optimization in the presence of myopic
+agents. Through the design and analysis of minimally reactive bandit
+algorithms, our reduction trades off the statistical efficiency of the
+principal&#39;s learning algorithm against its effectiveness in inducing
+near-best-responses. We apply this framework to Stackelberg security games
+(SSGs), pricing with unknown demand curve, strategic classification, and
+general finite Stackelberg games. In each setting, we characterize the type and
+impact of misspecifications present in near-best-responses and develop a
+learning algorithm robust to such misspecifications.
+&lt;/p&gt;
+&lt;p&gt;Along the way, we improve the query complexity of learning in SSGs with $n$
+targets from the state-of-the-art $O(n^3)$ to a near-optimal $\widetilde{O}(n)$
+by uncovering a fundamental structural property of such games. This result is
+of independent interest beyond learning with non-myopic agents.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Line Coverage with Multiple Robots: Algorithms and Experiments</title>
+    <link href="http://arxiv.org/abs/2208.09419"/>
+    <id>http://arxiv.org/abs/2208.09419</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Agarwal_S/0/1/0/all/0/1&quot;&gt;Saurav Agarwal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Akella_S/0/1/0/all/0/1&quot;&gt;Srinivas Akella&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The line coverage problem is to find efficient routes for coverage of linear
+features by one or more resource-constrained robots. Linear features model
+environments such as road networks, power lines, and oil and gas pipelines. We
+define two modes of travel for the robots: servicing and deadheading. A robot
+services a feature if it performs task-specific actions, e.g., taking images,
+as it traverses the feature; otherwise, it is deadheading. Traversing the
+environment incurs costs (e.g., travel time) and demands on resources (e.g.,
+battery life). Servicing and deadheading can have different cost and demand
+functions, and we further permit them to be direction-dependent. We model the
+environment as a graph and provide an integer linear program. As the problem is
+NP-hard, we develop a fast and efficient heuristic algorithm, Merge-Embed-Merge
+(MEM). The constructive property of the algorithm enables solving the
+multi-depot version for large graphs. We further extend the MEM algorithm to
+handle turning costs and nonholonomic constraints. We benchmark the algorithm
+on a dataset of 50 road networks and demonstrate the algorithm in experiments
+using aerial robots on road networks.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Exponential Speedup Over Locality in MPC with Optimal Memory</title>
+    <link href="http://arxiv.org/abs/2208.09453"/>
+    <id>http://arxiv.org/abs/2208.09453</id>
+    <updated>2022-08-22T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Balliu_A/0/1/0/all/0/1&quot;&gt;Alkida Balliu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Brandt_S/0/1/0/all/0/1&quot;&gt;Sebastian Brandt&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fischer_M/0/1/0/all/0/1&quot;&gt;Manuela Fischer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Latypov_R/0/1/0/all/0/1&quot;&gt;Rustam Latypov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Maus_Y/0/1/0/all/0/1&quot;&gt;Yannic Maus&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Olivetti_D/0/1/0/all/0/1&quot;&gt;Dennis Olivetti&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Uitto_J/0/1/0/all/0/1&quot;&gt;Jara Uitto&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Locally Checkable Labeling (LCL) problems are graph problems in which a
+solution is correct if it satisfies some given constraints in the local
+neighborhood of each node. Example problems in this class include maximal
+matching, maximal independent set, and coloring problems. A successful line of
+research has been studying the complexities of LCL problems on paths/cycles,
+trees, and general graphs, providing many interesting results for the LOCAL
+model of distributed computing. In this work, we initiate the study of LCL
+problems in the low-space Massively Parallel Computation (MPC) model. In
+particular, on forests, we provide a method that, given the complexity of an
+LCL problem in the LOCAL model, automatically provides an exponentially faster
+algorithm for the low-space MPC setting that uses optimal global memory, that
+is, truly linear.
+&lt;/p&gt;
+&lt;p&gt;While restricting to forests may seem to weaken the result, we emphasize that
+all known (conditional) lower bounds for the MPC setting are obtained by
+lifting lower bounds obtained in the distributed setting in tree-like networks
+(either forests or high girth graphs), and hence the problems that we study are
+challenging already on forests. Moreover, the most important technical feature
+of our algorithms is that they use optimal global memory, that is, memory
+linear in the number of edges of the graph. In contrast, most of the
+state-of-the-art algorithms use more than linear global memory. Further, they
+typically start with a dense graph, sparsify it, and then solve the problem on
+the residual graph, exploiting the relative increase in global memory. On
+forests, this is not possible, because the given graph is already as sparse as
+it can be, and using optimal memory requires new solutions.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Richard Lipton: A Theoretical Question About UAPs</title>
     <link href="https://rjlipton.wpcomstaging.com/2022/08/20/a-theoretical-question-about-uaps/"/>
     <id>https://rjlipton.wpcomstaging.com/?p=20310</id>
@@ -125,319 +610,6 @@ What do you think of our question? There has been &lt;a href=&quot;https://forum
     <author>
       <name>Gil Kalai</name>
       <uri>https://gilkalai.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Embedding arbitrary Boolean circuits into fungal automata</title>
-    <link href="http://arxiv.org/abs/2208.08779"/>
-    <id>http://arxiv.org/abs/2208.08779</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Modanese_A/0/1/0/all/0/1&quot;&gt;Augusto Modanese&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Worsch_T/0/1/0/all/0/1&quot;&gt;Thomas Worsch&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Fungal automata are a variation of the two-dimensional sandpile automaton of
-Bak, Tang, and Wiesenfeld (Phys. Rev. Lett. 1987). In each step toppling cells
-emit grains only to some of their neighbors chosen according to a specific
-update sequence. We show how to embed any Boolean circuit into the initial
-configuration of a fungal automaton with update sequence $HV$. In particular we
-give a constructor that, given the description $B$ of a circuit, computes the
-states of all cells in the finite support of the embedding configuration in
-$O(\log |B|)$ space. As a consequence the prediction problem for fungal
-automata with update sequence $HV$ is $\mathsf{P}$-complete. This solves an
-open problem of Goles et al. (Phys. Lett. A, 2020).
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Recognizing well-dominated graphs is coNP-complete</title>
-    <link href="http://arxiv.org/abs/2208.08864"/>
-    <id>http://arxiv.org/abs/2208.08864</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Agrawal_A/0/1/0/all/0/1&quot;&gt;Akanksha Agrawal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Fernau_H/0/1/0/all/0/1&quot;&gt;Henning Fernau&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Kindermann_P/0/1/0/all/0/1&quot;&gt;Philipp Kindermann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mann_K/0/1/0/all/0/1&quot;&gt;Kevin Mann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Souza_U/0/1/0/all/0/1&quot;&gt;U&amp;#xe9;verton S. Souza&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A graph $G$ is well-covered if every minimal vertex cover of $G$ is minimum,
-and a graph $G$ is well-dominated if every minimal dominating set of $G$ is
-minimum. Studies on well-covered graphs were initiated in [Plummer, JCT 1970],
-and well-dominated graphs were first introduced in [Finbow, Hartnell and
-Nowakow, AC 1988]. Well-dominated graphs are well-covered, and both classes
-have been widely studied in the literature. The recognition of well-covered
-graphs was proved coNP-complete by [Chv\&#39;atal and Slater, AODM 1993] and by
-[Sankaranarayana and Stewart, Networks 1992], but the complexity of recognizing
-well-dominated graphs has been left open since their introduction. We close
-this complexity gap by proving that recognizing well-dominated graphs is
-coNP-complete. This solves a well-known open question (c.f. [Levit and Tankus,
-DM 2017] and [G\&quot;{o}z\&quot;{u}pek, Hujdurovic and Milani\v{c}, DMTCS 2017]), which
-was first asked in [Caro, Seb\H{o} and Tarsi, JAlg 1996]. Surprisingly, our
-proof is quite simple, although it was a long-standing open problem. Finally,
-we show that recognizing well-totally-dominated graphs is coNP-complete,
-answering a question of [Bahad\ir, Ekim, and G\&quot;oz\&quot;upek, AMC 2021].
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Simplicity in Eulerian Circuits: Uniqueness and Safety</title>
-    <link href="http://arxiv.org/abs/2208.08522"/>
-    <id>http://arxiv.org/abs/2208.08522</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Acosta_N/0/1/0/all/0/1&quot;&gt;Nidia Obscura Acosta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tomescu_A/0/1/0/all/0/1&quot;&gt;Alexandru I. Tomescu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;An Eulerian circuit in a directed graph is one of the most fundamental Graph
-Theory notions. Detecting if a graph $G$ has a unique Eulerian circuit can be
-done in polynomial time via the BEST theorem by de Bruijn, van
-Aardenne-Ehrenfest, Smith and Tutte, 1941-1951 (involving counting
-arborescences), or via a tailored characterization by Pevzner, 1989 (involving
-computing the intersection graph of simple cycles of $G$), both of which thus
-rely on overly complex notions for the simpler uniqueness problem.
-&lt;/p&gt;
-&lt;p&gt;In this paper we give a new linear-time checkable characterization of
-directed graphs with a unique Eulerian circuit. This is based on a simple
-condition of when two edges must appear consecutively in all Eulerian circuits,
-in terms of cut nodes of the underlying undirected graph of $G$. As a
-by-product, we can also compute in linear-time all maximal $\textit{safe}$
-walks appearing in all Eulerian circuits, for which Nagarajan and Pop proposed
-in 2009 a polynomial-time algorithm based on Pevzner characterization.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Embeddable of one-vertex graph with rotation into torus</title>
-    <link href="http://arxiv.org/abs/2208.08692"/>
-    <id>http://arxiv.org/abs/2208.08692</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Berezin_T/0/1/0/all/0/1&quot;&gt;Tim Berezin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We are interested in finding combinatorial conditions for embedding graphs
-into torus and using them in the embedding check algorithm. It is a well-known
-fact that any connected graph can be reduced to a one-vertex graph with loops
-and is homotopy equivalent to such a graph. If a connected graph has
-intersection of some edges, then some loops of one-vertex graph will also
-intersect. Therefore the problem of embedding graphs into some surface is
-equivalent to the question of embedding one-vertex graph in given surface. This
-paper considers a graph with rotations called hieroglyph. The equivalence of
-four conditions is proved: (1) embedding hieroglyph into torus; (2) the absence
-of forbidden subgraphs in a hieroglyph; (3) some condition for the graph of
-loops; (4) the existence of a reduction of hieroglyph to one of the list of
-hieroglyphs. We also prove the existence of an algorithm with complexity $O(n)$
-that recognizes embedding hieroglyph into torus.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Improved Distributed Algorithms for the Lov\&#39;asz Local Lemma and Edge Coloring</title>
-    <link href="http://arxiv.org/abs/2208.08701"/>
-    <id>http://arxiv.org/abs/2208.08701</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Davies_P/0/1/0/all/0/1&quot;&gt;Peter Davies&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Lov\&#39;asz Local Lemma is a classic result in probability theory that is
-often used to prove the existence of combinatorial objects via the
-probabilistic method. In its simplest form, it states that if we have $n$ `bad
-events&#39;, each of which occurs with probability at most $p$ and is independent
-of all but $d$ other events, then under certain criteria on $p$ and $d$, all of
-the bad events can be avoided with positive probability.
-&lt;/p&gt;
-&lt;p&gt;While the original proof was existential, there has been much study on the
-algorithmic Lov\&#39;asz Local Lemma: that is, designing an algorithm which finds
-an assignment of the underlying random variables such that all the bad events
-are indeed avoided. Notably, the celebrated result of Moser and Tardos [JACM
-&#39;10] also implied an efficient distributed algorithm for the problem, running
-in $O(\log^2 n)$ rounds. For instances with low $d$, this was improved to
-$O(d^2+\log^{O(1)}\log n)$ by Fischer and Ghaffari [DISC &#39;17], a result that
-has proven highly important in distributed complexity theory (Chang and Pettie
-[SICOMP &#39;19]).
-&lt;/p&gt;
-&lt;p&gt;We give an improved algorithm for the Lov\&#39;asz Local Lemma, providing a
-trade-off between the strength of the criterion relating $p$ and $d$, and the
-distributed round complexity. In particular, in the same regime as Fischer and
-Ghaffari&#39;s algorithm, we improve the round complexity to $O(\frac{d}{\log
-d}+\log^{O(1)}\log n)$. At the other end of the trade-off, we obtain a
-$\log^{O(1)}\log n$ round complexity for a substantially wider regime than
-previously known.
-&lt;/p&gt;
-&lt;p&gt;As our main application, we also give the first $\log^{O(1)}\log n$-round
-distributed algorithm for the problem of $\Delta+o(\Delta)$-edge coloring a
-graph of maximum degree $\Delta$. This is an almost exponential improvement
-over previous results: no prior $\log^{o(1)} n$-round algorithm was known even
-for $2\Delta-2$-edge coloring.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Customizable Hub Labeling: Properties and Algorithms</title>
-    <link href="http://arxiv.org/abs/2208.08709"/>
-    <id>http://arxiv.org/abs/2208.08709</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blum_J/0/1/0/all/0/1&quot;&gt;Johannes Blum&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Storandt_S/0/1/0/all/0/1&quot;&gt;Sabine Storandt&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Hub Labeling (HL) is one of the state-of-the-art preprocessing-based
-techniques for route planning in road networks. It is a special incarnation of
-distance labeling, and it is well-studied in both theory and practice. The core
-concept of HL is to associate a label with each vertex, which consists of a
-subset of all vertices and respective shortest path information, such that the
-shortest path distance between any two vertices can be derived from considering
-the intersection of their labels. HL provides excellent query times but
-requires a time-consuming preprocessing phase. Therefore, in case of edge cost
-changes, rerunning the whole preprocessing is not viable. Inspired by the
-concept of Customizable Route Planning, we hence propose in this paper a
-Customizable Hub Labeling variant for which the edge costs in the network do
-not need to be known at construction time. These labels can then be used with
-any edge costs after conducting a so called customization phase. We study the
-theoretical properties of Customizable Hub Labelings, provide an
-$\mathcal{O}(\log^2 n)$-approximation algorithm for the average label size, and
-propose efficient customization algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Locally Restricted Proof Labeling Schemes (Full Version)</title>
-    <link href="http://arxiv.org/abs/2208.08718"/>
-    <id>http://arxiv.org/abs/2208.08718</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Emek_Y/0/1/0/all/0/1&quot;&gt;Yuval Emek&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gil_Y/0/1/0/all/0/1&quot;&gt;Yuval Gil&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kutten_S/0/1/0/all/0/1&quot;&gt;Shay Kutten&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Introduced by Korman, Kutten, and Peleg (PODC 2005), a proof labeling scheme
-(PLS) is a distributed verification system dedicated to evaluating if a given
-configured graph satisfies a certain property. It involves a centralized
-prover, whose role is to provide proof that a given configured graph is a
-yes-instance by means of assigning labels to the nodes, and a distributed
-verifier, whose role is to verify the validity of the given proof via local
-access to the assigned labels. In this paper, we introduce the notion of a
-locally restricted PLS in which the prover&#39;s power is restricted to that of a
-LOCAL algorithm with a polylogarithmic number of rounds. To circumvent inherent
-impossibilities of PLSs in the locally restricted setting, we turn to models
-that relax the correctness requirements by allowing the verifier to accept some
-no-instances as long as they are not &quot;too far&quot; from satisfying the property in
-question. To this end, we evaluate (1) distributed graph optimization problems
-(OptDGPs) based on the notion of an approximate proof labeling scheme (APLS)
-(analogous to the type of relaxation used in sequential approximation
-algorithms); and (2) configured graph families (CGFs) based on the notion of
-atesting proof labeling schemes (TPLS) (analogous to the type of relaxation
-used in property testing algorithms).
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: The First Mathematical Proof That Crossover Gives Super-Constant Performance Gains For the NSGA-II</title>
-    <link href="http://arxiv.org/abs/2208.08759"/>
-    <id>http://arxiv.org/abs/2208.08759</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doerr_B/0/1/0/all/0/1&quot;&gt;Benjamin Doerr&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Qu_Z/0/1/0/all/0/1&quot;&gt;Zhongdi Qu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Very recently, the first mathematical runtime analyses for the NSGA-II, the
-most common multi-objective evolutionary algorithm, have been conducted (Zheng,
-Liu, Doerr (AAAI 2022)). Continuing this research direction, we prove that the
-NSGA-II optimizes the OneJumpZeroJump benchmark asymptotically faster when
-crossover is employed. This is the first time such an advantage of crossover is
-proven for the NSGA-II. Our arguments can be transferred to single-objective
-optimization. They then prove that crossover can speed-up the $(\mu+1)$ genetic
-algorithm in a different way and more pronounced than known before. Our
-experiments confirm the added value of crossover and show that the observed
-speed-ups are even larger than what our proofs can guarantee.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Algorithm to derive shortest edit script using Levenshtein distance algorithm</title>
-    <link href="http://arxiv.org/abs/2208.08823"/>
-    <id>http://arxiv.org/abs/2208.08823</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liju_P/0/1/0/all/0/1&quot;&gt;P. Prakash Maria Liju&lt;/a&gt;&lt;/p&gt;&lt;p&gt;String similarity, longest common subsequence and shortest edit scripts are
-the triplets of problem that related to each other. There are different
-algorithms exist to generate edit script by solving longest common subsequence
-problem. This paper proposes an algorithm that uses string similarity problem
-to generate shortest edit script. For this we use the famous Levenshtein
-distance algorithm, which computes a numerical value that represents similarity
-between the strings from 0 to n, where n is the length of longest input string,
-and produce the shortest edit script which contains instructions of Insert,
-Delete and Substitute.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Approximate Circular Pattern Matching</title>
-    <link href="http://arxiv.org/abs/2208.08915"/>
-    <id>http://arxiv.org/abs/2208.08915</id>
-    <updated>2022-08-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Charalampopoulos_P/0/1/0/all/0/1&quot;&gt;Panagiotis Charalampopoulos&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kociumaka_T/0/1/0/all/0/1&quot;&gt;Tomasz Kociumaka&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Radoszewski_J/0/1/0/all/0/1&quot;&gt;Jakub Radoszewski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pissis_S/0/1/0/all/0/1&quot;&gt;Solon P. Pissis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rytter_W/0/1/0/all/0/1&quot;&gt;Wojciech Rytter&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Walen_T/0/1/0/all/0/1&quot;&gt;Tomasz Wale&amp;#x144;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zuba_W/0/1/0/all/0/1&quot;&gt;Wiktor Zuba&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider approximate circular pattern matching (CPM, in short) under the
-Hamming and edit distance, in which we are given a length-$n$ text $T$, a
-length-$m$ pattern $P$, and a threshold $k&amp;gt;0$, and we are to report all
-starting positions of fragments of $T$ (called occurrences) that are at
-distance at most $k$ from some cyclic rotation of $P$. In the decision version
-of the problem, we are to check if any such occurrence exists. All previous
-results for approximate CPM were either average-case upper bounds or
-heuristics, except for the work of Charalampopoulos et al. [CKP$^+$, JCSS&#39;21],
-who considered only the Hamming distance. For the reporting version of the
-approximate CPM problem, under the Hamming distance we improve upon the main
-algorithm of [CKP$^+$, JCSS&#39;21] from ${\cal O}(n+(n/m)\cdot k^4)$ to ${\cal
-O}(n+(n/m)\cdot k^3\log\log k)$ time; for the edit distance, we give an ${\cal
-O}(nk^2)$-time algorithm. We also consider the decision version of the
-approximate CPM problem. Under the Hamming distance, we obtain an ${\cal
-O}(n+(n/m)\cdot k^2\log k/\log\log k)$-time algorithm, which nearly matches the
-algorithm by Chan et al. [CGKKP, STOC&#39;20] for the standard counterpart of the
-problem. Under the edit distance, the ${\cal O}(nk\log^3 k)$ runtime of our
-algorithm nearly matches the ${\cal O}(nk)$ runtime of the Landau-Vishkin
-algorithm [LV, J. Algorithms&#39;89]. As a stepping stone, we propose ${\cal
-O}(nk\log^3 k)$-time algorithm for the Longest Prefix $k&#39;$-Approximate Match
-problem, proposed by Landau et al. [LMS, SICOMP&#39;98], for all $k&#39;\in
-\{1,\dots,k\}$. We give a conditional lower bound that suggests a polynomial
-separation between approximate CPM under the Hamming distance over the binary
-alphabet and its non-circular counterpart. We also show that a strongly
-subquadratic-time algorithm for the decision version of approximate CPM under
-edit distance would refute SETH.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
@@ -1480,127 +1652,6 @@ Our second result addresses a question of Yao (FOCS 1977). He asked if $\epsilon
     <author>
       <name>Computational Complexity</name>
       <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Gil Kalai: Ordinary computers can beat Google’s quantum computer after all</title>
-    <link href="https://gilkalai.wordpress.com/2022/08/06/ordinary-computers-can-beat-googles-quantum-computer-after-all/"/>
-    <id>http://gilkalai.wordpress.com/?p=23179</id>
-    <updated>2022-08-06T20:20:51+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&lt;/p&gt;
-
-
-&lt;p&gt;Science magazine has an article written by Adrian Cho &lt;a href=&quot;https://www.science.org/content/article/ordinary-computers-can-beat-google-s-quantum-computer-after-all&quot;&gt;Ordinary computers can beat Google’s quantum computer after all&lt;/a&gt;. It is about the remarkable progress in classical simulations of sampling task like those sampling tasks that led to the 2019 Google&amp;#8217;s announcement of &amp;#8220;quantum supremacy&amp;#8221;. I reported about the breakthrough paper of Feng Pan and Pan Zhang &lt;a href=&quot;https://gilkalai.wordpress.com/2021/03/10/amazing-feng-pan-and-pan-zhang-announced-a-way-to-spoof-classically-simulate-the-googles-quantum-supremacy-circuit/&quot;&gt;in this post&lt;/a&gt; and there are updates in the post itself and the comment section about a variety of related works by several groups of researchers.&lt;/p&gt;
-&lt;p&gt;The very short summary is that by now classical algorithms are ten orders of magnitude faster than those used in the Google paper and hence the speed-up is ten orders of magnitude lower than Google&amp;#8217;s fantastic claims. (The Google paper claims that their ultimate task that required 300 seconds for the quantum computer will require 10,000 years on a powerful supercomputers. with the new algorithms the task can be done in a matter of seconds.)&lt;/p&gt;
-&lt;p&gt;Also regarding the Google supremacy paper, my paper with Yosi Rinott and Tomer Shoham,  &lt;a href=&quot;https://gilkalai.files.wordpress.com/2022/08/sts836.pdf&quot;&gt;Statistical Aspects of the Quantum Supremacy Demonstration,&lt;/a&gt; just appeared in &amp;#8220;Statistical Science&amp;#8221;. (Click on the link for the journal version.) The Google 2019 paper and, more generally, NISQ experiments raise various interesting statistical issues. (In addition, it is important to double check various statistical claims of the paper.) One of our findings is that there is a large gap between the empirical distribution and the Google noise model. I hope to devote some future post to our paper and to some further research we were doing.&lt;/p&gt;
-&lt;p&gt;The leaking of the Google paper in September 23, 2019 led to huge media and academic attention and many very enthusiastic reactions.  I also wrote here on the blog a &lt;a href=&quot;https://gilkalai.wordpress.com/2019/11/13/gils-collegial-quantum-supremacy-skepticism-faq/&quot;&gt;few&lt;/a&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2019/09/23/quantum-computers-amazing-progress-google-ibm-and-extraordinary-but-probably-false-supremacy-claims-google/&quot;&gt;critical&lt;/a&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2019/10/13/the-story-of-poincare-and-his-friend-the-baker/&quot;&gt;posts&lt;/a&gt; about the Google claims.&lt;/p&gt;
-&lt;p&gt;Here is a figure with the price of bitcoin around the time of the Google quantum supremacy (unintended) announcement.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;23183&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2022/08/06/ordinary-computers-can-beat-googles-quantum-computer-after-all/bc666/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2022/08/bc666.png&quot; data-orig-size=&quot;851,487&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;bc666&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=640&quot; class=&quot;alignnone size-full wp-image-23183&quot; src=&quot;https://gilkalai.files.wordpress.com/2022/08/bc666.png&quot; alt=&quot;bc666&quot; width=&quot;851&quot; height=&quot;487&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2022/08/bc666.png 851w, https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=150&amp;amp;h=86 150w, https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=300&amp;amp;h=172 300w, https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=768&amp;amp;h=440 768w&quot; sizes=&quot;(max-width: 851px) 100vw, 851px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There is a recent post on Shtetl Optimized with &lt;a href=&quot;https://scottaaronson.blog/?p=6645&quot;&gt;Scott Aaronson&amp;#8217;s take&lt;/a&gt; on the supremacy situation. Overall our assessments are not very far apart. I don&amp;#8217;t understand the claim: &amp;#8220;If the experimentalists care enough, they could easily regain the quantum lead, at least for a couple more years, by (say) repeating random circuit sampling with 72 qubits rather than 53-60, and hopefully circuit depth of 30-40 rather than just 20-25.&amp;#8221; In my view the most crucial task is to try to repeat and to improve some aspects of the Google experiment even for 20-40 qubits. (In any case, nothing is going to be easy.) &lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
-  </content>
-    <author>
-      <name>Gil Kalai</name>
-      <uri>https://gilkalai.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Postdoctoral Fellow at Santa Fe Institute (apply by October 14, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/08/03/postdoctoral-fellow-at-santa-fe-institute-apply-by-october-14-2022/"/>
-    <id>http://cstheory-jobs.org/2022/08/03/postdoctoral-fellow-at-santa-fe-institute-apply-by-october-14-2022/</id>
-    <updated>2022-08-03T21:38:25+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;An utterly unique opportunity to work on fundamental questions at the intersection of disciplines.&lt;/p&gt;
-&lt;p&gt;The fellowship offers:&lt;br /&gt;
--unparalleled intellectual freedom&lt;br /&gt;
--transdisciplinary collaboration with leading researchers worldwide -up to 3 years in residence at SFI&lt;br /&gt;
--dedicated funds for research &amp;amp; collaboration&lt;br /&gt;
--a structured leadership training program&lt;br /&gt;
--competitive salary and paid family leave&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://lnkd.in/ga7Cm9AU&quot;&gt;https://lnkd.in/ga7Cm9AU&lt;/a&gt;&lt;br /&gt;
-Email: Hilary Skolnik&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Gil Kalai: Test Your Intuition 50. Two-Player Random Walk; Can You Detect Who Did Not Follow the Rules?</title>
-    <link href="https://gilkalai.wordpress.com/2022/08/03/test-your-intuition-50-two-players-random-walk-can-you-detect-who-did-not-follow-the-rules/"/>
-    <id>http://gilkalai.wordpress.com/?p=23136</id>
-    <updated>2022-08-03T07:03:11+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Ruth and Ron start together at the origin and take a walk on the integers. Every day they make a move. They take turns in flipping a coin and they move together right or left according to the outcome. &lt;span style=&quot;color:#993366;&quot;&gt;Their coin flips create a simple random walk starting at the origin on the integers.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We know for sure that they we will return to the origin infinitely many times. However, their random walk never comes back to the origin, so we know for sure that one of them did not follow the rules!&lt;/p&gt;
-&lt;h3&gt;&lt;span style=&quot;color:#0000ff;&quot;&gt;Test your intuition: Is it possible to figure out from the walk whether it was Ruth or Ron who did not follow the coin-flipping rule?&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;23142&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2022/08/03/test-your-intuition-50-two-players-random-walk-can-you-detect-who-did-not-follow-the-rules/ruthronrw/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png&quot; data-orig-size=&quot;997,197&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;RuthRonRW&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=640&quot; class=&quot;alignnone size-full wp-image-23142&quot; src=&quot;https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png&quot; alt=&quot;RuthRonRW&quot; width=&quot;997&quot; height=&quot;197&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png 997w, https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=150&amp;amp;h=30 150w, https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=300&amp;amp;h=59 300w, https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=768&amp;amp;h=152 768w&quot; sizes=&quot;(max-width: 997px) 100vw, 997px&quot; /&gt;&lt;/p&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
-  </content>
-    <author>
-      <name>Gil Kalai</name>
-      <uri>https://gilkalai.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: Updatez</title>
-    <link href="https://scottaaronson.blog/?p=6635"/>
-    <id>https://scottaaronson.blog/?p=6635</id>
-    <updated>2022-08-02T16:48:23+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;ol&gt;&lt;li&gt;On the IBM Qiskit blog, there&amp;#8217;s an &lt;a href=&quot;https://medium.com/qiskit/scott-aaronson-says-complexity-theory-is-inextricable-from-quantum-computing-18369d0bd05d&quot;&gt;interview with me&lt;/a&gt; about the role of complexity theory in the early history of quantum computing.  Not much new for regular readers, but I&amp;#8217;m very happy with how it came out&amp;#8212;thanks so much to Robert Davis and Olivia Lanes for making it happen!  My only quibble is with the sketch of my face, which might create the inaccurate impression that I no longer have teeth.&lt;/li&gt;&lt;li&gt;Boaz Barak pointed me to a Twitter thread of &lt;a href=&quot;https://twitter.com/QuantumYakar/status/1554432810664054784?s=20&amp;amp;t=0nXoTU04w7Qe1bitINS6QA&quot;&gt;DALL-E paintings of people using quantum computers&lt;/a&gt;, in the styles of many of history&amp;#8217;s famous artists.  While the motifs are unsurprising (QCs look like regular computers but glowing, or maybe like giant glowing atoms), highly recommended as another demonstration of the sort of thing DALL-E does best.&lt;/li&gt;&lt;li&gt;Dan Spielman asked me to announce that the National Academy of Sciences is &lt;a href=&quot;http://www.nasonline.org/programs/awards/michael-and-sheila-held-prize.html&quot;&gt;seeking nominations for the Held Prize&lt;/a&gt; in combinatorial and discrete optimization.  The deadline is October 3.&lt;/li&gt;&lt;li&gt;I&amp;#8217;m at the &lt;a href=&quot;https://chicagoquantum.org/events/nsf-workshop-quantum-advantage-and-next-steps&quot;&gt;NSF Workshop on Quantum Advantage and Next Steps&lt;/a&gt; at the University of Chicago.  My talk yesterday was entitled &amp;#8220;Verifiable Quantum Advantage: What I Hope Will Be Done&amp;#8221; (yeah yeah, I decided to call it &amp;#8220;advantage&amp;#8221; rather than &amp;#8220;supremacy&amp;#8221; in deference to the name of the workshop).  &lt;a href=&quot;https://www.scottaaronson.com/talks/whatihope.ppt&quot;&gt;My PowerPoint slides are here&lt;/a&gt;.  Meanwhile, this morning was the BosonSampling session.  The talk by &lt;a href=&quot;https://quantum.ustc.edu.cn/web/en/node/137&quot;&gt;Chaoyang Lu&lt;/a&gt;, leader of USTC&amp;#8217;s experimental BosonSampling effort, was punctuated by numerous silly memes and videos, as well as the following striking sentence: &amp;#8220;only by putting the seven dragon balls together can you unlock the true quantum computational power.&amp;#8221;&lt;/li&gt;&lt;li&gt;Gavin Leech &lt;a href=&quot;https://www.gleech.org/aaronson&quot;&gt;lists and excerpts his favorite writings of mine&lt;/a&gt; over the past 25 years, while complaining that I spend &amp;#8220;a lot of time rebutting fleeting manias&amp;#8221; and &amp;#8220;obsess[ing] over political flotsam.&amp;#8221;&lt;/li&gt;&lt;/ol&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-111 |  On Matrix Multiplication and Polynomial Identity Testing | 
-
-	Robert Andrews</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/111"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/111</id>
-    <updated>2022-08-01T19:32:38+00:00</updated>
-    <content type="html" xml:lang="en">
-    We show that lower bounds on the border rank of matrix multiplication can be used to non-trivially derandomize polynomial identity testing for small algebraic circuits. Letting $\underline{R}(n)$ denote the border rank of $n \times n \times n$ matrix multiplication, we construct a hitting set generator with seed length $O(\sqrt{n} \cdot \underline{R}^{-1}(s))$ that hits $n$-variate circuits of multiplicative complexity $s$. If the matrix multiplication exponent $\omega$ is not 2, our generator has seed length $O(n^{1 - \varepsilon})$ and hits circuits of size $O(n^{1 + \delta})$ for sufficiently small $\varepsilon, \delta &amp;gt; 0$. Surprisingly, the fact that $\underline{R}(n) \ge n^2$ already yields new, non-trivial hitting set generators for circuits of sublinear multiplicative complexity.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: 4-year Postdoc at IDSIA (SWITZERLAND) (apply by October 1, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/08/01/4-year-postdoc-at-idsia-switzerland-apply-by-october-1-2022/"/>
-    <id>http://cstheory-jobs.org/2022/08/01/4-year-postdoc-at-idsia-switzerland-apply-by-october-1-2022/</id>
-    <updated>2022-08-01T09:00:54+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;1 postdoc position for up to 4 years is available at IDSIA as part of the SNSF Grant &amp;#8220;Ideal Membership Problems and the Bit Complexity of Sum of Squares Proofs&amp;#8221;. The gross salary is around 80K CHF per year, with low taxes. Candidates with strong background in math or theoretical computer science will be considered. The position will be filled as soon as an eligible candidate apply.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://people.idsia.ch/~monaldo/positions/positions.html&quot;&gt;https://people.idsia.ch/~monaldo/positions/positions.html&lt;/a&gt;&lt;br /&gt;
-Email: monaldo.mastrolilli@idsia.ch&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
     </author>
   </entry>
 
