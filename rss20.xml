@@ -9,6 +9,34 @@
 
 
 <item>
+  <title>TR22-117 |  Error Correcting Codes that Achieve BSC Capacity Against Channels that are Poly-Size Circuits | 
+
+	Ronen Shaltiel, 
+
+	Jad Silbak</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/117</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/117</link>
+  <description>
+    Guruswami and Smith (J. ACM 2016) considered codes for channels that are poly-size circuits which modify at most a $p$-fraction of the bits of the codeword. This class of channels is significantly stronger than Shannon&amp;#39;s binary symmetric channel (BSC), but weaker than Hamming&amp;#39;s channels which are computationally unbounded.
+Guruswami and Smith gave an explicit Monte-Carlo construction of codes with optimal rate of $R(p)=1-H(p)$ that achieve \emph{list-decoding} in this scenario. Here, ``explicit Monte-Carlo&amp;#39;&amp;#39; means that both encoding and decoding algorithms run in polynomial time. However, the encoding and decoding algorithms also receive a uniformly chosen string of polynomial length (which is chosen and published, once and for all, in a pre-processing stage) and their correctness is guaranteed w.h.p. over this random choice.
+Guruswami and Smith asked whether it is possible to obtain \emph{uniquely decodable} codes for poly-size channels with rate that beats the Gilbert-Varshamov bound $R^{GV}(p)=1-H(2p)$. We give an affirmative answer, Specifically:
+
+\begin{itemize}[noitemsep]
+\item For every $0 \le p&amp;lt;\frac{1}{4}$, we give an explicit Monte-Carlo construction of \emph{uniquely-decodable} codes with optimal rate $R(p) = 1-H(p)$. This matches the rate achieved by Guruswami and Smith for the easier task of \emph{list-decoding}, and also matches the capacity of binary symmetric channels. Moreover, this rate is strictly larger than that of codes for the standard coding scenario (namely, uniquely-decodable codes for Hamming channels).
+\item Even ignoring explicitness, our result implies a characterization of the capacity of poly-size channels, which was not previously understood.
+\end{itemize}
+Our technique builds on the earlier list-decodable codes of Guruswami and Smith, achieving \emph{unique-decoding} by extending and modifying the construction so that we can identify the correct message in the list. For this purpose we use ideas from coding theory and pseudorandomness, specifically:
+\begin{itemize}[noitemsep]
+\item We construct codes for binary symmetric channels that beat the Gilbert-Varshamov bound, and are ``evasive&amp;#39;&amp;#39; in the sense that a poly-size circuit that receives a \emph{random} (or actually \emph{pseudorandom}) string, cannot find a codeword within relative distance $2p$. This notion of evasiveness is inspired by the recent work of Shaltiel and Silbak (STOC 2021) on codes for space bounded channels.
+\item We develop a methodology (that is inspired by proofs of $t$-wise independent tail inequalities, and may be of independent interest) to analyze random codes, in scenarios where the success of the channel is measured in an additional random experiment (as in the evasiveness experiment above).
+\item We introduce a new notion of ``small-set non-malleable codes&amp;#39;&amp;#39; that is tailored for our application, and may be of independent interest.
+\end{itemize}
+  </description>
+  <pubDate>2022-08-23 11:19:51 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Turing Machines with Two-level Memory: A Deep Look into the Input/Output Complexity</title>
   <guid>http://arxiv.org/abs/2208.09803</guid>
   <link>http://arxiv.org/abs/2208.09803</link>
@@ -1216,7 +1244,7 @@ requirements on the function $f$.
   <guid>https://scottaaronson.blog/?p=6645</guid>
   <link>https://scottaaronson.blog/?p=6645</link>
   <description>
-    &lt;p&gt;&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update:&lt;/mark&gt;&lt;/strong&gt; We&amp;#8217;re now finalizing the lecture notes&amp;#8212;basically, a textbook&amp;#8212;for the brand-new Quantum Information Science II course that I taught this past spring!  The notes will be freely shared on this blog.  But the bibliographies for the various lectures need to be merged, and we don&amp;#8217;t know how.  Would any TeXpert like to help us, in exchange for a generous acknowledgment?&lt;/p&gt;
+    &lt;p&gt;&lt;s&gt;&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update:&lt;/mark&gt;&lt;/strong&gt; We&amp;#8217;re now finalizing the lecture notes&amp;#8212;basically, a textbook&amp;#8212;for the brand-new Quantum Information Science II course that I taught this past spring!  The notes will be freely shared on this blog.  But the bibliographies for the various lectures need to be merged, and we don&amp;#8217;t know how.  Would any TeXpert like to help us, in exchange for a generous acknowledgment?&lt;/s&gt;  A reader named Pablo Cingolani has now graciously taken care of this.  Thanks so much, Pablo!&lt;/p&gt;
 
 
 
@@ -1359,30 +1387,6 @@ Our second result addresses a question of Yao (FOCS 1977). He asked if $\epsilon
   </description>
   <pubDate>2022-08-10 13:55:00 UTC</pubDate>
   <author>Luca Aceto</author>
-</item>
-
-<item>
-  <title>NAS Held Prize: Call for nominations</title>
-  <guid>http://thmatters.wordpress.com/?p=1380</guid>
-  <link>https://thmatters.wordpress.com/2022/08/09/nas-held-prize-call-for-nominations/</link>
-  <description>
-    &lt;p&gt;From chair of the committee, Dan Spielman:&lt;br&gt;Nominations are now being accepted for the National Academy of Sciences’ 2023 Michael and Sheila Held Prize. The Held Prize honors outstanding, innovative, creative, and influential research in the areas of combinatorial and discrete optimization, or related parts of computer science, such as the design and analysis of algorithms and complexity theory. This $100,000 prize is intended to recognize recent work (defined as published within the last eight years). Additional information, including past recipients, eligibility requirements, and more, can be found at &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;http://www.nasonline.org/held&quot; target=&quot;_blank&quot;&gt;http://www.nasonline.org/held&lt;/a&gt; &lt;/p&gt;
-
-
-
-&lt;p&gt;All nominations must be submitted online. Unless otherwise stated, the following materials must be submitted:&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;ol&gt;&lt;li&gt;&lt;strong&gt;A letter from the nominator&amp;nbsp;&lt;/strong&gt;&lt;em&gt;describing the candidate&amp;#8217;s work and why he or she should be selected for the award. No more than three (3) pages.&lt;/em&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Curriculum vitae&lt;/strong&gt;.&amp;nbsp;&lt;em&gt;No more than two (2) pages (similar to CVs included with NSF proposals).&lt;/em&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Bibliography&amp;nbsp;&lt;/strong&gt;&lt;em&gt;listing no more than twelve (12) of the nominee&amp;#8217;s most significant publications.&lt;/em&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Suggested citation&lt;/strong&gt;&lt;em&gt;. A 50-word summary stating why the nominee should be considered for this award&lt;/em&gt;. (Citation&lt;br&gt;examples)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Two letters of support&lt;/strong&gt;.&amp;nbsp;&lt;em&gt;Support letters must be written by individuals from institutions outside both the&lt;/em&gt;&lt;br&gt;&lt;em&gt;nominator&amp;#8217;s and the nominee’s institution. Up to three letters of support are accepted.&lt;/em&gt;&lt;/li&gt;&lt;/ol&gt;
-
-
-
-&lt;p&gt;Nominations will be accepted through&amp;nbsp;&lt;strong&gt;Monday, October 3, 2022&lt;/strong&gt;. Please help spread the word that the nomination process is underway.&amp;nbsp;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shuchic&lt;/p&gt;
-  </description>
-  <pubDate>2022-08-09 17:31:06 UTC</pubDate>
-  <author>Theory Matters</author>
 </item>
 
 </channel>
