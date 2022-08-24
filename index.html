@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-08-23T23:35:30Z">Tuesday, August 23 2022, 23:35</time>
+          <time class='timeago' datetime="2022-08-24T02:07:41Z">Wednesday, August 24 2022, 02:07</time>
         
       </p>
 
@@ -392,6 +392,309 @@
     
     
     <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Wednesday, August 24
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10521'>Estimation Contracts for Outlier-Robust Geometric Perception</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Luca Carlone</p><p>Outlier-robust estimation is a fundamental problem and has been extensively
+investigated by statisticians and practitioners. The last few years have seen a
+convergence across research fields towards "algorithmic robust statistics",
+which focuses on developing tractable outlier-robust techniques for
+high-dimensional estimation problems. Despite this convergence, resear
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/stat/1/au:+Carlone_L/0/1/0/all/0/1">Luca Carlone</a></p><p>Outlier-robust estimation is a fundamental problem and has been extensively
+investigated by statisticians and practitioners. The last few years have seen a
+convergence across research fields towards "algorithmic robust statistics",
+which focuses on developing tractable outlier-robust techniques for
+high-dimensional estimation problems. Despite this convergence, research
+efforts across fields have been mostly disconnected from one another. This
+paper bridges recent work on certifiable outlier-robust estimation for
+geometric perception in robotics and computer vision with parallel work in
+robust statistics. In particular, we adapt and extend recent results on robust
+linear regressions (applicable to the low-outlier case with &lt;&lt; 50% outliers)
+and list-decodable regression (applicable to the high-outlier case with &gt;&gt; 50%
+outliers) to the setup commonly found in robotics and vision, where (i)
+variables (e.g., rotations, poses) belong to a non-convex domain, (ii)
+measurements are vector-valued, and (iii) the number of outliers is not known a
+priori. The emphasis here is on performance guarantees: rather than proposing
+new algorithms, we provide conditions on the input measurements under which
+modern estimation algorithms are guaranteed to recover an estimate close to the
+ground truth in the presence of outliers. These conditions are what we call an
+"estimation contract". Besides the proposed extensions of existing results, we
+believe the main contributions of this paper are (i) to unify parallel research
+lines by pointing out commonalities and differences, (ii) to introduce advanced
+material (e.g., sum-of-squares proofs) in an accessible and self-contained
+presentation for the practitioner, and (iii) to point out a few immediate
+opportunities and open questions in outlier-robust geometric perception.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-24T00:30:00Z">Wednesday, August 24 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10578'>Simpler and Better Cardinality Estimators for HyperLogLog and PCSA</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Seth Pettie, Dingyu Wang</p><p>\emph{Cardinality Estimation} (aka \emph{Distinct Elements}) is a classic
+problem in sketching with many industrial applications. Although sketching
+\emph{algorithms} are fairly simple, analyzing the cardinality
+\emph{estimators} is notoriously difficult, and even today the state-of-the-art
+sketches such as HyperLogLog and (compressed) \PCSA{} are not cove
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Pettie_S/0/1/0/all/0/1">Seth Pettie</a>, <a href="http://arxiv.org/find/cs/1/au:+Wang_D/0/1/0/all/0/1">Dingyu Wang</a></p><p>\emph{Cardinality Estimation} (aka \emph{Distinct Elements}) is a classic
+problem in sketching with many industrial applications. Although sketching
+\emph{algorithms} are fairly simple, analyzing the cardinality
+\emph{estimators} is notoriously difficult, and even today the state-of-the-art
+sketches such as HyperLogLog and (compressed) \PCSA{} are not covered in
+graduate level Big Data courses.
+</p>
+<p>In this paper we define a class of \emph{generalized remaining area} (\tGRA)
+estimators, and observe that HyperLogLog, LogLog, and some estimators for PCSA
+are merely instantiations of \tGRA{} for various integral values of $\tau$. We
+then analyze the limiting relative variance of \tGRA{} estimators. It turns out
+that the standard estimators for HyperLogLog and PCSA can be improved by
+choosing a \emph{fractional} value of $\tau$. The resulting estimators come
+\emph{very} close to the Cram\'{e}r-Rao lower bounds for HyperLogLog{} and PCSA
+derived from their Fisher information. Although the Cram\'{e}r-Rao lower bound
+\emph{can} be achieved with the Maximum Likelihood Estimator (MLE), the MLE is
+cumbersome to compute and dynamically update. In contrast, \tGRA{} estimators
+are trivial to update in constant time.
+</p>
+<p>Our presentation assumes only basic calculus and probability, not any complex
+analysis~\cite{FlajoletM85,DurandF03,FlajoletFGM07}.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-24T00:30:00Z">Wednesday, August 24 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10650'>Efficiency of the First-Price Auction in the Autobidding World</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Yuan Deng, Jieming Mao, Vahab Mirrokni, Hanrui Zhang, Song Zuo</p><p>We study the price of anarchy of the first-price auction in the autobidding
+world, where bidders can be either utility maximizers (i.e., traditional
+bidders) or value maximizers (i.e., autobidders). We show that with autobidders
+only, the price of anarchy of the first-price auction is $1/2$, and with both
+kinds of bidd
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Deng_Y/0/1/0/all/0/1">Yuan Deng</a>, <a href="http://arxiv.org/find/cs/1/au:+Mao_J/0/1/0/all/0/1">Jieming Mao</a>, <a href="http://arxiv.org/find/cs/1/au:+Mirrokni_V/0/1/0/all/0/1">Vahab Mirrokni</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhang_H/0/1/0/all/0/1">Hanrui Zhang</a>, <a href="http://arxiv.org/find/cs/1/au:+Zuo_S/0/1/0/all/0/1">Song Zuo</a></p><p>We study the price of anarchy of the first-price auction in the autobidding
+world, where bidders can be either utility maximizers (i.e., traditional
+bidders) or value maximizers (i.e., autobidders). We show that with autobidders
+only, the price of anarchy of the first-price auction is $1/2$, and with both
+kinds of bidders, the price of anarchy degrades to about $0.457$ (the precise
+number is given by an optimization). These results complement the recent result
+by Jin and Lu [2022] showing that the price of anarchy of the first-price
+auction with traditional bidders only is $1 - 1/e^2$. We further investigate a
+setting where the seller can utilize machine-learned advice to improve the
+efficiency of the auctions. There, we show that as the accuracy of the advice
+increases, the price of anarchy improves smoothly from about $0.457$ to $1$.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-24T00:30:00Z">Wednesday, August 24 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10949'>Regularized impurity reduction: Accurate decision trees with complexity guarantees</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Guangyi Zhang, Aristides Gionis</p><p>Decision trees are popular classification models, providing high accuracy and
+intuitive explanations. However, as the tree size grows the model
+interpretability deteriorates. Traditional tree-induction algorithms, such as
+C4.5 and CART, rely on impurity-reduction functions that promote the
+discriminative power of each split. Thus, although these tra
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Zhang_G/0/1/0/all/0/1">Guangyi Zhang</a>, <a href="http://arxiv.org/find/cs/1/au:+Gionis_A/0/1/0/all/0/1">Aristides Gionis</a></p><p>Decision trees are popular classification models, providing high accuracy and
+intuitive explanations. However, as the tree size grows the model
+interpretability deteriorates. Traditional tree-induction algorithms, such as
+C4.5 and CART, rely on impurity-reduction functions that promote the
+discriminative power of each split. Thus, although these traditional methods
+are accurate in practice, there has been no theoretical guarantee that they
+will produce small trees. In this paper, we justify the use of a general family
+of impurity functions, including the popular functions of entropy and
+Gini-index, in scenarios where small trees are desirable, by showing that a
+simple enhancement can equip them with complexity guarantees. We consider a
+general setting, where objects to be classified are drawn from an arbitrary
+probability distribution, classification can be binary or multi-class, and
+splitting tests are associated with non-uniform costs. As a measure of tree
+complexity, we adopt the expected cost to classify an object drawn from the
+input distribution, which, in the uniform-cost case, is the expected number of
+tests. We propose a tree-induction algorithm that gives a logarithmic
+approximation guarantee on the tree complexity. This approximation factor is
+tight up to a constant factor under mild assumptions. The algorithm recursively
+selects a test that maximizes a greedy criterion defined as a weighted sum of
+three components. The first two components encourage the selection of tests
+that improve the balance and the cost-efficiency of the tree, respectively,
+while the third impurity-reduction component encourages the selection of more
+discriminative tests. As shown in our empirical evaluation, compared to the
+original heuristics, the enhanced algorithms strike an excellent balance
+between predictive accuracy and tree complexity.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-24T00:30:00Z">Wednesday, August 24 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10959'>Derandomizing Directed Random Walks in Almost-Linear Time</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Rasmus Kyng, Simon Meierhans, Maximilian Probst Gutenberg</p><p>In this article, we present the first deterministic directed Laplacian L
+systems solver that runs in time almost-linear in the number of non-zero
+entries of L. Previous reductions imply the first deterministic almost-linear
+time algorithms for computing various fundamental quantities on directed graphs
+including stationary 
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Kyng_R/0/1/0/all/0/1">Rasmus Kyng</a>, <a href="http://arxiv.org/find/cs/1/au:+Meierhans_S/0/1/0/all/0/1">Simon Meierhans</a>, <a href="http://arxiv.org/find/cs/1/au:+Gutenberg_M/0/1/0/all/0/1">Maximilian Probst Gutenberg</a></p><p>In this article, we present the first deterministic directed Laplacian L
+systems solver that runs in time almost-linear in the number of non-zero
+entries of L. Previous reductions imply the first deterministic almost-linear
+time algorithms for computing various fundamental quantities on directed graphs
+including stationary distributions, personalized PageRank, hitting times and
+escape probabilities.
+</p>
+<p>We obtain these results by introducing partial symmetrization, a new
+technique that makes the Laplacian of an Eulerian directed graph ``less
+directed'' in a useful sense, which may be of independent interest. The
+usefulness of this technique comes from two key observations: Firstly, the
+partially symmetrized Laplacian preconditions the original Eulerian Laplacian
+well in Richardson iteration, enabling us to construct a solver for the
+original matrix from a solver for the partially symmetrized one. Secondly, the
+undirected structure in the partially symmetrized Laplacian makes it possible
+to sparsify the matrix very crudely, i.e. with large spectral error, and still
+show that Richardson iterations convergence when using the sparsified matrix as
+a preconditioner. This allows us to develop deterministic sparsification tools
+for the partially symmetrized Laplacian.
+</p>
+<p>Together with previous reductions from directed Laplacians to Eulerian
+Laplacians, our technique results in the first deterministic almost-linear time
+algorithm for solving linear equations in directed Laplacians. To emphasize the
+generality of our new technique, we show that two prominent existing
+(randomized) frameworks for solving linear equations in Eulerian Laplacians can
+be derandomized in this way: the squaring-based framework of Cohen, Kelner,
+Peebles, Peng, Rao, Sidford and Vladu (STOC 2017) and the sparsified
+Cholesky-based framework of Peng and Song (STOC 2022).
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-24T00:30:00Z">Wednesday, August 24 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
       <i class='icon-calendar-empty'></i> Tuesday, August 23
     </h2>
     
@@ -518,967 +821,6 @@ Our technique builds on the earlier list-decodable codes of Guruswami and Smith,
 
         <div class='item-footer'>
           <time class='timeago' datetime="2022-08-23T11:19:51Z">Tuesday, August 23 2022, 11:19</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09803'>Turing Machines with Two-level Memory: A Deep Look into the Input/Output Complexity</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Hengzhao Ma, Jianzhong Li, Xiangyu Gao, Tianpeng Gao</p><p>The input/output complexity, which is the complexity of data exchange between
-the main memory and the external memory, has been elaborately studied by a lot
-of former researchers. However, the existing works failed to consider the
-input/output complexity in a computation model point of view. In this paper we
-remedy this by propo
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Ma_H/0/1/0/all/0/1">Hengzhao Ma</a>, <a href="http://arxiv.org/find/cs/1/au:+Li_J/0/1/0/all/0/1">Jianzhong Li</a>, <a href="http://arxiv.org/find/cs/1/au:+Gao_X/0/1/0/all/0/1">Xiangyu Gao</a>, <a href="http://arxiv.org/find/cs/1/au:+Gao_T/0/1/0/all/0/1">Tianpeng Gao</a></p><p>The input/output complexity, which is the complexity of data exchange between
-the main memory and the external memory, has been elaborately studied by a lot
-of former researchers. However, the existing works failed to consider the
-input/output complexity in a computation model point of view. In this paper we
-remedy this by proposing three variants of Turing machine that include external
-memory and the mechanism of exchanging data between main memory and external
-memory. Based on these new models, the input/output complexity is deeply
-studied. We discussed the relationship between input/output complexity and the
-other complexity measures such as time complexity and parameterized complexity,
-which is not considered by former researchers. We also define the external
-access trace complexity, which reflects the physical behavior of magnetic disks
-and gives a theoretical evidence of IO-efficient algorithms.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09702'>Minimizing Visible Edges in Polyhedra</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Csaba D. T&#xf3;th, Jorge Urrutia, Giovanni Viglietta</p><p>We prove that, given a polyhedron $\mathcal P$ in $\mathbb{R}^3$, every point
-in $\mathbb R^3$ that does not see any vertex of $\mathcal P$ must see eight or
-more edges of $\mathcal P$; this bound is tight. More generally, this remains
-true if $\mathcal P$ is any finite arrangement of internally disjoint polygons
-in $\mathbb{R}
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Toth_C/0/1/0/all/0/1">Csaba D. T&#xf3;th</a>, <a href="http://arxiv.org/find/cs/1/au:+Urrutia_J/0/1/0/all/0/1">Jorge Urrutia</a>, <a href="http://arxiv.org/find/cs/1/au:+Viglietta_G/0/1/0/all/0/1">Giovanni Viglietta</a></p><p>We prove that, given a polyhedron $\mathcal P$ in $\mathbb{R}^3$, every point
-in $\mathbb R^3$ that does not see any vertex of $\mathcal P$ must see eight or
-more edges of $\mathcal P$; this bound is tight. More generally, this remains
-true if $\mathcal P$ is any finite arrangement of internally disjoint polygons
-in $\mathbb{R}^3$.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09865'>Area Coverage with Multiple Capacity-Constrained Robots</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Saurav Agarwal, Srinivas Akella</p><p>The area coverage problem is the task of efficiently servicing a given
-two-dimensional surface using sensors mounted on robots such as unmanned aerial
-vehicles (UAVs) and unmanned ground vehicles (UGVs). We present a novel
-formulation for generating coverage routes for multiple capacity-constrained
-robots, where capacity can be specified in terms of
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Agarwal_S/0/1/0/all/0/1">Saurav Agarwal</a>, <a href="http://arxiv.org/find/cs/1/au:+Akella_S/0/1/0/all/0/1">Srinivas Akella</a></p><p>The area coverage problem is the task of efficiently servicing a given
-two-dimensional surface using sensors mounted on robots such as unmanned aerial
-vehicles (UAVs) and unmanned ground vehicles (UGVs). We present a novel
-formulation for generating coverage routes for multiple capacity-constrained
-robots, where capacity can be specified in terms of battery life or flight
-time. Traversing the environment incurs demands on the robot resources, which
-have capacity limits. The central aspect of our approach is transforming the
-area coverage problem into a line coverage problem (i.e., coverage of linear
-features), and then generating routes that minimize the total cost of travel
-while respecting the capacity constraints. We define two modes of travel: (1)
-servicing and (2) deadheading, which correspond to whether a robot is
-performing task-specific actions or not. Our formulation allows separate and
-asymmetric travel costs and demands for the two modes. Furthermore, the cells
-computed from cell decomposition, aimed at minimizing the number of turns, are
-not required to be monotone polygons. We develop new procedures for cell
-decomposition and generation of service tracks that can handle non-monotone
-polygons with or without holes. We establish the efficacy of our algorithm on a
-ground robot dataset with 25 indoor environments and an aerial robot dataset
-with 300 outdoor environments. The algorithm generates solutions whose costs
-are 10% lower on average than state-of-the-art methods. We additionally
-demonstrate our algorithm in experiments with UAVs.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09535'>On computing Ollivier-Ricci curvatures of graphs: fine-grained reductions and local algorithms</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Bhaskar DasGupta, Elena Grigorescu, Tamalika Mukherjee</p><p>Characterizing shapes of high-dimensional objects via Ricci curvatures plays
-a critical role in many research areas in mathematics and physics. However,
-even though several discretizations of Ricci curvatures for discrete
-combinatorial objects such as networks have been proposed and studied by
-mathematicians, the computational
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+DasGupta_B/0/1/0/all/0/1">Bhaskar DasGupta</a>, <a href="http://arxiv.org/find/cs/1/au:+Grigorescu_E/0/1/0/all/0/1">Elena Grigorescu</a>, <a href="http://arxiv.org/find/cs/1/au:+Mukherjee_T/0/1/0/all/0/1">Tamalika Mukherjee</a></p><p>Characterizing shapes of high-dimensional objects via Ricci curvatures plays
-a critical role in many research areas in mathematics and physics. However,
-even though several discretizations of Ricci curvatures for discrete
-combinatorial objects such as networks have been proposed and studied by
-mathematicians, the computational complexity aspects of these discretizations
-have escaped the attention of theoretical computer scientists to a large
-extent. In this paper, we study one such discretization, namely the
-Ollivier-Ricci curvature, from the perspective of efficient computation by
-fine-grained reductions and local query-based algorithms. Our main
-contributions are the following.
-</p>
-<p>(a) We relate our curvature computation problem to minimum weight perfect
-matching problem on complete bipartite graphs via fine-grained reduction.
-</p>
-<p>(b) We formalize the computational aspects of the curvature computation
-problems in suitable frameworks so that they can be studied by researchers in
-local algorithms.
-</p>
-<p>(c) We provide the first known lower and upper bounds on queries for
-query-based algorithms for the curvature computation problems in our local
-algorithms framework.
-</p>
-<p>We believe that our results bring forth an intriguing set of research
-questions, motivated both in theory and practice, regarding designing efficient
-algorithms for curvatures of objects.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09493'>Near-optimal fitting of ellipsoids to random points</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Prayaag Venkat, Paxton Turner, Alexander S. Wein</p><p>Given independent standard Gaussian points $v_1, \ldots, v_n$ in dimension
-$d$, for what values of $(n, d)$ does there exist with high probability an
-origin-symmetric ellipsoid that simultaneously passes through all of the
-points? This basic problem of fitting an ellipsoid to random points has
-connections to low-rank matrix decompos
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Venkat_P/0/1/0/all/0/1">Prayaag Venkat</a>, <a href="http://arxiv.org/find/cs/1/au:+Turner_P/0/1/0/all/0/1">Paxton Turner</a>, <a href="http://arxiv.org/find/cs/1/au:+Wein_A/0/1/0/all/0/1">Alexander S. Wein</a></p><p>Given independent standard Gaussian points $v_1, \ldots, v_n$ in dimension
-$d$, for what values of $(n, d)$ does there exist with high probability an
-origin-symmetric ellipsoid that simultaneously passes through all of the
-points? This basic problem of fitting an ellipsoid to random points has
-connections to low-rank matrix decompositions, independent component analysis,
-and principal component analysis. Based on strong numerical evidence,
-Saunderson, Parrilo, and Willsky [Proc. of Conference on Decision and Control,
-pp. 6031-6036, 2013] conjecture that the ellipsoid fitting problem transitions
-from feasible to infeasible as the number of points $n$ increases, with a sharp
-threshold at $n \sim d^2/4$. We resolve this conjecture up to logarithmic
-factors by constructing a fitting ellipsoid for some $n = \Omega( \,
-d^2/\log^5(d) \,)$, improving prior work of Ghosh et al. [Proc. of Symposium on
-Foundations of Computer Science, pp. 954-965, 2020] that requires $n =
-o(d^{3/2})$. Our proof demonstrates feasibility of the least squares
-construction of Saunderson et al. using a careful analysis of the eigenvectors
-and eigenvalues of a certain non-standard random matrix.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09522'>Packet Forwarding with a Locally Bursty Adversary</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Will Rosenbaum</p><p>We consider packet forwarding in the adversarial queueing theory (AQT) model
-introduced by Borodin et al. We introduce a refinement of the AQT $(\rho,
-\sigma)$-bounded adversary, which we call a \emph{locally bursty adversary}
-(LBA) that parameterizes injection patterns jointly by edge utilization and
-packet origin. For constant ($O(1)$) parameters, the LBA model is
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Rosenbaum_W/0/1/0/all/0/1">Will Rosenbaum</a></p><p>We consider packet forwarding in the adversarial queueing theory (AQT) model
-introduced by Borodin et al. We introduce a refinement of the AQT $(\rho,
-\sigma)$-bounded adversary, which we call a \emph{locally bursty adversary}
-(LBA) that parameterizes injection patterns jointly by edge utilization and
-packet origin. For constant ($O(1)$) parameters, the LBA model is strictly more
-permissive than the $(\rho, \sigma)$ model. For example, there are injection
-patterns in the LBA model with constant parameters that can only be realized as
-$(\rho, \sigma)$-bounded injection patterns with $\rho + \sigma = \Omega(n)$
-(where $n$ is the network size). We show that the LBA model (unlike the $(\rho,
-\sigma)$ model) is closed under packet bundling and discretization operations.
-Thus, the LBA model allows one to reduce the study of general (uniform)
-capacity networks and inhomogenous packet sizes to unit capacity networks with
-homogeneous packets.
-</p>
-<p>On the algorithmic side, we focus on information gathering networks -- i.e.,
-networks in which all packets share a common destination, and the union of
-packet routes forms a tree. We show that the Odd-Even Downhill (OED) forwarding
-protocol described independently by Dobrev et al.\ and Patt-Shamir and
-Rosenbaum achieves buffer space usage of $O(\log n)$ against all LBAs with
-constant parameters. OED is a local protocol, but we show that the upper bound
-is tight even when compared to centralized protocols. Our lower bound for the
-LBA model is in contrast to the $(\rho, \sigma)$-model, where centralized
-protocols can achieve worst-case buffer space usage $O(1)$ for $\rho, \sigma =
-O(1)$, while the $O(\log n)$ upper bound for OED is optimal only for local
-protocols.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09634'>An $O(k\log n)$ Time Fourier Set Query Algorithm</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Yeqi Gao, Zhao Song, Baocheng Sun</p><p>Fourier transformation is an extensively studied problem in many research
-fields. It has many applications in machine learning, signal processing,
-compressed sensing, and so on. In many real-world applications, approximated
-Fourier transformation is sufficient and we only need to do the Fourier
-transform on a subset of coordinates. Given a vector 
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Gao_Y/0/1/0/all/0/1">Yeqi Gao</a>, <a href="http://arxiv.org/find/cs/1/au:+Song_Z/0/1/0/all/0/1">Zhao Song</a>, <a href="http://arxiv.org/find/cs/1/au:+Sun_B/0/1/0/all/0/1">Baocheng Sun</a></p><p>Fourier transformation is an extensively studied problem in many research
-fields. It has many applications in machine learning, signal processing,
-compressed sensing, and so on. In many real-world applications, approximated
-Fourier transformation is sufficient and we only need to do the Fourier
-transform on a subset of coordinates. Given a vector $x \in \mathbb{C}^{n}$, an
-approximation parameter $\epsilon$ and a query set $S \subset [n]$ of size $k$,
-we propose an algorithm to compute an approximate Fourier transform result $x'$
-which uses $O(\epsilon^{-1} k \log(n/\delta))$ Fourier measurements, runs in
-$O(\epsilon^{-1} k \log(n/\delta))$ time and outputs a vector $x'$ such that
-$\| ( x' - \widehat{x} )_S \|_2^2 \leq \epsilon \| \widehat{x}_{\bar{S}} \|_2^2
-+ \delta \| \widehat{x} \|_1^2 $ holds with probability of at least $9/10$.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09643'>The computational complexity of some explainable clustering problems</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Eduardo Sany Laber</p><p>We study the computational complexity of some explainable clustering problems
-in the framework proposed by [Dasgupta et al., ICML 2020], where explainability
-is achieved via axis-aligned decision trees. We consider the $k$-means,
-$k$-medians, $k$-centers and the spacing cost functions. We prove that the
-first three are hard to optimize while the latter can be op
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Laber_E/0/1/0/all/0/1">Eduardo Sany Laber</a></p><p>We study the computational complexity of some explainable clustering problems
-in the framework proposed by [Dasgupta et al., ICML 2020], where explainability
-is achieved via axis-aligned decision trees. We consider the $k$-means,
-$k$-medians, $k$-centers and the spacing cost functions. We prove that the
-first three are hard to optimize while the latter can be optimized in
-polynomial time.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09731'>Solving systems of linear equations through zero forcing set and application to lights out</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Jianbo Wang, Chao Xu, Siyun Zhou</p><p>Let $\mathbb{F}$ be any field, we consider solving $Ax=b$ repeatedly for a
-matrix $A\in\mathbb{F}^{n\times n}$ of $m$ non-zero elements, and multiple
-different $b\in\mathbb{F}^{n}$. If we are given a zero forcing set of $A$ of
-size $k$, we can then build a data structure in $O(mk)$ time, such that each
-instance of $Ax=b$ can be solved in $O(k^2+m)$
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Wang_J/0/1/0/all/0/1">Jianbo Wang</a>, <a href="http://arxiv.org/find/cs/1/au:+Xu_C/0/1/0/all/0/1">Chao Xu</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhou_S/0/1/0/all/0/1">Siyun Zhou</a></p><p>Let $\mathbb{F}$ be any field, we consider solving $Ax=b$ repeatedly for a
-matrix $A\in\mathbb{F}^{n\times n}$ of $m$ non-zero elements, and multiple
-different $b\in\mathbb{F}^{n}$. If we are given a zero forcing set of $A$ of
-size $k$, we can then build a data structure in $O(mk)$ time, such that each
-instance of $Ax=b$ can be solved in $O(k^2+m)$ time. As an application, we show
-how the lights out game in an $n\times n$ grid is solved in $O(n^3)$ time, and
-then improve the running time to $O(n^\omega\log n)$ by exploiting the repeated
-structure in grids.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09809'>A Work-Efficient Parallel Algorithm for Longest Increasing Subsequence</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Yan Gu, Zheqi Shen, Yihan Sun, Zijin Wan</p><p>This paper studies parallel algorithms for the longest increasing subsequence
-(LIS) problem. Let $n$ be the input size and $k$ be the LIS length of the
-input. Sequentially, LIS is a simple textbook problem that can be solved using
-dynamic programming (DP) in $O(n\log n)$ work. However, parallelizing LIS is a
-long-standing challenge. We are 
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Gu_Y/0/1/0/all/0/1">Yan Gu</a>, <a href="http://arxiv.org/find/cs/1/au:+Shen_Z/0/1/0/all/0/1">Zheqi Shen</a>, <a href="http://arxiv.org/find/cs/1/au:+Sun_Y/0/1/0/all/0/1">Yihan Sun</a>, <a href="http://arxiv.org/find/cs/1/au:+Wan_Z/0/1/0/all/0/1">Zijin Wan</a></p><p>This paper studies parallel algorithms for the longest increasing subsequence
-(LIS) problem. Let $n$ be the input size and $k$ be the LIS length of the
-input. Sequentially, LIS is a simple textbook problem that can be solved using
-dynamic programming (DP) in $O(n\log n)$ work. However, parallelizing LIS is a
-long-standing challenge. We are unaware of any parallel LIS algorithm that has
-optimal $O(n\log n)$ work and non-trivial parallelism (i.e., $\tilde{O}(k)$ or
-$o(n)$ span). Here, the work of a parallel algorithm is the total number of
-operations, and the span is the longest dependent instructions.
-</p>
-<p>This paper proposes a parallel LIS algorithm that costs $O(n\log k)$ work,
-$\tilde{O}(k)$ span, and $O(n)$ space, and is \emph{much simpler} than the
-previous parallel LIS algorithms. We also generalize the algorithm to a
-weighted version of LIS, which maximizes the weighted sum for all objects in an
-increasing subsequence. Our weighted LIS algorithm has $O(n\log^2 n)$ work and
-$\tilde{O}(k)$ span.
-</p>
-<p>We also implemented our parallel LIS algorithms. Due to simplicity, our
-implementation is light-weighted, efficient, and scalable. On input size
-$10^9$, our LIS algorithm outperforms a highly-optimized sequential algorithm
-(with $O(n\log k)$ cost) on inputs with $k\le 3\times 10^5$. Our algorithm is
-also much faster than the best existing parallel implementation by Shen et al.
-on all input instances.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09840'>Teaching the Burrows-Wheeler Transform via the Positional Burrows-Wheeler Transform</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Travis Gagie, Giovanni Manzini, Marinella Sciortino</p><p>The Burrows-Wheeler Transform (BWT) is often taught in undergraduate courses
-on algorithmic bioinformatics, because it underlies the FM-index and thus
-important tools such as Bowtie and BWA. Its admirers consider the BWT a thing
-of beauty but, despite thousands of pages being written about it over nearly
-thirty years, to undergra
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Gagie_T/0/1/0/all/0/1">Travis Gagie</a>, <a href="http://arxiv.org/find/cs/1/au:+Manzini_G/0/1/0/all/0/1">Giovanni Manzini</a>, <a href="http://arxiv.org/find/cs/1/au:+Sciortino_M/0/1/0/all/0/1">Marinella Sciortino</a></p><p>The Burrows-Wheeler Transform (BWT) is often taught in undergraduate courses
-on algorithmic bioinformatics, because it underlies the FM-index and thus
-important tools such as Bowtie and BWA. Its admirers consider the BWT a thing
-of beauty but, despite thousands of pages being written about it over nearly
-thirty years, to undergraduates seeing it for the first time it still often
-seems like magic. Some who persevere are later shown the Positional BWT (PBWT),
-which was published twenty years after the BWT. In this paper we argue that the
-PBWT should be taught {\em before} the BWT.
-</p>
-<p>We first use the PBWT's close relation to a right-to-left radix sort to
-explain how to use it as a fast and space-efficient index for {\em positional
-search} on a set of strings (that is, given a pattern and a position, quickly
-list the strings containing that pattern starting in that position). We then
-observe that {\em prefix search} (listing all the strings that start with the
-pattern) is an easy special case of positional search, and that prefix search
-on the suffixes of a single string is equivalent to {\em substring search} in
-that string (listing all the starting positions of occurrences of the pattern
-in the string).
-</p>
-<p>Storing na\"ively a PBWT of the suffixes of a string is space-{\em
-inefficient} but, in even reasonably small examples, most of its columns are
-nearly the same. It is not difficult to show that if we store a PBWT of the
-cyclic shifts of the string, instead of its suffixes, then all the columns are
-exactly the same -- and equal to the BWT of the string. Thus we can teach the
-BWT and the FM-index via the PBWT.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09948'>Counting Cycles on Planar Graphs in Subexponential Time</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Jin-Yi Cai, Ashwin Maran</p><p>We study the problem of counting all cycles or self-avoiding walks (SAWs) on
-triangulated planar graphs. We present a subexponential $2^{O(\sqrt{n})}$ time
-algorithm for this counting problem. Among the technical ingredients used in
-this algorithm are the planar separator theorem and a delicate analysis using
-pairs of Motzkin paths and Motzkin numbers. We 
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Cai_J/0/1/0/all/0/1">Jin-Yi Cai</a>, <a href="http://arxiv.org/find/cs/1/au:+Maran_A/0/1/0/all/0/1">Ashwin Maran</a></p><p>We study the problem of counting all cycles or self-avoiding walks (SAWs) on
-triangulated planar graphs. We present a subexponential $2^{O(\sqrt{n})}$ time
-algorithm for this counting problem. Among the technical ingredients used in
-this algorithm are the planar separator theorem and a delicate analysis using
-pairs of Motzkin paths and Motzkin numbers. We can then adapt this algorithm to
-uniformly sample SAWs, in subexponential time. Our work is motivated by the
-problem of gerrymandered districting maps.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.09951'>Bipartite Matchings with Group Fairness and Individual Fairness Constraints</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Atasi Panda, Anand Louis, Prajakta Nibhorkar</p><p>We address group as well as individual fairness constraints in matchings in
-the context of assigning items to platforms. Each item belongs to certain
-groups and has a preference ordering over platforms. Each platform enforces
-group fairness by specifying an upper and a lower bound on the number of items
-that can be matched to it from ea
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Panda_A/0/1/0/all/0/1">Atasi Panda</a>, <a href="http://arxiv.org/find/cs/1/au:+Louis_A/0/1/0/all/0/1">Anand Louis</a>, <a href="http://arxiv.org/find/cs/1/au:+Nibhorkar_P/0/1/0/all/0/1">Prajakta Nibhorkar</a></p><p>We address group as well as individual fairness constraints in matchings in
-the context of assigning items to platforms. Each item belongs to certain
-groups and has a preference ordering over platforms. Each platform enforces
-group fairness by specifying an upper and a lower bound on the number of items
-that can be matched to it from each group. There could be multiple optimal
-solutions that satisfy the group fairness constraints. To achieve individual
-fairness, we introduce `probabilistic individual fairness', where the goal is
-to compute a distribution over `group fair' matchings such that every item has
-a reasonable probability of being matched to a platform among its top choices.
-In the case where each item belongs to exactly one group, we provide a
-polynomial-time algorithm that computes a probabilistic individually fair
-distribution over group fair matchings. When an item can belong to multiple
-groups, and the group fairness constraints are specified as only upper bounds,
-we rehash the same algorithm to achieve three different polynomial-time
-approximation algorithms.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10003'>Locally Defined Independence Systems on Graphs</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Yuki Amano</p><p>The maximization for the independence systems defined on graphs is a
-generalization of combinatorial optimization problems such as the maximum
-$b$-matching, the unweighted MAX-SAT, the matchoid, and the maximum timed
-matching problems. In this paper, we consider the problem under the local
-oracle model to investigate the global approximability of the problem by using
-th
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Amano_Y/0/1/0/all/0/1">Yuki Amano</a></p><p>The maximization for the independence systems defined on graphs is a
-generalization of combinatorial optimization problems such as the maximum
-$b$-matching, the unweighted MAX-SAT, the matchoid, and the maximum timed
-matching problems. In this paper, we consider the problem under the local
-oracle model to investigate the global approximability of the problem by using
-the local approximability. We first analyze two simple algorithms FixedOrder
-and Greedy for the maximization under the model, which shows that they have no
-constant approximation ratio. Here algorithms FixedOrder and Greedy apply local
-oracles with fixed and greedy orders of vertices, respectively. We then propose
-two approximation algorithms for the $k$-degenerate graphs, whose approximation
-ratios are $\alpha +2k -2$ and $\alpha k$, where $\alpha$ is the approximation
-ratio of local oracles. The second one can be generalized to the hypergraph
-setting. We also propose an $(\alpha + k)$-approximation algorithm for
-bipartite graphs, in which the local independence systems in the one-side of
-vertices are $k$-systems with independence oracles.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10025'>Simple and Optimal Stochastic Gradient Methods for Nonsmooth Nonconvex Optimization</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Zhize Li, Jian Li</p><p>We propose and analyze several stochastic gradient algorithms for finding
-stationary points or local minimum in nonconvex, possibly with nonsmooth
-regularizer, finite-sum and online optimization problems. First, we propose a
-simple proximal stochastic gradient algorithm based on variance reduction
-called ProxSVRG+. We provide a clean and tight analysis of ProxSVR
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Li_Z/0/1/0/all/0/1">Zhize Li</a>, <a href="http://arxiv.org/find/cs/1/au:+Li_J/0/1/0/all/0/1">Jian Li</a></p><p>We propose and analyze several stochastic gradient algorithms for finding
-stationary points or local minimum in nonconvex, possibly with nonsmooth
-regularizer, finite-sum and online optimization problems. First, we propose a
-simple proximal stochastic gradient algorithm based on variance reduction
-called ProxSVRG+. We provide a clean and tight analysis of ProxSVRG+, which
-shows that it outperforms the deterministic proximal gradient descent (ProxGD)
-for a wide range of minibatch sizes, hence solves an open problem proposed in
-Reddi et al. (2016b). Also, ProxSVRG+ uses much less proximal oracle calls than
-ProxSVRG (Reddi et al., 2016b) and extends to the online setting by avoiding
-full gradient computations. Then, we further propose an optimal algorithm,
-called SSRGD, based on SARAH (Nguyen et al., 2017) and show that SSRGD further
-improves the gradient complexity of ProxSVRG+ and achieves the optimal upper
-bound, matching the known lower bound of (Fang et al., 2018; Li et al., 2021).
-Moreover, we show that both ProxSVRG+ and SSRGD enjoy automatic adaptation with
-local structure of the objective function such as the Polyak-\L{}ojasiewicz
-(PL) condition for nonconvex functions in the finite-sum case, i.e., we prove
-that both of them can automatically switch to faster global linear convergence
-without any restart performed in prior work ProxSVRG (Reddi et al., 2016b).
-Finally, we focus on the more challenging problem of finding an $(\epsilon,
-\delta)$-local minimum instead of just finding an $\epsilon$-approximate
-(first-order) stationary point (which may be some bad unstable saddle points).
-We show that SSRGD can find an $(\epsilon, \delta)$-local minimum by simply
-adding some random perturbations. Our algorithm is almost as simple as its
-counterpart for finding stationary points, and achieves similar optimal rates.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10095'>Socially Fair Center-based and Linear Subspace Clustering</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Sruthi Gorantla, Kishen N. Gowda, Amit Deshpande, Anand Louis</p><p>Center-based clustering (e.g., $k$-means, $k$-medians) and clustering using
-linear subspaces are two most popular techniques to partition real-world data
-into smaller clusters. However, when the data consists of sensitive demographic
-groups, significantly different clustering cost per point for different
-sensitive group
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Gorantla_S/0/1/0/all/0/1">Sruthi Gorantla</a>, <a href="http://arxiv.org/find/cs/1/au:+Gowda_K/0/1/0/all/0/1">Kishen N. Gowda</a>, <a href="http://arxiv.org/find/cs/1/au:+Deshpande_A/0/1/0/all/0/1">Amit Deshpande</a>, <a href="http://arxiv.org/find/cs/1/au:+Louis_A/0/1/0/all/0/1">Anand Louis</a></p><p>Center-based clustering (e.g., $k$-means, $k$-medians) and clustering using
-linear subspaces are two most popular techniques to partition real-world data
-into smaller clusters. However, when the data consists of sensitive demographic
-groups, significantly different clustering cost per point for different
-sensitive groups can lead to fairness-related harms (e.g., different
-quality-of-service). The goal of socially fair clustering is to minimize the
-maximum cost of clustering per point over all groups. In this work, we propose
-a unified framework to solve socially fair center-based clustering and linear
-subspace clustering, and give practical, efficient approximation algorithms for
-these problems. We do extensive experiments to show that on multiple benchmark
-datasets our algorithms either closely match or outperform state-of-the-art
-baselines.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10168'>\~{O}ptimal Dual Vertex Failure Connectivity Labels</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Merav Parter, Asaf Petruschka</p><p>In this paper we present succinct labeling schemes for supporting
-connectivity queries under vertex faults. For a given $n$-vertex graph $G$, an
-$f$-VFT (resp., EFT) connectivity labeling scheme is a distributed data
-structure that assigns each of the graph edges and vertices a short label, such
-that given the labels of a vertex pair $u$ and $v$, and 
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Parter_M/0/1/0/all/0/1">Merav Parter</a>, <a href="http://arxiv.org/find/cs/1/au:+Petruschka_A/0/1/0/all/0/1">Asaf Petruschka</a></p><p>In this paper we present succinct labeling schemes for supporting
-connectivity queries under vertex faults. For a given $n$-vertex graph $G$, an
-$f$-VFT (resp., EFT) connectivity labeling scheme is a distributed data
-structure that assigns each of the graph edges and vertices a short label, such
-that given the labels of a vertex pair $u$ and $v$, and the labels of at most
-$f$ failing vertices (resp., edges) $F$, one can determine if $u$ and $v$ are
-connected in $G \setminus F$. The primary complexity measure is the length of
-the individual labels. Since their introduction by [Courcelle, Twigg, STACS
-'07], FT labeling schemes have been devised only for a limited collection of
-graph families. A recent work [Dory and Parter, PODC 2021] provided EFT
-labeling schemes for general graphs under edge failures, leaving the vertex
-failure case fairly open. We provide the first sublinear $f$-VFT labeling
-schemes for $f \geq 2$ for any $n$-vertex graph. Our key result is $2$-VFT
-connectivity labels with $O(\log^3 n)$ bits. Our constructions are based on
-analyzing the structure of dual failure replacement paths on top of the
-well-known heavy-light tree decomposition technique of [Sleator and Tarjan,
-STOC 1981]. We also provide $f$-VFT labels with sub-linear length (in $|V|$)
-for any $f=o(\log\log n)$, that are based on a reduction to the existing EFT
-labels.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.10290'>Deterministic Graph-Walking Program Mining</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Peter Belcak, Roger Wattenhofer</p><p>Owing to their versatility, graph structures admit representations of
-intricate relationships between the separate entities comprising the data. We
-formalise the notion of connection between two vertex sets in terms of edge and
-vertex features by introducing graph-walking programs. We give two algorithms
-for mining of deterministic graph-walking pro
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Belcak_P/0/1/0/all/0/1">Peter Belcak</a>, <a href="http://arxiv.org/find/cs/1/au:+Wattenhofer_R/0/1/0/all/0/1">Roger Wattenhofer</a></p><p>Owing to their versatility, graph structures admit representations of
-intricate relationships between the separate entities comprising the data. We
-formalise the notion of connection between two vertex sets in terms of edge and
-vertex features by introducing graph-walking programs. We give two algorithms
-for mining of deterministic graph-walking programs that yield programs in the
-order of increasing length. These programs characterise linear long-distance
-relationships between the given two vertex sets in the context of the whole
-graph.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-23T00:30:00Z">Tuesday, August 23 2022, 00:30</time>
         </div>
       </div>
     </article>
@@ -3066,6 +2408,685 @@ Our second result addresses a question of Yao (FOCS 1977). He asked if $\epsilon
 
         <div class='item-footer'>
           <time class='timeago' datetime="2022-08-12T05:00:00Z">Friday, August 12 2022, 05:00</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Thursday, August 11
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://gilkalai.wordpress.com/2022/08/11/to-cheer-you-up-in-difficult-times-36-the-immense-joy-of-fake-reverse-parking/'>To cheer you up in difficult times 36: The Immense Joy of Fake Reverse Parking</a></h3>
+          <p class='item-feed'>from <a href='https://gilkalai.wordpress.com'>Gil Kalai</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          Fake reverse parking Update: fake reverse parking is known already as the much debated &#8220;pull-through parking&#8221;. (Thanks to Gali Weinstein over Facebook for telling me about it.) It is also mentioned as #879 among a thousand awesome things by Neil &#8230; Continue reading &#8594;
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p></p>
+
+
+<p><img loading="lazy" data-attachment-id="23155" data-permalink="https://gilkalai.wordpress.com/2022/08/11/to-cheer-you-up-in-difficult-times-36-the-immense-joy-of-fake-reverse-parking/frp9/" data-orig-file="https://gilkalai.files.wordpress.com/2022/08/frp9.png" data-orig-size="1051,668" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="frp9" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2022/08/frp9.png?w=300" data-large-file="https://gilkalai.files.wordpress.com/2022/08/frp9.png?w=640" class="alignnone size-full wp-image-23155" src="https://gilkalai.files.wordpress.com/2022/08/frp9.png" alt="frp9" width="1051" height="668" srcset="https://gilkalai.files.wordpress.com/2022/08/frp9.png 1051w, https://gilkalai.files.wordpress.com/2022/08/frp9.png?w=150&amp;h=95 150w, https://gilkalai.files.wordpress.com/2022/08/frp9.png?w=300&amp;h=191 300w, https://gilkalai.files.wordpress.com/2022/08/frp9.png?w=768&amp;h=488 768w, https://gilkalai.files.wordpress.com/2022/08/frp9.png?w=1024&amp;h=651 1024w" sizes="(max-width: 1051px) 100vw, 1051px"></p>
+<h3 style="text-align:center;"><strong><span style="color:#ff0000;">Fake reverse parking</span></strong></h3>
+<p><strong>Update</strong>: fake reverse parking is known already as <a href="//vancouverisland.ctvnews.ca/should-you-pull-through-in-parking-lots-experts-divided-1.4269504">the much debated &#8220;pull-through parking&#8221;</a>. (Thanks to Gali Weinstein over Facebook for telling me about it.) It is also mentioned as <a href="http://1000awesomethings.com/2008/12/08/879-the-parking-lot-pull-through/">#879 among a thousand awesome things</a> by Neil Pasricha.</p>
+<p>When I was young my mother <a href="https://gilkalai.wordpress.com/2015/08/02/carmella-kalai-1926-2015/">Carmela Kalai</a> told me: &#8220;Always remember, Gili,&nbsp; how wonderful movies are and how happy I was to be born in the era of movies.&#8221; My father <a href="https://en.wikipedia.org/wiki/Hanoch_Kalai">Hanoch Kalai</a> told me: &#8220;Everything is interesting! Every subject, no matter how marginal and unimportant or boring it may look to you, Gil, when you study it in depth you will find it fascinating!&#8221;</p>
+<p>One thing I tell my children is: &#8220;Remember the joy of fake reverse parking!&#8221;</p>
+<p>Let me tell you in this post what fake reverse parking is:</p>
+<h2>Fake-reverse parking</h2>
+<p>The brief explanation is simple: when there are two (<strong>unoccupied</strong>) parking spaces, one after the other, you drive forward, pass one of the parking lots and locate your car in the second parking lot.</p>
+<p>The general law about parking is this: forward parking is often easier than reverse parking but it is often harder afterwards to drive your car away. Reverse parking is harder than forward parking but later it is easier to get out and drive away. Fake reverse driving is easier than both and it is just as easy as ordinary reverse parking when it comes to leaving your parking place and driving away.<span id="more-21813"></span></p>
+<h3><img loading="lazy" data-attachment-id="23147" data-permalink="https://gilkalai.wordpress.com/2022/08/11/to-cheer-you-up-in-difficult-times-36-the-immense-joy-of-fake-reverse-parking/frp5/" data-orig-file="https://gilkalai.files.wordpress.com/2022/08/frp5.png" data-orig-size="1000,664" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="frp5" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2022/08/frp5.png?w=300" data-large-file="https://gilkalai.files.wordpress.com/2022/08/frp5.png?w=640" class="alignnone size-full wp-image-23147" src="https://gilkalai.files.wordpress.com/2022/08/frp5.png" alt="frp5" width="1000" height="664" srcset="https://gilkalai.files.wordpress.com/2022/08/frp5.png 1000w, https://gilkalai.files.wordpress.com/2022/08/frp5.png?w=150&amp;h=100 150w, https://gilkalai.files.wordpress.com/2022/08/frp5.png?w=300&amp;h=199 300w, https://gilkalai.files.wordpress.com/2022/08/frp5.png?w=768&amp;h=510 768w" sizes="(max-width: 1000px) 100vw, 1000px"></h3>
+<h3><span style="color:#ff0000;"><strong>Ordinary reverse parking</strong></span></h3>
+<h3>&nbsp;</h3>
+<h3><img loading="lazy" data-attachment-id="23148" data-permalink="https://gilkalai.wordpress.com/2022/08/11/to-cheer-you-up-in-difficult-times-36-the-immense-joy-of-fake-reverse-parking/frp3/" data-orig-file="https://gilkalai.files.wordpress.com/2022/08/frp3.png" data-orig-size="1051,668" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="frp3" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2022/08/frp3.png?w=300" data-large-file="https://gilkalai.files.wordpress.com/2022/08/frp3.png?w=640" class="alignnone size-full wp-image-23148" src="https://gilkalai.files.wordpress.com/2022/08/frp3.png" alt="frp3" width="1051" height="668" srcset="https://gilkalai.files.wordpress.com/2022/08/frp3.png 1051w, https://gilkalai.files.wordpress.com/2022/08/frp3.png?w=150&amp;h=95 150w, https://gilkalai.files.wordpress.com/2022/08/frp3.png?w=300&amp;h=191 300w, https://gilkalai.files.wordpress.com/2022/08/frp3.png?w=768&amp;h=488 768w, https://gilkalai.files.wordpress.com/2022/08/frp3.png?w=1024&amp;h=651 1024w" sizes="(max-width: 1051px) 100vw, 1051px"></h3>
+<h3><span style="color:#ff0000;"><strong>Fake reverse parking</strong> </span></h3>
+<p>As you can see and feel by looking at the pictures, fake reverse parking is much easier than ordinary reverse parking and allows you to achieve the same results. As a matter of fact, fake reverse parking is even easier than ordinary forward parking.</p>
+<h3><img loading="lazy" data-attachment-id="23152" data-permalink="https://gilkalai.wordpress.com/2022/08/11/to-cheer-you-up-in-difficult-times-36-the-immense-joy-of-fake-reverse-parking/frp7/" data-orig-file="https://gilkalai.files.wordpress.com/2022/08/frp7.png" data-orig-size="954,600" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="frp7" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2022/08/frp7.png?w=300" data-large-file="https://gilkalai.files.wordpress.com/2022/08/frp7.png?w=640" class="alignnone size-full wp-image-23152" src="https://gilkalai.files.wordpress.com/2022/08/frp7.png" alt="frp7" width="954" height="600" srcset="https://gilkalai.files.wordpress.com/2022/08/frp7.png 954w, https://gilkalai.files.wordpress.com/2022/08/frp7.png?w=150&amp;h=94 150w, https://gilkalai.files.wordpress.com/2022/08/frp7.png?w=300&amp;h=189 300w, https://gilkalai.files.wordpress.com/2022/08/frp7.png?w=768&amp;h=483 768w" sizes="(max-width: 954px) 100vw, 954px"></h3>
+<p><strong><span style="color:#ff0000;">Ordinary forward parking</span></strong></p>
+<p><span style="color:#0000ff;">Again, look at the three pictures above and witness for yourself how the pictures of ordinary reverse and ordinary forward parking can make you nervous, while the pictures of fake reverse parking evoke a calm and joyful mood!</span></p>
+<h3><span style="color:#ff00ff;"><strong>Caution in parking is advised!</strong></span></h3>
+<p>Like many other joyous activities, some warnings are in place. In any kind of parking, it is a mistake to park your car in a parking place which is already occupied by another car. <strong>For fake reverse parking make sure that there is no simultaneous attempt by another driver to park, using the ordinary reverse parking method inthe same parking space.</strong></p>
+<h2>Fake-fake reverse parking?</h2>
+<p>One day I went with my youngest son Lior to some parking lot near Rehovot. (Here is a lovely post based on a question of Lior <a href="https://gilkalai.wordpress.com/2019/03/18/tyi38-lior-kalai-monty-hall-meets-survivor/" rel="bookmark">TYI38 Lior Kalai: Monty Hall Meets&nbsp;Survivor</a>.) It was a large parking lot and it was completely empty.&nbsp; When I parked my son asked me &#8220;why didn&#8217;t you opt for fake reverse parking?&#8221; &#8220;Well&#8221;, I said &#8220;what I did is actually a &#8216;fake-fake reverse parking&#8217;. Later, when the parking space fills up, people will assume that I made a fake-reverse parking. But this was too easy with no cars around so my parking was actually a &#8216;fake-fake-reverse parking&#8217;, aimed at giving a feeling of fake reverse parking, while in reality it is not&#8221;. Lior, thought about it for a minute and then said: &#8220;Daddy, this is complete nonsense! There is no such thing as a &#8216;fake-fake reverse parking&#8217;. What you did is a simple reverse parking!&#8221;</p>
+<p>&#8220;Well&#8221;, I thought, &#8220;it is good that my children are skeptical about things I tell them, and shoot down incorrect or silly ideas that I raise.&#8221; Moreover, quickly dismissing my idea about a &#8220;fake-fake reverse parking&#8221; strengthens the value of my classic idea about the importance and joy in ordinary fake reverse parking. Still, I was somewhat sad that my novel idea of fake-fake reverse parking was shot down so quickly. Maybe it has some deep meaning after all?</p>
+<p></p>
+<p style="text-align:center;"><span style="color:#ff0000;"><strong>an especially magical opportunity for fake reverse parking</strong></span></p>
+<p><img loading="lazy" data-attachment-id="23171" data-permalink="https://gilkalai.wordpress.com/2022/08/11/to-cheer-you-up-in-difficult-times-36-the-immense-joy-of-fake-reverse-parking/ftp11/" data-orig-file="https://gilkalai.files.wordpress.com/2022/08/ftp11.png" data-orig-size="1032,652" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ftp11" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2022/08/ftp11.png?w=300" data-large-file="https://gilkalai.files.wordpress.com/2022/08/ftp11.png?w=640" class="alignnone size-full wp-image-23171" src="https://gilkalai.files.wordpress.com/2022/08/ftp11.png" alt="ftp11" width="1032" height="652" srcset="https://gilkalai.files.wordpress.com/2022/08/ftp11.png 1032w, https://gilkalai.files.wordpress.com/2022/08/ftp11.png?w=150&amp;h=95 150w, https://gilkalai.files.wordpress.com/2022/08/ftp11.png?w=300&amp;h=190 300w, https://gilkalai.files.wordpress.com/2022/08/ftp11.png?w=768&amp;h=485 768w, https://gilkalai.files.wordpress.com/2022/08/ftp11.png?w=1024&amp;h=647 1024w" sizes="(max-width: 1032px) 100vw, 1032px"></p>
+
+
+<h2>My corner: To cheer you up in difficult times</h2>
+
+
+
+<p>(Added August 18, 2022): Since the beginning of the corona pandemic I had a <a rel="noreferrer noopener" href="https://gilkalai.wordpress.com/page/5/?s=cheer" target="_blank">corner on this blog</a> “to cheer you up in difficult times”. I must admit that I tried to cheer my audience up with <a rel="noreferrer noopener" href="https://gilkalai.wordpress.com/2008/05/23/mathematics-to-the-rescue/" target="_blank">silly,</a> <a rel="noreferrer noopener" href="https://gilkalai.wordpress.com/2008/05/12/drachmas/" target="_blank">funny</a>, and <a rel="noreferrer noopener" href="https://gilkalai.wordpress.com/2008/11/28/the-simplified-pill-algorithm/" target="_blank">educating</a> stories earlier on, but since the beginning of the pandemic which largely represented difficult times for all humanity that was not caused by human malice, I thought that these attempts have special value. Now, with the war in Ukraine, I decided to go back to the previous format were the value of being cheered up is left to your own judgement. This post #36 to cheer you up in difficult times is the last one.</p>
+<p class="authors">By Gil Kalai</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-11T13:01:09Z">Thursday, August 11 2022, 13:01</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Wednesday, August 10
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://processalgebra.blogspot.com/2022/08/concur-through-time-data-and-graph.html'>CONCUR through time: A data- and graph-mining analysis</a></h3>
+          <p class='item-feed'>from <a href='http://processalgebra.blogspot.com/'>Luca Aceto</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>The 33rd edition of the International Conference on Concurrency Theory (CONCUR) will be held in Warsaw, Poland, in the period 16–19 September 2022. The first CONCUR conference dates back to 1990 and was one of the conferences organized as part of the two-year ESPRIT Basic&nbsp; Research&nbsp; Action&nbsp; 3006&nbsp; with&nbsp; the&nbsp; same&nbsp; name.&nbsp;&nbsp; The&nbsp; CONCUR&nbsp; communi
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>The <a href="https://concur2022.mimuw.edu.pl/" target="_blank">33rd edition of the International Conference on Concurrency Theory (CONCUR</a>) will be held in Warsaw, Poland, in the period 16–19 September 2022. The first CONCUR conference dates back to 1990 and was one of the conferences organized as part of the two-year <a href="https://pure.tue.nl/ws/portalfiles/portal/4345371/589768.pdf" target="_blank">ESPRIT Basic&nbsp; Research&nbsp; Action&nbsp; 3006</a>&nbsp; with&nbsp; the&nbsp; same&nbsp; name.&nbsp;&nbsp; The&nbsp; CONCUR&nbsp; community&nbsp; has&nbsp; run&nbsp; the conference ever since and established the <a href="https://concurrency-theory.org/organizations/ifip" target="_blank">IFIP WG 1.8 “Concurrency Theory”</a> in 2005 under Technical Committee TC1 Foundations of Computer Science of IFIP1.</p><p>In light of the well-established nature of the CONCUR conference, and spurred by a <a href="https://slides.com/piluc/icalp-50?token=fl3BBJ8j" target="_blank">data-and graph-mining comparative analysis</a> carried out by Pierluigi Crescenzi and three of his students to celebrate the 50th anniversary of ICALP, Pierluigi and I undertook a similar study for the CONCUR conference using some, by now classic, tools from network science.&nbsp; Our goal was to try and understand the evolution of the CONCUR conference throughout its history, the ebb and flow in the popularity of some research areas in concurrency theory, and the centrality of CONCUR authors, as measured by several metrics from network science, amongst other topics.&nbsp;</p><p>Our article available <a href="http://www.icetcs.ru.is/luca/CONCUR.pdf" target="_blank">here</a> reports on our findings.&nbsp; We hope that members of the CONCUR community will enjoy reading it and playing with the web-based resources that accompany this piece.&nbsp; It goes without saying that the data analysis we present has to be taken with a huge pinch of salt and is only meant to provide an overview of the evolution of CONCUR and to be food for thought for the concurrency theory community. <br /></p><p class="authors">By Luca Aceto</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-10T13:55:00Z">Wednesday, August 10 2022, 13:55</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Tuesday, August 09
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://thmatters.wordpress.com/2022/08/09/nas-held-prize-call-for-nominations/'>NAS Held Prize: Call for nominations</a></h3>
+          <p class='item-feed'>from <a href='https://thmatters.wordpress.com'>Theory Matters</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          From chair of the committee, Dan Spielman:Nominations are now being accepted for the National Academy of Sciences’ 2023 Michael and Sheila Held Prize. The Held Prize honors outstanding, innovative, creative, and influential research in the areas of combinatorial and discrete optimization, or related parts of computer science, such as the design and analysis of algorithms [&#8230;]
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>From chair of the committee, Dan Spielman:<br>Nominations are now being accepted for the National Academy of Sciences’ 2023 Michael and Sheila Held Prize. The Held Prize honors outstanding, innovative, creative, and influential research in the areas of combinatorial and discrete optimization, or related parts of computer science, such as the design and analysis of algorithms and complexity theory. This $100,000 prize is intended to recognize recent work (defined as published within the last eight years). Additional information, including past recipients, eligibility requirements, and more, can be found at <a rel="noreferrer noopener" href="http://www.nasonline.org/held" target="_blank">http://www.nasonline.org/held</a> </p>
+
+
+
+<p>All nominations must be submitted online. Unless otherwise stated, the following materials must be submitted:&nbsp;</p>
+
+
+
+<ol><li><strong>A letter from the nominator&nbsp;</strong><em>describing the candidate&#8217;s work and why he or she should be selected for the award. No more than three (3) pages.</em></li><li><strong>Curriculum vitae</strong>.&nbsp;<em>No more than two (2) pages (similar to CVs included with NSF proposals).</em></li><li><strong>Bibliography&nbsp;</strong><em>listing no more than twelve (12) of the nominee&#8217;s most significant publications.</em></li><li><strong>Suggested citation</strong><em>. A 50-word summary stating why the nominee should be considered for this award</em>. (Citation<br>examples)</li><li><strong>Two letters of support</strong>.&nbsp;<em>Support letters must be written by individuals from institutions outside both the</em><br><em>nominator&#8217;s and the nominee’s institution. Up to three letters of support are accepted.</em></li></ol>
+
+
+
+<p>Nominations will be accepted through&nbsp;<strong>Monday, October 3, 2022</strong>. Please help spread the word that the nomination process is underway.&nbsp;</p>
+<p class="authors">By shuchic</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-09T17:31:06Z">Tuesday, August 09 2022, 17:31</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://processalgebra.blogspot.com/2022/08/interview-with-kim-g-larsen-concur-2022.html'>Interview with Franck Cassez and Kim G. Larsen, CONCUR 2022 ToT Award Recipients</a></h3>
+          <p class='item-feed'>from <a href='http://processalgebra.blogspot.com/'>Luca Aceto</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>This post is devoted to an interview with Kim G. Larsen, who received the CONCUR 2022 Test-of-Time Award for the paper The Impressive Power of Stopwatches (available also here), which appeared at CONCUR 2000 and was co-authored with Franck Cassez. On behalf of the concurrency theory community, I thank Kim for taking the time to answer my questions. I trust that readers of this blog will enjoy re
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="MsoNormal">This post is devoted to an interview with <a href="https://homes.cs.aau.dk/~kgl/" target="_blank">Kim G. Larsen</a>, who received the <a href="https://concur2022.mimuw.edu.pl/tot-award/" target="_blank">CONCUR 2022 Test-of-Time Award</a> for the paper <a href="https://link.springer.com/content/pdf/10.1007/3-540-44618-4_12.pdf" target="_blank">The Impressive Power of Stopwatches</a> (available also <a href="https://www.researchgate.net/publication/220701029_The_Impressive_Power_of_Stopwatches" target="_blank">here</a>), which appeared at CONCUR 2000 and was co-authored with <a href="https://franck44.github.io/" target="_blank">Franck Cassez</a>. On behalf of the concurrency theory community, I thank Kim for taking the time to answer my questions. I trust that readers of this blog will enjoy reading Kim's answer as much as I did.&nbsp;<span class="im"></span></p><p class="MsoNormal"><b><span lang="EN-US">Luca</span></b><span lang="EN-US">: You receive the CONCUR ToT Award 2022 for your paper &nbsp;The Impressive Power of Stopwatches, which appeared at CONCUR 2000. </span>In that article, you showed that timed automata enriched with  stopwatches and unobservable time delays have the same expressive power  of &nbsp;linear hybrid automata. Could you briefly explain to our readers  what timed automata with stopwatches are? Could  you also tell us how you came to study the question addressed in your  award-winning article? Which of the results in your paper did you find  most surprising or challenging?</p><p class="MsoNormal"><b>Kim:</b> <span class="im"></span><span lang="EN-US">Well, in timed automata all  clocks grow with rate 1 in all locations of the automata. Thus you can  tell the amount of time that has elapsed since a particular clock was  last reset, e.g. due to an external event of interest.&nbsp;  A stopwatch is a real-valued variable similar to a regular clock.&nbsp; In  contrast to a clock, a stopwatch will in certain locations grow with  rate 1 and in other locations grow with rate 0, i.e. it is stopped.&nbsp; As  such, a stopwatch gives you information about  the accumulated time spent in a certain parts of the automata.&nbsp; </span></p><p></p><p class="MsoNormal"><span lang="EN-US"></span><span lang="EN-US">In modelling schedulability  problems for real-time systems, the use of stopwatches is crucial in  order to adequately capture preemption.&nbsp; &nbsp;I definitely believe that it  was our shared interest in schedulability that brought  us to study timed automata with stopwatches.&nbsp; We knew from earlier  results by Alur et al. that properties such as reachability was  undecidable. But what could we do about this? And how much expressive  power would the addition of stopwatches provide?</span></p><p class="MsoNormal"><span lang="EN-US"></span><span lang="EN-US">In the paper we certainly put the  most emphasis on the latter question, in that we showed that stopwatch  automata and linear hybrid automata accept the same class of timed  languages, and this was at least for me the most  surprising and challenging result. However, focusing on impact,  I think the approximate zone-based method that we apply in the paper  has been extremely important from the point of view of having our  verification tool <a href="https://uppaal.org/" target="_blank">UPPAAL</a> being taken-up at large  by the embedded systems community.&nbsp; It has been really interesting to  see how well the over-approximation method actually works.</span><span class="im"></span></p><span class="im"><p class="MsoNormal"><b><span lang="EN-US">Luca</span></b><span lang="EN-US">: In your article, you showed that linear hybrid automata and stopwatch automata accept the same class of timed languages. </span>Would this result still hold if all delays were observable? Do  the two models have the same expressive power with respect to finer  notions of equivalence such as timed bisimilarity, say? Did you, or any  other colleague, study that problem, assuming that  it is an interesting one?</p><p class="MsoNormal"><b>Kim:</b>&nbsp; <span class="im"></span><span lang="EN-US">These are definitely very  interesting questions, and should be studied.&nbsp; As for finer notions of  equivalences – e.g. timed bisimilarity – I believe that our translation  could be shown to be correct up to some timed variant  of chunk-by-chunk simulation introduced by Anders Gammelgaard in his  <a href="https://tidsskrift.dk/daimipb/article/view/6611/5733" target="_blank">Licentiat Thesis</a> from Aarhus University in 1991.&nbsp; That could be a good starting point<b>.</b></span><span class="im"></span><span class="im"></span></p></span><span class="im"><p class="MsoNormal"><span lang="EN-US"><br /><b>Luca</b>: Did any of your subsequent research build explicitly on the  results and the techniques you developed in your award-winning paper? </span>Which of your subsequent results on timed and hybrid automata do  you like best? Is there any result obtained by other researchers that  builds on your work and that you like in particular or found surprising?<br /></p><p class="MsoNormal"><b>Kim:&nbsp;</b> <span lang="EN-US">Looking up in <a href="https://dblp.org/pid/l/KimGuldstrandLarsen.html" target="_blank">DBLP,</a> I see that I  have some 28 papers containing the word “scheduling”.&nbsp; For sure  stopwatches will have been used in one way or another in these.&nbsp; One  thing that we never really examined thoroughly is to  investigate how well the approximate zone-based will worked when  applied to the translation of linear hybrid automata through the translation to stopwatch automata.&nbsp; This  would definitely be interesting to find out.&nbsp; </span></p></span> <span class="im"></span><p class="MsoNormal"><span lang="EN-US">This was the first joint publication between me and Franck.&nbsp; </span><span lang="EN-US">I enjoyed fully the collaboration on all the  next 10 joint papers.&nbsp; Here the most significant ones are probably the  <a href="https://doi.org/10.1007/11539452_9" target="_blank">paper at CONCUR 2005</a>, where we presented the symbolic on-the-fly  algorithms for synthesis for timed games and the branch  UPPAAL TIGA.&nbsp; And later in a European project GASICS with Jean-Francois  Raskin, we used the TIGA in the synthesis of optimal and robust control  of a hydraulic system.</span></p><p class="MsoNormal"><b>Franck:</b> Using the result in our paper, we can analyse scheduling problems where  tasks can be stopped and restarted, using real-time model-checking and a  tool like UPPAAL.</p><p class="MsoNormal"><br />To do so, we build a  network of stopwatch automata modelling the set of tasks and a  scheduling policy, and reduce schedulability to a safety verification  problem: avoid reaching states where tasks do not meet their deadlines.  Because we over-approximate the state space, our analysis may yield some  false positives and may wrongly declare a set of tasks non-schedulable  because the over-approximation is too coarse.&nbsp;</p><p class="MsoNormal">In the period 2003–2005, in cooperation with  Francois Laroussinie we tried to identify some  classes of stopwatch automata for which the over-approximation does not  generate false positives.&nbsp; We never managed to find an interesting  subclass.&nbsp;</p><p class="MsoNormal">This may look like a serious problem  in terms of applicability of our result, but in practice, it does not  matter too much. Most of the time, we are interested in the  schedulability of a specific set of tasks (e.g. controlling a plant, a  car, etc.) and for these instances, we can use our result: if we have  false positives, we can refine the model tasks and scheduler and rule  them out. Hopefully after a few iterations of refinement, we can prove  that the set of tasks is schedulable.</p><p class="MsoNormal">The <span class="im">subsequent result on timed and hybrid automata of mine&nbsp;</span> that I probably like best is the one we obtained on solving optimal reachability in timed automata. <br />We had a <a href="https://www.labri.fr/perso/fleury/publications/BCFL-fsttcs04.pdf" target="_blank">paper at FSTTCS in 2004</a> presenting the theoretical results, and a <a href="https://doi.org/10.1016/j.entcs.2004.07.006" target="_blank">companion paper at GDV 2004</a>  with an implementation using HyTech, a tool for analysing hybrid  automata.&nbsp; <br /></p><p class="MsoNormal">I like these results because we ended up with a rather simple proof, after 3-4 years working on this hard problem.&nbsp; </p><span class="im"> <p class="MsoNormal"><b><span lang="EN-US">Luca</span></b><span lang="EN-US">:  &nbsp;Could you tell us how you started your collaboration on the  award-winning paper? I recall that Franck was a regular visitor to our  department at Aalborg University for some time,  but I can't recall how his collaboration with the Uppaal group started.  &nbsp;</span></p><p class="MsoNormal"><span lang="EN-US"><b>Kim:</b> </span><span class="im"></span><b><span lang="EN-US"></span></b><span lang="EN-US">I am not quite sure I remember  how and when I first met Franck.&nbsp; For some time we already worked  substantially with French researchers, in particular from LSV Cachan  (Francois Larroussinie and Patricia Bouyer). &nbsp;&nbsp;I have  the feeling that there were quite some strong links between Nantes  (were Franck was) and LSV on timed systems in those days.&nbsp; Also Nantes  was the organizer of the PhD school MOVEP five times in the period  1994-2002, and I was lecturing there in one of the  years, meeting Olivier Roux and Franck who were the organizers.&nbsp;&nbsp;  Funny enough, this year we are organizing <a href="https://movep2022.cs.aau.dk/" target="_blank">MOVEP</a> in Aalborg. Anyway, at some point Franck became a  regular visitor to Aalborg, often for long periods  of time – playing on the Squash team of the city when he was not  working.</span><span class="im"></span><span class="im"></span><span lang="EN-US"></span></p><p class="MsoNormal"><span lang="EN-US"><b>Franck:</b> As Kim mentioned, I was in Nantes at that time, but I was working with Francois Laroussinie who was in Cachan. Francois had spent some time in Aalborg working with Kim and his group and he helped organise a mini workshop with Kim in 1999, in Nantes. That’s when Kim invited me to spend some time in Aalborg, and I visited Aalborg University for the first time from October 1999 until December 1999. This is when we worked on the stopwatch automata paper. We wanted to use UPPAAL to verify systems beyond timed automata.&nbsp;</span></p><p class="MsoNormal"><span lang="EN-US">I visited Kim and his group almost every year from 1999 until 2007, when I moved to Australia. There were always lots of visitors at Aalborg University and I was very fortunate to be there and learn from the Masters.&nbsp; <br /><br />I always felt at home at Aalborg University, and loved all my visits there. The only downside was that I never managed to defeat Kim at badminton. I thought it was a gear issue, but Kim gave me his racket (I still have it) and the score did not change much.</span></p><p class="MsoNormal"><span lang="EN-US"><br /><b>Luca</b>: What are the research topics that you find most interesting right now? </span>Is there any specific problem in your current field of interest that you'd like to see solved?</p></span><span class="im"><p class="MsoNormal"><b>Kim:</b> <span class="im"></span><span lang="EN-US">Currently I am spending quite  some time on marrying symbolic synthesis with reinforcement learning for  Timed Markov Decision Processes in order to achieve optimal as well as safe strategies for  Cyber-Physical Systems.</span><span class="im"></span><span class="im"></span><span lang="EN-US"></span></p><p class="MsoNormal"><span lang="EN-US"><br /><b>Luca</b>: Both Franck and you have a very strong track record in developing theoretical results and in applying them to real-life problems. </span>In my, admittedly biased, opinion, your work exemplifies Ben Schneiderman's Twin-Win Model (<a data-saferedirecturl="https://www.google.com/url?q=https://www.pnas.org/doi/pdf/10.1073/pnas.1802918115&amp;source=gmail&amp;ust=1660131834210000&amp;usg=AOvVaw3C8MqXrhHOcBM8hIz-QekT" href="https://www.pnas.org/doi/pdf/10.1073/pnas.1802918115" target="_blank">https://www.pnas.org/doi/pdf/<wbr></wbr>10.1073/pnas.1802918115</a>),  which propounds the pursuit of "the  dual goals of breakthrough theories in published papers and validated  solutions that are ready for widespread dissemination." Could you say a  few words on your research philosophy? </p></span><span class="im"><p class="MsoNormal"><b>Kim:</b> <span class="im"></span><span lang="EN-US">I completely subscribe to this.&nbsp;  Several early theoretically findings – as the paper on stopwatch  automata – have been key in our sustainable transfer to industry.</span><span class="im"></span><span class="im"></span><span lang="EN-US"></span></p><p class="MsoNormal"><span lang="EN-US"><b>Franck:</b> Kim has been a mentor to me for a number of years now, and I certainly learned this approach/philosophy from him and his group.&nbsp; <br />&nbsp;</span></p><p class="MsoNormal"><span lang="EN-US">We always started from a concrete problem, e.g. scheduling tasks/checking schedulability, and to validate the solutions, building a tool to demonstrate applicability. The next step was to improve the tool to solve larger and larger problems.</span></p><p class="MsoNormal"><span lang="EN-US"><br />UPPAAL is a fantastic example of this philosophy: the reachability problem for timed automata is PSPACE-complete. That would deter a number of people to try and build tools to solve this problem.&nbsp; But with smart abstractions, algorithms and data-structures, and constant improvement over a number of years, UPPAAL can analyse very large and complex systems. It is amazing to see how UPPAAL is used in several areas from traffic control to planning and to precisely guiding a needle for an injection.&nbsp;</span></p><p class="MsoNormal"><span lang="EN-US"><br /><b>Luca</b>: What advice would you give to a young researcher who is keen to start working on topics related to formal methods? </span></p></span><span class="im"> </span><p class="MsoNormal"><b><span lang="EN-US">Kim: </span></b><span lang="EN-US">Come to Aalborg, and participate in year's MOVEP.</span></p><p class="authors">By Luca Aceto</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-09T12:17:00Z">Tuesday, August 09 2022, 12:17</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Monday, August 08
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://blog.computationalcomplexity.org/2022/08/the-godfather-of-complexity.html'>The Godfather of Complexity</a></h3>
+          <p class='item-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          ♦Juris Hartmanis 1928-2022<br>On Friday, July 29th, I was in the immigration line at an airport in Mexico. My phone rang with Bill Gasarch on the Caller ID but starting vacation I declined the call. The voicemail gave me the sad news that Juris Hartmanis, the person who founded computational complexity and brought me into it passed away earlier that day. I messaged Bill and told him to write an obi
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://news.cornell.edu/sites/default/files/styles/story_thumbnail_xlarge/public/rmc2005_0803-cornell-library-archive-a_0.jpg?itok=aVzB0Cnw" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="450" data-original-width="800" height="225" src="https://news.cornell.edu/sites/default/files/styles/story_thumbnail_xlarge/public/rmc2005_0803-cornell-library-archive-a_0.jpg?itok=aVzB0Cnw" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Juris Hartmanis 1928-2022</td></tr></tbody></table><br />On Friday, July 29th, I was in the immigration line at an airport in Mexico. My phone rang with Bill Gasarch on the Caller ID but starting vacation I declined the call. The voicemail gave me the sad news that Juris Hartmanis, the person who founded computational complexity and brought me into it passed away earlier that day. I messaged Bill and told him to write <a href="https://blog.computationalcomplexity.org/2022/07/juris-hartmanis-passed-away-on-july-29.html">an obit</a> and I'd follow with something personal when I returned.<br /><br /><div style="text-align: center;"><br /></div><div><table cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-sMoKiQvVwB8/VVEMTLT-beI/AAAAAAAA2VQ/LMLeAxFklRg/s1600/GE.jpg" style="clear: right; margin-bottom: 1em; margin-left: auto; margin-right: auto;"><img border="0" height="281" src="http://1.bp.blogspot.com/-sMoKiQvVwB8/VVEMTLT-beI/AAAAAAAA2VQ/LMLeAxFklRg/s400/GE.jpg" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Hartmanis and Stearns in 1963</td></tr></tbody></table><div><br /></div><div>In November 1962 Hartmanis, working with Richard Stearns at the GE Labs in Schenectady, determined how to use Turing machines to formalize the basic idea to measure resources, like time and memory, as a function of the problem being solved. Their classic Turing-award winning paper&nbsp;<a href="https://www.ams.org/journals/tran/1965-117-00/S0002-9947-1965-0170805-7/S0002-9947-1965-0170805-7.pdf">On the Computational Complexity of Algorithms</a>, not only gave this formulation but showed that increasing resources increased the problems one can solve. The photo above, from <a href="https://blog.computationalcomplexity.org/2015/05/fiftieth-anniversary-of-publication-of.html">a post celebrating the 50th anniversary of the paper</a>, shows Hartmanis and Stearns with the main theorem of their paper on the board.</div><div><br /></div><div>Twenty-one years later, a junior at Cornell University still trying to find his way took undergraduate theory from the man himself. Juris brought the topics to life and I found my passion. At the beginning of the class, he said the highest grade usually went to an undergrad followed by the grad students in the class. I was a counterexample, as I had the second highest grade. Never did find out who beat me out.</div><div><br /></div><div>In spring of my senior year, 1985, I forgave the traditional senior-slump <i>Wines</i>&nbsp;for graduate complexity with Juris. He focused the course around the <a href="https://blog.computationalcomplexity.org/2003/03/berman-hartmanis-isomorphism.html">isomorphism conjecture</a> he developed with his student Len Berman, which implied P≠NP, and Hartmanis believed using the conjecture might lead to settling P v NP. He offered an automatic A to anyone who could prove the isomorphism conjecture. I guess any other proof of P≠NP only warranted a B?</div><div><br /></div><div>I would later be obsessed by the isomorphism conjecture as an assistant professor, coming up with not <a href="http://doi.org/10.1137/S0097539793248305">one</a> but <a href="http://doi.org/10.1145/276698.276737">two</a> oracles making it true. The isomorphism conjecture didn't end up settling P vs NP, but then again neither did any other approach.</div><div><br /></div><div>It wasn't just me, there was a reason that many of the great American complexity theorists, including Ryan Williams, Scott Aaronson and my own PhD advisor Michael Sipser, were undergrads at Cornell. <a href="https://www.cs.umd.edu/users/gasarch/BLOGPAPERS/hartmanisstud.pdf">Many more</a> were PhD students of Hartmanis.</div><div><br /></div><div>Juris Hartmanis had a certain gravitas in the community. Maybe it was his age, the way he dressed up, his seminal research in the field, or just that Latvian accent. He founded the CS department at Cornell in the 60s and served as head of the CISE directorate at the National Science Foundation in the 90s. His 60th birthday party at the 3rd Structures in Complexity conference (now the Computational Complexity Conference) was the only time I've seen complexity theorists in ties.</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRPQ7nB0GfMGvRD0sysZK398h6M_WyYoyNQwY2-5Bq5vCQfYpQaHyYnxfc1ZQQI-mvMvRQhTXBmh09tGY0LiszZKF7L_DRPr3wsKueny2Vq3DANV4dvbY4PbI_aCjICb2tXwOCXOsiQzghaoc1aeplK9Txg8OybEtZ_7Se8aGK1Sfo0x9Agg/s354/Hartmanis.png" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="256" data-original-width="354" height="231" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRPQ7nB0GfMGvRD0sysZK398h6M_WyYoyNQwY2-5Bq5vCQfYpQaHyYnxfc1ZQQI-mvMvRQhTXBmh09tGY0LiszZKF7L_DRPr3wsKueny2Vq3DANV4dvbY4PbI_aCjICb2tXwOCXOsiQzghaoc1aeplK9Txg8OybEtZ_7Se8aGK1Sfo0x9Agg/s320/Hartmanis.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Juris Hartmanis (center) being toasted by Janos Simon</td></tr></tbody></table><br /><div>A few of my favorite Hartmanis quotes.</div><div><ul style="text-align: left;"><li>"We all know P is different than NP. We just don't know how to prove it." - Still true.</li><li>"I only make mistakes in the last five minutes of the class." - Sometimes he made a mistake with ten minutes left but only admit it in the last five minutes.</li><li>"Primality is a problem not yet know to be in P but is hanging on by its fingernails with its grip continuing to loosen each day." - Juris Hartmanis said this in 1986, with primality hanging on for another 16 years.</li></ul></div><div>Thanks Juris for creating the foundations of our field and inspiring so many people, yours truly included, to dedicate ourselves to it.</div><div><br /></div><div>Much more to read:</div><div><ul style="text-align: left;"><li>In 1981 Hartmanis wrote a personal&nbsp;<a href="https://doi.org/10.1109/MAHC.1981.10005">article</a>&nbsp;for the Annals of History of Computing describing the birth of computational complexity and his role in it.</li><li>A CACM interview with Hartmanis gives a <a href="https://cacm.acm.org/magazines/2015/4/184690-an-interview-with-juris-hartmanis/fulltext">personal story</a> of his path from Latvia to Kansas City to Pasadena to Schenectady to Ithaca and DC.</li><li>Obits by <a href="https://news.cornell.edu/stories/2022/08/juris-hartmanis-first-cs-department-chair-dies-94">Cornell</a>,&nbsp;<a href="https://scottaaronson.blog/?p=6622">Ryan Williams</a> and <a href="https://rjlipton.wpcomstaging.com/2022/07/29/juris-hartmanis-1928-2022/">Dick Lipton and Ken Regan</a>.</li><li>My old blog posts celebrating&nbsp;<a href="https://blog.computationalcomplexity.org/2018/07/happy-90th-juris.html">Hartmanis' 90th birthday</a>&nbsp;and&nbsp;the <a href="https://blog.computationalcomplexity.org/2015/05/fiftieth-anniversary-of-publication-of.html">50th anniversary of Hartmanis-Stearns</a>,</li><li>And the many retrospectives, remembrances, special issues and conferences to come.</li></ul></div></div><p class="authors">By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-08T13:11:00Z">Monday, August 08 2022, 13:11</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://ptreview.sublinear.info/2022/08/news-for-july-2022/'>News for July 2022</a></h3>
+          <p class='item-feed'>from <a href='https://ptreview.sublinear.info'>Property Testing Review</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          Last month saw a flurry of activity in Property Testing. We had thirteen papers!! Without further ado, let us dig in. Testing of Index-Invariant Properties in the Huge Object Model (by Sourav Chakraborty, Eldar Fischer, Arijit Ghosh, Gopinath Mishra, and Sayantan Sen)(arXiv) This paper explores a class of distribution testing problems in the Huge Object [&#8230;]
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>Last month saw a flurry of activity in Property Testing. We had thirteen papers!! Without further ado, let us dig in.</p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Testing of Index-Invariant Properties in the Huge Object Model</strong> (by Sourav Chakraborty, Eldar Fischer, Arijit Ghosh, Gopinath Mishra, and Sayantan Sen)(<a href="https://arxiv.org/abs/2207.12514">arXiv</a>) This paper explores a class of distribution testing problems in the Huge Object Model introduced by Goldreich and Ron (see our coverage of the model <a href="https://ptreview.sublinear.info/2021/10/news-for-september-2021/">here</a>). A quick refresher of this model: so, suppose you want to test whether a distribution \(\mathcal{D}\) supported over, say the boolean hypercube \(\{0,1\}^n\) has a certain property \(\mathcal{P}\). You pick a string \(x \sim \mathcal{D}\) where the length of \(x\) is \(n\). In situations where \(n\) is really large, you might not want to read all of \(x\) and you may instead want to read only a few bits from it. To this end, Goldreich and Ron formulated a model where you have query access to the strings you sample. The distribution \(\mathcal{D}\) is deemed to be \(\varepsilon\)-far from \(\mathcal{P}\) if \(EMD(\mathcal{D}, \mathcal{P}) \geq \varepsilon\) (here \(EMD\) denotes the earthmover distance with respect to the relative Hamming distance between bitstrings).  In this model, one parameter of interest is the query complexity of your tester.</p>
+
+
+
+<p>One of the results in the featured paper above shows the following: Let \(\sf{MONOTONE}\) denote the class of monotone distributions supported over \(\{0,1\}^n\) (a distribution \(D\)  belongs to the class \(\sf{MONOTONE}\) if \(D(x) \leq D(y)\) whenever \(0^n \preceq x \preceq y \preceq 1^n\)). Let \(\mathcal{B}_d\) denote the class of distributions supported over \(\{0,1\}^n\) whose supports have VC dimension at most \(d\). Let \(\mathcal{P} = \sf{MONOTONE} \cap \mathcal{B}_d\). Then, for any \(\varepsilon > 0\), you can test whether a distribution \(\mathcal{D} \in \mathcal{P}\) or whether it is \(\varepsilon\)  far from \(\mathcal{P}\) with query complexity \(poly(1/\varepsilon)\). In fact, the paper shows this for a much richer class \(\mathcal{P}\) which is the class of so-called <em>index-invariant</em> distributions with bounded VC-dimensions. The paper also shows the necessity of both of these conditions for efficient testability. Do check it out!</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Identity Testing for High-Dimensional Distributions via Entropy Tensorization</strong> (by Antonio Blanca, Zongchen Chen, Daniel Štefankovič, and Eric Vigoda)(<a href="https://arxiv.org/abs/2207.09102">arXiv</a>) </p>
+
+
+
+<p>This paper considers a classic in distribution testing. Namely, the problem of testing whether the hidden input distribution \(\pi\) is identical to an explicitly given distribution \(\mu\). Both distributions are supported over a set \(\Omega\). The caveat is \(\Omega\) is some high dimensional set (think \(\Omega = [k]^n\)) and that it has a size that grows exponentially in \(n\). In this case, identity testing has sample complexity \(\Omega(k^{n/2})\) even when \(\mu\) is the uniform distribution. In an attempt to overcome this apparent intractability of identity testing in high dimensions, this paper takes the following route: in addition to the standard sample access to \(\pi\), you also assume access to a <em>stronger sampling oracle</em> from \(\pi\). And now you would like to understand for which class of explicitly given distributions \(\mu\) can you expect algorithms with efficient sample complexity (assuming the algorithm is equipped with this <em>stronger sampling oracle</em>). For any \(i \in [n]\) and \(\omega \in \Omega\), the stronger oracle considered in this work allows you to sample \(x \sim \pi_{\omega(-i)}\) where \(\pi_{\omega(-i)}\) denotes the conditional marginal distribution of \(\pi\) over the \(i\)-th coordinate when the remaining coordinates have been fixed according to \(\omega\).</p>
+
+
+
+<p>The paper shows if the known distribution \(\mu\) satisfies some approximate tensorization of entropy criterion, then identity testing with such distributions \(\mu\) can be done with \(\tilde{O}(n/\varepsilon)\) queries. Thanks to the spectral independence toolkit pioneered by Anari et al, it turns out that the approximate tensorization property holds for a rich class of distributions. (<em>A side note to self</em>: It looks like I am running out of reasons to postpone learning about the new tools like Spectral Independence.)   </p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Near-Optimal Bounds for Testing Histogram Distributions</strong> (by Clément L. Canonne, Ilias Diakonikolas, Daniel M. Kane, and Sihan Liu)(<a href="https://arxiv.org/abs/2207.06596">arXiv</a>) Histograms comprise one of the most natural and widely used ways for summarizing some relevant aspects of massive datasets. Let \(\Omega\) denote an \(n\)-element dataset (with elements being \(\{1,2, \ldots, n \}\)). A \(k\)-histogram is a function that is piecewise constant over \(k\) interval pieces. This paper studies the sample complexity of the following fundamental task: given a distribution \(\mathcal{P}\) supported over \(\Omega\), is \(\mathcal{P}\) a \(k\)-histogram or is \(\mathcal{P}\) far from being a \(k\)-histogram. The main result of the paper is a (near) sample optimal algorithm for this problem. Specifically, this paper shows that \(k\)-histogram testing has sample complexity \(\Theta\left(\sqrt{nk}/\varepsilon + k/\varepsilon^2 + \sqrt{n}/\varepsilon^2\right)\).</p>
+
+
+
+<p><strong>Comments on &#8220;Testing Conditional Independence of Discrete Distributions&#8221;</strong> (by Ilmun Kim)(<a href="https://arxiv.org/abs/2207.02819">arXiv</a>) Probability is full of subtleties and conditional probability is perhaps the biggest landmine of subtleties in this venerable discipline. The featured paper closely examines some subtleties in Theorem 1.3 of the CDKS18 paper on testing conditional independence of discrete distributions. Essentially, this theorem undertakes the following endeavor: you would like to test whether a bivariate discrete distribution has independent marginals conditioned on values assumed by a third random variable. Theorem 1.3 of CDKS18 asserts that there exists a computationally efficient tester for conditional independence with small sample complexity. The featured paper fixes the sample complexity bound claimed in Theorem 1.3 of CDKS18.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Cryptographic Hardness of Learning Halfspaces with Massart Noise</strong> (by Ilias Diakonikolas, Daniel M. Kane, Pasin Manurangsi, and Lisheng Ren)(<a href="https://arxiv.org/abs/2207.14266">arXiv</a>) The study of robust supervised learning in high dimensions has seen a lot of impressive progress in the last few years. The paper under review presents sample complexity lower bounds for the task of learning halfspaces in this overarching framework. Let us unpack this paper slowly. So, let us recall the classic task of learning halfspaces in \(\mathbb{R}^n\). You know the drill. I have a known concept class \(\mathcal{C}\) (comprising of boolean functions) in my hand. Unbeknownst to you, I have a boolean function \(f \in \mathcal{C}\). You get as input a multiset \(\{x_i, f(x_i)\}_{i \in [s]}\) of labeled examples from a distribution \(\mathcal{D}\) where \(x_i \sim \mathcal{D}_x\) and \(\mathcal{D}_x\) is fixed but arbitrary. Your goal is to develop an algorithm that returns a hypothesis with a small misclassification rate. The classic stuff.</p>
+
+
+
+<p>Now, consider the same setup with a little twist: the so-called Massart noise setup. The labels \(f(x_i)\) are no longer reliable and the label on each \(x_i\) gets flipped adversarially with probability \(\eta_i \leq \eta &lt; 1/2\). In a breakthrough Diakonikolas, Gouleakis, and Tzamos made the first algorithmic progress on this problem and gave algorithms with running time \(poly(n/\varepsilon)\) and misclassification rate \(\eta + \varepsilon\). The current paper shows a lower-bound result. Assuming the hardness of the so-called &#8220;Learning With Errors&#8221; problem, this paper shows that under Massart Noise, it is not possible for a polynomial time learning algorithm to achieve a misclassification rate of \(o(\eta)\).</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Locally-iterative (Δ+1)-Coloring in Sublinear (in Δ) Rounds</strong> (by Xinyu Fu, Yitong Yin, and Chaodong Zheng)(<a href="https://arxiv.org/abs/2207.14458">arXiv</a>) A time-honored problem in Distributed Computing is Distributed graph coloring. Let us first understand what problem this paper studies. So, you are given a graph \(G = (V,E)\) with maximum degree \(\Delta\). In a seminal work, Szegedy and Vishwanathan introduced the framework of <em>locally-iterative algorithms</em> as a natural family of distributed graph coloring algorithms. These algorithms proceed in \(r\) rounds. In each round, you update the color of a vertex \(v\) where the new color of \(v\) is a function of the current color of \(v\) and the current color of its neighbors. The current paper shows that you can in the locally-iterative framework, you can in fact, obtain a proper coloring of \(G\) with \(\Delta(G) + 1\) colors in \(r = O(\Delta^{3/4} \log \Delta) + \log^* n\) rounds. </p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Learning Hierarchical Structure of Clusterable Graphs</strong> (by Michael Kapralov, Akash Kumar, Silvio Lattanzi, Aida Mousavifar)(<a href="https://arxiv.org/abs/2207.02581">arXiv</a>) [<em>Disclaimer: I am one of the authors of this paper.</em>] Hierarchical clustering of graph data is a fundamentally important task in the current big data era. In 2016, Dasgupta introduced the notion of Dasgupta cost which essentially allows one to measure the quality of a hierarchical clustering. This paper presents algorithms that can estimate the Dasgupta Cost of a graph coming from a special family of \(k\)-clusterable graphs in the semi-supervised setting. These graphs have \(k\) clusters. These clusters are essentially subsets of vertices that induce expanders and these clusters are sparsely connected to each other. We are given query access to the adjacency list of \(G\). Also, for an initial &#8220;warmup&#8221; set of randomly chosen vertices, we are told the clusters they belong to. Armed with this setup, this paper presents algorithms that run in time \(\approx \sqrt{n}\) and return an estimate to the Dasgupta Cost of \(G\) which is within a \(\approx \sqrt{\log k}\) factor of the optimum cost.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Finding a Hidden Edge</strong> (by Ron Kupfer and Noam Nisan)(<a href="https://arxiv.org/abs/2207.02344">arXiv</a>) Let us consider as a warmup (as done in the paper) the following toy problem. You have a graph on \(n\) vertices whose edge set \(E\) is hidden from you. Your objective is to return any \((i,j) \in E\). The only queries you are allowed are of the following form. You may consider any subset \(Q \subseteq V \times V\) and you can ask whether \(Q\) contains any edge. A simple binary search solves this question with \(\log m\) queries (where \(m = {n \choose 2}\)). However, if you want a non-adaptive algorithm for this problem (unlike binary search) you can show that any deterministic algorithm must issue \(m\) non-adaptive queries. Turns out randomness can help you get away with only \(O(\log^2m)\) non-adaptive queries for this special toy problem. Now, let me describe the problem considered in this work in earnest. Suppose the only queries you are allowed are of the following form: you may pick any \(S \subseteq V\) and you may ask whether the graph induced on \(S\) contains an edge. The paper&#8217;s main result is that there is an algorithm for finding an edge in \(G\) which issues nearly linear in \(n\) many non-adaptive queries. The paper also presents an almost matching lower bound.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>On One-Sided Testing Affine Subspaces</strong> (by Nader Bshouty)(<a href="https://eccc.weizmann.ac.il/report/2022/104/">ECCC</a>) Dictatorship testing is one of the classics in property testing of boolean functions. A more generalized problem considers testing whether the presented function is a \(k\)-monomial. If you are a regular reader of the posts on PTReview, you might have seen this problem essentially asks you to test whether a boolean function \(f \colon \mathcal{F}^n \to {0,1}\) is an indicator of an \((n-d)\) dimensional affine/linear subspace of \(\mathcal{F}^n\) (here \(\mathcal{F}\) denotes a finite field). Namely, you would like to test whether the set \(f^{-1}\) is an \((n-k)\) dimensional affine subspace of \(\mathcal{F}^n\). The paper under review improves the state-of-the-art query complexity for this problem from a previous value of \(O\left(|\mathcal{F}|/\varepsilon\right)\) to \(\tilde{O}\left(1/\varepsilon\right)\).</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Non-Adaptive Edge Counting and Sampling via Bipartite Independent Set Queries</strong> (by Raghavendra Addanki, Andrew McGregor, and Cameron Musco)(<a href="https://arxiv.org/abs/2207.02817">arXiv</a>) If you have been around the PTReview corner for a while, you know that sublinear time estimation of graph properties is one of our favorite pastimes here. Classic work in this area considers the following queries: vertex degree queries, \(i\)-th neighbor queries, and edge existence queries. This classic query model has received a lot of attention and thanks to the work of Eden and Rosenbaum we know algorithms for near-uniform edge sampling with query complexity \(O(n/\sqrt{m}) \cdot poly(\log n) \cdot poly(1/\varepsilon)\). Motivated by a desire to obtain more query-efficient algorithms, Beame et al. introduced an augmented query model where you are also allowed the following queries: you may pick \(L, R \subseteq V\) and you get a yes/no response indicating whether there exists an edge in \(E(L, R)\). These are also called the bipartite independent set <em>(BIS)</em> queries. The featured paper shows that with (<em>BIS</em>) queries you get <em>non-adaptive</em> algorithms for near-uniform edge sampling with query complexity being a mere \(\widetilde{O}(\varepsilon^{-4} \log^6 n)\). The main result of the paper gives a non-adaptive algorithm for estimating the number of edges in \(G\) with query complexity (under <em>BIS</em>) being a mere \(\widetilde{O}(\varepsilon^{-5} \log^5 n)\).</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>A Query-Optimal Algorithm for Finding Counterfactuals</strong> (by Guy Blanc, Caleb Koch, Jane Lange, Li-Yang Tan)(<a href="https://arxiv.org/abs/2207.07072">arXiv</a>) Given an abstract space \(X^d\), an instance \(x^* \in X^d\) and a model \(f\) (which you think of as a boolean function over \(X^d\)), a point \(x&#8217; \in X^d\) is called a counterfactual to \(x^*\) if \(x^*, x&#8217;\) differ in few features (i.e., have a small Hamming distance) and \(f(x^*) \neq f(x&#8217;)\). Ideally, you would like to find counterfactuals that are as close to each other in Hamming Distance. The main result of this paper is the following: Take a monotone model \(f \colon \{0,1\}^d \to \{0,1\}\), an instance \(x^* \in \{0,1\}^d\) with small sensitivity (say \(\alpha\)). Then there exists an algorithm that makes at most \(\alpha^{\Delta(x^*)}\) queries to \(f\) and returns all optimal counterfactuals of \(f\). Here \(\Delta(x^*) = \min_{x \in \{0,1\}^d} \{\Delta_H(x, x^*) \colon f(x) \neq f(x^*) \}\). The paper also proves a matching lower bound on query complexity which is obtained by some monotone model \(f\).</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>A Sublinear-Time Quantum Algorithm for Approximating Partition Functions</strong> (by Arjan Cornelissen and Yassine Hamoudi)(<a href="https://arxiv.org/abs/2207.08643">arXiv</a>) For the classical Hamiltonian \(H \colon \Omega \to \{0,1, \ldots, n\}\), at inverse temperature \(\beta\), the probability, under the so-called Gibbs distribution, assigned to a state \(x \in \Omega\) is proportional to \(\exp(-\beta H(x))\). The partition function is given by \(Z(\beta) = \sum_{x \in \Omega} \exp(-\beta H(x))\). At high temperatures (or low values of \(\beta\)) the partition function is typically easy to compute. However, the low-temperature regime is often challenging. You use MCMC methods to compute \(Z(\infty)\). In particular, you write this as the following telescoping product \(Z(\infty) = Z(0) \cdot \prod_{i = 0}^{i = \ell &#8211; 1} \frac{Z(\beta_{i+1})}{Z(\beta_i)}\) where \(0 = \beta_1 &lt; \beta_2 &lt; \ldots &lt; \beta_{\ell} = \infty\) is some increasing sequence of inverse temperatures with limited fluctuations in Gibbs distribution between two consecutive values and you use MCMC methods to estimate each of the \(\ell\) ratios in the above product. The main result of this paper presents a quantum algorithm that on input a Gibbs distribution generated by a Markov Chain with a large spectral gap performs sublinearly few steps (in size of the logarithm of the state space) of the quantum walk operator and returns a \(\pm \varepsilon Z(\infty)\) additive estimate to \(Z(\infty)\).</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>A Near-Cubic Lower Bound for 3-Query Locally Decodable Codes from Semirandom CSP Refutation</strong> (by Omar Alrabiah, Venkatesan Guruswami, Pravesh Kothari, and Peter Manohar)(<a href="https://eccc.weizmann.ac.il/report/2022/101/">ECCC</a>) If you made it till here, it is time for a treat. Let us close (hopefully, I did not miss any papers this time!) with a breakthrough in Locally Decodable Codes. So, for 2-query LDCs, we know fairly tight bounds on the block length. For 3-query LDCs, on the other hand, we know a sub-exponential upper bound on the block length. However, the best-known lower bound on the block length was merely quadratic. The featured paper improves this to a cubic lower bound on the block length. The main tool used to achieve this is a surprising connection between the existence of locally decodable codes and the refutation of Boolean CSP instances with limited randomness. This looks like a fantastic read to close off this month&#8217;s report!</p>
+<p class="authors">By Akash</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-08T08:53:09Z">Monday, August 08 2022, 08:53</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Sunday, August 07
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://blog.computationalcomplexity.org/2022/08/the-held-prize-for-comb-opt-and-disc.html'>The Held Prize for comb. opt. AND Disc Opt AND Alg AND Complexity theory AND related parts of CS.</a></h3>
+          <p class='item-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>&nbsp;Dan Spielman asked me to blog about the Held Prize. I first present what he send me, and then have some thoughts.</p><p><br></p><p>FROM DAN:&nbsp;</p><p>--------------------------------------------------------------------------------------------------</p><p>Nominations are now being accepted for the National Academy of Sciences’ 2023 Michael and Sheila Held Prize. The Held Prize honors out
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>&nbsp;Dan Spielman asked me to blog about the Held Prize. I first present what he send me, and then have some thoughts.</p><p><br /></p><p>FROM DAN:&nbsp;</p><p>--------------------------------------------------------------------------------------------------</p><p>Nominations are now being accepted for the National Academy of Sciences’ 2023 Michael and Sheila Held Prize. The Held Prize honors outstanding, innovative, creative, and influential research in the areas of combinatorial and discrete optimization, or related parts of computer science, such as the design and analysis of algorithms and complexity theory. This $100,000 prize is intended to recognize recent work (defined as published within the last eight years). Additional information, including past recipients, eligibility requirements, and more, can be found at&nbsp;<a href="http://www.nasonline.org/programs/awards/michael-and-sheila-held-prize.html">here</a>.</p><p>All nominations must be submitted online. Unless otherwise stated, the following materials must be submitted:&nbsp;</p><p>A letter from the nominator describing the candidate's work and why he or she should be selected for the award. No more than three (3) pages.</p><p>Curriculum vitae. No more than two (2) pages (similar to CVs included with NSF proposals).</p><p>Bibliography listing no more than twelve (12) of the nominee's most significant publications.</p><p>Suggested citation. A 50-word summary stating why the nominee should be considered for this award. (Citation</p><p>examples)</p><p>Two letters of support. Support letters must be written by individuals from institutions outside both the</p><p>nominator's and the nominee’s institution. Up to three letters of support are accepted.</p><p>Nominations will be accepted through Monday, October 3, 2022. Please help spread the word that the nomination process is underway.&nbsp;</p><p>----------------------------------------------------------------------------------------------------</p><p>BILL COMMENTS</p><p>1) The scope seems rather broad (Dan confirmed this in private email) in that its Comb Opt AND Discrete Opt OR related fields like algorithms and complexity theory.&nbsp;</p><p>2) The research has to be Outstanding AND Innovative AND creative AND influential. That seems hard to do :-(&nbsp; If they made it an OR instead of an AND I may ask someone to nominate me for my Muffin Work. It does use 0-1 programming!</p><p>3) The past winners are, of course, very impressive. But there is one I want to point out to emphasize that the scope is broad: Amit Sahai won in 2022, and here is what the webpage says about it:</p><p>For a leading role in development of cryptographic Software Obfuscation and its applications, starting from initial conception of "Indistinguishability Obfuscation" and culminating in new constructions based upon well-founded cryptographic assumptions. These breakthroughs highlight how computational complexity can enable secrecy while computing in insecure environments.</p><p>4) Comb Opt and Discrete Opt seem to be Operations Research. So this inspires the following question:</p><p><i>What are the similarities and differences between Operations Research and Research on Algorithms?</i>&nbsp;</p><p>I tend to think of Operations Research&nbsp; as being more tied to the real world- but is that true?</p><p>5) Not enough 2-letter combinations&nbsp; for what you want to say: I had to use the term <i>Operations Research&nbsp;</i>instead of the abbreviation OR since I was using OR for or. Oh well.&nbsp;</p><p><br /></p><p><br /></p><p class="authors">By gasarch</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-07T12:21:00Z">Sunday, August 07 2022, 12:21</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Saturday, August 06
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://gilkalai.wordpress.com/2022/08/06/ordinary-computers-can-beat-googles-quantum-computer-after-all/'>Ordinary computers can beat Google’s quantum computer after all</a></h3>
+          <p class='item-feed'>from <a href='https://gilkalai.wordpress.com'>Gil Kalai</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          Science magazine has an article written by Adrian Cho Ordinary computers can beat Google’s quantum computer after all. It is about the remarkable progress in classical simulations of sampling task like those sampling tasks that led to the 2019 Google&#8217;s &#8230; Continue reading &#8594;
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p></p>
+
+
+<p>Science magazine has an article written by Adrian Cho <a href="https://www.science.org/content/article/ordinary-computers-can-beat-google-s-quantum-computer-after-all">Ordinary computers can beat Google’s quantum computer after all</a>. It is about the remarkable progress in classical simulations of sampling task like those sampling tasks that led to the 2019 Google&#8217;s announcement of &#8220;quantum supremacy&#8221;. I reported about the breakthrough paper of Feng Pan and Pan Zhang <a href="https://gilkalai.wordpress.com/2021/03/10/amazing-feng-pan-and-pan-zhang-announced-a-way-to-spoof-classically-simulate-the-googles-quantum-supremacy-circuit/">in this post</a> and there are updates in the post itself and the comment section about a variety of related works by several groups of researchers.</p>
+<p>The very short summary is that by now classical algorithms are ten orders of magnitude faster than those used in the Google paper and hence the speed-up is ten orders of magnitude lower than Google&#8217;s fantastic claims. (The Google paper claims that their ultimate task that required 300 seconds for the quantum computer will require 10,000 years on a powerful supercomputers. with the new algorithms the task can be done in a matter of seconds.)</p>
+<p>Also regarding the Google supremacy paper, my paper with Yosi Rinott and Tomer Shoham,  <a href="https://gilkalai.files.wordpress.com/2022/08/sts836.pdf">Statistical Aspects of the Quantum Supremacy Demonstration,</a> just appeared in &#8220;Statistical Science&#8221;. (Click on the link for the journal version.) The Google 2019 paper and, more generally, NISQ experiments raise various interesting statistical issues. (In addition, it is important to double check various statistical claims of the paper.) One of our findings is that there is a large gap between the empirical distribution and the Google noise model. I hope to devote some future post to our paper and to some further research we were doing.</p>
+<p>The leaking of the Google paper in September 23, 2019 led to huge media and academic attention and many very enthusiastic reactions.  I also wrote here on the blog a <a href="https://gilkalai.wordpress.com/2019/11/13/gils-collegial-quantum-supremacy-skepticism-faq/">few</a> <a href="https://gilkalai.wordpress.com/2019/09/23/quantum-computers-amazing-progress-google-ibm-and-extraordinary-but-probably-false-supremacy-claims-google/">critical</a> <a href="https://gilkalai.wordpress.com/2019/10/13/the-story-of-poincare-and-his-friend-the-baker/">posts</a> about the Google claims.</p>
+<p>Here is a figure with the price of bitcoin around the time of the Google quantum supremacy (unintended) announcement.</p>
+<p><img loading="lazy" data-attachment-id="23183" data-permalink="https://gilkalai.wordpress.com/2022/08/06/ordinary-computers-can-beat-googles-quantum-computer-after-all/bc666/" data-orig-file="https://gilkalai.files.wordpress.com/2022/08/bc666.png" data-orig-size="851,487" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="bc666" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=300" data-large-file="https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=640" class="alignnone size-full wp-image-23183" src="https://gilkalai.files.wordpress.com/2022/08/bc666.png" alt="bc666" width="851" height="487" srcset="https://gilkalai.files.wordpress.com/2022/08/bc666.png 851w, https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=150&amp;h=86 150w, https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=300&amp;h=172 300w, https://gilkalai.files.wordpress.com/2022/08/bc666.png?w=768&amp;h=440 768w" sizes="(max-width: 851px) 100vw, 851px" /></p>
+<p><strong>Update</strong>: There is a recent post on Shtetl Optimized with <a href="https://scottaaronson.blog/?p=6645">Scott Aaronson&#8217;s take</a> on the supremacy situation. Overall our assessments are not very far apart. I don&#8217;t understand the claim: &#8220;If the experimentalists care enough, they could easily regain the quantum lead, at least for a couple more years, by (say) repeating random circuit sampling with 72 qubits rather than 53-60, and hopefully circuit depth of 30-40 rather than just 20-25.&#8221; In my view the most crucial task is to try to repeat and to improve some aspects of the Google experiment even for 20-40 qubits. (In any case, nothing is going to be easy.) </p><p class="authors">By Gil Kalai</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-06T20:20:51Z">Saturday, August 06 2022, 20:20</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Wednesday, August 03
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://cstheory-jobs.org/2022/08/03/postdoctoral-fellow-at-santa-fe-institute-apply-by-october-14-2022/'>Postdoctoral Fellow at Santa Fe Institute (apply by October 14, 2022)</a></h3>
+          <p class='item-feed'>from <a href='https://cstheory-jobs.org'>CCI: jobs</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          An utterly unique opportunity to work on fundamental questions at the intersection of disciplines. The fellowship offers: -unparalleled intellectual freedom -transdisciplinary collaboration with leading researchers worldwide -up to 3 years in residence at SFI -dedicated funds for research &#38; collaboration -a structured leadership training program -competitive salary and paid family leave Website
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>An utterly unique opportunity to work on fundamental questions at the intersection of disciplines.</p>
+<p>The fellowship offers:<br />
+-unparalleled intellectual freedom<br />
+-transdisciplinary collaboration with leading researchers worldwide -up to 3 years in residence at SFI<br />
+-dedicated funds for research &amp; collaboration<br />
+-a structured leadership training program<br />
+-competitive salary and paid family leave</p>
+<p>Website: <a href="https://lnkd.in/ga7Cm9AU">https://lnkd.in/ga7Cm9AU</a><br />
+Email: Hilary Skolnik</p>
+<p class="authors">By shacharlovett</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-03T21:38:25Z">Wednesday, August 03 2022, 21:38</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://gilkalai.wordpress.com/2022/08/03/test-your-intuition-50-two-players-random-walk-can-you-detect-who-did-not-follow-the-rules/'>Test Your Intuition 50. Two-Player Random Walk; Can You Detect Who Did Not Follow the Rules?</a></h3>
+          <p class='item-feed'>from <a href='https://gilkalai.wordpress.com'>Gil Kalai</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          Ruth and Ron start together at the origin and take a walk on the integers. Every day they make a move. They take turns in flipping a coin and they move together right or left according to the outcome. Their &#8230; Continue reading &#8594;
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>Ruth and Ron start together at the origin and take a walk on the integers. Every day they make a move. They take turns in flipping a coin and they move together right or left according to the outcome. <span style="color:#993366;">Their coin flips create a simple random walk starting at the origin on the integers.</span></p>
+<p>We know for sure that they we will return to the origin infinitely many times. However, their random walk never comes back to the origin, so we know for sure that one of them did not follow the rules!</p>
+<h3><span style="color:#0000ff;">Test your intuition: Is it possible to figure out from the walk whether it was Ruth or Ron who did not follow the coin-flipping rule?</span></h3>
+<p><img loading="lazy" data-attachment-id="23142" data-permalink="https://gilkalai.wordpress.com/2022/08/03/test-your-intuition-50-two-players-random-walk-can-you-detect-who-did-not-follow-the-rules/ruthronrw/" data-orig-file="https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png" data-orig-size="997,197" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="RuthRonRW" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=300" data-large-file="https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=640" class="alignnone size-full wp-image-23142" src="https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png" alt="RuthRonRW" width="997" height="197" srcset="https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png 997w, https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=150&amp;h=30 150w, https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=300&amp;h=59 300w, https://gilkalai.files.wordpress.com/2022/08/ruthronrw.png?w=768&amp;h=152 768w" sizes="(max-width: 997px) 100vw, 997px" /></p>
+
+
+<p></p>
+<p class="authors">By Gil Kalai</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-03T07:03:11Z">Wednesday, August 03 2022, 07:03</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Tuesday, August 02
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://scottaaronson.blog/?p=6635'>Updatez</a></h3>
+          <p class='item-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          On the IBM Qiskit blog, there&#8217;s an interview with me about the role of complexity theory in the early history of quantum computing. Not much new for regular readers, but I&#8217;m very happy with how it came out&#8212;thanks so much to Robert Davis and Olivia Lanes for making it happen! My only quibble is with [&#8230;]
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <ol><li>On the IBM Qiskit blog, there&#8217;s an <a href="https://medium.com/qiskit/scott-aaronson-says-complexity-theory-is-inextricable-from-quantum-computing-18369d0bd05d">interview with me</a> about the role of complexity theory in the early history of quantum computing.  Not much new for regular readers, but I&#8217;m very happy with how it came out&#8212;thanks so much to Robert Davis and Olivia Lanes for making it happen!  My only quibble is with the sketch of my face, which might create the inaccurate impression that I no longer have teeth.</li><li>Boaz Barak pointed me to a Twitter thread of <a href="https://twitter.com/QuantumYakar/status/1554432810664054784?s=20&amp;t=0nXoTU04w7Qe1bitINS6QA">DALL-E paintings of people using quantum computers</a>, in the styles of many of history&#8217;s famous artists.  While the motifs are unsurprising (QCs look like regular computers but glowing, or maybe like giant glowing atoms), highly recommended as another demonstration of the sort of thing DALL-E does best.</li><li>Dan Spielman asked me to announce that the National Academy of Sciences is <a href="http://www.nasonline.org/programs/awards/michael-and-sheila-held-prize.html">seeking nominations for the Held Prize</a> in combinatorial and discrete optimization.  The deadline is October 3.</li><li>I&#8217;m at the <a href="https://chicagoquantum.org/events/nsf-workshop-quantum-advantage-and-next-steps">NSF Workshop on Quantum Advantage and Next Steps</a> at the University of Chicago.  My talk yesterday was entitled &#8220;Verifiable Quantum Advantage: What I Hope Will Be Done&#8221; (yeah yeah, I decided to call it &#8220;advantage&#8221; rather than &#8220;supremacy&#8221; in deference to the name of the workshop).  <a href="https://www.scottaaronson.com/talks/whatihope.ppt">My PowerPoint slides are here</a>.  Meanwhile, this morning was the BosonSampling session.  The talk by <a href="https://quantum.ustc.edu.cn/web/en/node/137">Chaoyang Lu</a>, leader of USTC&#8217;s experimental BosonSampling effort, was punctuated by numerous silly memes and videos, as well as the following striking sentence: &#8220;only by putting the seven dragon balls together can you unlock the true quantum computational power.&#8221;</li><li>Gavin Leech <a href="https://www.gleech.org/aaronson">lists and excerpts his favorite writings of mine</a> over the past 25 years, while complaining that I spend &#8220;a lot of time rebutting fleeting manias&#8221; and &#8220;obsess[ing] over political flotsam.&#8221;</li></ol>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-02T16:48:23Z">Tuesday, August 02 2022, 16:48</time>
+        </div>
+      </div>
+    </article>
+  
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Monday, August 01
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://eccc.weizmann.ac.il/report/2022/111'>TR22-111 |  On Matrix Multiplication and Polynomial Identity Testing | 
+
+	Robert Andrews</a></h3>
+          <p class='item-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          We show that lower bounds on the border rank of matrix multiplication can be used to non-trivially derandomize polynomial identity testing for small algebraic circuits. Letting $\underline{R}(n)$ denote the border rank of $n \times n \times n$ matrix multiplication, we construct a hitting set generator with seed length $O(\sqrt{n} \cdot \underline{R}^{-1}(s))$ that hits $n$-variate circuits of mult
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          We show that lower bounds on the border rank of matrix multiplication can be used to non-trivially derandomize polynomial identity testing for small algebraic circuits. Letting $\underline{R}(n)$ denote the border rank of $n \times n \times n$ matrix multiplication, we construct a hitting set generator with seed length $O(\sqrt{n} \cdot \underline{R}^{-1}(s))$ that hits $n$-variate circuits of multiplicative complexity $s$. If the matrix multiplication exponent $\omega$ is not 2, our generator has seed length $O(n^{1 - \varepsilon})$ and hits circuits of size $O(n^{1 + \delta})$ for sufficiently small $\varepsilon, \delta &gt; 0$. Surprisingly, the fact that $\underline{R}(n) \ge n^2$ already yields new, non-trivial hitting set generators for circuits of sublinear multiplicative complexity.
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-01T19:32:38Z">Monday, August 01 2022, 19:32</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://cstheory-jobs.org/2022/08/01/4-year-postdoc-at-idsia-switzerland-apply-by-october-1-2022/'>4-year Postdoc at IDSIA (SWITZERLAND) (apply by October 1, 2022)</a></h3>
+          <p class='item-feed'>from <a href='https://cstheory-jobs.org'>CCI: jobs</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          1 postdoc position for up to 4 years is available at IDSIA as part of the SNSF Grant &#8220;Ideal Membership Problems and the Bit Complexity of Sum of Squares Proofs&#8221;. The gross salary is around 80K CHF per year, with low taxes. Candidates with strong background in math or theoretical computer science will be considered. [&#8230;]
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>1 postdoc position for up to 4 years is available at IDSIA as part of the SNSF Grant &#8220;Ideal Membership Problems and the Bit Complexity of Sum of Squares Proofs&#8221;. The gross salary is around 80K CHF per year, with low taxes. Candidates with strong background in math or theoretical computer science will be considered. The position will be filled as soon as an eligible candidate apply.</p>
+<p>Website: <a href="https://people.idsia.ch/~monaldo/positions/positions.html">https://people.idsia.ch/~monaldo/positions/positions.html</a><br />
+Email: monaldo.mastrolilli@idsia.ch</p>
+<p class="authors">By shacharlovett</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-01T09:00:54Z">Monday, August 01 2022, 09:00</time>
         </div>
       </div>
     </article>
