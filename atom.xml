@@ -644,24 +644,6 @@ We argue that a specific gadget generator from K&amp;#39;08 is a good candidate 
 
 
   <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: postdoc at istanbul topkapı üniversitesi (apply by September 22, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/08/24/postdoc-at-istanbul-topkapi-universitesi-apply-by-september-22-2022/"/>
-    <id>http://cstheory-jobs.org/2022/08/24/postdoc-at-istanbul-topkapi-universitesi-apply-by-september-22-2022/</id>
-    <updated>2022-08-24T10:43:03+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;I finished my PhD in computer engineering 2018.I am very eager to continue my studies with you and your work team and it will be an honor and pleasure for me to spend the post-doctoral with you. If you accept, I can get a postdoctoral scholarship from my country and start with your work&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://scholar.google.com/citations?user=XhsmWO4AAAAJ&amp;amp;hl=en&quot;&gt;https://scholar.google.com/citations?user=XhsmWO4AAAAJ&amp;amp;hl=en&lt;/a&gt;&lt;br /&gt;
-Email: &lt;a href=&quot;https://www.arefyelghi.com/ana-sayfa&quot;&gt;https://www.arefyelghi.com/ana-sayfa&lt;/a&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR22-119 |  NP-Hardness of Learning Programs and Partial MCSP | 
 
 	Shuichi Hirahara</title>
@@ -1367,6 +1349,42 @@ circuits.
     <author>
       <name>arXiv: Data Structures and Algorithms</name>
       <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-114 |  Direct Sum  Theorems From Fortification | 
+
+	Hao Wu</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/114"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/114</id>
+    <updated>2022-08-16T13:21:16+00:00</updated>
+    <content type="html" xml:lang="en">
+    We revisit  the direct sum theorems in communication complexity which askes whether the resource to solve $n$ communication problems together is (approximately) the sum of resources to solve these problems separately. Our work starts with the  observation that Meir and Dinur&amp;#39;s fortification lemma for protocol size over rectangles can be generalized to a general fortification lemma for a sub-additive measure over set. By applying this lemma to the case of cover number, we obtain a dual form of cover number, called ``$\delta$-fooling set&amp;#39;&amp;#39; which is a generalized fooling set. Given a communication problem $S\subseteq (X\times Y) \times Z$, let $\Lambda \subseteq  X\times Y$ be a $\delta$-fooling set of $S$, then given any subset $\tilde{\Lambda} \subseteq \Lambda$ such that $|\tilde{\Lambda}|/{|\Lambda|} &amp;gt; \delta$, there is no  monochromatic rectangle that covers  the subset $\tilde{\Lambda}$. Particularly, there is  a $\frac{16\log|X| |Y|}{{Cov}(S)}$-fooling set of communication problem $S$. 
+	
+With this fact, we are able to reprove the classic direct sum theorem of cover number with a simple double counting argument. Formally, let  $S  \subseteq (A\times B) \times O$ and $T \subseteq (P\times Q) \times Z$ be two communication problems, $
+\log {Cov}\left(S\times T\right)
+\geq  \log{Cov}\left(S\right) 
++ \log{Cov}(T)
+-\log\log|P||Q|-4.$ where ${Cov}$ denotes the cover number. 
+
+ One issue of current deterministic direct sum theorems about commutation complexity or protocol size is that they provide no information when $n$ is small, especially when $n=2$. In this work,  we prove a new direct sum theorem about protocol size which imply a better direct sum theorem for two functions in terms of protocol size. Formally, let ${L}$ denote the protocol size, given a communication problem $F:A \times B \rightarrow 
+ \{0,1\}$, $
+ \log{L}\left(F\times F\right)\geq
+ \log {L}\left(F\right) +\Omega\left(\sqrt{\log{L}\left(F\right)}\right)-\log\log|A||B| -4$.
+ 
+ We also address other direct sum type problem such like the agree problem introduced by Amos Beimel et. We prove a tight cover number lower bound for  the agree problem. Formally, let $S_i \subseteq X_i \times Y_i \times Z, i\in [k]$ be $k$ two-party communication problems, 
+${Cov}
+\left({agree}(S_1,\ldots,S_k)\right) \geq \min_{i\in [k]} 
+\left\{ \frac{{Cov}(S_i)}{16\log|X_i| |Y_i|} \right\}. 
+$
+
+All our direct sum type results are obtained in a similar way, that is using the $\delta$-fooling set to construct a hardcore for the direct sum type problem.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
     </author>
   </entry>
 
