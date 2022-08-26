@@ -18,18 +18,17 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: true
       - name: Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ./theory.db
             ./theory.db-journal
-            ./planet.db
-            ./planet.db-journal
-          key: ${{ runner.os }}-${{ hashFiles('./theory.ini') }}
+          key: ${{ runner.os }}-${{ hashFiles('./theory.ini') }}-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-${{ hashFiles('./theory.ini') }}
       - name: Build
         run: |
           make build
-          ls -al
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3
         with:
