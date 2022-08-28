@@ -9,6 +9,29 @@
 
 
 <item>
+  <title>TR22-121 |  Recent Progress on Derandomizing Space-Bounded Computation | 
+
+	William Hoza</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/121</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/121</link>
+  <description>
+    Is randomness ever necessary for space-efficient computation? It is commonly conjectured that L = BPL, meaning that halting decision algorithms can always be derandomized without increasing their space complexity by more than a constant factor. In the past few years (say, from 2017 to 2022), there has been some exciting progress toward proving this conjecture. Thanks to recent work, we have new pseudorandom generators (PRGs), new black-box derandomization algorithms (generalizations of PRGs), and new non-black-box derandomization algorithms. This article is a survey of these recent developments. We organize the underlying techniques into four overlapping themes:
+
+1. The *iterated pseudorandom restrictions* framework for designing PRGs, especially PRGs for functions computable by arbitrary-order read-once branching programs.
+
+2. The *inverse Laplacian* perspective on derandomizing BPL and the related concept of local consistency.
+
+3. *Error reduction* procedures, including methods of designing low-error weighted pseudorandom generators (WPRGs).
+
+4. The continued use of *spectral expander graphs* in this domain via the derandomized square operation and the Impagliazzo-Nisan-Wigderson PRG (STOC 1994).
+
+We give an overview of these ideas and their applications, and we discuss the challenges ahead.
+  </description>
+  <pubDate>2022-08-28 02:52:42 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Instance generation tool for on-demand transportation problems</title>
   <guid>http://arxiv.org/abs/2208.12225</guid>
   <link>http://arxiv.org/abs/2208.12225</link>
@@ -1274,105 +1297,6 @@ and Henry Segerman about the &lt;a href=&quot;https://mathemalchemy.org/&quot;&g
   </description>
   <pubDate>2022-07-31 18:09:00 UTC</pubDate>
   <author>David Eppstein</author>
-</item>
-
-<item>
-  <title>Juris Hartmanis (1928-2022): Guest post by Ryan Williams</title>
-  <guid>https://scottaaronson.blog/?p=6622</guid>
-  <link>https://scottaaronson.blog/?p=6622</link>
-  <description>
-    &lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img src=&quot;https://www.scottaaronson.com/hartmanis.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;strong&gt;Scott&amp;#8217;s Introduction&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Juris_Hartmanis&quot;&gt;Juris Hartmanis&lt;/a&gt; — one of the founding figures of theoretical computer science, winner of the Turing Award, cofounder of the Cornell computer science department (of which I’m an alumnus), cofounder of the &lt;a href=&quot;https://computationalcomplexity.org/&quot;&gt;Conference on Computational Complexity&lt;/a&gt; or CCC (which I just attended), PhD adviser to many of the &lt;a href=&quot;https://www.cs.umd.edu/users/gasarch/BLOGPAPERS/hartmanisstud.pdf&quot;&gt;leading complexity theorists&lt;/a&gt; — has passed away at age 94.&lt;/p&gt;
-
-
-
-&lt;p&gt;Scientifically, Hartmanis will be remembered as long as our field exists for several contributions.  First and foremost, his 1965 proof, with Richard Stearns, of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Time_hierarchy_theorem&quot;&gt;time&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Space_hierarchy_theorem&quot;&gt;space&lt;/a&gt; hierarchy theorems, which adapt Turing’s undecidability theorems to show that there exist computable problems that are arbitrarily hard (and thus, if you like, that the new field of computational complexity theory would have a subject matter).  Second, his and Berman’s investigation, in the 1970s, of the detailed structure of NP-complete problems (are they “paddable”? can they be &lt;a href=&quot;https://eccc.weizmann.ac.il/report/2016/162/download/&quot;&gt;sparse&lt;/a&gt;? are all NP-complete sets &lt;a href=&quot;https://www.cse.iitk.ac.in/users/manindra/survey/Isomorphism-Conjecture.pdf&quot;&gt;polynomial-time isomorphic&lt;/a&gt;?  or as we now believe, are they not?), which helped start the whole area of “structural complexity theory” (the original subject matter of the CCC conference).  Third, his investigations of logic and complexity theory, including whether problems like P vs. NP could be &lt;a href=&quot;http://www.scottaaronson.com/papers/indep.pdf&quot;&gt;independent&lt;/a&gt; of the axioms of set theory, and the relations of that question to relativization and oracles.&lt;/p&gt;
-
-
-
-&lt;p&gt;As &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/07/29/juris-hartmanis-1928-2022/&quot;&gt;this memorial post&lt;/a&gt; by Richard Lipton and Ken Regan points out, some of Hartmanis’s most important contributions are so basic that it feels weird today even to mention them explicitly: the use of Turing machines to model computational complexity (!).  The study of complexity via &amp;#8220;complexity classes,&amp;#8221; consisting of all problems solvable within a given resource bound.  The whole &lt;a href=&quot;https://complexityzoo.net/Complexity_Zoo&quot;&gt;Complexity Zoo&lt;/a&gt; could&amp;#8217;ve been renamed Jurisic Park.&lt;/p&gt;
-
-
-
-&lt;p&gt;One of my regrets in life is that I didn’t get to know Hartmanis well when I was an undergrad at Cornell.  (This was a stage of my life when I was still intimidated by my professors, or hyper-mega-intimidated if they were Juris Hartmanis.)  I actually conversed with him more after I’d graduated and returned for visits.  He was so considerate and kind, almost grandfatherly, that I realized how foolish I was not to have sought him out as a student.&lt;/p&gt;
-
-
-
-&lt;p&gt;There was, however, another undergrad at Cornell at the same time as me, who wasn&amp;#8217;t &lt;em&gt;quite&lt;/em&gt; as intimidated as I was, and who ended up doing an independent study with Hartmanis, about the possibility of complete problems for NP∩coNP if I remember correctly.  This undergrad’s real goal was to solve the P vs. NP problem, which might sound ridiculous until I tell you that his name was &lt;a href=&quot;https://people.csail.mit.edu/rrw/&quot;&gt;Ryan Williams&lt;/a&gt;.  I asked Ryan to share his own memories of Juris, and he’s graciously done so below.  You won&amp;#8217;t regret reading this.  —SA&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Juris Hartmanis by Ryan Williams&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;I am extremely sad that Professor Juris Hartmanis has passed away. He made an enormous impact on my early career, and on my growth as a scientist: arguably, I wouldn&amp;#8217;t be a scientist at all without him. He was extraordinarily gentle, inspiring, and encouraging to me.&lt;/p&gt;
-
-
-
-&lt;p&gt;My story of how I know Professor Hartmanis is really my &amp;#8220;origin story&amp;#8221; as a theoretical computer scientist. So I&amp;#8217;ll tell you a little about the situation before I met him, to give some before/after context.&lt;/p&gt;
-
-
-
-&lt;p&gt;As a freshman at Cornell learning math and computer science, I became captivated by P vs NP and P vs PSPACE. In my teenage hubris, I planned it out: in the spring I&amp;#8217;d take discrete math, fall I&amp;#8217;d take the intro to theory of computing, and the following spring I&amp;#8217;d take the grad complexity course being taught by Prof. Hartmanis that term. After that, I&amp;#8217;d go to grad school in theory, and somewhere along the way tackle P vs NP. Simple enough&amp;#8230;&lt;/p&gt;
-
-
-
-&lt;p&gt;I did fine in discrete math, but struggled in intro to theory, partly due to the fact that the lectures (and exams) were at 9am. I managed to do well on the final and earned a B+. I began to wonder if my plan was unsound. I went to the instructor and told them of my plan. They recommended that I should not try for grad school, as I didn&amp;#8217;t seem to be particularly talented and there were &amp;#8220;no jobs in theory&amp;#8221;. (Jobs? Who needs jobs?) I asked if my chances of getting in grad school would be improved if I did well in the grad complexity class. They said &amp;#8220;maybe&amp;#8221;, and that was enough to keep me going.&lt;/p&gt;
-
-
-
-&lt;p&gt;The vibe in Prof. Hartmanis&amp;#8217; class was amazing. He was exceptionally passionate about teaching complexity. His lectures were a revelation; they were exhilarating. He stayed laser-focused on communicating the heart of the ideas, with brevity and levity as needed to avoid the technical details (often nasty in the case of Turing machines). In the margins of my own class notes, I jotted down countless one-liners and antics. One of my favorite memories is that, when he wanted to be done with a proof and was tired of further questions, he would write his Q.E.D. symbol very large, with a little intimidating devil inside of it, like so:&lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img src=&quot;https://www.scottaaronson.com/devil.png&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;As he&amp;#8217;d often be packing more material in the lecture than time allowed, he joked that he wasn&amp;#8217;t responsible for what was said in the last five minutes of class (when he&amp;#8217;d rush to cover what remained). He was having so much &lt;em&gt;fun&lt;/em&gt; with the material, and he repeatedly showed that one could think about these very deep and complex things very simply. My intuition for complexity grew so fast that the rest of my mathematical education was lifted immeasurably by it.&lt;/p&gt;
-
-
-
-&lt;p&gt;In response, I began to take my studies very seriously that semester. I showed up to every session of his office hours. I peppered him with questions after class. He was unwaveringly patient, helping me sort out my latest confusion. Eventually my questions turned into actual research problems, which occasionally received interesting answers (mostly already answered in the literature). After the semester ended, I began to schedule weekly meetings with him, discussing anything and everything complexity. He always seemed happy to chat, and during conversations he made the development of my research taste a top priority. He made it clear when what I was saying was interesting to him, and when it wasn&amp;#8217;t&amp;#8230; and if it wasn&amp;#8217;t, I needed to explain why I found it interesting. But I understood that all of this was for my education as a future theoretical computer scientist, which he treated as inevitable.&lt;/p&gt;
-
-
-
-&lt;p&gt;I don&amp;#8217;t know why Professor Hartmanis believed in me. During that period in my life, I felt like nobody else did, and it felt odd that the Turing Award winner was the one who believed the most. On the coattails of his eager recommendation, I was able to attend an REU at DIMACS. Later he was shocked and annoyed when in spite of his letter, I was rejected from every grad school I applied to (I suppose the B+ didn&amp;#8217;t help). However, probably owing to Prof. Hartmanis&amp;#8217; stature at the NSF, I was still awarded an NSF grad fellowship. When I told him of the good and bad news, and that I had no Plan B, he immediately picked up the phone and called someone explaining the situation. He hung up and announced &amp;#8220;Congratulations Ryan, you have been admitted to the MEng program.&amp;#8221; So I spent the next year in Ithaca as an MEng student. He informed me he was retiring, and maybe grad programs are getting skeptical of complexity. Maybe I should try to sneak in by studying something adjacent. He suggested working with Bart Selman on SAT (which I did). My confidence was shaken by the rejections but, seeing how strongly he believed in me, I could not let him down.&lt;/p&gt;
-
-
-
-&lt;p&gt;He was always full of affirmations for me, with a trademark mix of humor and motivation. After I would report a batch of new observations, he would say something like: &amp;#8220;As they say, the biggest pig eats the most potatoes. And you sir, are a very big pig!&amp;#8221; After I had a paper accepted to SODA, he declared that I was now a computer scientist. After I had a paper accepted to IJCAI, he declared that I had become a world-famous computer scientist. Prof. Hartmanis remained my strongest champion and loudest cheerleader in research, until I was finally admitted to some grad schools the next time around.&lt;/p&gt;
-
-
-
-&lt;p&gt;I&amp;#8217;m immensely grateful to have known him. Without his faith, I&amp;#8217;d have never become a theoretical computer scientist. Without his initial influence, I&amp;#8217;d have never been a good one. I&amp;#8217;ve been writing entirely through tears; I hope for everyone reading that they too have the chance to impact a young person&amp;#8217;s life so profoundly.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;SA&amp;#8217;s Endnotes&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Besides &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/07/29/juris-hartmanis-1928-2022/&quot;&gt;the obituary by Lipton and Regan&lt;/a&gt;, see also &lt;a href=&quot;https://blog.computationalcomplexity.org/2022/07/juris-hartmanis-passed-away-on-july-29.html&quot;&gt;the obituary by Bill Gasarch&lt;/a&gt;.  And especially check out Hartmanis&amp;#8217;s &lt;a href=&quot;https://cacm.acm.org/magazines/2015/4/184690-an-interview-with-juris-hartmanis/fulltext&quot;&gt;extraordinary biographical essay from 2015&lt;/a&gt;, in which he describes his childhood in Latvia; his father being taken away by the Soviets to be executed when he was 12 years old; his move to America with his mother, where he worked as a steelworker and a butler while he studied at the University of Kansas City; Caltech&amp;#8217;s farsighted decision to admit him as a graduate student despite his unusual background; and then the beginnings of computational complexity theory and the rest of his distinguished career.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </description>
-  <pubDate>2022-07-30 23:29:04 UTC</pubDate>
-  <author>Scott Aaronson</author>
 </item>
 
 </channel>
