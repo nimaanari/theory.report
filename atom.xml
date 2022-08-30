@@ -10,6 +10,27 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-122 |  Efficient Linearization Implies the Multiphase Conjecture | 
+
+	Young Kun Ko</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/122"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/122</id>
+    <updated>2022-08-30T16:58:32+00:00</updated>
+    <content type="html" xml:lang="en">
+    The main motivation for studying linear data structures and circuits is the intuition that non-linear advice cannot help in computing a linear operator. Jukna and Schnitger formalized this as a conjecture which states that all circuits computing a linear operator can be ``linearized,&amp;quot; with only a constant size blow-up. We show that if we assume strengthening of this intuition to data structures (to some field), then this implies Patrascu’s Multiphase Conjecture for such field. Furthermore, we show that this conjecture is an intermediate conjecture between NOF-Multiphase Conjecture and the Multiphase Conjecture, formalizing why Patrascu&amp;#39;s original approach to the Multiphase Conjecture is hard.
+	
+	Our main technical ingredient is proving unconditional space-time tradeoff for the following static data structure problem for any given field: Let $M \in \mathbb{F}^{m \times n}$ be fixed. Data structure preprocesses input $X \in \mathbb{F}^n$ using $s$-cells (dependant on $M$), each of which can store an arbitrary element in $\mathbb{F}$. When $i \in [m]$ is revealed, the data structure can output $M_i \cdot X$ using $t_q$ probes. We show that there exists $M \in \{ 0 , 1 \}^{m \times n}$ such that if the functions used by the data structure are all linear and $s \leq \tilde{o} ( m )$ then $t_q \geq \tilde{\Omega}(n)$.
+	
+	As a corollary, we show that Patrascu&amp;#39;s Multiphase Conjecture when restricted to dynamic linear data structure holds (with unlimited preprocessing) over any field. This exhibits an explicit dynamic data structure which requires polynomial update time $t_u \geq \tilde{\Omega}(n)$ or query time $t_q \geq \tilde{\Omega}(n)$. This also improves upon the breakthrough work of Larsen which showed a polynomial lower bound for dynamic data structure under the weaker group model.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Reducing Computational Complexity of Neural Networks in Optical Channel Equalization: From Concepts to Implementation</title>
     <link href="http://arxiv.org/abs/2208.12866"/>
     <id>http://arxiv.org/abs/2208.12866</id>
@@ -1375,35 +1396,6 @@ What do you think of our question? There has been &lt;a href=&quot;https://forum
     <author>
       <name>Computational Complexity</name>
       <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-116 |  Constant-Depth Sorting Networks | 
-
-	Natalia Dobrokhotova-Maikova, 
-
-	Alexander Kozachinskiy, 
-
-	Vladimir Podolskii</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/116"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/116</id>
-    <updated>2022-08-17T17:04:17+00:00</updated>
-    <content type="html" xml:lang="en">
-    In this paper, we address sorting networks that are constructed from comparators of arity $k &amp;gt; 2$. That is, in our setting the arity of the comparators -- or, in other words, the number of inputs that can be sorted at the unit cost --  is a parameter. We study its relationship with two other parameters -- $n$, the number of inputs, and $d$, the depth.
-
-This model received considerable attention. Partly, its motivation is to better understand the structure of sorting networks. In particular, sorting networks with large arity are related to recursive constructions of ordinary sorting networks.
-Additionally, studies of this model have natural correspondence with  a recent line of work on constructing circuits for majority functions from majority gates of lower fan-in. 
-
-
-
-Motivated by these questions, we obtain the first lower bounds on the arity of constant-depth sorting networks.
-More precisely, we consider sorting networks of depth $d$ up to 4, and determine the minimal $k$ for which there is such a network with comparators of arity $k$. For depths $d=1,2$ we observe that $k=n$. For $d=3$ we show that $k = \lceil \frac n2 \rceil$. For $d=4$ the minimal arity becomes sublinear: $k = \Theta(n^{2/3})$. This contrasts with the case of majority circuits, in which $k = O(n^{2/3})$ is achievable already for depth $d=3$.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
     </author>
   </entry>
 

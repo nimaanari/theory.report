@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-08-30T16:56:10Z">Tuesday, August 30 2022, 16:56</time>
+          <time class='timeago' datetime="2022-08-30T17:41:31Z">Tuesday, August 30 2022, 17:41</time>
         
       </p>
 
@@ -394,6 +394,46 @@
     <h2 class='new-date'>
       <i class='icon-calendar-empty'></i> Tuesday, August 30
     </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://eccc.weizmann.ac.il/report/2022/122'>TR22-122 |  Efficient Linearization Implies the Multiphase Conjecture | 
+
+	Young Kun Ko</a></h3>
+          <p class='item-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          The main motivation for studying linear data structures and circuits is the intuition that non-linear advice cannot help in computing a linear operator. Jukna and Schnitger formalized this as a conjecture which states that all circuits computing a linear operator can be ``linearized,&quot; with only a constant size blow-up. We show that if we assume strengthening of this intuition to data structure
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          The main motivation for studying linear data structures and circuits is the intuition that non-linear advice cannot help in computing a linear operator. Jukna and Schnitger formalized this as a conjecture which states that all circuits computing a linear operator can be ``linearized,&quot; with only a constant size blow-up. We show that if we assume strengthening of this intuition to data structures (to some field), then this implies Patrascu’s Multiphase Conjecture for such field. Furthermore, we show that this conjecture is an intermediate conjecture between NOF-Multiphase Conjecture and the Multiphase Conjecture, formalizing why Patrascu&#39;s original approach to the Multiphase Conjecture is hard.
+	
+	Our main technical ingredient is proving unconditional space-time tradeoff for the following static data structure problem for any given field: Let $M \in \mathbb{F}^{m \times n}$ be fixed. Data structure preprocesses input $X \in \mathbb{F}^n$ using $s$-cells (dependant on $M$), each of which can store an arbitrary element in $\mathbb{F}$. When $i \in [m]$ is revealed, the data structure can output $M_i \cdot X$ using $t_q$ probes. We show that there exists $M \in \{ 0 , 1 \}^{m \times n}$ such that if the functions used by the data structure are all linear and $s \leq \tilde{o} ( m )$ then $t_q \geq \tilde{\Omega}(n)$.
+	
+	As a corollary, we show that Patrascu&#39;s Multiphase Conjecture when restricted to dynamic linear data structure holds (with unlimited preprocessing) over any field. This exhibits an explicit dynamic data structure which requires polynomial update time $t_u \geq \tilde{\Omega}(n)$ or query time $t_q \geq \tilde{\Omega}(n)$. This also improves upon the breakthrough work of Larsen which showed a polynomial lower bound for dynamic data structure under the weaker group model.
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-08-30T16:58:32Z">Tuesday, August 30 2022, 16:58</time>
+        </div>
+      </div>
+    </article>
+  
     
 
     <article class='item'>
@@ -2855,60 +2895,6 @@ What do you think of our question? There has been <a href="https://forum.effecti
 
         <div class='item-footer'>
           <time class='timeago' datetime="2022-08-18T14:47:00Z">Thursday, August 18 2022, 14:47</time>
-        </div>
-      </div>
-    </article>
-  
-    
-    <h2 class='new-date'>
-      <i class='icon-calendar-empty'></i> Wednesday, August 17
-    </h2>
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='https://eccc.weizmann.ac.il/report/2022/116'>TR22-116 |  Constant-Depth Sorting Networks | 
-
-	Natalia Dobrokhotova-Maikova, 
-
-	Alexander Kozachinskiy, 
-
-	Vladimir Podolskii</a></h3>
-          <p class='item-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          In this paper, we address sorting networks that are constructed from comparators of arity $k &gt; 2$. That is, in our setting the arity of the comparators -- or, in other words, the number of inputs that can be sorted at the unit cost --  is a parameter. We study its relationship with two other parameters -- $n$, the number of inputs, and $d$, the depth.
-
-This model received considerable attention.
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          In this paper, we address sorting networks that are constructed from comparators of arity $k &gt; 2$. That is, in our setting the arity of the comparators -- or, in other words, the number of inputs that can be sorted at the unit cost --  is a parameter. We study its relationship with two other parameters -- $n$, the number of inputs, and $d$, the depth.
-
-This model received considerable attention. Partly, its motivation is to better understand the structure of sorting networks. In particular, sorting networks with large arity are related to recursive constructions of ordinary sorting networks.
-Additionally, studies of this model have natural correspondence with  a recent line of work on constructing circuits for majority functions from majority gates of lower fan-in. 
-
-
-
-Motivated by these questions, we obtain the first lower bounds on the arity of constant-depth sorting networks.
-More precisely, we consider sorting networks of depth $d$ up to 4, and determine the minimal $k$ for which there is such a network with comparators of arity $k$. For depths $d=1,2$ we observe that $k=n$. For $d=3$ we show that $k = \lceil \frac n2 \rceil$. For $d=4$ the minimal arity becomes sublinear: $k = \Theta(n^{2/3})$. This contrasts with the case of majority circuits, in which $k = O(n^{2/3})$ is achievable already for depth $d=3$.
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-17T17:04:17Z">Wednesday, August 17 2022, 17:04</time>
         </div>
       </div>
     </article>
