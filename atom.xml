@@ -10,6 +10,81 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Computational Complexity: The NIST Process for Post-Quantum Cryptography</title>
+    <link href="http://blog.computationalcomplexity.org/2022/08/the-nist-competition-for-post-quantum.html"/>
+    <id>tag:blogger.com,1999:blog-3722233.post-1874664086811883884</id>
+    <updated>2022-08-31T19:35:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;div&gt;&lt;i&gt;Guest post by &lt;a href=&quot;https://www.cs.umd.edu/~jkatz/&quot;&gt;Jonathan Katz&lt;/a&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;Over the past few months there have been several interesting developments in the &lt;a href=&quot;https://csrc.nist.gov/Projects/post-quantum-cryptography&quot;&gt;NIST post-quantum standardization process&lt;/a&gt;.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;By way of background, since the advent of &lt;a href=&quot;https://en.wikipedia.org/wiki/Shor%27s_algorithm&quot;&gt;Shor&#39;s algorithm&lt;/a&gt; in 1994 we have known that a large-scale, general-purpose quantum computer would be able to break all currently deployed public-key cryptography in (quantum) polynomial time. While estimates vary as to when (or even whether!) quantum computers will become a realistic threat to existing public-key cryptosystems, it seems prudent to already begin developing/deploying newer &quot;post-quantum&quot; schemes that are plausibly secure against quantum computers.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;With the above in mind, NIST initiated an open process in 2017 for designing post-quantum cryptographic standards. Researchers from around the world submitted candidate algorithms for public-key encryption/key exchange and digital signatures. These were winnowed down over a series of rounds as cryptographers publicly debated the relative merits of different proposals, or showed  security weaknesses in some candidates.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;On July 5 of this year, NIST &lt;a href=&quot;https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8413.pdf&quot;&gt;announced&lt;/a&gt; that it had selected four of the submissions as finalists for standardization. Only one candidate for public-key encryption was chosen, along with three digital signature schemes. Three of the four selected algorithms rely on the hardness of lattice problems; the only non-lattice scheme is a hash-based signature scheme. (It is possible to build digital signatures using &quot;symmetric-key&quot; assumptions alone.) In addition, four other public-key encryption schemes not based on lattices were designated for further study and possible standardization at a later point in time.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Less than one month later, &lt;a href=&quot;https://eprint.iacr.org/2022/975&quot;&gt;Castryck and Decru announced&lt;/a&gt; a &lt;strong&gt;classical&lt;/strong&gt; attack on SIKE, one of the public-key encryption schemes chosen for further study. &lt;a href=&quot;https://sike.org/&quot;&gt;SIKE&lt;/a&gt; is based on a conjectured hard problem related to isogenies on supersingular elliptic curves.&amp;nbsp;The attack was not just theoretical; the researchers were able to implement the attack and run it in less than a day or less, depending on the security level being considered. Details of the attack are quite complex, but Galbraith &lt;a href=&quot;https://ellipticnews.wordpress.com/2022/07/31/breaking-supersingular-isogeny-diffie-hellman-sidh/&quot;&gt;gives a high-level overview&lt;/a&gt;. &lt;a href=&quot;https://ellipticnews.wordpress.com/2022/08/12/attacks-on-sidh-sike/&quot;&gt;Subsequent improvements&lt;/a&gt; to the attack followed.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;It is worth adding that the above follows an &lt;a href=&quot;https://eprint.iacr.org/2022/214&quot;&gt;entirely classical attack&lt;/a&gt; shown roughly six months earlier on Rainbow, another submission to the NIST standardization process that made it to the 3rd round. (Rainbow is a signature scheme that relies on an entirely different mathematical problem than SIKE.) For completeness, note that none of the four finalists are impacted by any of these attacks.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;A few reflections on the above:&lt;/div&gt;&lt;div&gt;&lt;ul style=&quot;text-align: left;&quot;&gt;&lt;li&gt;It is amazing that the factoring and RSA problems are still hard (for classical computers), more than 40 used after they were proposed for cryptography. The same goes for the discrete-logarithm problem (in certain groups).&lt;/li&gt;&lt;li&gt;It is not easy to find other hard mathematical problems! &lt;a href=&quot;https://en.wikipedia.org/wiki/McEliece_cryptosystem&quot;&gt;Code-based cryptography&lt;/a&gt; has been around about as long as factoring, but has been somewhat unpopular for reasons of efficiency. Lattice-based cryptosystems still seem to give the leading candidates.&lt;/li&gt;&lt;li&gt;We need more (non-cryptographers) studying cryptographic assumptions. The attacks on SIKE involved deep mathematics; attacks on lattice problems may involve algorithmic ideas that cryptographers haven&#39;t thought of.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
+  </content>
+    <author>
+      <name>Computational Complexity</name>
+      <uri>http://blog.computationalcomplexity.org/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">Scott Aaronson: My Quantum Information Science II Lecture Notes: The wait is over!</title>
+    <link href="https://scottaaronson.blog/?p=6685"/>
+    <id>https://scottaaronson.blog/?p=6685</id>
+    <updated>2022-08-31T19:33:15+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.scottaaronson.com/qisii.pdf&quot;&gt;Here they are [PDF]&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;They&amp;#8217;re 155 pages of pure awesome&amp;#8212;for a certain extremely specific definition of &amp;#8220;awesome&amp;#8221;&amp;#8212;which I&amp;#8217;m hereby offering to the world free of charge (for noncommercial use only, of course).  They cover material that I taught, for the first time, in my Introduction to Quantum Information Science II undergrad course at UT Austin in Spring 2022.&lt;/p&gt;
+
+
+
+&lt;p&gt;The new notes pick up exactly where my older &lt;a href=&quot;https://www.scottaaronson.com/qclec.pdf&quot;&gt;QIS I lecture notes&lt;/a&gt; left off, and they presuppose familiarity with the QIS I material.  So, if you&amp;#8217;re just beginning your quantum information journey, then please start with my QIS I notes, which presuppose only linear algebra and a bit of classical algorithms (e.g., recurrence relations and big-O notation), and which self-containedly explain all the rules of QM, moving on to (e.g.) quantum circuits, density matrices, entanglement entropy, Wiesner&amp;#8217;s quantum money, QKD, quantum teleportation, the Bell inequality, interpretations of QM, the Shor 9-qubit code, and the algorithms of Deutsch-Jozsa, Bernstein-Vazirani, Simon, Shor, and Grover.  Master all that, and you&amp;#8217;ll be close to the quantum information research frontier of circa 1996.&lt;/p&gt;
+
+
+
+&lt;p&gt;My new QIS II notes cover a bunch of topics, but the main theme is &amp;#8220;perspectives on quantum computing that go beyond the bare quantum circuit model, and that became increasingly central to the field from the late 1990s onwards.&amp;#8221;  Thus, it covers:&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Hamiltonians, ground states, the adiabatic algorithm, and the universality of adiabatic QC&lt;/li&gt;&lt;li&gt;The stabilizer formalism, the 1996 Gottesman-Knill Theorem on efficient classical simulation of stabilizer QC, my and Gottesman&amp;#8217;s 2004 elaborations, boosting up to universality via &amp;#8220;magic states,&amp;#8221; transversal codes, and the influential 2016 concept of &lt;em&gt;stabilizer rank&lt;/em&gt;&lt;/li&gt;&lt;li&gt;Bosons and fermions: the formalism of Fock space and of creation and annihilation operators, connection to the permanents and determinants of matrices, efficient classical simulation of free fermionic systems (Valiant&amp;#8217;s 2002 &amp;#8220;matchcircuits&amp;#8221;), the 2001 Knill-Laflamme-Milburn (KLM) theorem on universal optical QC, BosonSampling and its computational complexity, and the current experimental status of BosonSampling&lt;/li&gt;&lt;li&gt;Cluster states, Raussendorf and Briegel&amp;#8217;s 2000 measurement-based quantum computation (MBQC), and Gottesman and Chuang&amp;#8217;s 1999 &amp;#8220;gate teleportation&amp;#8221; trick&lt;/li&gt;&lt;li&gt;Matrix product states, and Vidal&amp;#8217;s 2003 efficient classical simulation of &amp;#8220;slightly entangled&amp;#8221; quantum computations&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;Extra bonus topics include:&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;The 2007 Broadbent-Fitzsimons-Kashefi (BFK) protocol for blind and authenticated QC; brief discussion of later developments including Reichardt-Unger-Vazirani 2012 and Mahadev 2018&lt;/li&gt;&lt;li&gt;Basic protocols for quantum state tomography&lt;/li&gt;&lt;li&gt;My 2007 work on PAC-learnability of quantum states&lt;/li&gt;&lt;li&gt;The &amp;#8220;dessert course&amp;#8221;: the black hole information problem, and the Harlow-Hayden argument on the computational hardness of decoding Hawking radiation&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;Master all this, and hopefully you&amp;#8217;ll have the conceptual vocabulary to understand a large fraction of what people in quantum computing and information care about today, how they now think about building scalable QCs, and what they post to the quant-ph arXiv.&lt;/p&gt;
+
+
+
+&lt;p&gt;Note that my QIS II course is complementary to my graduate course on quantum complexity theory, for which &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-845-quantum-complexity-theory-fall-2010/lecture-notes/&quot;&gt;the lecture notes are here&lt;/a&gt;.  There&amp;#8217;s very little overlap between the two (and even less overlap between QIS II and &lt;em&gt;&lt;a href=&quot;https://www.amazon.ca/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565&quot;&gt;Quantum Computing Since Democritus&lt;/a&gt;&lt;/em&gt;).&lt;/p&gt;
+
+
+
+&lt;p&gt;The biggest, most important topic related to the QIS II theme that I &lt;em&gt;didn&amp;#8217;t&lt;/em&gt; cover in the course was topological quantum computing.  I wanted to, but it quickly became clear that topological QC begs for a whole course of its own, and that I had neither the time nor the expertise to do the subject justice.  In retrospect, I do wish I&amp;#8217;d at least covered the &lt;a href=&quot;https://en.wikipedia.org/wiki/Toric_code&quot;&gt;Kitaev surface code&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Crucially, these lecture notes don&amp;#8217;t represent my effort alone.  I worked from draft scribe notes prepared by the QIS II students, who did a far better job than I had any right to expect (including creating the beautiful figures).  My wonderful course TA and PhD student Daniel Liang, along with students Ethan Tan, Samuel Ziegelbein, and Steven Han, then assembled everything, fixed numerous errors, and compiled the bibliography.  I’m grateful to all of them.  At the last minute, we had a LaTeX issue that none of us knew how to fix&amp;#8212;but, in response to a plea, &lt;em&gt;Shtetl-Optimized&lt;/em&gt; reader Pablo Cingolani generously volunteered to help, completed the work by the very next day (I&amp;#8217;d imagined it taking a month!!), and earned a large fruit basket from me in gratitude.&lt;/p&gt;
+
+
+
+&lt;p&gt;Anyway, let me know of any mistakes you find!  We&amp;#8217;ll try to fix them.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
+  </content>
+    <author>
+      <name>Scott Aaronson</name>
+      <uri>https://scottaaronson.blog</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">TCS+ Seminar Series: Guest Post: TCS Women Travel Scholarships for FOCS’22</title>
     <link href="https://tcsplus.wordpress.com/2022/08/30/guest-post-tcs-women-travel-scholarships-for-focs22/"/>
     <id>http://tcsplus.wordpress.com/?p=632</id>
@@ -1427,65 +1502,6 @@ operations. We give a simpler proof of Iacono&#39;s result with significantly
 smaller constant factors. Our analysis uses the natural representation of
 pairing heaps instead of the conversion to a binary tree used in the original
 analysis and in Iacono&#39;s.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: LightAMR format standard and lossless compression algorithms for adaptive mesh refinement grids: RAMSES use case</title>
-    <link href="http://arxiv.org/abs/2208.11958"/>
-    <id>http://arxiv.org/abs/2208.11958</id>
-    <updated>2022-08-26T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/astro-ph/1/au:+Strafella_L/0/1/0/all/0/1&quot;&gt;Lo&amp;#xef;c Strafella&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/astro-ph/1/au:+Chapon_D/0/1/0/all/0/1&quot;&gt;Damien Chapon&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The evolution of parallel I/O library as well as new concepts such as &#39;in
-transit&#39; and &#39;in situ&#39; visualization and analysis have been identified as key
-technologies to circumvent I/O bottleneck in pre-exascale applications.
-Nevertheless, data structure and data format can also be improved for both
-reducing I/O volume and improving data interoperability between data producer
-and data consumer. In this paper, we propose a very lightweight and
-purpose-specific post-processing data model for AMR meshes, called lightAMR.
-Based on this data model, we introduce a tree pruning algorithm that removes
-data redundancy from a fully threaded AMR octree. In addition, we present two
-lossless compression algorithms, one for the AMR grid structure description and
-one for AMR double/single precision physical quantity scalar fields. Then we
-present performance benchmarks on RAMSES simulation datasets of this new
-lightAMR data model and the pruning and compression algorithms. We show that
-our pruning algorithm can reduce the total number of cells from RAMSES AMR
-datasets by 10-40% without loss of information. Finally, we show that the
-RAMSES AMR grid structure can be compacted by ~ 3 orders of magnitude and the
-float scalar fields can be compressed by a factor ~ 1.2 for double precision
-and ~ 1.3 - 1.5 in single precision with a compression speed of ~ 1 GB/s.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Learning to Prune Instances of Steiner Tree Problem in Graphs</title>
-    <link href="http://arxiv.org/abs/2208.11985"/>
-    <id>http://arxiv.org/abs/2208.11985</id>
-    <updated>2022-08-26T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_J/0/1/0/all/0/1&quot;&gt;Jiwei Zhang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ajwani_D/0/1/0/all/0/1&quot;&gt;Deepak Ajwani&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the Steiner tree problem on graphs where we are given a set of
-nodes and the goal is to find a tree sub-graph of minimum weight that contains
-all nodes in the given set, potentially including additional nodes. This is a
-classical NP-hard combinatorial optimisation problem. In recent years, a
-machine learning framework called learning-to-prune has been successfully used
-for solving a diverse range of combinatorial optimisation problems. In this
-paper, we use this learning framework on the Steiner tree problem and show that
-even on this problem, the learning-to-prune framework results in computing
-near-optimal solutions at a fraction of the time required by commercial ILP
-solvers. Our results underscore the potential of the learning-to-prune
-framework in solving various combinatorial optimisation problems.
 &lt;/p&gt;
   </content>
     <author>
