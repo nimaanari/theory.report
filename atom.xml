@@ -10,6 +10,157 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-123 |  The Approximate Degree of DNF and CNF Formulas | 
+
+	Alexander A. Sherstov</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/123"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/123</id>
+    <updated>2022-09-05T04:49:37+00:00</updated>
+    <content type="html" xml:lang="en">
+    The approximate degree of a Boolean function $f\colon\{0,1\}^n\to\{0,1\}$ is the minimum degree of a real polynomial $p$ that approximates $f$ pointwise: $|f(x)-p(x)|\leq1/3$ for all $x\in\{0,1\}^n.$ For every $\delta&amp;gt;0,$ we construct CNF and DNF formulas of polynomial size with approximate degree $\Omega(n^{1-\delta}),$ essentially matching the trivial upper bound of $n.$ This improves polynomially on previous lower bounds and fully resolves the approximate degree of constant-depth circuits ($\text{AC}^{0}$), a question that has seen extensive research over the past 10 years. Prior to our work, an $\Omega(n^{1-\delta})$ lower bound was known only for $\text{AC}^{0}$ circuits of depth that grows with $1/\delta$ (Bun and Thaler, FOCS 2017). Furthermore, the CNF and DNF formulas that we construct are the simplest possible in that they have constant width. Our result holds even for one-sided approximation: for any $\delta&amp;gt;0$, we construct a polynomial-size constant-width CNF formula with one-sided approximate degree $\Omega(n^{1-\delta})$.
+
+Our work has the following consequences.
+
+(i) We essentially settle the communication complexity of $\text{AC}^{0}$ circuits in the bounded-error quantum model, $k$-party number-on-the-forehead randomized model, and $k$-party number-on-the-forehead nondeterministic model: we prove that for every $\delta&amp;gt;0$, these models require $\Omega(n^{1-\delta})$, $\Omega(n/4^{k}k^{2})^{1-\delta}$, and $\Omega(n/4^{k}k^{2})^{1-\delta}$, respectively, bits of communication even for polynomial-size constant-width CNF formulas.
+
+(ii) In particular, we show that the multiparty communication class $\text{coNP}_{k}$ can be separated essentially optimally from $\text{NP}_{k}$ and $\text{BPP}_{k}$ by a particularly simple function, a polynomial-size constant-width CNF formula.
+
+(iii) We give an essentially tight separation, of $O(1)$ versus $\Omega(n^{1-\delta})$, for the one-sided versus two-sided approximate degree of a function; and $O(1)$ versus $\Omega(n^{1-\delta})$ for the one-sided approximate degree of a function $f$ versus its negation $\neg f$.
+
+Our proof departs significantly from previous approaches and contributes a novel, number-theoretic method for amplifying approximate degree.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">Richard Lipton: Legal Complexity</title>
+    <link href="https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/"/>
+    <id>https://rjlipton.wpcomstaging.com/?p=20362</id>
+    <updated>2022-09-05T03:53:23+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;
+&lt;font color=&quot;#0044cc&quot;&gt;&lt;br /&gt;
+&lt;em&gt;Formal logical methods may be needed to represent the Donald Trump documents case&lt;/em&gt;&lt;br /&gt;
+&lt;font color=&quot;#000000&quot;&gt;&lt;/p&gt;
+&lt;table class=&quot;image alignright&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/monicapalmirani/&quot; rel=&quot;attachment wp-att-20364&quot;&gt;&lt;img data-attachment-id=&quot;20364&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/monicapalmirani/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/MonicaPalmirani.jpg?fit=133%2C193&amp;amp;ssl=1&quot; data-orig-size=&quot;133,193&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;MonicaPalmirani&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/MonicaPalmirani.jpg?fit=133%2C193&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/MonicaPalmirani.jpg?fit=133%2C193&amp;amp;ssl=1&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/MonicaPalmirani.jpg?resize=87%2C127&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;87&quot; height=&quot;127&quot; class=&quot;alignright wp-image-20364&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;caption alignright&quot;&gt;&lt;font size=&quot;-2&quot;&gt;&lt;a href=&quot;https://www.unibo.it/sitoweb/monica.palmirani/cv-en&quot;&gt;her page&lt;/font&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+Monica Palmirani is a &lt;a href=&quot;https://www.unibo.it/sitoweb/monica.palmirani/cv-en&quot;&gt;Professor&lt;/a&gt; of Computer Science and Law at the University of Bologna in Italy. She is one of the &lt;a href=&quot;http://www.aicol.eu/?page_id=8&quot;&gt;Program Chairs&lt;/a&gt; of the 2021-2022 &lt;a href=&quot;http://www.aicol.eu/&quot;&gt;AICOL&lt;/a&gt; conference: Artificial Intelligence Approaches to the Complexity of Legal Systems.&lt;/p&gt;
+&lt;p&gt;
+Today Ken and I discuss how logical methods may be used to model complex legal cases.&lt;/p&gt;
+&lt;p&gt;
+We recently &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/07/18/complexity-2022/&quot;&gt;noted&lt;/a&gt; that the principal annual hand-weaving conference shares the moniker &amp;#8220;Complexity 2022&amp;#8221; with one in our field. We were being lighthearted, but here the use of &amp;#8220;complexity&amp;#8221; is seriously aligned with ours. Consider a recent &lt;a href=&quot;https://ebooks.iospress.nl/volumearticle/58532&quot;&gt;paper&lt;/a&gt; by Palmirani with three colleagues at Bologna, titled &amp;#8220;Hybrid AI Framework for Legal Analysis of the EU Legislation Corrigenda.&amp;#8221; It defines a taxonomy for correction rules exemplified by:&lt;/p&gt;
+&lt;p&gt;
+&lt;FONT SIZE=&quot;-1&quot;&gt;&lt;br /&gt;
+&lt;CODE&gt;&lt;br /&gt;
+On page 257, point (b) of the first paragraph of Article 112: for:&lt;br /&gt;
+&amp;#8216;(b) Article 10 and points (a) and (b) of Article 12(1) of Directive 98/79/EC, and …&amp;#8217;,&lt;br /&gt;
+read&lt;br /&gt;
+&amp;#8216;(b) Article 10, points (a) and (b) of Article 12(1) and Article 15(5) of Directive 98/79/EC, and &amp;#8230;&amp;#8217;&lt;br /&gt;
+&lt;/CODE&gt;&lt;br /&gt;
+&lt;/FONT&gt;&lt;/p&gt;
+&lt;p&gt;&lt;P&gt;&lt;br /&gt;
+This is minute stuff, yet so voluminous that management systems are needed. One of their main results is that the corpus of previously made corrections involve far higher Levenstein edit distance than their rules identify as needed. &lt;/p&gt;
+&lt;p&gt;
+The newly-prominent Donald Trump documents case involves matters just as voluminous and much less minute. We have written about systems of logic applied to real-world reasoning on several prior occasions. This one brings multiple taxonomies: of levels of secrecy, of presidential powers, of security mandates, of grades of offense to applicable laws. There is a timeline with critical junctures. An AI system, at least of the knowledge-representation kind, may be needed just to keep it all straight.&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;H2&gt; Secrets &lt;/H2&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;
+We&amp;#8217;ll begin with rules governing secrecy. I once was a keeper of secrets when I consulted for the government during the height of the Cold War. This does not allow me to say anything about details on any secrets we kept. But it does, I feel, allow me to remark on the keeping of secrets in general. &lt;/p&gt;
+&lt;p&gt;
+The issue is whether or not Trump violated the law in keeping boxes of classified material at his home at Mar-A-Lago. My understanding of the situation is this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Trump kept many boxes of classified material at his home at Mar-a-Lago. This was after he left being the President. &lt;/p&gt;
+&lt;li&gt;
+The FBI made a legal request to a Federal judge to get the boxes from there recently. &lt;/p&gt;
+&lt;li&gt;
+The judge allowed this and the FBI removed the boxes on August 8, 2022. &lt;/p&gt;
+&lt;li&gt;
+The FBI request was later partially released to us after being blacked out. Here is the &lt;a href=&quot;https://apps.npr.org/documents/document.html?id=22267188-mar-a-lago-affi&quot;&gt;official copy&lt;/a&gt;.
+&lt;/ol&gt;
+&lt;p&gt;
+The taxonomy of classification given in the FBI affidavit (see pages 4&amp;#8211;5, points 11&amp;#8211;16 for full definitions) is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Sensitive Compartmented Information (SCI). &lt;/p&gt;
+&lt;li&gt;
+Special Intelligence (SI), described as &amp;#8220;an SCI control system.&amp;#8221; &lt;/p&gt;
+&lt;li&gt;
+HUMINT Control System (HCS). &lt;/p&gt;
+&lt;li&gt;
+Foreign Intelligence Surveillance Act (FISA). &lt;/p&gt;
+&lt;li&gt;
+Not Releasable to Foreign Nationals (NOFORN). &lt;/p&gt;
+&lt;li&gt;
+Originator Controlled (ORCON).
+&lt;/ol&gt;
+&lt;p&gt;
+Do Trump&amp;#8217;s actions violate the law? Do they violate any reasonable rule of keeping secrets? Here is an example of the kind of logical modeling we imagine toward answering these questions. ORCON is defined as &amp;#8220;dissemination beyond pre-approved U.S. entities requires originator approval.&amp;#8221; This suggests asking:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; Under what circumstances does de-classifying a document marked ORCON without approval of its originator constitute a violation? &lt;/em&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt;
+The answer may depend on the timeline with regard to Trump&amp;#8217;s powers in office, prerogatives after leaving office, and the actions by the Department of Justice and the FBI. Let&amp;#8217;s take a look at that next.&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;H2&gt; Timeline and Key Dates &lt;/H2&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;
+Among various constructions of the timeline, &lt;a href=&quot;https://terikanefield.com/timelinestolendocs/&quot;&gt;this&lt;/a&gt; by the lawyer and author Teri Kanefield also notes the secrecy levels. &lt;/p&gt;
+&lt;p&gt;
+Let&amp;#8217;s look at the time sequence. The material was kept by Trump at Mar-a-Lago. Then it was removed on August 8, 2022 by the FBI. What Kanefield calls &amp;#8220;Phase 3&amp;#8221; is entirely this key date. &lt;/p&gt;
+&lt;p&gt;
+One logical inference is that the only time that any secrets could have been violated is from when Trump had the material until August 8, 2022. Since he did not have the material after August 8, it seem safe to say that he could not have compromised the material after that. Note: there seems to be no claim that he &lt;em&gt;made private copies&lt;/em&gt; of the material before the key date, so the time until August 8, 2022, is the only time in question.&lt;/p&gt;
+&lt;p&gt;
+The instantly-famous &lt;a href=&quot;https://www.npr.org/2022/09/01/1120323225/why-the-dojs-photo-of-top-secret-documents-held-by-trump-matters&quot;&gt;photo&lt;/a&gt; of materials recovered in the search both shows some of the classified designations listed above and hints that the timeline mixes with Trump&amp;#8217;s handling of his own mementoes:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/trumpdocumentsphoto/&quot; rel=&quot;attachment wp-att-20366&quot;&gt;&lt;img data-attachment-id=&quot;20366&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/trumpdocumentsphoto/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?fit=745%2C561&amp;amp;ssl=1&quot; data-orig-size=&quot;745,561&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;KWRegan&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1662247874&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;TrumpDocumentsPhoto&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?fit=300%2C226&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?fit=600%2C452&amp;amp;ssl=1&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?resize=372%2C280&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;372&quot; height=&quot;280&quot; class=&quot;aligncenter wp-image-20366&quot; srcset=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?w=745&amp;amp;ssl=1 745w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?resize=300%2C226&amp;amp;ssl=1 300w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?resize=400%2C300&amp;amp;ssl=1 400w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?resize=200%2C150&amp;amp;ssl=1 200w&quot; sizes=&quot;(max-width: 372px) 100vw, 372px&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;H2&gt; Logical Points and Scales &lt;/H2&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;
+Our ulterior purpose in this note is to point out that there are &lt;em&gt;at least four&lt;/em&gt; levels on which logical rules can be applied:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Most fundamental are rules that track consistency of references to relevant sections of legislation. This is the level of the systems described by Palmirani et al. Such rules may seem minute and trivial but their need and heft are not to be discounted. &lt;/p&gt;
+&lt;li&gt;
+Next level are rules about what constitutes infractions of these statutes, to what level of gravity, and about jurisdiction for prosecuting them. &lt;/p&gt;
+&lt;li&gt;
+Next level are rules employed in arbitrating whether and which infractions have occurred. This may involve rules of &lt;a href=&quot;https://en.wikipedia.org/wiki/Temporal_logic&quot;&gt;temporal logic&lt;/a&gt; with regard to the timeline of events. &lt;/p&gt;
+&lt;li&gt;
+The top level is arguing the logic of the accusations and possible defenses to them.
+&lt;/ol&gt;
+&lt;p&gt;
+The top level features most in &amp;#8220;news analysis&amp;#8221; and arguments on social media by many would-be Perry Masons. But our point is that the impact of logical systems as they are programmed comes first and foremost at the bottom, not here. &lt;/p&gt;
+&lt;p&gt;
+Rules that unfold how designations like NOFORN and ORCON apply in practice occupy the lower levels. Experts on the intelligence and FBI/DoJ sides have begun expounding them in public, but full treatment will be the grist of long legal filings. Let us, however, indulge the higher levels. Continuing with the previous section about the timeline, I believe the key issue is whether or not any access by others to the secret information happened before the key date. If the material was sealed in the Mar-a-Lago rooms and no one had access to the material, it would seem to take the gravest offenses off the table.&lt;/p&gt;
+&lt;p&gt;
+A higher point is that such defenses saying no leak of secrets occurred before the key date have zero overlap with defenses based on asserting that Trump explicitly or implicitly de-classified it all upon leaving office in January 2021. If the latter, then there were &lt;em&gt;de jure&lt;/em&gt; no secrets. The two kinds of defense can exist in different branches of the case, depending on resolution of the extent of presidential powers to declassify. But they cannot be simultaneously in focus&amp;#8212;then their conjunction brings a logical contradiction. &lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;H2&gt; Open Problems &lt;/H2&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;
+Have we said enough to indicate how the programming of logical rules, especially at lower levels, will be needed during the full development of this case?&lt;/p&gt;
+&lt;p&gt;
+&lt;p class=&quot;authors&quot;&gt;By RJLipton+KWRegan&lt;/p&gt;
+  </content>
+    <author>
+      <name>Richard Lipton</name>
+      <uri>https://rjlipton.wpcomstaging.com</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: On the Complexity of Robust Multi-Stage Problems in the Polynomial Hierarchy</title>
     <link href="http://arxiv.org/abs/2209.01011"/>
     <id>http://arxiv.org/abs/2209.01011</id>
@@ -1491,79 +1642,6 @@ carry out the inference in $O(|E|)$ time. We also study variants of this basic
 problem in which we are interested in learning the coverage of edges instead of
 the nodes, or when we are only allowed to instrument edges instead of the
 nodes.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fitting Metrics and Ultrametrics with Minimum Disagreements</title>
-    <link href="http://arxiv.org/abs/2208.13920"/>
-    <id>http://arxiv.org/abs/2208.13920</id>
-    <updated>2022-08-31T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cohen_Addad_V/0/1/0/all/0/1&quot;&gt;Vincent Cohen-Addad&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fan_C/0/1/0/all/0/1&quot;&gt;Chenglin Fan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lee_E/0/1/0/all/0/1&quot;&gt;Euiwoong Lee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mesmay_A/0/1/0/all/0/1&quot;&gt;Arnaud de Mesmay&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given $x \in (\mathbb{R}_{\geq 0})^{\binom{[n]}{2}}$ recording pairwise
-distances, the METRIC VIOLATION DISTANCE (MVD) problem asks to compute the
-$\ell_0$ distance between $x$ and the metric cone; i.e., modify the minimum
-number of entries of $x$ to make it a metric. Due to its large number of
-applications in various data analysis and optimization tasks, this problem has
-been actively studied recently.
-&lt;/p&gt;
-&lt;p&gt;We present an $O(\log n)$-approximation algorithm for MVD, exponentially
-improving the previous best approximation ratio of $O(OPT^{1/3})$ of Fan et al.
-[ SODA, 2018]. Furthermore, a major strength of our algorithm is its simplicity
-and running time. We also study the related problem of ULTRAMETRIC VIOLATION
-DISTANCE (UMVD), where the goal is to compute the $\ell_0$ distance to the cone
-of ultrametrics, and achieve a constant factor approximation algorithm. The
-UMVD can be regarded as an extension of the problem of fitting ultrametrics
-studied by Ailon and Charikar [SIAM J. Computing, 2011] and by Cohen-Addad et
-al. [FOCS, 2021] from $\ell_1$ norm to $\ell_0$ norm. We show that this problem
-can be favorably interpreted as an instance of Correlation Clustering with an
-additional hierarchical structure, which we solve using a new
-$O(1)$-approximation algorithm for correlation clustering that has the
-structural property that it outputs a refinement of the optimum clusters. An
-algorithm satisfying such a property can be considered of independent interest.
-We also provide an $O(\log n \log \log n)$ approximation algorithm for weighted
-instances. Finally, we investigate the complementary version of these problems
-where one aims at choosing a maximum number of entries of $x$ forming an
-(ultra-)metric. In stark contrast with the minimization versions, we prove that
-these maximization versions are hard to approximate within any constant factor
-assuming the Unique Games Conjecture.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Achievable Rates and Algorithms for Group Testing with Runlength Constraints</title>
-    <link href="http://arxiv.org/abs/2208.14066"/>
-    <id>http://arxiv.org/abs/2208.14066</id>
-    <updated>2022-08-31T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fiore_S/0/1/0/all/0/1&quot;&gt;Stefano Della Fiore&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dalai_M/0/1/0/all/0/1&quot;&gt;Marco Dalai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vaccaro_U/0/1/0/all/0/1&quot;&gt;Ugo Vaccaro&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we study bounds on the minimum length of
-$(k,n,d)$-superimposed codes introduced by Agarwal et al. [1], in the context
-of Non-Adaptive Group Testing algorithms with runlength constraints. A
-$(k,n,d)$-superimposed code of length $t$ is a $t \times n$ binary matrix such
-that any two 1&#39;s in each column are separated by a run of at least $d$ 0&#39;s, and
-such that for any column $\mathbf{c}$ and any other $k-1$ columns, there exists
-a row where $\mathbf{c}$ has $1$ and all the remaining $k-1$ columns have $0$.
-Agarwal et al. proved the existence of such codes with
-$t=\Theta(dk\log(n/k)+k^2\log(n/k))$. Here we investigate more in detail the
-coefficients in front of these two main terms as well as the role of lower
-order terms. We show that improvements can be obtained over the construction in
-[1] by using different constructions and by an appropriate exploitation of the
-Lov\&#39;asz Local Lemma in this context. Our findings also suggest $O(n^k)$
-randomized Las Vegas algorithms for the construction of such codes. We also
-extend our results to Two-Stage Group Testing algorithms with runlength
-constraints.
 &lt;/p&gt;
   </content>
     <author>
