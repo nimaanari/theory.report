@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-09-06T17:42:36Z">Tuesday, September 06 2022, 17:42</time>
+          <time class='timeago' datetime="2022-09-06T18:44:59Z">Tuesday, September 06 2022, 18:44</time>
         
       </p>
 
@@ -394,6 +394,45 @@
     <h2 class='new-date'>
       <i class='icon-calendar-empty'></i> Tuesday, September 06
     </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://ptreview.sublinear.info/2022/09/news-for-august-2022/'>News for August 2022</a></h3>
+          <p class='item-feed'>from <a href='https://ptreview.sublinear.info'>Property Testing Review</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          A eerily quiet month, this August of &#8217;22. We only found a single paper to cover! Training Overparametrized Neural Networks in Sublinear Time by Hang Hu, Zhao Song, Omri Weinstein, Danyang Zhuo (arXiv). Think of a classification problem where the inputs are in \(\mathbb{R}^d\). We have \(n\) such points (with their true labels, as training [&#8230;]
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>A eerily quiet month, this August of &#8217;22. We only found a single paper to cover!</p>
+
+
+
+<p><strong>Training Overparametrized Neural Networks in Sublinear Time</strong> by Hang Hu, Zhao Song, Omri Weinstein, Danyang Zhuo (<a href="https://arxiv.org/abs/2208.04508">arXiv</a>). Think of a classification problem where the inputs are in \(\mathbb{R}^d\). We have \(n\) such points (with their true labels, as training data) and wish to train a Neural Network. A two layer Rectified Linear Unit (ReLU) Neural Network (NN) works as follows. The first layer has \(m\) vertices, where each vertex has vector weight \(\vec{w}_i \in \mathbb{R}^d\). The second &#8220;hidden layer&#8221; has \(m\) vertices, each with a scalar weight \(a_1, a_2, \ldots, a_m\). This network is called overparametrized when \(m \gg n\). The output of this NN on input vector \(\vec{x}\) is (up to scaling) \(\sum_{i \leq m} a_i \phi(\vec{w_i} \cdot \vec{x})\) (where \(\phi\) is a thresholded linear function). Observe that to compute the value on a single input takes \(O(md)\) time, so the total time to compute all values on \(n\) training inputs takes \(O(mnd)\) time. The training is done by gradient descent methods; given a particular setting of weights, we compute the total loss, and then modify the weights along the gradient. Previous work showed how a single iteration can be done in time \(O(mnd + n^3)\). When \(m \gg n^2\), this can be thought of as linear in computing the loss function (which requires evaluating the NN on all the \(n\) points). This paper shows how to implement a single iteration in \(O(m^{1-\alpha}nd + n^3)\) time, for some \(\alpha > 0\). Hence, the time for an iteration is sublinear in the trivial computation. The techniques used are sparse recovery methods and random projections.</p>
+<p class="authors">By Seshadhri</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-09-06T18:33:21Z">Tuesday, September 06 2022, 18:33</time>
+        </div>
+      </div>
+    </article>
+  
     
 
     <article class='item'>
@@ -3056,71 +3095,6 @@ superdense case with node degrees $n-o(n)$, we show that the Tutte polynomial
 $T_G(x,y)$ is asymptotically equal to $Q=(x-1)(y-1)$. Moreover, we briefly
 discuss the problem of approximating $Z$ in the case of $(\alpha, \beta
 )$-power law graphs.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-31T00:30:00Z">Wednesday, August 31 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2208.14132'>On Sparse Hitting Sets: from Fair Vertex Cover to Highway Dimension</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Johannes Blum, Yann Disser, Andreas Feldmann, Siddharth Gupta, Anna Zych-Pawlewicz</p><p>We consider the Sparse Hitting Set (Sparse-HS) problem, where we are given a
-set system $(V,\mathcal{F},\mathcal{B})$ with two families
-$\mathcal{F},\mathcal{B}$ of subsets of $V$. The task is to find a hitting set
-for $\mathcal{F}$ that minimizes the maximum number of elements in any of the
-sets of
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Blum_J/0/1/0/all/0/1">Johannes Blum</a>, <a href="http://arxiv.org/find/cs/1/au:+Disser_Y/0/1/0/all/0/1">Yann Disser</a>, <a href="http://arxiv.org/find/cs/1/au:+Feldmann_A/0/1/0/all/0/1">Andreas Feldmann</a>, <a href="http://arxiv.org/find/cs/1/au:+Gupta_S/0/1/0/all/0/1">Siddharth Gupta</a>, <a href="http://arxiv.org/find/cs/1/au:+Zych_Pawlewicz_A/0/1/0/all/0/1">Anna Zych-Pawlewicz</a></p><p>We consider the Sparse Hitting Set (Sparse-HS) problem, where we are given a
-set system $(V,\mathcal{F},\mathcal{B})$ with two families
-$\mathcal{F},\mathcal{B}$ of subsets of $V$. The task is to find a hitting set
-for $\mathcal{F}$ that minimizes the maximum number of elements in any of the
-sets of $\mathcal{B}$. Our focus is on determining the complexity of some
-special cases of Sparse-HS with respect to the sparseness $k$, which is the
-optimum number of hitting set elements in any set of $\mathcal{B}$.
-</p>
-<p>For the Sparse Vertex Cover (Sparse-VC) problem, $V$ is given by the vertex
-set of a graph, and $\mathcal{F}$ is its edge set. We prove NP-hardness for
-sparseness $k\geq 2$ and polynomial time solvability for $k=1$. We also provide
-a polynomial-time $2$-approximation for any $k$. A special case of Sparse-VC is
-Fair Vertex Cover (Fair-VC), where the family $\mathcal{B}$ is given by vertex
-neighbourhoods. For this problem we prove NP-hardness for constant $k$ and
-provide a polynomial-time $(2-\frac{1}{k})$-approximation. This is better than
-any approximation possible for Sparse-VC or Vertex Cover (under UGC).
-</p>
-<p>We then consider two problems derived from Sparse-HS related to the highway
-dimension, a graph parameter modelling transportation networks. Most algorithms
-for graphs of low highway dimension compute solutions to the $r$-Shortest Path
-Cover ($r$-SPC) problem, where $r&gt;0$, $\mathcal{F}$ contains all shortest paths
-of length between $r$ and $2r$, and $\mathcal{B}$ contains all balls of radius
-$2r$. There is an XP algorithm that computes solutions to $r$-SPC of sparseness
-at most $h$ if the input graph has highway dimension $h$, but the existence if
-an FPT algorithm was open. We prove that $r$-SPC and also the related
-$r$-Highway Dimension ($r$-HD) problem are both W[1]-hard. Furthermore, we
-prove that $r$-SPC admits a polynomial-time $O(\log n)$-approximation.
 </p>
         
         </div>

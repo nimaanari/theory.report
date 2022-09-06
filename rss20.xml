@@ -9,6 +9,22 @@
 
 
 <item>
+  <title>News for August 2022</title>
+  <guid>https://ptreview.sublinear.info/?p=1754</guid>
+  <link>https://ptreview.sublinear.info/2022/09/news-for-august-2022/</link>
+  <description>
+    &lt;p&gt;A eerily quiet month, this August of &amp;#8217;22. We only found a single paper to cover!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Training Overparametrized Neural Networks in Sublinear Time&lt;/strong&gt; by Hang Hu, Zhao Song, Omri Weinstein, Danyang Zhuo (&lt;a href=&quot;https://arxiv.org/abs/2208.04508&quot;&gt;arXiv&lt;/a&gt;). Think of a classification problem where the inputs are in \(\mathbb{R}^d\). We have \(n\) such points (with their true labels, as training data) and wish to train a Neural Network. A two layer Rectified Linear Unit (ReLU) Neural Network (NN) works as follows. The first layer has \(m\) vertices, where each vertex has vector weight \(\vec{w}_i \in \mathbb{R}^d\). The second &amp;#8220;hidden layer&amp;#8221; has \(m\) vertices, each with a scalar weight \(a_1, a_2, \ldots, a_m\). This network is called overparametrized when \(m \gg n\). The output of this NN on input vector \(\vec{x}\) is (up to scaling) \(\sum_{i \leq m} a_i \phi(\vec{w_i} \cdot \vec{x})\) (where \(\phi\) is a thresholded linear function). Observe that to compute the value on a single input takes \(O(md)\) time, so the total time to compute all values on \(n\) training inputs takes \(O(mnd)\) time. The training is done by gradient descent methods; given a particular setting of weights, we compute the total loss, and then modify the weights along the gradient. Previous work showed how a single iteration can be done in time \(O(mnd + n^3)\). When \(m \gg n^2\), this can be thought of as linear in computing the loss function (which requires evaluating the NN on all the \(n\) points). This paper shows how to implement a single iteration in \(O(m^{1-\alpha}nd + n^3)\) time, for some \(\alpha &gt; 0\). Hence, the time for an iteration is sublinear in the trivial computation. The techniques used are sparse recovery methods and random projections.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Seshadhri&lt;/p&gt;
+  </description>
+  <pubDate>2022-09-06 18:33:21 UTC</pubDate>
+  <author>Property Testing Review</author>
+</item>
+
+<item>
   <title>Talk in two days on correlation bounds</title>
   <guid>http://emanueleviola.wordpress.com/?p=1050</guid>
   <link>https://emanueleviola.wordpress.com/2022/09/06/talk-in-two-days-on-correlation-bounds/</link>
@@ -1383,44 +1399,6 @@ superdense case with node degrees $n-o(n)$, we show that the Tutte polynomial
 $T_G(x,y)$ is asymptotically equal to $Q=(x-1)(y-1)$. Moreover, we briefly
 discuss the problem of approximating $Z$ in the case of $(\alpha, \beta
 )$-power law graphs.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-08-31 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On Sparse Hitting Sets: from Fair Vertex Cover to Highway Dimension</title>
-  <guid>http://arxiv.org/abs/2208.14132</guid>
-  <link>http://arxiv.org/abs/2208.14132</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blum_J/0/1/0/all/0/1&quot;&gt;Johannes Blum&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Disser_Y/0/1/0/all/0/1&quot;&gt;Yann Disser&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Feldmann_A/0/1/0/all/0/1&quot;&gt;Andreas Feldmann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gupta_S/0/1/0/all/0/1&quot;&gt;Siddharth Gupta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zych_Pawlewicz_A/0/1/0/all/0/1&quot;&gt;Anna Zych-Pawlewicz&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the Sparse Hitting Set (Sparse-HS) problem, where we are given a
-set system $(V,\mathcal{F},\mathcal{B})$ with two families
-$\mathcal{F},\mathcal{B}$ of subsets of $V$. The task is to find a hitting set
-for $\mathcal{F}$ that minimizes the maximum number of elements in any of the
-sets of $\mathcal{B}$. Our focus is on determining the complexity of some
-special cases of Sparse-HS with respect to the sparseness $k$, which is the
-optimum number of hitting set elements in any set of $\mathcal{B}$.
-&lt;/p&gt;
-&lt;p&gt;For the Sparse Vertex Cover (Sparse-VC) problem, $V$ is given by the vertex
-set of a graph, and $\mathcal{F}$ is its edge set. We prove NP-hardness for
-sparseness $k\geq 2$ and polynomial time solvability for $k=1$. We also provide
-a polynomial-time $2$-approximation for any $k$. A special case of Sparse-VC is
-Fair Vertex Cover (Fair-VC), where the family $\mathcal{B}$ is given by vertex
-neighbourhoods. For this problem we prove NP-hardness for constant $k$ and
-provide a polynomial-time $(2-\frac{1}{k})$-approximation. This is better than
-any approximation possible for Sparse-VC or Vertex Cover (under UGC).
-&lt;/p&gt;
-&lt;p&gt;We then consider two problems derived from Sparse-HS related to the highway
-dimension, a graph parameter modelling transportation networks. Most algorithms
-for graphs of low highway dimension compute solutions to the $r$-Shortest Path
-Cover ($r$-SPC) problem, where $r&amp;gt;0$, $\mathcal{F}$ contains all shortest paths
-of length between $r$ and $2r$, and $\mathcal{B}$ contains all balls of radius
-$2r$. There is an XP algorithm that computes solutions to $r$-SPC of sparseness
-at most $h$ if the input graph has highway dimension $h$, but the existence if
-an FPT algorithm was open. We prove that $r$-SPC and also the related
-$r$-Highway Dimension ($r$-HD) problem are both W[1]-hard. Furthermore, we
-prove that $r$-SPC admits a polynomial-time $O(\log n)$-approximation.
 &lt;/p&gt;
   </description>
   <pubDate>2022-08-31 00:30:00 UTC</pubDate>
