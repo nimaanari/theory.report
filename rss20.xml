@@ -9,6 +9,176 @@
 
 
 <item>
+  <title>Counting Subgraphs in Somewhere Dense Graphs</title>
+  <guid>http://arxiv.org/abs/2209.03402</guid>
+  <link>http://arxiv.org/abs/2209.03402</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bressan_M/0/1/0/all/0/1&quot;&gt;Marco Bressan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Goldberg_L/0/1/0/all/0/1&quot;&gt;Leslie Ann Goldberg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Meeks_K/0/1/0/all/0/1&quot;&gt;Kitty Meeks&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Roth_M/0/1/0/all/0/1&quot;&gt;Marc Roth&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problems of counting copies and induced copies of a small
+pattern graph $H$ in a large host graph $G$. Recent work fully classified the
+complexity of those problems according to structural restrictions on the
+patterns $H$. In this work, we address the more challenging task of analysing
+the complexity for restricted patterns and restricted hosts. Specifically we
+ask which families of allowed patterns and hosts imply fixed-parameter
+tractability, i.e., the existence of an algorithm running in time $f(H)\cdot
+|G|^{O(1)}$ for some computable function $f$. Our main results present
+exhaustive and explicit complexity classifications for families that satisfy
+natural closure properties. Among others, we identify the problems of counting
+small matchings and independent sets in subgraph-closed graph classes
+$\mathcal{G}$ as our central objects of study and establish the following crisp
+dichotomies as consequences of the Exponential Time Hypothesis: (1) Counting
+$k$-matchings in a graph $G\in\mathcal{G}$ is fixed-parameter tractable if and
+only if $\mathcal{G}$ is nowhere dense. (2) Counting $k$-independent sets in a
+graph $G\in\mathcal{G}$ is fixed-parameter tractable if and only if
+$\mathcal{G}$ is nowhere dense. Moreover, we obtain almost tight conditional
+lower bounds if $\mathcal{G}$ is somewhere dense, i.e., not nowhere dense.
+These base cases of our classifications subsume a wide variety of previous
+results on the matching and independent set problem, such as counting
+$k$-matchings in bipartite graphs (Curticapean, Marx; FOCS 14), in
+$F$-colourable graphs (Roth, Wellnitz; SODA 20), and in degenerate graphs
+(Bressan, Roth; FOCS 21), as well as counting $k$-independent sets in bipartite
+graphs (Curticapean et al.; Algorithmica 19).
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-09-09 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Synthesizing efficient circuits for Hamiltonian simulation</title>
+  <guid>http://arxiv.org/abs/2209.03478</guid>
+  <link>http://arxiv.org/abs/2209.03478</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Mukhopadhyay_P/0/1/0/all/0/1&quot;&gt;Priyanka Mukhopadhyay&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Wiebe_N/0/1/0/all/0/1&quot;&gt;Nathan Wiebe&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Zhang_H/0/1/0/all/0/1&quot;&gt;Hong Tao Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a new approach for compiling quantum simulation circuits that
+appear in Trotter, qDRIFT and multi-product formulas to Clifford and
+non-Clifford operations that can reduce the number of non-Clifford operations
+by a factor of up to $4$. The central idea behind our approach is to collect
+mutually commuting Hamiltonian terms into groups that satisfy one of several
+symmetries identified in this work which allow an inexpensive simulation of the
+entire group of terms. We further show that the cost can in some cases be
+reduced by partially allocating Hamiltonian terms to several groups and provide
+a polynomial time classical algorithm that can greedily allocate the terms to
+appropriate groupings. We further specifically discuss these optimizations for
+the case of fermionic dynamics and provide extensive numerical simulations for
+qDRIFT of our grouping strategy to 6 and 4-qubit Heisenberg models, $LiH$,
+$H_2$ and observe a factor of 1.8-3.2 reduction in the number of non-Clifford
+gates. This suggests Trotter-based simulation of chemistry in second
+quantization may be even more practical than previously believed.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-09-09 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Epic Fail: Emulators can tolerate polynomially many edge faults for free</title>
+  <guid>http://arxiv.org/abs/2209.03675</guid>
+  <link>http://arxiv.org/abs/2209.03675</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bodwin_G/0/1/0/all/0/1&quot;&gt;Greg Bodwin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dinitz_M/0/1/0/all/0/1&quot;&gt;Michael Dinitz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nazari_Y/0/1/0/all/0/1&quot;&gt;Yasamin Nazari&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A $t$-emulator of a graph $G$ is a graph $H$ that approximates its pairwise
+shortest path distances up to multiplicative $t$ error. We study fault tolerant
+$t$-emulators, under the model recently introduced by Bodwin, Dinitz, and
+Nazari [ITCS 2022] for vertex failures. In this paper we consider the version
+for edge failures, and show that they exhibit surprisingly different behavior.
+&lt;/p&gt;
+&lt;p&gt;In particular, our main result is that, for $(2k-1)$-emulators with $k$ odd,
+we can tolerate a polynomial number of edge faults for free. For example: for
+any $n$-node input graph, we construct a $5$-emulator ($k=3$) on $O(n^{4/3})$
+edges that is robust to $f = O(n^{2/9})$ edge faults. It is well known that
+$\Omega(n^{4/3})$ edges are necessary even if the $5$-emulator does not need to
+tolerate any faults. Thus we pay no extra cost in the size to gain this fault
+tolerance. We leave open the precise range of free fault tolerance for odd $k$,
+and whether a similar phenomenon can be proved for even $k$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-09-09 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Packing $K_r$s in bounded degree graphs</title>
+  <guid>http://arxiv.org/abs/2209.03684</guid>
+  <link>http://arxiv.org/abs/2209.03684</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+McKay_M/0/1/0/all/0/1&quot;&gt;Michael McKay&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Manlove_D/0/1/0/all/0/1&quot;&gt;David Manlove&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of finding a maximum-cardinality set of $r$-cliques in
+an undirected graph of fixed maximum degree $\Delta$, subject to the cliques in
+that set being either vertex-disjoint or edge-disjoint. It is known for $r=3$
+that the vertex-disjoint (edge-disjoint) problem is solvable in linear time if
+$\Delta=3$ ($\Delta=4$) but APX-hard if $\Delta \geq 4$ ($\Delta \geq 5$).
+&lt;/p&gt;
+&lt;p&gt;We generalise these results to an arbitrary but fixed $r \geq 3$, and provide
+a complete complexity classification for both the vertex- and edge-disjoint
+variants in graphs of maximum degree $\Delta$.
+&lt;/p&gt;
+&lt;p&gt;Specifically, we show that the vertex-disjoint problem is solvable in linear
+time if $\Delta &amp;lt; 3r/2 - 1$, solvable in polynomial time if $\Delta &amp;lt; 5r/3 -
+1$, and APX-hard if $\Delta \geq \lceil 5r/3 \rceil - 1$. We also show that if
+$r\geq 6$ then the above implications also hold for the edge-disjoint problem.
+If $r \leq 5$, then the edge-disjoint problem is solvable in linear time if
+$\Delta &amp;lt; 3r/2 - 1$, solvable in polynomial time if $\Delta \leq 2r - 2$, and
+APX-hard if $\Delta &amp;gt; 2r - 2$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-09-09 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Routing permutations on spectral expanders via matchings</title>
+  <guid>http://arxiv.org/abs/2209.03838</guid>
+  <link>http://arxiv.org/abs/2209.03838</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Nenadov_R/0/1/0/all/0/1&quot;&gt;Rajko Nenadov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the following matching-based routing problem. Initially, each
+vertex $v$ of a connected graph $G$ is occupied by a pebble which has a unique
+destination $\pi(v)$. In each round the pebbles across the edges of a selected
+matching in $G$ are swapped, and the goal is to route each pebble to its
+destination vertex in as few rounds as possible. We show that if $G$ is a
+sufficiently strong $d$-regular spectral expander then any permutation $\pi$
+can be achieved in $O(\log n)$ rounds. This is optimal for constant $d$ and
+resolves a problem of Alon, Chung, and Graham [SIAM J. Discrete Math., 7
+(1994), pp. 516--530].
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-09-09 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Opponent Indifference in Rating Systems: A Theoretical Case for Sonas</title>
+  <guid>http://arxiv.org/abs/2209.03950</guid>
+  <link>http://arxiv.org/abs/2209.03950</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bodwin_G/0/1/0/all/0/1&quot;&gt;Greg Bodwin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_F/0/1/0/all/0/1&quot;&gt;Forest Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In competitive games, it is common to assign each player a real number rating
+signifying their skill level. A rating system is a procedure by which player
+ratings are adjusted upwards each time they win, or downwards each time they
+lose.
+&lt;/p&gt;
+&lt;p&gt;Many matchmaking systems give players some control over their opponent&#39;s
+rating; for example, a player might be able to selectively initiate matches
+against opponents whose ratings are publicly visible, or abort a match without
+penalty before it begins but after glimpsing their opponent&#39;s rating. It is
+natural to ask whether one can design a rating system that does not incentivize
+a rating-maximizing player to act strategically, seeking matches against
+opponents of one rating over another. We show the following:
+&lt;/p&gt;
+&lt;p&gt;- The full version of this &quot;opponent indifference&quot; property is unfortunately
+too strong to be feasible. Although it is satisfied by some rating systems,
+these systems lack certain desirable expressiveness properties, suggesting that
+they are not suitable to capture most games of interest.
+&lt;/p&gt;
+&lt;p&gt;- However, there is a natural relaxation, roughly requiring indifference
+between any two opponents who are ``reasonably evenly matched&#39;&#39; with the
+choosing player. We prove that this relaxed variant of opponent indifference,
+which we call $P$ opponent indifference, is viable. In fact, a certain strong
+version of $P$ opponent indifference precisely characterizes the rating system
+Sonas, which was originally proposed for its empirical predictive accuracy on
+the outcomes of high-level chess matches.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-09-09 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Concentration bounds for quantum states and limitations on the QAOA from polynomial approximations</title>
   <guid>http://arxiv.org/abs/2209.02715</guid>
   <link>http://arxiv.org/abs/2209.02715</link>
@@ -1144,201 +1314,6 @@ Our technique builds on the earlier list-decodable codes of Guruswami and Smith,
   </description>
   <pubDate>2022-08-22 17:10:00 UTC</pubDate>
   <author>David Eppstein</author>
-</item>
-
-<item>
-  <title>20 Years of the Computational Complexity Weblog</title>
-  <guid>tag:blogger.com,1999:blog-3722233.post-5383207883567807338</guid>
-  <link>http://blog.computationalcomplexity.org/2022/08/20-years-of-computational-complexity.html</link>
-  <description>
-    &lt;p&gt;&lt;/p&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6GDCODRrARsTAby27oCbx62tuXwL99PLAQoF3EAnHJ_VYJHxBeQBEW4WDsti4OYckqE0f6i3_pnSOpEoApn4H-Wxdn3XoZzhM5W-xjKtAdVcWE3-61i-McxSL6kosop34uFHoMflbs2O4lHftdkjoW0SCudrJf3pC3YtQY7J1nmhUnc9VBQ/s1024/DALL%C2%B7E%202022-08-22%2008.00.34%20-%20birthday%20cake%20with%20green%20frosting%20and%2020%20candles.png&quot; imageanchor=&quot;1&quot;&gt;&lt;img alt=&quot;Birthday Cake&quot; border=&quot;0&quot; data-original-height=&quot;1024&quot; data-original-width=&quot;1024&quot; height=&quot;200&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6GDCODRrARsTAby27oCbx62tuXwL99PLAQoF3EAnHJ_VYJHxBeQBEW4WDsti4OYckqE0f6i3_pnSOpEoApn4H-Wxdn3XoZzhM5W-xjKtAdVcWE3-61i-McxSL6kosop34uFHoMflbs2O4lHftdkjoW0SCudrJf3pC3YtQY7J1nmhUnc9VBQ/w200-h200/DALL%C2%B7E%202022-08-22%2008.00.34%20-%20birthday%20cake%20with%20green%20frosting%20and%2020%20candles.png&quot; title=&quot;Dall-E baked us a cake&quot; width=&quot;200&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;I&amp;nbsp;&lt;a href=&quot;https://blog.computationalcomplexity.org/2002/08/this-is-my-complexity-web-log.html&quot;&gt;first posted&lt;/a&gt;&amp;nbsp;on&amp;nbsp;this blog twenty years ago today, still the oldest and longest running weblog in theoretical computer science, possibly in all of computer science. In those twenty years we&#39;ve had nearly 3000 posts and over 23,000 comments and 10,000,000 page views. Bill Gasarch &lt;a href=&quot;https://blog.computationalcomplexity.org/2007/03/complexity-blog-lives.html&quot;&gt;joined me&lt;/a&gt; officially as a co-blogger over 15 years ago on March 30, 2007.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;We&#39;ve seen &lt;a href=&quot;https://blog.computationalcomplexity.org/2014/12/favorite-theorems-recap.html&quot;&gt;major results in computational complexity&lt;/a&gt; but the biggest challenges remain, in particular major separations of complexity classes. We&#39;ve also had a front row seat to a computing revolution with&amp;nbsp; the growth of cloud and mobile computing, social networks connecting us for better or for worse, and incredible successes of machine learning. It&#39;s almost as though we&#39;ve been handed an oracle that gives us much of the goodness of P = NP while leaving cryptography intact.&amp;nbsp;&lt;/p&gt;&lt;p&gt;What will the next twenty years bring? We&#39;ll be watching, posting and &lt;a href=&quot;https://twitter.com/fortnow&quot;&gt;tweeting&lt;/a&gt;. Hope you keep reading and commenting.&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </description>
-  <pubDate>2022-08-22 13:04:00 UTC</pubDate>
-  <author>Computational Complexity</author>
-</item>
-
-<item>
-  <title>A Theoretical Question About UAPs</title>
-  <guid>https://rjlipton.wpcomstaging.com/?p=20310</guid>
-  <link>https://rjlipton.wpcomstaging.com/2022/08/20/a-theoretical-question-about-uaps/</link>
-  <description>
-    &lt;p&gt;
-&lt;font color=&quot;#0044cc&quot;&gt;&lt;br /&gt;
-&lt;em&gt;What should be the Bayesian prior for a new NASA study?&lt;/em&gt;&lt;br /&gt;
-&lt;font color=&quot;#000000&quot;&gt;&lt;/p&gt;
-&lt;table class=&quot;image alignright&quot;&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;
-&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/08/20/a-theoretical-question-about-uaps/spergelinterstellar/&quot; rel=&quot;attachment wp-att-20313&quot;&gt;&lt;img data-attachment-id=&quot;20313&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2022/08/20/a-theoretical-question-about-uaps/spergelinterstellar/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelInterstellar.png?fit=206%2C261&amp;amp;ssl=1&quot; data-orig-size=&quot;206,261&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;SpergelInterstellar&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelInterstellar.png?fit=206%2C261&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelInterstellar.png?fit=206%2C261&amp;amp;ssl=1&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelInterstellar.png?resize=155%2C195&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;155&quot; height=&quot;195&quot; class=&quot;alignright wp-image-20313&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;caption alignright&quot;&gt;&lt;font size=&quot;-2&quot;&gt;Crop from &lt;em&gt;&amp;#8216;Interstellar&amp;#8217;&lt;/em&gt; &lt;a href=&quot;https://paw.princeton.edu/article/paw-goes-movies-%E2%80%98interstellar-professor-david-spergel-82&quot;&gt;discussion&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;
-David Spergel is a physics professor emeritus of Princeton University who now heads the James Simons Foundation. He shared the 2010 Shaw Prize and 2018 Breakthrough Prize with Charles Bennett of Johns Hopkins and others of the team on the Wilkinson Microwave Anisotropy Probe (&lt;a href=&quot;https://map.gsfc.nasa.gov/&quot;&gt;WMAP&lt;/a&gt;), whose mapping of fluctuations in the cosmic microwave background has channeled numerous physical theories. He has recently been &lt;a href=&quot;https://www.washingtonpost.com/technology/2022/06/09/nasa-ufo-uap-extraterrestrial-space/&quot;&gt;appointed&lt;/a&gt; to lead a new NASA &lt;a href=&quot;https://www.scientificamerican.com/article/with-new-study-nasa-seeks-the-science-behind-ufos/&quot;&gt;study&lt;/a&gt; on unidentified aerial phenomena (&lt;a href=&quot;https://en.wikipedia.org/wiki/Unidentified_flying_object&quot;&gt;UAP&lt;/a&gt;s, previously called UFOs).&lt;/p&gt;
-&lt;p&gt;
-Today we wish him &lt;a href=&quot;https://en.wikipedia.org/wiki/Auguri_professore&quot;&gt;&lt;em&gt;auguri&lt;/em&gt;&lt;/a&gt; on the project and pose a theoretical question on what its baseline should be.&lt;br /&gt;
-&lt;span id=&quot;more-20310&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-I knew David both at Princeton and at Oxford. He was one class after me, 1982 to my 1981. At Oxford in 1983, he worked for a year under Professor James Binney, a Fellow of my college (Merton). David and I played squash at Oxford once or twice, also with a mutual friend. I don&amp;#8217;t remember what, if any, physics or mathematics we discussed.&lt;/p&gt;
-&lt;p&gt;
-David attracted my attention in 2014 when he was one of the first &lt;a href=&quot;https://www.quantamagazine.org/a-bold-critic-of-the-big-bangs-smoking-gun-20140703/&quot;&gt;critics&lt;/a&gt; of the &lt;a href=&quot;https://www.nature.com/articles/nature.2015.16830&quot;&gt;claim&lt;/a&gt; by the &lt;a href=&quot;https://en.wikipedia.org/wiki/BICEP_and_Keck_Array#BICEP2&quot;&gt;BICEP2&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Planck_(spacecraft)&quot;&gt;Planck&lt;/a&gt; probe teams to have proved the existence of gravitational waves with &amp;#8220;five sigma&amp;#8221; confidence. I was concerned because in myriad communications with the International Chess Federation (FIDE) I have cited &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%7B5%5Csigma%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{5&amp;#92;sigma}&quot; class=&quot;latex&quot; /&gt; as the agreed scientific standard of statistical proof. Yet here was a case of a &amp;#8220;five-sigma&amp;#8221; claim being false for reasons of incorrect modeling, in this case overlooking effects of interstellar dust. &lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; UAPs and von Neumann Probes &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-David has on his Princeton &lt;a href=&quot;https://www.astro.princeton.edu/~dns/&quot;&gt;webpage&lt;/a&gt; a photo that is heartening for us to see:&lt;/p&gt;
-&lt;p&gt;&lt;P&gt;&lt;br /&gt;
-&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/08/20/a-theoretical-question-about-uaps/spergeltheory/&quot; rel=&quot;attachment wp-att-20314&quot;&gt;&lt;img data-attachment-id=&quot;20314&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2022/08/20/a-theoretical-question-about-uaps/spergeltheory/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelTheory.jpg?fit=640%2C480&amp;amp;ssl=1&quot; data-orig-size=&quot;640,480&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;4.9&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;Canon PowerShot SD500&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1166654599&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;23.1&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0.04&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;SpergelTheory&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelTheory.jpg?fit=300%2C225&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelTheory.jpg?fit=600%2C450&amp;amp;ssl=1&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelTheory.jpg?resize=384%2C288&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;384&quot; height=&quot;288&quot; class=&quot;aligncenter wp-image-20314&quot; srcset=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelTheory.jpg?w=640&amp;amp;ssl=1 640w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelTheory.jpg?resize=300%2C225&amp;amp;ssl=1 300w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelTheory.jpg?resize=400%2C300&amp;amp;ssl=1 400w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/08/SpergelTheory.jpg?resize=200%2C150&amp;amp;ssl=1 200w&quot; sizes=&quot;(max-width: 384px) 100vw, 384px&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;P&gt;&lt;br /&gt;
-In this spirit, we pose a theoretical question about the UAP/UFO subject. I must confess that despite my long childhood interest in UFOs stemming from my father&amp;#8217;s amateur &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2011/05/18/my-father-robert-james-regan/&quot;&gt;studies&lt;/a&gt;, I have been too busy these past two years to do more than follow the recent hearings about them at the level of indirect &lt;a href=&quot;https://marginalrevolution.com/?s=UAP&quot;&gt;coverage&lt;/a&gt; on the &lt;em&gt;Marginal Revolution&lt;/em&gt; blog. &lt;/p&gt;
-&lt;p&gt;
-The center of gravity of the latest observations by pilots and other military personnel has not been &amp;#8220;close encounters&amp;#8221; or even viewings of formations of saucer-shaped large craft. Instead it has been visual and sensory recordings of relatively small objects moving &lt;a href=&quot;https://www.livescience.com/ufo-hearing-metallic-hypersonic-flying-object&quot;&gt;over&lt;/a&gt; ocean waters at hypersonic speeds and also &lt;a href=&quot;https://www.history.com/news/ufo-sightings-speed-appearance-movement&quot;&gt;under&lt;/a&gt; water at speeds gauged up to 70 knots.&lt;/p&gt;
-&lt;p&gt;
-Before his terminal cancer in the 1950s, John von Neumann drafted a &lt;a href=&quot;https://archive.org/details/theoryofselfrepr00vonn_0&quot;&gt;book&lt;/a&gt;, &lt;em&gt;Theory of Self-Reproducing Automata&lt;/em&gt;, which was completed in 1966 by William Burks. It described the physical representation of autonomous self-reproducing &lt;a href=&quot;https://en.wikipedia.org/wiki/Self-replicating_spacecraft#Von_Neumann_probes&quot;&gt;probes&lt;/a&gt; capable of interstellar travel. An avenue toward a working model was &lt;a href=&quot;http://www.rfreitas.com/Astro/ReproJBISJuly1980.htm&quot;&gt;detailed&lt;/a&gt; as long ago as 1980, and a long current study is discussed &lt;a href=&quot;https://www.centauri-dreams.org/2022/07/12/probing-the-galaxy-self-reproduction-and-its-consequences/&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;
-These probes avoid constraints on the duration of space travel by biological beings. Humanity has already sent un-crewed craft out into space. It is natural that we might aim probes toward exoplanets long before we can consider sending human travelers. We might achieve a radius of some tens of light years for such missions&amp;#8212;maybe minus the self-replicating part&amp;#8212;in the not too distant future. &lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Our Question &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-Flipping this logic around leads straightaway to our question:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; What should the &lt;a href=&quot;https://en.wikipedia.org/wiki/Prior_probability&quot;&gt;Bayesian prior&lt;/a&gt; be for expectations about UAPs? Should it have highest weight on their being wholly terrestrial, or on their being un-crewed probes from other civilizations? &lt;/em&gt;
-&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;p&gt;
-We note that the &lt;a href=&quot;https://www.space.com/nasa-unidentified-aerial-phenomena-science-panel&quot;&gt;initial&lt;/a&gt; &lt;a href=&quot;https://www.cnet.com/science/space/nasa-to-launch-scientific-study-of-ufos/&quot;&gt;communications&lt;/a&gt; from NASA were quick to say that `there is no evidence that the phenomena are extra-terrestrial in origin.&amp;#8217; But we are not talking about the stage of evidence. We are asking theoretically, in the same vein as longtime discussion of the &lt;a href=&quot;https://www.cnet.com/science/space/nasa-to-launch-scientific-study-of-ufos/&quot;&gt;Drake Equation&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Fermi_paradox&quot;&gt;Fermi Paradox&lt;/a&gt;: What is the most likely status on &lt;em&gt;a-priori&lt;/em&gt; grounds, based on what we have learned about space and technology over the past century?&lt;/p&gt;
-&lt;p&gt;
-The baseline is also relevant to the drift of a companion &lt;a href=&quot;https://www.scientificamerican.com/article/nasa-rsquo-s-ufo-study-isn-rsquo-t-really-looking-for-space-aliens/&quot;&gt;article&lt;/a&gt; in &lt;em&gt;Scientific American&lt;/em&gt; titled, &amp;#8220;NASA’s UFO Study Isn’t Really Looking for Space Aliens.&amp;#8221; The search for terrestrial explanations of these phenomena is sharpened if it must bear some prior burden of proof.&lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Open Problems &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-What do you think of our question? There has been &lt;a href=&quot;https://forum.effectivealtruism.org/posts/Y7hX9T6eA7kQQNaH5/an-ea-case-for-interest-in-uaps-ufos-and-an-idea-as-to-what&quot;&gt;some&lt;/a&gt; &lt;a href=&quot;https://theline.substack.com/p/robert-jago-if-aliens-have-really&quot;&gt;discussion&lt;/a&gt; of von Neumann probes as UAPs, &lt;a href=&quot;https://www.universetoday.com/154949/why-would-an-alien-civilization-send-out-von-neumann-probes-lots-of-reasons-says-a-new-study/&quot;&gt;recently&lt;/a&gt; and &lt;a href=&quot;https://forum.cosmoquest.org/forum/science-and-space/life-in-space/77744-&quot;&gt;years ago&lt;/a&gt;, but they are absent from Robin Hanson&amp;#8217;s discussion of UAP priors &lt;a href=&quot;https://www.overcomingbias.com/2021/06/on-ufo-as-aliens-priors.html&quot;&gt;a year ago&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;
-&lt;b&gt;Update 8/23:&lt;/b&gt; An &lt;a href=&quot;https://thehill.com/opinion/national-security/3610916-congress-implies-ufos-have-non-human-origins/&quot;&gt;article&lt;/a&gt; yesterday on TheHill.com speaks directly to shifting the prior.  It also says the acronym has been &amp;#8220;re-branded&amp;#8221; as standing for &amp;#8220;unidentified aerospace-undersea phenomena&amp;#8221; (adding &amp;#8220;undersea&amp;#8221;).  Hat-tip to &lt;a href=&quot;https://marginalrevolution.com/marginalrevolution/2022/08/tuesday-assorted-links-379.html&quot;&gt;this item&lt;/a&gt; at Marginal Revolution.&lt;/p&gt;
-&lt;p&gt;
-&lt;b&gt;Update 9/2:&lt;/b&gt; This 9/1 &lt;a href=&quot;https://thedebrief.org/the-paradox-of-fermis-paradox/&quot;&gt;long piece&lt;/a&gt; by former Deputy Asst. Secretary of Defense &lt;a href=&quot;https://en.wikipedia.org/wiki/Christopher_Mellon&quot;&gt;Christopher Mellon&lt;/a&gt; in &lt;a href=&quot;https://thedebrief.org/&quot;&gt;The Debrief&lt;/a&gt; puts the main point crisply.  First on priors: &amp;#8220;Although I support the SETI project, it seems far more likely extraterrestrial civilizations would dispatch probes rather than blindly broadcasting radio signals into space.&amp;#8221; Then getting into evidence, &amp;#8220;Why are so few scientists willing to consider UAP as potential alien probes when there is such extensive evidence of mysterious craft in our skies demonstrating capabilities otherwise found only in science fiction?&amp;#8221;  After his evidence unroll&amp;#8212;including a section titled &lt;b&gt;Theory and Observation&lt;/b&gt;&amp;#8212;note how his conclusion turns the Fermi &amp;#8220;where is everybody?&amp;#8221; question back to us and our priors.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By KWRegan&lt;/p&gt;
-  </description>
-  <pubDate>2022-08-20 04:27:31 UTC</pubDate>
-  <author>Richard Lipton</author>
-</item>
-
-<item>
-  <title>Alexander A. Gaifullin: Many  27-vertex Triangulations of Manifolds Like the Octonionic Projective Plane (Not Even One Was Known Before).</title>
-  <guid>http://gilkalai.wordpress.com/?p=23229</guid>
-  <link>https://gilkalai.wordpress.com/2022/08/19/alexander-a-gaifullin-many-27-vertex-triangulations-of-manifolds-like-the-octonionic-projective-plane-not-even-one-was-known-before/</link>
-  <description>
-    &lt;p&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;23247&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2022/08/19/alexander-a-gaifullin-many-27-vertex-triangulations-of-manifolds-like-the-octonionic-projective-plane-not-even-one-was-known-before/ggkb/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2022/08/ggkb.png&quot; data-orig-size=&quot;1920,1080&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;ggkb&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2022/08/ggkb.png?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2022/08/ggkb.png?w=640&quot; class=&quot;alignnone size-full wp-image-23247&quot; src=&quot;https://gilkalai.files.wordpress.com/2022/08/ggkb.png&quot; alt=&quot;ggkb&quot; width=&quot;1920&quot; height=&quot;1080&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2022/08/ggkb.png 1920w, https://gilkalai.files.wordpress.com/2022/08/ggkb.png?w=150&amp;amp;h=84 150w, https://gilkalai.files.wordpress.com/2022/08/ggkb.png?w=300&amp;amp;h=169 300w, https://gilkalai.files.wordpress.com/2022/08/ggkb.png?w=768&amp;amp;h=432 768w, https://gilkalai.files.wordpress.com/2022/08/ggkb.png?w=1024&amp;amp;h=576 1024w&quot; sizes=&quot;(max-width: 1920px) 100vw, 1920px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color:#ff0000;&quot;&gt;From top left clockwise: Alexander Gaifullin, Denis Gorodkov, Ulrich Brehm, Wolfgang Kühnel &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Here is the paper:&lt;/p&gt;
-&lt;p&gt;Alexander A. Gaifullin: &lt;a href=&quot;https://arxiv.org/abs/2207.08507&quot;&gt;634 vertex-transitive and more than 10¹⁰³ non-vertex-transitive 27-vertex triangulations of manifolds like the octonionic projective plane&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Abstract with annotation:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;In 1987 Brehm and Kühnel showed that any combinatorial &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d&quot; class=&quot;latex&quot; /&gt;-manifold with less than &lt;img src=&quot;https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;3d/2+3&quot; class=&quot;latex&quot; /&gt; vertices is PL homeomorphic to the sphere and any combinatorial &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d&quot; class=&quot;latex&quot; /&gt;-manifold with exactly &lt;img src=&quot;https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;3d/2+3&quot; class=&quot;latex&quot; /&gt; vertices is PL homeomorphic to either the sphere or a manifold like a projective plane in the sense of Eells and Kuiper. The latter possibility may occur for &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d+%5Cin+%5C%7B2%2C4%2C8%2C16%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d+%5Cin+%5C%7B2%2C4%2C8%2C16%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d+%5Cin+%5C%7B2%2C4%2C8%2C16%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d &amp;#92;in &amp;#92;{2,4,8,16&amp;#92;}&quot; class=&quot;latex&quot; /&gt; only.&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color:#ff0000;&quot;&gt;This is a lovely theorem and the proof is based on Morse theoretic ideas, The study was motivated by the theory of tight embeddings of manifolds in differential geometry.  &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;There exist a unique 6-vertex triangulation of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+RP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+RP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+RP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathbb RP^2&quot; class=&quot;latex&quot; /&gt;,&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color:#ff0000;&quot;&gt;This is a wonderful object obtained by identifying opposite faces of an icosahedron.&lt;/span&gt; &lt;/p&gt;
-&lt;p&gt;a unique 9-vertex triangulation of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+CP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+CP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+CP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathbb CP^2&quot; class=&quot;latex&quot; /&gt;,&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color:#ff0000;&quot;&gt;This is an amazing mathematical construction by Kühnel and Lassman from 1983. &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;and at least three 15-vertex triangulations of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+HP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+HP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+HP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathbb HP^2&quot; class=&quot;latex&quot; /&gt;. (We mentioned it &lt;a href=&quot;https://gilkalai.wordpress.com/2020/11/14/to-cheer-you-up-in-difficult-times-13-triangulating-real-projective-spaces-with-subexponentially-many-vertices/&quot;&gt;in this post&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color:#ff0000;&quot;&gt;Those were constructed in 1992 by Brehm and Kühnel. Gorodkov proved in 2019 that the Brehm–Kühnel complexes are indeed PL homeomorphic to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+HP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+HP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+HP%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathbb HP^2&quot; class=&quot;latex&quot; /&gt;.   &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;However, until now, the question of whether there exists a 27-vertex triangulation of a manifold like the octonionic projective plane has remained open. We solve this problem by constructing a lot of examples of such triangulations. Namely, we construct 634 vertex-transitive 27-vertex combinatorial 16-manifolds like the octonionic projective plane. Four of them have symmetry group &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C_3%5E3%5Crtimes+C_%7B13%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C_3%5E3%5Crtimes+C_%7B13%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C_3%5E3%5Crtimes+C_%7B13%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C_3^3&amp;#92;rtimes C_{13}&quot; class=&quot;latex&quot; /&gt; of order 351, and the other 630 have symmetry group &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C_3%5E3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C_3%5E3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C_3%5E3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C_3^3&quot; class=&quot;latex&quot; /&gt; of order 27. Further, we construct more than &lt;img src=&quot;https://s0.wp.com/latex.php?latex=10%5E%7B103%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=10%5E%7B103%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=10%5E%7B103%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;10^{103}&quot; class=&quot;latex&quot; /&gt; non-vertex-transitive 27-vertex combinatorial 16-manifolds like the octonionic projective plane. Most of them have trivial symmetry group, but there are also symmetry groups &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C_3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C_3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C_3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C_3&quot; class=&quot;latex&quot; /&gt;, &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C_3%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C_3%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C_3%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C_3^2&quot; class=&quot;latex&quot; /&gt;, and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C_%7B13%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C_%7B13%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C_%7B13%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C_{13}&quot; class=&quot;latex&quot; /&gt;. We conjecture that all the triangulations constructed are PL homeomorphic to the octonionic projective plane &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+O+P%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+O+P%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+O+P%5E2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathbb O P^2&quot; class=&quot;latex&quot; /&gt;. Nevertheless, we have no proof of this fact so far.&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color:#ff0000;&quot;&gt;(Actually one can even expect that in the Brehm-Kühnel theorems all triangulations of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d&quot; class=&quot;latex&quot; /&gt; manifolds with &lt;img src=&quot;https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;3d/2+3&quot; class=&quot;latex&quot; /&gt; vertices are PL projective planes over the Reals, Quaternions or Octanions.) &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color:#0000ff;&quot;&gt;I heard about the new result from Wolfgang Kühnel who wrote me: &amp;#8220;I&amp;#8217;m quite surprised that an object with &lt;/span&gt;&lt;span style=&quot;color:#0000ff;&quot;&gt;such a huge &lt;em&gt;f&lt;/em&gt;-vector can be constructed at all.&amp;#8221;&lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Diversion: Moore Graphs of girth five&lt;/h2&gt;
-&lt;p&gt;The seek for a triangulation of a manifold like a projective plane with &lt;img src=&quot;https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=3d%2F2%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;3d/2+3&quot; class=&quot;latex&quot; /&gt; vertices (now completed by Gaifullin) reminded me of the situation of Moore graphs of girth five. A Moore graph is a regular &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d&quot; class=&quot;latex&quot; /&gt;-graph with diameter &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k&quot; class=&quot;latex&quot; /&gt;, and girth &lt;img src=&quot;https://s0.wp.com/latex.php?latex=2k%2B1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=2k%2B1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=2k%2B1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;2k+1&quot; class=&quot;latex&quot; /&gt;. (It must have &lt;img src=&quot;https://s0.wp.com/latex.php?latex=1%2Bd+%5Csum_%7Bk%3D0%7D%5E%7Bk-1%7D%28d-1%29%5Ek&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=1%2Bd+%5Csum_%7Bk%3D0%7D%5E%7Bk-1%7D%28d-1%29%5Ek&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=1%2Bd+%5Csum_%7Bk%3D0%7D%5E%7Bk-1%7D%28d-1%29%5Ek&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;1+d &amp;#92;sum_{k=0}^{k-1}(d-1)^k&quot; class=&quot;latex&quot; /&gt; vertices.)&lt;/p&gt;
-&lt;p&gt;The &lt;b&gt;Hoffman–Singleton theorem&lt;/b&gt; states that any Moore graph with girth 5 must have degree 2, 3, 7, or 57.  There are known examples for degrees 2, 3 and 7, and the existence of a Moore graph of girth 5 and degree 57 is one of the great mysteries of mathematics.&lt;/p&gt;
-&lt;h2&gt;Neighborly &lt;img src=&quot;https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;2d&quot; class=&quot;latex&quot; /&gt;-manifolds&lt;/h2&gt;
-&lt;p&gt;We can ask, more generally, about &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%28d%2B1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%28d%2B1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%28d%2B1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;(d+1)&quot; class=&quot;latex&quot; /&gt;-neighborly triangulations of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;2d&quot; class=&quot;latex&quot; /&gt; manifolds, namely triangulations for which every &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d%2B1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d%2B1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d%2B1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d+1&quot; class=&quot;latex&quot; /&gt; vertices form a face. (Triangulations of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=2d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;2d&quot; class=&quot;latex&quot; /&gt;-manifolds with &lt;img src=&quot;https://s0.wp.com/latex.php?latex=3d%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=3d%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=3d%2B3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;3d+3&quot; class=&quot;latex&quot; /&gt; vertices must be &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%28d%2B1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%28d%2B1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%28d%2B1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;(d+1)&quot; class=&quot;latex&quot; /&gt;-neighborly.) For &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d%3D1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d%3D1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d%3D1&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d=1&quot; class=&quot;latex&quot; /&gt; this is essentially the &lt;a href=&quot;https://en.wikipedia.org/wiki/Heawood_conjecture&quot;&gt;Heawood conjecture&lt;/a&gt;.  Ringel and Youngs showed, that 2-neighborly triangulation exists for all surfaces except for the Klein bottle. In dimensions greater than 2 only a small number of examples are known. Beside the triangulations that we talked about above, I am aware of two additional examples:  In dimension 4: 16-vertex K3 surface (Casella-Kühnel 2001);  In dimension 6: 13-vertex triangulations of  &lt;img src=&quot;https://s0.wp.com/latex.php?latex=S%5E3+%5Ctimes+S%5E3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=S%5E3+%5Ctimes+S%5E3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=S%5E3+%5Ctimes+S%5E3&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;S^3 &amp;#92;times S^3&quot; class=&quot;latex&quot; /&gt; (Frank H.Lutz).&lt;/p&gt;
-&lt;p&gt;Neighborliness is related to upper bound conjectures (that comes in various strengths) proposed by Kühnel in 1993.  Here below is a lecture by Kuhnel in a birthday conference honoring the Indian mathematician Basudeb Datta. Kühnel&amp;#8217;s conjecture  for the maximum value of the Euler characteristic of a &lt;span id=&quot;MathJax-Element-1-Frame&quot; class=&quot;MathJax&quot;&gt;&lt;span id=&quot;MathJax-Span-1&quot; class=&quot;math&quot;&gt;&lt;span id=&quot;MathJax-Span-2&quot; class=&quot;mrow&quot;&gt;&lt;span id=&quot;MathJax-Span-3&quot; class=&quot;mn&quot;&gt;2&lt;/span&gt;&lt;span id=&quot;MathJax-Span-4&quot; class=&quot;mi&quot;&gt;k&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;-dimensional simplicial manifold on $latex &lt;span id=&quot;MathJax-Element-2-Frame&quot; class=&quot;MathJax&quot;&gt;&lt;span id=&quot;MathJax-Span-5&quot; class=&quot;math&quot;&gt;&lt;span id=&quot;MathJax-Span-6&quot; class=&quot;mrow&quot;&gt;&lt;span id=&quot;MathJax-Span-7&quot; class=&quot;mi&quot;&gt;n$ vertices&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s0.wp.com/latex.php?latex=%7B%7Bn-k-2%7D+%5Cchoose+%7Bk%2B1%7D%7D+%5Cle+%28-1%29%5Ek+%7B%7B2k%2B1%7D+%5Cchoose+%7Bk%2B1%7D%7D+%28%5Cchi+%28M%29-2%29%2C&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%7B%7Bn-k-2%7D+%5Cchoose+%7Bk%2B1%7D%7D+%5Cle+%28-1%29%5Ek+%7B%7B2k%2B1%7D+%5Cchoose+%7Bk%2B1%7D%7D+%28%5Cchi+%28M%29-2%29%2C&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%7Bn-k-2%7D+%5Cchoose+%7Bk%2B1%7D%7D+%5Cle+%28-1%29%5Ek+%7B%7B2k%2B1%7D+%5Cchoose+%7Bk%2B1%7D%7D+%28%5Cchi+%28M%29-2%29%2C&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;{{n-k-2} &amp;#92;choose {k+1}} &amp;#92;le (-1)^k {{2k+1} &amp;#92;choose {k+1}} (&amp;#92;chi (M)-2),&quot; class=&quot;latex&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/0711.0783&quot;&gt;was settled&lt;/a&gt; by Isabella Novik and Ed Swartz in 2009. Novik and Swartz (for the orientable case) and Satoshi Murai (for the general case) also proved some strong forms of Kühnel&amp;#8217;s conjecture conditioned on the Lefschetz property for the links; the Lefschetz property was proved by Karim Adiprasito in his &lt;img src=&quot;https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;g&quot; class=&quot;latex&quot; /&gt;-conjecture&lt;a href=&quot;https://arxiv.org/abs/1812.10454&quot;&gt; paper&lt;/a&gt;. (Things are moving along nicely in the &lt;img src=&quot;https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;g&quot; class=&quot;latex&quot; /&gt;-conjecture front (for older posts see &lt;a href=&quot;https://gilkalai.wordpress.com/2021/01/21/amazing-simpler-and-more-general-proofs-for-the-g-theorem-by-stavros-argyrios-papadakis-and-vasiliki-petrotou-and-by-karim-adiprasito-stavros-argyrios-papadakis-and-vasiliki-petrotou/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://gilkalai.wordpress.com/2018/12/25/amazing-karim-adiprasito-proved-the-g-conjecture-for-spheres/&quot;&gt;here&lt;/a&gt;); I hope to write about it soon and in the meanwhile, here are two posts (&lt;a href=&quot;https://adiprasito.wordpress.com/2022/07/10/sofia-and-the-holy-trinity/&quot;&gt;I&lt;/a&gt;,&lt;a href=&quot;https://adiprasito.wordpress.com/2022/07/28/anisotropy-in-arbitrary-characteristic-lefschetz-beyond-positivity-moment-curves-and-lattice-polytopes-part-2/&quot;&gt;II&lt;/a&gt;) by Karim.)&lt;/p&gt;
-&lt;p&gt;&lt;iframe class=&quot;youtube-player&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/gAb4091UNIE?version=3&amp;#038;rel=1&amp;#038;showsearch=0&amp;#038;showinfo=1&amp;#038;iv_load_policy=1&amp;#038;fs=1&amp;#038;hl=en&amp;#038;autohide=2&amp;#038;wmode=transparent&quot; allowfullscreen=&quot;true&quot; style=&quot;border:0;&quot; sandbox=&quot;allow-scripts allow-same-origin allow-popups allow-presentation&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;h2&gt; &lt;/h2&gt;
-&lt;h3&gt;For a wider view of upper bound theorems watch the following ICM22 lecture by Isabella Novik.&lt;/h3&gt;
-&lt;p&gt;&lt;iframe class=&quot;youtube-player&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/9Az0RM8qook?version=3&amp;#038;rel=1&amp;#038;showsearch=0&amp;#038;showinfo=1&amp;#038;iv_load_policy=1&amp;#038;fs=1&amp;#038;hl=en&amp;#038;autohide=2&amp;#038;wmode=transparent&quot; allowfullscreen=&quot;true&quot; style=&quot;border:0;&quot; sandbox=&quot;allow-scripts allow-same-origin allow-popups allow-presentation&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;h3&gt;Polyhedral and more general complexes: my conjecture.&lt;/h3&gt;
-&lt;p&gt;I also posed a related conjecture to the 1987 Brehm and Kühnel&amp;#8217;s theorem. (Related to the &lt;a href=&quot;https://gilkalai.wordpress.com/2021/01/10/open-problem-session-of-huji-combsem-problem-5-gil-kalai-the-3%e1%b5%88-problem/&quot; rel=&quot;bookmark&quot;&gt;3ᵈ problem&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Conjecture:&lt;/strong&gt; A polyhedral &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d&quot; class=&quot;latex&quot; /&gt;-manifold (more generally, a strongly regular CW manifold) in dimension &lt;em&gt;d&lt;/em&gt; which is not a sphere has at least &lt;img class=&quot;latex&quot; src=&quot;https://s0.wp.com/latex.php?latex=2%5E%7B%283d%2B4%29%2F2%7D&amp;amp;bg=ffffff&amp;amp;fg=333333&amp;amp;s=0&amp;amp;c=20201002&quot; alt=&quot;2^{(3d+4)/2}&quot; /&gt; faces. (Including the empty face.)&lt;/p&gt;
-&lt;p&gt;We can expect that extremal cases are only in dimensions 2, 4, 8, and 16 and are projective plane like or even genuinly PL projective planes over the reals, complex, quaternions or octonions.&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
-  </description>
-  <pubDate>2022-08-19 11:37:49 UTC</pubDate>
-  <author>Gil Kalai</author>
-</item>
-
-<item>
-  <title>Conference Modality</title>
-  <guid>tag:blogger.com,1999:blog-3722233.post-483004697033875840</guid>
-  <link>http://blog.computationalcomplexity.org/2022/08/conference-modality.html</link>
-  <description>
-    &lt;p&gt;We have had an almost normal summer conference season, for some sense of normal. At one of those conferences I participated in an hybrid conversation about whether the conference should be in-person, virtual or hybrid the following year. Here are some general thoughts.&lt;/p&gt;&lt;p&gt;&lt;b&gt;In-Person&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The traditional conference format. People travel from near and far to a hotel, conference center or campus location. Talks given in large rooms, often in parallel. A reception, some social activities, participants gathering in small groups to go out for meals.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Positives: In-person maximizes interaction between participants. Being physically away from your home means you can focus your time on the conference and your fellow participants. This was more true before the mobile devices/laptops/internet days, but still most participants will spend more time on-site than on-line.&lt;/p&gt;&lt;p&gt;Negatives: Expensive--with registration, hotel and air fare, even a domestic participant could have to pay $2000 or up, higher for those traveling internationally. Visas can be hard to get.&amp;nbsp;Some still feel unsafe in large groups. People often leave early, pity the last speakers. And don&#39;t forget the carbon footprint.&amp;nbsp;&lt;/p&gt;&lt;p&gt;As countries declare war on other countries or states deny certain rights, there is a push against meetings in certain places. Note the disclaimer for next year&#39;s &lt;a href=&quot;https://fcrc.acm.org/&quot;&gt;FCRC&lt;/a&gt;. You might upset some people if you have conferences at these locations (and others if you don&#39;t).&lt;/p&gt;&lt;p&gt;&lt;b&gt;Virtual&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Virtual conferences would never in the past have been taken seriously but Covid forced our hands.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Talks are streamed or pre-recorded. Some interaction with chats in talks, zoom get togethers or though a systems like &lt;a href=&quot;https://www.virtualchair.net/&quot;&gt;virtual chair&lt;/a&gt;. Even if we had a perfect &quot;metaverse&quot; experience where we could get together as though we were in person, not being there in person means we wouldn&#39;t make it a priority.&lt;/p&gt;&lt;p&gt;The big advantages are costs are low, it&#39;s easy to attend talks, and no danger of spreading disease. Still a virtual conference can feel too much like just a collection of streamed and recorded talks.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Hybrid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;So let&#39;s make the conference hybrid and have the best of both worlds. Alas, it doesn&#39;t work out that way. It&#39;s nearly impossible to have good interaction between in-person and virtual participants--basically you have to run two separate meetings. Do you allow virtual talks or require an author to show up in person.&amp;nbsp;&lt;/p&gt;&lt;p&gt;How do you set prices? Lower prices for virtual increases assess but decreases in-person attendance. Participants (or their advisors) might opt to save expenses and attend virtually instead of in-person, reducing the networking opportunities for everyone.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Most conferences tend to take the hybrid route to avoid the complaints if one went fully in-person or virtual, but hybrid just pretty much guarantees a mediocre experience for all.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Opinion&lt;/b&gt;&lt;/p&gt;&lt;p&gt;My suggestion is some years run the conference virtually and others in hybrid. We already have too many conferences, a byproduct of our field using conferences as the primary publication venue. I suggest following conferences like the International Congress of Mathematicians or the Game Theory World Congress, held every four years. If the main conference of a field is held every four years, researchers, particularly senior researchers, make a bigger effort to be there. You can have the virtual meetings the other years so researchers, particularly students, can continue to present their work.&lt;/p&gt;&lt;p&gt;No easy solutions and CS conferences have &lt;a href=&quot;https://cacm.acm.org/magazines/2009/8/34492-viewpoint-time-for-computer-science-to-grow-up/fulltext&quot;&gt;not worked well for years&lt;/a&gt;. Maybe the struggle to define future conferences will allow us to focus more on the connecting researchers than just &quot;journals that meet in a hotel&quot;.&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </description>
-  <pubDate>2022-08-18 14:47:00 UTC</pubDate>
-  <author>Computational Complexity</author>
-</item>
-
-<item>
-  <title>TR22-116 |  Constant-Depth Sorting Networks | 
-
-	Natalia Dobrokhotova-Maikova, 
-
-	Alexander Kozachinskiy, 
-
-	Vladimir Podolskii</title>
-  <guid>https://eccc.weizmann.ac.il/report/2022/116</guid>
-  <link>https://eccc.weizmann.ac.il/report/2022/116</link>
-  <description>
-    In this paper, we address sorting networks that are constructed from comparators of arity $k &amp;gt; 2$. That is, in our setting the arity of the comparators -- or, in other words, the number of inputs that can be sorted at the unit cost --  is a parameter. We study its relationship with two other parameters -- $n$, the number of inputs, and $d$, the depth.
-
-This model received considerable attention. Partly, its motivation is to better understand the structure of sorting networks. In particular, sorting networks with large arity are related to recursive constructions of ordinary sorting networks.
-Additionally, studies of this model have natural correspondence with  a recent line of work on constructing circuits for majority functions from majority gates of lower fan-in. 
-
-
-
-Motivated by these questions, we obtain the first lower bounds on the arity of constant-depth sorting networks.
-More precisely, we consider sorting networks of depth $d$ up to 4, and determine the minimal $k$ for which there is such a network with comparators of arity $k$. For depths $d=1,2$ we observe that $k=n$. For $d=3$ we show that $k = \lceil \frac n2 \rceil$. For $d=4$ the minimal arity becomes sublinear: $k = \Theta(n^{2/3})$. This contrasts with the case of majority circuits, in which $k = O(n^{2/3})$ is achievable already for depth $d=3$.
-  </description>
-  <pubDate>2022-08-17 17:04:17 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>TR22-115 |  Polynomial Identity Testing via Evaluation of Rational Functions | 
-
-	Dieter van Melkebeek, 
-
-	Andrew Morgan</title>
-  <guid>https://eccc.weizmann.ac.il/report/2022/115</guid>
-  <link>https://eccc.weizmann.ac.il/report/2022/115</link>
-  <description>
-    We introduce a hitting set generator for Polynomial Identity Testing
-based on evaluations of low-degree univariate rational functions at
-abscissas associated with the variables. Despite the univariate
-nature, we establish an equivalence up to rescaling with a generator
-introduced by Shpilka and Volkovich, which has a similar structure but
-uses multivariate polynomials in the abscissas. 
-
-We study the power of the generator by characterizing its vanishing
-ideal, i.e., the set of polynomials that it fails to hit. Capitalizing
-on the univariate nature, we develop a small collection of polynomials
-that jointly produce the vanishing ideal. As corollaries, we obtain
-tight bounds on the minimum degree, sparseness, and partition class
-size of set-multilinearity in the vanishing ideal. Inspired by an
-alternating algebra representation, we develop a structured
-deterministic membership test for the vanishing ideal. As a proof of
-concept, we rederive known derandomization results based on the
-generator by Shpilka and Volkovich and present a new application for
-read-once oblivious algebraic branching programs.
-  </description>
-  <pubDate>2022-08-17 14:04:37 UTC</pubDate>
-  <author>ECCC Papers</author>
 </item>
 
 </channel>
