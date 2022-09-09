@@ -10,6 +10,72 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-124 |  On Interactive Proofs of Proximity with Proof-Oblivious Queries | 
+
+	Oded Goldreich, 
+
+	Guy Rothblum</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/124"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/124</id>
+    <updated>2022-09-09T08:31:15+00:00</updated>
+    <content type="html" xml:lang="en">
+    Interactive proofs of proximity (IPPs) offer ultra-fast
+approximate verification of assertions regarding their input,
+where ultra-fast means that only a small portion of the input is read
+and approximate verification is analogous to the notion of
+approximate decision that underlies property testing.
+Specifically, in an IPP, the prover can make the verifier
+accept each input in the property, but cannot fool the verifier
+into accepting an input that is far from the property
+(except for with small probability).
+
+The verifier in an IPP system engages in two very different types 
+of activities: interacting with an untrusted prover, and querying its input. 
+The definition allows for arbitrary coordination between these two activities, 
+but keeping them separate is both conceptually interesting 
+and necessary for important applications 
+such as addressing temporal considerations 
+(i.e., at what time is each of the services available)
+and facilitating the construction of zero-knowledge schemes. 
+In this work we embark on a systematic study of IPPs 
+with proof-oblivious queries, where the queries should not be affected 
+by the interaction with the prover. 
+We assign the query and interaction activities to separate modules, 
+and consider different limitations on their coordination.
+
+The most strict limitation requires these activities to
+be totally isolated from one another; they just feed
+their views to a separate deciding module. 
+We show that such systems can be efficiently emulated by standard testers.
+
+Going to the other extreme, we only disallow information
+to flow from the interacting module to the querying module,
+but allow free information flow in the other direction.
+We show that extremely efficient one-round (i.e., two-message) systems 
+of such type can be used to verify properties that are extremely
+hard to test (without the help of a prover).
+That is, the complexity of verifying can be polylogarithmic in the complexity of testing.
+This stands in contrast the MAPs (viewed as $1/2$-round systems)
+in which proof-oblivious queries are as limited as our isolated model.
+
+Our focus is on an intermediate model that allows
+shared randomness among the querying and interacting modules 
+but no information flow between them. 
+In this case we show 
+that 1-round systems are efficiently emulated by standard testers 
+but $3/2$-round systems of extremely low complexity 
+exist for properties that are extremely hard to test. 
+One additional result about this model is that it can
+efficiently emulate any IPP for any property of low-degree polynomials.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Counting Subgraphs in Somewhere Dense Graphs</title>
     <link href="http://arxiv.org/abs/2209.03402"/>
     <id>http://arxiv.org/abs/2209.03402</id>
@@ -1478,41 +1544,6 @@ Our technique builds on the earlier list-decodable codes of Guruswami and Smith,
     <author>
       <name>ECCC Papers</name>
       <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">David Eppstein: Permuted points of interest</title>
-    <link href="https://11011110.github.io/blog/2022/08/22/permuted-points-interest.html"/>
-    <id>https://11011110.github.io/blog/2022/08/22/permuted-points-interest</id>
-    <updated>2022-08-22T17:10:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Suppose you have a map, with certain points of interest marked. To avoid cluttering the map with the labels of these points, you want to list the labels in a line down the side of the map, with each point of interest connected to its label by a line segment. Preferably, the line segments should not cross each other, as they did when I tried to match the sidebar to the points in this example from Google Maps:&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/coffee-near-ryerson.png&quot; alt=&quot;Map of Toronto Metropolitan University (formerly Ryerson University) and its surrounding neighborhood, from Google Maps, with coffee shops marked and connected by line segments to the sidebar&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;One way to find a non-crossing labeling (for points with distinct &lt;span style=&quot;white-space:nowrap&quot;&gt;\(y\)-coordinates)&lt;/span&gt; would be to make all of the line segments horizontal, and to sort the list of labels by the height of the points. However, that’s far from the only possibility. How many different permutations of the labels can a single set of points have?&lt;/p&gt;
-
-&lt;p&gt;The obvious bound is factorial, but the answer turns out to be much smaller than that. To see this, assume without loss of generality that the points are in general position (collinearities or equal coordinates can only reduce the number of labeling orders).  Consider any non-crossing labeling, and then adjust the right endpoint of each line segment (the one on the point of interest) to have the same &lt;span style=&quot;white-space:nowrap&quot;&gt;\(y\)-coordinate&lt;/span&gt; as its left endpoint, so that all of the line segments become straight.&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/straighten-rake.svg&quot; alt=&quot;A vertical line connected to points of interest by line segments, and those same line segments straightened to horizontal by adjusting the y-coordinates of their right endpoints&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Next, connect the right endpoints of this diagram in a &lt;a href=&quot;https://en.wikipedia.org/wiki/Cartesian_tree&quot;&gt;Cartesian tree&lt;/a&gt;. This is a non-crossing binary tree, rooted at the rightmost endpoint, with two subtrees constructed recursively in the same way for the parts of the diagram above and below the root segment.&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/cartesian-rake.svg&quot; alt=&quot;Cartesian tree on the endpoints of the horizontal line segments&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The number of possible binary trees is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Catalan_number&quot;&gt;Catalan number&lt;/a&gt;, and each binary tree uniquely determines a labeling order. To reconstruct the labeling from the tree, count the number of segments that lie above the root segment in the tree, and draw a line segment connecting the corresponding point of interest to the sidebar line, splitting the remaining points of interest into the corresponding number of points above and below the segment. Combinatorially, there is only one way of making a split that subdivides the remaining points into subsets of the desired sizes. Then continue recursively in the same way within the two subtrees above and below the root segment. You may need to adjust the geometric positions of the left endpoints of some of the line segments to avoid crossings, and this adjustment may not be possible for some binary trees, but when it is possible there is only one permutation of the points that you can get for each tree. Therefore, there is at most a Catalan number of labeling orders!&lt;/p&gt;
-
-&lt;p&gt;The same argument also works to count labelings with L-shaped connectors, horizontal from the label to the &lt;span style=&quot;white-space:nowrap&quot;&gt;\(x\)-coordinate&lt;/span&gt; of the point of interest and then vertical up or down to the point of interest. When the points of interest all have distinct coordinates, no adjustment of positions is ever necessary, and every binary tree produces a valid labeling order, so the number of labeling orders is exactly a Catalan number.&lt;/p&gt;
-
-&lt;p&gt;For some sets of points with straight line segment labelings, you can again get the maximum possible Catalan number of distinct labeling orders. This is true, for instance, when each point of interest is to the right of all of the lines through pairs of points to the left of it (including candidate left endpoints of connectors), because in this case the combinatorics of straight line connectors and &lt;span style=&quot;white-space:nowrap&quot;&gt;L-shaped&lt;/span&gt; connectors are the same. (For details of this equivalence, see my book &lt;a href=&quot;https://www.ics.uci.edu/~eppstein/forbidden/&quot;&gt;&lt;em&gt;Forbidden Configurations in Discrete Geometry&lt;/em&gt;&lt;/a&gt;, Chapter 14: “The Stretched Geometry of Permutations”.)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://mathstodon.xyz/web/@11011110/108869453500480918&quot;&gt;(Discuss on Mastodon)&lt;/a&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
-  </content>
-    <author>
-      <name>David Eppstein</name>
-      <uri>https://11011110.github.io/blog/</uri>
     </author>
   </entry>
 

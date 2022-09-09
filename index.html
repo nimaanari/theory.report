@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-09-09T07:41:42Z">Friday, September 09 2022, 07:41</time>
+          <time class='timeago' datetime="2022-09-09T08:46:48Z">Friday, September 09 2022, 08:46</time>
         
       </p>
 
@@ -394,6 +394,97 @@
     <h2 class='new-date'>
       <i class='icon-calendar-empty'></i> Friday, September 09
     </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://eccc.weizmann.ac.il/report/2022/124'>TR22-124 |  On Interactive Proofs of Proximity with Proof-Oblivious Queries | 
+
+	Oded Goldreich, 
+
+	Guy Rothblum</a></h3>
+          <p class='item-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          Interactive proofs of proximity (IPPs) offer ultra-fast
+approximate verification of assertions regarding their input,
+where ultra-fast means that only a small portion of the input is read
+and approximate verification is analogous to the notion of
+approximate decision that underlies property testing.
+Specifically, in an IPP, the prover can make the verifier
+accept each input in the property, but can
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          Interactive proofs of proximity (IPPs) offer ultra-fast
+approximate verification of assertions regarding their input,
+where ultra-fast means that only a small portion of the input is read
+and approximate verification is analogous to the notion of
+approximate decision that underlies property testing.
+Specifically, in an IPP, the prover can make the verifier
+accept each input in the property, but cannot fool the verifier
+into accepting an input that is far from the property
+(except for with small probability).
+
+The verifier in an IPP system engages in two very different types 
+of activities: interacting with an untrusted prover, and querying its input. 
+The definition allows for arbitrary coordination between these two activities, 
+but keeping them separate is both conceptually interesting 
+and necessary for important applications 
+such as addressing temporal considerations 
+(i.e., at what time is each of the services available)
+and facilitating the construction of zero-knowledge schemes. 
+In this work we embark on a systematic study of IPPs 
+with proof-oblivious queries, where the queries should not be affected 
+by the interaction with the prover. 
+We assign the query and interaction activities to separate modules, 
+and consider different limitations on their coordination.
+
+The most strict limitation requires these activities to
+be totally isolated from one another; they just feed
+their views to a separate deciding module. 
+We show that such systems can be efficiently emulated by standard testers.
+
+Going to the other extreme, we only disallow information
+to flow from the interacting module to the querying module,
+but allow free information flow in the other direction.
+We show that extremely efficient one-round (i.e., two-message) systems 
+of such type can be used to verify properties that are extremely
+hard to test (without the help of a prover).
+That is, the complexity of verifying can be polylogarithmic in the complexity of testing.
+This stands in contrast the MAPs (viewed as $1/2$-round systems)
+in which proof-oblivious queries are as limited as our isolated model.
+
+Our focus is on an intermediate model that allows
+shared randomness among the querying and interacting modules 
+but no information flow between them. 
+In this case we show 
+that 1-round systems are efficiently emulated by standard testers 
+but $3/2$-round systems of extremely low complexity 
+exist for properties that are extremely hard to test. 
+One additional result about this model is that it can
+efficiently emulate any IPP for any property of low-degree polynomials.
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-09-09T08:31:15Z">Friday, September 09 2022, 08:31</time>
+        </div>
+      </div>
+    </article>
+  
     
 
     <article class='item'>
@@ -2935,64 +3026,6 @@ Our technique builds on the earlier list-decodable codes of Guruswami and Smith,
 
         <div class='item-footer'>
           <time class='timeago' datetime="2022-08-23T11:19:51Z">Tuesday, August 23 2022, 11:19</time>
-        </div>
-      </div>
-    </article>
-  
-    
-    <h2 class='new-date'>
-      <i class='icon-calendar-empty'></i> Monday, August 22
-    </h2>
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='https://11011110.github.io/blog/2022/08/22/permuted-points-interest.html'>Permuted points of interest</a></h3>
-          <p class='item-feed'>from <a href='https://11011110.github.io/blog/'>David Eppstein</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          Suppose you have a map, with certain points of interest marked. To avoid cluttering the map with the labels of these points, you want to list the labels in a line down the side of the map, with each point of interest connected to its label by a line segment. Preferably, the line segments should not cross each other, as they did when I tried to match the sidebar to the points in this example from Go
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p>Suppose you have a map, with certain points of interest marked. To avoid cluttering the map with the labels of these points, you want to list the labels in a line down the side of the map, with each point of interest connected to its label by a line segment. Preferably, the line segments should not cross each other, as they did when I tried to match the sidebar to the points in this example from Google Maps:</p>
-
-<p style="text-align:center"><img src="/blog/assets/2022/coffee-near-ryerson.png" alt="Map of Toronto Metropolitan University (formerly Ryerson University) and its surrounding neighborhood, from Google Maps, with coffee shops marked and connected by line segments to the sidebar" style="width:100%;max-width:720px" /></p>
-
-<p>One way to find a non-crossing labeling (for points with distinct <span style="white-space:nowrap">\(y\)-coordinates)</span> would be to make all of the line segments horizontal, and to sort the list of labels by the height of the points. However, that’s far from the only possibility. How many different permutations of the labels can a single set of points have?</p>
-
-<p>The obvious bound is factorial, but the answer turns out to be much smaller than that. To see this, assume without loss of generality that the points are in general position (collinearities or equal coordinates can only reduce the number of labeling orders).  Consider any non-crossing labeling, and then adjust the right endpoint of each line segment (the one on the point of interest) to have the same <span style="white-space:nowrap">\(y\)-coordinate</span> as its left endpoint, so that all of the line segments become straight.</p>
-
-<p style="text-align:center"><img src="/blog/assets/2022/straighten-rake.svg" alt="A vertical line connected to points of interest by line segments, and those same line segments straightened to horizontal by adjusting the y-coordinates of their right endpoints" style="width:100%;max-width:720px" /></p>
-
-<p>Next, connect the right endpoints of this diagram in a <a href="https://en.wikipedia.org/wiki/Cartesian_tree">Cartesian tree</a>. This is a non-crossing binary tree, rooted at the rightmost endpoint, with two subtrees constructed recursively in the same way for the parts of the diagram above and below the root segment.</p>
-
-<p style="text-align:center"><img src="/blog/assets/2022/cartesian-rake.svg" alt="Cartesian tree on the endpoints of the horizontal line segments" /></p>
-
-<p>The number of possible binary trees is a <a href="https://en.wikipedia.org/wiki/Catalan_number">Catalan number</a>, and each binary tree uniquely determines a labeling order. To reconstruct the labeling from the tree, count the number of segments that lie above the root segment in the tree, and draw a line segment connecting the corresponding point of interest to the sidebar line, splitting the remaining points of interest into the corresponding number of points above and below the segment. Combinatorially, there is only one way of making a split that subdivides the remaining points into subsets of the desired sizes. Then continue recursively in the same way within the two subtrees above and below the root segment. You may need to adjust the geometric positions of the left endpoints of some of the line segments to avoid crossings, and this adjustment may not be possible for some binary trees, but when it is possible there is only one permutation of the points that you can get for each tree. Therefore, there is at most a Catalan number of labeling orders!</p>
-
-<p>The same argument also works to count labelings with L-shaped connectors, horizontal from the label to the <span style="white-space:nowrap">\(x\)-coordinate</span> of the point of interest and then vertical up or down to the point of interest. When the points of interest all have distinct coordinates, no adjustment of positions is ever necessary, and every binary tree produces a valid labeling order, so the number of labeling orders is exactly a Catalan number.</p>
-
-<p>For some sets of points with straight line segment labelings, you can again get the maximum possible Catalan number of distinct labeling orders. This is true, for instance, when each point of interest is to the right of all of the lines through pairs of points to the left of it (including candidate left endpoints of connectors), because in this case the combinatorics of straight line connectors and <span style="white-space:nowrap">L-shaped</span> connectors are the same. (For details of this equivalence, see my book <a href="https://www.ics.uci.edu/~eppstein/forbidden/"><em>Forbidden Configurations in Discrete Geometry</em></a>, Chapter 14: “The Stretched Geometry of Permutations”.)</p>
-
-<p><a href="https://mathstodon.xyz/web/@11011110/108869453500480918">(Discuss on Mastodon)</a></p><p class="authors">By David Eppstein</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-08-22T17:10:00Z">Monday, August 22 2022, 17:10</time>
         </div>
       </div>
     </article>
