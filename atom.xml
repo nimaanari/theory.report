@@ -10,6 +10,58 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">David Eppstein: Comparing distances along lines</title>
+    <link href="https://11011110.github.io/blog/2022/09/10/comparing-distances-lines.html"/>
+    <id>https://11011110.github.io/blog/2022/09/10/comparing-distances-lines</id>
+    <updated>2022-09-10T17:26:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;I’ve written here several times about &lt;a href=&quot;https://en.wikipedia.org/wiki/Gilbert_tessellation&quot;&gt;Gilbert tessellations&lt;/a&gt;, most recently in &lt;a href=&quot;/blog/2021/11/02/gilbert-tessellations-cellular.html&quot;&gt;last year’s post about cellular automata that naturally generate them&lt;/a&gt;. These are polygonal subdivisions of the plane, generated from the tracks of particles moving at the same speed, where the particles start as oppositely-moving pairs with random locations and directions, and continue moving until they crash into the track of another particle. Here’s Wikipedia’s illustration of these things, generated in 2012 by Claudio Rocchini:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Gilbert_tessellation.svg&quot;&gt;&lt;img src=&quot;/blog/assets/2018/Gilbert-tessellation.svg&quot; alt=&quot;A Gilbert tessellation, by Claudio Rocchini&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Suppose someone gives you a picture like this and tells you it’s a Gilbert tessellation, like I just did. How can you tell that it’s genuine? The starting positions of the particles are not marked on the picture, so what needs to be done is to infer their locations (or a system of points that could be their locations) and to check that particles, starting at those locations and moving along the lines, crash in the order that the picture shows. Wherever two segments intersect in the picture, one of them ends, and it must be the case that the starting position on the segment that ends is farther away than the starting position on the other segment. Otherwise, it would have been the other particle that crashed and the other segment that ended.&lt;/p&gt;
+
+&lt;p&gt;One can set up a big system of inequalities where each variable describes the starting position of one of the particles, for instance by giving its distance from one end of its segment. Each inequality comes from an intersection of two segments and asks for the particle on one segment to be farther than the particle on the other segment. The distance between two positions \(x\) and \(y\) on the same segment, parameterized linearly, is &lt;span style=&quot;white-space:nowrap&quot;&gt;just \(\vert x-y\vert\).&lt;/span&gt; So when a particle on &lt;span style=&quot;white-space:nowrap&quot;&gt;line \(j\)&lt;/span&gt; crashes into a track on &lt;span style=&quot;white-space:nowrap&quot;&gt;line \(i\)&lt;/span&gt; we get an inequality like&lt;/p&gt;
+
+\[\vert x_i-e_{ij}\vert\le \vert x_j-e_{ji}\vert,\]
+
+&lt;p&gt;where \(x_i\) is the starting positions of the particle on &lt;span style=&quot;white-space:nowrap&quot;&gt;line \(i\),&lt;/span&gt; \(e_i\) is the known position on &lt;span style=&quot;white-space:nowrap&quot;&gt;line \(i\)&lt;/span&gt; of its intersection with &lt;span style=&quot;white-space:nowrap&quot;&gt;line \(j\),&lt;/span&gt; \(\vert x_i-e_{ij}\vert\) is the distance from the starting position to the intersection, and the smaller distance for the particle on &lt;span style=&quot;white-space:nowrap&quot;&gt;line \(i\)&lt;/span&gt; means that it gets to the intersection first, causing the other particle to crash into its track. We also have some inequalities specifying that each starting position lies between the endpoints of its line segment. This almost looks like a linear program (or rather a linear programming feasability problem, with only linear constraints but no objective function), but the absolute values make it nonlinear. We can get rid of them by two tricks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Because the left absolute value occurs on the left hand side of a &lt;span style=&quot;white-space:nowrap&quot;&gt;\(\le\) constraint,&lt;/span&gt; it is equivalent to replace it by two constraints, one for each choice of sign:&lt;/p&gt;
+
+\[x_i-e_{ij}\le \vert x_j-e_{ji}\vert,\]
+
+    &lt;p&gt;and&lt;/p&gt;
+
+\[e_{ij}-x_i\le \vert x_j-e_{ji}\vert.\]
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Because &lt;span style=&quot;white-space:nowrap&quot;&gt;line \(j\)&lt;/span&gt; ends at its intersection with &lt;span style=&quot;white-space:nowrap&quot;&gt;line \(i\),&lt;/span&gt; we know on which side of the intersection to find the starting &lt;span style=&quot;white-space:nowrap&quot;&gt;point \(x_j\),&lt;/span&gt; and therefore, we know the sign &lt;span style=&quot;white-space:nowrap&quot;&gt;of \(x_j-e_{ji}\).&lt;/span&gt; We can use this knowledge to replace \(\vert x_j-e_{ji}\vert\) by either \(x_j-e_{ji}\) or \(e_{ji}-x_j\) (whichever of these two expressions is guaranteed to be non-negative), eliminating the right absolute value.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once these replacements have been made, we have a linear program with two variables per inequality, which can be solved in (strongly) polynomial time.&lt;/p&gt;
+
+&lt;p&gt;But all this made me wonder: can we always turn a system of inequaties between linear distances like this into a linear program? Suppose we have an arbitrary system of variables \(x_i\) and an arbitrary system of &lt;span style=&quot;white-space:nowrap&quot;&gt;inequalities \(\vert x_i-e_{ij}\vert\le \vert x_j-e_{ji}\vert\),&lt;/span&gt; not coming from Gilbert tessellation recognition. Can we determine whether such a system has a solution, efficiently? Can we maybe turn any system of inequalities like this into a linear program, and solve it that way?&lt;/p&gt;
+
+&lt;p&gt;No! The problem is &lt;span style=&quot;white-space:nowrap&quot;&gt;\(\mathsf{NP}\)-complete.&lt;/span&gt; The illustration below shows the key gadget, a system of six inequalities for two variables (each shown with a small blue double wedge in the plane pointing towards the points that obey the inequality). These inequalities have only the three red points shown as their solutions. You might want only one inequality per pair of variables, but in that case you can get the same effect by replacing each inequality by a pair of inequalities involving an additional dummy variable. The &lt;span style=&quot;white-space:nowrap&quot;&gt;\(\mathsf{NP}\)-completeness&lt;/span&gt; proof is a reduction from graph 3-coloring that translates each vertex into one of these gadgets, and represents the color of a vertex by the choice of which red point is used to solve these inequalities. I haven’t shown the edge gadgets, but it’s easy to find more inequalities to use for a pair of vertices, to force them to have different red points as their solutions. For instance, the &lt;span style=&quot;white-space:nowrap&quot;&gt;inequality \(\vert x_i\vert\ge\vert y_j-1\vert\)&lt;/span&gt; fails only for two vertices that both use the same red point \((0,0)\).&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/vertex-gadget.svg&quot; alt=&quot;Vertex gadget for reduction from 3-coloring to linear distance comparison, consisting of six inequalities abs(x) ≤ abs(y-4), abs(x+2) ≥ abs(y-2), abs(x-2) ≥ abs(y-2), abs(x+1) ≥ abs(y+1), abs(x-1) ≥ abs(y+1), and abs(x) ≤ abs(y+2), that force the two variables (x,y) to have one of the three combinations of values (3,1), (-3,1), or (0,0)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So somehow, the geometry of Gilbert tessellations is essential for the ability to convert their recognition problem into a linear program, and solve it efficiently.&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108977122069764388&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </content>
+    <author>
+      <name>David Eppstein</name>
+      <uri>https://11011110.github.io/blog/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: faculty at University of Oxford (apply by December 14, 2022)</title>
     <link href="https://cstheory-jobs.org/2022/09/09/faculty-at-university-of-oxford-apply-by-december-14-2022/"/>
     <id>http://cstheory-jobs.org/2022/09/09/faculty-at-university-of-oxford-apply-by-december-14-2022/</id>
@@ -1523,25 +1575,6 @@ We argue that a specific gadget generator from K&amp;#39;08 is a good candidate 
 We also make progress on another long-standing open question of showing NP-hardness of the Minimum Circuit Size Problem (MCSP).  We prove NP-hardness of the partial function variant of MCSP as well as other meta-computational problems, such as the problems MKTP* and MINKT* of computing the time-bounded Kolmogorov complexity of a given partial string, under randomized polynomial-time reductions.
 
 Our proofs are algorithmic information (a.k.a. Kolmogorov complexity) theoretic.  We utilize black-box pseudorandom generator constructions, such as the Nisan-Wigderson generator, as a one-time encryption scheme secure against a program which &amp;quot;does not know&amp;quot; a random function.  Our key technical contribution is to quantify the &amp;quot;knowledge&amp;quot; of a program by using conditional Kolmogorov complexity and show that no small program can know many random functions.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-118 |  Strong XOR Lemma for Communication with Bounded Rounds | 
-
-	Huacheng Yu</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/118"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/118</id>
-    <updated>2022-08-23T16:13:18+00:00</updated>
-    <content type="html" xml:lang="en">
-    In this paper, we prove a strong XOR lemma for bounded-round two-player randomized communication. For a function $f:\mathcal{X}\times \mathcal{Y}\rightarrow\{0,1\}$, the $n$-fold XOR function $f^{\oplus n}:\mathcal{X}^n\times \mathcal{Y}^n\rightarrow\{0,1\}$ maps $n$ input pairs $(X_1,\ldots,X_n,Y_1,\ldots,Y_n)$ to the XOR of the $n$ output bits $f(X_1,Y_1)\oplus \cdots \oplus f(X_n, Y_n)$. We prove that if every $r$-round communication protocols that computes $f$ with probability $2/3$ uses at least $C$ bits of communication, then any $r$-round protocol that computes $f^{\oplus n}$ with probability $1/2+\exp(-O(n))$ must use $n\cdot \left(r^{-O(r)}\cdot C-1\right)$ bits. When $r$ is a constant and $C$ is sufficiently large, this is $\Omega(n\cdot C)$ bits. It matches the communication cost and the success probability of the trivial protocol that computes the $n$ bits $f(X_i,Y_i)$ independently and outputs their XOR, up to a constant factor in $n$.
-
-		A similar XOR lemma has been proved for $f$ whose communication lower bound can be obtained via bounding the discrepancy [Shaltiel&amp;#39;03]. By the equivalence between the discrepancy and the correlation with $2$-bit communication protocols [Viola-Wigderson&amp;#39;08], our new XOR lemma implies the previous result.
   </content>
     <author>
       <name>ECCC Papers</name>
