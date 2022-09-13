@@ -10,6 +10,738 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: On Identity Testing and Noncommutative Rank Computation over the Free Skew Field</title>
+    <link href="http://arxiv.org/abs/2209.04797"/>
+    <id>http://arxiv.org/abs/2209.04797</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arvind_V/0/1/0/all/0/1&quot;&gt;V. Arvind&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chatterjee_A/0/1/0/all/0/1&quot;&gt;Abhranil Chatterjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghosal_U/0/1/0/all/0/1&quot;&gt;Utsab Ghosal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mukhopadhyay_P/0/1/0/all/0/1&quot;&gt;Partha Mukhopadhyay&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ramya_C/0/1/0/all/0/1&quot;&gt;C. Ramya&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The identity testing of rational formulas (RIT) in the free skew field
+efficiently reduces to computing the rank of a matrix whose entries are linear
+polynomials in noncommuting variables\cite{HW15}. This rank computation problem
+has deterministic polynomial-time white-box algorithms \cite{GGOW16, IQS18} and
+a randomized polynomial-time algorithm in the black-box setting \cite{DM17}. In
+this paper, we propose a new approach for efficient derandomization of
+\emph{black-box} RIT. Additionally, we obtain results for matrix rank
+computation over the free skew field, and construct efficient linear pencil
+representations for a new class of rational expressions. More precisely, we
+show the following results:
+&lt;/p&gt;
+&lt;p&gt;1. Under the hardness assumption that the ABP (algebraic branching program)
+complexity of every polynomial identity for the $k\times k$ matrix algebra is
+$2^{\Omega(k)}$ \cite{BW05}, we obtain a subexponential-time black-box
+algorithm for RIT in almost general setting. This can be seen as the first
+&quot;hardness implies derandomization&quot; type theorem for rational formulas.
+&lt;/p&gt;
+&lt;p&gt;2. We show that the noncommutative rank of any matrix over the free skew
+field whose entries have small linear pencil representations can be computed in
+deterministic polynomial time. Prior to this, an efficient rank computation was
+only known for matrices with noncommutative formulas as entries\cite{GGOW20}.
+As special cases of our algorithm, we obtain the first deterministic
+polynomial-time algorithms for rank computation of matrices whose entries are
+noncommutative ABPs or rational formulas.
+&lt;/p&gt;
+&lt;p&gt;3. Motivated by the definition given by Bergman\cite{Ber76}, we define a new
+class that contains noncommutative ABPs and rational formulas. We obtain a
+polynomial-size linear pencil representation for this class. As a by-product,
+we obtain a white-box deterministic polynomial-time identity testing algorithm
+for the class.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: PPP-Completeness and Extremal Combinatorics</title>
+    <link href="http://arxiv.org/abs/2209.04827"/>
+    <id>http://arxiv.org/abs/2209.04827</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bourneuf_R/0/1/0/all/0/1&quot;&gt;Romain Bourneuf&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Folwarczny_L/0/1/0/all/0/1&quot;&gt;Luk&amp;#xe1;&amp;#x161; Folwarczn&amp;#xfd;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hubacek_P/0/1/0/all/0/1&quot;&gt;Pavel Hub&amp;#xe1;&amp;#x10d;ek&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rosen_A/0/1/0/all/0/1&quot;&gt;Alon Rosen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schwartzbach_N/0/1/0/all/0/1&quot;&gt;Nikolaj Ignatieff Schwartzbach&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Many classical theorems in combinatorics establish the emergence of
+substructures within sufficiently large collections of objects. Well-known
+examples are Ramsey&#39;s theorem on monochromatic subgraphs and the Erd\H{o}s-Rado
+sunflower lemma. Implicit versions of the corresponding total search problems
+are known to be PWPP-hard; here &quot;implici&quot; means that the collection is
+represented by a poly-sized circuit inducing an exponentially large number of
+objects.
+&lt;/p&gt;
+&lt;p&gt;We show that several other well-known theorems from extremal combinatorics -
+including Erd\H{o}s-Ko-Rado, Sperner, and Cayley&#39;s formula - give rise to
+complete problems for PWPP and PPP. This is in contrast to the Ramsey and
+Erd\H{o}s-Rado problems, for which establishing inclusion in PWPP has remained
+elusive. Besides significantly expanding the set of problems that are complete
+for PWPP and PPP, our work identifies some key properties of combinatorial
+proofs of existence that can give rise to completeness for these classes.
+&lt;/p&gt;
+&lt;p&gt;Our completeness results rely on efficient encodings for which finding
+collisions allows extracting the desired substructure. These encodings are made
+possible by the tightness of the bounds for the problems at hand (tighter than
+what is known for Ramsey&#39;s theorem and the sunflower lemma). Previous
+techniques for proving bounds in TFNP invariably made use of structured
+algorithms. Such algorithms are not known to exist for the theorems considered
+in this work, as their proofs &quot;from the book&quot; are non-constructive.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: The Complexity and Expressive Power of Second-Order Extended Logic</title>
+    <link href="http://arxiv.org/abs/2209.04837"/>
+    <id>http://arxiv.org/abs/2209.04837</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Feng_S/0/1/0/all/0/1&quot;&gt;Shiguang Feng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhao_X/0/1/0/all/0/1&quot;&gt;Xishun Zhao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the expressive powers of SO-HORN$^{*}$, SO-HORN$^{r}$ and
+SO-HORN$^{*r}$ on all finite structures. We show that SO-HORN$^{r}$,
+SO-HORN$^{*r}$, FO(LFP) coincide with each other and SO-HORN$^{*}$ is proper
+sublogic of SO-HORN$^{r}$. To prove this result, we introduce the notions of
+DATALOG$^{*}$ program, DATALOG$^{r}$ program and their stratified versions,
+S-DATALOG$^{*}$ program and S-DATALOG$^{r}$ program. It is shown that, on all
+structures, DATALOG$^{r}$ and S-DATALOG$^{r}$ are equivalent and DATALOG$^{*}$
+is a proper sublogic of DATALOG$^{r}$. SO-HORN$^{*}$ and SO-HORN$^{r}$ can be
+treated as the negations of DATALOG$^{*}$ and DATALOG$^{r}$, respectively. We
+also show that SO-EHORN$^{r}$ logic which is an extended version of SO-HORN
+captures co-NP on all finite structures.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: On The Computational Complexity of Self-Attention</title>
+    <link href="http://arxiv.org/abs/2209.04881"/>
+    <id>http://arxiv.org/abs/2209.04881</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Keles_F/0/1/0/all/0/1&quot;&gt;Feyza Duman Keles&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wijewardena_P/0/1/0/all/0/1&quot;&gt;Pruthuvi Mahesakya Wijewardena&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hegde_C/0/1/0/all/0/1&quot;&gt;Chinmay Hegde&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Transformer architectures have led to remarkable progress in many
+state-of-art applications. However, despite their successes, modern
+transformers rely on the self-attention mechanism, whose time- and
+space-complexity is quadratic in the length of the input. Several approaches
+have been proposed to speed up self-attention mechanisms to achieve
+sub-quadratic running time; however, the large majority of these works are not
+accompanied by rigorous error guarantees. In this work, we establish lower
+bounds on the computational complexity of self-attention in a number of
+scenarios. We prove that the time complexity of self-attention is necessarily
+quadratic in the input length, unless the Strong Exponential Time Hypothesis
+(SETH) is false. This argument holds even if the attention computation is
+performed only approximately, and for a variety of attention mechanisms. As a
+complement to our lower bounds, we show that it is indeed possible to
+approximate dot-product self-attention using finite Taylor series in
+linear-time, at the cost of having an exponential dependence on the polynomial
+order.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Nearly all $k$-SAT functions are unate</title>
+    <link href="http://arxiv.org/abs/2209.04894"/>
+    <id>http://arxiv.org/abs/2209.04894</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Balogh_J/0/1/0/all/0/1&quot;&gt;J&amp;#xf3;zsef Balogh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Dong_D/0/1/0/all/0/1&quot;&gt;Dingding Dong&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lidicky_B/0/1/0/all/0/1&quot;&gt;Bernard Lidick&amp;#xfd;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mani_N/0/1/0/all/0/1&quot;&gt;Nitya Mani&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Zhao_Y/0/1/0/all/0/1&quot;&gt;Yufei Zhao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove that $1-o(1)$ fraction of all $k$-SAT functions on $n$ Boolean
+variables are unate (i.e., monotone after first negating some variables), for
+any fixed positive integer $k$ and as $n \to \infty$. This resolves a
+conjecture by Bollob\&#39;as, Brightwell, and Leader from 2003.
+&lt;/p&gt;
+&lt;p&gt;This paper is the second half of a two-part work solving the problem. The
+first part, by Dong, Mani, and Zhao, reduces the conjecture to a Tur\&#39;an
+problem on partially directed hypergraphs. In this paper we solve this Tur\&#39;an
+problem.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Gradient-Free Methods for Deterministic and Stochastic Nonsmooth Nonconvex Optimization</title>
+    <link href="http://arxiv.org/abs/2209.05045"/>
+    <id>http://arxiv.org/abs/2209.05045</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lin_T/0/1/0/all/0/1&quot;&gt;Tianyi Lin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Zheng_Z/0/1/0/all/0/1&quot;&gt;Zeyu Zheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Jordan_M/0/1/0/all/0/1&quot;&gt;Michael I. Jordan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Nonsmooth nonconvex optimization problems broadly emerge in machine learning
+and business decision making, whereas two core challenges impede the
+development of efficient solution methods with finite-time convergence
+guarantee: the lack of computationally tractable optimality criterion and the
+lack of computationally powerful oracles. The contributions of this paper are
+two-fold. First, we establish the relationship between the celebrated Goldstein
+subdifferential~\citep{Goldstein-1977-Optimization} and uniform smoothing,
+thereby providing the basis and intuition for the design of gradient-free
+methods that guarantee the finite-time convergence to a set of Goldstein
+stationary points. Second, we propose the gradient-free method (GFM) and
+stochastic GFM for solving a class of nonsmooth nonconvex optimization problems
+and prove that both of them can return a $(\delta,\epsilon)$-Goldstein
+stationary point of a Lipschitz function $f$ at an expected convergence rate at
+$O(d^{3/2}\delta^{-1}\epsilon^{-4})$ where $d$ is the problem dimension.
+Two-phase versions of GFM and SGFM are also proposed and proven to achieve
+improved large-deviation results. Finally, we demonstrate the effectiveness of
+2-SGFM on training ReLU neural networks with the \textsc{Minst} dataset.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Localization with Few Distance Measurements</title>
+    <link href="http://arxiv.org/abs/2209.04838"/>
+    <id>http://arxiv.org/abs/2209.04838</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Halperin_D/0/1/0/all/0/1&quot;&gt;Dan Halperin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+LaValle_S/0/1/0/all/0/1&quot;&gt;Steven M. LaValle&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ugav_B/0/1/0/all/0/1&quot;&gt;Barak Ugav&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given a polygon $W$, a depth sensor placed at point $p=(x,y)$ inside $W$ and
+oriented in direction $\theta$ measures the distance $d=h(x,y,\theta)$ between
+$p$ and the closest point on the boundary of $W$ along a ray emanating from $p$
+in direction $\theta$. We study the following problem: Give a polygon $W$,
+possibly with holes, with $n$ vertices, preprocess it such that given a query
+real value $d\geq 0$, one can efficiently compute the preimage $h^{-1}(d)$,
+namely determine all the possible poses (positions and orientations) of a depth
+sensor placed in $W$ that would yield the reading $d$. We employ a
+decomposition of $W\times S^1$, which is an extension of the celebrated
+trapezoidal decomposition, and which we call rotational trapezoidal
+decomposition and present an efficient data structure, which computes the
+preimage in an output-sensitive fashion relative to this decomposition: if $k$
+cells of the decomposition contribute to the final result, we will report them
+in $O(k+1)$ time, after $O(n^2\log n)$ preprocessing time and using $O(n^2)$
+storage space. We also analyze the shape of the projection of the preimage onto
+the polygon $W$; this projection describes the portion of $W$ where the sensor
+could have been placed. Furthermore, we obtain analogous results for the more
+useful case (narrowing down the set of possible poses), where the sensor
+performs two depth measurement from the same point $p$, one in direction
+$\theta$ and the other in direction $\theta+\pi$. While localizations problems
+in robotics are often carried out by exploring the full visibility polygon of a
+sensor placed at a fixed point of the environment, the approach that we propose
+here opens the door to sufficing with only few depth measurements, which is
+advantageous as it allows for usage of inexpensive sensors and could also lead
+to savings in storage and communication costs.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Structured $(\min,+)$-Convolution And Its Applications For The Shortest Vector, Closest Vector, and Separable Nonlinear Knapsack Problems</title>
+    <link href="http://arxiv.org/abs/2209.04812"/>
+    <id>http://arxiv.org/abs/2209.04812</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gribanov_D/0/1/0/all/0/1&quot;&gt;D. V. Gribanov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Malyshev_D/0/1/0/all/0/1&quot;&gt;D. S. Malyshev&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shumilov_I/0/1/0/all/0/1&quot;&gt;I. A. Shumilov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work we consider the problem of computing the $(\min, +)$-convolution
+of two sequences $a$ and $b$ of lengths $n$ and $m$, respectively, where $n
+\geq m$. We assume that $a$ is arbitrary, but $b_i = f(i)$, where $f(x) \colon
+[0,m) \to \mathbb{R}$ is a function with one of the following properties:
+&lt;/p&gt;
+&lt;p&gt;1. the linear case, when $f(x) =\beta + \alpha \cdot x$;
+&lt;/p&gt;
+&lt;p&gt;2. the monotone case, when $f(i+1) \geq f(i)$, for any $i$;
+&lt;/p&gt;
+&lt;p&gt;3. the convex case, when $f(i+1) - f(i) \geq f(i) - f(i-1)$, for any $i$;
+&lt;/p&gt;
+&lt;p&gt;4. the concave case, when $f(i+1) - f(i) \leq f(i) - f(i-1)$, for any $i$;
+&lt;/p&gt;
+&lt;p&gt;5. the piece-wise linear case, when $f(x)$ consist of $p$ linear pieces;
+&lt;/p&gt;
+&lt;p&gt;6. the polynomial case, when $f \in \mathbb{Z}^d[x]$, for some fixed $d$.
+&lt;/p&gt;
+&lt;p&gt;To the best of our knowledge, the cases 4-6 were not considered in literature
+before. We develop true sub-quadratic algorithms for them.
+&lt;/p&gt;
+&lt;p&gt;We apply our results to the knapsack problem with a separable nonlinear
+objective function, shortest lattice vector, and closest lattice vector
+problems.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On finding short reconfiguration sequences between independent sets</title>
+    <link href="http://arxiv.org/abs/2209.05145"/>
+    <id>http://arxiv.org/abs/2209.05145</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Agrawal_A/0/1/0/all/0/1&quot;&gt;Akanksha Agrawal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hait_S/0/1/0/all/0/1&quot;&gt;Soumita Hait&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mouawad_A/0/1/0/all/0/1&quot;&gt;Amer E. Mouawad&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Assume we are given a graph $G$, two independent sets $S$ and $T$ in $G$ of
+size $k \geq 1$, and a positive integer $\ell \geq 1$. The goal is to decide
+whether there exists a sequence $\langle I_0, I_1, ..., I_\ell \rangle$ of
+independent sets such that for all $j \in \{0,\ldots,\ell-1\}$ the set $I_j$ is
+an independent set of size $k$, $I_0 = S$, $I_\ell = T$, and $I_{j+1}$ is
+obtained from $I_j$ by a predetermined reconfiguration rule. We consider two
+reconfiguration rules. Intuitively, we view each independent set as a
+collection of tokens placed on the vertices of the graph. Then, the Token
+Sliding Optimization (TSO) problem asks whether there exists a sequence of at
+most $\ell$ steps that transforms $S$ into $T$, where at each step we are
+allowed to slide one token from a vertex to an unoccupied neighboring vertex.
+In the Token Jumping Optimization (TJO) problem, at each step, we are allowed
+to jump one token from a vertex to any other unoccupied vertex of the graph.
+Both TSO and TJO are known to be fixed-parameter tractable when parameterized
+by $\ell$ on nowhere dense classes of graphs. In this work, we show that both
+problems are fixed-parameter tractable for parameter $k + \ell + d$ on
+$d$-degenerate graphs as well as for parameter $|M| + \ell + \Delta$ on graphs
+having a modulator $M$ whose deletion leaves a graph of maximum degree
+$\Delta$. We complement these result by showing that for parameter $\ell$ alone
+both problems become W[1]-hard already on $2$-degenerate graphs. Our positive
+result makes use of the notion of independence covering families introduced by
+Lokshtanov et al. Finally, we show that using such families one can obtain a
+simpler and unified algorithm for the standard Token Jumping Reachability
+problem parameterized by $k$ on both degenerate and nowhere dense classes of
+graphs.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Experiments and a User Study for Hierarchical Drawings of Graphs</title>
+    <link href="http://arxiv.org/abs/2209.04522"/>
+    <id>http://arxiv.org/abs/2209.04522</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lionakis_P/0/1/0/all/0/1&quot;&gt;Panagiotis Lionakis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kritikakis_G/0/1/0/all/0/1&quot;&gt;Giorgos Kritikakis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tollis_I/0/1/0/all/0/1&quot;&gt;Ioannis G. Tollis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present experimental results and a user study for hierarchical drawings of
+graphs. A detailed hierarchical graph drawing technique that is based on the
+Path Based Framework (PBF) is presented. Extensive edge bundling is applied to
+draw all edges of the graph and the height of the drawing is minimized using
+compaction. The drawings produced by this framework are compared to drawings
+produced by the well known Sugiyama framework in terms of area, number of
+bends, number of crossings, and execution time. The new algorithm runs very
+fast and produces drawings that are readable and efficient. Since there are
+advantages (and disadvantages) to both frameworks, we performed a user study
+and the results show that the drawings produced by the new framework are well
+received in terms of clarity, readability, and usability. Hence, the new
+technique offers an interesting alternative to drawing hierarchical graphs, and
+is especially useful in applications where user defined paths are important and
+need to be highlighted.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Spectral hypergraph sparsification via chaining</title>
+    <link href="http://arxiv.org/abs/2209.04539"/>
+    <id>http://arxiv.org/abs/2209.04539</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lee_J/0/1/0/all/0/1&quot;&gt;James R. Lee&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In a hypergraph on $n$ vertices where $D$ is the maximum size of a hyperedge,
+there is a weighted hypergraph spectral $\varepsilon$-sparsifier with at most
+$O(\varepsilon^{-2} \log(D) \cdot n \log n)$ hyperedges. This improves over the
+bound of Kapralov, Krauthgamer, Tardos and Yoshida (2021) who achieve
+$O(\varepsilon^{-4} n (\log n)^3)$, as well as the bound $O(\varepsilon^{-2}
+D^3 n \log n)$ obtained by Bansal, Svensson, and Trevisan (2019). The same
+sparsification result was obtained independently by Jambulapati, Liu, and
+Sidford (2022).
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: PGAbB: A Block-Based Graph Processing Framework for Heterogeneous Platforms</title>
+    <link href="http://arxiv.org/abs/2209.04541"/>
+    <id>http://arxiv.org/abs/2209.04541</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yasar_A/0/1/0/all/0/1&quot;&gt;Abdurrahman Yasar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rajamanickam_S/0/1/0/all/0/1&quot;&gt;Sivasankaran Rajamanickam&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Berry_J/0/1/0/all/0/1&quot;&gt;Jonathan W. Berry&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Catalyurek_U/0/1/0/all/0/1&quot;&gt;Umit V. Catalyurek&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Designing flexible graph kernels that can run well on various platforms is a
+crucial research problem due to the frequent usage of graphs for modeling data
+and recent architectural advances and variety. In this work, we propose a novel
+graph processing framework, PGAbB (Parallel Graph Algorithms by Blocks), for
+modern shared-memory heterogeneous platforms. Our framework implements a
+block-based programming model. This allows a user to express a graph algorithm
+using kernels that operate on subgraphs. PGAbB support graph computations that
+fit in host DRAM but not in GPU device memory, and provides simple but
+effective scheduling techniques to schedule computations to all available
+resources in a heterogeneous architecture. We have demonstrated that one can
+easily implement a diverse set of graph algorithms in our framework by
+developing five algorithms. Our experimental results show that PGAbB
+implementations achieve better or competitive performance compared to
+hand-optimized implementations. Based on our experiments on five graph
+algorithms and forty-four graphs, in the median, PGAbB achieves 1.6, 1.6, 5.7,
+3.4, 4.5, and 2.4 times better performance than GAPBS, Galois, Ligra, LAGraph
+Galois-GPU, and Gunrock graph processing systems, respectively.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: The Bayan Algorithm: Detecting Communities in Networks Through Exact and Approximate Optimization of Modularity</title>
+    <link href="http://arxiv.org/abs/2209.04562"/>
+    <id>http://arxiv.org/abs/2209.04562</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Aref_S/0/1/0/all/0/1&quot;&gt;Samin Aref&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chheda_H/0/1/0/all/0/1&quot;&gt;Hriday Chheda&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mostajabdaveh_M/0/1/0/all/0/1&quot;&gt;Mahdi Mostajabdaveh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Community detection is a classic problem in network science with extensive
+applications in various fields. The most commonly used methods are the
+algorithms designed to maximize a utility function, modularity, across
+different ways that a network can be partitioned into communities. Despite
+their name and design philosophy, current modularity maximization algorithms
+generally fail to maximize modularity or guarantee any proximity to an optimal
+solution. We propose the Bayan algorithm which, unlike the existing methods,
+returns network partitions with a guarantee of either optimality or proximity
+to an optimal solution. At the core of the Bayan algorithm is a branch-and-cut
+scheme that solves a sparse integer programming formulation of the modularity
+maximization problem to optimality or approximate it within a factor. We
+analyze the performance of Bayan against 22 existing algorithms using synthetic
+and real networks. Through extensive experiments, we demonstrate Bayan&#39;s
+distinctive capabilities not only in maximizing modularity, but more
+importantly in accurate retrieval of ground-truth communities. Bayan&#39;s
+comparative level of performance remains stable over variations in the amount
+of noise in the data (graph) generation process. The performance of Bayan as an
+exact modularity maximization algorithm also reveals the theoretical capability
+limits of maximum-modularity partitions in accurate retrieval of communities.
+Overall our analysis points to Bayan as a suitable choice for a
+methodologically grounded detection of communities through exact (approximate)
+maximization of modularity in networks with up to $\sim10^3$ edges (and larger
+networks). Prospective advances in graph optimization and integer programming
+can push these limits further.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: An EPTAS for Budgeted Matroid Independent Set</title>
+    <link href="http://arxiv.org/abs/2209.04654"/>
+    <id>http://arxiv.org/abs/2209.04654</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doron_Arad_I/0/1/0/all/0/1&quot;&gt;Ilan Doron-Arad&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kulik_A/0/1/0/all/0/1&quot;&gt;Ariel Kulik&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shachnai_H/0/1/0/all/0/1&quot;&gt;Hadas Shachnai&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the budgeted matroid independent set problem. The input is a
+ground set, where each element has a cost and a non-negative profit, along with
+a matroid over the elements and a budget. The goal is to select a subset of
+elements which maximizes the total profit subject to the matroid and budget
+constraints. Several well known special cases, where we have, e.g., a uniform
+matroid and a budget, or no matroid constraint (i.e., the classic knapsack
+problem), admit a fully polynomial-time approximation scheme (FPTAS). In
+contrast, already a slight generalization to the multi-budgeted matroid
+independent set problem has a PTAS but does not admit an efficient
+polynomial-time approximation scheme (EPTAS). This implies a PTAS for our
+problem, which is the best known result prior to this work. Our main
+contribution is an EPTAS for the budgeted matroid independent set problem. A
+key idea of the scheme is to find a representative set for the instance, whose
+cardinality depends solely on $1/\varepsilon$, where $\varepsilon &amp;gt; 0$ is the
+accuracy parameter of the scheme. The representative set is identified via
+matroid basis minimization, which can be solved by a simple greedy algorithm.
+Our scheme enumerates over subsets of the representative set and extends each
+subset using a linear program. The notion of representative sets may be useful
+in solving other variants of the budgeted matroid independent set problem.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Growing a Random Maximal Independent Set Produces a 2-approximate Vertex Cover</title>
+    <link href="http://arxiv.org/abs/2209.04673"/>
+    <id>http://arxiv.org/abs/2209.04673</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Veldt_N/0/1/0/all/0/1&quot;&gt;Nate Veldt&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper presents a fast and simple new 2-approximation algorithm for
+minimum weighted vertex cover. The unweighted version of this algorithm is
+equivalent to a well-known greedy maximal independent set algorithm. We prove
+that this independent set algorithm produces a 2-approximate vertex cover, and
+we provide a principled new way to generalize it to node-weighted graphs. Our
+analysis is inspired by connections to a clustering objective called
+correlation clustering. To demonstrate the relationship between these problems,
+we show how a simple Pivot algorithm for correlation clustering implicitly
+approximates a special type of hypergraph vertex cover problem. Finally, we use
+implicit implementations of this maximal independent set algorithm to develop
+fast and simple 2-approximation algorithms for certain edge-deletion problems
+that can be reduced to vertex cover in an approximation preserving way.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Hard Optimization Problems have Soft Edges</title>
+    <link href="http://arxiv.org/abs/2209.04824"/>
+    <id>http://arxiv.org/abs/2209.04824</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cond-mat/1/au:+Marino_R/0/1/0/all/0/1&quot;&gt;Raffaele Marino&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cond-mat/1/au:+Kirkpatrick_S/0/1/0/all/0/1&quot;&gt;Scott Kirkpatrick&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Finding a Maximum Clique is a classic property test from graph theory; find
+any one of the largest complete subgraphs in an Erd{\&quot;o}s-R{\&#39;e}nyi $G(N,p)$
+random graph. It is the simplest of many such problems in which algorithms
+requiring only a small power of $N$ steps cannot reach solutions which
+probabilistic arguments show must exist, exposing an inherently &quot;hard&quot; phase
+within the solution space of the problem. Such &quot;hard&quot; phases are seen in many
+NP-Complete problems, in the limit when $N \to \infty$. But optimization
+problems arise and must be solved at finite N. We use this simplest case,
+MaxClique, to explore the structure of the problem as a function of $N$ and
+$K$, the clique size. It displays a complex phase boundary, a staircase of
+steps at each of which $2 \log_2N$ and $K_{\text{max}}$, the maximum size of
+clique that can be found, increase by $1$. Each of its boundaries have finite
+width, and these widths allow local algorithms to find cliques beyond the
+limits defined by the study of infinite systems. We explore the performance of
+a number of extensions of traditional fast local algorithms, and find that much
+of the &quot;hard&quot; space remains accessible at finite $N$.
+&lt;/p&gt;
+&lt;p&gt;The &quot;hidden clique&quot; problem embeds a clique somewhat larger than those which
+occur naturally in a $G(N,p)$ random graph. Since such a clique is unique, we
+find that local searches which stop early, once evidence for the hidden clique
+is found, may outperform the best message passing or spectral algorithms.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Rethink Decision Tree Traversal</title>
+    <link href="http://arxiv.org/abs/2209.04825"/>
+    <id>http://arxiv.org/abs/2209.04825</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_J/0/1/0/all/0/1&quot;&gt;Jinxiong Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We will show how to evaluate binary decision tree traversal in the language
+of matrix computation motivated by \textit{QuickScorer} in
+\cite{lucchese2015quickscorer}. Our main contribution is a novel matrix
+representation of the hierarchical structure of the decision tree. And we
+propose some equivalent algorithms of binary decision tree traversal based on
+rigorous theoretical analysis. The core idea is to find the relation between
+the input and exit leaf node. Here we not only understand decisions without the
+recursive traverse but also dive into the partitioning nature of tree-based
+methods.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: An Improved Algorithm For Online Reranking</title>
+    <link href="http://arxiv.org/abs/2209.04870"/>
+    <id>http://arxiv.org/abs/2209.04870</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bienkowski_M/0/1/0/all/0/1&quot;&gt;Marcin Bienkowski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mucha_M/0/1/0/all/0/1&quot;&gt;Marcin Mucha&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study a fundamental model of online preference aggregation, where an
+algorithm maintains an ordered list of $n$ elements. An input is a stream of
+preferred sets $R_1, R_2, \dots, R_t, \dots$. Upon seeing $R_t$ and without
+knowledge of any future sets, an algorithm has to rerank elements (change the
+list ordering), so that at least one element of $R_t$ is found near the list
+front. The incurred cost is a sum of the list update costs (the number of swaps
+of neighboring list elements) and access costs (position of the first element
+of $R_t$ on the list). This scenario occurs naturally in applications such as
+ordering items in an online shop using aggregated preferences of shop
+customers. The theoretical underpinning of this problem is known as Min-Sum Set
+Cover.
+&lt;/p&gt;
+&lt;p&gt;Unlike previous work (Fotakis et al., ICALP 2020, NIPS 2020) that mostly
+studied the performance of an online algorithm ALG against the static optimal
+solution (a single optimal list ordering), in this paper, we study an arguably
+harder variant where the benchmark is the provably stronger optimal dynamic
+solution OPT (that may also modify the list ordering). In terms of an online
+shop, this means that the aggregated preferences of its user base evolve with
+time. We construct a computationally efficient randomized algorithm whose
+competitive ratio (ALG-to-OPT cost ratio) is $O(r^2)$ and prove the existence
+of a deterministic $O(r^4)$-competitive algorithm. Here, $r$ is the maximum
+cardinality of sets $R_t$. This is the first algorithm whose ratio does not
+depend on $n$: the previously best algorithm for this problem was $O(r^{3/2}
+\cdot \sqrt{n})$-competitive and $\Omega(r)$ is a lower bound on the
+performance of any deterministic online algorithm.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Subquadratic Kronecker Regression with Applications to Tensor Decomposition</title>
+    <link href="http://arxiv.org/abs/2209.04876"/>
+    <id>http://arxiv.org/abs/2209.04876</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fahrbach_M/0/1/0/all/0/1&quot;&gt;Matthew Fahrbach&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fu_T/0/1/0/all/0/1&quot;&gt;Thomas Fu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghadiri_M/0/1/0/all/0/1&quot;&gt;Mehrdad Ghadiri&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Kronecker regression is a highly-structured least squares problem
+$\min_{\mathbf{x}} \lVert \mathbf{K}\mathbf{x} - \mathbf{b} \rVert_{2}^2$,
+where the design matrix $\mathbf{K} = \mathbf{A}^{(1)} \otimes \cdots \otimes
+\mathbf{A}^{(N)}$ is a Kronecker product of factor matrices. This regression
+problem arises in each step of the widely-used alternating least squares (ALS)
+algorithm for computing the Tucker decomposition of a tensor. We present the
+first subquadratic-time algorithm for solving Kronecker regression to a
+$(1+\varepsilon)$-approximation that avoids the exponential term
+$O(\varepsilon^{-N})$ in the running time. Our techniques combine leverage
+score sampling and iterative methods. By extending our approach to block-design
+matrices where one block is a Kronecker product, we also achieve
+subquadratic-time algorithms for (1) Kronecker ridge regression and (2)
+updating the factor matrix of a Tucker decomposition in ALS, which is not a
+pure Kronecker regression problem, thereby improving the running time of all
+steps of Tucker ALS. We demonstrate the speed and accuracy of this Kronecker
+regression algorithm on synthetic data and real-world image tensors.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Cores of Games via Total Dual Integrality, with Applications to Perfect Graphs and Polymatroids</title>
+    <link href="http://arxiv.org/abs/2209.04903"/>
+    <id>http://arxiv.org/abs/2209.04903</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vazirani_V/0/1/0/all/0/1&quot;&gt;Vijay V. Vazirani&lt;/a&gt;&lt;/p&gt;&lt;p&gt;LP-duality theory has played a central role in the study of cores of games,
+right from the early days of this notion to the present time. The classic paper
+of Shapley and Shubik \cite{Shapley1971assignment} introduced the &quot;right&quot; way
+of exploiting the power of this theory, namely picking problems whose
+LP-relaxations support polyhedra having integral vertices. So far, the latter
+fact was established by showing that the constraint matrix of the underlying
+linear system is {\em totally unimodular}.
+&lt;/p&gt;
+&lt;p&gt;We attempt to take this methodology to its logical next step -- {\em using
+total dual integrality} -- thereby addressing new classes of games which have
+their origins in two major theories within combinatorial optimization, namely
+perfect graphs and polymatroids. In the former, we address the stable set and
+clique games and in the latter, we address the matroid independent set game.
+For each of these games, we prove that the set of core imputations is precisely
+the set of optimal solutions to the dual LPs.
+&lt;/p&gt;
+&lt;p&gt;Another novelty is the way the worth of the game is allocated among
+sub-coalitions. Previous works follow the {\em bottom-up process} of allocating
+to individual agents; the allocation to a sub-coalition is simply the sum of
+the allocations to its agents. The {\em natural process for our games is
+top-down}. The optimal dual allocates to &quot;objects&quot; in the grand coalition; a
+sub-coalition inherits the allocation of each object with which it has
+non-empty intersection.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Dynamic Subset Sum with Truly Sublinear Processing Time</title>
+    <link href="http://arxiv.org/abs/2209.04936"/>
+    <id>http://arxiv.org/abs/2209.04936</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saleh_H/0/1/0/all/0/1&quot;&gt;Hamed Saleh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Seddighin_S/0/1/0/all/0/1&quot;&gt;Saeed Seddighin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Subset sum is a very old and fundamental problem in theoretical computer
+science. In this problem, $n$ items with weights $w_1, w_2, w_3, \ldots, w_n$
+are given as input and the goal is to find out if there is a subset of them
+whose weights sum up to a given value $t$. While the problem is NP-hard in
+general, when the values are non-negative integer, subset sum can be solved in
+pseudo-polynomial time $~\widetilde O(n+t)$.
+&lt;/p&gt;
+&lt;p&gt;In this work, we consider the dynamic variant of subset sum. In this setting,
+an upper bound $\tmax$ is provided in advance to the algorithm and in each
+operation, either a new item is added to the problem or for a given integer
+value $t \leq \tmax$, the algorithm is required to output whether there is a
+subset of items whose sum of weights is equal to $t$. Unfortunately, none of
+the existing subset sum algorithms is able to process these operations in truly
+sublinear time\footnote{Truly sublinear means $n^{1-\Omega(1)}$.} in terms of
+$\tmax$.
+&lt;/p&gt;
+&lt;p&gt;Our main contribution is an algorithm whose amortized processing
+time\footnote{Since the runtimes are amortized, we do not use separate terms
+update time and query time for different operations and use processing time for
+all types of operations.} for each operation is truly sublinear in $\tmax$ when
+the number of operations is at least $\tmax^{2/3+\Omega(1)}$. We also show that
+when both element addition and element removal are allowed, there is no
+algorithm that can process each operation in time $\tmax^{1-\Omega(1)}$ on
+average unless \textsf{SETH}\footnote{The \textit{strong exponential time
+hypothesis} states that no algorithm can solve the satisfiability problem in
+time $2^{n(1-\Omega(1))}$.} fails.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: QUBO formulations for NP-Hard spanning tree problems</title>
+    <link href="http://arxiv.org/abs/2209.05024"/>
+    <id>http://arxiv.org/abs/2209.05024</id>
+    <updated>2022-09-13T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Carvalho_I/0/1/0/all/0/1&quot;&gt;Ivan Carvalho&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce a novel Quadratic Unconstrained Binary Optimization (QUBO)
+formulation method for spanning tree problems. Instead of encoding the presence
+of edges in the tree individually, we opt to encode spanning trees as a
+permutation problem. We apply our method to four NP-hard spanning tree
+variants, namely the k-minimum spanning tree, degree-constrained minimum
+spanning tree, minimum leaf spanning tree, and maximum leaf spanning tree. Our
+main result is a formulation with $\mathcal{O}(|V|k)$ variables for the
+k-minimum spanning tree problem, beating related strategies that need
+$\mathcal{O}(|V|^{2})$ variables.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Computational Complexity: Thirty Years of Dagstuhl</title>
     <link href="http://blog.computationalcomplexity.org/2022/09/thirty-years-of-dagstuhl.html"/>
     <id>tag:blogger.com,1999:blog-3722233.post-4092582253443093216</id>
@@ -919,752 +1651,6 @@ data sets.
     <author>
       <name>arXiv: Data Structures and Algorithms</name>
       <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Multitask Learning via Shared Features: Algorithms and Hardness</title>
-    <link href="http://arxiv.org/abs/2209.03112"/>
-    <id>http://arxiv.org/abs/2209.03112</id>
-    <updated>2022-09-08T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bairaktari_K/0/1/0/all/0/1&quot;&gt;Konstantina Bairaktari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blanc_G/0/1/0/all/0/1&quot;&gt;Guy Blanc&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tan_L/0/1/0/all/0/1&quot;&gt;Li-Yang Tan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ullman_J/0/1/0/all/0/1&quot;&gt;Jonathan Ullman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zakynthinou_L/0/1/0/all/0/1&quot;&gt;Lydia Zakynthinou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate the computational efficiency of multitask learning of Boolean
-functions over the $d$-dimensional hypercube, that are related by means of a
-feature representation of size $k \ll d$ shared across all tasks. We present a
-polynomial time multitask learning algorithm for the concept class of
-halfspaces with margin $\gamma$, which is based on a simultaneous boosting
-technique and requires only $\textrm{poly}(k/\gamma)$ samples-per-task and
-$\textrm{poly}(k\log(d)/\gamma)$ samples in total.
-&lt;/p&gt;
-&lt;p&gt;In addition, we prove a computational separation, showing that assuming there
-exists a concept class that cannot be learned in the attribute-efficient model,
-we can construct another concept class such that can be learned in the
-attribute-efficient model, but cannot be multitask learned efficiently --
-multitask learning this concept class either requires super-polynomial time
-complexity or a much larger total number of samples.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Computing the Hit Rate of Similarity Caching</title>
-    <link href="http://arxiv.org/abs/2209.03174"/>
-    <id>http://arxiv.org/abs/2209.03174</id>
-    <updated>2022-09-08T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mazziane_Y/0/1/0/all/0/1&quot;&gt;Younes Ben Mazziane&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alouf_S/0/1/0/all/0/1&quot;&gt;Sara Alouf&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Neglia_G/0/1/0/all/0/1&quot;&gt;Giovanni Neglia&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Menasche_D/0/1/0/all/0/1&quot;&gt;Daniel Sadoc Menasche&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Similarity caching allows requests for an item \(i\) to be served by a
-similar item \(i&#39;\). Applications include recommendation systems, multimedia
-retrieval, and machine learning. Recently, many similarity caching policies
-have been proposed, but still we do not know how to compute the hit rate even
-for the simplest policies, like SIM-LRU and RND-LRU that are straightforward
-modifications of classical caching algorithms. This paper proposes the first
-algorithm to compute the hit rate of similarity caching policies under the
-independent reference model for the request process. In particular, our work
-shows how to extend the popular TTL approximation from classic caching to
-similarity caching. The algorithm is evaluated on both synthetic and real world
-traces.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Lecturer in Verification at University of Sheffield (apply by September 30, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/09/07/lecturer-in-verification-at-university-of-sheffield-apply-by-september-30-2022/"/>
-    <id>http://cstheory-jobs.org/2022/09/07/lecturer-in-verification-at-university-of-sheffield-apply-by-september-30-2022/</id>
-    <updated>2022-09-07T15:37:51+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;We seek candidates with an outstanding record in the logical and mathematical foundations of computing, including hardware and software verification. You will work within the Verification Group, a well-established group in the Department of Computer Science. Our research range from the mathematical and logical foundations of computing to practical verification methods and tools to support these.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://www.jobs.ac.uk/job/CTB680/lecturer-in-verification&quot;&gt;https://www.jobs.ac.uk/job/CTB680/lecturer-in-verification&lt;/a&gt;&lt;br /&gt;
-Email: g.j.brown@sheffield.ac.uk&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">TCS+ Seminar Series: TCS+ talk: Wednesday, September 14 — Moses Charikar, Stanford University</title>
-    <link href="https://tcsplus.wordpress.com/2022/09/07/tcs-talk-wednesday-september-14-moses-charikar-stanford-university/"/>
-    <id>http://tcsplus.wordpress.com/?p=635</id>
-    <updated>2022-09-07T12:28:45+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;The Fall&amp;#8217;22 season of TCS+ is about to start (next week!), with our very first &amp;#8220;Test of Time&amp;#8221; talk! This coming Wednesday, September 14th at 1:00 PM Eastern Time (10:00 AM Pacific Time, 19:00 Central European Time, 17:00 UTC), &lt;strong&gt;Moses Charikar&lt;/strong&gt; from Stanford University will speak about &amp;#8220;&lt;em&gt;A Retrospective on Locality Sensitive Hashing&lt;/em&gt;&amp;#8221; (abstract below).&lt;/p&gt;
-&lt;p&gt;You can reserve a spot as an individual or a group to join us live by signing up on &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/next-tcs-talk&quot;&gt;the online form&lt;/a&gt;. Registration is &lt;em&gt;not&lt;/em&gt; required to attend the interactive talk, and the link will be posted on the website the day prior to the talk; however, by registering in the form, you will receive a reminder, along with the link. (The recorded talk will also be posted &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/past-talks&quot;&gt;on our website&lt;/a&gt; afterwards) As usual, for more information about the TCS+ online seminar series and the upcoming talks, or to &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/suggest-a-talk&quot;&gt;suggest&lt;/a&gt; a possible topic or speaker, please see &lt;a href=&quot;https://sites.google.com/view/tcsplus/&quot;&gt;the website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The seminar will include some time for questions and discussions after the talk, off the record.&lt;/p&gt;
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;&lt;p&gt;Abstract: In this talk, I will look back at the development of locality sensitive hashing &amp;#8212; a twist on classical hashing, where similar items are more likely to map to the same hash bucket. This is an integral part of the algorithmic toolkit for big data algorithms. We will review the evolution of these ideas from 25 years ago to the present.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p class=&quot;authors&quot;&gt;By plustcs&lt;/p&gt;
-  </content>
-    <author>
-      <name>TCS+ Seminar Series</name>
-      <uri>https://tcsplus.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Tenure-track assistant or associate professorship in complexity theory at University of Copenhagen (apply by October 2, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/09/07/tenure-track-assistant-or-associate-professorship-in-complexity-theory-at-university-of-copenhagen-apply-by-october-2-2022/"/>
-    <id>http://cstheory-jobs.org/2022/09/07/tenure-track-assistant-or-associate-professorship-in-complexity-theory-at-university-of-copenhagen-apply-by-october-2-2022/</id>
-    <updated>2022-09-07T10:39:59+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;The CS department at the University of Copenhagen invites applications for a tenure-track assistant or associate professorship in computational complexity. The application deadline is October 2, 2022. See &lt;a href=&quot;http://www.jakobnordstrom.se/openings/AsstAssocProf-UCPH-221002.html&quot;&gt;http://www.jakobnordstrom.se/openings/AsstAssocProf-UCPH-221002.html&lt;/a&gt; for more information and instructions how to apply. Informal enquiries are welcome and may be sent to jn@di.ku.dk.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;http://www.jakobnordstrom.se/openings/AsstAssocProf-UCPH-221002.html&quot;&gt;http://www.jakobnordstrom.se/openings/AsstAssocProf-UCPH-221002.html&lt;/a&gt;&lt;br /&gt;
-Email: jn@di.ku.dk&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Classifying Spatial Trajectories</title>
-    <link href="http://arxiv.org/abs/2209.01322"/>
-    <id>http://arxiv.org/abs/2209.01322</id>
-    <updated>2022-09-07T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pourmahmood_Aghababa_H/0/1/0/all/0/1&quot;&gt;Hasan Pourmahmood-Aghababa&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Phillips_J/0/1/0/all/0/1&quot;&gt;Jeff M. Phillips&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide the first comprehensive study on how to classify trajectories
-using only their spatial representations, measured on 5 real-world data sets.
-Our comparison considers 20 distinct classifiers arising either as a KNN
-classifier of a popular distance, or as a more general type of classifier using
-a vectorized representation of each trajectory. We additionally develop new
-methods for how to vectorize trajectories via a data-driven method to select
-the associated landmarks, and these methods prove among the most effective in
-our study. These vectorized approaches are simple and efficient to use, and
-also provide state-of-the-art accuracy on an established transportation mode
-classification task. In all, this study sets the standard for how to classify
-trajectories, including introducing new simple techniques to achieve these
-results, and sets a rigorous standard for the inevitable future study on this
-topic.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On the arboreal jump number of a poset</title>
-    <link href="http://arxiv.org/abs/2209.01270"/>
-    <id>http://arxiv.org/abs/2209.01270</id>
-    <updated>2022-09-07T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Cavalcante_E/0/1/0/all/0/1&quot;&gt;Evellyn S. Cavalcante&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Urrutia_S/0/1/0/all/0/1&quot;&gt;Sebasti&amp;#xe1;n Urrutia&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Santos_V/0/1/0/all/0/1&quot;&gt;Vinicius F. dos Santos&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A jump is a pair of consecutive elements in an extension of a poset which are
-incomparable in the original poset. The arboreal jump number is an NP-hard
-problem that aims to find an arboreal extension of a given poset with minimum
-number of jumps. The contribution of this paper is twofold: (i)~a
-characterization that reveals a relation between the number of jumps of an
-arboreal order extension and the size of a partition of its elements that
-satisfy some structural properties of the covering graph; (ii)~a compact
-integer programming model and a heuristic to solve the arboreal jump number
-problem along with computational results comparing both strategies. The exact
-method provides an optimality certificate for 18 out of 41 instances with
-execution time limited to two hours. Furthermore, our heuristic was able to
-find good feasible solutions for all instances in less than three minutes.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Property Testing Review: News for August 2022</title>
-    <link href="https://ptreview.sublinear.info/2022/09/news-for-august-2022/"/>
-    <id>https://ptreview.sublinear.info/?p=1754</id>
-    <updated>2022-09-06T18:33:21+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;A eerily quiet month, this August of &amp;#8217;22. We only found a single paper to cover!&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Training Overparametrized Neural Networks in Sublinear Time&lt;/strong&gt; by Hang Hu, Zhao Song, Omri Weinstein, Danyang Zhuo (&lt;a href=&quot;https://arxiv.org/abs/2208.04508&quot;&gt;arXiv&lt;/a&gt;). Think of a classification problem where the inputs are in \(\mathbb{R}^d\). We have \(n\) such points (with their true labels, as training data) and wish to train a Neural Network. A two layer Rectified Linear Unit (ReLU) Neural Network (NN) works as follows. The first layer has \(m\) vertices, where each vertex has vector weight \(\vec{w}_i \in \mathbb{R}^d\). The second &amp;#8220;hidden layer&amp;#8221; has \(m\) vertices, each with a scalar weight \(a_1, a_2, \ldots, a_m\). This network is called overparametrized when \(m \gg n\). The output of this NN on input vector \(\vec{x}\) is (up to scaling) \(\sum_{i \leq m} a_i \phi(\vec{w_i} \cdot \vec{x})\) (where \(\phi\) is a thresholded linear function). Observe that to compute the value on a single input takes \(O(md)\) time, so the total time to compute all values on \(n\) training inputs takes \(O(mnd)\) time. The training is done by gradient descent methods; given a particular setting of weights, we compute the total loss, and then modify the weights along the gradient. Previous work showed how a single iteration can be done in time \(O(mnd + n^3)\). When \(m \gg n^2\), this can be thought of as linear in computing the loss function (which requires evaluating the NN on all the \(n\) points). This paper shows how to implement a single iteration in \(O(m^{1-\alpha}nd + n^3)\) time, for some \(\alpha &gt; 0\). Hence, the time for an iteration is sublinear in the trivial computation. The techniques used are sparse recovery methods and random projections.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Seshadhri&lt;/p&gt;
-  </content>
-    <author>
-      <name>Property Testing Review</name>
-      <uri>https://ptreview.sublinear.info</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Emanuele Viola: Talk in two days on correlation bounds</title>
-    <link href="https://emanueleviola.wordpress.com/2022/09/06/talk-in-two-days-on-correlation-bounds/"/>
-    <id>http://emanueleviola.wordpress.com/?p=1050</id>
-    <updated>2022-09-06T14:17:55+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;In two days, this Thursday at 12PM EST, I am giving a talk on &lt;em&gt;Correlation bounds and all that.  &lt;/em&gt;The talk is hosted by Igor Oliveira and is open to everybody.  Follow &lt;a href=&quot;https://www.dcs.warwick.ac.uk/~igorcarb/complexity-meetings.html&quot;&gt;this link&lt;/a&gt; to join.&lt;/p&gt;
-&lt;p&gt;In the talk I will discuss correlation bounds for polynomials, and &lt;del&gt;give full proofs of&lt;/del&gt; touch on three recent works of mine:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;b&gt;Fourier conjectures, correlation bounds, and Majority &lt;/b&gt;(&lt;a href=&quot;https://www.ccs.neu.edu/home/viola/papers/L12requiresCor.pdf&quot;&gt;link)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;On correlation bounds against polynomials&lt;/b&gt;, with Peter Ivanov and Liam Pavlovic (&lt;a href=&quot;https://www.ccs.neu.edu/home/viola/papers/corr.pdf&quot;&gt;link&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Fooling polynomials using invariant theory, &lt;/b&gt;with Harm Derksen (upcoming)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p class=&quot;authors&quot;&gt;By Manu&lt;/p&gt;
-  </content>
-    <author>
-      <name>Emanuele Viola</name>
-      <uri>https://emanueleviola.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-123 |  The Approximate Degree of DNF and CNF Formulas | 
-
-	Alexander A. Sherstov</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/123"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/123</id>
-    <updated>2022-09-05T04:49:37+00:00</updated>
-    <content type="html" xml:lang="en">
-    The approximate degree of a Boolean function $f\colon\{0,1\}^n\to\{0,1\}$ is the minimum degree of a real polynomial $p$ that approximates $f$ pointwise: $|f(x)-p(x)|\leq1/3$ for all $x\in\{0,1\}^n.$ For every $\delta&amp;gt;0,$ we construct CNF and DNF formulas of polynomial size with approximate degree $\Omega(n^{1-\delta}),$ essentially matching the trivial upper bound of $n.$ This improves polynomially on previous lower bounds and fully resolves the approximate degree of constant-depth circuits ($\text{AC}^{0}$), a question that has seen extensive research over the past 10 years. Prior to our work, an $\Omega(n^{1-\delta})$ lower bound was known only for $\text{AC}^{0}$ circuits of depth that grows with $1/\delta$ (Bun and Thaler, FOCS 2017). Furthermore, the CNF and DNF formulas that we construct are the simplest possible in that they have constant width. Our result holds even for one-sided approximation: for any $\delta&amp;gt;0$, we construct a polynomial-size constant-width CNF formula with one-sided approximate degree $\Omega(n^{1-\delta})$.
-
-Our work has the following consequences.
-
-(i) We essentially settle the communication complexity of $\text{AC}^{0}$ circuits in the bounded-error quantum model, $k$-party number-on-the-forehead randomized model, and $k$-party number-on-the-forehead nondeterministic model: we prove that for every $\delta&amp;gt;0$, these models require $\Omega(n^{1-\delta})$, $\Omega(n/4^{k}k^{2})^{1-\delta}$, and $\Omega(n/4^{k}k^{2})^{1-\delta}$, respectively, bits of communication even for polynomial-size constant-width CNF formulas.
-
-(ii) In particular, we show that the multiparty communication class $\text{coNP}_{k}$ can be separated essentially optimally from $\text{NP}_{k}$ and $\text{BPP}_{k}$ by a particularly simple function, a polynomial-size constant-width CNF formula.
-
-(iii) We give an essentially tight separation, of $O(1)$ versus $\Omega(n^{1-\delta})$, for the one-sided versus two-sided approximate degree of a function; and $O(1)$ versus $\Omega(n^{1-\delta})$ for the one-sided approximate degree of a function $f$ versus its negation $\neg f$.
-
-Our proof departs significantly from previous approaches and contributes a novel, number-theoretic method for amplifying approximate degree.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Decentralized Thoughts: What is a Blockchain?</title>
-    <link href="https://decentralizedthoughts.github.io/2022-09-05-what-is-a-blockchain/"/>
-    <id>https://decentralizedthoughts.github.io/2022-09-05-what-is-a-blockchain/</id>
-    <updated>2022-09-05T04:00:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    TLDR: a Blockchain is a trusted coordination mechanism; Of course, the answer depends on who you ask :-) My 7-word answer: a blockchain is a trusted coordination mechanism. What is your definition of a blockchain? Reply with your 7-word answer on Twitter. My answer to this question evolved over the...
-  </content>
-    <author>
-      <name>Decentralized Thoughts</name>
-      <uri>https://decentralizedthoughts.github.io</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Richard Lipton: Legal Complexity</title>
-    <link href="https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/"/>
-    <id>https://rjlipton.wpcomstaging.com/?p=20362</id>
-    <updated>2022-09-05T03:53:23+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;
-&lt;font color=&quot;#0044cc&quot;&gt;&lt;br /&gt;
-&lt;em&gt;Formal logical methods may be needed to represent the Donald Trump documents case&lt;/em&gt;&lt;br /&gt;
-&lt;font color=&quot;#000000&quot;&gt;&lt;/p&gt;
-&lt;table class=&quot;image alignright&quot;&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;
-&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/monicapalmirani/&quot; rel=&quot;attachment wp-att-20364&quot;&gt;&lt;img data-attachment-id=&quot;20364&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/monicapalmirani/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/MonicaPalmirani.jpg?fit=133%2C193&amp;amp;ssl=1&quot; data-orig-size=&quot;133,193&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;MonicaPalmirani&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/MonicaPalmirani.jpg?fit=133%2C193&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/MonicaPalmirani.jpg?fit=133%2C193&amp;amp;ssl=1&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/MonicaPalmirani.jpg?resize=87%2C127&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;87&quot; height=&quot;127&quot; class=&quot;alignright wp-image-20364&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;caption alignright&quot;&gt;&lt;font size=&quot;-2&quot;&gt;&lt;a href=&quot;https://www.unibo.it/sitoweb/monica.palmirani/cv-en&quot;&gt;her page&lt;/font&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;
-Monica Palmirani is a &lt;a href=&quot;https://www.unibo.it/sitoweb/monica.palmirani/cv-en&quot;&gt;Professor&lt;/a&gt; of Computer Science and Law at the University of Bologna in Italy. She is one of the &lt;a href=&quot;http://www.aicol.eu/?page_id=8&quot;&gt;Program Chairs&lt;/a&gt; of the 2021-2022 &lt;a href=&quot;http://www.aicol.eu/&quot;&gt;AICOL&lt;/a&gt; conference: Artificial Intelligence Approaches to the Complexity of Legal Systems.&lt;/p&gt;
-&lt;p&gt;
-Today Ken and I discuss how logical methods may be used to model complex legal cases.&lt;/p&gt;
-&lt;p&gt;
-We recently &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/07/18/complexity-2022/&quot;&gt;noted&lt;/a&gt; that the principal annual hand-weaving conference shares the moniker &amp;#8220;Complexity 2022&amp;#8221; with one in our field. We were being lighthearted, but here the use of &amp;#8220;complexity&amp;#8221; is seriously aligned with ours. Consider a recent &lt;a href=&quot;https://ebooks.iospress.nl/volumearticle/58532&quot;&gt;paper&lt;/a&gt; by Palmirani with three colleagues at Bologna, titled &amp;#8220;Hybrid AI Framework for Legal Analysis of the EU Legislation Corrigenda.&amp;#8221; It defines a taxonomy for correction rules exemplified by:&lt;/p&gt;
-&lt;p&gt;
-&lt;FONT SIZE=&quot;-1&quot;&gt;&lt;br /&gt;
-&lt;CODE&gt;&lt;br /&gt;
-On page 257, point (b) of the first paragraph of Article 112: for:&lt;br /&gt;
-&amp;#8216;(b) Article 10 and points (a) and (b) of Article 12(1) of Directive 98/79/EC, and …&amp;#8217;,&lt;br /&gt;
-read&lt;br /&gt;
-&amp;#8216;(b) Article 10, points (a) and (b) of Article 12(1) and Article 15(5) of Directive 98/79/EC, and &amp;#8230;&amp;#8217;&lt;br /&gt;
-&lt;/CODE&gt;&lt;br /&gt;
-&lt;/FONT&gt;&lt;/p&gt;
-&lt;p&gt;&lt;P&gt;&lt;br /&gt;
-This is minute stuff, yet so voluminous that management systems are needed. One of their main results is that the corpus of previously made corrections involve far higher Levenstein edit distance than their rules identify as needed. &lt;/p&gt;
-&lt;p&gt;
-The newly-prominent Donald Trump documents case involves matters just as voluminous and much less minute. We have written about systems of logic applied to real-world reasoning on several prior occasions. This one brings multiple taxonomies: of levels of secrecy, of presidential powers, of security mandates, of grades of offense to applicable laws. There is a timeline with critical junctures. An AI system, at least of the knowledge-representation kind, may be needed just to keep it all straight.&lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Secrets &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-We&amp;#8217;ll begin with rules governing secrecy. I once was a keeper of secrets when I consulted for the government during the height of the Cold War. This does not allow me to say anything about details on any secrets we kept. But it does, I feel, allow me to remark on the keeping of secrets in general. &lt;/p&gt;
-&lt;p&gt;
-The issue is whether or not Trump violated the law in keeping boxes of classified material at his home at Mar-A-Lago. My understanding of the situation is this:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-Trump kept many boxes of classified material at his home at Mar-a-Lago. This was after he left being the President. &lt;/p&gt;
-&lt;li&gt;
-The FBI made a legal request to a Federal judge to get the boxes from there recently. &lt;/p&gt;
-&lt;li&gt;
-The judge allowed this and the FBI removed the boxes on August 8, 2022. &lt;/p&gt;
-&lt;li&gt;
-The FBI request was later partially released to us after being blacked out. Here is the &lt;a href=&quot;https://apps.npr.org/documents/document.html?id=22267188-mar-a-lago-affi&quot;&gt;official copy&lt;/a&gt;.
-&lt;/ol&gt;
-&lt;p&gt;
-The taxonomy of classification given in the FBI affidavit (see pages 4&amp;#8211;5, points 11&amp;#8211;16 for full definitions) is:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-Sensitive Compartmented Information (SCI). &lt;/p&gt;
-&lt;li&gt;
-Special Intelligence (SI), described as &amp;#8220;an SCI control system.&amp;#8221; &lt;/p&gt;
-&lt;li&gt;
-HUMINT Control System (HCS). &lt;/p&gt;
-&lt;li&gt;
-Foreign Intelligence Surveillance Act (FISA). &lt;/p&gt;
-&lt;li&gt;
-Not Releasable to Foreign Nationals (NOFORN). &lt;/p&gt;
-&lt;li&gt;
-Originator Controlled (ORCON).
-&lt;/ol&gt;
-&lt;p&gt;
-Do Trump&amp;#8217;s actions violate the law? Do they violate any reasonable rule of keeping secrets? Here is an example of the kind of logical modeling we imagine toward answering these questions. ORCON is defined as &amp;#8220;dissemination beyond pre-approved U.S. entities requires originator approval.&amp;#8221; This suggests asking:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; Under what circumstances does de-classifying a document marked ORCON without approval of its originator constitute a violation? &lt;/em&gt;
-&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;p&gt;
-The answer may depend on the timeline with regard to Trump&amp;#8217;s powers in office, prerogatives after leaving office, and the actions by the Department of Justice and the FBI. Let&amp;#8217;s take a look at that next.&lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Timeline and Key Dates &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-Among various constructions of the timeline, &lt;a href=&quot;https://terikanefield.com/timelinestolendocs/&quot;&gt;this&lt;/a&gt; by the lawyer and author Teri Kanefield also notes the secrecy levels. &lt;/p&gt;
-&lt;p&gt;
-Let&amp;#8217;s look at the time sequence. The material was kept by Trump at Mar-a-Lago. Then it was removed on August 8, 2022 by the FBI. What Kanefield calls &amp;#8220;Phase 3&amp;#8221; is entirely this key date. &lt;/p&gt;
-&lt;p&gt;
-One logical inference is that the only time that any secrets could have been violated is from when Trump had the material until August 8, 2022. Since he did not have the material after August 8, it seem safe to say that he could not have compromised the material after that. Note: there seems to be no claim that he &lt;em&gt;made private copies&lt;/em&gt; of the material before the key date, so the time until August 8, 2022, is the only time in question.&lt;/p&gt;
-&lt;p&gt;
-The instantly-famous &lt;a href=&quot;https://www.npr.org/2022/09/01/1120323225/why-the-dojs-photo-of-top-secret-documents-held-by-trump-matters&quot;&gt;photo&lt;/a&gt; of materials recovered in the search both shows some of the classified designations listed above and hints that the timeline mixes with Trump&amp;#8217;s handling of his own mementoes:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/trumpdocumentsphoto/&quot; rel=&quot;attachment wp-att-20366&quot;&gt;&lt;img data-attachment-id=&quot;20366&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2022/09/04/legal-complexity/trumpdocumentsphoto/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?fit=745%2C561&amp;amp;ssl=1&quot; data-orig-size=&quot;745,561&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;KWRegan&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1662247874&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;TrumpDocumentsPhoto&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?fit=300%2C226&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?fit=600%2C452&amp;amp;ssl=1&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?resize=372%2C280&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;372&quot; height=&quot;280&quot; class=&quot;aligncenter wp-image-20366&quot; srcset=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?w=745&amp;amp;ssl=1 745w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?resize=300%2C226&amp;amp;ssl=1 300w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?resize=400%2C300&amp;amp;ssl=1 400w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2022/09/TrumpDocumentsPhoto.jpg?resize=200%2C150&amp;amp;ssl=1 200w&quot; sizes=&quot;(max-width: 372px) 100vw, 372px&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Logical Points and Scales &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-Our ulterior purpose in this note is to point out that there are &lt;em&gt;at least four&lt;/em&gt; levels on which logical rules can be applied:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-Most fundamental are rules that track consistency of references to relevant sections of legislation. This is the level of the systems described by Palmirani et al. Such rules may seem minute and trivial but their need and heft are not to be discounted. &lt;/p&gt;
-&lt;li&gt;
-Next level are rules about what constitutes infractions of these statutes, to what level of gravity, and about jurisdiction for prosecuting them. &lt;/p&gt;
-&lt;li&gt;
-Next level are rules employed in arbitrating whether and which infractions have occurred. This may involve rules of &lt;a href=&quot;https://en.wikipedia.org/wiki/Temporal_logic&quot;&gt;temporal logic&lt;/a&gt; with regard to the timeline of events. &lt;/p&gt;
-&lt;li&gt;
-The top level is arguing the logic of the accusations and possible defenses to them.
-&lt;/ol&gt;
-&lt;p&gt;
-The top level features most in &amp;#8220;news analysis&amp;#8221; and arguments on social media by many would-be Perry Masons. But our point is that the impact of logical systems as they are programmed comes first and foremost at the bottom, not here. &lt;/p&gt;
-&lt;p&gt;
-Rules that unfold how designations like NOFORN and ORCON apply in practice occupy the lower levels. Experts on the intelligence and FBI/DoJ sides have begun expounding them in public, but full treatment will be the grist of long legal filings. Let us, however, indulge the higher levels. Continuing with the previous section about the timeline, I believe the key issue is whether or not any access by others to the secret information happened before the key date. If the material was sealed in the Mar-a-Lago rooms and no one had access to the material, it would seem to take the gravest offenses off the table.&lt;/p&gt;
-&lt;p&gt;
-A higher point is that such defenses saying no leak of secrets occurred before the key date have zero overlap with defenses based on asserting that Trump explicitly or implicitly de-classified it all upon leaving office in January 2021. If the latter, then there were &lt;em&gt;de jure&lt;/em&gt; no secrets. The two kinds of defense can exist in different branches of the case, depending on resolution of the extent of presidential powers to declassify. But they cannot be simultaneously in focus&amp;#8212;then their conjunction brings a logical contradiction. &lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Open Problems &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-Have we said enough to indicate how the programming of logical rules, especially at lower levels, will be needed during the full development of this case?&lt;/p&gt;
-&lt;p&gt;
-&lt;p class=&quot;authors&quot;&gt;By RJLipton+KWRegan&lt;/p&gt;
-  </content>
-    <author>
-      <name>Richard Lipton</name>
-      <uri>https://rjlipton.wpcomstaging.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: What I&amp;#8217;ve learned from having COVID</title>
-    <link href="https://scottaaronson.blog/?p=6704"/>
-    <id>https://scottaaronson.blog/?p=6704</id>
-    <updated>2022-09-04T14:40:54+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;ol&gt;&lt;li&gt;The same thing Salman Rushdie learned: either you spend your entire life in hiding, or &lt;em&gt;eventually&lt;/em&gt; it&amp;#8217;ll come for you.  Years might pass.  You might emerge from hiding once, ten times, a hundred times, be fine, and conclude (emotionally if not intellectually) that the danger must now be over, that if it were going to come at all then it already would have, that maybe you&amp;#8217;re even magically safe.  But this is just the nature of a Poisson process: 0, 0, 0, followed by 1.&lt;/li&gt;&lt;li&gt;First comes the foreboding (in my case, on the flight back home from the wonderful &lt;a href=&quot;http://www.fields.utoronto.ca/activities/22-23/CQIQC-IX&quot;&gt;CQIQC&lt;/a&gt; meeting in Toronto)&amp;#8212;&amp;#8220;could this be COVID?&amp;#8221;&amp;#8212;the urge to reassure yourself that it isn&amp;#8217;t, the premature relief when the test is negative.  Only then, up to a day later, comes the second vertical line on the plastic cartridge.&lt;/li&gt;&lt;li&gt;I&amp;#8217;m grateful for the vaccines, which have up to a 1% probability of having saved my life.  My body was as ready for this virus as my brain would&amp;#8217;ve been for someone pointing a gun at my head and demanding to know a proof of the Karp-Lipton Theorem.  All the same, I wish I &lt;em&gt;also&lt;/em&gt; could&amp;#8217;ve taken a nasal vaccine, to neutralize the intruder at the gate.  Through inaction, through delays, through safetyism that&amp;#8217;s ironically caused millions of additional deaths, the regulatory bureaucracies of the US and other nations have a staggering amount to answer for.&lt;/li&gt;&lt;li&gt;Likewise, Paxlovid should&amp;#8217;ve been distributed like candy, so that everyone would have a supply and could start the instant they tested positive.  By the time you&amp;#8217;re able to book an online appointment and send a loved one to a pharmacy, a night has likely passed and the Paxlovid is less effective.&lt;/li&gt;&lt;li&gt;By the usual standards of a cold, this is mild.  But the headaches, the weakness, the &lt;strong&gt;tiredness&lt;/strong&gt; &amp;#8230; holy crap the tiredness.  I now know what it&amp;#8217;s like to be a male lion or a hundred-year-old man, to sleep for 20 hours per day and have that feel perfectly appropriate and normal.  I can only hope I won&amp;#8217;t be one of the long-haulers; if I were, this could be the end of my scientific career.  Fortunately the probability seems small.&lt;/li&gt;&lt;li&gt;You can quarantine in your bedroom, speak to your family only through the door, have meals passed to you, but your illness will still cast a penumbra on everyone around you.  Your spouse will be stuck watching the kids alone.  Other parents won&amp;#8217;t let their kids play with your kids &amp;#8230; and you can&amp;#8217;t blame them; you&amp;#8217;d do the same in their situation.&lt;/li&gt;&lt;li&gt;It&amp;#8217;s hard to generalize from a sample size of 1 (or 2 if you count my son Daniel, who recovered from a thankfully mild case half a year ago).  Readers: what are &lt;em&gt;your&lt;/em&gt; COVID stories?&lt;/li&gt;&lt;/ol&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: Win a $250,000 Scott Aaronson Grant for Advanced Precollege STEM Education!</title>
-    <link href="https://scottaaronson.blog/?p=6678"/>
-    <id>https://scottaaronson.blog/?p=6678</id>
-    <updated>2022-09-02T02:31:32+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Back in January, you might recall, Skype cofounder Jaan Tallinn&amp;#8217;s &lt;a href=&quot;https://survivalandflourishing.fund/&quot;&gt;Survival and Flourishing Fund&lt;/a&gt; (SFF) was kind enough to earmark $200,000 for me to donate to any charitable organizations of my choice.  So I posted a &lt;a href=&quot;https://scottaaronson.blog/?p=6232&quot;&gt;call for proposals&lt;/a&gt; on this blog.  You &amp;#8220;applied&amp;#8221; to my &amp;#8220;foundation&amp;#8221; by simply sending me an email, or leaving a comment on this blog, with a link to your organization&amp;#8217;s website and a 1-paragraph explanation of what you wanted the grant for, and then answering any followup questions that I had.&lt;/p&gt;
-
-
-
-&lt;p&gt;After receiving about 20 awesome proposals in diverse areas, in the end I decided to &lt;a href=&quot;https://scottaaronson.blog/?p=6256&quot;&gt;split the allotment&lt;/a&gt; among organizations around the world doing fantastic, badly-needed work in math and science enrichment at the precollege level.  These included &lt;a href=&quot;https://www.mathcamp.org/&quot;&gt;Canada/USA Mathcamp&lt;/a&gt;, &lt;a href=&quot;https://www.addiscoder.com/&quot;&gt;AddisCoder&lt;/a&gt;, a &lt;a href=&quot;https://www.mssm.org/&quot;&gt;magnet school in Maine&lt;/a&gt;, a &lt;a href=&quot;https://pages.uoregon.edu/nemirovm/emc.html&quot;&gt;math circle in Oregon&lt;/a&gt;, a &lt;a href=&quot;https://misemaths.wordpress.com/&quot;&gt;math enrichment program in Ghana&lt;/a&gt;, and four others.  I chose to focus on advanced precollege STEM education both because I have some actual knowledge and experience there, and because I wanted to make a strong statement about an underfunded cause close to my heart that&amp;#8217;s recently suffered unjust attacks.&lt;/p&gt;
-
-
-
-&lt;p&gt;To quote the immortal Carl Sagan, from shortly before his death:&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;&lt;p&gt;[C]hildren with special abilities and skills need to be nourished and encouraged. They are a national treasure. Challenging programs for the “gifted” are sometimes decried as “elitism.” Why aren’t intensive practice sessions for varsity football, baseball, and basketball players and interschool competition deemed elitism? After all, only the most gifted athletes participate. There is a self-defeating double standard at work here, nationwide.&lt;/p&gt;&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;Anyway, the thank-you notes from the programs I selected were some of the most gratifying emails I&amp;#8217;ve ever received.&lt;/p&gt;
-
-
-
-&lt;p&gt;But wait, it gets better!  After reading about the Scott Aaronson Speculation Grants on this blog, representatives from a large, reputable family foundation contacted me to say that they wanted to be involved too.  This foundation, which wishes to remain anonymous at this stage although not to the potential grant recipient, intends to make a &lt;em&gt;single US$250,000 grant&lt;/em&gt; in the area of advanced precollege STEM education.  They wanted my advice on where their grant should go.&lt;/p&gt;
-
-
-
-&lt;p&gt;Of course, I could&amp;#8217;ve simply picked one of the same wonderful organizations that SFF and I helped in the first round.  On reflection, though, I decided that it would be more on the up-and-up to issue a fresh call for proposals.&lt;/p&gt;
-
-
-
-&lt;p&gt;So: do you run a &lt;strong&gt;registered 501(c)(3) nonprofit dedicated to advanced precollege STEM education&lt;/strong&gt;?  If so, &lt;strong&gt;email me or leave a comment here by Friday, September 9&lt;/strong&gt;, telling me a bit about what your organization does and what more it could do with an extra $250K.  Include a rough budget, if that will help convince me that you can actually make productive use of that amount, that it won&amp;#8217;t just sit in your bank account.  Organizations that received a Scott Aaronson Speculation Grant the last time are welcome to reapply; newcomers are also welcome.&lt;/p&gt;
-
-
-
-&lt;p&gt;I&amp;#8217;ll pass up to three finalists along to the funder, which will then make a final decision as to the recipient.  The funder will be directly in touch with the potential grantee(s) and will proceed with its intake, review and due diligence process.&lt;/p&gt;
-
-
-
-&lt;p&gt;We expect to be able to announce a recipient on or around October 24.  Can&amp;#8217;t wait to see what people come up with!&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: QuICS Hartree Postdoctoral Fellowships at Joint Center for Quantum Information and Computer Science (QuICS) at QuICS/University of Maryland (apply by December 1, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/09/01/quics-hartree-postdoctoral-fellowships-at-joint-center-for-quantum-information-and-computer-science-quics-at-quics-university-of-maryland-apply-by-december-1-2022/"/>
-    <id>http://cstheory-jobs.org/2022/09/01/quics-hartree-postdoctoral-fellowships-at-joint-center-for-quantum-information-and-computer-science-quics-at-quics-university-of-maryland-apply-by-december-1-2022/</id>
-    <updated>2022-09-01T00:51:37+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;The Joint Center for Quantum Information and Computer Science (QuICS, &lt;a href=&quot;http://quics.umd.edu&quot;&gt;http://quics.umd.edu&lt;/a&gt;) is seeking exceptional candidates for the QuICS Hartree Postdoctoral Fellowships in Quantum Information and Computer Science. Applications should be submitted through AcademicJobsOnline at &lt;a href=&quot;https://academicjobsonline.org/ajo/jobs/22534&quot;&gt;https://academicjobsonline.org/ajo/jobs/22534&lt;/a&gt;. Please indicate interest in “HPF.”&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://academicjobsonline.org/ajo/jobs/22534&quot;&gt;https://academicjobsonline.org/ajo/jobs/22534&lt;/a&gt;&lt;br /&gt;
-Email: quics-coordinator@umiacs.umd.edu&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Computational Complexity: The NIST Process for Post-Quantum Cryptography</title>
-    <link href="http://blog.computationalcomplexity.org/2022/08/the-nist-competition-for-post-quantum.html"/>
-    <id>tag:blogger.com,1999:blog-3722233.post-1874664086811883884</id>
-    <updated>2022-08-31T19:35:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;div&gt;&lt;i&gt;Guest post by &lt;a href=&quot;https://www.cs.umd.edu/~jkatz/&quot;&gt;Jonathan Katz&lt;/a&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;Over the past few months there have been several interesting developments in the &lt;a href=&quot;https://csrc.nist.gov/Projects/post-quantum-cryptography&quot;&gt;NIST post-quantum standardization process&lt;/a&gt;.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;By way of background, since the advent of &lt;a href=&quot;https://en.wikipedia.org/wiki/Shor%27s_algorithm&quot;&gt;Shor&#39;s algorithm&lt;/a&gt; in 1994 we have known that a large-scale, general-purpose quantum computer would be able to break all currently deployed public-key cryptography in (quantum) polynomial time. While estimates vary as to when (or even whether!) quantum computers will become a realistic threat to existing public-key cryptosystems, it seems prudent to already begin developing/deploying newer &quot;post-quantum&quot; schemes that are plausibly secure against quantum computers.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;With the above in mind, NIST initiated an open process in 2017 for designing post-quantum cryptographic standards. Researchers from around the world submitted candidate algorithms for public-key encryption/key exchange and digital signatures. These were winnowed down over a series of rounds as cryptographers publicly debated the relative merits of different proposals, or showed  security weaknesses in some candidates.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;On July 5 of this year, NIST &lt;a href=&quot;https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8413.pdf&quot;&gt;announced&lt;/a&gt; that it had selected four of the submissions as finalists for standardization. Only one candidate for public-key encryption was chosen, along with three digital signature schemes. Three of the four selected algorithms rely on the hardness of lattice problems; the only non-lattice scheme is a hash-based signature scheme. (It is possible to build digital signatures using &quot;symmetric-key&quot; assumptions alone.) In addition, four other public-key encryption schemes not based on lattices were designated for further study and possible standardization at a later point in time.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Less than one month later, &lt;a href=&quot;https://eprint.iacr.org/2022/975&quot;&gt;Castryck and Decru announced&lt;/a&gt; a &lt;strong&gt;classical&lt;/strong&gt; attack on SIKE, one of the public-key encryption schemes chosen for further study. &lt;a href=&quot;https://sike.org/&quot;&gt;SIKE&lt;/a&gt; is based on a conjectured hard problem related to isogenies on supersingular elliptic curves.&amp;nbsp;The attack was not just theoretical; the researchers were able to implement the attack and run it in less than a day or less, depending on the security level being considered. Details of the attack are quite complex, but Galbraith &lt;a href=&quot;https://ellipticnews.wordpress.com/2022/07/31/breaking-supersingular-isogeny-diffie-hellman-sidh/&quot;&gt;gives a high-level overview&lt;/a&gt;. &lt;a href=&quot;https://ellipticnews.wordpress.com/2022/08/12/attacks-on-sidh-sike/&quot;&gt;Subsequent improvements&lt;/a&gt; to the attack followed.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;It is worth adding that the above follows an &lt;a href=&quot;https://eprint.iacr.org/2022/214&quot;&gt;entirely classical attack&lt;/a&gt; shown roughly six months earlier on Rainbow, another submission to the NIST standardization process that made it to the 3rd round. (Rainbow is a signature scheme that relies on an entirely different mathematical problem than SIKE.) For completeness, note that none of the four finalists are impacted by any of these attacks.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;A few reflections on the above:&lt;/div&gt;&lt;div&gt;&lt;ul style=&quot;text-align: left;&quot;&gt;&lt;li&gt;It is amazing that the factoring and RSA problems are still hard (for classical computers), more than 40 used after they were proposed for cryptography. The same goes for the discrete-logarithm problem (in certain groups).&lt;/li&gt;&lt;li&gt;It is not easy to find other hard mathematical problems! &lt;a href=&quot;https://en.wikipedia.org/wiki/McEliece_cryptosystem&quot;&gt;Code-based cryptography&lt;/a&gt; has been around about as long as factoring, but has been somewhat unpopular for reasons of efficiency. Lattice-based cryptosystems still seem to give the leading candidates.&lt;/li&gt;&lt;li&gt;We need more (non-cryptographers) studying cryptographic assumptions. The attacks on SIKE involved deep mathematics; attacks on lattice problems may involve algorithmic ideas that cryptographers haven&#39;t thought of.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </content>
-    <author>
-      <name>Computational Complexity</name>
-      <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: My Quantum Information Science II Lecture Notes: The wait is over!</title>
-    <link href="https://scottaaronson.blog/?p=6685"/>
-    <id>https://scottaaronson.blog/?p=6685</id>
-    <updated>2022-08-31T19:33:15+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.scottaaronson.com/qisii.pdf&quot;&gt;Here they are [PDF]&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;They&amp;#8217;re 155 pages of awesome&amp;#8212;for a certain extremely specific definition of &amp;#8220;awesome&amp;#8221;&amp;#8212;which I&amp;#8217;m hereby offering to the world free of charge (for noncommercial use only, of course).  They cover material that I taught, for the first time, in my Introduction to Quantum Information Science II undergrad course at UT Austin in Spring 2022.&lt;/p&gt;
-
-
-
-&lt;p&gt;The new notes pick up exactly where my older &lt;a href=&quot;https://www.scottaaronson.com/qclec.pdf&quot;&gt;QIS I lecture notes&lt;/a&gt; left off, and they presuppose familiarity with the QIS I material.  So, if you&amp;#8217;re just beginning your quantum information journey, then please start with my QIS I notes, which presuppose only linear algebra and a bit of classical algorithms (e.g., recurrence relations and big-O notation), and which self-containedly explain all the rules of QM, moving on to (e.g.) quantum circuits, density matrices, entanglement entropy, Wiesner&amp;#8217;s quantum money, QKD, quantum teleportation, the Bell inequality, interpretations of QM, the Shor 9-qubit code, and the algorithms of Deutsch-Jozsa, Bernstein-Vazirani, Simon, Shor, and Grover.  Master all that, and you&amp;#8217;ll be close to the quantum information research frontier of circa 1996.&lt;/p&gt;
-
-
-
-&lt;p&gt;My new QIS II notes cover a bunch of topics, but the main theme is &amp;#8220;perspectives on quantum computing that go beyond the bare quantum circuit model, and that became increasingly central to the field from the late 1990s onwards.&amp;#8221;  Thus, it covers:&lt;/p&gt;
-
-
-
-&lt;ul&gt;&lt;li&gt;Hamiltonians, ground states, the adiabatic algorithm, and the universality of adiabatic QC&lt;/li&gt;&lt;li&gt;The stabilizer formalism, the 1996 Gottesman-Knill Theorem on efficient classical simulation of stabilizer QC, my and Gottesman&amp;#8217;s 2004 elaborations, boosting up to universality via &amp;#8220;magic states,&amp;#8221; transversal codes, and the influential 2016 concept of &lt;em&gt;stabilizer rank&lt;/em&gt;&lt;/li&gt;&lt;li&gt;Bosons and fermions: the formalism of Fock space and of creation and annihilation operators, connection to the permanents and determinants of matrices, efficient classical simulation of free fermionic systems (Valiant&amp;#8217;s 2002 &amp;#8220;matchcircuits&amp;#8221;), the 2001 Knill-Laflamme-Milburn (KLM) theorem on universal optical QC, BosonSampling and its computational complexity, and the current experimental status of BosonSampling&lt;/li&gt;&lt;li&gt;Cluster states, Raussendorf and Briegel&amp;#8217;s 2000 measurement-based quantum computation (MBQC), and Gottesman and Chuang&amp;#8217;s 1999 &amp;#8220;gate teleportation&amp;#8221; trick&lt;/li&gt;&lt;li&gt;Matrix product states, and Vidal&amp;#8217;s 2003 efficient classical simulation of &amp;#8220;slightly entangled&amp;#8221; quantum computations&lt;/li&gt;&lt;/ul&gt;
-
-
-
-&lt;p&gt;Extra bonus topics include:&lt;/p&gt;
-
-
-
-&lt;ul&gt;&lt;li&gt;The 2007 Broadbent-Fitzsimons-Kashefi (BFK) protocol for blind and authenticated QC; brief discussion of later developments including Reichardt-Unger-Vazirani 2012 and Mahadev 2018&lt;/li&gt;&lt;li&gt;Basic protocols for quantum state tomography&lt;/li&gt;&lt;li&gt;My 2007 work on PAC-learnability of quantum states&lt;/li&gt;&lt;li&gt;The &amp;#8220;dessert course&amp;#8221;: the black hole information problem, and the Harlow-Hayden argument on the computational hardness of decoding Hawking radiation&lt;/li&gt;&lt;/ul&gt;
-
-
-
-&lt;p&gt;Master all this, and hopefully you&amp;#8217;ll have the conceptual vocabulary to understand a large fraction of what people in quantum computing and information care about today, how they now think about building scalable QCs, and what they post to the quant-ph arXiv.&lt;/p&gt;
-
-
-
-&lt;p&gt;Note that my QIS II course is complementary to my graduate course on quantum complexity theory, for which &lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-845-quantum-complexity-theory-fall-2010/lecture-notes/&quot;&gt;the lecture notes are here&lt;/a&gt;.  There&amp;#8217;s very little overlap between the two (and even less overlap between QIS II and &lt;em&gt;&lt;a href=&quot;https://www.amazon.ca/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565&quot;&gt;Quantum Computing Since Democritus&lt;/a&gt;&lt;/em&gt;).&lt;/p&gt;
-
-
-
-&lt;p&gt;The biggest, most important topic related to the QIS II theme that I &lt;em&gt;didn&amp;#8217;t&lt;/em&gt; cover was &lt;a href=&quot;https://en.wikipedia.org/wiki/Topological_quantum_computer&quot;&gt;topological quantum computing&lt;/a&gt;.  I&amp;#8217;d wanted to, but it quickly became clear that topological QC begs for a whole course of its own, and that I had neither the time nor the expertise to do it justice.  In retrospect, I do wish I&amp;#8217;d at least covered the &lt;a href=&quot;https://en.wikipedia.org/wiki/Toric_code&quot;&gt;Kitaev surface code&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Crucially, these lecture notes don&amp;#8217;t represent my effort alone.  I worked from draft scribe notes prepared by the QIS II students, who did a far better job than I had any right to expect (including creating the beautiful figures).  My wonderful course TA and PhD student Daniel Liang, along with students Ethan Tan, Samuel Ziegelbein, and Steven Han, then assembled everything, fixed numerous errors, and compiled the bibliography.  I’m grateful to all of them.  At the last minute, we had a LaTeX issue that none of us knew how to fix&amp;#8212;but, in response to a plea, &lt;em&gt;Shtetl-Optimized&lt;/em&gt; reader Pablo Cingolani generously volunteered to help, completed the work by the very next day (I&amp;#8217;d imagined it taking a month!), and earned a fruit basket from me in gratitude.&lt;/p&gt;
-
-
-
-&lt;p&gt;Anyway, let me know of any mistakes you find!  We&amp;#8217;ll try to fix them.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">David Eppstein: Linkage</title>
-    <link href="https://11011110.github.io/blog/2022/08/31/linkage.html"/>
-    <id>https://11011110.github.io/blog/2022/08/31/linkage</id>
-    <updated>2022-08-31T17:28:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;You’re probably familiar with machine-learning-based translation between natural languages, based on finding patterns in large datasets of known translations, for instance as used by Google translate. Now the Xena people are trying to use the same methods to &lt;a href=&quot;https://xenaproject.wordpress.com/2022/08/16/the-future-of-interactive-theorem-proving/&quot;&gt;convert LaTeX-formatted natural-language descriptions of mathematical propositions into the formal language used by the Lean theorem prover&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108834522515462270&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.shadertoy.com/view/wddBRX&quot;&gt;Pretty shadertoy flythrough of the Laves graph&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108841798903036223&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;,&lt;/span&gt; &lt;a href=&quot;https://matthewarcus.wordpress.com/2020/11/19/the-laves-graph/&quot;&gt;via&lt;/a&gt;).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.computationalcomplexity.org/2022/08/conference-modality.html&quot;&gt;The Computational Complexity blog takes on the question of the conference-based publishing culture in computer science&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108848289896382888&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; and whether in-person vs virtual vs hybrid conferences can really be said to be working, now that we have enough experience going back and forth between these modalities and the novelty of the virtual and hybrid formats has worn off.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2022/08/19/alexander-a-gaifullin-many-27-vertex-triangulations-of-manifolds-like-the-octonionic-projective-plane-not-even-one-was-known-before/&quot;&gt;Many minimal triangulations of “manifolds like the octonionic projective plane”&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108854003041559158&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt; Blog post by Gil Kalai based on &lt;a href=&quot;https://arxiv.org/abs/2207.08507&quot;&gt;a new preprint by Alexander Gaifullin&lt;/a&gt;. Gaifullin conjectures that these all are the octonionic projective plane (not merely “like it”). Gil’s post connects this to several other extremal problems, mostly in polyhedral combinatorics but also including the existence of a girth-5 degree-57 &lt;a href=&quot;https://en.wikipedia.org/wiki/Moore_graph&quot;&gt;Moore graph&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.jvir.2022.07.008&quot;&gt;The &lt;em&gt;Journal of Vascular and Interventional Radiology&lt;/em&gt; retracts its crossword puzzle&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108856663784900462&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;,&lt;/span&gt; &lt;a href=&quot;https://retractionwatch.com/2022/08/20/weekend-reads-who-cares-about-publication-integrity-revealing-a-galileo-forgery-repeat-predatory-journal-authors/&quot;&gt;via&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/ivanoransky/status/1559174872714051584&quot;&gt;via2&lt;/a&gt;). No explanation why yet, but I suspect it’s not because of falsified experimental data.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Today’s simple and somewhat obvious geometry observation &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108865083323085368&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; made while trying to fit old CD cover art into sleeves of a CD binder for more compact storage: if you’re trying to fit a flexible sheet into a flexible sleeve that is only just barely big enough to hold it, it doesn’t help to bend both into a convex curve; they will still be too tight. Instead, if you bend the sheet into a compound curve, while letting the sleeve fall into a convex shape surrounding it, you can make more room.&lt;/p&gt;
-
-    &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/envelopment.svg&quot; alt=&quot;A convex curve, bent to fit a too-tight sleeve, remains too tight (top) while an S-shaped curve fits more easily (bottom)&quot; style=&quot;width:100%;max-width:540px&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Olligobber implements &lt;a href=&quot;https://en.wikipedia.org/wiki/Combinatory_logic&quot;&gt;combinatory logic&lt;/a&gt; in &lt;a href=&quot;https://gist.github.com/olligobber/e044c87a834b34bc74d8c8903b0b0d94&quot;&gt;\(\TeX\) macros&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@olligobber/106533354539487538&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.ams.org/journals/notices/202208/noti2522/noti2522.html&quot;&gt;The graph minor theorem meets algebra&lt;/a&gt;: in the &lt;em&gt;Notices&lt;/em&gt;, Eric Ramos explains a conjectured category-theoretic generalization of the fact that graph minors form a well-quasi-ordering. Via &lt;a href=&quot;https://mathstodon.xyz/@johncarlosbaez/108879289204270102&quot;&gt;a long multi-post thread by John Baez&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://hardness.mit.edu/&quot;&gt;New draft book on lower bounds in complexity theory&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108883442872860109&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;,&lt;/span&gt; &lt;a href=&quot;http://blog.computationalcomplexity.org/2022/08/computers-and-intractability-guide-to.html&quot;&gt;via&lt;/a&gt;), by Demaine, Gasarch, and Hajiaghayi, intended as a replacement for Garey and Johnson’s 1979 NP-completeness book.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://scilogs.spektrum.de/hlf/why-a4-the-mathematical-beauty-of-paper-size/&quot;&gt;Why A4? – the mathematical beauty of paper size&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108889131132278902&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt; You probably already knew about the self-reproducing shape of \(1\times\sqrt2\) rectangles when folded in half, but the link is a nice explainer of why A4 paper has such odd-looking dimensions for those who didn’t know.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Talk slides for my papers at the just-concluded &lt;a href=&quot;https://www.torontomu.ca/canadian-conference-computational-geometry-2022/&quot;&gt;Canadian Conference on Computational Geometry&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;MLINK&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;):&lt;/span&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://www.ics.uci.edu/~eppstein/pubs/Epp-CCCG-22a.pdf&quot;&gt;Orthogonal dissection into few rectangles&lt;/a&gt; (see &lt;a href=&quot;/blog/2022/06/22/dehn-rank-revisited.html&quot;&gt;earlier post&lt;/a&gt;)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://www.ics.uci.edu/~eppstein/pubs/Epp-CCCG-22b.pdf&quot;&gt;Locked and unlocked smooth embeddings of surfaces&lt;/a&gt; (see &lt;a href=&quot;/blog/2022/06/28/motion-bend-lines.html&quot;&gt;earlier post&lt;/a&gt;)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://www.ics.uci.edu/~eppstein/pubs/Epp-CCCG-22c.pdf&quot;&gt;Reflections in an octagonal mirror maze&lt;/a&gt; (see &lt;a href=&quot;/blog/2022/06/24/reflections-octagonal-mirror.html&quot;&gt;earlier post&lt;/a&gt;)&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;An update on the “coffee near Ryerson” map from &lt;a href=&quot;/blog/2022/08/22/permuted-points-interest.html&quot;&gt;my recent post&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108900798389538030&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;):&lt;/span&gt;  I tried four cafés, only one of which was highlighted by a line on the map: Black Bear, Page One, Hailed, and Mast. I would have also tried Le Génie but it was closed mornings. The best coffee was at Hailed, but it’s tiny, with only outdoor seating. Second-best coffee, and the best space to hang out to drink the coffee, was Mast. The others did not disappoint but were not as good as Hailed and Mast.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://sigbed.org/2022/08/22/the-toxic-culture-of-rejection-in-computer-science/&quot;&gt;The toxic culture of rejection in computer science&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108910723093352198&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;,&lt;/span&gt; &lt;a href=&quot;https://news.ycombinator.com/item?id=32605494&quot;&gt;via&lt;/a&gt;), Edward Lee in the ACM SIGBED blog. I disagree with the post’s preference for incrementalism over novelty, but I agree that there’s big price for being too selective. Beyond frustrating everyone, I think it leads to dominance of trendiness and in-groups over significance, progress, originality, and depth. And though that may be good for those in the trendy in-groups, it’s not good for the field.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://electionlawblog.org/?p=131555&quot;&gt;Accusations of research misconduct against Princeton gerrymandering researcher Sam Wang, made by a Republican political operative, have been found to be “without merit” by the university&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108916373574688890&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;,&lt;/span&gt; &lt;a href=&quot;https://retractionwatch.com/2022/08/27/weekend-reads-the-problem-of-irreproducible-bioscience-research-how-to-stop-the-unknowing-citation-of-retracted-papers-data-scandal-leads-to-stock-drop/&quot;&gt;via&lt;/a&gt;).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.tokyoweekender.com/2022/07/origami-influencing-engineering-technology/&quot;&gt;How origami is engineering new technological opportunities&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/108920072649801627&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt; Interview with mechanical engineer Sachiko Ishida of Meiji University on applications of folded structures in engineering, and where origami engineering is headed.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
-  </content>
-    <author>
-      <name>David Eppstein</name>
-      <uri>https://11011110.github.io/blog/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">TCS+ Seminar Series: Guest Post: TCS Women Travel Scholarships for FOCS’22</title>
-    <link href="https://tcsplus.wordpress.com/2022/08/30/guest-post-tcs-women-travel-scholarships-for-focs22/"/>
-    <id>http://tcsplus.wordpress.com/?p=632</id>
-    <updated>2022-08-31T01:08:20+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&lt;em&gt;Below is an announcement on behalf of &lt;a href=&quot;https://sigact.org/tcswomen/&quot;&gt;TCS Women&lt;/a&gt; regarding the upcoming FOCS&amp;#8217;22.&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;TCS Women is offering travel scholarships to attend FOCS 2022 in Denver, Colorado, USA. TCS Women Travel Scholarships are intended for researchers at the beginning of their career. This scholarship is being made available for women and minorities, and anyone who identifies as such is welcome to apply; this scholarship is open to both US and international students. Preference will be given to students at the beginning of their studies. If we have sufficient funding, we will give awards to more senior students and possibly even postdocs.&lt;/p&gt;
-
-
-
-&lt;p&gt;To apply, you will need to fill out the following form by&amp;nbsp;&lt;strong&gt;Sept 2nd, 2022&lt;/strong&gt;&amp;nbsp;(11:59 pm PDT) in which you provide basic information about yourself, an estimate of your expenses, and a brief statement:&lt;/p&gt;
-
-
-
-&lt;p class=&quot;has-text-align-center&quot;&gt;&lt;a href=&quot;https://protect-au.mimecast.com/s/Y8mEC2xMQzikvQnLYhnDVRj?domain=forms.gle&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Apply for a travel grant here.&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;In addition, you will need to have your advisor (or department head or other faculty mentor if you do not yet have an advisor) send a letter of support to &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;mailto:tcswomen@gmail.com&quot; target=&quot;_blank&quot;&gt;tcswomen@gmail.com&lt;/a&gt; by Sept 2nd, 2022. Your advisor’s letter should also describe the availability of other travel funds.  Note for advisors: Specifics about alternative funding are very helpful.  Statements like “funding is tight” are not very helpful. This letter should be sent with the subject line &lt;em&gt;“support letter for [your name]”&lt;/em&gt;. This is very important. Your application is not complete without this letter.&lt;/p&gt;
-
-
-
-&lt;p&gt;For more information, check out the website: &lt;a href=&quot;https://protect-au.mimecast.com/s/i-5BC3QNPBimwvLjkcqEmbE?domain=sigact.org/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://sigact.org/tcswomen/5th-tcs-women-meeting/travel-scholarship/&lt;/a&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By plustcs&lt;/p&gt;
-  </content>
-    <author>
-      <name>TCS+ Seminar Series</name>
-      <uri>https://tcsplus.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: Busy Beaver Updates: Now Even Busier</title>
-    <link href="https://scottaaronson.blog/?p=6673"/>
-    <id>https://scottaaronson.blog/?p=6673</id>
-    <updated>2022-08-30T22:38:19+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Way back in the covid-filled summer of 2020, I &lt;a href=&quot;https://scottaaronson.blog/?p=4916&quot;&gt;wrote a survey article&lt;/a&gt; about the ridiculously-rapidly-growing &lt;a href=&quot;https://en.wikipedia.org/wiki/Busy_beaver&quot;&gt;Busy Beaver function&lt;/a&gt;.  My survey then expanded to nearly twice its original length, with the ideas, observations, and open problems of commenters on this blog.  Ever since, I&amp;#8217;ve felt a sort of duty to blog later developments in BusyBeaverology as well.  It&amp;#8217;s like, I&amp;#8217;ve built my dam, I&amp;#8217;ve built my lodge, I&amp;#8217;m here in the pond to stay!&lt;/p&gt;
-
-
-
-&lt;p&gt;So without further ado:&lt;/p&gt;
-
-
-
-&lt;ul&gt;&lt;li&gt;This May, Pavel Kropitz &lt;a href=&quot;https://groups.google.com/g/busy-beaver-discuss/c/-zjeW6y8ER4/m/ZBuLvbVOAgAJ&quot;&gt;found&lt;/a&gt; a machine demonstrating that $$ BB(6) \ge 10^{10^{10^{10^{10^{10^{10^{10^{10^{10^{10^{10^{10^{10^{10}}}}}}}}}}}}}} $$ (15 times)&amp;#8212;thereby blasting through his own 2010 record, that BB(6)≥10&lt;sup&gt;36,534&lt;/sup&gt;.  Or, for those tuning in from home: Kropitz constructed a 6-state, 2-symbol, 1-tape Turing machine that runs for at least the above number of steps, when started on an initially blank tape, &lt;em&gt;and then halt&lt;/em&gt;.  The machine was &lt;a href=&quot;https://groups.google.com/g/busy-beaver-discuss/c/-zjeW6y8ER4/m/Qv2qfJ5-AAAJ&quot;&gt;analyzed&lt;/a&gt; and &lt;a href=&quot;https://webusers.imj-prg.fr/~pascal.michel/bbc.html&quot;&gt;verified&lt;/a&gt; by Pascal Michel, the modern keeper of Busy Beaver lore.  In my 2020 survey, I&amp;#8217;d relayed an open problem posed by my then 7-year-old daughter Lily: namely, what&amp;#8217;s the first n such that BB(n) exceeds A(n), the n&lt;sup&gt;th&lt;/sup&gt; value of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Ackermann_function&quot;&gt;Ackermann function&lt;/a&gt;?  All that&amp;#8217;s been proven is that this n is at least 5 and at most 18.  Kropitz and Michel&amp;#8217;s discovery doesn&amp;#8217;t settle the question&amp;#8212;titanic though it is, the new lower bound on BB(6) is &lt;em&gt;still&lt;/em&gt; less than A(6) (!!)&amp;#8212;but in light of this result, I now strongly conjecture that the crossover happens at either n=6 or n=7.  Huge congratulations to Pavel and Pascal!&lt;/li&gt;&lt;/ul&gt;
-
-
-
-&lt;ul&gt;&lt;li&gt;Tristan Stérin and Damien Woods wrote to tell me about a new collaborative initiative they&amp;#8217;ve launched called &lt;a href=&quot;https://bbchallenge.org/62366474&quot;&gt;BB Challenge&lt;/a&gt;.  With the participation of other leading figures in the neither-large-nor-sprawling Busy Beaver world, Tristan and Damien are aiming, not only to pin down the value of BB(5)&amp;#8212;proving or disproving the longstanding conjecture that BB(5)=47,176,870&amp;#8212;but to do so in a &lt;em&gt;formally verified way&lt;/em&gt;, with none of the old ambiguities about which Turing machines have or haven&amp;#8217;t been satisfactorily analyzed.  In my survey article, I&amp;#8217;d passed along a claim that, of all the 5-state machines, only 25 remained to be analyzed, to understand whether or not they run forever&amp;#8212;the &amp;#8220;default guess&amp;#8221; being that they all do, but that proving it for some of them might require fearsomely difficult number theory.  With their more formal and cautious approach, Tristan and Damien still count 1.5 million (!) holdout machines, but they hope to cut down that number extremely rapidly.  If you&amp;#8217;re feeling yourself successfully nerd-sniped, please join the quest and help them out!&lt;/li&gt;&lt;/ul&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-122 |  Efficient Linearization Implies the Multiphase Conjecture | 
-
-	Young Kun Ko</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/122"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/122</id>
-    <updated>2022-08-30T16:58:32+00:00</updated>
-    <content type="html" xml:lang="en">
-    The main motivation for studying linear data structures and circuits is the intuition that non-linear advice cannot help in computing a linear operator. Jukna and Schnitger formalized this as a conjecture which states that all circuits computing a linear operator can be ``linearized,&amp;quot; with only a constant size blow-up. We show that if we assume strengthening of this intuition to data structures (to some field), then this implies Patrascu’s Multiphase Conjecture for such field. Furthermore, we show that this conjecture is an intermediate conjecture between NOF-Multiphase Conjecture and the Multiphase Conjecture, formalizing why Patrascu&amp;#39;s original approach to the Multiphase Conjecture is hard.
-	
-	Our main technical ingredient is proving unconditional space-time tradeoff for the following static data structure problem for any given field: Let $M \in \mathbb{F}^{m \times n}$ be fixed. Data structure preprocesses input $X \in \mathbb{F}^n$ using $s$-cells (dependant on $M$), each of which can store an arbitrary element in $\mathbb{F}$. When $i \in [m]$ is revealed, the data structure can output $M_i \cdot X$ using $t_q$ probes. We show that there exists $M \in \{ 0 , 1 \}^{m \times n}$ such that if the functions used by the data structure are all linear and $s \leq \tilde{o} ( m )$ then $t_q \geq \tilde{\Omega}(n)$.
-	
-	As a corollary, we show that Patrascu&amp;#39;s Multiphase Conjecture when restricted to dynamic linear data structure holds (with unlimited preprocessing) over any field. This exhibits an explicit dynamic data structure which requires polynomial update time $t_u \geq \tilde{\Omega}(n)$ or query time $t_q \geq \tilde{\Omega}(n)$. This also improves upon the breakthrough work of Larsen which showed a polynomial lower bound for dynamic data structure under the weaker group model.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: That Financial Times QC skepticism piece</title>
-    <link href="https://scottaaronson.blog/?p=6670"/>
-    <id>https://scottaaronson.blog/?p=6670</id>
-    <updated>2022-08-29T15:03:49+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Several people have asked me to comment about a &lt;em&gt;Financial Times&lt;/em&gt; opinion piece entitled &lt;a href=&quot;https://www.ft.com/content/6d2e34ab-f9fd-4041-8a96-91802bab7765?accessToken=zwAAAYLqUflnkc9tLjSr-f1AQdOKlpGAK6t3ZQ.MEQCICfhbcBVMq-Z9bpXglona31mh7dWdi7b-TDRB9S6-mKrAiA4b25zNf-97bLQXsO1JLXGdhp7UkM8yfaK5TIBfHWCJQ&amp;amp;sharetype=gift&amp;amp;token=eb5313cd-6f61-4aff-b462-ad7f250c316a&quot;&gt;The Quantum Computing Bubble&lt;/a&gt; (subtitle: &amp;#8220;The industry has yet to demonstrate any real utility, despite the fanfare, billions of VC dollars and three Spacs&amp;#8221;) (&lt;a href=&quot;https://archive.ph/PBHhe&quot;&gt;archive link&lt;/a&gt;).  The piece is purely deflationary&amp;#8212;not a positive word in it&amp;#8212;though it never goes so far as to suggest that QC is blocked by any Gil-Kalai-like fundamental principle, nor does it even evince curiosity about that question.&lt;/p&gt;
-
-
-
-&lt;p&gt;As it happens, the author, physicist Nikita Gourianov, had emailed me a few days ago with some nice words about my own skeptical efforts on &lt;em&gt;Shtetl-Optimized&lt;/em&gt;, and a request for comment on his article.  So, as a way to get back into blogging after a 2-week hiatus, I figured I&amp;#8217;d share my respoinse.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Hi Nikita,&lt;/p&gt;
-
-
-
-&lt;p&gt;Thanks for the kind words about my blog, and for your piece, which I just read.  There’s a great deal of truth in what you write, but I also take issue with a few points.  You say:&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;&lt;p&gt;A convincing strategy for overcoming these errors has not yet been demonstrated, making it unclear as to when — if ever — it will become possible to build a large-scale, fault-tolerant quantum computer.&lt;/p&gt;&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;In one sense this is tautologically true — the only fully convincing and clear demonstration that something is possible is to do it, as with the Wright brothers or the Trinity nuclear test.&amp;nbsp; In other sense, though, we’ve known the “strategy” since the 1990s.&amp;nbsp; It’s just that the fault-tolerance theorem called for gate fidelities 5-6 orders of magnitude better than anything achievable at the&amp;nbsp;time.&amp;nbsp; In the 25 years since, about 3 of those orders of magnitude have been achieved, so it doesn’t take any great imagination to foresee that the remainder could be as well.&amp;nbsp; A layperson reading your piece might not understand this.&lt;/p&gt;
-
-
-
-&lt;p&gt;As for applications, my position has always been that if there were &lt;em&gt;zero&lt;/em&gt; applications, it would still be at least as scientifically important to try to build QCs as it was to build the LHC, LIGO, or the James Webb telescope.  If there &lt;em&gt;are&lt;/em&gt; real applications, such as simulating chemical dynamics, or certifiable randomness — and there very well might be — then those are icing on the cake.  This, of course, radically differs from the vision that now gets presented to investors and the press (hence all the railing on my blog!), but it also differs from what a reader of your piece would take away.&lt;/p&gt;
-
-
-
-&lt;p&gt;Anyway, thanks again for sharing!&lt;/p&gt;
-
-
-
-&lt;p&gt;Best,&lt;br&gt;Scott&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
     </author>
   </entry>
 
