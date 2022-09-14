@@ -10,6 +10,46 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Scott Aaronson: I had a dream</title>
+    <link href="https://scottaaronson.blog/?p=6718"/>
+    <id>https://scottaaronson.blog/?p=6718</id>
+    <updated>2022-09-14T16:52:05+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;As I slept fitfully, still recovering from COVID, I had one of the more interesting dreams of my life:&lt;/p&gt;
+
+
+
+&lt;p&gt;I was desperately trying to finish some PowerPoint slides in time to give a talk. Uncharacteristically for me, one of the slides displayed actual code. This was a dream, so nothing was as clear as I&amp;#8217;d like, but the code did &lt;em&gt;something&lt;/em&gt; vaguely reminiscent of &lt;a href=&quot;https://scottaaronson.blog/?p=710&quot;&gt;Rosser’s Theorem&lt;/a&gt;—e.g., enumerating all proofs in ZFC until it finds the lexicographically first proof or disproof of a certain statement, then branching into cases depending on whether it&amp;#8217;s a proof or a disproof. In any case, it was simple enough to fit on one slide.&lt;/p&gt;
+
+
+
+&lt;p&gt;Suddenly, though, my whole presentation was deleted. Everything was ruined!&lt;/p&gt;
+
+
+
+&lt;p&gt;One of the developers of PowerPoint happened to be right there in the lecture hall (of course!), so I confronted him with my laptop and angrily demanded an explanation. He said that I must have triggered the section of Microsoft Office that tries to detect and prevent any discussion of logical paradoxes that are too dangerous for humankind—the ones that would cause people to realize that our entire universe is just an illusion, a sandbox being run inside an AI, a glitch-prone Matrix. He said it patronizingly, as if it should&amp;#8217;ve been obvious: &amp;#8220;you and I both know that the Paradoxes are not to be talked about, so why would you be so &lt;em&gt;stupid&lt;/em&gt; as to put one in your presentation?&amp;#8221;&lt;/p&gt;
+
+
+
+&lt;p&gt;My reaction was to jab my finger in the guy’s face, shove him, scream, and curse him out. At that moment, I wasn’t concerned in the slightest about the universe being an illusion, or about glitches in the Matrix. I was concerned about my embarrassment when I’d be called in 10 minutes to give my talk and would have nothing to show.&lt;/p&gt;
+
+
+
+&lt;p&gt;My last thought, before I woke with a start, was to wonder whether Greg Kuperberg was right and I should give my presentations in &lt;a href=&quot;https://en.wikipedia.org/wiki/Beamer_(LaTeX)&quot;&gt;Beamer&lt;/a&gt;, or some other open-source software, and then I wouldn’t have had this problem.&lt;/p&gt;
+
+
+
+&lt;p&gt;A coda: I woke a bit after 7AM Central and started to write this down. But then&amp;#8212;this is now real life (!)&amp;#8212;I saw an email saying that a dozen people were waiting for me in a conference room in Europe for an important Zoom meeting. We&amp;#8217;d gotten the time zones wrong; I&amp;#8217;d thought that it wasn&amp;#8217;t until 8AM my time. If not for this dream causing me to wake up, I would&amp;#8217;ve missed the meeting entirely.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
+  </content>
+    <author>
+      <name>Scott Aaronson</name>
+      <uri>https://scottaaronson.blog</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Windows on Theory: Quick reminders: masters, postdocs, faculty, etc.</title>
     <link href="https://windowsontheory.org/2022/09/14/quick-reminders-masters-postdocs-faculty-etc/"/>
     <id>http://windowsontheory.org/?p=8452</id>
@@ -1533,74 +1573,6 @@ Prior to our work, polynomial time algorithms for the case when the rank, $k$, i
 Another contribution of this work is correcting an error from a paper of Karnin and Shpilka [KS09] (with some loss in parameters) that also affected Theorem 1.6 of [BSV21]. Consequently, the results of [KS09, BSV21] continue to hold, with a slightly worse setting of parameters. For fixing the error we systematically study the relation between syntactic  and semantic notions of rank of $\Sigma\Pi\Sigma$ circuits, and the corresponding partitions of such circuits. 
 		
 We obtain our improved running time by introducing a technique for learning rank preserving coordinate-subspaces. Both [KS09] and [BSV21] tried all choices of finding the &amp;quot;correct&amp;quot; coordinates, which, due to the size of the set, led to having a fast growing function of $k$ at the exponent of $n$. We manage to find these spaces in time that is still growing fast with $k$, yet it is only a fixed polynomial in $n$.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-124 |  On Interactive Proofs of Proximity with Proof-Oblivious Queries | 
-
-	Oded Goldreich, 
-
-	Guy Rothblum, 
-
-	Tal Skverer</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/124"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/124</id>
-    <updated>2022-09-09T08:31:15+00:00</updated>
-    <content type="html" xml:lang="en">
-    Interactive proofs of proximity (IPPs) offer ultra-fast
-approximate verification of assertions regarding their input,
-where ultra-fast means that only a small portion of the input is read
-and approximate verification is analogous to the notion of
-approximate decision that underlies property testing.
-Specifically, in an IPP, the prover can make the verifier
-accept each input in the property, but cannot fool the verifier
-into accepting an input that is far from the property
-(except for with small probability).
-
-The verifier in an IPP system engages in two very different types 
-of activities: interacting with an untrusted prover, and querying its input. 
-The definition allows for arbitrary coordination between these two activities, 
-but keeping them separate is both conceptually interesting 
-and necessary for important applications 
-such as addressing temporal considerations 
-(i.e., at what time is each of the services available)
-and facilitating the construction of zero-knowledge schemes. 
-In this work we embark on a systematic study of IPPs 
-with proof-oblivious queries, where the queries should not be affected 
-by the interaction with the prover. 
-We assign the query and interaction activities to separate modules, 
-and consider different limitations on their coordination.
-
-The most strict limitation requires these activities to
-be totally isolated from one another; they just feed
-their views to a separate deciding module. 
-We show that such systems can be efficiently emulated by standard testers.
-
-Going to the other extreme, we only disallow information
-to flow from the interacting module to the querying module,
-but allow free information flow in the other direction.
-We show that extremely efficient one-round (i.e., two-message) systems 
-of such type can be used to verify properties that are extremely
-hard to test (without the help of a prover).
-That is, the complexity of verifying can be polylogarithmic in the complexity of testing.
-This stands in contrast the MAPs (viewed as $1/2$-round systems)
-in which proof-oblivious queries are as limited as our isolated model.
-
-Our focus is on an intermediate model that allows
-shared randomness among the querying and interacting modules 
-but no information flow between them. 
-In this case we show 
-that 1-round systems are efficiently emulated by standard testers 
-but $3/2$-round systems of extremely low complexity 
-exist for properties that are extremely hard to test. 
-One additional result about this model is that it can
-efficiently emulate any IPP for any property of low-degree polynomials.
   </content>
     <author>
       <name>ECCC Papers</name>
