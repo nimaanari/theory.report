@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-09-16T00:56:47Z">Friday, September 16 2022, 00:56</time>
+          <time class='timeago' datetime="2022-09-16T01:30:30Z">Friday, September 16 2022, 01:30</time>
         
       </p>
 
@@ -415,7 +415,19 @@
 which sorts of problems admit exponential speedups via quantum computers --
 from the classics (like the algorithms of Simon and Shor), to the breakthrough
 of Yamakawa and Zhandry from April 2022. I discuss both the quantum circuit
-model, which is what we ultimately care about in practice but
+model, which is what we ultimately care about in practice but where our
+knowledge is radically incomplete, and the so-called oracle or black-box or
+query complexity model, where we've managed to achieve a much more thorough
+understanding that then informs our conjectures about the circuit model. I
+discuss the strengths and weaknesses of switching attention to sampling tasks,
+as was done in the recent quantum supremacy experiments. I make some skeptical
+remarks about widely-repeated claims of exponential quantum speedups for
+practical machine learning and optimization problems. Through many examples, I
+try to convey the "law of conservation of weirdness," according to which every
+problem admitting an exponential quantum speedup must have some unusual
+property to allow the amplitude to be concentrated on the unknown right
+answer(s).
+</p>
         
         </div>
 
@@ -469,7 +481,28 @@ answer(s).
 found, whose optimization counterpart are important for many practical
 settings. Those problems usually consider full knowledge about the input and
 optimize on this specific input. In a practical setting, however, uncertainty
-in the input data is a usual phenomenon, whereby this is norma
+in the input data is a usual phenomenon, whereby this is normally not covered
+in optimization versions of NP problems. One concept to model the uncertainty
+in the input data, is \textit{recoverable robustness}. In this setting, a
+solution on the input is calculated, whereby a possible recovery to a good
+solution should be guaranteed, whenever uncertainty manifests itself. That is,
+a solution $\texttt{s}_0$ for the base scenario $\textsf{S}_0$ as well as a
+solution \texttt{s} for every possible scenario of scenario set \textsf{S} has
+to be calculated. In other words, not only solution $\texttt{s}_0$ for instance
+$\textsf{S}_0$ is calculated but solutions \texttt{s} for all scenarios from
+\textsf{S} are prepared to correct possible errors through uncertainty. This
+paper introduces a specific concept of recoverable robust problems: Hamming
+Distance Recoverable Robust Problems. In this setting, solutions $\texttt{s}_0$
+and \texttt{s} have to be calculated, such that $\texttt{s}_0$ and \texttt{s}
+may only differ in at most $\kappa$ elements. That is, one can recover from a
+harmful scenario by choosing a different solution, which is not too far away
+from the first solution. This paper surveys the complexity of Hamming distance
+recoverable robust version of optimization problems, typically found in NP for
+different types of scenarios. The complexity is primarily situated in the lower
+levels of the polynomial hierarchy. The main contribution of the paper is that
+recoverable robust problems with compression-encoded scenarios and $m \in
+\mathbb{N}$ recoveries are $\Sigma^P_{2m+1}$-complete.
+</p>
         
         </div>
 
@@ -533,7 +566,7 @@ Borel, rarely projective, etc. Generic sets dependent on Power Set axiom appear
 mostly in esoteric areas, ST logic, etc. Dropping that Axiom may greatly
 simplify the foundations of mainstream math. Meanwhile dependence on it of a
 theorem is worth noting, as dependence on Choice often is.
-</p
+</p>
         
         </div>
 
@@ -575,7 +608,22 @@ theorem is worth noting, as dependence on Choice often is.
           <p>Authors: Luis E. Caraballo, Jos&#xe9; M. D&#xed;az-B&#xe1;&#xf1;ez, Ruy Fabila-Monroy, Carlos Hidalgo-Toscan</p><p>A group of cooperative aerial robots can be deployed to efficiently patrol a
 terrain, in which each robot flies around an assigned area and shares
 information with the neighbors periodically in order to protect or supervise
-it. To ensure robustness, previous works on these synchroni
+it. To ensure robustness, previous works on these synchronized systems propose
+sending a robot to the neighboring area in case it detects a failure. In order
+to deal with unpredictability and to improve on the efficiency in the
+deterministic patrolling scheme, this paper proposes random strategies to cover
+the areas distributed among the agents. First, a theoretical study of the
+stochastic process is addressed in this paper for two metrics: the \emph{idle
+time}, the expected time between two consecutive observations of any point of
+the terrain and the \emph{isolation time}, the expected time that a robot is
+without communication with any other robot. After that, the random strategies
+are experimentally compared with the deterministic strategy adding another
+metric: the \emph{broadcast time}, the expected time elapsed from the moment a
+robot emits a message until it is received by all the other robots of the team.
+The simulations show that theoretical results are in good agreement with the
+simulations and the random strategies outperform the behavior obtained with the
+deterministic protocol proposed in the literature.
+</p>
         
         </div>
 
@@ -631,7 +679,16 @@ deterministic protocol proposed in the literature.
 non Euclidean domains and its eigenfunctions. We specifically address
 parameterized surfaces, a natural representation of the shapes used in 3D
 graphics. Our work sheds new light on the celebrated Beltrami and Anisotropic
-TV flows, and explains experimental findi
+TV flows, and explains experimental findings from recent years on shape
+spectral TV [Fumero et al. 2020] and adaptive anisotropic spectral TV [Biton
+and Gilboa 2022]. A new notion of convexity on manifolds is derived, by
+characterizing structures that are stable throughout the TV flow, performed on
+manifolds. We further propose a time efficient nonlinear and non Euclidean
+spectral framework for shape processing that is based on zero homogeneous
+flows, and propose three different such methods. Each method satisfies distinct
+characteristics, demonstrated through smoothing, enhancing and exaggerating
+filters.
+</p>
         
         </div>
 
@@ -681,7 +738,15 @@ filters.
           <p>Authors: William Cawley Gelling, Markus E. Nebel, Benjamin Smith, Sebastian Wild</p><p>Powersort (Munro &amp; Wild, ESA2018) has recently replaced Timsort's suboptimal
 merge policy in the CPython reference implementation of Python, as well as in
 PyPy and further libraries. We present a stable mergesort variant, Multiway
-Powersort, that exploits existing runs and finds nearly-optimal merging orde
+Powersort, that exploits existing runs and finds nearly-optimal merging orders
+for k-way merges with negligible overhead. As observed with Multiway Quicksort
+(Kushagra et al., ALENEX 2014; Aum\"uller &amp; Dietzfelbinger, TALG 2016; Wild,
+PhD thesis 2016) and the inclusion of Dual-Pivot Quicksort in the Java runtime
+library, memory transfers increasingly determine the cost of internal sorting.
+We demonstrate that our 4-way Powersort implementation can achieve substantial
+speedups over standard (2-way) Powersort and other stable sorting methods
+without compromising the optimally run-adaptive performance of Powersort.
+</p>
         
         </div>
 
@@ -730,7 +795,31 @@ without compromising the optimally run-adaptive performance of Powersort.
 some constant integer $f$, given a directed weighted graph with no negative
 cycles and two fixed vertices $s$ and $t$, compute (either explicitly or
 implicitly) for every tuple of $f$ edges, the distance from $s$ to $t$ if these
-edges fail. We cal
+edges fail. We call this problem $f$-Fault Replacement Paths ($f$FRP).
+</p>
+<p>We first present an $\tilde{O}(n^3)$ time algorithm for $2$FRP in $n$-vertex
+directed graphs with arbitrary edge weights and no negative cycles. As $2$FRP
+is a generalization of the well-studied Replacement Paths problem (RP) that
+asks for the distances between $s$ and $t$ for any single edge failure, $2$FRP
+is at least as hard as RP. Since RP in graphs with arbitrary weights is
+equivalent in a fine-grained sense to All-Pairs Shortest Paths (APSP)
+[Vassilevska Williams and Williams FOCS'10, J.~ACM'18], $2$FRP is at least as
+hard as APSP, and thus a substantially subcubic time algorithm in the number of
+vertices for $2$FRP would be a breakthrough. Therefore, our algorithm in
+$\tilde{O}(n^3)$ time is conditionally nearly optimal. Our algorithm implies an
+$\tilde{O}(n^{f+1})$ time algorithm for the $f$FRP problem, giving the first
+improvement over the straightforward $O(n^{f+2})$ time algorithm.
+</p>
+<p>Then we focus on the restriction of $2$FRP to graphs with small integer
+weights bounded by $M$ in absolute values. Using fast rectangular matrix
+multiplication, we obtain a randomized algorithm that runs in
+$\tilde{O}(M^{2/3}n^{2.9153})$ time. This implies an improvement over our
+$\tilde{O}(n^{f+1})$ time arbitrary weight algorithm for all $f&gt;1$. We also
+present a data structure variant of the algorithm that can trade off
+pre-processing and query time. In addition to the algebraic algorithms, we also
+give an $n^{8/3-o(1)}$ conditional lower bound for combinatorial $2$FRP
+algorithms in directed unweighted graphs.
+</p>
         
         </div>
 
@@ -796,7 +885,31 @@ algorithms in directed unweighted graphs.
 graph into another that achieves almost optimal (namely, near-quadratic, $d
 \leq 1/\lambda^{2+o(1)}$) trade-off between (any desired) spectral expansion
 $\lambda$ and degree $d$. Furthermore, the algorithm is local: every vertex can
-compute
+compute its new neighbors as a subset of its original neighborhood of radius
+$O(\log(1/\lambda))$. The optimal quadratic trade-off is known as the Ramanujan
+bound, so our construction gives almost Ramanujan expanders from arbitrary
+expanders.
+</p>
+<p>The locality of the transformation preserves structural properties of the
+original graph, and thus has many consequences. Applied to Cayley graphs, our
+transformation shows that any expanding finite group has almost Ramanujan
+expanding generators. Similarly, one can obtain almost optimal explicit
+constructions of quantum expanders, dimension expanders, monotone expanders,
+etc., from existing (suboptimal) constructions of such objects. Another
+consequence is a "derandomized" random walk on the original (suboptimal)
+expander with almost optimal convergence rate. Our transformation also applies
+when the degree is not bounded or the expansion is not constant.
+</p>
+<p>We obtain our results by a generalization of Ta-Shma's technique in his
+breakthrough paper [STOC 2017], used to obtain explicit almost optimal binary
+codes. Specifically, our spectral amplification extends Ta-Shma's analysis of
+bias amplification from scalars to matrices of arbitrary dimension in a very
+natural way. Curiously, while Ta-Shma's explicit bias amplification
+derandomizes a well-known probabilistic argument (underlying the
+Gilbert--Varshamov bound), there seems to be no known probabilistic (or other
+existential) way of achieving our explicit ("high-dimensional") spectral
+amplification.
+</p>
         
         </div>
 
@@ -862,7 +975,19 @@ amplification.
 used property of a data set. However, for concurrent programs, obtaining a
 correct size efficiently is non-trivial. In fact, the literature does not offer
 a mechanism to obtain a correct (linearizable) size of a concurrent data set
-without resorting to inefficient solutions, such a
+without resorting to inefficient solutions, such as taking a full snapshot of
+the data structure to count the elements, or acquiring one global lock in all
+update and size operations. This paper presents a methodology for adding a
+concurrent linearizable size operation to sets and dictionaries with a
+relatively low performance overhead. Theoretically, the proposed size operation
+is wait-free with asymptotic complexity linear in the number of threads
+(independently of data-structure size). Practically, we evaluated the
+performance overhead by adding size to various concurrent data structures in
+Java$-$a skip list, a hash table and a tree. The proposed linearizable size
+operation executes faster by orders of magnitude compared to the existing
+option of taking a snapshot, while incurring a throughput loss of $1\%-20\%$ on
+the original data structure's operations.
+</p>
         
         </div>
 
@@ -915,7 +1040,18 @@ the original data structure's operations.
           <p>Authors: Ira Globus-Harris, Varun Gupta, Christopher Jung, Michael Kearns, Jamie Morgenstern, Aaron Roth</p><p>We show how to take a regression function $\hat{f}$ that is appropriately
 ``multicalibrated'' and efficiently post-process it into an approximately error
 minimizing classifier satisfying a large variety of fairness constraints. The
-post-processing requires no labeled data, and only a mo
+post-processing requires no labeled data, and only a modest amount of unlabeled
+data and computation. The computational and sample complexity requirements of
+computing $\hat f$ are comparable to the requirements for solving a single fair
+learning task optimally, but it can in fact be used to solve many different
+downstream fairness-constrained learning problems efficiently. Our
+post-processing method easily handles intersecting groups, generalizing prior
+work on post-processing regression functions to satisfy fairness constraints
+that only applied to disjoint groups. Our work extends recent work showing that
+multicalibrated regression functions are ``omnipredictors'' (i.e. can be
+post-processed to optimally solve unconstrained ERM problems) to constrained
+optimization.
+</p>
         
         </div>
 
@@ -968,7 +1104,19 @@ the agents' additively separable preferences, which can also be viewed as a
 hedonic game. We apply three successively weaker solution concepts, namely
 envy-freeness, weakly justified envy-freeness, and justified envy-freeness.
 </p>
-<p>In a model in which coal
+<p>In a model in which coalitions may have any size, trivial solutions exist for
+these concepts, which provides a strong motivation for placing restrictions on
+coalition size. In this paper, we require feasible coalitions to have size
+three. We study the existence of partitions that are envy-free, weakly
+justified envy-free, and justified envy-free, and the computational complexity
+of finding such partitions, if they exist.
+</p>
+<p>We present a comprehensive complexity classification, in terms of the
+restrictions placed on the agents' preferences. From this, we identify a
+general trend that for the three successively weaker solution concepts,
+existence and polynomial-time solvability hold under successively weaker
+restrictions.
+</p>
         
         </div>
 
@@ -1023,7 +1171,32 @@ restrictions.
 ITCS 2021), suggested a new paradigm for loss minimization. Rather than
 learning a predictor based on a known loss function, omnipredictors can easily
 be post-processed to minimize any one of a rich family of loss functions
-compared with the loss of a
+compared with the loss of a class $C$. It has been shown that such
+omnipredictors exist and are implied (for all convex and Lipschitz loss
+functions) by the notion of multicalibration from the algorithmic fairness
+literature. Nevertheless, it is often the case that the action selected must
+obey some additional constraints (such as capacity or parity constraints). In
+itself, the original notion of omnipredictors does not apply in this
+well-motivated and heavily studied the context of constrained loss
+minimization.
+</p>
+<p>In this paper, we introduce omnipredictors for constrained optimization and
+study their complexity and implications. The notion that we introduce allows
+the learner to be unaware of the loss function that will be later assigned as
+well as the constraints that will be later imposed, as long as the
+subpopulations that are used to define these constraints are known.
+</p>
+<p>The paper shows how to obtain omnipredictors for constrained optimization
+problems, relying on appropriate variants of multicalibration. For some
+interesting constraints and general loss functions and for general constraints
+and some interesting loss functions, we show how omnipredictors are implied by
+a variant of multicalibration that is similar in complexity to standard
+multicalibration. We demonstrate that in the general case, standard
+multicalibration is insufficient and show that omnipredictors are implied by
+multicalibration with respect to a class containing all the level sets of
+hypotheses in $C$. We also investigate the implications when the constraints
+are group fairness notions.
+</p>
         
         </div>
 
@@ -1090,7 +1263,28 @@ are group fairness notions.
 matching polytope of graphs, in the random-order (RCRS) and adversarial (OCRS)
 arrival models. Our results include improved selectability guarantees (i.e.,
 lower bounds), as well as new impossibility results (i.e., upper bounds). By
-well-known reductions to the prophet
+well-known reductions to the prophet (secretary) matching problem, a
+$c$-selectable OCRS (RCRS) implies a $c$-competitive algorithm for adversarial
+(random order) edge arrivals. Similar reductions are also known for the
+query-commit matching problem. For the adversarial arrival model, we present a
+new analysis of the OCRS of Ezra et al.~(EC, 2020). We show that this scheme is
+$0.344$-selectable for general graphs and $0.349$-selectable for bipartite
+graphs, improving on the previous $0.337$ selectability result for this
+algorithm. We also show that the selectability of this scheme cannot be greater
+than $0.361$ for general graphs and $0.382$ for bipartite graphs. We further
+show that no OCRS can achieve a selectability greater than $0.4$ for general
+graphs, and $0.433$ for bipartite graphs.
+</p>
+<p>For random-order arrivals, we present two attenuation-based schemes which use
+new attenuation functions. Our first RCRS is $0.474$-selectable for general
+graphs, and our second is $0.476$-selectable for bipartite graphs. These
+results improve upon the recent $0.45$ (and $0.456$) selectability results for
+general graphs (respectively, bipartite graphs) due to Pollner et al.~(EC,
+2022). On general graphs, our 0.474-selectable RCRS provides the best known
+positive result even for offline contention resolution, and also for the
+correlation gap. We conclude by proving a fundamental upper bound of 0.5 on the
+selectability of RCRS, using bipartite graphs.
+</p>
         
         </div>
 
@@ -1152,7 +1346,23 @@ selectability of RCRS, using bipartite graphs.
           <p>Authors: Debarati Das, Jacob Gilbert, MohammadTaghi Hajiaghayi, Tomasz Kociumaka, Barna Saha, Hamed Saleh</p><p>Computing the edit distance of two strings is one of the most basic problems
 in computer science and combinatorial optimization. Tree edit distance is a
 natural generalization of edit distance in which the task is to compute a
-measure of dissimilarity between two (unweighted) rooted tr
+measure of dissimilarity between two (unweighted) rooted trees with node
+labels. Perhaps the most notable recent application of tree edit distance is in
+NoSQL big databases, such as MongoDB, where each row of the database is a JSON
+document represented as a labeled rooted tree, and finding dissimilarity
+between two rows is a basic operation. Until recently, the fastest algorithm
+for tree edit distance ran in cubic time (Demaine, Mozes, Rossman, Weimann;
+TALG'10); however, Mao (FOCS'21) broke the cubic barrier for the tree edit
+distance problem using fast matrix multiplication.
+</p>
+<p>Given a parameter $k$ as an upper bound on the distance, an $O(n+k^2)$-time
+algorithm for edit distance has been known since the 1980s due to the works of
+Myers (Algorithmica'86) and Landau and Vishkin (JCSS'88). The existence of an
+$\tilde{O}(n+\mathrm{poly}(k))$-time algorithm for tree edit distance has been
+posed as an open question, e.g., by Akmal and Jin (ICALP'21), who gave a
+state-of-the-art $\tilde{O}(nk^2)$-time algorithm. In this paper, we answer
+this question positively.
+</p>
         
         </div>
 
@@ -1246,7 +1456,7 @@ Email: eldar@cs.technion.ac.il</p>
       <div class='item-body'>
         <div class='item-snippet'>
         
-          <p>&nbsp;As I am sure you know, Queen Elizabeth II passed away at the age of 96 recently.&nbsp; I am not a royal-watcher, but I am a royal-watcher-watcher. That is, the question of why people care about the lives of these people intrigues me. A few notes</p><p>1) Was she a good Queen? People tend to think so; however, since the job is somewhat ill-defined its hard to say.&nbsp;</p><p>2) The Queen i
+          <p>&nbsp;As I am sure you know, Queen Elizabeth II passed away at the age of 96 recently.&nbsp; I am not a royal-watcher, but I am a royal-watcher-watcher. That is, the question of why people care about the lives of these people intrigues me. A few notes</p><p>1) Was she a good Queen? People tend to think so; however, since the job is somewhat ill-defined its hard to say.&nbsp;</p><p>2) The Queen is supposed to be above politics (she does not vote- I was surprised to find out that legally she can, but she really can't). We know very few of Queen Elizabeth II's opinions on political events. But the notion of political is not well defined. One would think that if she did an appeal for people to take the COVID vax that would not be political, but somehow it is (I do not know if she did such an appeal). King Charles III believes in global warming and that we need to do something about it. This again should not be political but is.&nbsp;</p><p>3) She is the second longest reigning Monarch. First is King Louis XIV who first became king at the age of 4. I had a blog complaining about this&nbsp;here. However, there is a more interesting point I want to make. From the first to the last day of King Louis XIV reign not much had changed. Technology, politics, other things just didn't change much. By contrast the world changed A LOT between Queen Elizabeth II first and last day:</p><p>a) The British were an important power in 1952. Less so now.</p><p>b) When her father died she was in Kenya and it took 4 hours to get the news to her. Now that would be immediate.&nbsp;</p><p>c) Divorce was considered bad in 1952 and is why King Edmond VIII could not be king (he wanted to marry a twice-divorced women whose ex-husbands were still alive). And now three of the Queen's children have been divorced.</p><p>d) Gay people.. enough said. There has even been a royal gay wedding, see&nbsp;here</p><p>Black people (can't call them African-Americans), Women,... you fill it in.&nbsp;</p><p>e) When Charles wanted to get married it seemed to be important that he marry a virgin. We cannot imagine this mentality anymore. When Prince William and Kate got married they were already living together and this was NOT an issue for ANYONE. I looked up what the Church of England thought of it and all I got was some very bland comments like That's what young people do nowadays.&nbsp;</p><p>3) Is the monarchy a good thing? As an American I feel I do not have a right to an opinion. If the citizens of the United Kingdom approve of the monarch (polls show they do) then who am I do tell them they are wrong? Even so, lets look at reasons for it</p><p>a) Tourism. It has been said that the Monarchy leads to MONEY from tourism. So it is worth the price? Nobody seems to know and it would be hard to tell. However, I don't think the citizens of the United Kingdom view&nbsp; money as the reason for Monarchy. The American analog is giving Disneyland tax breaks to be in Florida which generates jobs. I doubt they think of the Monarchy in those mundane transactional terms.&nbsp;</p><p>b) CS Lewis said&nbsp;</p><p>Where men are forbidden to honour a king they honour millionaires, athletes, or film stars instead: even famous prostitutes and gangsters. For spiritual nature, like bodily nature, will be served; deny it food and it will gobble poison.</p><p>This is&nbsp; bit odd- they must all pretend to like the monarchy to make it work. A long time ago when Charles and Dianna were both having affairs, 80% of the citizens the United Kingdom thought that was okay so long as they are discrete so the people&nbsp;don't find out. But- those ARE the people.</p><p>Also odd- CS Lewis was a theologian and a&nbsp; believing Christian; however, his comment above can apply to God as well as to Kings.&nbsp;</p><p><br></p><p><br></p><p><br></p><p><br></p><p>By gasarch</p>
         
         </div>
 
@@ -1288,7 +1498,9 @@ Email: eldar@cs.technion.ac.il</p>
       <div class='item-body'>
         <div class='item-snippet'>
         
-          In the reliable transmission problem, a sender, Alice, wishes to transmit a bit-string x to a remote receiver, Bob, over a binary channel with adversarial noise. The solution to this problem is to encode x using an error correcting code. As it is long known that the distance of binary codes is at most 1/2, reliable transmission is possible only if the channel corrupts (flips) at most a 1/4-fraction
+          In the reliable transmission problem, a sender, Alice, wishes to transmit a bit-string x to a remote receiver, Bob, over a binary channel with adversarial noise. The solution to this problem is to encode x using an error correcting code. As it is long known that the distance of binary codes is at most 1/2, reliable transmission is possible only if the channel corrupts (flips) at most a 1/4-fraction of the communicated bits.
+We revisit the reliable transmission problem in the two-way setting, where both Alice and Bob can send bits to each other. Our main result is the construction of two-way error correcting codes that are resilient to a constant fraction of corruptions strictly larger than 1/4. Moreover, our code has constant rate and requires Bob to only send one short message. We mention that our result resolves an open problem by Haeupler, Kamath, and Velingker [APPROX-RANDOM, 2015] and by Gupta, Kalai, and Zhang [STOC, 2022].
+Curiously, our new two-way code requires a fresh perspective on classical error correcting codes: While classical codes have only one distance guarantee for all pairs of codewords (i.e., the minimum distance), we construct codes where the distance between a pair of codewords depends on the “compatibility” of the messages they encode. We also prove that such codes are necessary for our result.
         
         </div>
 
@@ -1328,7 +1540,14 @@ Curiously, our new two-way code requires a fresh perspective on classical error 
 graphs, to positively weighted graphs. Through Gale duality for polytopes, we
 show that there is a bijection between graphical designs and the faces of
 eigenpolytopes associated to the graph. This bijection proves the existence of
-graphical designs with positive quadrature we
+graphical designs with positive quadrature weights, and upper bounds the size
+of a graphical design. We further show that any combinatorial polytope appears
+as the eigenpolytope of a positively weighted graph. Through this universality,
+we establish two complexity results for graphical designs: it is strongly
+NP-complete to determine if there is a graphical design smaller than the
+mentioned upper bound, and it is #P-complete to count the number of minimal
+graphical designs.
+</p>
         
         </div>
 
@@ -1379,7 +1598,21 @@ $\mathcal{U}$, the \RBSC problem is to find a subset $\mathcal{F}'$ of
 $\mathcal{F}$ that covers all blue elements of $B$ and minimum number of red
 elements from $R$.
 </p>
-<p>We prove that the \RBSC 
+<p>We prove that the \RBSC problem is NP-hard even when $R$ and $B$ respectively
+are sets of red and blue points in ${\rm I\!R}^2$ and the sets in $\mathcal{F}$
+are defined by axis-parallel lines i.e, every set is a maximal set of points
+with the same $x$ or $y$ coordinate.
+</p>
+<p>We then study the parameterized complexity of a generalization of this
+problem, where $\mathcal{U}$ is a set of points in ${\rm I\!R}^d$ and
+$\mathcal{F}$ is a collection of set of axis-parallel hyperplanes in ${\rm
+I\!R}^d$, under different parameterizations. For every parameter, we show that
+the problem is fixed-parameter tractable and also show the existence of a
+polynomial kernel.
+</p>
+<p>We further consider the \RBSC problem for some special types of rectangles in
+${\rm I\!R}^2$.
+</p>
         
         </div>
 
@@ -1437,7 +1670,21 @@ ${\rm I\!R}^2$.
 training machine learning models on heterogeneous mobile or Edge devices while
 keeping local data private.With an increase in its adoption, a growing concern
 is related to its economic and environmental cost (as is also the case for
-other machine learning techniques).Unfortunatel
+other machine learning techniques).Unfortunately, little work has been done to
+optimize its energy consumption or emissions of carbon dioxide or equivalents,
+as energy minimization is usually left as a secondary objective.In this paper,
+we investigate the problem of minimizing the energy consumption of FL training
+on heterogeneous devices by controlling the workload distribution.We model this
+as the Minimal Cost FL Schedule problem, a total cost minimization problem with
+identical, independent, and atomic tasks that have to be assigned to
+heterogeneous resources with arbitrary cost functions.We propose a
+pseudo-polynomial optimal solution to the problem based on the previously
+unexplored Multiple-Choice Minimum-Cost Maximal Knapsack Packing Problem.We
+also provide four algorithms for scenarios where cost functions are
+monotonically increasing and follow the same behavior.These solutions are
+likewise applicable on the minimization of other kinds of costs, and in other
+one-dimensional data partition problems.
+</p>
         
         </div>
 
@@ -1492,7 +1739,11 @@ one-dimensional data partition problems.
           <p>Authors: William T. Redman, Maria Fonoberova, Ryan Mohr, Ioannis G. Kevrekidis, Igor Mezi&#x107;</p><p>Iterative algorithms are of utmost importance in decision and control. With
 an ever growing number of algorithms being developed, distributed, and
 proprietarized, there is a similarly growing need for methods that can provide
-classification and comparison. By viewing iterative algorithms as dis
+classification and comparison. By viewing iterative algorithms as discrete-time
+dynamical systems, we leverage Koopman operator theory to identify
+(semi-)conjugacies between algorithms using their spectral properties. This
+provides a general framework with which to classify and compare algorithms.
+</p>
         
         </div>
 
@@ -1537,7 +1788,11 @@ provides a general framework with which to classify and compare algorithms.
 the primary objectives of performance testing. We can tell via performance
 assessment if the architecture implementation meets the design objectives.
 Performance evaluations of several parallel algorithms are compared in this
-study. Both theoretical and experimental methods are
+study. Both theoretical and experimental methods are used in performance
+assessment as a subdiscipline in computer science. The parallel method
+outperforms its sequential counterpart in terms of throughput. The parallel
+algorithm's performance (speedup) is examined, as shown in the result.
+</p>
         
         </div>
 
@@ -1584,7 +1839,20 @@ internally disjoint $sv$-paths to every node $v$; $G$ is $k$-connected if it is
 $k$-out-connected from every node. In connectivity augmentation problems the
 goal is to augment a graph $G_0=(V,E_0)$ by a minimum costs edge set $J$ such
 that $G_0 \cup J$ has higher connectivity than $G_0$. In the
-$k$-Ou
+$k$-Out-Connectivity Augmentation ($k$-OCA) problem, $G_0$ is
+$(k-1)$-out-connected from $s$ and $G_0 \cup J$ should be $k$-out-connected
+from $s$; in the $k$-Connectivity Augmentation ($k$-CA) problem $G_0$ is
+$(k-1)$-connected and $G_0 \cup J$ should be $k$-connected. The parameterized
+complexity status of these problems was open even for $k=3$ and unit costs. We
+will show that $k$-OCA and $3$-CA can be solved in time $9^p \cdot n^{O(1)}$,
+where $p$ is the size of an optimal solution. Our paper is the first that shows
+fixed parameter tractability of a $k$-node-connectivity augmentation problem
+with high values of $k$. We will also consider the $(2,k)$-Connectivity
+Augmentation problem where $G_0$ is $(k-1)$-edge-connected and $G_0 \cup J$
+should be both $k$-edge-connected and $2$-connected. We will show that this
+problem can be solved in time $9^p \cdot n^{O(1)}$, and for unit costs
+approximated within $1.892$.
+</p>
         
         </div>
 
@@ -1807,7 +2075,7 @@ approximated within $1.892$.
       <div class='item-body'>
         <div class='item-snippet'>
         
-          As we&#8217;re getting closer to the season when undergraduate students are considering graduate school, and graduate students are considering the next steps such as postdoc or faculty positions, I wanted to remind people of two resources for such positions: the TCS jobs and crowd-sourced masters pages. The process and market for both graduate studies and &#8230; Continue reading Quick reminders: m
+          As we&#8217;re getting closer to the season when undergraduate students are considering graduate school, and graduate students are considering the next steps such as postdoc or faculty positions, I wanted to remind people of two resources for such positions: the TCS jobs and crowd-sourced masters pages. The process and market for both graduate studies and &#8230; Continue reading Quick reminders: masters, postdocs, faculty,&#160;etc.
         
         </div>
 
@@ -1870,7 +2138,12 @@ approximated within $1.892$.
 contradiction on $n \times n$ grids. We prove that if each line in the proof is
 of size $M$ then the number of lines is exponential in $n/(\log M)^{O(d)}$.
 This strengthens a recent result of Pitassi et al. [PRT22]. The key technical
-step is a multi-switching lemma extending the 
+step is a multi-switching lemma extending the switching lemma of H\r{a}stad
+[H\r{a}s20] for a space of restrictions related to the Tseitin contradiction.
+The strengthened lemma also allows us to improve the lower bound for standard
+proof size of bounded depth Frege refutations from exponential in $\tilde
+\Omega (n^{1/59d})$ to exponential in $\tilde \Omega (n^{1/(2d-1)})$.
+</p>
         
         </div>
 
@@ -1961,7 +2234,21 @@ the subject.
 parts, and it plays a critical role in end-user products. Therefore,
 quantifying the order or structure of a manufactured surface provides important
 information on the quality and life expectancy of the product. Although texture
-c
+can be intentionally introduced to enhance aesthetics or to satisfy a design
+function, sometimes it is an inevitable byproduct of surface treatment
+processes such as Piezo Vibration Striking Treatment (PVST). Measures of order
+for surfaces have been characterized using statistical, spectral, and geometric
+approaches. For nearly hexagonal lattices, topological tools have also been
+used to measure the surface order. This paper utilizes tools from Topological
+Data Analysis for quantifying the impact centers' pattern in PVST. We compute
+measures of order based on optical digital microscope images of surfaces
+treated using PVST. These measures are applied to the grid obtained from
+estimating the centers of tool impacts, and they quantify the grid's deviations
+from the nominal one. Our results show that TDA provides a convenient framework
+for the characterization of pattern type that bypasses some limitations of
+existing tools such as difficult manual processing of the data and the need for
+an expert user to analyze and interpret the surface images.
+</p>
         
         </div>
 
@@ -2017,7 +2304,10 @@ an expert user to analyze and interpret the surface images.
 $RCH(P)$ be the rectilinear convex hull of $P$. In this paper we obtain an
 optimal $O(n\log n)$-time and $O(n)$-space algorithm to compute $RCH(P)$. We
 also obtain an efficient $O(n\log^2 n)$-time and $O(n\log n)$-space algorithm
-to compute and mainta
+to compute and maintain the set of vertices of the rectilinear convex hull of
+$P$ as we rotate $\mathbb R^3$ around the $z$-axis. Finally we study some
+properties of the rectilinear convex hulls of point sets in $\mathbb{R}^3$.
+</p>
         
         </div>
 
@@ -2062,7 +2352,24 @@ properties of the rectilinear convex hulls of point sets in $\mathbb{R}^3$.
 queries. In this setting, there is an unknown sequence $s \in \{0,1\}^{\leq
 n}$, and one chooses a set of queries $y \in \{0,1\}^{\mathcal{O}(n)}$ and
 receives $d(s,y)$ for a distance function $d$. The goal is to make as few
-queries 
+queries as possible to recover $s$. Although this problem is well-studied for
+decomposable distances, i.e., distances of the form $d(s,y) = \sum_{i=1}^n
+f(s_i, y_i)$ for some function $f$, which includes the important cases of
+Hamming distance, $\ell_p$-norms, and $M$-estimators, to the best of our
+knowledge this problem has not been studied for non-decomposable distances, for
+which there are important special cases such as edit distance, dynamic time
+warping (DTW), Frechet distance, earth mover's distance, and so on. We initiate
+the study and develop a general framework for such distances. Interestingly,
+for some distances such as DTW or Frechet, exact recovery of the sequence $s$
+is provably impossible, and so we show by allowing the characters in $y$ to be
+drawn from a slightly larger alphabet this then becomes possible. In a number
+of cases we obtain optimal or near-optimal query complexity. We also study the
+role of adaptivity for a number of different distance functions. One motivation
+for understanding non-adaptivity is that the query sequence can be fixed and
+the distances of the input to the queries provide a non-linear embedding of the
+input, which can be used in downstream applications involving, e.g., neural
+networks for natural language processing.
+</p>
         
         </div>
 
@@ -2121,7 +2428,17 @@ networks for natural language processing.
 metric space with a vertex called depot and a set of vertices called terminals.
 Each terminal is associated with a positive demand between 0 and 1. The goal is
 to find a minimum length collection of tours starting and ending at the depot
-such that the demand of each
+such that the demand of each terminal is covered by a single tour (i.e., the
+demand cannot be split), and the total demand of the terminals in each tour
+does not exceed the capacity of 1.
+</p>
+<p>Our main result is a polynomial-time $(2+\epsilon)$-approximation algorithm
+for this problem in the two-dimensional Euclidean plane, i.e., for the special
+case where the terminals and the depot are associated with points in the
+Euclidean plane and their distances are defined accordingly. This improves on
+recent work by Blauth, Traub, and Vygen [IPCO'21] and Friggstad, Mousavi,
+Rahgoshay, and Salavatipour [IPCO'22].
+</p>
         
         </div>
 
@@ -2173,7 +2490,10 @@ Rahgoshay, and Salavatipour [IPCO'22].
 is NP-hard. On the other hand, the quickest minimum cost flow problem can be
 solved efficiently via a straightforward reduction to the quickest flow problem
 without costs. More generally, we show how the quickest minimum cost
-transshipment problem can be reduced to the efficiently solvable
+transshipment problem can be reduced to the efficiently solvable quickest
+transshipment problem, thus adding another mosaic tile to the rich complexity
+landscape of flows over time.
+</p>
         
         </div>
 
@@ -2218,7 +2538,18 @@ landscape of flows over time.
 the intersection of $q$ matroids. The best-known algorithms achieve a
 $\Theta(q)$-approximation, even when restricted to instances that are the
 intersection of $q$ partition matroids, and with i.i.d.~Bernoulli random
-variables. The previous b
+variables. The previous best-known lower bound is $\Theta(\sqrt{q})$ due to a
+simple construction of [Kleinberg-Weinberg STOC 2012] (which uses
+i.i.d.~Bernoulli random variables, and writes the construction as the
+intersection of partition matroids).
+</p>
+<p>We establish an improved lower bound of $q^{1/2+\Omega(1/\log \log q)}$ by
+writing the construction of [Kleinberg-Weinberg STOC 2012] as the intersection
+of asymptotically fewer partition matroids. We accomplish this via an improved
+upper bound on the product dimension of a graph with $p^p$ disjoint cliques of
+size $p$, using recent techniques developed in [Alon-Alweiss European Journal
+of Combinatorics 2020].
+</p>
         
         </div>
 
@@ -2271,7 +2602,24 @@ of Combinatorics 2020].
 $\alpha$-approximate minimum vertex cover ($\alpha$MVC) in dynamic graph
 streams. We give a randomised algorithm for $\alpha$MVC which uses
 $O(n^2/\alpha^2)$ bits of space matching Dark and Konrad's lower bound [CCC
-2020] up to constant factors. By computing a random greedy matchin
+2020] up to constant factors. By computing a random greedy matching, we
+identify `easy' instances of the problem which can trivially be solved by
+returning the entire vertex set. The remaining `hard' instances, then have
+sparse induced subgraphs which we exploit to get our space savings and solve
+$\alpha$MVC.
+</p>
+<p>Achieving this type of optimality result is crucial for providing a complete
+understanding of a problem, and it has been gaining interest within the dynamic
+graph streaming community. For connectivity, Nelson and Yu [SODA 2019] improved
+the lower bound showing that $\Omega(n \log^3 n)$ bits of space is necessary
+while Ahn, Guha, and McGregor [SODA 2012] have shown that $O(n \log^3 n)$ bits
+is sufficient. For finding an $\alpha$-approximate maximum matching, the upper
+bound was improved by Assadi and Shah [ITCS 2022] showing that
+$O(n^2/\alpha^3)$ bits is sufficient while Dark and Konrad [CCC 2020] have
+shown that $\Omega(n^2/\alpha^3)$ bits is necessary. The space complexity,
+however, remains unresolved for many other dynamic graph streaming problems
+where further improvements can still be made. \end{abstract}
+</p>
         
         </div>
 
@@ -2329,7 +2677,19 @@ where further improvements can still be made. \end{abstract}
           <p>Authors: Osman Asif Malik, Yiming Xu, Nuojin Cheng, Stephen Becker, Alireza Doostan, Akil Narayan</p><p>Approximate solutions to large least squares problems can be computed
 efficiently using leverage score-based row-sketches, but directly computing the
 leverage scores, or sampling according to them with naive methods, still
-requires an expensive manipulation and processing of the design matrix.
+requires an expensive manipulation and processing of the design matrix. In this
+paper we develop efficient leverage score-based sampling methods for matrices
+with certain Kronecker product-type structure; in particular we consider
+matrices that are monotone lower column subsets of Kronecker product matrices.
+Our discussion is general, encompassing least squares problems on infinite
+domains, in which case matrices formally have infinitely many rows. We briefly
+survey leverage score-based sampling guarantees from the numerical linear
+algebra and approximation theory communities, and follow this with efficient
+algorithms for sampling when the design matrix has Kronecker-type structure.
+Our numerical examples confirm that sketches based on exact leverage score
+sampling for our class of structured matrices achieve superior residual
+compared to approximate leverage score sampling methods.
+</p>
         
         </div>
 
@@ -2383,7 +2743,32 @@ constant-time hash table, storing $n$ $\Theta(\log n)$-bit key/value pairs,
 make use of its random bits? That is, how many random bits does a hash table
 need to offer constant-time operations with probability $1 - 1 / \poly(n)$?
 And, if the number of random bits is unrestricted, then what is the
-high
+highest-probability guarantee that a hash table can offer?
+</p>
+<p>Past work on these questions has been bottlenecked by limitations of the
+known families of hash functions. The hash tables that achieve failure
+probabilities $1 / \poly(n)$ use at least $\tilde{\Omega}(\log^2 n)$ random
+bits, which is the number of random bits needed to create hash functions with
+$\tilde{\Omega}(\log n)$-wise independence. And the only hash tables to achieve
+failure probabilities less than $1 / 2^{\polylog n}$ require access to
+fully-random hash functions -- if the same hash tables are implemented using
+the known explicit families of hash functions, their failure probabilities
+become $1 / \poly(n)$.
+</p>
+<p>To get around these obstacles, we show how to construct a randomized data
+structure that has the same guarantees as a hash table, but that \emph{avoids
+the direct use of hash functions}. Building on this, we are then able to give
+nearly optimal solutions to both problems described above: we construct a hash
+table using $\tilde{O}(\log n)$ random bits that achieves failure-probability
+$1 / \poly(n)$; and we construct a hash table using $O(n)$ random bits that
+achieves failure probability $1 / n^{n^{1 - \epsilon}}$ for an arbitrary
+positive constant $\epsilon$.
+</p>
+<p>Finally, if the keys/values are $(1 + \Theta(1)) \log n$ bits each, then we
+show that the above guarantees can even be achieved by \emph{succinct
+dictionaries}, that is, by dictionaries that use space within a $1 + o(1)$
+factor of the information-theoretic optimum.
+</p>
         
         </div>
 
@@ -2461,7 +2846,11 @@ factor of the information-theoretic optimum.
       <div class='item-body'>
         <div class='item-snippet'>
         
-          Many classical theorems in combinatorics establish the emergence of substructures within sufficiently large collections of objects. Well-known examples are Ramsey&#39;s theorem on monochromatic subgraphs and the Erdos-Rado sunflower lemma. Implicit versions of the corresponding total search problems are known to be PWPP-hard; here &quot;implicit&quot; means that the collection is represented by a p
+          Many classical theorems in combinatorics establish the emergence of substructures within sufficiently large collections of objects. Well-known examples are Ramsey&#39;s theorem on monochromatic subgraphs and the Erdos-Rado sunflower lemma. Implicit versions of the corresponding total search problems are known to be PWPP-hard; here &quot;implicit&quot; means that the collection is represented by a poly-sized circuit inducing an exponentially large number of objects.
+
+We show that several other well-known  theorems from extremal combinatorics - including Erdos-Ko-Rado, Sperner, and Cayley&#39;s formula - give rise to complete problems for PWPP and PPP. This is in contrast to the Ramsey and Erdos-Rado problems, for which establishing inclusion in PWPP has remained elusive. Besides significantly expanding the set of problems that are complete for PWPP and PPP, our work identifies some key properties of combinatorial proofs of existence that can give rise to completeness for these classes.
+
+Our completeness results rely on efficient encodings for which finding collisions allows extracting the desired substructure. These encodings are made possible by the tightness of the bounds for the problems at hand (tighter than what is known for Ramsey&#39;s theorem and the sunflower lemma). Previous techniques for proving bounds in TFNP invariably made use of structured algorithms. Such algorithms are not known to exist for the theorems considered in this work, as their proofs &quot;from the book&quot; are non-constructive.
         
         </div>
 
@@ -2505,7 +2894,7 @@ Our completeness results rely on efficient encodings for which finding collision
       <div class='item-body'>
         <div class='item-snippet'>
         
-          We show that a decidable promise problem has a non-interactive statistical zero-knowledge proof system if and only if it is randomly reducible to a promise problem for Kolmogorov-random strings, with a superlogarithmic additive approximation term.  This extends recent work by Saks and Santhanam (CCC 2022).  We build on this to give new characterizations of Statistical Zero Knowledge (SZK), as well 
+          We show that a decidable promise problem has a non-interactive statistical zero-knowledge proof system if and only if it is randomly reducible to a promise problem for Kolmogorov-random strings, with a superlogarithmic additive approximation term.  This extends recent work by Saks and Santhanam (CCC 2022).  We build on this to give new characterizations of Statistical Zero Knowledge (SZK), as well as the related classes NISZK_L and SZK_L.
         
         </div>
 
@@ -2545,7 +2934,7 @@ Our completeness results rely on efficient encodings for which finding collision
         
           The study of the complexity of the constraint satisfaction problem (CSP), centred around the Feder-Vardi Dichotomy Conjecture, has been very prominent in the last two decades. After a long concerted effort and many partial results, the Dichotomy Conjecture has been proved in 2017 independently by Bulatov and Zhuk.
 
-At about the same time, a vast generalisation of CSP, called promise CSP, has starte
+At about the same time, a vast generalisation of CSP, called promise CSP, has started to gain prominence. In this survey, we explain the importance of promise CSP and highlight many new very interesting features that the study of promise CSP has brought to light. The complexity classification quest for the promise CSP is wide open, and we argue that, despite the promise CSP being more general, this quest is rather more accessible to a wide range of researchers than the dichotomy-led study of the CSP has been.
         
         </div>
 
@@ -2584,7 +2973,34 @@ At about the same time, a vast generalisation of CSP, called promise CSP, has st
           <p>Authors: V. Arvind, Abhranil Chatterjee, Utsab Ghosal, Partha Mukhopadhyay, C. Ramya</p><p>The identity testing of rational formulas (RIT) in the free skew field
 efficiently reduces to computing the rank of a matrix whose entries are linear
 polynomials in noncommuting variables\cite{HW15}. This rank computation problem
-has deterministic polynomial-time white-box algorithms \cite{GGOW16, IQS18} a
+has deterministic polynomial-time white-box algorithms \cite{GGOW16, IQS18} and
+a randomized polynomial-time algorithm in the black-box setting \cite{DM17}. In
+this paper, we propose a new approach for efficient derandomization of
+\emph{black-box} RIT. Additionally, we obtain results for matrix rank
+computation over the free skew field, and construct efficient linear pencil
+representations for a new class of rational expressions. More precisely, we
+show the following results:
+</p>
+<p>1. Under the hardness assumption that the ABP (algebraic branching program)
+complexity of every polynomial identity for the $k\times k$ matrix algebra is
+$2^{\Omega(k)}$ \cite{BW05}, we obtain a subexponential-time black-box
+algorithm for RIT in almost general setting. This can be seen as the first
+"hardness implies derandomization" type theorem for rational formulas.
+</p>
+<p>2. We show that the noncommutative rank of any matrix over the free skew
+field whose entries have small linear pencil representations can be computed in
+deterministic polynomial time. Prior to this, an efficient rank computation was
+only known for matrices with noncommutative formulas as entries\cite{GGOW20}.
+As special cases of our algorithm, we obtain the first deterministic
+polynomial-time algorithms for rank computation of matrices whose entries are
+noncommutative ABPs or rational formulas.
+</p>
+<p>3. Motivated by the definition given by Bergman\cite{Ber76}, we define a new
+class that contains noncommutative ABPs and rational formulas. We obtain a
+polynomial-size linear pencil representation for this class. As a by-product,
+we obtain a white-box deterministic polynomial-time identity testing algorithm
+for the class.
+</p>
         
         </div>
 
@@ -2651,7 +3067,27 @@ for the class.
           <p>Authors: Romain Bourneuf, Luk&#xe1;&#x161; Folwarczn&#xfd;, Pavel Hub&#xe1;&#x10d;ek, Alon Rosen, Nikolaj Ignatieff Schwartzbach</p><p>Many classical theorems in combinatorics establish the emergence of
 substructures within sufficiently large collections of objects. Well-known
 examples are Ramsey's theorem on monochromatic subgraphs and the Erd\H{o}s-Rado
-sunflower lemma. Implicit versions of th
+sunflower lemma. Implicit versions of the corresponding total search problems
+are known to be PWPP-hard; here "implici" means that the collection is
+represented by a poly-sized circuit inducing an exponentially large number of
+objects.
+</p>
+<p>We show that several other well-known theorems from extremal combinatorics -
+including Erd\H{o}s-Ko-Rado, Sperner, and Cayley's formula - give rise to
+complete problems for PWPP and PPP. This is in contrast to the Ramsey and
+Erd\H{o}s-Rado problems, for which establishing inclusion in PWPP has remained
+elusive. Besides significantly expanding the set of problems that are complete
+for PWPP and PPP, our work identifies some key properties of combinatorial
+proofs of existence that can give rise to completeness for these classes.
+</p>
+<p>Our completeness results rely on efficient encodings for which finding
+collisions allows extracting the desired substructure. These encodings are made
+possible by the tightness of the bounds for the problems at hand (tighter than
+what is known for Ramsey's theorem and the sunflower lemma). Previous
+techniques for proving bounds in TFNP invariably made use of structured
+algorithms. Such algorithms are not known to exist for the theorems considered
+in this work, as their proofs "from the book" are non-constructive.
+</p>
         
         </div>
 
@@ -2712,7 +3148,14 @@ in this work, as their proofs "from the book" are non-constructive.
 SO-HORN$^{*r}$ on all finite structures. We show that SO-HORN$^{r}$,
 SO-HORN$^{*r}$, FO(LFP) coincide with each other and SO-HORN$^{*}$ is proper
 sublogic of SO-HORN$^{r}$. To prove this result, we introduce the notions of
-DATALOG$^{*}$ program, DATALOG$^{r}$ program and their stratified 
+DATALOG$^{*}$ program, DATALOG$^{r}$ program and their stratified versions,
+S-DATALOG$^{*}$ program and S-DATALOG$^{r}$ program. It is shown that, on all
+structures, DATALOG$^{r}$ and S-DATALOG$^{r}$ are equivalent and DATALOG$^{*}$
+is a proper sublogic of DATALOG$^{r}$. SO-HORN$^{*}$ and SO-HORN$^{r}$ can be
+treated as the negations of DATALOG$^{*}$ and DATALOG$^{r}$, respectively. We
+also show that SO-EHORN$^{r}$ logic which is an extended version of SO-HORN
+captures co-NP on all finite structures.
+</p>
         
         </div>
 
@@ -2761,7 +3204,19 @@ captures co-NP on all finite structures.
 state-of-art applications. However, despite their successes, modern
 transformers rely on the self-attention mechanism, whose time- and
 space-complexity is quadratic in the length of the input. Several approaches
-have been proposed to speed up self-atte
+have been proposed to speed up self-attention mechanisms to achieve
+sub-quadratic running time; however, the large majority of these works are not
+accompanied by rigorous error guarantees. In this work, we establish lower
+bounds on the computational complexity of self-attention in a number of
+scenarios. We prove that the time complexity of self-attention is necessarily
+quadratic in the input length, unless the Strong Exponential Time Hypothesis
+(SETH) is false. This argument holds even if the attention computation is
+performed only approximately, and for a variety of attention mechanisms. As a
+complement to our lower bounds, we show that it is indeed possible to
+approximate dot-product self-attention using finite Taylor series in
+linear-time, at the cost of having an exponential dependence on the polynomial
+order.
+</p>
         
         </div>
 
@@ -2816,7 +3271,11 @@ variables are unate (i.e., monotone after first negating some variables), for
 any fixed positive integer $k$ and as $n \to \infty$. This resolves a
 conjecture by Bollob\'as, Brightwell, and Leader from 2003.
 </p>
-<p>This paper is t
+<p>This paper is the second half of a two-part work solving the problem. The
+first part, by Dong, Mani, and Zhao, reduces the conjecture to a Tur\'an
+problem on partially directed hypergraphs. In this paper we solve this Tur\'an
+problem.
+</p>
         
         </div>
 
@@ -2863,7 +3322,20 @@ problem.
 and business decision making, whereas two core challenges impede the
 development of efficient solution methods with finite-time convergence
 guarantee: the lack of computationally tractable optimality criterion and the
-lack of computationally powerful oracles. The 
+lack of computationally powerful oracles. The contributions of this paper are
+two-fold. First, we establish the relationship between the celebrated Goldstein
+subdifferential~\citep{Goldstein-1977-Optimization} and uniform smoothing,
+thereby providing the basis and intuition for the design of gradient-free
+methods that guarantee the finite-time convergence to a set of Goldstein
+stationary points. Second, we propose the gradient-free method (GFM) and
+stochastic GFM for solving a class of nonsmooth nonconvex optimization problems
+and prove that both of them can return a $(\delta,\epsilon)$-Goldstein
+stationary point of a Lipschitz function $f$ at an expected convergence rate at
+$O(d^{3/2}\delta^{-1}\epsilon^{-4})$ where $d$ is the problem dimension.
+Two-phase versions of GFM and SGFM are also proposed and proven to achieve
+improved large-deviation results. Finally, we demonstrate the effectiveness of
+2-SGFM on training ReLU neural networks with the \textsc{Minst} dataset.
+</p>
         
         </div>
 
@@ -2918,7 +3390,28 @@ improved large-deviation results. Finally, we demonstrate the effectiveness of
 oriented in direction $\theta$ measures the distance $d=h(x,y,\theta)$ between
 $p$ and the closest point on the boundary of $W$ along a ray emanating from $p$
 in direction $\theta$. We study the following problem: Give a polygon $W$,
-possibly with holes, with $n
+possibly with holes, with $n$ vertices, preprocess it such that given a query
+real value $d\geq 0$, one can efficiently compute the preimage $h^{-1}(d)$,
+namely determine all the possible poses (positions and orientations) of a depth
+sensor placed in $W$ that would yield the reading $d$. We employ a
+decomposition of $W\times S^1$, which is an extension of the celebrated
+trapezoidal decomposition, and which we call rotational trapezoidal
+decomposition and present an efficient data structure, which computes the
+preimage in an output-sensitive fashion relative to this decomposition: if $k$
+cells of the decomposition contribute to the final result, we will report them
+in $O(k+1)$ time, after $O(n^2\log n)$ preprocessing time and using $O(n^2)$
+storage space. We also analyze the shape of the projection of the preimage onto
+the polygon $W$; this projection describes the portion of $W$ where the sensor
+could have been placed. Furthermore, we obtain analogous results for the more
+useful case (narrowing down the set of possible poses), where the sensor
+performs two depth measurement from the same point $p$, one in direction
+$\theta$ and the other in direction $\theta+\pi$. While localizations problems
+in robotics are often carried out by exploring the full visibility polygon of a
+sensor placed at a fixed point of the environment, the approach that we propose
+here opens the door to sufficing with only few depth measurements, which is
+advantageous as it allows for usage of inexpensive sensors and could also lead
+to savings in storage and communication costs.
+</p>
         
         </div>
 
@@ -2982,7 +3475,25 @@ of two sequences $a$ and $b$ of lengths $n$ and $m$, respectively, where $n
 \geq m$. We assume that $a$ is arbitrary, but $b_i = f(i)$, where $f(x) \colon
 [0,m) \to \mathbb{R}$ is a function with one of the following properties:
 </p>
-<p>1. the linear case, w
+<p>1. the linear case, when $f(x) =\beta + \alpha \cdot x$;
+</p>
+<p>2. the monotone case, when $f(i+1) \geq f(i)$, for any $i$;
+</p>
+<p>3. the convex case, when $f(i+1) - f(i) \geq f(i) - f(i-1)$, for any $i$;
+</p>
+<p>4. the concave case, when $f(i+1) - f(i) \leq f(i) - f(i-1)$, for any $i$;
+</p>
+<p>5. the piece-wise linear case, when $f(x)$ consist of $p$ linear pieces;
+</p>
+<p>6. the polynomial case, when $f \in \mathbb{Z}^d[x]$, for some fixed $d$.
+</p>
+<p>To the best of our knowledge, the cases 4-6 were not considered in literature
+before. We develop true sub-quadratic algorithms for them.
+</p>
+<p>We apply our results to the knapsack problem with a separable nonlinear
+objective function, shortest lattice vector, and closest lattice vector
+problems.
+</p>
         
         </div>
 
@@ -3043,7 +3554,28 @@ problems.
 size $k \geq 1$, and a positive integer $\ell \geq 1$. The goal is to decide
 whether there exists a sequence $\langle I_0, I_1, ..., I_\ell \rangle$ of
 independent sets such that for all $j \in \{0,\ldots,\ell-1\}$ the set $I_j$ is
-an independent set of size 
+an independent set of size $k$, $I_0 = S$, $I_\ell = T$, and $I_{j+1}$ is
+obtained from $I_j$ by a predetermined reconfiguration rule. We consider two
+reconfiguration rules. Intuitively, we view each independent set as a
+collection of tokens placed on the vertices of the graph. Then, the Token
+Sliding Optimization (TSO) problem asks whether there exists a sequence of at
+most $\ell$ steps that transforms $S$ into $T$, where at each step we are
+allowed to slide one token from a vertex to an unoccupied neighboring vertex.
+In the Token Jumping Optimization (TJO) problem, at each step, we are allowed
+to jump one token from a vertex to any other unoccupied vertex of the graph.
+Both TSO and TJO are known to be fixed-parameter tractable when parameterized
+by $\ell$ on nowhere dense classes of graphs. In this work, we show that both
+problems are fixed-parameter tractable for parameter $k + \ell + d$ on
+$d$-degenerate graphs as well as for parameter $|M| + \ell + \Delta$ on graphs
+having a modulator $M$ whose deletion leaves a graph of maximum degree
+$\Delta$. We complement these result by showing that for parameter $\ell$ alone
+both problems become W[1]-hard already on $2$-degenerate graphs. Our positive
+result makes use of the notion of independence covering families introduced by
+Lokshtanov et al. Finally, we show that using such families one can obtain a
+simpler and unified algorithm for the standard Token Jumping Reachability
+problem parameterized by $k$ on both degenerate and nowhere dense classes of
+graphs.
+</p>
         
         </div>
 
@@ -3106,7 +3638,17 @@ graphs.
 graphs. A detailed hierarchical graph drawing technique that is based on the
 Path Based Framework (PBF) is presented. Extensive edge bundling is applied to
 draw all edges of the graph and the height of the drawing is minimized using
-compaction. T
+compaction. The drawings produced by this framework are compared to drawings
+produced by the well known Sugiyama framework in terms of area, number of
+bends, number of crossings, and execution time. The new algorithm runs very
+fast and produces drawings that are readable and efficient. Since there are
+advantages (and disadvantages) to both frameworks, we performed a user study
+and the results show that the drawings produced by the new framework are well
+received in terms of clarity, readability, and usability. Hence, the new
+technique offers an interesting alternative to drawing hierarchical graphs, and
+is especially useful in applications where user defined paths are important and
+need to be highlighted.
+</p>
         
         </div>
 

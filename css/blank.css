@@ -83,6 +83,10 @@ a {
       font-size: 100%; }
   .item .item-snippet {
     display: none;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     /* fix/todo: move to scss partial for reuse eg. _snippet.scss or similar */ }
     .item .item-snippet b, .item .item-snippet h1, .item .item-snippet h2, .item .item-snippet h3, .item .item-snippet h4, .item .item-snippet h5, .item .item-snippet h6 {
       font-weight: normal; }
