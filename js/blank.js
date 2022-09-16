@@ -47,7 +47,7 @@ function onOpenItem() {
 function showItemSnippet( $item ) // alias - hideItemFullText
 {
   $item.find( '.item-summary,.item-content' ).hide();
-  $item.find( '.item-snippet' ).css('display', '-webkit-box');
+  $item.find( '.item-snippet' ).show();
 }
 
 function hideItemSnippet( $item )  // alias - showItemFullText
