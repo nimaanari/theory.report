@@ -96,37 +96,41 @@ a {
 }
 
 .item {
-    padding: 0rem 0rem 1rem 0rem;
-    
-   .item-content,
-   .item-summary,
-   .item-snippet {
+  padding: 0rem 0rem 1rem 0rem;
 
-     font-size: 1rem;
-     margin-top: 1rem;
+  .item-content,
+  .item-summary,
+  .item-snippet {
 
-     h1, h2, h3, h4, h5, h6 {
-       font-size: 100%;
-     }
-   }
+    font-size: 1rem;
+    margin-top: 1rem;
 
-   .item-snippet {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 100%;
+    }
+  }
+
+  .item-snippet {
     display: none;  // hide on startup
-    
-     /* fix/todo: move to scss partial for reuse eg. _snippet.scss or similar */
-     b, h1, h2, h3, h4, h5, h6 {
-       font-weight: normal;
-     }
-     p, ul, ol, h1, h2, h3, h4, h5, h6 {
-        margin: 2px 0px 2px 0px;  // top right bottom left
-     }
-     p, h1, h2, h3, h4, h5, h6 {
-        padding: 0;
-        // note: exclude ul,ol, that is, lists
-     }
-   }
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+    /* fix/todo: move to scss partial for reuse eg. _snippet.scss or similar */
+    b, h1, h2, h3, h4, h5, h6 {
+      font-weight: normal;
+    }
+    p, ul, ol, h1, h2, h3, h4, h5, h6 {
+      margin: 2px 0px 2px 0px;  // top right bottom left
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+      padding: 0;
+      // note: exclude ul,ol, that is, lists
+    }
+  }
 
-   .item-header {
+  .item-header {
     background: #e4e4f0;
     padding: 0.5rem 0.5rem 0rem 0.5rem;
     border: 1px solid #aac;
@@ -144,15 +148,15 @@ a {
       .item-title {
         margin-top: 0;
         margin-bottom: 0;
-       }
+        }
     }
-   }
+  }
 
-   .item-footer {
-     font-size: $small-font-size;
-     color: $secondary-color;
-     margin-top: 0.75rem;
-   }
+  .item-footer {
+    font-size: $small-font-size;
+    color: $secondary-color;
+    margin-top: 0.75rem;
+  }
    
   .item-collapse,
   .item-close,

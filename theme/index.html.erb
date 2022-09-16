@@ -96,9 +96,9 @@
       <div class='item-body'>
         <div class='item-snippet'>
         <% if item.summary %>
-          <%= textify( item.summary )[0..400] %>
+          <%= textify( item.summary ) %>
         <% elsif item.content %>
-          <%= textify( item.content )[0..400] %>
+          <%= textify( item.content ) %>
         <% else %>
           -/-
         <% end %>
