@@ -10,6 +10,48 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-132 |  Fooling polynomials using invariant theory | 
+
+	Harm Derksen, 
+
+	Emanuele Viola</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/132"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/132</id>
+    <updated>2022-09-18T20:32:26+00:00</updated>
+    <content type="html" xml:lang="en">
+    We revisit the problem of constructing explicit pseudorandom generators
+that fool with error $\epsilon$ degree-$d$ polynomials in $n$ variables
+over the field $F_q$, in the case of large $q$. Previous constructions
+either have seed length at least $2^{d}\log q$, and thus are only non-trivial
+when the degree is less than $\log n$, or else rely on a seminal reduction by Bogdanov
+(STOC 2005). This reduction yields seed length not less than $d^{4} \log n + \log q$
+and requires fields of size at least $d^{6}/\epsilon^{2}$; and explicit generators
+meeting such bounds are known.
+
+Departing from Bogdanov&amp;#39;s reduction, we develop an algebraic analogue
+of the Bogdanov-Viola paradigm (FOCS 2007, SICOMP 2010) of summing
+generators for degree-one polynomials. Whereas previous analyses of
+the paradigm are restricted to degree less than $\log n$, we give a new analysis
+which handles large degrees. A main new idea is to show that the construction
+preserves indecomposability of polynomials. Apparently for the first
+time in the area, the proof uses invariant theory.
+
+Our approach in particular yields several new pseudorandom generators.
+In particular, for large enough fields we obtain seed length $O(d\log n+\log q)$
+which is optimal up to constant factors. We also construct generators
+for fields of size as small as $O(d^{4})$. Further reducing the field
+size requires a significant change in techniques: Most or all generators
+for large-degree polynomials rely on Weil bounds; but such bounds
+are only applicable when $q&amp;gt;d^{4}$.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Adam Sheffer: New CS Tenure Track Positions, New program in Manhattan</title>
     <link href="https://adamsheffer.wordpress.com/2022/09/18/new-cs-tenure-track-positions-new-program-in-manhattan/"/>
     <id>http://adamsheffer.wordpress.com/?p=5781</id>
@@ -1582,38 +1624,6 @@ conjecture by Bollob\&#39;as, Brightwell, and Leader from 2003.
 first part, by Dong, Mani, and Zhao, reduces the conjecture to a Tur\&#39;an
 problem on partially directed hypergraphs. In this paper we solve this Tur\&#39;an
 problem.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Gradient-Free Methods for Deterministic and Stochastic Nonsmooth Nonconvex Optimization</title>
-    <link href="http://arxiv.org/abs/2209.05045"/>
-    <id>http://arxiv.org/abs/2209.05045</id>
-    <updated>2022-09-13T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lin_T/0/1/0/all/0/1&quot;&gt;Tianyi Lin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Zheng_Z/0/1/0/all/0/1&quot;&gt;Zeyu Zheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Jordan_M/0/1/0/all/0/1&quot;&gt;Michael I. Jordan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Nonsmooth nonconvex optimization problems broadly emerge in machine learning
-and business decision making, whereas two core challenges impede the
-development of efficient solution methods with finite-time convergence
-guarantee: the lack of computationally tractable optimality criterion and the
-lack of computationally powerful oracles. The contributions of this paper are
-two-fold. First, we establish the relationship between the celebrated Goldstein
-subdifferential~\citep{Goldstein-1977-Optimization} and uniform smoothing,
-thereby providing the basis and intuition for the design of gradient-free
-methods that guarantee the finite-time convergence to a set of Goldstein
-stationary points. Second, we propose the gradient-free method (GFM) and
-stochastic GFM for solving a class of nonsmooth nonconvex optimization problems
-and prove that both of them can return a $(\delta,\epsilon)$-Goldstein
-stationary point of a Lipschitz function $f$ at an expected convergence rate at
-$O(d^{3/2}\delta^{-1}\epsilon^{-4})$ where $d$ is the problem dimension.
-Two-phase versions of GFM and SGFM are also proposed and proven to achieve
-improved large-deviation results. Finally, we demonstrate the effectiveness of
-2-SGFM on training ReLU neural networks with the \textsc{Minst} dataset.
 &lt;/p&gt;
   </content>
     <author>
