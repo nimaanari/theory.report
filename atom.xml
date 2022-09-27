@@ -10,6 +10,21 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Computational Complexity: Is the complexity of approximating Vertex Cover of degree 3 open?</title>
+    <link href="http://blog.computationalcomplexity.org/2022/09/is-complexity-of-vertex-cover-of-degree.html"/>
+    <id>tag:blogger.com,1999:blog-3722233.post-1313340574525713217</id>
+    <updated>2022-09-27T02:02:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;&amp;nbsp;RECALL:&lt;/p&gt;&lt;p&gt;A max-problem f has a A P Time App Scheme (PTAS) if there is an algorithm ALG such that&lt;/p&gt;&lt;p&gt;&amp;nbsp;ALG(\epsilon) \ge (1-\epsilon)f(x).&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;A min-problem f has a A P Time App Scheme (PTAS) if there is an algorithm ALG such that&lt;/p&gt;&lt;p&gt;&amp;nbsp;ALG(\epsilon) \le (1+\epsilon)f(x).&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;(Note that the poly can depend on epsilon so it may be something like n^{1/epsilon}.)&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;MAX3SAT is, given a formula with \le 3 literals per clause, find an assignment&lt;/p&gt;&lt;p&gt;that maximized the number of clauses satisfied.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;VCB-a is Vertex cover where graphs have degree \le a&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The following are known:&lt;/p&gt;&lt;p&gt;0) MAX3SAT is in APX.&lt;/p&gt;&lt;p&gt;1) The PCP paper,&amp;nbsp;&lt;a href=&quot;https://doi.org/10.1145/278298.278306&quot;&gt;here&lt;/a&gt;, showed that if MAX3SAT has a PTAS then P=NP.&lt;/p&gt;&lt;p&gt;2) Papadimitriou and Yannakakis (&lt;a href=&quot;https://doi.org/10.1016/0022-0000(91)90023-X&quot;&gt;here&lt;/a&gt;)&amp;nbsp; had showed much earlier that MAX3SAT \le VCB-4 with an approx preserving reduction.&lt;/p&gt;&lt;p&gt;3) From (1) and (2) we have that VCB-4 has a PTAS then P=NP. (VC is in APX by an easy 2-approx).&lt;/p&gt;&lt;p&gt;4) Clearly VCB-2 is in P.&lt;/p&gt;&lt;p&gt;The following seems to be open, though if you know otherwise pleae leave a comment:&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Is VCB-3 a) in P? b) NPC? (ADDED LATER- NPC- See comments.)&amp;nbsp;&lt;/p&gt;&lt;p&gt;Is the following true: if VCB-3 has a PTAS then P=NP.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;NOTE- all of the above is true for Ind Set-4 and Dom Set-4. So that leads to more open problems.&lt;/p&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
+  </content>
+    <author>
+      <name>Computational Complexity</name>
+      <uri>http://blog.computationalcomplexity.org/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: A characterization of functions over the integers computable in polynomial time using discrete differential equations</title>
     <link href="http://arxiv.org/abs/2209.12168"/>
     <id>http://arxiv.org/abs/2209.12168</id>
@@ -1626,32 +1641,6 @@ face-to-face interactions, co-authorship and human communication. We show that
 our approximated algorithm not only allows to speed up the performance, but
 also to extract larger higher-order motifs beyond the computational limits of
 an exact approach.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On Reachable Assignments under Dichotomous Preferences</title>
-    <link href="http://arxiv.org/abs/2209.10262"/>
-    <id>http://arxiv.org/abs/2209.10262</id>
-    <updated>2022-09-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ito_T/0/1/0/all/0/1&quot;&gt;Takehiro Ito&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kakimura_N/0/1/0/all/0/1&quot;&gt;Naonori Kakimura&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kamiyama_N/0/1/0/all/0/1&quot;&gt;Naoyuki Kamiyama&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kobayashi_Y/0/1/0/all/0/1&quot;&gt;Yusuke Kobayashi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nozaki_Y/0/1/0/all/0/1&quot;&gt;Yuta Nozaki&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Okamoto_Y/0/1/0/all/0/1&quot;&gt;Yoshio Okamoto&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ozeki_K/0/1/0/all/0/1&quot;&gt;Kenta Ozeki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the problem of determining whether a target item assignment can
-be reached from an initial item assignment by a sequence of pairwise exchanges
-of items between agents. In particular, we consider the situation where each
-agent has a dichotomous preference over the items, that is, each agent
-evaluates each item as acceptable or unacceptable. Furthermore, we assume that
-communication between agents is limited, and the relationship is represented by
-an undirected graph. Then, a pair of agents can exchange their items only if
-they are connected by an edge and the involved items are acceptable. We prove
-that this problem is PSPACE-complete even when the communication graph is
-complete (that is, every pair of agents can exchange their items), and this
-problem can be solved in polynomial time if an input graph is a tree.
 &lt;/p&gt;
   </content>
     <author>
