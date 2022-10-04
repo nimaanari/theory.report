@@ -9,6 +9,175 @@
 
 
 <item>
+  <title>Multi-Robot Motion Planning for Unit Discs with Revolving Areas</title>
+  <guid>http://arxiv.org/abs/2210.00123</guid>
+  <link>http://arxiv.org/abs/2210.00123</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Agarwal_P/0/1/0/all/0/1&quot;&gt;Pankaj K. Agarwal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Geft_T/0/1/0/all/0/1&quot;&gt;Tzvika Geft&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Halperin_D/0/1/0/all/0/1&quot;&gt;Dan Halperin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Taylor_E/0/1/0/all/0/1&quot;&gt;Erin Taylor&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of motion planning for a collection of $n$ labeled unit
+disc robots in a polygonal environment. We assume that the robots have
+\emph{revolving areas} around their start and final positions: that each start
+and each final is contained in a radius $2$ disc lying in the free space, not
+necessarily concentric with the start or final position, which is free from
+other start or final positions. This assumption allows a \emph{weakly-monotone}
+motion plan, in which robots move according to an ordering as follows: during
+the turn of a robot $R$ in the ordering, it moves fully from its start to final
+position, while other robots do not leave their revolving areas. As $R$ passes
+through a revolving area, a robot $R&#39;$ that is inside this area may move within
+the revolving area to avoid a collision. Notwithstanding the existence of a
+motion plan, we show that minimizing the total traveled distance in this
+setting, specifically even when the motion plan is restricted to be
+weakly-monotone, is APX-hard, ruling out any polynomial-time
+$(1+\epsilon)$-approximation algorithm.
+&lt;/p&gt;
+&lt;p&gt;On the positive side, we present the first constant-factor approximation
+algorithm for computing a feasible weakly-monotone motion plan. The total
+distance traveled by the robots is within an $O(1)$ factor of that of the
+optimal motion plan, which need not be weakly monotone. Our algorithm extends
+to an online setting in which the polygonal environment is fixed but the
+initial and final positions of robots are specified in an online manner.
+Finally, we observe that the overhead in the overall cost that we add while
+editing the paths to avoid robot-robot collision can vary significantly
+depending on the ordering we chose. Finding the best ordering in this respect
+is known to be NP-hard, and we provide a polynomial time $O(\log n \log \log
+n)$-approximation algorithm for this problem.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Closed cap condition under the cap construction algorithm</title>
+  <guid>http://arxiv.org/abs/2210.00198</guid>
+  <link>http://arxiv.org/abs/2210.00198</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sandu_M/0/1/0/all/0/1&quot;&gt;Mercedes Sandu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Weng_S/0/1/0/all/0/1&quot;&gt;Shuyi Weng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_J/0/1/0/all/0/1&quot;&gt;Jade Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Every polygon $P$ can be companioned by a cap polygon $\hat P$ such that $P$
+and $\hat P$ serve as two parts of the boundary surface of a polyhedron $V$.
+Pairs of vertices on $P$ and $\hat P$ are identified successively to become
+vertices of $V$. In this paper, we study the cap construction that asserts
+equal angular defects at these pairings. We exhibit a linear relation that
+arises from the cap construction algorithm, which in turn demonstrates an
+abundance of polygons that satisfy the closed cap condition, that is, those
+that can successfully undergo the cap construction process.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Local and global expansion in random geometric graphs</title>
+  <guid>http://arxiv.org/abs/2210.00158</guid>
+  <link>http://arxiv.org/abs/2210.00158</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Liu_S/0/1/0/all/0/1&quot;&gt;Siqi Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mohanty_S/0/1/0/all/0/1&quot;&gt;Sidhanth Mohanty&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Schramm_T/0/1/0/all/0/1&quot;&gt;Tselil Schramm&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Yang_E/0/1/0/all/0/1&quot;&gt;Elizabeth Yang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Consider a random geometric 2-dimensional simplicial complex $X$ sampled as
+follows: first, sample $n$ vectors $\boldsymbol{u_1},\ldots,\boldsymbol{u_n}$
+uniformly at random on $\mathbb{S}^{d-1}$; then, for each triple $i,j,k \in
+[n]$, add $\{i,j,k\}$ and all of its subsets to $X$ if and only if
+$\langle{\boldsymbol{u_i},\boldsymbol{u_j}}\rangle \ge \tau,
+\langle{\boldsymbol{u_i},\boldsymbol{u_k}}\rangle \ge \tau$, and $\langle
+\boldsymbol{u_j}, \boldsymbol{u_k}\rangle \ge \tau$. We prove that for every
+$\varepsilon &amp;gt; 0$, there exists a choice of $d = \Theta(\log n)$ and $\tau =
+\tau(\varepsilon,d)$ so that with high probability, $X$ is a high-dimensional
+expander of average degree $n^\varepsilon$ in which each $1$-link has spectral
+gap bounded away from $\frac{1}{2}$.
+&lt;/p&gt;
+&lt;p&gt;To our knowledge, this is the first demonstration of a natural distribution
+over $2$-dimensional expanders of arbitrarily small polynomial average degree
+and spectral link expansion better than $\frac{1}{2}$. All previously known
+constructions are algebraic. This distribution also furnishes an example of
+simplicial complexes for which the trickle-down theorem is nearly tight.
+&lt;/p&gt;
+&lt;p&gt;En route, we prove general bounds on the spectral expansion of random induced
+subgraphs of arbitrary vertex transitive graphs, which may be of independent
+interest. For example, one consequence is an almost-sharp bound on the second
+eigenvalue of random $n$-vertex geometric graphs on $\mathbb{S}^{d-1}$, which
+was previously unknown for most $n,d$ pairs.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>An experimental study of algorithms for obtaining a singly connected subgraph</title>
+  <guid>http://arxiv.org/abs/2210.00243</guid>
+  <link>http://arxiv.org/abs/2210.00243</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zahloote_A/0/1/0/all/0/1&quot;&gt;Ahmed Zahloote&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saleh_A/0/1/0/all/0/1&quot;&gt;Al-hasan Saleh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghanem_A/0/1/0/all/0/1&quot;&gt;Ayman Ghanem&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hasan_H/0/1/0/all/0/1&quot;&gt;Hiba Hasan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dreibaty_A/0/1/0/all/0/1&quot;&gt;Asem Dreibaty&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Abodaraa_A/0/1/0/all/0/1&quot;&gt;Ali Abodaraa&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Suleiman_N/0/1/0/all/0/1&quot;&gt;Nermeen Suleiman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Naameh_N/0/1/0/all/0/1&quot;&gt;Nour Naameh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ibrahim_A/0/1/0/all/0/1&quot;&gt;Ali Ibrahim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+mahfoud_Z/0/1/0/all/0/1&quot;&gt;Zeinab mahfoud&lt;/a&gt;&lt;/p&gt;&lt;p&gt;\begin{abstract}
+&lt;/p&gt;
+&lt;p&gt;\normalsize{\noindent A directed graph $G = (V,E)$ is singly connected if for
+any two vertices $v,u \in V$, the directed graph $G$ contains at most one
+simple path from $v$ to $u$. In this paper, we study different algorithms to
+find a feasible but necessarily optimal solution to the following problem.
+Given a directed acyclic graph $G=(V,E)$, find a subset $H \subseteq E$ of
+minimum size such that the subgraph $(V,E \setminus H)$ is singly connected.
+Moreover, we prove that this problem can be solved in polynomial time for a
+special kind of directed graphs.}
+&lt;/p&gt;
+&lt;p&gt;\end{abstract}
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>On The Relative Error of Random Fourier Features for Preserving Kernel Distance</title>
+  <guid>http://arxiv.org/abs/2210.00244</guid>
+  <link>http://arxiv.org/abs/2210.00244</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cheng_K/0/1/0/all/0/1&quot;&gt;Kuan Cheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiang_S/0/1/0/all/0/1&quot;&gt;Shaofeng H.-C. Jiang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wei_L/0/1/0/all/0/1&quot;&gt;Luojian Wei&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wei_Z/0/1/0/all/0/1&quot;&gt;Zhide Wei&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The method of random Fourier features (RFF), proposed in a seminal paper by
+Rahimi and Recht (NIPS&#39;07), is a powerful technique to find approximate
+low-dimensional representations of points in (high-dimensional) kernel space,
+for shift-invariant kernels. While RFF has been analyzed under various notions
+of error guarantee, the ability to preserve the kernel distance with
+\emph{relative} error is less understood. We show that for a significant range
+of kernels, including the well-known Laplacian kernels, RFF cannot approximate
+the kernel distance with small relative error using low dimensions. We
+complement this by showing as long as the shift-invariant kernel is analytic,
+RFF with $\mathrm{poly}(\epsilon^{-1} \log n)$ dimensions achieves
+$\epsilon$-relative error for pairwise kernel distance of $n$ points, and the
+dimension bound is improved to $\mathrm{poly}(\epsilon^{-1}\log k)$ for the
+specific application of kernel $k$-means. Finally, going beyond RFF, we make
+the first step towards data-oblivious dimension-reduction for general
+shift-invariant kernels, and we obtain a similar $\mathrm{poly}(\epsilon^{-1}
+\log n)$ dimension bound for Laplacian kernels. We also validate the
+dimension-error tradeoff of our methods on simulated datasets, and they
+demonstrate superior performance compared with other popular methods including
+random-projection and Nystr\&quot;{o}m methods.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>A Novel Parallel Triangle Counting Algorithm with Reduced Communication</title>
+  <guid>http://arxiv.org/abs/2210.00389</guid>
+  <link>http://arxiv.org/abs/2210.00389</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bader_D/0/1/0/all/0/1&quot;&gt;David A. Bader&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_F/0/1/0/all/0/1&quot;&gt;Fuhuan Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ganeshan_A/0/1/0/all/0/1&quot;&gt;Anya Ganeshan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gundogdu_A/0/1/0/all/0/1&quot;&gt;Ahmet Gundogdu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lew_J/0/1/0/all/0/1&quot;&gt;Jason Lew&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rodriguez_O/0/1/0/all/0/1&quot;&gt;Oliver Alvarado Rodriguez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Du_Z/0/1/0/all/0/1&quot;&gt;Zhihui Du&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Counting and finding triangles in graphs is often used in real-world
+analytics for characterizing the cohesiveness and identifying communities in
+graphs. In this paper, we present novel sequential and parallel triangle
+counting algorithms based on identifying horizontal-edges in a breadth-first
+search (BFS) traversal of the graph. The BFS allows our algorithm to
+drastically reduce the number of edges examined for set intersections. Our new
+approach is the first communication-optimal parallel algorithm that
+asymptotically reduces the communication on massive graphs such as from real
+social networks and synthetic graphs from the Graph500 Benchmark. In our
+estimate from massive-scale Graph500 graphs, our new algorithms reduces the
+communication by 21x on a scale 36 and by 176x on a scale 42. Because
+communication is known to be the dominant cost of parallel triangle counting,
+our new parallel algorithm, to our knowledge, is now the fastest method for
+counting triangles in large graphs.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Batch Multivalid Conformal Prediction</title>
   <guid>tag:blogger.com,1999:blog-25562705.post-6329066924272920511</guid>
   <link>http://aaronsadventures.blogspot.com/2022/10/batch-multivalid-conformal-prediction.html</link>
@@ -1231,161 +1400,6 @@ to compose in any quantum algorithm, which is how we prove (*).
   </description>
   <pubDate>2022-09-29 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On Computing Exact Means of Time Series Using the Move-Split-Merge Metric</title>
-  <guid>http://arxiv.org/abs/2209.14197</guid>
-  <link>http://arxiv.org/abs/2209.14197</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Holznigenkemper_J/0/1/0/all/0/1&quot;&gt;Jana Holznigenkemper&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Komusiewicz_C/0/1/0/all/0/1&quot;&gt;Christian Komusiewicz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Seeger_B/0/1/0/all/0/1&quot;&gt;Bernhard Seeger&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Computing an accurate mean of a set of time series is a critical task in
-applications like nearest-neighbor classification and clustering of time
-series. While there are many distance functions for time series, the most
-popular distance function used for the computation of time series means is the
-non-metric dynamic time warping (DTW) distance. A recent algorithm for the
-exact computation of a DTW-Mean has a running time of
-$\mathcal{O}(n^{2k+1}2^kk)$, where $k$ denotes the number of time series and
-$n$ their maximum length. In this paper, we study the mean problem for the
-move-split-merge (MSM) metric that not only offers high practical accuracy for
-time series classification but also carries of the advantages of the metric
-properties that enable further diverse applications. The main contribution of
-this paper is an exact and efficient algorithm for the MSM-Mean problem of time
-series. The running time of our algorithm is $\mathcal{O}(n^{k+3}2^k k^3 )$,
-and thus better than the previous DTW-based algorithm. The results of an
-experimental comparison confirm the running time superiority of our algorithm
-in comparison to the DTW-Mean competitor. Moreover, we introduce a heuristic to
-improve the running time significantly without sacrificing much accuracy.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>PhD and postdoc at IRIF (apply by November 1, 2022)</title>
-  <guid>http://cstheory-jobs.org/2022/09/28/phd-and-postdoc-at-irif-apply-by-november-1-2022/</guid>
-  <link>https://cstheory-jobs.org/2022/09/28/phd-and-postdoc-at-irif-apply-by-november-1-2022/</link>
-  <description>
-    &lt;p&gt;The Algorithms &amp;amp; Complexity group at IRIF (CNRS, Université Paris-Cité) in Paris offers multiple PhD and postdoc positions on the theory of quantum computing. The group has expertise in quantum algorithms and quantum complexity theory, with permanent members S. Apers, I. Kerenidis, S. Laplante and F. Magniez.&lt;/p&gt;
-&lt;p&gt;Soft deadline: November 1st, 2022.&lt;/p&gt;
-&lt;p&gt;Website: irif.fr/en/equipes/algocomp/&lt;br /&gt;
-Email: apers@irif.fr&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-28 10:12:03 UTC</pubDate>
-  <author>CCI: jobs</author>
-</item>
-
-<item>
-  <title>Strategyproofness-Exposing Mechanism Descriptions</title>
-  <guid>http://arxiv.org/abs/2209.13148</guid>
-  <link>http://arxiv.org/abs/2209.13148</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/econ/1/au:+Gonczarowski_Y/0/1/0/all/0/1&quot;&gt;Yannai A. Gonczarowski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/econ/1/au:+Heffetz_O/0/1/0/all/0/1&quot;&gt;Ori Heffetz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/econ/1/au:+Thomas_C/0/1/0/all/0/1&quot;&gt;Clayton Thomas&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A menu description defines a mechanism to player $i$ in two steps. Step (1)
-uses the reports of other players to describe $i$&#39;s menu: the set of $i$&#39;s
-potential outcomes. Step (2) uses $i$&#39;s report to select $i$&#39;s favorite outcome
-from her menu. Can menu descriptions better expose strategyproofness, without
-sacrificing simplicity? We propose a new, simple menu description of Deferred
-Acceptance. We prove that -- in contrast with other common matching mechanisms
--- this menu description must differ substantially from the corresponding
-traditional description. We demonstrate, with a lab experiment on two simple
-mechanisms, the promise and challenges of menu descriptions.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-28 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Polynomial time computable functions over the reals characterized using discrete ordinary differential equations</title>
-  <guid>http://arxiv.org/abs/2209.13404</guid>
-  <link>http://arxiv.org/abs/2209.13404</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blanc_M/0/1/0/all/0/1&quot;&gt;Manon Blanc&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bournez_O/0/1/0/all/0/1&quot;&gt;Olivier Bournez&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The class of functions from the integers to the integers computable in
-polynomial time has been characterized recently using discrete ordinary
-differential equations (ODE), also known as finite differences. In the
-framework of ordinary differential equations, this is very natural to try to
-extend the approach to classes of functions over the reals, and not only over
-the integers. Recently, an extension of previous characterization was obtained
-for functions from the integers to the reals, but the method used in the proof,
-based on the existence of a continuous function from the integers to a suitable
-discrete set of reals, cannot extend to functions from the reals to the reals,
-as such a function cannot exist for clear topological reasons. In this article,
-we prove that this is indeed possible to provide an elegant and simple
-algebraic characterization of functions from the reals to the reals: we provide
-a characterization of such functions as the smallest class of functions that
-contains some basic functions, and that is closed by composition, linear length
-ODEs, and a natural effective limit schema. This is obtained using an
-alternative proof technique based on the construction of specific suitable
-functions defined recursively, and a barycentric method. Furthermore, we also
-extend previous characterizations in several directions: First, we prove that
-there is no need of multiplication. We prove a normal form theorem, with a nice
-side effect related to formal neural networks. Indeed, given some fixed error
-and some polynomial time t(n), our settings produce effectively some neural
-network that computes the function over its domain with the given precision,
-for any t(n)-polynomial time computable function f .
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-28 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Improved and Generalized Algorithms for Burning a Planar Point Set</title>
-  <guid>http://arxiv.org/abs/2209.13024</guid>
-  <link>http://arxiv.org/abs/2209.13024</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gokhale_P/0/1/0/all/0/1&quot;&gt;Prashant Gokhale&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Keil_J/0/1/0/all/0/1&quot;&gt;J. Mark Keil&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mondal_D/0/1/0/all/0/1&quot;&gt;Debajyoti Mondal&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given a set $P$ of points in the plane, a point burning process is a discrete
-time process to burn all the points of $P$ where fires must be initiated at the
-given points. Specifically, the point burning process starts with a single
-burnt point from $P$, and at each subsequent step, burns all the points in the
-plane that are within one unit distance from the currently burnt points, as
-well as one other unburnt point of $P$ (if exists). The point burning number of
-$P$ is the smallest number of steps required to burn all the points of $P$. If
-we allow the fire to be initiated anywhere, then the burning process is called
-an anywhere burning process, and the corresponding burning number is called
-anywhere burning number. Computing the point and anywhere burning number is
-known to be NP-hard. In this paper we show that both these problems admit PTAS
-in one dimension. We then show that in two dimensions, point burning and
-anywhere burning are $(1.96296+\varepsilon)$ and $(1.92188+\varepsilon)$
-approximable, respectively, for every $\varepsilon&amp;gt;0$, which improves the
-previously known $(2+\varepsilon)$ factor for these problems. We also observe
-that a known result on set cover problem can be leveraged to obtain a
-2-approximation for burning the maximum number of points in a given number of
-steps. We show how the results generalize if we allow the points to have
-different fire spreading rates. Finally, we prove that even if the burning
-sources are given as input, finding a point burning sequence itself is NP-hard.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-28 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Optimal Placement of Base Stations in Border Surveillance using Limited Capacity Drones</title>
-  <guid>http://arxiv.org/abs/2209.13311</guid>
-  <link>http://arxiv.org/abs/2209.13311</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bereg_S/0/1/0/all/0/1&quot;&gt;S. Bereg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Diaz_Banez_J/0/1/0/all/0/1&quot;&gt;J.M. D&amp;#xed;az-B&amp;#xe1;&amp;#xf1;ez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Haghpanah_M/0/1/0/all/0/1&quot;&gt;M. Haghpanah&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Horn_P/0/1/0/all/0/1&quot;&gt;P. Horn&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lopez_M/0/1/0/all/0/1&quot;&gt;M.A. Lopez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Marin_N/0/1/0/all/0/1&quot;&gt;N. Mar&amp;#xed;n&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ramirez_Vigueras_A/0/1/0/all/0/1&quot;&gt;A. Ram&amp;#xed;rez-Vigueras&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rodriguez_F/0/1/0/all/0/1&quot;&gt;F. Rodr&amp;#xed;guez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sole_Pi_O/0/1/0/all/0/1&quot;&gt;O. Sol&amp;#xe9;-Pi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Stevens_A/0/1/0/all/0/1&quot;&gt;A. Stevens&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Urrutia_J/0/1/0/all/0/1&quot;&gt;J. Urrutia&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Imagine an island modeled as a simple polygon $\P$ with $n$ vertices whose
-coastline we wish to monitor. We consider the problem of building the minimum
-number of refueling stations along the boundary of $\P$ in such a way that a
-drone can follow a polygonal route enclosing the island without running out of
-fuel. A drone can fly a maximum distance $d$ between consecutive stations and
-is restricted to move either along the boundary of $\P$ or its exterior (i.e.,
-over water). We present an algorithm that, given $\mathcal P$, finds the
-locations for a set of refueling stations whose cardinality is at most the
-optimal plus one. The time complexity of this algorithm is $O(n^2 + \frac{L}{d}
-n)$, where $L$ is the length of $\mathcal P$. We also present an algorithm that
-returns an additive $\epsilon$-approximation for the problem of minimizing the
-fuel capacity required for the drones when we are allowed to place $k$ base
-stations around the boundary of the island; this algorithm also finds the
-locations of these refueling stations. Finally, we propose a practical
-discretization heuristic which, under certain conditions, can be used to
-certify optimality of the results.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-28 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
 </item>
 
 </channel>
