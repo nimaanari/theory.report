@@ -9,6 +9,235 @@
 
 
 <item>
+  <title>Notions of Tensor Rank</title>
+  <guid>http://arxiv.org/abs/2210.01183</guid>
+  <link>http://arxiv.org/abs/2210.01183</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Juvekar_M/0/1/0/all/0/1&quot;&gt;Mandar Juvekar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nadjimzadah_A/0/1/0/all/0/1&quot;&gt;Arian Nadjimzadah&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Tensors, or multi-linear forms, are important objects in a variety of areas
+from analytics, to combinatorics, to computational complexity theory. Notions
+of tensor rank aim to quantify the &quot;complexity&quot; of these forms, and are thus
+also important. While there is one single definition of rank that completely
+captures the complexity of matrices (and thus linear transformations), there is
+no definitive analog for tensors. Rather, many notions of tensor rank have been
+defined over the years, each with their own set of uses. In this paper we
+survey the popular notions of tensor rank. We give a brief history of their
+introduction, motivating their existence, and discuss some of their
+applications in computer science. We also give proof sketches of recent results
+by Lovett, and Cohen and Moshkovitz, which prove asymptotic equivalence between
+three key notions of tensor rank over finite fields with at least three
+elements.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>On the hull and interval numbers of oriented graphs</title>
+  <guid>http://arxiv.org/abs/2210.01598</guid>
+  <link>http://arxiv.org/abs/2210.01598</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Araujo_J/0/1/0/all/0/1&quot;&gt;J. Araujo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Maia_A/0/1/0/all/0/1&quot;&gt;A. K. Maia&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Medeiros_P/0/1/0/all/0/1&quot;&gt;P. P. Medeiros&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Penso_L/0/1/0/all/0/1&quot;&gt;L. Penso&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work, for a given oriented graph $D$, we study its interval and hull
+numbers, denoted by ${in}(D)$ and ${hn}(D)$, respectively, in the geodetic,
+${P_3}$ and ${P_3^*}$ convexities. This last one, we believe to be formally
+defined and first studied in this paper, although its undirected version is
+well-known in the literature. Concerning bounds, for a strongly oriented graph
+$D$, we prove that ${hn_g}(D)\leq m(D)-n(D)+2$ and that there is a strongly
+oriented graph such that ${hn_g}(D) = m(D)-n(D)$. We also determine exact
+values for the hull numbers in these three convexities for tournaments, which
+imply polynomial-time algorithms to compute them. These results allows us to
+deduce polynomial-time algorithms to compute ${hn_{P_3}}(D)$ when the
+underlying graph of $D$ is split or cobipartite. Moreover, we provide a
+meta-theorem by proving that if deciding whether ${in_g}(D)\leq k$ or
+${hn_g}(D)\leq k$ is NP-hard or W[i]-hard parameterized by $k$, for some
+$i\in\mathbb{Z_+^*}$, then the same holds even if the underlying graph of $D$
+is bipartite. Next, we prove that deciding whether ${hn_{P_3}}(D)\leq k$ or
+${hn_{P_3^*}}(D)\leq k$ is W[2]-hard parameterized by $k$, even if the
+underlying graph of $D$ is bipartite; that deciding whether ${in_{P_3}}(D)\leq
+k$ or ${in_{P_3^*}}(D)\leq k$ is NP-complete, even if $D$ has no directed
+cycles and the underlying graph of $D$ is a chordal bipartite graph; and that
+deciding whether ${in_{P_3}}(D)\leq k$ or ${in_{P_3^*}}(D)\leq k$ is W[2]-hard
+parameterized by $k$, even if the underlying graph of $D$ is split. We also
+argue that the interval and hull numbers in the oriented $P_3$ and $P_3^*$
+convexities can be computed in polynomial time for graphs of bounded tree-width
+by using Courcelle&#39;s theorem.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Quantum communication complexity of linear regression</title>
+  <guid>http://arxiv.org/abs/2210.01601</guid>
+  <link>http://arxiv.org/abs/2210.01601</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Montanaro_A/0/1/0/all/0/1&quot;&gt;Ashley Montanaro&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Shao_C/0/1/0/all/0/1&quot;&gt;Changpeng Shao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Dequantized algorithms show that quantum computers do not have exponential
+speedups for many linear algebra problems in terms of time and query
+complexity. In this work, we show that quantum computers can have exponential
+speedups in terms of communication complexity for some fundamental linear
+algebra problems. We mainly focus on solving linear regression and Hamiltonian
+simulation. In the quantum case, the task is to prepare the quantum state of
+the result. To allow for a fair comparison, in the classical case the task is
+to sample from the result. We investigate these two problems in two-party and
+multiparty models, propose near-optimal quantum protocols and prove
+quantum/classical lower bounds. In this process, we propose an efficient
+quantum protocol for quantum singular value transformation, which is a powerful
+technique for designing quantum algorithms. As a result, for many linear
+algebra problems where quantum computers lose exponential speedups in terms of
+time and query complexity, it is possible to have exponential speedups in terms
+of communication complexity.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>The Complexity of Online Graph Games</title>
+  <guid>http://arxiv.org/abs/2210.01694</guid>
+  <link>http://arxiv.org/abs/2210.01694</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fuchs_J/0/1/0/all/0/1&quot;&gt;Janosch Fuchs&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grune_C/0/1/0/all/0/1&quot;&gt;Christoph Gr&amp;#xfc;ne&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Janssen_T/0/1/0/all/0/1&quot;&gt;Tom Jan&amp;#xdf;en&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Online computation is a concept to model uncertainty where not all
+information on a problem instance is known in advance. An online algorithm
+receives requests which reveal the instance piecewise and has to respond with
+irrevocable decisions. Often, an adversary is assumed that constructs the
+instance knowing the deterministic behavior of the algorithm. From a game
+theoretical point of view, the adversary and the online algorithm are players
+in a two-player game. By applying this view on combinatorial graph problems,
+especially on problems where the solution is a subset of the vertices, we
+analyze their complexity. For this, we introduce a framework based on gadget
+reductions from 3-Satisfiability and extend it to an online setting where the
+graph is a priori known by a map. This is done by identifying a set of rules
+for the reductions and providing schemes for gadgets. The extension of the
+framework to the online setting enable reductions from TQBF. We provide example
+reductions to the well-known problems Vertex Cover, Independent Set and
+Dominating Set and prove that they are PSPACE-complete. Thus, this paper
+establishes that the online version with a map of NP-complete graph problems
+form a large class of PSPACE-complete problems.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>An Almost Singularly Optimal Asynchronous Distributed MST Algorithm</title>
+  <guid>http://arxiv.org/abs/2210.01173</guid>
+  <link>http://arxiv.org/abs/2210.01173</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dufoulon_F/0/1/0/all/0/1&quot;&gt;Fabien Dufoulon&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kutten_S/0/1/0/all/0/1&quot;&gt;Shay Kutten&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moses_W/0/1/0/all/0/1&quot;&gt;William K. Moses Jr.&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pandurangan_G/0/1/0/all/0/1&quot;&gt;Gopal Pandurangan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Peleg_D/0/1/0/all/0/1&quot;&gt;David Peleg&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A singularly (near) optimal distributed algorithm is one that is (near)
+optimal in \emph{two} criteria, namely, its time and message complexities. For
+\emph{synchronous} CONGEST networks, such algorithms are known for fundamental
+distributed computing problems such as leader election [Kutten et al., JACM
+2015] and Minimum Spanning Tree (MST) construction [Pandurangan et al., STOC
+2017, Elkin, PODC 2017]. However, it is open whether a singularly (near)
+optimal bound can be obtained for the MST construction problem in general
+\emph{asynchronous} CONGEST networks.
+&lt;/p&gt;
+&lt;p&gt;We present a randomized distributed MST algorithm that, with high
+probability, computes an MST in \emph{asynchronous} CONGEST networks and takes
+$\tilde{O}(D^{1+\epsilon} + \sqrt{n})$ time and $\tilde{O}(m)$ messages, where
+$n$ is the number of nodes, $m$ the number of edges, $D$ is the diameter of the
+network, and $\epsilon &amp;gt;0$ is an arbitrarily small constant (both time and
+message bounds hold with high probability). Our algorithm is message optimal
+(up to a polylog$(n)$ factor) and almost time optimal (except for a
+$D^{\epsilon}$ factor). Our result answers an open question raised in Mashregi
+and King [DISC 2019] by giving the first known asynchronous MST algorithm that
+has sublinear time (for all $D = O(n^{1-\epsilon})$) and uses $\tilde{O}(m)$
+messages. Using a result of Mashregi and King [DISC 2019], this also yields the
+first asynchronous MST algorithm that is sublinear in both time and messages in
+the $KT_1$ CONGEST model.
+&lt;/p&gt;
+&lt;p&gt;A key tool in our algorithm is the construction of a low diameter rooted
+spanning tree in asynchronous CONGEST that has depth
+$\tilde{O}(D^{1+\epsilon})$ (for an arbitrarily small constant $\epsilon &amp;gt; 0$)
+in $\tilde{O}(D^{1+\epsilon})$ time and $\tilde{O}(m)$ messages. To the best of
+our knowledge, this is the first such construction that is almost singularly
+optimal in the asynchronous setting.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Designing a parallel suffix sort</title>
+  <guid>http://arxiv.org/abs/2210.01475</guid>
+  <link>http://arxiv.org/abs/2210.01475</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chowdhury_K/0/1/0/all/0/1&quot;&gt;Kunal Chowdhury&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Suffix sort plays a critical role in various computational algorithms
+including genomics as well as in frequently used day to day software
+applications. The sorting algorithm becomes tricky when we have lot of repeated
+characters in the string for a given radix. Various innovative implementations
+are available in this area e.g., Manber Myers. We present here an analysis that
+uses a concept around generalized polynomial factorization to sort these
+suffixes. The initial generation of these substring specific polynomial can be
+efficiently done using parallel threads and shared memory. The set of distinct
+factors and their order are known beforehand, and this helps us to sort the
+polynomials (equivalent of strings) accordingly.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Scheduling with Many Shared Resources</title>
+  <guid>http://arxiv.org/abs/2210.01523</guid>
+  <link>http://arxiv.org/abs/2210.01523</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deppert_M/0/1/0/all/0/1&quot;&gt;Max A. Deppert&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jansen_K/0/1/0/all/0/1&quot;&gt;Klaus Jansen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Maack_M/0/1/0/all/0/1&quot;&gt;Marten Maack&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pukrop_S/0/1/0/all/0/1&quot;&gt;Simon Pukrop&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rau_M/0/1/0/all/0/1&quot;&gt;Malin Rau&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Consider the many shared resource scheduling problem where jobs have to be
+scheduled on identical parallel machines with the goal of minimizing the
+makespan. However, each job needs exactly one additional shared resource in
+order to be executed and hence prevents the execution of jobs that need the
+same resource while being processed. Previously a $(2m/(m+1))$-approximation
+was the best known result for this problem. Furthermore, a $6/5$-approximation
+for the case with only two machines was known as well as a PTAS for the case
+with a constant number of machines. We present a simple and fast
+5/3-approximation and a much more involved but still reasonable
+1.5-approximation. Furthermore, we provide a PTAS for the case with only a
+constant number of machines, which is arguably simpler and faster than the
+previously known one, as well as a PTAS with resource augmentation for the
+general case. The approximation schemes make use of the N-fold integer
+programming machinery, which has found more and more applications in the field
+of scheduling recently. It is plausible that the latter results can be improved
+and extended to more general cases. Lastly, we give a $5/4 - \varepsilon$
+inapproximability result for the natural problem extension where each job may
+need up to a constant number (in particular $3$) of different resources.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>SicHash -- Small Irregular Cuckoo Tables for Perfect Hashing</title>
+  <guid>http://arxiv.org/abs/2210.01560</guid>
+  <link>http://arxiv.org/abs/2210.01560</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lehmann_H/0/1/0/all/0/1&quot;&gt;Hans-Peter Lehmann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sanders_P/0/1/0/all/0/1&quot;&gt;Peter Sanders&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Walzer_S/0/1/0/all/0/1&quot;&gt;Stefan Walzer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A Perfect Hash Function (PHF) is a hash function that has no collisions on a
+given input set. PHFs can be used for space efficient storage of data in an
+array, or for determining a compact representative of each object in the set.
+In this paper, we present the PHF construction algorithm SicHash - Small
+Irregular Cuckoo Tables for Perfect Hashing. At its core, SicHash uses a known
+technique: It places objects in a cuckoo hash table and then stores the final
+hash function choice of each object in a retrieval data structure. We combine
+the idea with irregular cuckoo hashing, where each object has a different
+number of hash functions. Additionally, we use many small tables that we
+overload beyond their asymptotic maximum load factor. The most space efficient
+competitors often use brute force methods to determine the PHFs. SicHash
+provides a more direct construction algorithm that only rarely needs to
+recompute parts. Our implementation improves the state of the art in terms of
+space usage versus construction time for a wide range of configurations. At the
+same time, it provides very fast queries.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Two more shorties</title>
   <guid>https://scottaaronson.blog/?p=6739</guid>
   <link>https://scottaaronson.blog/?p=6739</link>
@@ -1107,223 +1336,6 @@ conjecture posed in this latter work.
 &lt;/p&gt;
   </description>
   <pubDate>2022-09-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On the Convergence of AdaGrad on $\R^{d}$: Beyond Convexity, Non-Asymptotic Rate and Acceleration</title>
-  <guid>http://arxiv.org/abs/2209.14827</guid>
-  <link>http://arxiv.org/abs/2209.14827</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_Z/0/1/0/all/0/1&quot;&gt;Zijian Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_T/0/1/0/all/0/1&quot;&gt;Ta Duy Nguyen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ene_A/0/1/0/all/0/1&quot;&gt;Alina Ene&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_H/0/1/0/all/0/1&quot;&gt;Huy L. Nguyen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Existing analysis of AdaGrad and other adaptive methods for smooth convex
-optimization is typically for functions with bounded domain diameter. In
-unconstrained problems, previous works guarantee an asymptotic convergence rate
-without an explicit constant factor that holds true for the entire function
-class. Furthermore, in the stochastic setting, only a modified version of
-AdaGrad, different from the one commonly used in practice, in which the latest
-gradient is not used to update the stepsize, has been analyzed. Our paper aims
-at bridging these gaps and developing a deeper understanding of AdaGrad and its
-variants in the standard setting of smooth convex functions as well as the more
-general setting of quasar convex functions. First, we demonstrate new
-techniques to explicitly bound the convergence rate of the vanilla AdaGrad for
-unconstrained problems in both deterministic and stochastic settings. Second,
-we propose a variant of AdaGrad for which we can show the convergence of the
-last iterate, instead of the average iterate. Finally, we give new accelerated
-adaptive algorithms and their convergence guarantee in the deterministic
-setting with explicit dependency on the problem parameters, improving upon the
-asymptotic rate shown in previous works.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>META-STORM: Generalized Fully-Adaptive Variance Reduced SGD for Unbounded Functions</title>
-  <guid>http://arxiv.org/abs/2209.14853</guid>
-  <link>http://arxiv.org/abs/2209.14853</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_Z/0/1/0/all/0/1&quot;&gt;Zijian Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_T/0/1/0/all/0/1&quot;&gt;Ta Duy Nguyen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_T/0/1/0/all/0/1&quot;&gt;Thien Hang Nguyen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ene_A/0/1/0/all/0/1&quot;&gt;Alina Ene&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_H/0/1/0/all/0/1&quot;&gt;Huy L. Nguyen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the application of variance reduction (VR) techniques to general
-non-convex stochastic optimization problems. In this setting, the recent work
-STORM [Cutkosky-Orabona &#39;19] overcomes the drawback of having to compute
-gradients of &quot;mega-batches&quot; that earlier VR methods rely on. There, STORM
-utilizes recursive momentum to achieve the VR effect and is then later made
-fully adaptive in STORM+ [Levy et al., &#39;21], where full-adaptivity removes the
-requirement for obtaining certain problem-specific parameters such as the
-smoothness of the objective and bounds on the variance and norm of the
-stochastic gradients in order to set the step size. However, STORM+ crucially
-relies on the assumption that the function values are bounded, excluding a
-large class of useful functions. In this work, we propose META-STORM, a
-generalized framework of STORM+ that removes this bounded function values
-assumption while still attaining the optimal convergence rate for non-convex
-optimization. META-STORM not only maintains full-adaptivity, removing the need
-to obtain problem specific parameters, but also improves the convergence rate&#39;s
-dependency on the problem parameters. Furthermore, META-STORM can utilize a
-large range of parameter settings that subsumes previous methods allowing for
-more flexibility in a wider range of settings. Finally, we demonstrate the
-effectiveness of META-STORM through experiments across common deep learning
-tasks. Our algorithm improves upon the previous work STORM+ and is competitive
-with widely used algorithms after the addition of per-coordinate update and
-exponential moving average heuristics.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Enumerating Regular Languages in Constant Delay</title>
-  <guid>http://arxiv.org/abs/2209.14878</guid>
-  <link>http://arxiv.org/abs/2209.14878</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Amarilli_A/0/1/0/all/0/1&quot;&gt;Antoine Amarilli&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Monet_M/0/1/0/all/0/1&quot;&gt;Mika&amp;#xeb;l Monet&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the task, for a given language $L$, of enumerating the (generally
-infinite) sequence of its words, without repetitions, while bounding the delay
-between two consecutive words. To allow for constant delay bounds, we assume a
-model where we produce each word by editing the preceding word with a small
-edit script, rather than writing out the word from scratch. In particular, this
-witnesses that the language is orderable, i.e., we can write its words as an
-infinite sequence such that the Levenshtein edit distance between any two
-consecutive words is bounded by a constant. For instance, $(a+b)^*$ is
-orderable (with a variant of the Gray code), but $a^* + b^*$ is not.
-&lt;/p&gt;
-&lt;p&gt;We characterize which regular languages are enumerable in this sense, and
-show that this can be decided in PTIME in an input deterministic finite
-automaton (DFA) for the language. In fact, we show that, given a DFA $A$
-recognizing a language $L$, we can compute in PTIME automata $A_1, \ldots, A_t$
-such that $L$ is partitioned as $L(A_1) \sqcup \ldots \sqcup L(A_t)$ and every
-$L(A_i)$ is orderable in this sense. Further, we show that this is optimal,
-i.e., we cannot partition $L$ into less than $t$ orderable languages.
-&lt;/p&gt;
-&lt;p&gt;In the case where $L$ is orderable, we show that the ordering can be computed
-as a constant-delay algorithm: specifically, the algorithm runs in a suitable
-pointer machine model, and produces a sequence of constant-length edit scripts
-to visit the words of $L$ without repetitions, with constant delay between each
-script. In fact, we show that we can achieve this while only allowing the edit
-operations push and pop at the beginning and end of the word, which implies
-that the word can in fact be maintained in a double-ended queue.
-&lt;/p&gt;
-&lt;p&gt;We also show results on the complexity of a related problem, and study the
-model where push-pop edits are only allowed at the end of the word.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Machine Learning and Complexity</title>
-  <guid>tag:blogger.com,1999:blog-3722233.post-140442697667456694</guid>
-  <link>http://blog.computationalcomplexity.org/2022/09/machine-learning-and-complexity.html</link>
-  <description>
-    &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjB-e4HIPenlJclDSenALB6otAw1Nga8deJ3zx3JoMuf41bWFlfy6u4fi-agHPIClWKvkOGcuQRyXbfXXI__l8YpgFjXBY17Y05mdXCMT6bZUbgoILvkQ7D2t4JRNvqFuG-LNaQMRC0HphwBVu3DoVnnHj1ojqbfCXov8yZaRNlj9hoGpqBAQ/s1024/DALL%C2%B7E%202022-09-17%2014.00.36%20-%20Schloss%20Dagstuhl%20in%20the%20style%20of%20monet.png&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1024&quot; data-original-width=&quot;1024&quot; height=&quot;400&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjB-e4HIPenlJclDSenALB6otAw1Nga8deJ3zx3JoMuf41bWFlfy6u4fi-agHPIClWKvkOGcuQRyXbfXXI__l8YpgFjXBY17Y05mdXCMT6bZUbgoILvkQ7D2t4JRNvqFuG-LNaQMRC0HphwBVu3DoVnnHj1ojqbfCXov8yZaRNlj9hoGpqBAQ/w400-h400/DALL%C2%B7E%202022-09-17%2014.00.36%20-%20Schloss%20Dagstuhl%20in%20the%20style%20of%20monet.png&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;Schloss Dagstuhl by Monet by Dall-E&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br /&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;At Dagstuhl &lt;a href=&quot;https://blog.computationalcomplexity.org/2022/09/thirty-years-of-dagstuhl.html&quot;&gt;earlier this month&lt;/a&gt;, I hung out for a little bit&amp;nbsp;with the participants of the other seminar,&amp;nbsp;&lt;a href=&quot;https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=22372&quot;&gt;Knowledge Graphs and their Role in the Knowledge Engineering of the 21st Century&lt;/a&gt;. Knowledge graphs are what you would expect them to be, nodes are objects like &quot;Berlin&quot; and &quot;Germany&quot; with directed edges with labels like &quot;capital&quot;. Think of having knowledge graphs of hundreds of millions of nodes and how that could help answer queries about the world. These secondary workshops are shorter and focus on creating a new vision, in this case how to maximize the importance of knowledge graphs in an increasing ML-focused world.&lt;/p&gt;&lt;p&gt;Perhaps we need such a visioning seminar for complexity. While we often get lost in the mathematical questions and techniques in our field, computational complexity is designed to understand the difficulty of solving various problems. Machine learning and advances in optimization should be changing that conversation. If you imagine a world where P = NP (and I did exactly that in chapter 2 of &lt;a href=&quot;https://goldenticket.fortnow.com/&quot;&gt;my 2013 book&lt;/a&gt;) much of what you consider is &lt;a href=&quot;https://blog.computationalcomplexity.org/2020/12/optiland.html&quot;&gt;starting to happen anyway&lt;/a&gt;.&amp;nbsp;ML does fail to break cryptography but then again, isn&#39;t this the best of all possible worlds?&amp;nbsp;&lt;/p&gt;&lt;p&gt;Look at what Scott Aaronson &lt;a href=&quot;https://scottaaronson.blog/?p=122#:~:text=If%20P%3DNP%2C%20then%20the,strategy%20would%20be%20Warren%20Buffett.&quot;&gt;said back in 2006&lt;/a&gt;.&lt;/p&gt;&lt;blockquote&gt;If P=NP, then the world would be a profoundly different place than we usually assume it to be. There would be no special value in “creative leaps,” no fundamental gap between solving a problem and recognizing the solution once it’s found. Everyone who could appreciate a symphony would be Mozart; everyone who could follow a step-by-step argument would be Gauss; everyone who could recognize a good investment strategy would be Warren Buffett.&amp;nbsp;&lt;/blockquote&gt;&lt;p&gt;If I can be a Monet, can Mozart be far behind? ML trading by some hedge funds are beating Warren Buffett but remember if everyone trades perfectly, no one beats the average. Gauss is going to be trickier but &lt;a href=&quot;https://www.quantamagazine.org/in-new-math-proofs-artificial-intelligence-plays-to-win-20220307/&quot;&gt;it&#39;s coming&lt;/a&gt;. There&#39;s a reason Scott is&amp;nbsp;&lt;a href=&quot;https://scottaaronson.blog/?p=6484&quot;&gt;spending a year at OpenAI&lt;/a&gt;&amp;nbsp;to understand &quot;what, if anything, can computational complexity contribute to a principled understanding of how to get an AI to do what we want and not do what we don’t want&quot;.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-29 14:35:00 UTC</pubDate>
-  <author>Computational Complexity</author>
-</item>
-
-<item>
-  <title>A characterization of polynomial time computable functions from the integers to the reals using discrete ordinary differential equations</title>
-  <guid>http://arxiv.org/abs/2209.13599</guid>
-  <link>http://arxiv.org/abs/2209.13599</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blanc_M/0/1/0/all/0/1&quot;&gt;Manon Blanc&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bournez_O/0/1/0/all/0/1&quot;&gt;Olivier Bournez&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In a recent article, the class of functions from the integers to the integers
-computable in polynomial time has been characterized using discrete ordinary
-differential equations (ODE), also known as finite differences. Doing so, we
-pointed out the fundamental role of linear (discrete) ODEs and classical ODE
-tools such as changes of variables to capture computability and complexity
-measures, or as a tool for programming. In this article, we extend the approach
-to a characterization of functions from the integers to the reals computable in
-polynomial time in the sense of computable analysis. In particular, we provide
-a characterization of such functions in terms of the smallest class of
-functions that contains some basic functions, and that is closed by
-composition, linear length ODEs, and a natural effective limit schema.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>On the Descriptive Complexity of Groups without Abelian Normal Subgroups</title>
-  <guid>http://arxiv.org/abs/2209.13725</guid>
-  <link>http://arxiv.org/abs/2209.13725</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grochow_J/0/1/0/all/0/1&quot;&gt;Joshua A. Grochow&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Levet_M/0/1/0/all/0/1&quot;&gt;Michael Levet&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we explore the descriptive complexity theory of finite groups
-by examining the power of the second Ehrenfeucht-Fra\&quot;iss\&#39;e bijective pebble
-game in Hella&#39;s (Ann. Pure Appl. Log., 1989) heirarchy. This is a
-Spoiler-Duplicator game in which Spoiler can place up to two pebbles each
-round. While it trivially solves graph isomorphism, it may be nontrivial for
-finite groups, and other ternary relational structures. We first provide a
-novel generalization of Weisfeiler-Leman (WL) coloring, which we call 2-ary WL.
-We then show that the 2-ary WL is equivalent to the second
-Ehrenfeucht-Fra\&quot;iss\&#39;e bijective pebble game in Hella&#39;s heirarchy.
-&lt;/p&gt;
-&lt;p&gt;Our main result is that, in the pebble game characterization, only $O(1)$
-pebbles and $O(1)$ rounds are sufficient to identify all groups without Abelian
-normal subgroups (a class of groups for which isomorphism testing is known to
-be in $\mathsf{P}$; Babai, Codenotti, &amp;amp; Qiao, ICALP 2012). In particular, we
-show that within the first few rounds, Spoiler can force Duplicator to select
-an isomorphism between two such groups at each subsequent round. By Hella&#39;s
-results (\emph{ibid.}), this is equivalent to saying that these groups are
-identified by formulas in first-order logic with generalized 2-ary quantifiers,
-using only $O(1)$ variables and $O(1)$ quantifier depth.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Dynamic Embeddings of Dynamic Single-Source Upward Planar Graphs</title>
-  <guid>http://arxiv.org/abs/2209.14094</guid>
-  <link>http://arxiv.org/abs/2209.14094</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hoog_I/0/1/0/all/0/1&quot;&gt;Ivor van der Hoog&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Parada_I/0/1/0/all/0/1&quot;&gt;Irene Parada&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rotenberg_E/0/1/0/all/0/1&quot;&gt;Eva Rotenberg&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A directed graph $G$ is upward planar if it admits a planar embedding such
-that each edge is $y$-monotone. Unlike planarity testing, upward planarity
-testing is NP-hard except in restricted cases, such as when the graph has the
-single-source property (i.e. each connected component only has one source).
-&lt;/p&gt;
-&lt;p&gt;In this paper, we present a dynamic algorithm for maintaining a combinatorial
-embedding $\mathcal{E}(G)$ of a single-source upward planar graph subject to
-edge deletions, edge contractions, edge insertions upwards across a face, and
-single-source-preserving vertex splits through specified corners. We
-furthermore support changes to the embedding $\mathcal{E}(G)$ on the form of
-subgraph flips that mirror or slide the placement of a subgraph that is
-connected to the rest of the graph via at most two vertices.
-&lt;/p&gt;
-&lt;p&gt;All update operations are supported as long as the graph remains upward
-planar, and all queries are supported as long as the graph remains
-single-source. Updates that violate upward planarity are identified as such and
-rejected by our update algorithm. We dynamically maintain a linear-size data
-structure on $G$ which supports incidence queries between a vertex and a face,
-and upward-linkability of vertex pairs. If a pair of vertices are not
-upwards-linkable, we facilitate one-flip-linkable queries that point to a
-subgraph flip that makes them linkable, if any such flip exists.
-&lt;/p&gt;
-&lt;p&gt;We support all updates and queries in $O(\log^2 n)$ time.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>A Quantum Optimization Algorithm for Single Machine Total Weighted Tardiness Minimization</title>
-  <guid>http://arxiv.org/abs/2209.13712</guid>
-  <link>http://arxiv.org/abs/2209.13712</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_Y/0/1/0/all/0/1&quot;&gt;Youhao Steve Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cheng_J/0/1/0/all/0/1&quot;&gt;Julian Cheng&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A single machine total weighted tardiness minimization (TWTM) problem in
-operational planning is considered. The problem is formulated as an NP-hard
-constrained combinatorial problem, which has no known deterministic polynomial
-complexity solution using classical computing. Based on efficient Grover&#39;s
-quantum search and Trugenberger&#39;s quantum optimization algorithms, a novel
-efficient quantum optimization algorithm is proposed to solve the NP-hard
-single machine TWTM problem, which makes the desired solution satisfying the
-searching constraints and showing the minimal TWT value be measured with the
-highest probability.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-09-29 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
