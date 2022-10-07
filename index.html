@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-10-07T18:53:00Z">Friday, October 07 2022, 18:53</time>
+          <time class='timeago' datetime="2022-10-07T19:37:56Z">Friday, October 07 2022, 19:37</time>
         
       </p>
 
@@ -427,11 +427,11 @@
 
 
 
-<p>The big news in AI and complexity theory this week was DeepMind&#8217;s <a href="https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor">AlphaTensor</a>, and its automated discovery of new algorithms for matrix multiplication.  (<a href="https://www.nature.com/articles/s41586-022-05172-4">See here for the <em>Nature</em> paper.</a>)  More concretely, they&#8217;ve used AI to discover (among other things) an algorithm for multiplying 4&#215;4 matrices using only 47 scalar multiplications, which beats the 49=7&#215;7 that you&#8217;d get from <a href="https://en.wikipedia.org/wiki/Strassen_algorithm">Strassen&#8217;s algorithm</a>.  Since I&#8217;ve seen confusion about the point on social media: this does <em>not</em> improve over the best known asymptotic exponent for matrix multiplication, which still stands at the human-discovered 2.373 (meaning, we know how to multiply two NxN matrices in O(N2.373) time, but not faster).  But it <em>does</em> asymptotically improve over Strassen&#8217;s O(N2.81) algorithm from 1968, conceivably even in a way that could have practical relevance for multiplying hundreds-by-hundreds or thousands-by-thousands matrices.</p>
+<p>The big news in AI and complexity theory this week was DeepMind&#8217;s <a href="https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor">AlphaTensor</a>, and its automated discovery of new algorithms for matrix multiplication.  (<a href="https://www.nature.com/articles/s41586-022-05172-4">See here for the <em>Nature</em> paper.</a>)  More concretely, they&#8217;ve used AI to discover (among other things) an algorithm for multiplying 4×4 matrices using only 47 scalar multiplications—<strong>EDITED TO ADD: ONLY OVER THE FINITE FIELD WITH 2 ELEMENTS</strong>—which for that field, beats the 49=7×7 that you&#8217;d get from <a href="https://en.wikipedia.org/wiki/Strassen_algorithm">Strassen&#8217;s algorithm</a>.  Since I&#8217;ve seen confusion about the point on social media: this does <em>not</em> improve over the best known asymptotic exponent for matrix multiplication, which over any field, still stands at the human-discovered 2.373 (meaning, we know how to multiply two N×N matrices in O(N<sup>2.373</sup>) time, but not faster).  But it <em>does</em> asymptotically improve over Strassen&#8217;s O(N<sup>2.81</sup> algorithm from 1968, conceivably even in a way that could have practical relevance for multiplying hundreds-by-hundreds or thousands-by-thousands matrices over F<sub>2</sub>.</p>
 
 
 
-<p>Way back in 2007, I <a href="http://www.scottaaronson.com/talks/wildidea.ppt">gave a talk</a> at MIT CSAIL&#8217;s &#8220;Wild and Crazy Ideas Session,&#8221; where I explicitly proposed to use computer search to look for faster algorithms for 4&#215;4 and 5&#215;5 matrix multiplication.  The response I got at the time was that it was hopeless, since the search space was already too huge.  Of course, that was before the deep learning revolution.</p>
+<p>Way back in 2007, I <a href="http://www.scottaaronson.com/talks/wildidea.ppt">gave a talk</a> at MIT CSAIL&#8217;s &#8220;Wild and Crazy Ideas Session,&#8221; where I explicitly proposed to use computer search to look for faster algorithms for 4×4 and 5×5 matrix multiplication.  The response I got at the time was that it was hopeless, since the search space was already too huge.  Of course, that was before the deep learning revolution.</p>
 
 
 
