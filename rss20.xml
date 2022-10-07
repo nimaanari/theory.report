@@ -9,6 +9,42 @@
 
 
 <item>
+  <title>Postdocs, matrix multiplication, and WSJ: yet more shorties</title>
+  <guid>https://scottaaronson.blog/?p=6745</guid>
+  <link>https://scottaaronson.blog/?p=6745</link>
+  <description>
+    &lt;p&gt;I&amp;#8217;m proud to say that &lt;a href=&quot;https://twitter.com/nickrhj&quot;&gt;Nick Hunter-Jones&lt;/a&gt; and &lt;a href=&quot;https://matteoippoliti.com/&quot;&gt;Matteo Ippoliti&lt;/a&gt;&amp;#8212;both of whom work at the interface between quantum information science and condensed-matter physics (Nick closer to the former and Matteo to the latter)&amp;#8212;have joined the physics faculty at UT Austin this year.  And Nick, Matteo, and I are jointly seeking postdocs to start in Fall 2023!  &lt;a href=&quot;https://academicjobsonline.org/ajo/jobs/23104&quot;&gt;Please check out our call for applications here.&lt;/a&gt;  The deadline is December 1; you apply through AcademicJobsOnline rather than by emailing me as in past years.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;The big news in AI and complexity theory this week was DeepMind&amp;#8217;s &lt;a href=&quot;https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor&quot;&gt;AlphaTensor&lt;/a&gt;, and its automated discovery of new algorithms for matrix multiplication.  (&lt;a href=&quot;https://www.nature.com/articles/s41586-022-05172-4&quot;&gt;See here for the &lt;em&gt;Nature&lt;/em&gt; paper.&lt;/a&gt;)  More concretely, they&amp;#8217;ve used AI to discover (among other things) an algorithm for multiplying 4&amp;#215;4 matrices using only 47 scalar multiplications, which beats the 49=7&amp;#215;7 that you&amp;#8217;d get from &lt;a href=&quot;https://en.wikipedia.org/wiki/Strassen_algorithm&quot;&gt;Strassen&amp;#8217;s algorithm&lt;/a&gt;.  Since I&amp;#8217;ve seen confusion about the point on social media: this does &lt;em&gt;not&lt;/em&gt; improve over the best known asymptotic exponent for matrix multiplication, which still stands at the human-discovered 2.373 (meaning, we know how to multiply two NxN matrices in O(N2.373) time, but not faster).  But it &lt;em&gt;does&lt;/em&gt; asymptotically improve over Strassen&amp;#8217;s O(N2.81) algorithm from 1968, conceivably even in a way that could have practical relevance for multiplying hundreds-by-hundreds or thousands-by-thousands matrices.&lt;/p&gt;
+
+
+
+&lt;p&gt;Way back in 2007, I &lt;a href=&quot;http://www.scottaaronson.com/talks/wildidea.ppt&quot;&gt;gave a talk&lt;/a&gt; at MIT CSAIL&amp;#8217;s &amp;#8220;Wild and Crazy Ideas Session,&amp;#8221; where I explicitly proposed to use computer search to look for faster algorithms for 4&amp;#215;4 and 5&amp;#215;5 matrix multiplication.  The response I got at the time was that it was hopeless, since the search space was already too huge.  Of course, that was before the deep learning revolution.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;This morning, the &lt;em&gt;Wall Street Journal&lt;/em&gt; published an &lt;a href=&quot;https://www.wsj.com/articles/china-competing-us-quantum-computing-11664997892&quot;&gt;article by Karen Hao&lt;/a&gt; about competition between China and the US in quantum computing.  Unfortunately paywalled, but includes the following passage:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;&lt;p&gt;Meanwhile, American academics say it’s gotten harder for Chinese students to obtain visas to conduct quantum research in the U.S. “It’s become common knowledge that when Chinese students or postdocs come to the U.S., they can’t say they’re doing quantum computing,” says Scott Aaronson, director of the Quantum Information Center at the University of Texas, Austin.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-07 16:01:53 UTC</pubDate>
+  <author>Scott Aaronson</author>
+</item>
+
+<item>
   <title>Faculty at University of Cambridge (apply by November 28, 2022)</title>
   <guid>http://cstheory-jobs.org/2022/10/07/faculty-at-university-of-cambridge-apply-by-november-28-2022/</guid>
   <link>https://cstheory-jobs.org/2022/10/07/faculty-at-university-of-cambridge-apply-by-november-28-2022/</link>
@@ -1281,36 +1317,6 @@ Moreover, we prove that this problem can be solved in polynomial time for a
 special kind of directed graphs.}
 &lt;/p&gt;
 &lt;p&gt;\end{abstract}
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-04 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On The Relative Error of Random Fourier Features for Preserving Kernel Distance</title>
-  <guid>http://arxiv.org/abs/2210.00244</guid>
-  <link>http://arxiv.org/abs/2210.00244</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cheng_K/0/1/0/all/0/1&quot;&gt;Kuan Cheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiang_S/0/1/0/all/0/1&quot;&gt;Shaofeng H.-C. Jiang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wei_L/0/1/0/all/0/1&quot;&gt;Luojian Wei&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wei_Z/0/1/0/all/0/1&quot;&gt;Zhide Wei&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The method of random Fourier features (RFF), proposed in a seminal paper by
-Rahimi and Recht (NIPS&#39;07), is a powerful technique to find approximate
-low-dimensional representations of points in (high-dimensional) kernel space,
-for shift-invariant kernels. While RFF has been analyzed under various notions
-of error guarantee, the ability to preserve the kernel distance with
-\emph{relative} error is less understood. We show that for a significant range
-of kernels, including the well-known Laplacian kernels, RFF cannot approximate
-the kernel distance with small relative error using low dimensions. We
-complement this by showing as long as the shift-invariant kernel is analytic,
-RFF with $\mathrm{poly}(\epsilon^{-1} \log n)$ dimensions achieves
-$\epsilon$-relative error for pairwise kernel distance of $n$ points, and the
-dimension bound is improved to $\mathrm{poly}(\epsilon^{-1}\log k)$ for the
-specific application of kernel $k$-means. Finally, going beyond RFF, we make
-the first step towards data-oblivious dimension-reduction for general
-shift-invariant kernels, and we obtain a similar $\mathrm{poly}(\epsilon^{-1}
-\log n)$ dimension bound for Laplacian kernels. We also validate the
-dimension-error tradeoff of our methods on simulated datasets, and they
-demonstrate superior performance compared with other popular methods including
-random-projection and Nystr\&quot;{o}m methods.
 &lt;/p&gt;
   </description>
   <pubDate>2022-10-04 00:30:00 UTC</pubDate>
