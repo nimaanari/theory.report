@@ -10,6 +10,336 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Transformers Implement First-Order Logic with Majority Quantifiers</title>
+    <link href="http://arxiv.org/abs/2210.02671"/>
+    <id>http://arxiv.org/abs/2210.02671</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Merrill_W/0/1/0/all/0/1&quot;&gt;William Merrill&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sabharwal_A/0/1/0/all/0/1&quot;&gt;Ashish Sabharwal&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Characterizing the implicit structure of the computation within neural
+networks is a foundational problem in the area of deep learning
+interpretability. Can their inner decision process be captured symbolically in
+some familiar logic? We show that any transformer neural network can be
+translated into an equivalent fixed-size first-order logic formula which may
+also use majority quantifiers. The idea is to simulate transformers with highly
+uniform threshold circuits and leverage known theoretical connections between
+circuits and logic. Our findings also reveal the surprising fact that the
+entire transformer computation can be reduced merely to the division of two
+(large) integers. While our results are most pertinent for transformers, they
+apply equally to a broader class of neural network architectures, namely those
+with a fixed-depth uniform computation graph made up of standard neural net
+components, which includes feedforward and convolutional networks.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: NLTS Hamiltonians from classical LTCs</title>
+    <link href="http://arxiv.org/abs/2210.02999"/>
+    <id>http://arxiv.org/abs/2210.02999</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+He_Z/0/1/0/all/0/1&quot;&gt;Zhiyang He&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nirkhe_C/0/1/0/all/0/1&quot;&gt;Chinmay Nirkhe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a completely self-contained construction of a family of NLTS
+Hamiltonians [Freedman and Hastings, 2014] based on ideas from [Anshu,
+Breuckmann, and Nirkhe, 2022], [Cross, He, Natarajan, Szegedy, and Zhu, 2022]
+and [Eldar and Harrow, 2017]. Crucially, it does not require optimal-parameter
+quantum LDPC codes and can be built from simple classical LTCs such as the
+repetition code on an expander graph. Furthermore, it removes the constant-rate
+requirement from the construction of Anshu, Breuckmann, and Nirkhe.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Romeo and Juliet Meeting in Forest Like Regions</title>
+    <link href="http://arxiv.org/abs/2210.02582"/>
+    <id>http://arxiv.org/abs/2210.02582</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Misra_N/0/1/0/all/0/1&quot;&gt;Neeldhara Misra&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mulpuri_M/0/1/0/all/0/1&quot;&gt;Manas Mulpuri&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tale_P/0/1/0/all/0/1&quot;&gt;Prafullkumar Tale&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Viramgami_G/0/1/0/all/0/1&quot;&gt;Gaurav Viramgami&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The game of rendezvous with adversaries is a game on a graph played by two
+players: Facilitator and Divider. Facilitator has two agents and Divider has a
+team of $k \ge 1$ agents. While the initial positions of Facilitator&#39;s agents
+are fixed, Divider gets to select the initial positions of his agents. Then,
+they take turns to move their agents to adjacent vertices (or stay put) with
+Facilitator&#39;s goal to bring both her agents at same vertex and Divider&#39;s goal
+to prevent it. The computational question of interest is to determine if
+Facilitator has a winning strategy against Divider with $k$ agents. Fomin,
+Golovach, and Thilikos [WG, 2021] introduced this game and proved that it is
+PSPACE-hard and co-W[2]-hard parameterized by the number of agents.
+&lt;/p&gt;
+&lt;p&gt;This hardness naturally motivates the structural parameterization of the
+problem. The authors proved that it admits an FPT algorithm when parameterized
+by the modular width and the number of allowed rounds. However, they left open
+the complexity of the problem from the perspective of other structural
+parameters. In particular, they explicitly asked whether the problem admits an
+FPT or XP-algorithm with respect to the treewidth of the input graph. We answer
+this question in the negative and show that Rendezvous is co-NP-hard even for
+graphs of constant treewidth. Further, we show that the problem is co-W[1]-hard
+when parameterized by the feedback vertex set number and the number of agents,
+and is unlikely to admit a polynomial kernel when parameterized by the vertex
+cover number and the number of agents. Complementing these hardness results, we
+show that the Rendezvous is FPT when parameterized by both the vertex cover
+number and the solution size. Finally, for graphs of treewidth at most two and
+girds, we show that the problem can be solved in polynomial time.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: $(1-\epsilon)$-approximate fully dynamic densest subgraph: linear space and faster update time</title>
+    <link href="http://arxiv.org/abs/2210.02611"/>
+    <id>http://arxiv.org/abs/2210.02611</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chekuri_C/0/1/0/all/0/1&quot;&gt;Chandra Chekuri&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Quanrud_K/0/1/0/all/0/1&quot;&gt;Kent Quanrud&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the problem of maintaining a $(1-\epsilon)$-approximation to the
+densest subgraph (DSG) in an undirected multigraph as it undergoes edge
+insertions and deletions (the fully dynamic setting). Sawlani and Wang [SW20]
+developed a data structure that, for any given $\epsilon &amp;gt; 0$, maintains a
+$(1-\epsilon)$-approximation with $O(\log^4 n/\epsilon^6)$ worst-case update
+time for edge operations, and $O(1)$ query time for reporting the density
+value. Their data structure was the first to achieve near-optimal
+approximation, and improved previous work that maintained a $(1/4 - \epsilon)$
+approximation in amortized polylogarithmic update time [BHNT15]. In this paper
+we develop a data structure for $(1-\epsilon)$-approximate DSG that improves
+the one from [SW20] in two aspects. First, the data structure uses linear space
+improving the space bound in [SW20] by a logarithmic factor. Second, the data
+structure maintains a $(1-\epsilon)$-approximation in amortized $O(\log^2
+n/\epsilon^4)$ time per update while simultaneously guaranteeing that the worst
+case update time is $O(\log^3 n \log \log n/\epsilon^6)$. We believe that the
+space and update time improvements are valuable for current large scale graph
+data sets. The data structure extends in a natural fashion to hypergraphs and
+yields improvements in space and update times over recent work [BBCG22] that
+builds upon [SW20].
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Cooperative Coverage with a Leader and a Wingmate in Communication-Constrained Environments</title>
+    <link href="http://arxiv.org/abs/2210.02628"/>
+    <id>http://arxiv.org/abs/2210.02628</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hari_S/0/1/0/all/0/1&quot;&gt;Sai Krishna Kanth Hari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rathinam_S/0/1/0/all/0/1&quot;&gt;Sivakumar Rathinam&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Darbha_S/0/1/0/all/0/1&quot;&gt;Swaroop Darbha&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Casbeer_D/0/1/0/all/0/1&quot;&gt;David W. Casbeer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider a mission framework in which two unmanned vehicles (UVs), a
+leader and a wingmate, are required to provide cooperative coverage of an
+environment while being within a short communication range. This framework
+finds applications in underwater and/or military domains, where certain
+constraints are imposed on communication by either the application or the
+environment. An important objective of missions within this framework is to
+minimize the total travel and communication costs of the leader-wingmate duo.
+In this paper, we propose and formulate the problem of finding routes for the
+UVs that minimize the sum of their travel and communication costs as a network
+optimization problem of the form of a binary program (BP). The BP is
+computationally expensive, with the time required to compute optimal solutions
+increasing rapidly with the problem size. To address this challenge, here, we
+propose two algorithms, an approximation algorithm and a heuristic algorithm,
+to solve large-scale instances of the problem swiftly. We demonstrate the
+effectiveness and the scalability of these algorithms through an analysis of
+extensive numerical simulations performed over 500 instances, with the number
+of targets in the instances ranging from 6 to 100.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: What Can We Compute in a Single Round of the Congested Clique?</title>
+    <link href="http://arxiv.org/abs/2210.02638"/>
+    <id>http://arxiv.org/abs/2210.02638</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Robinson_P/0/1/0/all/0/1&quot;&gt;Peter Robinson&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the computational power of one-round distributed algorithms in the
+congested clique model. We show that any one-round algorithm that computes a
+minimum spanning tree (MST) in the unicast congested clique must use a link
+bandwidth of $\Omega(\log^3 n)$ bits in the worst case. This is the first round
+complexity lower bound in the unicast congested clique for a problem where the
+output size is small, i.e., $O(n\log n)$ bits. Our main technical contribution
+is to investigate one-round algorithms in the broadcast congested clique and,
+equivalently, the distributed graph sketching model where the nodes send their
+message to a referee who computes the output. First, we present a tight lower
+bound of $\Omega(n)$ bits for the message size of computing a breadth-first
+search tree. Then, we prove that computing a $k$-edge connected spanning
+subgraph ($k$-ECSS) requires messages of size at least $\Omega \left(
+k\log^2(n/k) \right)$. We also show that verifying whether a given vertex
+coloring forms a weak 2-coloring of the input graph requires messages of
+$\Omega(n^{1/3}\log^{2/3}n)$ bits, and the same lower bound holds for verifying
+whether a subset of nodes forms a maximal independent set or a minimal
+dominating set. Interestingly, it turns out that the same class of lower bound
+graphs for the distributed sketching model is versatile enough to yield a space
+lower bound of $\Omega(n^2)$ bits for verifying symmetry breaking problems such
+as weak $2$-coloring in the fully dynamic turnstile model, where the input
+arrives as a stream of edges. We also (nearly) settle the space complexity of
+the $k$-ECSS problem in the streaming model by extending the work of Kapralov
+et al. (FOCS 2017): We prove a communication complexity lower bound for a
+direct sum variant of the $\text{UR}_k^{\subset}$ problem and show that this
+implies $\Omega(k\,n\log^2(n/k))$ bits of memory for computing a $k$-ECSS.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Orthogonal Non-negative Matrix Factorization: a Maximum-Entropy-Principle Approach</title>
+    <link href="http://arxiv.org/abs/2210.02672"/>
+    <id>http://arxiv.org/abs/2210.02672</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Basiri_S/0/1/0/all/0/1&quot;&gt;Salar Basiri&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kapadia_M/0/1/0/all/0/1&quot;&gt;Mustafa Kapadia&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Salapaka_S/0/1/0/all/0/1&quot;&gt;Srinivasa Salapaka&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we introduce a new methodology to solve the orthogonal
+non-negative matrix factorization (ONMF) problem, where the objective is to
+approximate an input data matrix by the product of two non-negative matrices,
+the features matrix and the mixing matrix, while one of them is orthogonal. We
+show how the ONMF can be interpreted as a specific facility-location problem
+(FLP), and adapt a maximum-entropy-principle based solution for FLP to the ONMF
+problem. The proposed approach guarantees orthogonality of the features or the
+mixing matrix, while ensuring that both of the matrix factors are non-negative.
+Also, the features (mixing) matrix has exactly one non-zero element across each
+row (column), providing the maximum sparsity of the orthogonal factor. This
+enables a semantic interpretation of the underlying data matrix using
+non-overlapping features. The experiments on synthetic data and a standard
+microarray dataset demonstrate significant improvements in terms of sparsity
+and orthogonality scores of features (mixing) matrices, while achieving
+approximately the same or better (up to 3%) reconstruction errors.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Paging with Succinct Predictions</title>
+    <link href="http://arxiv.org/abs/2210.02775"/>
+    <id>http://arxiv.org/abs/2210.02775</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Antoniadis_A/0/1/0/all/0/1&quot;&gt;Antonios Antoniadis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Boyar_J/0/1/0/all/0/1&quot;&gt;Joan Boyar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Elias_M/0/1/0/all/0/1&quot;&gt;Marek Eli&amp;#xe1;&amp;#x161;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Favrholdt_L/0/1/0/all/0/1&quot;&gt;Lene M. Favrholdt&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hoeksma_R/0/1/0/all/0/1&quot;&gt;Ruben Hoeksma&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Larsen_K/0/1/0/all/0/1&quot;&gt;Kim S. Larsen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Polak_A/0/1/0/all/0/1&quot;&gt;Adam Polak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Simon_B/0/1/0/all/0/1&quot;&gt;Bertrand Simon&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Paging is a prototypical problem in the area of online algorithms. It has
+also played a central role in the development of learning-augmented algorithms
+-- a recent line of research that aims to ameliorate the shortcomings of
+classical worst-case analysis by giving algorithms access to predictions. Such
+predictions can typically be generated using a machine learning approach, but
+they are inherently imperfect. Previous work on learning-augmented paging has
+investigated predictions on (i) when the current page will be requested again
+(reoccurrence predictions), (ii) the current state of the cache in an optimal
+algorithm (state predictions), (iii) all requests until the current page gets
+requested again, and (iv) the relative order in which pages are requested.
+&lt;/p&gt;
+&lt;p&gt;We study learning-augmented paging from the new perspective of requiring the
+least possible amount of predicted information. More specifically, the
+predictions obtained alongside each page request are limited to one bit only.
+We consider two natural such setups: (i) discard predictions, in which the
+predicted bit denotes whether or not it is ``safe&#39;&#39; to evict this page, and
+(ii) phase predictions, where the bit denotes whether the current page will be
+requested in the next phase (for an appropriate partitioning of the input into
+phases). We develop algorithms for each of the two setups that satisfy all
+three desirable properties of learning-augmented algorithms -- that is, they
+are consistent, robust and smooth -- despite being limited to a one-bit
+prediction per request. We also present lower bounds establishing that our
+algorithms are essentially best possible.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Sequentially Swapping Tokens: Further on Graph Classes</title>
+    <link href="http://arxiv.org/abs/2210.02835"/>
+    <id>http://arxiv.org/abs/2210.02835</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kiya_H/0/1/0/all/0/1&quot;&gt;Hironori Kiya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Okada_Y/0/1/0/all/0/1&quot;&gt;Yuto Okada&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ono_H/0/1/0/all/0/1&quot;&gt;Hirotaka Ono&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Otachi_Y/0/1/0/all/0/1&quot;&gt;Yota Otachi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the following variant of the 15 puzzle. Given a graph and two token
+placements on the vertices, we want to find a walk of the minimum length (if
+any exists) such that the sequence of token swappings along the walk obtains
+one of the given token placements from the other one. This problem was
+introduced as Sequential Token Swapping by Yamanaka et al. [JGAA 2019], who
+showed that the problem is intractable in general but polynomial-time solvable
+for trees, complete graphs, and cycles. In this paper, we present a
+polynomial-time algorithm for block-cactus graphs, which include all previously
+known cases. We also present general tools for showing the hardness of problem
+on restricted graph classes such as chordal graphs and chordal bipartite
+graphs. We also show that the problem is hard on grids and king&#39;s graphs, which
+are the graphs corresponding to the 15 puzzle and its variant with relaxed
+moves.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Scalable Experimental Bounds for Entangled Quantum State Fidelities</title>
+    <link href="http://arxiv.org/abs/2210.03048"/>
+    <id>http://arxiv.org/abs/2210.03048</id>
+    <updated>2022-10-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Aktar_S/0/1/0/all/0/1&quot;&gt;Shamminuj Aktar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Bartschi_A/0/1/0/all/0/1&quot;&gt;Andreas B&amp;#xe4;rtschi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Badawy_A/0/1/0/all/0/1&quot;&gt;Abdel-Hameed A. Badawy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Eidenbenz_S/0/1/0/all/0/1&quot;&gt;Stephan Eidenbenz&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Estimating the state preparation fidelity of highly entangled states on noisy
+intermediate-scale quantum (NISQ) devices is an important task for benchmarking
+and application considerations. Unfortunately, exact fidelity measurements
+quickly become prohibitively expensive, as they scale exponentially as O(3^N)
+for N-qubit states, using full state tomography with measurements in all Pauli
+bases combinations.
+&lt;/p&gt;
+&lt;p&gt;However, it is known [Somma et.al. 2006] that the complexity can be
+drastically reduced when looking at fidelity lower bounds for states that
+exhibit symmetries, such as Dicke States and GHZ States. For larger states,
+these bounds have so far not been tight enough to provide reasonable
+estimations on today&#39;s (2022) NISQ devices. In this work, for the first time
+and more than 15 years after the theoretical introduction, we report meaningful
+lower bounds for the state preparation fidelity of all Dicke States up to N=10
+and all GHZ states up to N=20 on Quantinuum H1 ion-trap systems using efficient
+implementations of recently proposed scalable circuits for these states.
+&lt;/p&gt;
+&lt;p&gt;For example, we give state preparation fidelity lower bounds of (i) 0.46 for
+the Dicke State |D10,5&amp;gt; and (ii) 0.73 for the GHZ State |G20&amp;gt;. These match or
+exceed exact fidelity records recently achieved on superconducting systems for
+the much smaller states |D6,3&amp;gt; and |G5&amp;gt;, respectively. Furthermore, we provide
+evidence that for large Dicke States |DN,N/2&amp;gt;, we can resort to a GHZ-based
+approximate state preparation to achieve better fidelity.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Gil Kalai: The Google Supremacy Experiment: Data, Information, Discussions, and Three Questions.</title>
     <link href="https://gilkalai.wordpress.com/2022/10/07/the-google-supremacy-experiment-data-information-discussions-and-three-questions/"/>
     <id>http://gilkalai.wordpress.com/?p=23316</id>
@@ -1191,320 +1521,6 @@ counting triangles in large graphs.
     <author>
       <name>Aaron Roth</name>
       <uri>http://aaronsadventures.blogspot.com/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Pure-Circuit: Strong Inapproximability for PPAD</title>
-    <link href="http://arxiv.org/abs/2209.15149"/>
-    <id>http://arxiv.org/abs/2209.15149</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deligkas_A/0/1/0/all/0/1&quot;&gt;Argyrios Deligkas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fearnley_J/0/1/0/all/0/1&quot;&gt;John Fearnley&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hollender_A/0/1/0/all/0/1&quot;&gt;Alexandros Hollender&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Melissourgos_T/0/1/0/all/0/1&quot;&gt;Themistoklis Melissourgos&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The current state-of-the-art methods for showing inapproximability in PPAD
-arise from the $\varepsilon$-Generalized-Circuit ($\varepsilon$-GCircuit)
-problem. Rubinstein (2018) showed that there exists a small unknown constant
-$\varepsilon$ for which $\varepsilon$-GCircuit is PPAD-hard, and subsequent
-work has shown hardness results for other problems in PPAD by using
-$\varepsilon$-GCircuit as an intermediate problem.
-&lt;/p&gt;
-&lt;p&gt;We introduce Pure-Circuit, a new intermediate problem for PPAD, which can be
-thought of as $\varepsilon$-GCircuit pushed to the limit as $\varepsilon
-\rightarrow 1$, and we show that the problem is PPAD-complete. We then prove
-that $\varepsilon$-GCircuit is PPAD-hard for all $\varepsilon &amp;lt; 0.1$ by a
-reduction from Pure-Circuit, and thus strengthen all prior work that has used
-GCircuit as an intermediate problem from the existential-constant regime to the
-large-constant regime.
-&lt;/p&gt;
-&lt;p&gt;We show that stronger inapproximability results can be derived by reducing
-directly from Pure-Circuit. In particular, we prove tight inapproximability
-results for computing $\varepsilon$-well-supported Nash equilibria in
-two-action polymatrix games, as well as for finding approximate equilibria in
-threshold games.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Tight Inapproximability for Graphical Games</title>
-    <link href="http://arxiv.org/abs/2209.15151"/>
-    <id>http://arxiv.org/abs/2209.15151</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deligkas_A/0/1/0/all/0/1&quot;&gt;Argyrios Deligkas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fearnley_J/0/1/0/all/0/1&quot;&gt;John Fearnley&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hollender_A/0/1/0/all/0/1&quot;&gt;Alexandros Hollender&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Melissourgos_T/0/1/0/all/0/1&quot;&gt;Themistoklis Melissourgos&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a complete characterization for the computational complexity of
-finding approximate equilibria in two-action graphical games. We consider the
-two most well-studied approximation notions: $\varepsilon$-Nash equilibria
-($\varepsilon$-NE) and $\varepsilon$-well-supported Nash equilibria
-($\varepsilon$-WSNE), where $\varepsilon \in [0,1]$. We prove that computing an
-$\varepsilon$-NE is PPAD-complete for any constant $\varepsilon &amp;lt; 1/2$, while a
-very simple algorithm (namely, letting all players mix uniformly between their
-two actions) yields a $1/2$-NE. On the other hand, we show that computing an
-$\varepsilon$-WSNE is PPAD-complete for any constant $\varepsilon &amp;lt; 1$, while a
-$1$-WSNE is trivial to achieve, because any strategy profile is a $1$-WSNE. All
-of our lower bounds immediately also apply to graphical games with more than
-two actions per player.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: A Multivariate Complexity Analysis of Qualitative Reasoning Problems</title>
-    <link href="http://arxiv.org/abs/2209.15275"/>
-    <id>http://arxiv.org/abs/2209.15275</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Eriksson_L/0/1/0/all/0/1&quot;&gt;Leif Eriksson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lagerkvist_V/0/1/0/all/0/1&quot;&gt;Victor Lagerkvist&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Qualitative reasoning is an important subfield of artificial intelligence
-where one describes relationships with qualitative, rather than numerical,
-relations. Many such reasoning tasks, e.g., Allen&#39;s interval algebra, can be
-solved in $2^{O(n \cdot \log n)}$ time, but single-exponential running times
-$2^{O(n)}$ are currently far out of reach. In this paper we consider
-single-exponential algorithms via a multivariate analysis consisting of a
-fine-grained parameter $n$ (e.g., the number of variables) and a coarse-grained
-parameter $k$ expected to be relatively small. We introduce the classes FPE and
-XE of problems solvable in $f(k) \cdot 2^{O(n)}$, respectively $f(k)^n$, time,
-and prove several fundamental properties of these classes. We proceed by
-studying temporal reasoning problems and (1) show that the Partially Ordered
-Time problem of effective width $k$ is solvable in $16^{kn}$ time and is thus
-included in XE, and (2) that the network consistency problem for Allen&#39;s
-interval algebra with no interval overlapping with more than $k$ others is
-solvable in $(2nk)^{2k} \cdot 2^{n}$ time and is included in FPE. Our
-multivariate approach is in no way limited to these to specific problems and
-may be a generally useful approach for obtaining single-exponential algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Broadening the Complexity-theoretic Analysis of Manipulative Attacks in Group Identification</title>
-    <link href="http://arxiv.org/abs/2209.15396"/>
-    <id>http://arxiv.org/abs/2209.15396</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Junker_E/0/1/0/all/0/1&quot;&gt;Emil Junker&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the Group Identification problem, we are given a set of individuals and
-are asked to identify a socially qualified subset among them. Each individual
-in the set has an opinion about who should be considered socially qualified.
-There are several different rules that can be used to determine the socially
-qualified subset based on these mutual opinions. In a manipulative attack, an
-outsider attempts to exploit the way the used rule works, with the goal of
-changing the outcome of the selection process to their liking.
-&lt;/p&gt;
-&lt;p&gt;In recent years, the complexity of group control and bribery based
-manipulative attacks in Group Identification has been the subject of intense
-research. However, the picture is far from complete, and there remain many open
-questions related to what exactly makes certain problems hard, or certain rules
-immune to some attacks.
-&lt;/p&gt;
-&lt;p&gt;Supplementing previous results, we examine the complexity of group
-microbribery on so-called protective problem instances; that is, instances
-where all individuals from the constructive target set are already socially
-qualified initially. In addition, we study a relaxed variant of group control
-by deleting individuals for the consent rules, the consensus-start-respecting
-rule, and the liberal-start-respecting rule. Based on existing literature, we
-also formalize three new social rules of the iterative consensus type, and we
-provide a comprehensive complexity-theoretic analysis of group control and
-bribery problems for these rules.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: P vs NP</title>
-    <link href="http://arxiv.org/abs/2209.15410"/>
-    <id>http://arxiv.org/abs/2209.15410</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tang_J/0/1/0/all/0/1&quot;&gt;Jian-Gang Tang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we discuss the $\mathcal{NP}$ problem using the Henkin&#39;s
-Theory and the Herbrand Theory in the first-order logic, and prove that
-$\mathcal{P}$ is a proper subset of $\mathcal{NP}$.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: An improved algorithm for Generalized \v{C}ech complex construction</title>
-    <link href="http://arxiv.org/abs/2209.15574"/>
-    <id>http://arxiv.org/abs/2209.15574</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chu_J/0/1/0/all/0/1&quot;&gt;Jie Chu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vejdemo_Johansson_M/0/1/0/all/0/1&quot;&gt;Mikael Vejdemo-Johansson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ji_P/0/1/0/all/0/1&quot;&gt;Ping Ji&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we present an algorithm that computes the generalized \v{C}ech
-complex for a finite set of disks where each may have a different radius in 2D
-space. An extension of this algorithm is also proposed for a set of balls in 3D
-space with different radius.
-&lt;/p&gt;
-&lt;p&gt;To compute a $k$-simplex, we leverage the computation performed in the round
-of $(k-1)$-simplices such that we can reduce the number of potential candidates
-to verify to improve the efficiency. An efficient verification method is
-proposed to confirm if a $k$-simplex can be constructed on the basis of the
-$(k-1)$-simplices. We demonstrate the performance with a comparison to some
-closely related algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Optimal Query Complexities for Dynamic Trace Estimation</title>
-    <link href="http://arxiv.org/abs/2209.15219"/>
-    <id>http://arxiv.org/abs/2209.15219</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Woodruff_D/0/1/0/all/0/1&quot;&gt;David P. Woodruff&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_F/0/1/0/all/0/1&quot;&gt;Fred Zhang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_Q/0/1/0/all/0/1&quot;&gt;Qiuyi Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the problem of minimizing the number of matrix-vector queries
-needed for accurate trace estimation in the dynamic setting where our
-underlying matrix is changing slowly, such as during an optimization process.
-Specifically, for any $m$ matrices $A_1,...,A_m$ with consecutive differences
-bounded in Schatten-$1$ norm by $\alpha$, we provide a novel binary tree
-summation procedure that simultaneously estimates all $m$ traces up to
-$\epsilon$ error with $\delta$ failure probability with an optimal query
-complexity of $\widetilde{O}\left(m \alpha\sqrt{\log(1/\delta)}/\epsilon +
-m\log(1/\delta)\right)$, improving the dependence on both $\alpha$ and $\delta$
-from Dharangutte and Musco (NeurIPS, 2021). Our procedure works without
-additional norm bounds on $A_i$ and can be generalized to a bound for the
-$p$-th Schatten norm for $p \in [1,2]$, giving a complexity of
-$\widetilde{O}\left(m \alpha\left(\sqrt{\log(1/\delta)}/\epsilon\right)^p +m
-\log(1/\delta)\right)$.
-&lt;/p&gt;
-&lt;p&gt;By using novel reductions to communication complexity and
-information-theoretic analyses of Gaussian matrices, we provide matching lower
-bounds for static and dynamic trace estimation in all relevant parameters,
-including the failure probability. Our lower bounds (1) give the first tight
-bounds for Hutchinson&#39;s estimator in the matrix-vector product model with
-Frobenius norm error even in the static setting, and (2) are the first
-unconditional lower bounds for dynamic trace estimation, resolving open
-questions of prior work.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Assortment Optimization Under the Multivariate MNL Model</title>
-    <link href="http://arxiv.org/abs/2209.15220"/>
-    <id>http://arxiv.org/abs/2209.15220</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_X/0/1/0/all/0/1&quot;&gt;Xin Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_J/0/1/0/all/0/1&quot;&gt;Jiachun Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_M/0/1/0/all/0/1&quot;&gt;Menglong Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhao_T/0/1/0/all/0/1&quot;&gt;Tiancheng Zhao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_Y/0/1/0/all/0/1&quot;&gt;Yuan Zhou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study an assortment optimization problem under a multi-purchase choice
-model in which customers choose a bundle of up to one product from each of two
-product categories. Different bundles have different utilities and the bundle
-price is the summation of the prices of products in it. For the uncapacitated
-setting where any set of products can be offered, we prove that this problem is
-strongly NP-hard. We show that an adjusted-revenue-ordered assortment provides
-a 1/2-approximation. Furthermore, we develop an approximation framework based
-on a linear programming relaxation of the problem and obtain a
-0.74-approximation algorithm. This approximation ratio almost matches the
-integrality gap of the linear program, which is proven to be at most 0.75. For
-the capacitated setting, we prove that there does not exist a constant-factor
-approximation algorithm assuming the Exponential Time Hypothesis. The same
-hardness result holds for settings with general bundle prices or more than two
-categories. Finally, we conduct numerical experiments on randomly generated
-problem instances. The average approximation ratios of our algorithms are over
-99%.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Deterministic Performance Guarantees for Bidirectional BFS on Real-World Networks</title>
-    <link href="http://arxiv.org/abs/2209.15300"/>
-    <id>http://arxiv.org/abs/2209.15300</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blasius_T/0/1/0/all/0/1&quot;&gt;Thomas Bl&amp;#xe4;sius&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wilhelm_M/0/1/0/all/0/1&quot;&gt;Marcus Wilhelm&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A common technique to speed up shortest path queries in graphs is to use a
-bidirectional search, i.e., performing a forward search from the start and a
-backward search from the destination until a common vertex on a shortest path
-is found. In practice, this has a tremendous impact on the performance on some
-real-world networks, while it only seems to save a constant factor on other
-types of networks. Even though finding shortest paths is a ubiquitous problem,
-there are only few studies attempting to understand the apparently asymptotic
-speedups on some networks, using average case analysis on certain models for
-real-world networks.
-&lt;/p&gt;
-&lt;p&gt;In this paper we give a new perspective on this, by analyzing deterministic
-properties that permit theoretical analysis and that can easily be checked on
-any particular instance. We prove that these parameters imply sublinear running
-time for the bidirectional breadth-first search in several regimes, some of
-which are tight. Moreover, we perform experiments on a large set of real-world
-networks showing that our parameters capture the concept of practical running
-time well.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Proportionally Fair Online Allocation of Public Goods with Predictions</title>
-    <link href="http://arxiv.org/abs/2209.15305"/>
-    <id>http://arxiv.org/abs/2209.15305</id>
-    <updated>2022-10-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Banerjee_S/0/1/0/all/0/1&quot;&gt;Siddhartha Banerjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gkatzelis_V/0/1/0/all/0/1&quot;&gt;Vasilis Gkatzelis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hossain_S/0/1/0/all/0/1&quot;&gt;Safwan Hossain&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jin_B/0/1/0/all/0/1&quot;&gt;Billy Jin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Micha_E/0/1/0/all/0/1&quot;&gt;Evi Micha&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shah_N/0/1/0/all/0/1&quot;&gt;Nisarg Shah&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We design online algorithms for the fair allocation of public goods to a set
-of $N$ agents over a sequence of $T$ rounds and focus on improving their
-performance using predictions. In the basic model, a public good arrives in
-each round, the algorithm learns every agent&#39;s value for the good, and must
-irrevocably decide the amount of investment in the good without exceeding a
-total budget of $B$ across all rounds. The algorithm can utilize (potentially
-inaccurate) predictions of each agent&#39;s total value for all the goods to
-arrive. We measure the performance of the algorithm using a proportional
-fairness objective, which informally demands that every group of agents be
-rewarded in proportion to its size and the cohesiveness of its preferences.
-&lt;/p&gt;
-&lt;p&gt;In the special case of binary agent preferences and a unit budget, we show
-that $O(\log N)$ proportional fairness can be achieved without using any
-predictions, and that this is optimal even if perfectly accurate predictions
-were available. However, for general preferences and budget no algorithm can
-achieve better than $\Theta(T/B)$ proportional fairness without predictions. We
-show that algorithms with (reasonably accurate) predictions can do much better,
-achieving $\Theta(\log (T/B))$ proportional fairness. We also extend this
-result to a general model in which a batch of $L$ public goods arrive in each
-round and achieve $O(\log (\min(N,L) \cdot T/B))$ proportional fairness. Our
-exact bounds are parametrized as a function of the error in the predictions and
-the performance degrades gracefully with increasing errors.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
