@@ -10,6 +10,21 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Computational Complexity: Will Strassen&#39;s Matrix Mult Alg ever be practical?</title>
+    <link href="http://blog.computationalcomplexity.org/2022/10/will-strassens-matrix-mult-alg-ever-be.html"/>
+    <id>tag:blogger.com,1999:blog-3722233.post-8978327258415406646</id>
+    <updated>2022-10-10T04:03:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;All time bounds are asymptotic and really O-of.&lt;/p&gt;&lt;p&gt;Recall that Strassen found a clever way to multiple two 2x2 matrices with 7 mults (and lots of adds)&amp;nbsp; leading to a matrix mult alg in n^{\log_2 7} = n^{2.87...}&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Recently (see&amp;nbsp;&lt;a href=&quot;https://www.newscientist.com/article/2340343-deepmind-ai-finds-new-way-to-multiply-numbers-and-speed-up-computers/&quot;&gt;here&lt;/a&gt;) a deep-mind-AI found a way to mult two 4x4 matrices with 47 mults (and lots of adds) leading to a matrix mult alg in n^{\log_4 47} = n^{2.777...}&amp;nbsp;&lt;/p&gt;&lt;p&gt;Much better is known, see our blog posts&amp;nbsp;&lt;a href=&quot;https://blog.computationalcomplexity.org/2011/11/matrix-mult-you-heard-it-here-third.html&quot;&gt;here&lt;/a&gt;&amp;nbsp;and&amp;nbsp;&lt;a href=&quot;https://blog.computationalcomplexity.org/2015/06/when-do-we-care-about-small-improvements.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The more advanced algorithms are complicated and have large constants so will never be practical. But Strassen&#39;s result, and now the new algorithm, SEEM to me they could be practical.&lt;/p&gt;&lt;p&gt;Thoughts about Strassen that also apply to the&amp;nbsp; new algorithm.&amp;nbsp;&lt;/p&gt;&lt;p&gt;1) n has to be large for Strassen to given an improvement. But as we deal with larger data sets the value of n is getting larger.&amp;nbsp;&lt;/p&gt;&lt;p&gt;2) People are mostly interested in sparse matrices for which there are better methods. I&#39;ve heard that for a while- but is it still true? I thought ML used dense matrices.&amp;nbsp;&lt;/p&gt;&lt;p&gt;3) Strassen is hard to code up. Actually it doesn&#39;t look that hard to code up. However, I have never tried to code it up, so maybe there are subtle points there.&lt;/p&gt;&lt;p&gt;4) Strassen only works on matrices of size 2^n x 2^n. You can pad matrices out but that might kill whatever time advantage you get. (The new alg only works on&amp;nbsp; 4^n x 4^n).&amp;nbsp;&lt;/p&gt;&lt;p&gt;5) Strassen uses recursion and there is &lt;i&gt;the hidden cost of recursion&lt;/i&gt;. I think that is a think of the past and our younger readers do not know what I am talking about.&amp;nbsp;&lt;/p&gt;&lt;p&gt;6) (This is obvious) the recursion would only go down to a certain level and THEN you would use ordinary Matrix Mult. This may also add time.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;I suspect that 2 and 4 are the most important reasons Strassen (or the new algorithm) is not practical BUT I would like to hear your thoughts?&lt;/p&gt;&lt;p&gt;Does any package NOW use Strassen&#39;s Algorithm?&lt;/p&gt;&lt;p&gt;Side Note: I like to ask students if they think there is a better-than-cubic algorithm for Matrix Mult. They do not. Then I show it to them and tell them THIS is why LOWER BOUNDS are hard. You have to show that NO, nobody clever will find a trick you hadn&#39;t thought of.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
+  </content>
+    <author>
+      <name>Computational Complexity</name>
+      <uri>http://blog.computationalcomplexity.org/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Treewidth-aware Reductions of Normal ASP to SAT -- Is Normal ASP Harder than SAT after All?</title>
     <link href="http://arxiv.org/abs/2210.03553"/>
     <id>http://arxiv.org/abs/2210.03553</id>
@@ -1544,24 +1559,6 @@ Email: Aris.Filos-Ratsikas@ed.ac.uk&lt;/p&gt;
     <author>
       <name>Computational Complexity</name>
       <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Three Open Rank Tenure-Track Faculty Positions at University of Delaware (apply by November 15, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/10/04/three-open-rank-tenure-track-faculty-positions-at-university-of-delaware-apply-by-november-15-2022/"/>
-    <id>http://cstheory-jobs.org/2022/10/04/three-open-rank-tenure-track-faculty-positions-at-university-of-delaware-apply-by-november-15-2022/</id>
-    <updated>2022-10-04T04:00:21+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;The Department of Computer and Information Sciences at University of Delaware invites applications for an open rank tenure-track positions. Although there is a particular interest in computational biology/bioinformatics/comp materials, candidates in theory will be considered. Candidates in theory/algorithms with possible applications in these areas are especially encouraged to apply.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://careers.udel.edu/en-us/filter/?search-keyword=&amp;amp;brand=college%20of%20engineering&amp;amp;category=computer%20%26%20information%20sciences&amp;amp;job-mail-subscribe-privacy=agree&quot;&gt;https://careers.udel.edu/en-us/filter/?search-keyword=&amp;amp;brand=college%20of%20engineering&amp;amp;category=computer%20%26%20information%20sciences&amp;amp;job-mail-subscribe-privacy=agree&lt;/a&gt;&lt;br /&gt;
-Email: isafro@udel.edu&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
     </author>
   </entry>
 

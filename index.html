@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-10-10T03:11:35Z">Monday, October 10 2022, 03:11</time>
+          <time class='timeago' datetime="2022-10-10T05:00:40Z">Monday, October 10 2022, 05:00</time>
         
       </p>
 
@@ -395,6 +395,40 @@
     <h2 class='new-date'>
       <i class='icon-calendar-empty'></i> Monday, October 10
     </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://blog.computationalcomplexity.org/2022/10/will-strassens-matrix-mult-alg-ever-be.html'>Will Strassen's Matrix Mult Alg ever be practical?</a></h3>
+          <p class='item-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>All time bounds are asymptotic and really O-of.</p><p>Recall that Strassen found a clever way to multiple two 2x2 matrices with 7 mults (and lots of adds)&nbsp; leading to a matrix mult alg in n^{\log_2 7} = n^{2.87...}</p><p><br></p><p>Recently (see&nbsp;here) a deep-mind-AI found a way to mult two 4x4 matrices with 47 mults (and lots of adds) leading to a matrix mult alg in n^{\log_4 47} = n^{2.777...}&nbsp;</p><p>Much better is known, see our blog posts&nbsp;here&nbsp;and&nbsp;here.</p><p><br></p><p>The more advanced algorithms are complicated and have large constants so will never be practical. But Strassen's result, and now the new algorithm, SEEM to me they could be practical.</p><p>Thoughts about Strassen that also apply to the&nbsp; new algorithm.&nbsp;</p><p>1) n has to be large for Strassen to given an improvement. But as we deal with larger data sets the value of n is getting larger.&nbsp;</p><p>2) People are mostly interested in sparse matrices for which there are better methods. I've heard that for a while- but is it still true? I thought ML used dense matrices.&nbsp;</p><p>3) Strassen is hard to code up. Actually it doesn't look that hard to code up. However, I have never tried to code it up, so maybe there are subtle points there.</p><p>4) Strassen only works on matrices of size 2^n x 2^n. You can pad matrices out but that might kill whatever time advantage you get. (The new alg only works on&nbsp; 4^n x 4^n).&nbsp;</p><p>5) Strassen uses recursion and there is the hidden cost of recursion. I think that is a think of the past and our younger readers do not know what I am talking about.&nbsp;</p><p>6) (This is obvious) the recursion would only go down to a certain level and THEN you would use ordinary Matrix Mult. This may also add time.&nbsp;</p><p><br></p><p>I suspect that 2 and 4 are the most important reasons Strassen (or the new algorithm) is not practical BUT I would like to hear your thoughts?</p><p>Does any package NOW use Strassen's Algorithm?</p><p>Side Note: I like to ask students if they think there is a better-than-cubic algorithm for Matrix Mult. They do not. Then I show it to them and tell them THIS is why LOWER BOUNDS are hard. You have to show that NO, nobody clever will find a trick you hadn't thought of.&nbsp;</p><p><br></p><p>By gasarch</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>All time bounds are asymptotic and really O-of.</p><p>Recall that Strassen found a clever way to multiple two 2x2 matrices with 7 mults (and lots of adds)&nbsp; leading to a matrix mult alg in n^{\log_2 7} = n^{2.87...}</p><p><br /></p><p>Recently (see&nbsp;<a href="https://www.newscientist.com/article/2340343-deepmind-ai-finds-new-way-to-multiply-numbers-and-speed-up-computers/">here</a>) a deep-mind-AI found a way to mult two 4x4 matrices with 47 mults (and lots of adds) leading to a matrix mult alg in n^{\log_4 47} = n^{2.777...}&nbsp;</p><p>Much better is known, see our blog posts&nbsp;<a href="https://blog.computationalcomplexity.org/2011/11/matrix-mult-you-heard-it-here-third.html">here</a>&nbsp;and&nbsp;<a href="https://blog.computationalcomplexity.org/2015/06/when-do-we-care-about-small-improvements.html">here</a>.</p><p><br /></p><p>The more advanced algorithms are complicated and have large constants so will never be practical. But Strassen's result, and now the new algorithm, SEEM to me they could be practical.</p><p>Thoughts about Strassen that also apply to the&nbsp; new algorithm.&nbsp;</p><p>1) n has to be large for Strassen to given an improvement. But as we deal with larger data sets the value of n is getting larger.&nbsp;</p><p>2) People are mostly interested in sparse matrices for which there are better methods. I've heard that for a while- but is it still true? I thought ML used dense matrices.&nbsp;</p><p>3) Strassen is hard to code up. Actually it doesn't look that hard to code up. However, I have never tried to code it up, so maybe there are subtle points there.</p><p>4) Strassen only works on matrices of size 2^n x 2^n. You can pad matrices out but that might kill whatever time advantage you get. (The new alg only works on&nbsp; 4^n x 4^n).&nbsp;</p><p>5) Strassen uses recursion and there is <i>the hidden cost of recursion</i>. I think that is a think of the past and our younger readers do not know what I am talking about.&nbsp;</p><p>6) (This is obvious) the recursion would only go down to a certain level and THEN you would use ordinary Matrix Mult. This may also add time.&nbsp;</p><p><br /></p><p>I suspect that 2 and 4 are the most important reasons Strassen (or the new algorithm) is not practical BUT I would like to hear your thoughts?</p><p>Does any package NOW use Strassen's Algorithm?</p><p>Side Note: I like to ask students if they think there is a better-than-cubic algorithm for Matrix Mult. They do not. Then I show it to them and tell them THIS is why LOWER BOUNDS are hard. You have to show that NO, nobody clever will find a trick you hadn't thought of.&nbsp;</p><p><br /></p><p class="authors">By gasarch</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-10T04:03:00Z">Monday, October 10 2022, 04:03</time>
+        </div>
+      </div>
+    </article>
+  
     
 
     <article class='item'>
@@ -3553,43 +3587,6 @@ Email: Aris.Filos-Ratsikas@ed.ac.uk</p>
 
         <div class='item-footer'>
           <time class='timeago' datetime="2022-10-04T14:05:00Z">Tuesday, October 04 2022, 14:05</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='https://cstheory-jobs.org/2022/10/04/three-open-rank-tenure-track-faculty-positions-at-university-of-delaware-apply-by-november-15-2022/'>Three Open Rank Tenure-Track Faculty Positions at University of Delaware (apply by November 15, 2022)</a></h3>
-          <p class='item-feed'>from <a href='https://cstheory-jobs.org'>CCI: jobs</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          The Department of Computer and Information Sciences at University of Delaware invites applications for an open rank tenure-track positions. Although there is a particular interest in computational biology/bioinformatics/comp materials, candidates in theory will be considered. Candidates in theory/algorithms with possible applications in these areas are especially encouraged to apply. Website: careers.udel.edu/en-us/filter/?search-keyword=&#38;brand=college%20of%20engineering&#38;category=computer%20%26%20information%20sciences&#38;job-mail-subscribe-privacy=agree Email: isafro@udel.edu
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p>The Department of Computer and Information Sciences at University of Delaware invites applications for an open rank tenure-track positions. Although there is a particular interest in computational biology/bioinformatics/comp materials, candidates in theory will be considered. Candidates in theory/algorithms with possible applications in these areas are especially encouraged to apply.</p>
-<p>Website: <a href="https://careers.udel.edu/en-us/filter/?search-keyword=&amp;brand=college%20of%20engineering&amp;category=computer%20%26%20information%20sciences&amp;job-mail-subscribe-privacy=agree">https://careers.udel.edu/en-us/filter/?search-keyword=&amp;brand=college%20of%20engineering&amp;category=computer%20%26%20information%20sciences&amp;job-mail-subscribe-privacy=agree</a><br />
-Email: isafro@udel.edu</p>
-<p class="authors">By shacharlovett</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-04T04:00:21Z">Tuesday, October 04 2022, 04:00</time>
         </div>
       </div>
     </article>
