@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-10-12T21:41:07Z">Wednesday, October 12 2022, 21:41</time>
+          <time class='timeago' datetime="2022-10-12T22:43:51Z">Wednesday, October 12 2022, 22:43</time>
         
       </p>
 
@@ -395,6 +395,101 @@
     <h2 class='new-date'>
       <i class='icon-calendar-empty'></i> Wednesday, October 12
     </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='https://scottaaronson.blog/?p=6754'>Explanation-Gödel and Plausibility-Gödel</a></h3>
+          <p class='item-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          Here&#8217;s an observation that&#8217;s mathematically trivial but might not be widely appreciated. In kindergarten, we all learned Gödel&#8217;s First Incompleteness Theorem, which given a formal system F, constructs an arithmetical encoding of G(F) = &#8220;This sentence is not provable in F.&#8221; If G(F) is true, then it&#8217;s an example of a true arithmetical sentence that&#8217;s [&#8230;]
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p>Here&#8217;s an observation that&#8217;s mathematically trivial but might not be widely appreciated.  In kindergarten, we all learned Gödel&#8217;s First <a href="https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems">Incompleteness Theorem</a>, which given a formal system F, constructs an arithmetical encoding of</p>
+
+
+
+<p>G(F) = &#8220;This sentence is not provable in F.&#8221;</p>
+
+
+
+<p>If G(F) is true, then it&#8217;s an example of a true arithmetical sentence that&#8217;s unprovable in F.  If, on the other hand, G(F) is false, then it&#8217;s provable, which means that F isn&#8217;t arithmetically sound.  Therefore F is either incomplete or unsound.</p>
+
+
+
+<p>Many have objected: &#8220;but despite Gödel&#8217;s Theorem, it&#8217;s still easy to <em>explain </em>why G(F) is true.  In fact, the argument above basically already did it!&#8221;  You might make a more general point: there are many, many mathematical statements for which we currently lack a proof, but we do seem to have a fully convincing heuristic explanation: one that &#8220;proves the statement to physics standards of rigor.&#8221;  For example:</p>
+
+
+
+<ul><li>The <a href="https://en.wikipedia.org/wiki/Twin_prime">Twin Primes Conjecture</a> (there are infinitely many primes p for which p+2 is also prime).  </li><li>The <a href="https://en.wikipedia.org/wiki/Collatz_conjecture">Collatz Conjecture</a> (the iterative process that maps each positive integer n to n/2 if n is even, or to 3n+1 if n is odd, eventually reaches 1 regardless of which n you start at).  </li><li>π is a <a href="https://en.wikipedia.org/wiki/Normal_number">normal number</a> (or even just: the digits 0-9 all occur with equal limiting frequencies in the decimal expansion of π).</li><li><a href="https://math.stackexchange.com/questions/159350/why-is-it-hard-to-prove-whether-pie-is-an-irrational-number">π+e</a> is irrational.</li></ul>
+
+
+
+<p>And so on.  No one has any idea how to prove any of the above statements&#8212;and yet, just on statistical grounds, it seems clear that it would require a ludicrous conspiracy to make any of them false.</p>
+
+
+
+<p>Conversely, one could argue that there are statements for which we <em>do</em> have a proof, even though we lack a &#8220;convincing explanation&#8221; for the statements&#8217; truth.  Maybe the <a href="https://en.wikipedia.org/wiki/Four_color_theorem">Four-Color Theorem</a> or <a href="https://en.wikipedia.org/wiki/Kepler_conjecture">Hales&#8217;s Theorem</a>, for which every known proof requires a massive computer enumeration of cases, belong to this class.  Other people might argue that, given a proof, an explanation could always be extracted with enough time and effort, though resolving this dispute won&#8217;t matter for what follows.</p>
+
+
+
+<p>You might hope that, even if some true mathematical statements can&#8217;t be <em>proved</em>, every true statement might nevertheless have a <em>convincing heuristic explanation</em>.  Alas, a trivial adaptation of Gödel&#8217;s Theorem shows that, if (1) heuristic explanations are to be checkable by computer, and (2) only true statements are to have convincing heuristic explanations, then this isn&#8217;t possible either.  I mean, let E be a program that accepts or rejects proposed heuristic explanations, for statements like the Twin Prime Conjecture or the Collatz Conjecture.  Then construct the sentence</p>
+
+
+
+<p>S(E) = &#8220;This sentence has no convincing heuristic explanation accepted by E.&#8221;</p>
+
+
+
+<p>If S(E) is true, then it&#8217;s an example of a true arithmetical statement without <em>even</em> a convincing heuristic explanation for its truth (!).  If, on the other hand, S(E) is false, then there&#8217;s a convincing heuristic explanation of its truth, which means that something has gone wrong.</p>
+
+
+
+<p>What&#8217;s happening, of course, is that given the two conditions we imposed, our &#8220;heuristic explanation system&#8221; <em>was</em> a proof system, even though we didn&#8217;t call it one.  This is my point, though: when we use the word &#8220;proof,&#8221; it normally invokes a specific image, of a sequence of statements that marches from axioms to a theorem, with each statement following from the preceding ones by rigid inference rules like those of first-order logic.  None of that, however, plays any direct role in the proof of the Incompleteness Theorem, which cares only about soundness (inability to prove falsehoods) and checkability by a computer (what, with hindsight, Gödel&#8217;s &#8220;arithmetization of syntax&#8221; was all about).  The logic works for &#8220;heuristic explanations&#8221; too.</p>
+
+
+
+<p>Now we come to something that I picked up from my former student (and now AI alignment leader) <a href="https://paulfchristiano.com/">Paul Christiano</a>, on a recent trip to the Bay Area, and which I share with Paul&#8217;s kind permission.  Having learned that there&#8217;s no way to mechanize even heuristic explanations for all the true statements of arithmetic, we could set our sights lower still, and ask about mere <em>plausibility arguments</em>&#8212;arguments that might be overturned on further reflection.  Is there some sense in which every true mathematical statement at least has a good plausibility argument?</p>
+
+
+
+<p>Maybe you see where this is going.  Letting P be a program that accepts or rejects proposed plausibility arguments, we can construct</p>
+
+
+
+<p>S(P) = &#8220;This sentence has no argument for its plausibility accepted by P.&#8221;</p>
+
+
+
+<p>If S(P) is true, then it&#8217;s an example of a true arithmetical statement without even a plausibility argument for its truth (!).  If, on the other hand, S(P) is false, then there <em>is</em> a plausibility argument for it.  By itself, this is <em>not at all</em> a fatal problem: all sorts of false statements (IP≠PSPACE, switching doors doesn&#8217;t matter in <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem">Monty Hall</a>, Trump couldn&#8217;t possibly become president&#8230;) have had decent plausibility arguments.  Having said that, it&#8217;s pretty strange that you can have a plausibility argument that&#8217;s immediately contradicted by its own existence!  This rules out some properties that you might want your &#8220;plausibility system&#8221; to have, although maybe a plausibility system exists that&#8217;s still nontrivial and that has weaker properties.</p>
+
+
+
+<p>Anyway, I don&#8217;t know where I&#8217;m going with this, or even why I posted it, but I hope you enjoyed it!  And maybe there&#8217;s something to be discovered in this direction.</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-12T21:52:31Z">Wednesday, October 12 2022, 21:52</time>
+        </div>
+      </div>
+    </article>
+  
     
 
     <article class='item'>
@@ -3390,40 +3485,6 @@ Email: monika.henzinger@ist.ac.at</p>
 
         <div class='item-footer'>
           <time class='timeago' datetime="2022-10-06T19:12:28Z">Thursday, October 06 2022, 19:12</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://blog.computationalcomplexity.org/2022/10/art-and-technology.html'>Art and Technology</a></h3>
-          <p class='item-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Last weekend I went to one of Chicago's jewels, the Art Institute, and saw the opening of a new exhibit by Berlin-based artist Josephine Pryde entitled The Vibrating Slab&nbsp;referring mainly to the phone that constantly tries to gain our attention. The exhibit used photographs and sculptures to tie smart phones to prehistoric rocks. No pictures here because ironically they didn't allow us to take photos with our "slabs".</p><p>After I saw the Pryde exhibit I went to see the artist herself give a presentation. She related a story where she talked about going to the movies and seeing Top Gun: Maverick, not knowing it is a new release. Tom Cruise, who&nbsp;controlled a computer with hand movements&nbsp;in Minority Report, goes old-school in Maverick. Cruise and several young actors, through various plot contrivances, flew 20th century planes in a movie that could have taken place in the 90s. According to IMBD, at the insistence of Tom Cruise, minimal green screen and CGI aerial shots exist in the film, and even the close up cockpit shots were taken during real in-flight sequences. Old school indeed. Kind of the opposite of say the Disney series The Mandalorian&nbsp;filmed in a soundstage with everything generated by CGI.</p><p>Pryde's exhibit looked at the interaction with technology as art. Upstairs from Pryde's exhibit was art from technology, a series of prints that David Hockney created on another slab, the iPad, in Normandy during the early days of the Covid pandemic.&nbsp;</p>♦No. 340, 21st May 2020 - David Hockney<p>On the way from Pryde's exhibit to the lecture I passed through the Art Institute's impressionism collection and compared real Monets with the fake one I created with Dall-E. Monet manages to capture a detailed scene with broad brush strokes--if you zoom in the detail disappears. Dall-E can't quite pull that off.</p>♦Vétheuil&nbsp;by Monet<br><br>♦Monet Dagsthul by Dall-E<p><br></p><p>By Lance Fortnow</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p>Last weekend I went to one of Chicago's jewels, the Art Institute, and saw the opening of a new exhibit by Berlin-based artist Josephine Pryde entitled <a href="https://www.artic.edu/exhibitions/2932/the-vibrating-slab">The Vibrating Slab</a>&nbsp;referring mainly to the phone that constantly tries to gain our attention. The exhibit used photographs and sculptures to tie smart phones to prehistoric rocks. No pictures here because ironically they didn't allow us to take photos with our "slabs".</p><p>After I saw the Pryde exhibit I went to see the artist herself give a presentation. She related a story where she talked about going to the movies and seeing <a href="https://www.imdb.com/title/tt1745960">Top Gun: Maverick</a>, not knowing it is a new release. Tom Cruise, who&nbsp;<a href="https://www.youtube.com/watch?v=PJqbivkm0Ms">controlled a computer with hand movements</a>&nbsp;in Minority Report, goes old-school in Maverick. Cruise and several young actors, through various plot contrivances, flew 20th century planes in a movie that could have taken place in the 90s. According to IMBD, at the insistence of Tom Cruise, minimal green screen and CGI aerial shots exist in the film, and even the close up cockpit shots were taken during real in-flight sequences. Old school indeed. Kind of the opposite of say the Disney series <a href="https://www.imdb.com/title/tt8111088/">The Mandalorian</a>&nbsp;filmed in a soundstage with everything generated by CGI.</p><p>Pryde's exhibit looked at the interaction with technology as art. Upstairs from Pryde's exhibit was art from technology, a <a href="https://www.artic.edu/exhibitions/9705/david-hockney-the-arrival-of-spring-normandy-2020">series of prints</a> that David Hockney created on another slab, the iPad, in Normandy during the early days of the Covid pandemic.&nbsp;</p><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://artic-web.imgix.net/b8c0f3d0-2abc-4c17-9aba-629d8536e90d/IPD-2221.jpg?rect=0%2C0%2C3564%2C2490&amp;auto=format%2Ccompress&amp;q=80&amp;fit=crop&amp;crop=faces%2Cedges%2Centropy&amp;w=1600&amp;h=1118" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="559" data-original-width="800" height="280" src="https://artic-web.imgix.net/b8c0f3d0-2abc-4c17-9aba-629d8536e90d/IPD-2221.jpg?rect=0%2C0%2C3564%2C2490&amp;auto=format%2Ccompress&amp;q=80&amp;fit=crop&amp;crop=faces%2Cedges%2Centropy&amp;w=1600&amp;h=1118" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">No. 340, 21st May 2020 - David Hockney</td></tr></tbody></table><div><p>On the way from Pryde's exhibit to the lecture I passed through the Art Institute's impressionism collection and compared real Monets with the fake one I created with Dall-E. Monet manages to capture a detailed scene with broad brush strokes--if you zoom in the detail disappears. Dall-E can't quite pull that off.</p><table cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="https://www.artic.edu/iiif/2/d39b1026-7d8d-6e6a-738e-8a136b1a0033/full/843,/0/default.jpg" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: auto;"><img border="0" data-original-height="770" data-original-width="800" height="308" src="https://www.artic.edu/iiif/2/d39b1026-7d8d-6e6a-738e-8a136b1a0033/full/843,/0/default.jpg" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><a href="https://www.artic.edu/artworks/14634/vetheuil">Vétheuil</a>&nbsp;by Monet<br /><br /></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ6-EWvauVOODiC3Q6NtPqk34MFd8yF-m0Pr8qms48vtunPrdnclEYpSdFnlm691u7vTf4qU7EkPCOSaY8NSmfxh6FYsgKUN5QWaAzirVQDaX_Y9kZarqcyCtUafapja3KIy3k6bUd9SrlL83yCOnayQgseDMD3xcCwfPzvb0kimeKIr8FDw/s1024/DALL%C2%B7E%202022-09-17%2014.00.36%20-%20Schloss%20Dagstuhl%20in%20the%20style%20of%20monet.png" style="margin-left: auto; margin-right: auto;"><img border="0" data-original-height="1024" data-original-width="1024" height="320" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ6-EWvauVOODiC3Q6NtPqk34MFd8yF-m0Pr8qms48vtunPrdnclEYpSdFnlm691u7vTf4qU7EkPCOSaY8NSmfxh6FYsgKUN5QWaAzirVQDaX_Y9kZarqcyCtUafapja3KIy3k6bUd9SrlL83yCOnayQgseDMD3xcCwfPzvb0kimeKIr8FDw/w320-h320/DALL%C2%B7E%202022-09-17%2014.00.36%20-%20Schloss%20Dagstuhl%20in%20the%20style%20of%20monet.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Monet Dagsthul by Dall-E</td></tr></tbody></table><p><br /></p></div><p class="authors">By Lance Fortnow</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-06T13:40:00Z">Thursday, October 06 2022, 13:40</time>
         </div>
       </div>
     </article>

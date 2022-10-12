@@ -9,6 +9,78 @@
 
 
 <item>
+  <title>Explanation-Gödel and Plausibility-Gödel</title>
+  <guid>https://scottaaronson.blog/?p=6754</guid>
+  <link>https://scottaaronson.blog/?p=6754</link>
+  <description>
+    &lt;p&gt;Here&amp;#8217;s an observation that&amp;#8217;s mathematically trivial but might not be widely appreciated.  In kindergarten, we all learned Gödel&amp;#8217;s First &lt;a href=&quot;https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems&quot;&gt;Incompleteness Theorem&lt;/a&gt;, which given a formal system F, constructs an arithmetical encoding of&lt;/p&gt;
+
+
+
+&lt;p&gt;G(F) = &amp;#8220;This sentence is not provable in F.&amp;#8221;&lt;/p&gt;
+
+
+
+&lt;p&gt;If G(F) is true, then it&amp;#8217;s an example of a true arithmetical sentence that&amp;#8217;s unprovable in F.  If, on the other hand, G(F) is false, then it&amp;#8217;s provable, which means that F isn&amp;#8217;t arithmetically sound.  Therefore F is either incomplete or unsound.&lt;/p&gt;
+
+
+
+&lt;p&gt;Many have objected: &amp;#8220;but despite Gödel&amp;#8217;s Theorem, it&amp;#8217;s still easy to &lt;em&gt;explain &lt;/em&gt;why G(F) is true.  In fact, the argument above basically already did it!&amp;#8221;  You might make a more general point: there are many, many mathematical statements for which we currently lack a proof, but we do seem to have a fully convincing heuristic explanation: one that &amp;#8220;proves the statement to physics standards of rigor.&amp;#8221;  For example:&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Twin_prime&quot;&gt;Twin Primes Conjecture&lt;/a&gt; (there are infinitely many primes p for which p+2 is also prime).  &lt;/li&gt;&lt;li&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Collatz_conjecture&quot;&gt;Collatz Conjecture&lt;/a&gt; (the iterative process that maps each positive integer n to n/2 if n is even, or to 3n+1 if n is odd, eventually reaches 1 regardless of which n you start at).  &lt;/li&gt;&lt;li&gt;π is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Normal_number&quot;&gt;normal number&lt;/a&gt; (or even just: the digits 0-9 all occur with equal limiting frequencies in the decimal expansion of π).&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://math.stackexchange.com/questions/159350/why-is-it-hard-to-prove-whether-pie-is-an-irrational-number&quot;&gt;π+e&lt;/a&gt; is irrational.&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;And so on.  No one has any idea how to prove any of the above statements&amp;#8212;and yet, just on statistical grounds, it seems clear that it would require a ludicrous conspiracy to make any of them false.&lt;/p&gt;
+
+
+
+&lt;p&gt;Conversely, one could argue that there are statements for which we &lt;em&gt;do&lt;/em&gt; have a proof, even though we lack a &amp;#8220;convincing explanation&amp;#8221; for the statements&amp;#8217; truth.  Maybe the &lt;a href=&quot;https://en.wikipedia.org/wiki/Four_color_theorem&quot;&gt;Four-Color Theorem&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Kepler_conjecture&quot;&gt;Hales&amp;#8217;s Theorem&lt;/a&gt;, for which every known proof requires a massive computer enumeration of cases, belong to this class.  Other people might argue that, given a proof, an explanation could always be extracted with enough time and effort, though resolving this dispute won&amp;#8217;t matter for what follows.&lt;/p&gt;
+
+
+
+&lt;p&gt;You might hope that, even if some true mathematical statements can&amp;#8217;t be &lt;em&gt;proved&lt;/em&gt;, every true statement might nevertheless have a &lt;em&gt;convincing heuristic explanation&lt;/em&gt;.  Alas, a trivial adaptation of Gödel&amp;#8217;s Theorem shows that, if (1) heuristic explanations are to be checkable by computer, and (2) only true statements are to have convincing heuristic explanations, then this isn&amp;#8217;t possible either.  I mean, let E be a program that accepts or rejects proposed heuristic explanations, for statements like the Twin Prime Conjecture or the Collatz Conjecture.  Then construct the sentence&lt;/p&gt;
+
+
+
+&lt;p&gt;S(E) = &amp;#8220;This sentence has no convincing heuristic explanation accepted by E.&amp;#8221;&lt;/p&gt;
+
+
+
+&lt;p&gt;If S(E) is true, then it&amp;#8217;s an example of a true arithmetical statement without &lt;em&gt;even&lt;/em&gt; a convincing heuristic explanation for its truth (!).  If, on the other hand, S(E) is false, then there&amp;#8217;s a convincing heuristic explanation of its truth, which means that something has gone wrong.&lt;/p&gt;
+
+
+
+&lt;p&gt;What&amp;#8217;s happening, of course, is that given the two conditions we imposed, our &amp;#8220;heuristic explanation system&amp;#8221; &lt;em&gt;was&lt;/em&gt; a proof system, even though we didn&amp;#8217;t call it one.  This is my point, though: when we use the word &amp;#8220;proof,&amp;#8221; it normally invokes a specific image, of a sequence of statements that marches from axioms to a theorem, with each statement following from the preceding ones by rigid inference rules like those of first-order logic.  None of that, however, plays any direct role in the proof of the Incompleteness Theorem, which cares only about soundness (inability to prove falsehoods) and checkability by a computer (what, with hindsight, Gödel&amp;#8217;s &amp;#8220;arithmetization of syntax&amp;#8221; was all about).  The logic works for &amp;#8220;heuristic explanations&amp;#8221; too.&lt;/p&gt;
+
+
+
+&lt;p&gt;Now we come to something that I picked up from my former student (and now AI alignment leader) &lt;a href=&quot;https://paulfchristiano.com/&quot;&gt;Paul Christiano&lt;/a&gt;, on a recent trip to the Bay Area, and which I share with Paul&amp;#8217;s kind permission.  Having learned that there&amp;#8217;s no way to mechanize even heuristic explanations for all the true statements of arithmetic, we could set our sights lower still, and ask about mere &lt;em&gt;plausibility arguments&lt;/em&gt;&amp;#8212;arguments that might be overturned on further reflection.  Is there some sense in which every true mathematical statement at least has a good plausibility argument?&lt;/p&gt;
+
+
+
+&lt;p&gt;Maybe you see where this is going.  Letting P be a program that accepts or rejects proposed plausibility arguments, we can construct&lt;/p&gt;
+
+
+
+&lt;p&gt;S(P) = &amp;#8220;This sentence has no argument for its plausibility accepted by P.&amp;#8221;&lt;/p&gt;
+
+
+
+&lt;p&gt;If S(P) is true, then it&amp;#8217;s an example of a true arithmetical statement without even a plausibility argument for its truth (!).  If, on the other hand, S(P) is false, then there &lt;em&gt;is&lt;/em&gt; a plausibility argument for it.  By itself, this is &lt;em&gt;not at all&lt;/em&gt; a fatal problem: all sorts of false statements (IP≠PSPACE, switching doors doesn&amp;#8217;t matter in &lt;a href=&quot;https://en.wikipedia.org/wiki/Monty_Hall_problem&quot;&gt;Monty Hall&lt;/a&gt;, Trump couldn&amp;#8217;t possibly become president&amp;#8230;) have had decent plausibility arguments.  Having said that, it&amp;#8217;s pretty strange that you can have a plausibility argument that&amp;#8217;s immediately contradicted by its own existence!  This rules out some properties that you might want your &amp;#8220;plausibility system&amp;#8221; to have, although maybe a plausibility system exists that&amp;#8217;s still nontrivial and that has weaker properties.&lt;/p&gt;
+
+
+
+&lt;p&gt;Anyway, I don&amp;#8217;t know where I&amp;#8217;m going with this, or even why I posted it, but I hope you enjoyed it!  And maybe there&amp;#8217;s something to be discovered in this direction.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-12 21:52:31 UTC</pubDate>
+  <author>Scott Aaronson</author>
+</item>
+
+<item>
   <title>Postdoc researcher at ENS Paris (apply by October 31, 2022)</title>
   <guid>http://cstheory-jobs.org/2022/10/12/postdoc-researcher-at-ens-paris-apply-by-october-31-2022/</guid>
   <link>https://cstheory-jobs.org/2022/10/12/postdoc-researcher-at-ens-paris-apply-by-october-31-2022/</link>
@@ -1253,17 +1325,6 @@ Email: monika.henzinger@ist.ac.at&lt;/p&gt;
   </description>
   <pubDate>2022-10-06 19:12:28 UTC</pubDate>
   <author>CCI: jobs</author>
-</item>
-
-<item>
-  <title>Art and Technology</title>
-  <guid>tag:blogger.com,1999:blog-3722233.post-6131043346672536750</guid>
-  <link>http://blog.computationalcomplexity.org/2022/10/art-and-technology.html</link>
-  <description>
-    &lt;p&gt;Last weekend I went to one of Chicago&#39;s jewels, the Art Institute, and saw the opening of a new exhibit by Berlin-based artist Josephine Pryde entitled &lt;a href=&quot;https://www.artic.edu/exhibitions/2932/the-vibrating-slab&quot;&gt;The Vibrating Slab&lt;/a&gt;&amp;nbsp;referring mainly to the phone that constantly tries to gain our attention. The exhibit used photographs and sculptures to tie smart phones to prehistoric rocks. No pictures here because ironically they didn&#39;t allow us to take photos with our &quot;slabs&quot;.&lt;/p&gt;&lt;p&gt;After I saw the Pryde exhibit I went to see the artist herself give a presentation. She related a story where she talked about going to the movies and seeing &lt;a href=&quot;https://www.imdb.com/title/tt1745960&quot;&gt;Top Gun: Maverick&lt;/a&gt;, not knowing it is a new release. Tom Cruise, who&amp;nbsp;&lt;a href=&quot;https://www.youtube.com/watch?v=PJqbivkm0Ms&quot;&gt;controlled a computer with hand movements&lt;/a&gt;&amp;nbsp;in Minority Report, goes old-school in Maverick. Cruise and several young actors, through various plot contrivances, flew 20th century planes in a movie that could have taken place in the 90s. According to IMBD, at the insistence of Tom Cruise, minimal green screen and CGI aerial shots exist in the film, and even the close up cockpit shots were taken during real in-flight sequences. Old school indeed. Kind of the opposite of say the Disney series &lt;a href=&quot;https://www.imdb.com/title/tt8111088/&quot;&gt;The Mandalorian&lt;/a&gt;&amp;nbsp;filmed in a soundstage with everything generated by CGI.&lt;/p&gt;&lt;p&gt;Pryde&#39;s exhibit looked at the interaction with technology as art. Upstairs from Pryde&#39;s exhibit was art from technology, a &lt;a href=&quot;https://www.artic.edu/exhibitions/9705/david-hockney-the-arrival-of-spring-normandy-2020&quot;&gt;series of prints&lt;/a&gt; that David Hockney created on another slab, the iPad, in Normandy during the early days of the Covid pandemic.&amp;nbsp;&lt;/p&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://artic-web.imgix.net/b8c0f3d0-2abc-4c17-9aba-629d8536e90d/IPD-2221.jpg?rect=0%2C0%2C3564%2C2490&amp;amp;auto=format%2Ccompress&amp;amp;q=80&amp;amp;fit=crop&amp;amp;crop=faces%2Cedges%2Centropy&amp;amp;w=1600&amp;amp;h=1118&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;559&quot; data-original-width=&quot;800&quot; height=&quot;280&quot; src=&quot;https://artic-web.imgix.net/b8c0f3d0-2abc-4c17-9aba-629d8536e90d/IPD-2221.jpg?rect=0%2C0%2C3564%2C2490&amp;amp;auto=format%2Ccompress&amp;amp;q=80&amp;amp;fit=crop&amp;amp;crop=faces%2Cedges%2Centropy&amp;amp;w=1600&amp;amp;h=1118&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;No. 340, 21st May 2020 - David Hockney&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;&lt;p&gt;On the way from Pryde&#39;s exhibit to the lecture I passed through the Art Institute&#39;s impressionism collection and compared real Monets with the fake one I created with Dall-E. Monet manages to capture a detailed scene with broad brush strokes--if you zoom in the detail disappears. Dall-E can&#39;t quite pull that off.&lt;/p&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://www.artic.edu/iiif/2/d39b1026-7d8d-6e6a-738e-8a136b1a0033/full/843,/0/default.jpg&quot; style=&quot;clear: left; margin-bottom: 1em; margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;770&quot; data-original-width=&quot;800&quot; height=&quot;308&quot; src=&quot;https://www.artic.edu/iiif/2/d39b1026-7d8d-6e6a-738e-8a136b1a0033/full/843,/0/default.jpg&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://www.artic.edu/artworks/14634/vetheuil&quot;&gt;Vétheuil&lt;/a&gt;&amp;nbsp;by Monet&lt;br /&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ6-EWvauVOODiC3Q6NtPqk34MFd8yF-m0Pr8qms48vtunPrdnclEYpSdFnlm691u7vTf4qU7EkPCOSaY8NSmfxh6FYsgKUN5QWaAzirVQDaX_Y9kZarqcyCtUafapja3KIy3k6bUd9SrlL83yCOnayQgseDMD3xcCwfPzvb0kimeKIr8FDw/s1024/DALL%C2%B7E%202022-09-17%2014.00.36%20-%20Schloss%20Dagstuhl%20in%20the%20style%20of%20monet.png&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1024&quot; data-original-width=&quot;1024&quot; height=&quot;320&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ6-EWvauVOODiC3Q6NtPqk34MFd8yF-m0Pr8qms48vtunPrdnclEYpSdFnlm691u7vTf4qU7EkPCOSaY8NSmfxh6FYsgKUN5QWaAzirVQDaX_Y9kZarqcyCtUafapja3KIy3k6bUd9SrlL83yCOnayQgseDMD3xcCwfPzvb0kimeKIr8FDw/w320-h320/DALL%C2%B7E%202022-09-17%2014.00.36%20-%20Schloss%20Dagstuhl%20in%20the%20style%20of%20monet.png&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;Monet Dagsthul by Dall-E&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;/div&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-06 13:40:00 UTC</pubDate>
-  <author>Computational Complexity</author>
 </item>
 
 </channel>
