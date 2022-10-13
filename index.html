@@ -36,7 +36,7 @@
       </p>
       <p class='small'>
         
-          <time class='timeago' datetime="2022-10-12T23:45:32Z">Wednesday, October 12 2022, 23:45</time>
+          <time class='timeago' datetime="2022-10-13T01:52:10Z">Thursday, October 13 2022, 01:52</time>
         
       </p>
 
@@ -391,6 +391,802 @@
 
   <div id="articles">
     
+    
+    <h2 class='new-date'>
+      <i class='icon-calendar-empty'></i> Thursday, October 13
+    </h2>
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.05885'>Unitary property testing lower bounds by polynomials</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Adrian She, Henry Yuen</p><p>We study unitary property testing, where a quantum algorithm is given query
+access to a black-box unitary and has to decide whether it satisfies some
+property. In addition to containing the standard quantum query complexity model
+(where the unitary encodes a binary string) as a special case, this model
+contains "inherently quantum" problems that have no classical analogue.
+Characterizing the query complexity of these problems requires new algorithmic
+techniques and lower bound methods.
+</p>
+<p>Our main contribution is a generalized polynomial method for unitary property
+testing problems. By leveraging connections with invariant theory, we apply
+this method to obtain lower bounds on problems such as determining recurrence
+times of unitaries, approximating the dimension of a marked subspace, and
+approximating the entanglement entropy of a marked state. We also present a
+unitary property testing-based approach towards an oracle separation between
+$\mathsf{QMA}$ and $\mathsf{QMA(2)}$, a long standing question in quantum
+complexity theory.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+She_A/0/1/0/all/0/1">Adrian She</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Yuen_H/0/1/0/all/0/1">Henry Yuen</a></p><p>We study unitary property testing, where a quantum algorithm is given query
+access to a black-box unitary and has to decide whether it satisfies some
+property. In addition to containing the standard quantum query complexity model
+(where the unitary encodes a binary string) as a special case, this model
+contains "inherently quantum" problems that have no classical analogue.
+Characterizing the query complexity of these problems requires new algorithmic
+techniques and lower bound methods.
+</p>
+<p>Our main contribution is a generalized polynomial method for unitary property
+testing problems. By leveraging connections with invariant theory, we apply
+this method to obtain lower bounds on problems such as determining recurrence
+times of unitaries, approximating the dimension of a marked subspace, and
+approximating the entanglement entropy of a marked state. We also present a
+unitary property testing-based approach towards an oracle separation between
+$\mathsf{QMA}$ and $\mathsf{QMA(2)}$, a long standing question in quantum
+complexity theory.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.05788'>A Note on Reachability and Distance Oracles for Transmission Graphs</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Mark de Berg</p><p>Let $P$ be a set of $n$ points in the plane, where each point $p\in P$ has a
+transmission radius $r(p)&gt;0$. The transmission graph defined by $P$ and the
+given radii, denoted by $\mathcal{G}_{\mathrm{tr}}(P)$, is the directed graph
+whose nodes are the points in $P$ and that contains the arcs $(p,q)$ such that
+$|pq|\leq r(p)$.
+</p>
+<p>An and Oh [Algorithmica 2022] presented a reachability oracle for
+transmission graphs. Their oracle uses $O(n^{5/3})$ storage and, given two
+query points $s,t\in P$, can decide in $O(n^{2/3})$ time if there is a path
+from $s$ to $t$ in $\mathcal{G}_{\mathrm{tr}}(P)$. We show that the
+clique-based separators introduced by De Berg \emph{et al.} [SICOMP 2020] can
+be used to improve the storage of the oracle to $O(n\sqrt{n})$ and the query
+time to $O(\sqrt{n})$. Our oracle can be extended to approximate distance
+queries: we can construct, for a given parameter $\varepsilon&gt;0$, an oracle
+that uses $O((n/\varepsilon)\sqrt{n}\log n)$ storage and that can report in
+$O((\sqrt{n}/\varepsilon)\log n)$ time a value $d_{\mathrm{hop}}^*(s,t)$
+satisfying $d_{\mathrm{hop}}(s,t) \leq d_{\mathrm{hop}}^*(s,t) &lt;
+(1+\varepsilon)\cdot d_{\mathrm{hop}}(s,t) + 1$, where $d_{\mathrm{hop}}(s,t)$
+is the hop-distance from $s$ to $t$. We also show how to extend the oracle to
+so-called continuous queries, where the target point $t$ can be any point in
+the plane.
+</p>
+<p>To obtain an efficient preprocessing algorithm, we show that a clique-based
+separator of a set~$F$ of convex fat objects in $\Bbb{R}^d$ can be constructed
+in $O(n\log n)$ time.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Berg_M/0/1/0/all/0/1">Mark de Berg</a></p><p>Let $P$ be a set of $n$ points in the plane, where each point $p\in P$ has a
+transmission radius $r(p)&gt;0$. The transmission graph defined by $P$ and the
+given radii, denoted by $\mathcal{G}_{\mathrm{tr}}(P)$, is the directed graph
+whose nodes are the points in $P$ and that contains the arcs $(p,q)$ such that
+$|pq|\leq r(p)$.
+</p>
+<p>An and Oh [Algorithmica 2022] presented a reachability oracle for
+transmission graphs. Their oracle uses $O(n^{5/3})$ storage and, given two
+query points $s,t\in P$, can decide in $O(n^{2/3})$ time if there is a path
+from $s$ to $t$ in $\mathcal{G}_{\mathrm{tr}}(P)$. We show that the
+clique-based separators introduced by De Berg \emph{et al.} [SICOMP 2020] can
+be used to improve the storage of the oracle to $O(n\sqrt{n})$ and the query
+time to $O(\sqrt{n})$. Our oracle can be extended to approximate distance
+queries: we can construct, for a given parameter $\varepsilon&gt;0$, an oracle
+that uses $O((n/\varepsilon)\sqrt{n}\log n)$ storage and that can report in
+$O((\sqrt{n}/\varepsilon)\log n)$ time a value $d_{\mathrm{hop}}^*(s,t)$
+satisfying $d_{\mathrm{hop}}(s,t) \leq d_{\mathrm{hop}}^*(s,t) &lt;
+(1+\varepsilon)\cdot d_{\mathrm{hop}}(s,t) + 1$, where $d_{\mathrm{hop}}(s,t)$
+is the hop-distance from $s$ to $t$. We also show how to extend the oracle to
+so-called continuous queries, where the target point $t$ can be any point in
+the plane.
+</p>
+<p>To obtain an efficient preprocessing algorithm, we show that a clique-based
+separator of a set~$F$ of convex fat objects in $\Bbb{R}^d$ can be constructed
+in $O(n\log n)$ time.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.06333'>Pattern Characterization Using Topological Data Analysis: Application to Piezo Vibration Striking Treatment</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Max M. Chumley, Melih C. Yesilli, Jisheng Chen, Firas A. Khasawneh, Yang Guo</p><p>Quantifying patterns in visual or tactile textures provides important
+information about the process or phenomena that generated these patterns. In
+manufacturing, these patterns can be intentionally introduced as a design
+feature, or they can be a byproduct of a specific process. Since surface
+texture has significant impact on the mechanical properties and the longevity
+of the workpiece, it is important to develop tools for quantifying surface
+patterns and, when applicable, comparing them to their nominal counterparts.
+While existing tools may be able to indicate the existence of a pattern, they
+typically do not provide more information about the pattern structure, or how
+much it deviates from a nominal pattern. Further, prior works do not provide
+automatic or algorithmic approaches for quantifying other pattern
+characteristics such as depths' consistency, and variations in the pattern
+motifs at different level sets. This paper leverages persistent homology from
+Topological Data Analysis (TDA) to derive noise-robust scores for quantifying
+motifs' depth and roundness in a pattern. Specifically, sublevel persistence is
+used to derive scores that quantify the consistency of indentation depths at
+any level set in Piezo Vibration Striking Treatment (PVST) surfaces. Moreover,
+we combine sublevel persistence with the distance transform to quantify the
+consistency of the indentation radii, and to compare them with the nominal
+ones. Although the tool in our PVST experiments had a semi-spherical profile,
+we present a generalization of our approach to tools/motifs of arbitrary shapes
+thus making our method applicable to other pattern-generating manufacturing
+processes.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chumley_M/0/1/0/all/0/1">Max M. Chumley</a>, <a href="http://arxiv.org/find/cs/1/au:+Yesilli_M/0/1/0/all/0/1">Melih C. Yesilli</a>, <a href="http://arxiv.org/find/cs/1/au:+Chen_J/0/1/0/all/0/1">Jisheng Chen</a>, <a href="http://arxiv.org/find/cs/1/au:+Khasawneh_F/0/1/0/all/0/1">Firas A. Khasawneh</a>, <a href="http://arxiv.org/find/cs/1/au:+Guo_Y/0/1/0/all/0/1">Yang Guo</a></p><p>Quantifying patterns in visual or tactile textures provides important
+information about the process or phenomena that generated these patterns. In
+manufacturing, these patterns can be intentionally introduced as a design
+feature, or they can be a byproduct of a specific process. Since surface
+texture has significant impact on the mechanical properties and the longevity
+of the workpiece, it is important to develop tools for quantifying surface
+patterns and, when applicable, comparing them to their nominal counterparts.
+While existing tools may be able to indicate the existence of a pattern, they
+typically do not provide more information about the pattern structure, or how
+much it deviates from a nominal pattern. Further, prior works do not provide
+automatic or algorithmic approaches for quantifying other pattern
+characteristics such as depths' consistency, and variations in the pattern
+motifs at different level sets. This paper leverages persistent homology from
+Topological Data Analysis (TDA) to derive noise-robust scores for quantifying
+motifs' depth and roundness in a pattern. Specifically, sublevel persistence is
+used to derive scores that quantify the consistency of indentation depths at
+any level set in Piezo Vibration Striking Treatment (PVST) surfaces. Moreover,
+we combine sublevel persistence with the distance transform to quantify the
+consistency of the indentation radii, and to compare them with the nominal
+ones. Although the tool in our PVST experiments had a semi-spherical profile,
+we present a generalization of our approach to tools/motifs of arbitrary shapes
+thus making our method applicable to other pattern-generating manufacturing
+processes.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.05893'>The Power of Two Matrices in Spectral Algorithms</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Souvik Dhara, Julia Gaudio, Elchanan Mossel, Colin Sandon</p><p>Spectral algorithms are some of the main tools in optimization and inference
+problems on graphs. Typically, the graph is encoded as a matrix and
+eigenvectors and eigenvalues of the matrix are then used to solve the given
+graph problem. Spectral algorithms have been successfully used for graph
+partitioning, hidden clique recovery and graph coloring. In this paper, we
+study the power of spectral algorithms using two matrices in a graph
+partitioning problem. We use two different matrices resulting from two
+different encodings of the same graph and then combine the spectral information
+coming from these two matrices.
+</p>
+<p>We analyze a two matrix spectral algorithm for the problem of identifying
+latent community structure in large random graphs. In particular, we consider
+the problem of recovering community assignments exactly in the censored
+stochastic block model, where each edge status is revealed independently with
+some probability. We show that spectral algorithms based on two matrices are
+optimal and succeed in recovering communities up to the information theory
+threshold. On the other hand, we show that for most choices of the parameters,
+any spectral algorithm based on one matrix is suboptimal. This is in contrast
+to our prior works (2022a, 2022b) which showed that for the symmetric
+Stochastic Block Model and the Planted Dense Subgraph problem, spectral
+algorithm based on one matrix achieve the information theory threshold. Of
+independent interest, we provide more general geometric conditions for the
+(sub)-optimality of spectral algorithms, that are also applicable to cases when
+there are more than two communities.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Dhara_S/0/1/0/all/0/1">Souvik Dhara</a>, <a href="http://arxiv.org/find/math/1/au:+Gaudio_J/0/1/0/all/0/1">Julia Gaudio</a>, <a href="http://arxiv.org/find/math/1/au:+Mossel_E/0/1/0/all/0/1">Elchanan Mossel</a>, <a href="http://arxiv.org/find/math/1/au:+Sandon_C/0/1/0/all/0/1">Colin Sandon</a></p><p>Spectral algorithms are some of the main tools in optimization and inference
+problems on graphs. Typically, the graph is encoded as a matrix and
+eigenvectors and eigenvalues of the matrix are then used to solve the given
+graph problem. Spectral algorithms have been successfully used for graph
+partitioning, hidden clique recovery and graph coloring. In this paper, we
+study the power of spectral algorithms using two matrices in a graph
+partitioning problem. We use two different matrices resulting from two
+different encodings of the same graph and then combine the spectral information
+coming from these two matrices.
+</p>
+<p>We analyze a two matrix spectral algorithm for the problem of identifying
+latent community structure in large random graphs. In particular, we consider
+the problem of recovering community assignments exactly in the censored
+stochastic block model, where each edge status is revealed independently with
+some probability. We show that spectral algorithms based on two matrices are
+optimal and succeed in recovering communities up to the information theory
+threshold. On the other hand, we show that for most choices of the parameters,
+any spectral algorithm based on one matrix is suboptimal. This is in contrast
+to our prior works (2022a, 2022b) which showed that for the symmetric
+Stochastic Block Model and the Planted Dense Subgraph problem, spectral
+algorithm based on one matrix achieve the information theory threshold. Of
+independent interest, we provide more general geometric conditions for the
+(sub)-optimality of spectral algorithms, that are also applicable to cases when
+there are more than two communities.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.05965'>Resolving the Approximability of Offline and Online Non-monotone DR-Submodular Maximization over General Convex Sets</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Loay Mualem, Moran Feldman</p><p>In recent years, maximization of DR-submodular continuous functions became an
+important research field, with many real-worlds applications in the domains of
+machine learning, communication systems, operation research and economics. Most
+of the works in this field study maximization subject to down-closed convex set
+constraints due to an inapproximability result by Vondr\'ak (2013). However,
+Durr et al. (2021) showed that one can bypass this inapproximability by proving
+approximation ratios that are functions of $m$, the minimum
+$\ell_{\infty}$-norm of any feasible vector. Given this observation, it is
+possible to get results for maximizing a DR-submodular function subject to
+general convex set constraints, which has led to multiple works on this
+problem. The most recent of which is a polynomial time $\tfrac{1}{4}(1 -
+m)$-approximation offline algorithm due to Du (2022). However, only a
+sub-exponential time $\tfrac{1}{3\sqrt{3}}(1 - m)$-approximation algorithm is
+known for the corresponding online problem. In this work, we present a
+polynomial time online algorithm matching the $\tfrac{1}{4}(1 -
+m)$-approximation of the state-of-the-art offline algorithm. We also present an
+inapproximability result showing that our online algorithm and Du's (2022)
+offline algorithm are both optimal in a strong sense. Finally, we study the
+empirical performance of our algorithm and the algorithm of Du (which was only
+theoretically studied previously), and show that they consistently outperform
+previously suggested algorithms on revenue maximization, location summarization
+and quadratic programming applications.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Mualem_L/0/1/0/all/0/1">Loay Mualem</a>, <a href="http://arxiv.org/find/cs/1/au:+Feldman_M/0/1/0/all/0/1">Moran Feldman</a></p><p>In recent years, maximization of DR-submodular continuous functions became an
+important research field, with many real-worlds applications in the domains of
+machine learning, communication systems, operation research and economics. Most
+of the works in this field study maximization subject to down-closed convex set
+constraints due to an inapproximability result by Vondr\'ak (2013). However,
+Durr et al. (2021) showed that one can bypass this inapproximability by proving
+approximation ratios that are functions of $m$, the minimum
+$\ell_{\infty}$-norm of any feasible vector. Given this observation, it is
+possible to get results for maximizing a DR-submodular function subject to
+general convex set constraints, which has led to multiple works on this
+problem. The most recent of which is a polynomial time $\tfrac{1}{4}(1 -
+m)$-approximation offline algorithm due to Du (2022). However, only a
+sub-exponential time $\tfrac{1}{3\sqrt{3}}(1 - m)$-approximation algorithm is
+known for the corresponding online problem. In this work, we present a
+polynomial time online algorithm matching the $\tfrac{1}{4}(1 -
+m)$-approximation of the state-of-the-art offline algorithm. We also present an
+inapproximability result showing that our online algorithm and Du's (2022)
+offline algorithm are both optimal in a strong sense. Finally, we study the
+empirical performance of our algorithm and the algorithm of Du (which was only
+theoretically studied previously), and show that they consistently outperform
+previously suggested algorithms on revenue maximization, location summarization
+and quadratic programming applications.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.05974'>Clustering Embedding Tables, Without First Learning Them</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Henry Ling-Hei Tsang, Thomas Dybdahl Ahle</p><p>To work with categorical features, machine learning systems employ embedding
+tables. These tables can become exceedingly large in modern recommendation
+systems, necessitating the development of new methods for fitting them in
+memory, even during training.
+</p>
+<p>Some of the most successful methods for table compression are Product- and
+Residual Vector Quantization (Gray &amp; Neuhoff, 1998). These methods replace
+table rows with references to k-means clustered "codewords." Unfortunately,
+this means they must first know the table before compressing it, so they can
+only save memory during inference, not training. Recent work has used
+hashing-based approaches to minimize memory usage during training, but the
+compression obtained is inferior to that obtained by "post-training"
+quantization.
+</p>
+<p>We show that the best of both worlds may be obtained by combining techniques
+based on hashing and clustering. By first training a hashing-based "sketch",
+then clustering it, and then training the clustered quantization, our method
+achieves compression ratios close to those of post-training quantization with
+the training time memory reductions of hashing-based methods.
+</p>
+<p>We show experimentally that our method provides better compression and/or
+accuracy that previous methods, and we prove that our method always converges
+to the optimal embedding table for least-squares training.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Tsang_H/0/1/0/all/0/1">Henry Ling-Hei Tsang</a>, <a href="http://arxiv.org/find/cs/1/au:+Ahle_T/0/1/0/all/0/1">Thomas Dybdahl Ahle</a></p><p>To work with categorical features, machine learning systems employ embedding
+tables. These tables can become exceedingly large in modern recommendation
+systems, necessitating the development of new methods for fitting them in
+memory, even during training.
+</p>
+<p>Some of the most successful methods for table compression are Product- and
+Residual Vector Quantization (Gray &amp; Neuhoff, 1998). These methods replace
+table rows with references to k-means clustered "codewords." Unfortunately,
+this means they must first know the table before compressing it, so they can
+only save memory during inference, not training. Recent work has used
+hashing-based approaches to minimize memory usage during training, but the
+compression obtained is inferior to that obtained by "post-training"
+quantization.
+</p>
+<p>We show that the best of both worlds may be obtained by combining techniques
+based on hashing and clustering. By first training a hashing-based "sketch",
+then clustering it, and then training the clustered quantization, our method
+achieves compression ratios close to those of post-training quantization with
+the training time memory reductions of hashing-based methods.
+</p>
+<p>We show experimentally that our method provides better compression and/or
+accuracy that previous methods, and we prove that our method always converges
+to the optimal embedding table for least-squares training.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.05982'>A nearly optimal randomized algorithm for explorable heap selection</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Sander Borst, Daniel Dadush, Sophie Huiberts, Danish Kashaev</p><p>Explorable heap selection is the problem of selecting the $n$th smallest
+value in a binary heap. The key values can only be accessed by traversing
+through the underlying infinite binary tree, and the complexity of the
+algorithm is measured by the total distance traveled in the tree (each edge has
+unit cost). This problem was originally proposed as a model to study search
+strategies for the branch-and-bound algorithm with storage restrictions by
+Karp, Saks and Widgerson (FOCS '86), who gave deterministic and randomized
+$n\cdot \exp(O(\sqrt{\log{n}}))$ time algorithms using $O(\log(n)^{2.5})$ and
+$O(\sqrt{\log n})$ space respectively. We present a new randomized algorithm
+with running time $O(n\log(n)^3)$ using $O(\log n)$ space, substantially
+improving the previous best randomized running time at the expense of slightly
+increased space usage. We also show an $\Omega(\log(n)n/\log(\log(n)))$ for any
+algorithm that solves the problem in the same amount of space, indicating that
+our algorithm is nearly optimal.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Borst_S/0/1/0/all/0/1">Sander Borst</a>, <a href="http://arxiv.org/find/cs/1/au:+Dadush_D/0/1/0/all/0/1">Daniel Dadush</a>, <a href="http://arxiv.org/find/cs/1/au:+Huiberts_S/0/1/0/all/0/1">Sophie Huiberts</a>, <a href="http://arxiv.org/find/cs/1/au:+Kashaev_D/0/1/0/all/0/1">Danish Kashaev</a></p><p>Explorable heap selection is the problem of selecting the $n$th smallest
+value in a binary heap. The key values can only be accessed by traversing
+through the underlying infinite binary tree, and the complexity of the
+algorithm is measured by the total distance traveled in the tree (each edge has
+unit cost). This problem was originally proposed as a model to study search
+strategies for the branch-and-bound algorithm with storage restrictions by
+Karp, Saks and Widgerson (FOCS '86), who gave deterministic and randomized
+$n\cdot \exp(O(\sqrt{\log{n}}))$ time algorithms using $O(\log(n)^{2.5})$ and
+$O(\sqrt{\log n})$ space respectively. We present a new randomized algorithm
+with running time $O(n\log(n)^3)$ using $O(\log n)$ space, substantially
+improving the previous best randomized running time at the expense of slightly
+increased space usage. We also show an $\Omega(\log(n)n/\log(\log(n)))$ for any
+algorithm that solves the problem in the same amount of space, indicating that
+our algorithm is nearly optimal.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.05992'>Fast Convergence to Unanimity in Dense Erd\H{o}s-R\'enyi Graphs</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Ran Tamir</p><p>Majority dynamics on the binomial Erd\H{o}s-R\'enyi graph $\mathsf{G}(n,p)$
+with $p=\lambda/\sqrt{n}$ is studied. In this process, each vertex has a state
+in $\{0,1\}$ and at each round, every vertex adopts the state of the majority
+of its neighbors, retaining its state in the case of a tie. It was conjectured
+by Benjamini et al. and proved by Fountoulakis et al. that this process reaches
+unanimity with high probability in at most four rounds. By adding some extra
+randomness and allowing the underlying graph to be drawn anew in each
+communication round, we improve on their result and prove that this process
+reaches consensus in only three communication rounds with probability
+approaching $1$ as $n$ grows to infinity. We also provide a converse result,
+showing that three rounds are not only sufficient, but also necessary.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Tamir_R/0/1/0/all/0/1">Ran Tamir</a></p><p>Majority dynamics on the binomial Erd\H{o}s-R\'enyi graph $\mathsf{G}(n,p)$
+with $p=\lambda/\sqrt{n}$ is studied. In this process, each vertex has a state
+in $\{0,1\}$ and at each round, every vertex adopts the state of the majority
+of its neighbors, retaining its state in the case of a tie. It was conjectured
+by Benjamini et al. and proved by Fountoulakis et al. that this process reaches
+unanimity with high probability in at most four rounds. By adding some extra
+randomness and allowing the underlying graph to be drawn anew in each
+communication round, we improve on their result and prove that this process
+reaches consensus in only three communication rounds with probability
+approaching $1$ as $n$ grows to infinity. We also provide a converse result,
+showing that three rounds are not only sufficient, but also necessary.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.06061'>Non-smooth and H\"older-smooth Submodular Maximization</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Duksang Lee, Nam Ho-Nguyen, Dabeen Lee</p><p>We study the problem of maximizing a continuous DR-submodular function that
+is not necessarily smooth. We prove that the continuous greedy algorithm
+achieves an $[(1-1/e)\text{OPT}-\epsilon]$ guarantee when the function is
+monotone and H\"older-smooth, meaning that it admits a H\"older-continuous
+gradient. For functions that are non-differentiable or non-smooth, we propose a
+variant of the mirror-prox algorithm that attains an
+$[(1/2)\text{OPT}-\epsilon]$ guarantee. We apply our algorithmic frameworks to
+robust submodular maximization and distrbituionally robust submodular
+maximization under Wasserstein ambiguity. In particular, the mirror-prox method
+applies to robust submodular maximization to obtain a single feasible solution
+whose value is at least $(1/2)\text{OPT}-\epsilon$. For distributionally robust
+maximization under Wasserstein ambiguity, we deduce and work over a
+submodular-convex maximin reformulation whose objective function is
+H\"older-smooth, for which we may apply both the continuous greedy method and
+the mirror-prox method.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Lee_D/0/1/0/all/0/1">Duksang Lee</a>, <a href="http://arxiv.org/find/math/1/au:+Ho_Nguyen_N/0/1/0/all/0/1">Nam Ho-Nguyen</a>, <a href="http://arxiv.org/find/math/1/au:+Lee_D/0/1/0/all/0/1">Dabeen Lee</a></p><p>We study the problem of maximizing a continuous DR-submodular function that
+is not necessarily smooth. We prove that the continuous greedy algorithm
+achieves an $[(1-1/e)\text{OPT}-\epsilon]$ guarantee when the function is
+monotone and H\"older-smooth, meaning that it admits a H\"older-continuous
+gradient. For functions that are non-differentiable or non-smooth, we propose a
+variant of the mirror-prox algorithm that attains an
+$[(1/2)\text{OPT}-\epsilon]$ guarantee. We apply our algorithmic frameworks to
+robust submodular maximization and distrbituionally robust submodular
+maximization under Wasserstein ambiguity. In particular, the mirror-prox method
+applies to robust submodular maximization to obtain a single feasible solution
+whose value is at least $(1/2)\text{OPT}-\epsilon$. For distributionally robust
+maximization under Wasserstein ambiguity, we deduce and work over a
+submodular-convex maximin reformulation whose objective function is
+H\"older-smooth, for which we may apply both the continuous greedy method and
+the mirror-prox method.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.06140'>Differentially Private Bootstrap: New Privacy Analysis and Inference Strategies</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Zhanyu Wang, Guang Cheng, Jordan Awan</p><p>Differential private (DP) mechanisms protect individual-level information by
+introducing randomness into the statistical analysis procedure. While there are
+now many DP tools for various statistical problems, there is still a lack of
+general techniques to understand the sampling distribution of a DP estimator,
+which is crucial for uncertainty quantification in statistical inference. We
+analyze a DP bootstrap procedure that releases multiple private bootstrap
+estimates to infer the sampling distribution and construct confidence
+intervals. Our privacy analysis includes new results on the privacy cost of a
+single DP bootstrap estimate applicable to incorporate arbitrary DP mechanisms
+and identifies some misuses of the bootstrap in the existing literature. We
+show that the release of $B$ DP bootstrap estimates from mechanisms satisfying
+$(\mu/\sqrt{(2-2/\mathrm{e})B})$-Gaussian DP asymptotically satisfies
+$\mu$-Gaussian DP as $B$ goes to infinity. We also develop a statistical
+procedure based on the DP bootstrap estimates to correctly infer the sampling
+distribution using techniques related to the deconvolution of probability
+measures, an approach which is novel in analyzing DP procedures. From our
+density estimate, we construct confidence intervals and compare them to
+existing methods through simulations and real-world experiments using the 2016
+Canada Census Public Use Microdata. The coverage of our private confidence
+intervals achieves the nominal confidence level, while other methods fail to
+meet this guarantee.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/stat/1/au:+Wang_Z/0/1/0/all/0/1">Zhanyu Wang</a>, <a href="http://arxiv.org/find/stat/1/au:+Cheng_G/0/1/0/all/0/1">Guang Cheng</a>, <a href="http://arxiv.org/find/stat/1/au:+Awan_J/0/1/0/all/0/1">Jordan Awan</a></p><p>Differential private (DP) mechanisms protect individual-level information by
+introducing randomness into the statistical analysis procedure. While there are
+now many DP tools for various statistical problems, there is still a lack of
+general techniques to understand the sampling distribution of a DP estimator,
+which is crucial for uncertainty quantification in statistical inference. We
+analyze a DP bootstrap procedure that releases multiple private bootstrap
+estimates to infer the sampling distribution and construct confidence
+intervals. Our privacy analysis includes new results on the privacy cost of a
+single DP bootstrap estimate applicable to incorporate arbitrary DP mechanisms
+and identifies some misuses of the bootstrap in the existing literature. We
+show that the release of $B$ DP bootstrap estimates from mechanisms satisfying
+$(\mu/\sqrt{(2-2/\mathrm{e})B})$-Gaussian DP asymptotically satisfies
+$\mu$-Gaussian DP as $B$ goes to infinity. We also develop a statistical
+procedure based on the DP bootstrap estimates to correctly infer the sampling
+distribution using techniques related to the deconvolution of probability
+measures, an approach which is novel in analyzing DP procedures. From our
+density estimate, we construct confidence intervals and compare them to
+existing methods through simulations and real-world experiments using the 2016
+Canada Census Public Use Microdata. The coverage of our private confidence
+intervals achieves the nominal confidence level, while other methods fail to
+meet this guarantee.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
+    
+
+    <article class='item'>
+      <div class='item-header'>
+        <span class='item-caret'>
+          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
+          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
+        </span>
+        <span class='item-info'>
+          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.06227'>Quantum Optimisation for Continuous Multivariable Functions by a Structured Search</a></h3>
+          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        </span>
+      </div>
+
+      <div class='item-body'>
+        <div class='item-snippet'>
+        
+          <p>Authors: Edric Matwiejew, Jason Pye, Jingbo B. Wang</p><p>Solving optimisation problems is a promising near-term application of quantum
+computers. Quantum variational algorithms leverage quantum superposition and
+entanglement to optimise over exponentially large solution spaces using an
+alternating sequence of classically tunable unitaries. However, prior work has
+primarily addressed discrete optimisation problems. In addition, these
+algorithms have been designed generally under the assumption of an unstructured
+solution space, which constrains their speedup to the theoretical limits for
+the unstructured Grover's quantum search algorithm. In this paper, we show that
+quantum variational algorithms can efficiently optimise continuous
+multivariable functions by exploiting general structural properties of a
+discretised continuous solution space with a convergence that exceeds the
+limits of an unstructured quantum search. We introduce the Quantum
+Multivariable Optimisation Algorithm (QMOA) and demonstrate its advantage over
+pre-existing methods, particularly when optimising high-dimensional and
+oscillatory functions.
+</p>
+        
+        </div>
+
+        <div class='item-content item-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+Matwiejew_E/0/1/0/all/0/1">Edric Matwiejew</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Pye_J/0/1/0/all/0/1">Jason Pye</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Wang_J/0/1/0/all/0/1">Jingbo B. Wang</a></p><p>Solving optimisation problems is a promising near-term application of quantum
+computers. Quantum variational algorithms leverage quantum superposition and
+entanglement to optimise over exponentially large solution spaces using an
+alternating sequence of classically tunable unitaries. However, prior work has
+primarily addressed discrete optimisation problems. In addition, these
+algorithms have been designed generally under the assumption of an unstructured
+solution space, which constrains their speedup to the theoretical limits for
+the unstructured Grover's quantum search algorithm. In this paper, we show that
+quantum variational algorithms can efficiently optimise continuous
+multivariable functions by exploiting general structural properties of a
+discretised continuous solution space with a convergence that exceeds the
+limits of an unstructured quantum search. We introduce the Quantum
+Multivariable Optimisation Algorithm (QMOA) and demonstrate its advantage over
+pre-existing methods, particularly when optimising high-dimensional and
+oscillatory functions.
+</p>
+        
+        </div>
+
+        <div class='item-footer'>
+          <time class='timeago' datetime="2022-10-13T00:30:00Z">Thursday, October 13 2022, 00:30</time>
+        </div>
+      </div>
+    </article>
+  
     
     <h2 class='new-date'>
       <i class='icon-calendar-empty'></i> Wednesday, October 12
@@ -2749,742 +3545,6 @@ components, which includes feedforward and convolutional networks.
 
         <div class='item-footer'>
           <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.02999'>NLTS Hamiltonians from classical LTCs</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Zhiyang He, Chinmay Nirkhe</p><p>We provide a completely self-contained construction of a family of NLTS
-Hamiltonians [Freedman and Hastings, 2014] based on ideas from [Anshu,
-Breuckmann, and Nirkhe, 2022], [Cross, He, Natarajan, Szegedy, and Zhu, 2022]
-and [Eldar and Harrow, 2017]. Crucially, it does not require optimal-parameter
-quantum LDPC codes and can be built from simple classical LTCs such as the
-repetition code on an expander graph. Furthermore, it removes the constant-rate
-requirement from the construction of Anshu, Breuckmann, and Nirkhe.
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+He_Z/0/1/0/all/0/1">Zhiyang He</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Nirkhe_C/0/1/0/all/0/1">Chinmay Nirkhe</a></p><p>We provide a completely self-contained construction of a family of NLTS
-Hamiltonians [Freedman and Hastings, 2014] based on ideas from [Anshu,
-Breuckmann, and Nirkhe, 2022], [Cross, He, Natarajan, Szegedy, and Zhu, 2022]
-and [Eldar and Harrow, 2017]. Crucially, it does not require optimal-parameter
-quantum LDPC codes and can be built from simple classical LTCs such as the
-repetition code on an expander graph. Furthermore, it removes the constant-rate
-requirement from the construction of Anshu, Breuckmann, and Nirkhe.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.02582'>Romeo and Juliet Meeting in Forest Like Regions</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Neeldhara Misra, Manas Mulpuri, Prafullkumar Tale, Gaurav Viramgami</p><p>The game of rendezvous with adversaries is a game on a graph played by two
-players: Facilitator and Divider. Facilitator has two agents and Divider has a
-team of $k \ge 1$ agents. While the initial positions of Facilitator's agents
-are fixed, Divider gets to select the initial positions of his agents. Then,
-they take turns to move their agents to adjacent vertices (or stay put) with
-Facilitator's goal to bring both her agents at same vertex and Divider's goal
-to prevent it. The computational question of interest is to determine if
-Facilitator has a winning strategy against Divider with $k$ agents. Fomin,
-Golovach, and Thilikos [WG, 2021] introduced this game and proved that it is
-PSPACE-hard and co-W[2]-hard parameterized by the number of agents.
-</p>
-<p>This hardness naturally motivates the structural parameterization of the
-problem. The authors proved that it admits an FPT algorithm when parameterized
-by the modular width and the number of allowed rounds. However, they left open
-the complexity of the problem from the perspective of other structural
-parameters. In particular, they explicitly asked whether the problem admits an
-FPT or XP-algorithm with respect to the treewidth of the input graph. We answer
-this question in the negative and show that Rendezvous is co-NP-hard even for
-graphs of constant treewidth. Further, we show that the problem is co-W[1]-hard
-when parameterized by the feedback vertex set number and the number of agents,
-and is unlikely to admit a polynomial kernel when parameterized by the vertex
-cover number and the number of agents. Complementing these hardness results, we
-show that the Rendezvous is FPT when parameterized by both the vertex cover
-number and the solution size. Finally, for graphs of treewidth at most two and
-girds, we show that the problem can be solved in polynomial time.
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Misra_N/0/1/0/all/0/1">Neeldhara Misra</a>, <a href="http://arxiv.org/find/cs/1/au:+Mulpuri_M/0/1/0/all/0/1">Manas Mulpuri</a>, <a href="http://arxiv.org/find/cs/1/au:+Tale_P/0/1/0/all/0/1">Prafullkumar Tale</a>, <a href="http://arxiv.org/find/cs/1/au:+Viramgami_G/0/1/0/all/0/1">Gaurav Viramgami</a></p><p>The game of rendezvous with adversaries is a game on a graph played by two
-players: Facilitator and Divider. Facilitator has two agents and Divider has a
-team of $k \ge 1$ agents. While the initial positions of Facilitator's agents
-are fixed, Divider gets to select the initial positions of his agents. Then,
-they take turns to move their agents to adjacent vertices (or stay put) with
-Facilitator's goal to bring both her agents at same vertex and Divider's goal
-to prevent it. The computational question of interest is to determine if
-Facilitator has a winning strategy against Divider with $k$ agents. Fomin,
-Golovach, and Thilikos [WG, 2021] introduced this game and proved that it is
-PSPACE-hard and co-W[2]-hard parameterized by the number of agents.
-</p>
-<p>This hardness naturally motivates the structural parameterization of the
-problem. The authors proved that it admits an FPT algorithm when parameterized
-by the modular width and the number of allowed rounds. However, they left open
-the complexity of the problem from the perspective of other structural
-parameters. In particular, they explicitly asked whether the problem admits an
-FPT or XP-algorithm with respect to the treewidth of the input graph. We answer
-this question in the negative and show that Rendezvous is co-NP-hard even for
-graphs of constant treewidth. Further, we show that the problem is co-W[1]-hard
-when parameterized by the feedback vertex set number and the number of agents,
-and is unlikely to admit a polynomial kernel when parameterized by the vertex
-cover number and the number of agents. Complementing these hardness results, we
-show that the Rendezvous is FPT when parameterized by both the vertex cover
-number and the solution size. Finally, for graphs of treewidth at most two and
-girds, we show that the problem can be solved in polynomial time.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.02611'>$(1-\epsilon)$-approximate fully dynamic densest subgraph: linear space and faster update time</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Chandra Chekuri, Kent Quanrud</p><p>We consider the problem of maintaining a $(1-\epsilon)$-approximation to the
-densest subgraph (DSG) in an undirected multigraph as it undergoes edge
-insertions and deletions (the fully dynamic setting). Sawlani and Wang [SW20]
-developed a data structure that, for any given $\epsilon &gt; 0$, maintains a
-$(1-\epsilon)$-approximation with $O(\log^4 n/\epsilon^6)$ worst-case update
-time for edge operations, and $O(1)$ query time for reporting the density
-value. Their data structure was the first to achieve near-optimal
-approximation, and improved previous work that maintained a $(1/4 - \epsilon)$
-approximation in amortized polylogarithmic update time [BHNT15]. In this paper
-we develop a data structure for $(1-\epsilon)$-approximate DSG that improves
-the one from [SW20] in two aspects. First, the data structure uses linear space
-improving the space bound in [SW20] by a logarithmic factor. Second, the data
-structure maintains a $(1-\epsilon)$-approximation in amortized $O(\log^2
-n/\epsilon^4)$ time per update while simultaneously guaranteeing that the worst
-case update time is $O(\log^3 n \log \log n/\epsilon^6)$. We believe that the
-space and update time improvements are valuable for current large scale graph
-data sets. The data structure extends in a natural fashion to hypergraphs and
-yields improvements in space and update times over recent work [BBCG22] that
-builds upon [SW20].
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chekuri_C/0/1/0/all/0/1">Chandra Chekuri</a>, <a href="http://arxiv.org/find/cs/1/au:+Quanrud_K/0/1/0/all/0/1">Kent Quanrud</a></p><p>We consider the problem of maintaining a $(1-\epsilon)$-approximation to the
-densest subgraph (DSG) in an undirected multigraph as it undergoes edge
-insertions and deletions (the fully dynamic setting). Sawlani and Wang [SW20]
-developed a data structure that, for any given $\epsilon &gt; 0$, maintains a
-$(1-\epsilon)$-approximation with $O(\log^4 n/\epsilon^6)$ worst-case update
-time for edge operations, and $O(1)$ query time for reporting the density
-value. Their data structure was the first to achieve near-optimal
-approximation, and improved previous work that maintained a $(1/4 - \epsilon)$
-approximation in amortized polylogarithmic update time [BHNT15]. In this paper
-we develop a data structure for $(1-\epsilon)$-approximate DSG that improves
-the one from [SW20] in two aspects. First, the data structure uses linear space
-improving the space bound in [SW20] by a logarithmic factor. Second, the data
-structure maintains a $(1-\epsilon)$-approximation in amortized $O(\log^2
-n/\epsilon^4)$ time per update while simultaneously guaranteeing that the worst
-case update time is $O(\log^3 n \log \log n/\epsilon^6)$. We believe that the
-space and update time improvements are valuable for current large scale graph
-data sets. The data structure extends in a natural fashion to hypergraphs and
-yields improvements in space and update times over recent work [BBCG22] that
-builds upon [SW20].
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.02628'>Cooperative Coverage with a Leader and a Wingmate in Communication-Constrained Environments</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Sai Krishna Kanth Hari, Sivakumar Rathinam, Swaroop Darbha, David W. Casbeer</p><p>We consider a mission framework in which two unmanned vehicles (UVs), a
-leader and a wingmate, are required to provide cooperative coverage of an
-environment while being within a short communication range. This framework
-finds applications in underwater and/or military domains, where certain
-constraints are imposed on communication by either the application or the
-environment. An important objective of missions within this framework is to
-minimize the total travel and communication costs of the leader-wingmate duo.
-In this paper, we propose and formulate the problem of finding routes for the
-UVs that minimize the sum of their travel and communication costs as a network
-optimization problem of the form of a binary program (BP). The BP is
-computationally expensive, with the time required to compute optimal solutions
-increasing rapidly with the problem size. To address this challenge, here, we
-propose two algorithms, an approximation algorithm and a heuristic algorithm,
-to solve large-scale instances of the problem swiftly. We demonstrate the
-effectiveness and the scalability of these algorithms through an analysis of
-extensive numerical simulations performed over 500 instances, with the number
-of targets in the instances ranging from 6 to 100.
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Hari_S/0/1/0/all/0/1">Sai Krishna Kanth Hari</a>, <a href="http://arxiv.org/find/cs/1/au:+Rathinam_S/0/1/0/all/0/1">Sivakumar Rathinam</a>, <a href="http://arxiv.org/find/cs/1/au:+Darbha_S/0/1/0/all/0/1">Swaroop Darbha</a>, <a href="http://arxiv.org/find/cs/1/au:+Casbeer_D/0/1/0/all/0/1">David W. Casbeer</a></p><p>We consider a mission framework in which two unmanned vehicles (UVs), a
-leader and a wingmate, are required to provide cooperative coverage of an
-environment while being within a short communication range. This framework
-finds applications in underwater and/or military domains, where certain
-constraints are imposed on communication by either the application or the
-environment. An important objective of missions within this framework is to
-minimize the total travel and communication costs of the leader-wingmate duo.
-In this paper, we propose and formulate the problem of finding routes for the
-UVs that minimize the sum of their travel and communication costs as a network
-optimization problem of the form of a binary program (BP). The BP is
-computationally expensive, with the time required to compute optimal solutions
-increasing rapidly with the problem size. To address this challenge, here, we
-propose two algorithms, an approximation algorithm and a heuristic algorithm,
-to solve large-scale instances of the problem swiftly. We demonstrate the
-effectiveness and the scalability of these algorithms through an analysis of
-extensive numerical simulations performed over 500 instances, with the number
-of targets in the instances ranging from 6 to 100.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.02638'>What Can We Compute in a Single Round of the Congested Clique?</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Peter Robinson</p><p>We study the computational power of one-round distributed algorithms in the
-congested clique model. We show that any one-round algorithm that computes a
-minimum spanning tree (MST) in the unicast congested clique must use a link
-bandwidth of $\Omega(\log^3 n)$ bits in the worst case. This is the first round
-complexity lower bound in the unicast congested clique for a problem where the
-output size is small, i.e., $O(n\log n)$ bits. Our main technical contribution
-is to investigate one-round algorithms in the broadcast congested clique and,
-equivalently, the distributed graph sketching model where the nodes send their
-message to a referee who computes the output. First, we present a tight lower
-bound of $\Omega(n)$ bits for the message size of computing a breadth-first
-search tree. Then, we prove that computing a $k$-edge connected spanning
-subgraph ($k$-ECSS) requires messages of size at least $\Omega \left(
-k\log^2(n/k) \right)$. We also show that verifying whether a given vertex
-coloring forms a weak 2-coloring of the input graph requires messages of
-$\Omega(n^{1/3}\log^{2/3}n)$ bits, and the same lower bound holds for verifying
-whether a subset of nodes forms a maximal independent set or a minimal
-dominating set. Interestingly, it turns out that the same class of lower bound
-graphs for the distributed sketching model is versatile enough to yield a space
-lower bound of $\Omega(n^2)$ bits for verifying symmetry breaking problems such
-as weak $2$-coloring in the fully dynamic turnstile model, where the input
-arrives as a stream of edges. We also (nearly) settle the space complexity of
-the $k$-ECSS problem in the streaming model by extending the work of Kapralov
-et al. (FOCS 2017): We prove a communication complexity lower bound for a
-direct sum variant of the $\text{UR}_k^{\subset}$ problem and show that this
-implies $\Omega(k\,n\log^2(n/k))$ bits of memory for computing a $k$-ECSS.
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Robinson_P/0/1/0/all/0/1">Peter Robinson</a></p><p>We study the computational power of one-round distributed algorithms in the
-congested clique model. We show that any one-round algorithm that computes a
-minimum spanning tree (MST) in the unicast congested clique must use a link
-bandwidth of $\Omega(\log^3 n)$ bits in the worst case. This is the first round
-complexity lower bound in the unicast congested clique for a problem where the
-output size is small, i.e., $O(n\log n)$ bits. Our main technical contribution
-is to investigate one-round algorithms in the broadcast congested clique and,
-equivalently, the distributed graph sketching model where the nodes send their
-message to a referee who computes the output. First, we present a tight lower
-bound of $\Omega(n)$ bits for the message size of computing a breadth-first
-search tree. Then, we prove that computing a $k$-edge connected spanning
-subgraph ($k$-ECSS) requires messages of size at least $\Omega \left(
-k\log^2(n/k) \right)$. We also show that verifying whether a given vertex
-coloring forms a weak 2-coloring of the input graph requires messages of
-$\Omega(n^{1/3}\log^{2/3}n)$ bits, and the same lower bound holds for verifying
-whether a subset of nodes forms a maximal independent set or a minimal
-dominating set. Interestingly, it turns out that the same class of lower bound
-graphs for the distributed sketching model is versatile enough to yield a space
-lower bound of $\Omega(n^2)$ bits for verifying symmetry breaking problems such
-as weak $2$-coloring in the fully dynamic turnstile model, where the input
-arrives as a stream of edges. We also (nearly) settle the space complexity of
-the $k$-ECSS problem in the streaming model by extending the work of Kapralov
-et al. (FOCS 2017): We prove a communication complexity lower bound for a
-direct sum variant of the $\text{UR}_k^{\subset}$ problem and show that this
-implies $\Omega(k\,n\log^2(n/k))$ bits of memory for computing a $k$-ECSS.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.02672'>Orthogonal Non-negative Matrix Factorization: a Maximum-Entropy-Principle Approach</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Salar Basiri, Mustafa Kapadia, Srinivasa Salapaka</p><p>In this paper, we introduce a new methodology to solve the orthogonal
-non-negative matrix factorization (ONMF) problem, where the objective is to
-approximate an input data matrix by the product of two non-negative matrices,
-the features matrix and the mixing matrix, while one of them is orthogonal. We
-show how the ONMF can be interpreted as a specific facility-location problem
-(FLP), and adapt a maximum-entropy-principle based solution for FLP to the ONMF
-problem. The proposed approach guarantees orthogonality of the features or the
-mixing matrix, while ensuring that both of the matrix factors are non-negative.
-Also, the features (mixing) matrix has exactly one non-zero element across each
-row (column), providing the maximum sparsity of the orthogonal factor. This
-enables a semantic interpretation of the underlying data matrix using
-non-overlapping features. The experiments on synthetic data and a standard
-microarray dataset demonstrate significant improvements in terms of sparsity
-and orthogonality scores of features (mixing) matrices, while achieving
-approximately the same or better (up to 3%) reconstruction errors.
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Basiri_S/0/1/0/all/0/1">Salar Basiri</a>, <a href="http://arxiv.org/find/cs/1/au:+Kapadia_M/0/1/0/all/0/1">Mustafa Kapadia</a>, <a href="http://arxiv.org/find/cs/1/au:+Salapaka_S/0/1/0/all/0/1">Srinivasa Salapaka</a></p><p>In this paper, we introduce a new methodology to solve the orthogonal
-non-negative matrix factorization (ONMF) problem, where the objective is to
-approximate an input data matrix by the product of two non-negative matrices,
-the features matrix and the mixing matrix, while one of them is orthogonal. We
-show how the ONMF can be interpreted as a specific facility-location problem
-(FLP), and adapt a maximum-entropy-principle based solution for FLP to the ONMF
-problem. The proposed approach guarantees orthogonality of the features or the
-mixing matrix, while ensuring that both of the matrix factors are non-negative.
-Also, the features (mixing) matrix has exactly one non-zero element across each
-row (column), providing the maximum sparsity of the orthogonal factor. This
-enables a semantic interpretation of the underlying data matrix using
-non-overlapping features. The experiments on synthetic data and a standard
-microarray dataset demonstrate significant improvements in terms of sparsity
-and orthogonality scores of features (mixing) matrices, while achieving
-approximately the same or better (up to 3%) reconstruction errors.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.02775'>Paging with Succinct Predictions</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Antonios Antoniadis, Joan Boyar, Marek Eli&#xe1;&#x161;, Lene M. Favrholdt, Ruben Hoeksma, Kim S. Larsen, Adam Polak, Bertrand Simon</p><p>Paging is a prototypical problem in the area of online algorithms. It has
-also played a central role in the development of learning-augmented algorithms
--- a recent line of research that aims to ameliorate the shortcomings of
-classical worst-case analysis by giving algorithms access to predictions. Such
-predictions can typically be generated using a machine learning approach, but
-they are inherently imperfect. Previous work on learning-augmented paging has
-investigated predictions on (i) when the current page will be requested again
-(reoccurrence predictions), (ii) the current state of the cache in an optimal
-algorithm (state predictions), (iii) all requests until the current page gets
-requested again, and (iv) the relative order in which pages are requested.
-</p>
-<p>We study learning-augmented paging from the new perspective of requiring the
-least possible amount of predicted information. More specifically, the
-predictions obtained alongside each page request are limited to one bit only.
-We consider two natural such setups: (i) discard predictions, in which the
-predicted bit denotes whether or not it is ``safe'' to evict this page, and
-(ii) phase predictions, where the bit denotes whether the current page will be
-requested in the next phase (for an appropriate partitioning of the input into
-phases). We develop algorithms for each of the two setups that satisfy all
-three desirable properties of learning-augmented algorithms -- that is, they
-are consistent, robust and smooth -- despite being limited to a one-bit
-prediction per request. We also present lower bounds establishing that our
-algorithms are essentially best possible.
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Antoniadis_A/0/1/0/all/0/1">Antonios Antoniadis</a>, <a href="http://arxiv.org/find/cs/1/au:+Boyar_J/0/1/0/all/0/1">Joan Boyar</a>, <a href="http://arxiv.org/find/cs/1/au:+Elias_M/0/1/0/all/0/1">Marek Eli&#xe1;&#x161;</a>, <a href="http://arxiv.org/find/cs/1/au:+Favrholdt_L/0/1/0/all/0/1">Lene M. Favrholdt</a>, <a href="http://arxiv.org/find/cs/1/au:+Hoeksma_R/0/1/0/all/0/1">Ruben Hoeksma</a>, <a href="http://arxiv.org/find/cs/1/au:+Larsen_K/0/1/0/all/0/1">Kim S. Larsen</a>, <a href="http://arxiv.org/find/cs/1/au:+Polak_A/0/1/0/all/0/1">Adam Polak</a>, <a href="http://arxiv.org/find/cs/1/au:+Simon_B/0/1/0/all/0/1">Bertrand Simon</a></p><p>Paging is a prototypical problem in the area of online algorithms. It has
-also played a central role in the development of learning-augmented algorithms
--- a recent line of research that aims to ameliorate the shortcomings of
-classical worst-case analysis by giving algorithms access to predictions. Such
-predictions can typically be generated using a machine learning approach, but
-they are inherently imperfect. Previous work on learning-augmented paging has
-investigated predictions on (i) when the current page will be requested again
-(reoccurrence predictions), (ii) the current state of the cache in an optimal
-algorithm (state predictions), (iii) all requests until the current page gets
-requested again, and (iv) the relative order in which pages are requested.
-</p>
-<p>We study learning-augmented paging from the new perspective of requiring the
-least possible amount of predicted information. More specifically, the
-predictions obtained alongside each page request are limited to one bit only.
-We consider two natural such setups: (i) discard predictions, in which the
-predicted bit denotes whether or not it is ``safe'' to evict this page, and
-(ii) phase predictions, where the bit denotes whether the current page will be
-requested in the next phase (for an appropriate partitioning of the input into
-phases). We develop algorithms for each of the two setups that satisfy all
-three desirable properties of learning-augmented algorithms -- that is, they
-are consistent, robust and smooth -- despite being limited to a one-bit
-prediction per request. We also present lower bounds establishing that our
-algorithms are essentially best possible.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.02835'>Sequentially Swapping Tokens: Further on Graph Classes</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Hironori Kiya, Yuto Okada, Hirotaka Ono, Yota Otachi</p><p>We study the following variant of the 15 puzzle. Given a graph and two token
-placements on the vertices, we want to find a walk of the minimum length (if
-any exists) such that the sequence of token swappings along the walk obtains
-one of the given token placements from the other one. This problem was
-introduced as Sequential Token Swapping by Yamanaka et al. [JGAA 2019], who
-showed that the problem is intractable in general but polynomial-time solvable
-for trees, complete graphs, and cycles. In this paper, we present a
-polynomial-time algorithm for block-cactus graphs, which include all previously
-known cases. We also present general tools for showing the hardness of problem
-on restricted graph classes such as chordal graphs and chordal bipartite
-graphs. We also show that the problem is hard on grids and king's graphs, which
-are the graphs corresponding to the 15 puzzle and its variant with relaxed
-moves.
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Kiya_H/0/1/0/all/0/1">Hironori Kiya</a>, <a href="http://arxiv.org/find/cs/1/au:+Okada_Y/0/1/0/all/0/1">Yuto Okada</a>, <a href="http://arxiv.org/find/cs/1/au:+Ono_H/0/1/0/all/0/1">Hirotaka Ono</a>, <a href="http://arxiv.org/find/cs/1/au:+Otachi_Y/0/1/0/all/0/1">Yota Otachi</a></p><p>We study the following variant of the 15 puzzle. Given a graph and two token
-placements on the vertices, we want to find a walk of the minimum length (if
-any exists) such that the sequence of token swappings along the walk obtains
-one of the given token placements from the other one. This problem was
-introduced as Sequential Token Swapping by Yamanaka et al. [JGAA 2019], who
-showed that the problem is intractable in general but polynomial-time solvable
-for trees, complete graphs, and cycles. In this paper, we present a
-polynomial-time algorithm for block-cactus graphs, which include all previously
-known cases. We also present general tools for showing the hardness of problem
-on restricted graph classes such as chordal graphs and chordal bipartite
-graphs. We also show that the problem is hard on grids and king's graphs, which
-are the graphs corresponding to the 15 puzzle and its variant with relaxed
-moves.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='http://arxiv.org/abs/2210.03048'>Scalable Experimental Bounds for Entangled Quantum State Fidelities</a></h3>
-          <p class='item-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          <p>Authors: Shamminuj Aktar, Andreas B&#xe4;rtschi, Abdel-Hameed A. Badawy, Stephan Eidenbenz</p><p>Estimating the state preparation fidelity of highly entangled states on noisy
-intermediate-scale quantum (NISQ) devices is an important task for benchmarking
-and application considerations. Unfortunately, exact fidelity measurements
-quickly become prohibitively expensive, as they scale exponentially as O(3^N)
-for N-qubit states, using full state tomography with measurements in all Pauli
-bases combinations.
-</p>
-<p>However, it is known [Somma et.al. 2006] that the complexity can be
-drastically reduced when looking at fidelity lower bounds for states that
-exhibit symmetries, such as Dicke States and GHZ States. For larger states,
-these bounds have so far not been tight enough to provide reasonable
-estimations on today's (2022) NISQ devices. In this work, for the first time
-and more than 15 years after the theoretical introduction, we report meaningful
-lower bounds for the state preparation fidelity of all Dicke States up to N=10
-and all GHZ states up to N=20 on Quantinuum H1 ion-trap systems using efficient
-implementations of recently proposed scalable circuits for these states.
-</p>
-<p>For example, we give state preparation fidelity lower bounds of (i) 0.46 for
-the Dicke State |D10,5&gt; and (ii) 0.73 for the GHZ State |G20&gt;. These match or
-exceed exact fidelity records recently achieved on superconducting systems for
-the much smaller states |D6,3&gt; and |G5&gt;, respectively. Furthermore, we provide
-evidence that for large Dicke States |DN,N/2&gt;, we can resort to a GHZ-based
-approximate state preparation to achieve better fidelity.
-</p>
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+Aktar_S/0/1/0/all/0/1">Shamminuj Aktar</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Bartschi_A/0/1/0/all/0/1">Andreas B&#xe4;rtschi</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Badawy_A/0/1/0/all/0/1">Abdel-Hameed A. Badawy</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Eidenbenz_S/0/1/0/all/0/1">Stephan Eidenbenz</a></p><p>Estimating the state preparation fidelity of highly entangled states on noisy
-intermediate-scale quantum (NISQ) devices is an important task for benchmarking
-and application considerations. Unfortunately, exact fidelity measurements
-quickly become prohibitively expensive, as they scale exponentially as O(3^N)
-for N-qubit states, using full state tomography with measurements in all Pauli
-bases combinations.
-</p>
-<p>However, it is known [Somma et.al. 2006] that the complexity can be
-drastically reduced when looking at fidelity lower bounds for states that
-exhibit symmetries, such as Dicke States and GHZ States. For larger states,
-these bounds have so far not been tight enough to provide reasonable
-estimations on today's (2022) NISQ devices. In this work, for the first time
-and more than 15 years after the theoretical introduction, we report meaningful
-lower bounds for the state preparation fidelity of all Dicke States up to N=10
-and all GHZ states up to N=20 on Quantinuum H1 ion-trap systems using efficient
-implementations of recently proposed scalable circuits for these states.
-</p>
-<p>For example, we give state preparation fidelity lower bounds of (i) 0.46 for
-the Dicke State |D10,5&gt; and (ii) 0.73 for the GHZ State |G20&gt;. These match or
-exceed exact fidelity records recently achieved on superconducting systems for
-the much smaller states |D6,3&gt; and |G5&gt;, respectively. Furthermore, we provide
-evidence that for large Dicke States |DN,N/2&gt;, we can resort to a GHZ-based
-approximate state preparation to achieve better fidelity.
-</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-07T00:30:00Z">Friday, October 07 2022, 00:30</time>
-        </div>
-      </div>
-    </article>
-  
-    
-    <h2 class='new-date'>
-      <i class='icon-calendar-empty'></i> Thursday, October 06
-    </h2>
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='https://gilkalai.wordpress.com/2022/10/07/the-google-supremacy-experiment-data-information-discussions-and-three-questions/'>The Google Supremacy Experiment: Data, Information, Discussions, and Three Questions.</a></h3>
-          <p class='item-feed'>from <a href='https://gilkalai.wordpress.com'>Gil Kalai</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          Yosi Rinott, Tomer Shoham, and I  wrote a manuscript regarding our study of the Google 2019 supremacy experiment. This is still a draft and comments or corrections are most welcome. (The paper already incorporates a few comments by the Google &#8230; Continue reading &#8594;
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p></p>
-
-
-<p>Yosi Rinott, Tomer Shoham, and I  wrote a manuscript regarding our study of the Google 2019 supremacy experiment. This is still a draft and comments or corrections are most welcome. (The paper already incorporates a few comments by the Google team; October 11, 2022: a new version is posted based on  excellent comments and many corrections by Carsten <span class="qu" role="gridcell"><span class="gD">Voelkmann.</span></span>)</p>
-<h3><a href="https://gilkalai.files.wordpress.com/2022/10/cc22a19.pdf"><span dir="ltr" role="presentation">Google’s 2019 “Quantum Supremacy” Claims: </span><span dir="ltr" role="presentation">Data, Documentation, &amp; Discussion</span></a></h3>
-<p>by Gil Kalai, Yosef Rinott, and Tomer Shoham</p>
-<blockquote>
-<p><em><span dir="ltr" role="presentation"><strong>Abstract:</strong> In October 2019, </span></em><span dir="ltr" role="presentation">Nature </span><em><span dir="ltr" role="presentation">published a paper describing an exper</span><span dir="ltr" role="presentation">imental work that took place at Google. The paper claims to demon</span><span dir="ltr" role="presentation">strate quantum (computational) supremacy on a 53-qubit quantum </span><span dir="ltr" role="presentation">computer.</span> <span dir="ltr" role="presentation">Since September 2019 the authors have been involved in </span><span dir="ltr" role="presentation">a long-term project to study various statistical aspects of the Google </span><span dir="ltr" role="presentation">experiment.</span> <span dir="ltr" role="presentation">In particular, we have been trying to gather the rele</span><span dir="ltr" role="presentation">vant data and information, to reconstruct and verify those parts of </span><span dir="ltr" role="presentation">the Google 2019 supremacy experiments that are based on classical </span><span dir="ltr" role="presentation">computations (unless they require too heavy computation), and to </span><span dir="ltr" role="presentation">put the data under statistical analysis. We have now (August 2022) </span><span dir="ltr" role="presentation">concluded the part relating to the gathering of data and information </span><span dir="ltr" role="presentation">needed for our study of the 2019 Google experiment, and this docu</span><span dir="ltr" role="presentation">ment describes the available data and information for the Google 2019 </span><span dir="ltr" role="presentation">experiment and some of our results and plans.</span></em></p>
-</blockquote>
-<p>The manuscript describes the stage of gathering data and information needed for our study and our analysis based on this data will be described separately. Statistical analysis of the Google experiment is already described in our Statistical Science paper  <a href="https://gilkalai.files.wordpress.com/2022/08/sts836.pdf">Statistical Aspects of the Quantum Supremacy Demonstration.</a> (In this paper we mainly rely on data of 12-qubit and 14-qubit circuits.) Some preliminary statistical analysis is also given in Sections 6 and 7 of my paper  <a href="https://gilkalai.files.wordpress.com/2020/08/laws-blog2.pdf">The argument against quantum computers, the quantum laws of nature, and Google’s supremacy claims</a>.</p>
-<h2><em>Quo Vadis</em> random circuit sampling<em><span dir="ltr">?</span></em></h2>
-<p><span dir="ltr" role="presentation">Here are three concrete questions about </span><span dir="ltr" role="presentation">random circuit sampling of a quantum circuit</span> <span dir="ltr" role="presentation">C</span> <span dir="ltr" role="presentation">of the kind discussed in the Google </span><span dir="ltr" role="presentation">paper <span style="color:#ff0000;"><strong>with</strong></span></span><span style="color:#ff0000;"><strong> <span dir="ltr" role="presentation">22 qubits and depth</span> </strong></span><span dir="ltr" role="presentation"><span style="color:#ff0000;"><strong>14</strong></span>. These three questions refer, of course, to the ability of current <span style="color:#0000ff;">quantum computers</span>  (it is quite easy to achieve them with classical simulations). <br /></span></p>
-<blockquote>
-<p><br role="presentation" /><em><strong><span dir="ltr" role="presentation">1. Can humanity produce at present samples which are good approxima</span><span dir="ltr" role="presentation">tions of the Google noise model or any other specific noise model?</span></strong></em></p>
-<p><em><strong><span dir="ltr" role="presentation">2. Has humanity reached the ability to produce samples for quantum circuit </span><span dir="ltr" role="presentation">C</span> <span dir="ltr" role="presentation">with</span> fidelity according to the <span dir="ltr" role="presentation">linear cross entropy</span> <span dir="ltr" role="presentation">fidelity-estimator above 0.15?</span></strong></em></p>
-<p><em><strong><span dir="ltr" role="presentation">3. Has humanity reached the ability to predict, for a quantum circuit</span> <span dir="ltr" role="presentation">C</span><span dir="ltr" role="presentation">, </span><span dir="ltr" role="presentation">with good accuracy, the</span> <span dir="ltr" role="presentation">linear cross entropy</span> <span dir="ltr" role="presentation">fidelity estimator based on the fidelity </span><span dir="ltr" role="presentation">of the individual components of this circuit?</span></strong></em></p>
-</blockquote>
-<p><span dir="ltr" role="presentation">The findings of our Statistical Science paper </span><span dir="ltr" role="presentation">indicate that the answer to the first ques</span><span dir="ltr" role="presentation">tion is negative. The Google supremacy paper itself and subsequent confirmations </span><span dir="ltr" role="presentation">present a strong case for a positive answer to the other two questions (even for larger circuits). However, </span><span dir="ltr" role="presentation">there are remaining doubts and concerns that need to be carefully checked, </span><span dir="ltr" role="presentation">and not enough replications to regard the answer as a solid yes.</span></p>
-<h2>How to check a 20-qubit quantum computer?</h2>
-<p><a href="https://www.gov.il/en/departments/general/iia-to-establish-israeli-quantum-computing-center-17-jul-2022">It was announced</a> recently that Israel is going to build a quantum computer. It is an interesting question to find a methodology to confirm that a 10-qubit, 20-qubit or 50-qubit quantum computer genuinely performs quantum computation or rather that the experimental data represents classical computation. In our Statistical Science paper we offered a certain blind experiment mechanism, but it still requires that classical simulation be much slower than quantum computing.</p>
-<p>In the new paper we also propose a mechanism for letting other groups test calibration methods (which are crucial ingredients in such experiments) on the Sycamore QC or other NISQ computers. In our discussions, the Google team endorsed both these proposals for future experiments. (See Section 5 of the new manuscript.)</p>
-<p> </p><p class="authors">By Gil Kalai</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-06T21:26:21Z">Thursday, October 06 2022, 21:26</time>
-        </div>
-      </div>
-    </article>
-  
-    
-
-    <article class='item'>
-      <div class='item-header'>
-        <span class='item-caret'>
-          <i class='icon-large icon-caret-down item-collapse item-close item-opened'></i>
-          <i class='icon-large icon-caret-right item-expand item-open item-closed'></i>
-        </span>
-        <span class='item-info'>
-          <h3 class='item-title'><a href='https://cstheory-jobs.org/2022/10/06/postdoc-at-ist-austria-apply-by-november-15-2022/'>Postdoc at IST Austria (apply by November 15, 2022)</a></h3>
-          <p class='item-feed'>from <a href='https://cstheory-jobs.org'>CCI: jobs</a></p>
-        </span>
-      </div>
-
-      <div class='item-body'>
-        <div class='item-snippet'>
-        
-          We are looking for three outstanding, highly-motivated postdoctoral researchers interested in working on combinatorial algorithm, especially in dynamic settings. Website: ist.ac.at/en/job/postdoc-research-group-monika-henzinger/ Email: monika.henzinger@ist.ac.at
-        
-        </div>
-
-        <div class='item-content item-summary'>
-        
-          
-          <p>We are looking for three outstanding, highly-motivated postdoctoral researchers interested in working on combinatorial algorithm, especially in dynamic settings.</p>
-<p>Website: <a href="https://ist.ac.at/en/job/postdoc-research-group-monika-henzinger/">https://ist.ac.at/en/job/postdoc-research-group-monika-henzinger/</a><br />
-Email: monika.henzinger@ist.ac.at</p>
-<p class="authors">By shacharlovett</p>
-        
-        </div>
-
-        <div class='item-footer'>
-          <time class='timeago' datetime="2022-10-06T19:12:28Z">Thursday, October 06 2022, 19:12</time>
         </div>
       </div>
     </article>
