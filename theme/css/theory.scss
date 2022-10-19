@@ -1,0 +1,146 @@
+// use  sass theory.scss theory.css
+//  or  sass --watch theory.scss:theory.css
+
+$primary-color:   #222;
+$secondary-color: #888;
+$primary-background: #aaa;
+$secondary-background: #eee;
+$tertiary-background: #eee;
+
+$small-font-size: 0.75rem;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6666;
+  color: $primary-color;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.tr-small {
+  font-size: $small-font-size;
+}
+
+ul.tr-subscriptions {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+details {
+  position: relative;
+  .tr-chevron {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    display: block;
+    pointer-events: none;
+    background-color: $secondary-background;
+  }
+  summary {
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.tr-panel {
+  float: right;
+  background-color: $secondary-background;
+  border-radius: 0.25rem;
+  width: 180px;
+  padding: 0.25rem 0.5rem;
+}
+
+.tr-opts {
+  float: right;
+  padding-top: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  color: $primary-color;
+}
+
+.tr-articles.tr-shrink {
+  margin-right: 210px;
+}
+
+.tr-button {
+  cursor: pointer;
+}
+
+.tr-new-date {
+  border-bottom: 1px solid $primary-background;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.tr-article {
+  padding: 0rem 0rem 1rem 0rem;
+
+  .tr-article-summary,
+  .tr-article-snippet {
+    font-size: 1rem;
+    margin-top: 1rem;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 100%;
+    }
+  }
+
+  .tr-article-snippet {
+    display: none;
+    max-height: 5rem;
+    overflow: hidden;
+  
+    b, h1, h2, h3, h4, h5, h6 {
+      font-weight: normal;
+    }
+    p, ul, ol, h1, h2, h3, h4, h5, h6 {
+      margin: 2px 0px 2px 0px;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+      padding: 0;
+    }
+  }
+
+  .tr-article-header {
+    background-color: $secondary-background;
+    padding: 0.5rem 0.5rem 0rem 1rem;
+    border: 1px solid $primary-background;
+    border-radius: 0.25rem;
+    .tr-article-title {
+      margin-top: 0;
+      margin-right: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .tr-article-footer {
+    font-size: $small-font-size;
+    color: $secondary-color;
+    margin-top: 0.75rem;
+  }
+}
+
+.authors {
+  font-size: $small-font-size;
+  color: $secondary-color;
+}
