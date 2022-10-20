@@ -37,7 +37,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-10-20T14:13:29Z">Thursday, October 20 2022, 14:13</time>
+          <time class='timeago' datetime="2022-10-20T14:50:47Z">Thursday, October 20 2022, 14:50</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -339,6 +339,37 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, October 20
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://blog.computationalcomplexity.org/2022/10/alpha-tensor.html'>Alpha Tensor</a></h3>
+        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>In a recent post, Bill used the announcement of a new AI multiplication algorithm to discuss the applications of Strassen's famous algorithm. For this post I'd like to focus on the new algorithm itself,&nbsp;Alpha Tensor, the algorithm behind the algorithm, what it has actually accomplished&nbsp;and what it means for us theorists.&nbsp;</p><p>To multiply two 2x2 matrices in the usual way you need eight multiplication steps. In 1969 Strassen surprised the world by showing how to multiply those matrices using only seven multiplications.</p><p>You can recurse on larger matrices. For 4x4 matrices you can use 72=49 multiplications instead of the naïve 64. In general for nxn matrices you need roughly nlog27 ≈ n2.81 multiplications.</p><p>No one has found an algorithm for 4x4 matrices that uses less than 49 from recursing on Strassen. Alpha Tensor does so for the special case of working over GF[2], where addition and subtraction are interchangeable. Their algorithm does not work for general fields such as the real numbers.</p><p>Here's the full table of Alpha Tensor results from the Nature paper for multiplying a nxm matrix by a mxp matrix. The Modular column is for GF[2] and the standard column is for general fields. Alpha tensor does improve on the best known for general fields for specific problems like multiplying a 3x4 matrix by a 4x5 matrix. Much of the press failed to make this distinction for 4x4 multiplication leading to some confusion.</p>♦<br>What does this mean for theory? Recursing on 4x4 matrices now reduces the time for matrix multiplication to roughly n2.78 nowhere close to the best theoretical upper bound of about n2.37. The Alpha tensor result may be more practical though time will tell.<br>Manuel Kauers and Jakob Moosbauer shortly after Alpha Tensor announcement, reduced the 5x5 case over GF[2] to 95 multiplications. Nice to see the last word isn't by machine (yet!) but that shouldn't reduce the excitement over Alpha Tensor. Often we see a breakthrough followed by a small improvement. Note that 95 multiplications for 5x5 matrices won't give a faster asymptotic algorithm for nxn multiplication than Strassen.<br>What excites me the most is not the algorithm, but the algorithm to find the algorithm. Alpha Tensor uses the tools that AlphaZero used to play Chess and Go to search the large search space of potential algorithms using Monte Carlo Tree search, basically searching at random and learning and updating the probabilities of the search. Before using machine learning, we had few good approaches to searching large combinatorial spaces of this nature.&nbsp;<br>In general, most new algorithms come from new approaches, not just from the structural decomposition we see in matrix multiplication so theorists won't be out of a job anytime soon. Nevertheless this is just another lesson that using ML has dramatically improved our ability to search through a large number of possibilities looking for a specific solution.&nbsp;<br>The Alpha Tensor Nature paper was submitted in October of 2021. A year is eternity in the ML world. I wonder what is happening now that we don't know about.<p>By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>In a <a href="https://blog.computationalcomplexity.org/2022/10/will-strassens-matrix-mult-alg-ever-be.html">recent post</a>, Bill used the announcement of a new AI multiplication algorithm to discuss the applications of Strassen's famous algorithm. For this post I'd like to focus on the new algorithm itself,&nbsp;<a href="https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor">Alpha Tensor</a>, the algorithm behind the algorithm, what it has actually accomplished&nbsp;and what it means for us theorists.&nbsp;</p><p>To multiply two 2x2 matrices in the usual way you need eight multiplication steps. In 1969 Strassen surprised the world by showing how to <a href="https://en.wikipedia.org/wiki/Strassen_algorithm#Algorithm">multiply those matrices using only seven multiplications</a>.</p><p>You can recurse on larger matrices. For 4x4 matrices you can use 7<sup>2</sup>=49 multiplications instead of the naïve 64. In general for nxn matrices you need roughly n<sup>log<sub>2</sub>7</sup> ≈ n<sup>2.81</sup> multiplications.</p><p>No one has found an algorithm for 4x4 matrices that uses less than 49 from recursing on Strassen. Alpha Tensor does so for the special case of working over GF[2], where addition and subtraction are interchangeable. Their algorithm does not work for general fields such as the real numbers.</p><p>Here's the full table of Alpha Tensor results from the <a href="https://doi.org/10.1038/s41586-022-05172-4">Nature paper</a> for multiplying a nxm matrix by a mxp matrix. The Modular column is for GF[2] and the standard column is for general fields. Alpha tensor does improve on the best known for general fields for specific problems like multiplying a 3x4 matrix by a 4x5 matrix. Much of the press <a href="https://arstechnica.com/information-technology/2022/10/deepmind-breaks-50-year-math-record-using-ai-new-record-falls-a-week-later/">failed to make this distinction</a> for 4x4 multiplication leading to some confusion.</p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9-_aNBNNDkLCuUrz9Wz2dzgctRxEAk2Q8ptCHuk1SwBLyNrwentWYhpYulJX3VP64GE3UxlfaQlSHxm2faVnrh44MCnEyHSM2o-998w6P0_gKIk9fPScLQU9PtxKUPmfuFZR6SiYYlvuXw01FhP0Jg24ro1j0YCY99pxg7aTzMI7mzgWCfw/s833/IMG_0190.jpg" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="833" data-original-width="702" height="640" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9-_aNBNNDkLCuUrz9Wz2dzgctRxEAk2Q8ptCHuk1SwBLyNrwentWYhpYulJX3VP64GE3UxlfaQlSHxm2faVnrh44MCnEyHSM2o-998w6P0_gKIk9fPScLQU9PtxKUPmfuFZR6SiYYlvuXw01FhP0Jg24ro1j0YCY99pxg7aTzMI7mzgWCfw/w540-h640/IMG_0190.jpg" width="540" /></a></div><br /><div class="separator" style="clear: both; text-align: left;">What does this mean for theory? Recursing on 4x4 matrices now reduces the time for matrix multiplication to roughly n<sup>2.78</sup> nowhere close to the best <a href="https://doi.org/10.1137/1.9781611976465.32">theoretical upper bound</a> of about n<sup>2.37</sup>. The Alpha tensor result may be more practical though time will tell.</div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">Manuel Kauers and Jakob Moosbauer shortly after Alpha Tensor announcement, <a href="https://arxiv.org/abs/2210.04045">reduced</a> the 5x5 case over GF[2] to 95 multiplications. Nice to see the last word isn't by machine (yet!) but that shouldn't reduce the excitement over Alpha Tensor. Often we see a breakthrough followed by a small improvement. Note that 95 multiplications for 5x5 matrices won't give a faster asymptotic algorithm for nxn multiplication than Strassen.</div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">What excites me the most is not the algorithm, but the algorithm to find the algorithm. Alpha Tensor uses the tools that AlphaZero used to play Chess and Go to search the large search space of potential algorithms using Monte Carlo Tree search, basically searching at random and learning and updating the probabilities of the search. Before using machine learning, we had few good approaches to searching large combinatorial spaces of this nature.&nbsp;</div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">In general, most new algorithms come from new approaches, not just from the structural decomposition we see in matrix multiplication so theorists won't be out of a job anytime soon. Nevertheless this is just another lesson that using ML has dramatically improved our ability to search through a large number of possibilities looking for a specific solution.&nbsp;</div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">The Alpha Tensor Nature paper was <a href="https://www.nature.com/articles/s41586-022-05172-4#article-info">submitted</a> in October of 2021. A year is eternity in the ML world. I wonder what is happening now that we don't know about.</div><p class="authors">By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-10-20T14:27:00Z">Thursday, October 20 2022, 14:27</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3100,55 +3131,6 @@ Commitments to quantum states open the door to many new cryptographic possibilit
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-10-16T04:15:51Z">Sunday, October 16 2022, 04:15</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Saturday, October 15
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2022/139'>TR22-139 |  On the VNP-hardness of Some Monomial Symmetric Polynomials | 
-
-	Nutan Limaye, 
-
-	Srikanth Srinivasan, 
-
-	Radu Curticapean</a></h3>
-        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          A polynomial $P\in F[x_1,\ldots,x_n]$ is said to be symmetric if it is invariant under any permutation of its input variables. The study of symmetric polynomials is a classical topic in mathematics, specifically in algebraic combinatorics and representation theory. More recently, they have been studied in several works in computer science, especially in algebraic complexity theory.
-		
-		In this paper, we prove the computational hardness of one of the most basic kinds of symmetric polynomials: the $monomial$ $symmetric$ $polynomials$, which are obtained by summing all distinct permutations of a single monomial. This family of symmetric functions is a natural basis for the space of symmetric polynomials (over any field), and generalizes many well-studied families such as the elementary symmetric polynomials and the power-sum symmetric polynomials.
-		
-		We show that certain families of monomial symmetric polynomials are $VNP$-$complete$ with respect to oracle reductions. This stands in stark contrast to the case of elementary and power symmetric polynomials, both of which have constant-depth circuits of polynomial size.
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          A polynomial $P\in F[x_1,\ldots,x_n]$ is said to be symmetric if it is invariant under any permutation of its input variables. The study of symmetric polynomials is a classical topic in mathematics, specifically in algebraic combinatorics and representation theory. More recently, they have been studied in several works in computer science, especially in algebraic complexity theory.
-		
-		In this paper, we prove the computational hardness of one of the most basic kinds of symmetric polynomials: the $monomial$ $symmetric$ $polynomials$, which are obtained by summing all distinct permutations of a single monomial. This family of symmetric functions is a natural basis for the space of symmetric polynomials (over any field), and generalizes many well-studied families such as the elementary symmetric polynomials and the power-sum symmetric polynomials.
-		
-		We show that certain families of monomial symmetric polynomials are $VNP$-$complete$ with respect to oracle reductions. This stands in stark contrast to the case of elementary and power symmetric polynomials, both of which have constant-depth circuits of polynomial size.
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-10-15T22:02:30Z">Saturday, October 15 2022, 22:02</time>
         </div>
       </div>
     </details>
