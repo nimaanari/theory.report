@@ -37,7 +37,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-10-23T00:00:18Z">Sunday, October 23 2022, 00:00</time>
+          <time class='timeago' datetime="2022-10-23T01:00:19Z">Sunday, October 23 2022, 01:00</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -335,6 +335,68 @@
 
   <div class="tr-articles tr-shrink">
     
+    
+    <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Saturday, October 22
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://11011110.github.io/blog/2022/10/22/repeated-vertices-tsp.html'>Repeated vertices in TSP tours</a></h3>
+        <p class='tr-article-feed'>from <a href='https://11011110.github.io/blog/'>David Eppstein</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          This week my graph algorithms course covered the traveling salesperson problem, which I usually describe in two equivalent forms:
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>This week my graph algorithms course covered the traveling salesperson problem, which I usually describe in two equivalent forms:</p>
+
+<ul>
+  <li>
+    <p>Given a distance matrix representing a metric space, find a cycle that passes through each point of the space exactly once, of minimum total length</p>
+  </li>
+  <li>
+    <p>Given a connected positively-weighted undirected graph, find a closed walk that passes through each vertex at least once, of minimum total length</p>
+  </li>
+</ul>
+
+<p>To go from a distance matrix to a graph, we just use the complete graph, and skip any repeated vertices in its closed walk. To go from a graph to a distance matrix, compute all pairs shortest distances, and then form a closed walk by concatenating the shortest paths between consecutive vertices of the non-repeating cycle. But this concatenation may create many unavoidable repeated vertices. For instance, if your graph is an <span style="white-space:nowrap">\(n\)-vertex</span> star, then any closed walk through all the vertices must return to the central vertex \(n-1\) times, like the blue curve past all of the vertices in the nine-vertex star below.</p>
+
+<p style="text-align:center"><img src="/blog/assets/2022/star-tour.svg" alt="A closed walk through all vertices of the star $$K_{1,8}$$ visits the central vertex eight times." /></p>
+
+<p>It occurred to me to wonder: how many repetitions might be necessary, in total? The multigraph of edges used by the closed walk (with one copy for each time the walk uses each edge) is Eulerian, meaning that it connects all the vertices and has even degree at all of them. Any Eulerian multigraph has a closed walk visiting all the vertices, its Euler tour. Among these graphs, the TSP multigraph must be minimal: if it had an Eulerian subgraph we could walk on that instead. And any minimal Eulerian multigraph can be turned into a simple graph and weighted in such a way that all edges are used with their given multiplicities in the optimal TSP walk. So another, more combinatorial, way of asking the same question is: how many edges can a minimal Eulerian multigraph have?</p>
+
+<p>The answer: <span style="white-space:nowrap">\(2n-2\).</span> More precisely, a graph is said to be <a href="https://en.wikipedia.org/wiki/Dense_graph">\((a,b)\)-sparse</a> if every <span style="white-space:nowrap">\(k\)-vertex</span> subgraph has at most \(ak-b\) edges. In this sense, the minimal Eulerian graphs are <span style="white-space:nowrap">\((2,2)\)-sparse.</span></p>
+
+<p>If you were given an Eulerian graph that is not <span style="white-space:nowrap">\((2,2)\)-sparse,</span> it could not be minimal Eulerian. To see this, choose a minimal subset of \(k\) vertices that has more than \(2k-2\) edges. By deleting edges, you can find a subgraph that is <span style="white-space:nowrap">\((2,2)\)-tight:</span> it has exactly \(2k-2\) edges, and every subgraph is <span style="white-space:nowrap">\((2,2)\)-sparse.</span> A result of Nash-Williams from the 1960s states that a subgraph like this can always be decomposed into two spanning trees. But if you combine one of the deleted edges with a path between its endpoints in one of the trees, you get a cycle that you can remove without changing the parity of the vertex degrees. Removing this cycle still leaves a subgraph that is connected through the other spanning tree. Because there is a cycle you can remove leaving an Eulerian subgraph, your starting graph is not minimal.</p>
+
+<p>The bound of \(2(n-1)\) on the number of edges in a minimal Eulerian multigraph cannot be made any smaller. One way to construct a minimal Eulerian multigraph with exactly this many edges (maybe the only way) is just to double all of the edges in a tree.</p>
+
+<p>Instead of counting edges, another way to define sparse graphs involves forbidden <a href="https://en.wikipedia.org/wiki/Shallow_minor">shallow minors</a>. However, this does not work for minimal Eulerian graphs: they have no forbidden shallow minors. For instance, if you subdivide the edges of any Eulerian graph, such as a complete graph on an odd number of vertices, you will get a minimal Eulerian graph that has the complete graph as a depth-1 minor.</p>
+
+<p style="text-align:center"><img src="/blog/assets/2022/subdivided-K7.svg" alt="Subdividing the edges of the complete graph $$K_7$$ produces a minimal Eulerian graph with $$K_7$$ as a 1-shallow minor." /></p>
+
+<p>(<a href="https://mathstodon.xyz/@11011110/109214811068499556">Discuss on Mastodon</a>)</p><p class="authors">By David Eppstein</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-10-22T17:22:00Z">Saturday, October 22 2022, 17:22</time>
+        </div>
+      </div>
+    </details>
+  
     
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Friday, October 21
@@ -2916,63 +2978,6 @@ ecology, biophysics, and biology, but also in high-dimensional financial
 datasets. We find that hyperTDA can select between synthetic trajectories from
 the landmark 2020 AnDi challenge and quantifies movements of different animal
 species, even when data is limited.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-10-17T00:30:00Z">Monday, October 17 2022, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2210.07838'>Fields2Cover: An open-source coverage path planning library for unmanned agricultural vehicles</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Gonzalo Mier, Jo&#xe3;o Valente, Sytze de Bruin</p><p>This paper describes Fields2Cover, a novel open source library for coverage
-path planning (CPP) for agricultural vehicles. While there are several CPP
-solutions nowadays, there have been limited efforts to unify them into an open
-source library and provide benchmarking tools to compare their performance.
-Fields2Cover provides a framework for planning coverage paths, developing novel
-techniques, and benchmarking state-of-the-art algorithms. The library features
-a modular and extensible architecture that supports various vehicles and can be
-used for a variety of applications, including farms. Its core modules are: a
-headland generator, a swath generator, a route planner and a path planner. An
-interface to the Robot Operating System (ROS) is also supplied as an add-on. In
-this paper, the functionalities of the library for planning a coverage path in
-agriculture are demonstrated using 8 state-of-the-art methods and 7 objective
-functions in simulation and field experiments.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Mier_G/0/1/0/all/0/1">Gonzalo Mier</a>, <a href="http://arxiv.org/find/cs/1/au:+Valente_J/0/1/0/all/0/1">Jo&#xe3;o Valente</a>, <a href="http://arxiv.org/find/cs/1/au:+Bruin_S/0/1/0/all/0/1">Sytze de Bruin</a></p><p>This paper describes Fields2Cover, a novel open source library for coverage
-path planning (CPP) for agricultural vehicles. While there are several CPP
-solutions nowadays, there have been limited efforts to unify them into an open
-source library and provide benchmarking tools to compare their performance.
-Fields2Cover provides a framework for planning coverage paths, developing novel
-techniques, and benchmarking state-of-the-art algorithms. The library features
-a modular and extensible architecture that supports various vehicles and can be
-used for a variety of applications, including farms. Its core modules are: a
-headland generator, a swath generator, a route planner and a path planner. An
-interface to the Robot Operating System (ROS) is also supplied as an add-on. In
-this paper, the functionalities of the library for planning a coverage path in
-agriculture are demonstrated using 8 state-of-the-art methods and 7 objective
-functions in simulation and field experiments.
 </p>
         
         </div>
