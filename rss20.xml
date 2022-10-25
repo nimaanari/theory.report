@@ -9,6 +9,80 @@
 
 
 <item>
+  <title>Remarkable: “Limitations of Linear Cross-Entropy as a Measure for Quantum Advantage,” by Xun Gao, Marcin Kalinowski, Chi-Ning Chou, Mikhail D. Lukin, Boaz Barak, and Soonwon Choi</title>
+  <guid>http://gilkalai.wordpress.com/?p=23430</guid>
+  <link>https://gilkalai.wordpress.com/2022/10/25/remarkable-limitations-of-linear-cross-entropy-as-a-measure-for-quantum-advantage-by-xun-gao-marcin-kalinowski-chi-ning-chou-mikhail-d-lukin-boaz-barak-and-soonwon-choi/</link>
+  <description>
+    &lt;p&gt;In this post I would like to report about an important paper (posted Dec. 2021) by Xun Gao, Marcin Kalinowski, Chi-Ning Chou, Mikhail D. Lukin, Boaz Barak, and Soonwon Choi. (I am thankful to Xun Gao and&amp;nbsp; Boaz Barak for helpful discussions).&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://arxiv.org/abs/2112.01657&quot;&gt;Limitations of Linear Cross-Entropy as a Measure for Quantum Advantage&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Here is the abstract:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt; &lt;span id=&quot;2112.01657v1-abstract-full&quot; class=&quot;abstract-full has-text-grey-dark mathjax&quot;&gt; Demonstrating quantum advantage requires experimental implementation of a computational task that is hard to achieve using state-of-the-art classical systems. One approach is to perform sampling from a probability distribution associated with a class of highly entangled many-body wavefunctions. It has been suggested that this approach can be certified with the Linear Cross-Entropy Benchmark (XEB). We critically examine this notion. First, in a &amp;#8220;benign&amp;#8221; setting where an honest implementation of noisy quantum circuits is assumed, we characterize the conditions under which the XEB approximates the fidelity. Second, in an &amp;#8220;adversarial&amp;#8221; setting where all possible classical algorithms are considered for comparison, we show that achieving relatively high XEB values does not imply faithful simulation of quantum dynamics. We present an efficient classical algorithm that, with 1 GPU within 2s, yields high XEB values, namely 2-12% of those obtained in experiments. By identifying and exploiting several vulnerabilities of the XEB, we achieve high XEB values without full simulation of quantum circuits. Remarkably, our algorithm features better scaling with the system size than noisy quantum devices for commonly studied random circuit ensembles. To quantitatively explain the success of our algorithm and the limitations of the XEB, we use a theoretical framework in which the average XEB and fidelity are mapped to statistical models. We illustrate the relation between the XEB and the fidelity for quantum circuits in various architectures, with different gate choices, and in the presence of noise. Our results show that XEB&amp;#8217;s utility as a proxy for fidelity hinges on several conditions, which must be checked in the benign setting but cannot be assumed in the adversarial setting. Thus, the XEB alone has limited utility as a benchmark for quantum advantage. We discuss ways to overcome these limitations.&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2&gt;I. Three parameters for noisy quantum circuits:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;F&lt;/strong&gt; &amp;#8211; The fidelity. If &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cphi&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cphi&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cphi&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;phi&quot; class=&quot;latex&quot; /&gt; is the ideal state and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cpsi&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cpsi&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;psi&quot; class=&quot;latex&quot; /&gt; is the noisy state, then the fidelity &lt;strong&gt;F&lt;/strong&gt; is defined by &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Clangle+%5Cpsi+%5Cleft+%7C+%5Cphi+%5Cright+%7C+%5Cpsi+%5Crangle&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Clangle+%5Cpsi+%5Cleft+%7C+%5Cphi+%5Cright+%7C+%5Cpsi+%5Crangle&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Clangle+%5Cpsi+%5Cleft+%7C+%5Cphi+%5Cright+%7C+%5Cpsi+%5Crangle&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;langle &amp;#92;psi &amp;#92;left | &amp;#92;phi &amp;#92;right | &amp;#92;psi &amp;#92;rangle&quot; class=&quot;latex&quot; /&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;XEB&lt;/strong&gt; &amp;#8211; the linear cross entropy estimator for the fidelity&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;P(No err)&lt;/strong&gt; &amp;#8211; The probability of no errors (denoted in the paper by &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p_%7Bno%7Eerr%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p_%7Bno%7Eerr%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p_%7Bno%7Eerr%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p_{no~err}&quot; class=&quot;latex&quot; /&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;II. Some issues:&lt;/h2&gt;
+&lt;p&gt;a) The fidelity &lt;strong&gt;F&lt;/strong&gt; cannot be read from the distribution of the samples produced by the quantum computer. Suppose we are given an unlimited number of samples (or a large number of samples for which the empirical distribution is a good approximation to the noisy distribution), what is the best way to estimate the fidelity?&lt;/p&gt;
+&lt;p&gt;b) If we have a polynomial number of samples in (1/F). What are the best ways to estimate the fidelity?&lt;/p&gt;
+&lt;p&gt;c) What in general are the relations between &lt;strong&gt;F&lt;/strong&gt;, &lt;strong&gt;XEB&lt;/strong&gt;, and &lt;strong&gt;P(No err)?&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;III. A basic observation:&lt;/h2&gt;
+&lt;p&gt;A basic observation of the paper is that when you apply depolarizing noise to the gates, the resulting distribution has a positive correlation to the ideal distribution. (Hence this leads to positive XEB value.)&amp;nbsp; The basic idea (as I see it) is simple: let&amp;#8217;s consider 1-gate which is a certain unitary operator U.&lt;br /&gt;
+The space of such operators is spanned by I, X, Y, and Z. Let us assume that applying to U unitary noise, say, Y, will lead to a new quantum circuit which gives uncorrelated samples and fidelity estimator 0. However, applying (I+X+Y+Z), which replace the qubit with a maximal entropy state is a very basic form of noise (depolarizing noise on the qubit on which the gate acts) and this form of noise is expected to slash the fidelity estimator by four and not send it to zero. (For 2-gates the story is similar but this time there are 16 basic possibilities for unitary noise so we can expect that a depolarizing noise will slash the linear cross entropy estimator by 1/16 (and not to zero).)&lt;/p&gt;
+&lt;h2&gt;IV. Additional observations&lt;/h2&gt;
+&lt;p&gt;The paper by Gao et al. describes various additional reasons for which the effect of gate errors will lead to positive correlations with the ideal distribution, and in general will lead to strict inequalities&lt;/p&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;strong&gt;(1) &amp;nbsp; XEB &amp;nbsp; &amp;gt;&amp;nbsp; P(No err) &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;strong&gt;(2) &amp;nbsp;&lt;/strong&gt; &lt;strong&gt;XEB &amp;gt; F &amp;gt; P(No err) &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;First, it turns out that even a single unitary gate error can contribute to the increase of &lt;strong&gt;XEB&amp;nbsp; &lt;/strong&gt;(and also to increase&lt;strong&gt; F)&lt;/strong&gt;, and, moreover, the effect of two (or more) gate errors can also lead to an increased &lt;strong&gt;XEB (&lt;/strong&gt;and also an increased &lt;strong&gt;F&lt;/strong&gt;.)&lt;/p&gt;
+&lt;p&gt;In expectation we can actually expect.&lt;/p&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;strong&gt;(3) &amp;nbsp;&amp;nbsp; XEB &amp;gt; F &amp;gt; P(No err) &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is demonstrated by Figure 1 of the paper.&lt;/p&gt;
+&lt;h2&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;23473&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2022/10/25/remarkable-limitations-of-linear-cross-entropy-as-a-measure-for-quantum-advantage-by-xun-gao-marcin-kalinowski-chi-ning-chou-mikhail-d-lukin-boaz-barak-and-soonwon-choi/xungao/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2022/10/xungao.png&quot; data-orig-size=&quot;337,578&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;XunGao&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=175&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=337&quot; class=&quot;alignnone  wp-image-23473&quot; src=&quot;https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=310&amp;#038;h=532&quot; alt=&quot;XunGao&quot; width=&quot;310&quot; height=&quot;532&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=310&amp;amp;h=532 310w, https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=87&amp;amp;h=150 87w, https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=175&amp;amp;h=300 175w, https://gilkalai.files.wordpress.com/2022/10/xungao.png 337w&quot; sizes=&quot;(max-width: 310px) 100vw, 310px&quot;&gt;&lt;/h2&gt;
+&lt;h2&gt;V. The idea behind the spoofing algorithm&lt;/h2&gt;
+&lt;p&gt;The way Gao, Kalinowski, Chou, Lukin, Barak, and Choi used this observation is by applying such depolarization noise on a set of 2-gates that would split the circuit into two parts. This will lead to a sort of &amp;#8220;patched&amp;#8221; circuit for which one can make the computation separately on every patch, which gives much quicker classical algorithms.&lt;/p&gt;
+&lt;h2&gt;VI The asymptotic behavior&lt;/h2&gt;
+&lt;p&gt;One interesting aspect of the paper is that (as far as I could understand) when the number of qubits grows the &amp;#8220;quantum advantage&amp;#8221; , namely the advantage of the quantum algorithms over the classical algorithms, diminishes. As Gao et al. write&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;color:#0000ff;&quot;&gt;&lt;em&gt;&amp;#8220;Remarkably, the &lt;strong&gt;XEB &lt;/strong&gt;&lt;/em&gt;&lt;em&gt;value of our algorithm generally improves for larger &lt;/em&gt;&lt;em&gt;quantum circuits, whereas that of noisy quantum &lt;/em&gt;&lt;em&gt;devices quickly deteriorates. Such scaling continues to hold when the number of qubits is increased &lt;/em&gt;&lt;em&gt;while the depth of the circuit and the error-per-gate &lt;/em&gt;&lt;em&gt;are fixed&amp;#8230;&amp;#8221;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Remark: This conclusion assumes that you need enough samples to verify the fidelity. Philosophically one can claim that the quantum advantage may apply for producing *one* sample; After all, your argument is based anyway on extrapolation, and for supremacy experiments you cannot verify even the individual amplitudes. (I made this claim in a discussion with Daniel Lidar regarding the very nice paper by &lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;Zlokapa, Boixo, and Lidar, &lt;a href=&quot;https://arxiv.org/abs/2005.02464&quot;&gt;Boundaries of quantum supremacy &lt;/a&gt;&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot;&gt;via random circuit sampling,&lt;/span&gt; but I couldn&amp;#8217;t persuade Daniel.)&lt;/p&gt;
+&lt;h2&gt;VII Relevance to the statistical analysis and the concerns regarding the Google 2019 experiment&lt;/h2&gt;
+&lt;p&gt;The paper is relevant to two important aspects of my &lt;a href=&quot;https://gilkalai.files.wordpress.com/2022/08/sts836.pdf&quot;&gt;statistical science paper&lt;/a&gt; with Yosi Rinott and Tomer Shoham and to our work which puts the Google 2019 experiment under scrutiny.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The fact that &lt;strong&gt;XEB&lt;/strong&gt; is systematically larger than &lt;strong&gt;P(No err)&lt;/strong&gt; may support the concern that the precise agreement of the &lt;strong&gt;XEB&lt;/strong&gt; estimator with the &lt;strong&gt;P(No err)&lt;/strong&gt; computation (Formula (77)) is &amp;#8220;too good to be true,&amp;#8221; namely, it fits too well with the researcher&amp;#8217;s expectations rather than with physical reality.&lt;/li&gt;
+&lt;li&gt;The basic observation (III) implies that the exponential decay for the Fourier coefficients with the degrees, that we attributed only to readout errors is also caused by gate errors. Subsequently, the Fourier description of the data that we regarded as providing confirmation to the Google claim (see, Figure 2 in &lt;a href=&quot;https://arxiv.org/abs/2210.12753&quot;&gt;our recent paper&lt;/a&gt;) actually appears to show that the empirical data does not fit the theory.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Apropos Fourier methods and Xun Gao: The first I heard of Xun Gao&amp;#8217;s work was in connection with his excellent early work with Duan &lt;a href=&quot;https://arxiv.org/abs/1810.03176&quot;&gt;Efficient classical simulation of noisy quantum computation&lt;/a&gt; that used Fourier methods to study quantum circuits.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-25 04:59:48 UTC</pubDate>
+  <author>Gil Kalai</author>
+</item>
+
+<item>
+  <title>9th TOCA-SV – 11/18</title>
+  <guid>http://theorydish.blog/?p=2853</guid>
+  <link>https://theorydish.blog/2022/10/24/9th-toca-sv-11-18/</link>
+  <description>
+    &lt;p&gt;The 9th TOCA-SV day is Coming on Friday 11/18/22, in the Google campus in Mountain View. It is free but you need to register &lt;a href=&quot;https://sites.google.com/view/9th-toca-sv-nov-18-2022/&quot;&gt;here&lt;/a&gt;, where you can also see an up-to-date list of talks and abstracts.&lt;/p&gt;
+&lt;div class=&quot;CjVfdc&quot;&gt;Schedule (tentative):&lt;/div&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;0930-1000: Breakfast&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1000-1015: Welcome&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1015-1100: Gagan Aggarwal (Google)&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1100-1145: Li-Yang Tan (Stanford)&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1145-1245: Short talks I&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1245-1400: Lunch&lt;/strong&gt;&lt;strong&gt; (provided) &lt;/strong&gt;&lt;strong&gt;and campus tour&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1400-1445: Sandy Irani (Simons/UC Berkeley)&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1445-1530: Kunal Talwar (Apple)&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1530-1600: Coffee Break&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;CDt4Ke zfr3Q&quot; dir=&quot;ltr&quot;&gt;&lt;strong&gt;1600-1730: Short talks II&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Omer Reingold&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-25 04:34:04 UTC</pubDate>
+  <author>Theory Dish: Stanford Blog</author>
+</item>
+
+<item>
   <title>Complexity and Ramsey Largeness of Sets of Oracles Separating Complexity Classes</title>
   <guid>http://arxiv.org/abs/2210.12289</guid>
   <link>http://arxiv.org/abs/2210.12289</link>
@@ -1190,66 +1264,6 @@ datasets, and we observe a superior size-accuracy tradeoff compared with
 popular baselines including uniform sampling and sensitivity sampling. We also
 achieve a significant speedup of existing approximation algorithms for robust
 clustering using our coresets.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-20 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Community detection in edge-labeled graphs</title>
-  <guid>http://arxiv.org/abs/2210.10583</guid>
-  <link>http://arxiv.org/abs/2210.10583</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kumpulainen_I/0/1/0/all/0/1&quot;&gt;Iiro Kumpulainen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tatti_N/0/1/0/all/0/1&quot;&gt;Nikolaj Tatti&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Finding dense communities in networks is a widely-used tool for analysis in
-graph mining. A popular choice for finding such communities is to find
-subgraphs with a high average degree. While useful, interpreting such subgraphs
-may be difficult. On the other hand, many real-world networks have additional
-information, and we are specifically interested in networks that have labels on
-edges. In this paper, we study finding dense subgraphs that can be explained
-with the labels on edges. More specifically, we are looking for a set of labels
-so that the induced subgraph has a high average degree. There are many ways to
-induce a subgraph from a set of labels, and we study two cases: First, we study
-conjunctive-induced dense subgraphs, where the subgraph edges need to have all
-labels. Secondly, we study disjunctive-induced dense subgraphs, where the
-subgraph edges need to have at least one label. We show that both problems are
-$\textbf{NP}$-hard. Because of the hardness, we resort to greedy heuristics. We
-show that we can implement the greedy search efficiently: the respective
-running times for finding conjunctive-induced and disjunctive-induced dense
-subgraphs are in $\mathcal{O}(p \log k)$ and $\mathcal{O}(p \log^2 k)$, where
-$p$ is the number of edge-label pairs and $k$ is the number of labels. Our
-experimental evaluation demonstrates that we can find the ground truth in
-synthetic graphs and that we can find interpretable subgraphs from real-world
-networks.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-20 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Towards Practical Explainability with Cluster Descriptors</title>
-  <guid>http://arxiv.org/abs/2210.10662</guid>
-  <link>http://arxiv.org/abs/2210.10662</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_X/0/1/0/all/0/1&quot;&gt;Xiaoyuan Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tyagin_I/0/1/0/all/0/1&quot;&gt;Ilya Tyagin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ushijima_Mwesigwa_H/0/1/0/all/0/1&quot;&gt;Hayato Ushijima-Mwesigwa&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghosh_I/0/1/0/all/0/1&quot;&gt;Indradeep Ghosh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Safro_I/0/1/0/all/0/1&quot;&gt;Ilya Safro&lt;/a&gt;&lt;/p&gt;&lt;p&gt;With the rapid development of machine learning, improving its explainability
-has become a crucial research goal. We study the problem of making the clusters
-more explainable by investigating the cluster descriptors. Given a set of
-objects $S$, a clustering of these objects $\pi$, and a set of tags $T$ that
-have not participated in the clustering algorithm. Each object in $S$ is
-associated with a subset of $T$. The goal is to find a representative set of
-tags for each cluster, referred to as the cluster descriptors, with the
-constraint that these descriptors we find are pairwise disjoint, and the total
-size of all the descriptors is minimized. In general, this problem is NP-hard.
-We propose a novel explainability model that reinforces the previous models in
-such a way that tags that do not contribute to explainability and do not
-sufficiently distinguish between clusters are not added to the optimal
-descriptors. The proposed model is formulated as a quadratic unconstrained
-binary optimization problem which makes it suitable for solving on modern
-optimization hardware accelerators. We experimentally demonstrate how a
-proposed explainability model can be solved on specialized hardware for
-accelerating combinatorial optimization, the Fujitsu Digital Annealer, and use
-real-life Twitter and PubMed datasets for use cases.
 &lt;/p&gt;
   </description>
   <pubDate>2022-10-20 00:30:00 UTC</pubDate>
