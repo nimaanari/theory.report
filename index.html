@@ -37,7 +37,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-10-26T11:34:33Z">Wednesday, October 26 2022, 11:34</time>
+          <time class='timeago' datetime="2022-10-26T13:22:38Z">Wednesday, October 26 2022, 13:22</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -795,6 +795,121 @@ analysis showing the practical efficiency of our method.
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-10-26T00:30:00Z">Wednesday, October 26 2022, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://benjamin-recht.github.io/2022/10/26/ai-image-search/'>Does AI Suck at Art?</a></h3>
+        <p class='tr-article-feed'>from <a href='http://benjamin-recht.github.io/'>Ben Recht</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>I’ve been researching machine learning for a little over 20 years. For the past five years or so, with the latest wave of AI overpromising, I think I’ve been mostly known as an AI skeptic. But I’ve been engaging with these new AI image generation tools, and they are delightful. They have a lot of promise, and I want to explain why and suggest a few ways to make them even better.</p>
+
+<p>Though I don’t talk about it much, for the past 20 years I’ve also been playing in an ambient shoegazer band called “the fun years.” My bandmate, Isaac Sparks, has been in charge of our visual design from the get-go. Over the years, he’s progressively refined his style, and he has been dipping his toes into the weird world of prompt-to-art.</p>
+
+<p>Last week, we re-released an old single from 2006, and Isaac used midjourney for the cover art. Isaac is a turntablist, and approaches his art similarly to how he approaches searching for records. He seeks out happy accidents that can take on some new life when repurposed in new contexts. The cover of our first CDR, now that’s what i call droning, volume 4, was a photograph Isaac had taken out of my apartment window on a foggy evening. Over time, his covers grew more abstract. The cover of baby it’s cold inside is a collage of close up images of an old paint can Isaac found in the basement of his apartment complex. Most recently, the cover of our latest album typos in your obituary is a photograph of a stark, black, sculpture Isaac made out of wood scraps (He made a similar, Big Lebowski inspired sculpture for the cover art of my book with Steve Wright Optimization for Data Analysis).</p>
+
+<p>For our new single, Isaac tried to come up with a midjourney prompt that captured the appropriate aesthetic of a fun years cover. It only took a couple of iterations to get what he wanted:</p>
+
+<blockquote>
+  <p>A mess of scrap paper, dull color plastic caps, dust, paint smear, chip, cruft, drinking straw, rusty nails, wooden lath, mold fractal, layers, black and white, realistic</p>
+</blockquote>
+
+<p>♦</p>
+
+<p>And we went with the image in the bottom left.</p>
+
+<p>♦</p>
+
+<p>The image didn’t have any obvious visual artifacts and looked like something Isaac might have found out in the world. Having read recent reporting on some rather suspect copyright infringement, Isaac and I wondered if midjourney had obviously just ripped off the image.</p>
+
+<p>For a lot of the early DALL-E memes that I saw on social media, I could often find strikingly similar pictures by pasting the prompt into google image search. But for Isaac’s mess prompt, we came up pretty empty, with some rather hilariously bad results.</p>
+
+<p>♦</p>
+
+<p>♦</p>
+
+<p>Vaishaal Shankar then reminded me that there was a much better image search engine. The original DALL-E model which started the prompt-to-image craze was based on a neural network model called CLIP that learned a model to compare images and text. The model was trained on a huge data set of images paired with captions. It produced two functions: one that mapped images to a code book and one that mapped text to a code book. When you compared codes for two snippets of text, this would tell you how similar the snippets were. When you compared codes of two images, this would tell you how similar the images were. But one of the more amazing things about CLIP is that you could compare the codes of text and images and find images which were similar to the text.</p>
+
+<p>Romain Beaumont built an image search system, clip-retrieval that used CLIP and a new data set LAION-5B consisting of 5 billion images scraped by common crawl. 5 billion! (Insert Dr. Evil meme). Romain hosts a free version of this system, where you type some text, it computes the codebook, and it returns all of the images in LAION-5B which have similar codes to your text. We tried Isaac’s prompt here, and now found some strikingly similar images.</p>
+
+<p>♦</p>
+
+<p>There were hundreds of art pieces and stock photos that captured elements of the spirit of the prompt. Again, with 5 billion images, it’s hard to imagine what’s not in there. But after scrolling through pages of similar images, we couldn’t find any of the four renderings produced by midjourney.</p>
+
+<p>We tried the reverse image search in both clip-retrieval and google, and though we got back some similar textures, we couldn’t find the image itself.</p>
+
+<p>♦</p>
+
+<p>Now, just because we didn’t find our image doesn’t mean it’s not in the corpus somewhere. We looked at around 100 images, but what if we had looked at 1000? Or 10000? Perhaps it’s buried in the corner of some thumbnail in the LAION set. The biggest flaw of these tools is making artist attribution impossible. There should be some simple way of tracing back to the training set. Without traceback and attribution, this is just going to lead to annoying copyright lawsuits like we saw in the early days of sampling in music. We’d be better off if we could avoid those legal battles before they happen.</p>
+
+<p>All that said, it really seems like the midjourney neural nets are doing something more than re-displaying images from the training set. There are certainly billions of amazing textures out in the world, and CLIP-style models make them easier to bring to the surface. But midjourney adds something extra to fuse these textures into something new. It’s much more than a “copyright infringing blur filter” and that’s pretty cool!</p>
+
+<p>I still maintain that AI was and is overhyped. We were promised self-driving cars and cures for cancer, and we ended up with splashy tools for image generation. I’m not sure we can justify the billions of dollars of investment. But the image processing tools are still super fun and I want more to play with, so I’ll be selfish and hope OpenAI raises more money. I hope future variants allow for clearer navigation and enable more intentional sampling and pastiche of the source materials. And I can’t wait until they figure out how to make a plugin for Ableton Live that scours huge audio libraries to produce melted sonic textures. At that point, you won’t hear from me as an AI skeptic anymore as I’ll be blissfully hiding in my music studio.</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>I’ve been researching machine learning for a little over 20 years. For the past five years or so, with the latest wave of AI overpromising, I think I’ve been mostly known as an AI skeptic. But I’ve been engaging with these new AI image generation tools, and they are delightful. They have a lot of promise, and I want to explain why and suggest a few ways to make them even better.</p>
+
+<p>Though I don’t talk about it much, for the past 20 years I’ve also been playing in an ambient shoegazer band called <a href="https://thefunyears.bandcamp.com/">“the fun years.”</a> My bandmate, <a href="http://www.isaacsparks.com/">Isaac Sparks</a>, has been in charge of our visual design from the get-go. Over the years, he’s progressively refined his style, and he has been dipping his toes into the weird world of prompt-to-art.</p>
+
+<p>Last week, <a href="https://thefunyears.bandcamp.com/track/electricity-is-a-scarce-commodity">we re-released an old single from 2006</a>, and Isaac used <a href="https://www.midjourney.com/home/">midjourney</a> for the cover art. Isaac is a turntablist, and approaches his art similarly to how he approaches searching for records. He seeks out happy accidents that can take on some new life when repurposed in new contexts. The cover of our first CDR, <a href="https://thefunyears.bandcamp.com/album/now-thats-what-i-call-droning-volume-4"><em>now that’s what i call droning, volume 4</em></a>, was a photograph Isaac had taken out of my apartment window on a foggy evening. Over time, his covers grew more abstract. The cover of <a href="https://thefunyears.bandcamp.com/album/baby-its-cold-inside"><em>baby it’s cold inside</em></a> is a collage of close up images of an old paint can Isaac found in the basement of his apartment complex. Most recently, the cover of our latest album <a href="https://thefunyears.bandcamp.com/album/typos-in-your-obituary"><em>typos in your obituary</em></a> is a photograph of a stark, black, sculpture Isaac made out of wood scraps (He made a similar, Big Lebowski inspired sculpture for the cover art of my book with Steve Wright <a href="https://www.cambridge.org/core/books/optimization-for-data-analysis/C02C3708905D236AA354D1CE1739A6A2"><em>Optimization for Data Analysis</em></a>).</p>
+
+<p>For our new single, Isaac tried to come up with a midjourney prompt that captured the appropriate aesthetic of a fun years cover. It only took a couple of iterations to get what he wanted:</p>
+
+<blockquote>
+  <p>A mess of scrap paper, dull color plastic caps, dust, paint smear, chip, cruft, drinking straw, rusty nails, wooden lath, mold fractal, layers, black and white, realistic</p>
+</blockquote>
+
+<p class="center"><img src="/assets/ai-art/mid_query_return.jpg" alt="midjourney returns some pretty cool cover art." width="100%" /></p>
+
+<p>And we went with the image in the bottom left.</p>
+
+<p class="center"><img src="/assets/ai-art/EIASC.jpg" alt="cover art of electricity is a scarce commodity." width="100%" /></p>
+
+<p>The image didn’t have any obvious visual artifacts and looked like something Isaac might have found out in the world. Having read <a href="https://www.technologyreview.com/2022/09/16/1059598/this-artist-is-dominating-ai-generated-art-and-hes-not-happy-about-it/">recent reporting</a> on some rather suspect copyright infringement, Isaac and I wondered if midjourney had obviously just ripped off the image.</p>
+
+<p>For a lot of the early <a href="https://openai.com/blog/dall-e/">DALL-E</a> memes that I saw on social media, I could often find strikingly similar pictures by pasting the prompt into google image search. But for Isaac’s mess prompt, we came up pretty empty, with some rather hilariously bad results.</p>
+
+<p class="center"><img src="/assets/ai-art/google_image_stinks.png" alt="google image search results for Isaac's query." width="100%" /></p>
+
+<p class="center"><img src="/assets/ai-art/google_image_stinks2.png" alt="more google image search results." width="100%" /></p>
+
+<p><a href="http://vaishaal.com/">Vaishaal Shankar</a> then reminded me that there was a much better image search engine. The original <a href="https://openai.com/blog/dall-e/">DALL-E</a> model which started the prompt-to-image craze was based on a neural network model called <a href="https://openai.com/blog/clip/">CLIP</a> that learned a model to compare images and text. The model was trained on a huge data set of images paired with captions. It produced two functions: one that mapped images to a code book and one that mapped text to a code book. When you compared codes for two snippets of text, this would tell you how similar the snippets were. When you compared codes of two images, this would tell you how similar the images were. But one of the more amazing things about CLIP is that you could compare the codes of text and images and find images which were similar to the text.</p>
+
+<p><a href="https://github.com/rom1504">Romain Beaumont</a> built an image search system, <a href="https://rom1504.github.io/clip-retrieval">clip-retrieval</a> that used CLIP and a new data set <a href="https://laion.ai/blog/laion-5b/">LAION-5B</a> consisting of 5 billion images scraped by <a href="https://commoncrawl.org/">common crawl</a>. 5 billion! (Insert Dr. Evil meme). Romain hosts a <a href="https://rom1504.github.io/clip-retrieval">free version of this system</a>, where you type some text, it computes the codebook, and it returns all of the images in LAION-5B which have similar codes to your text. We tried Isaac’s prompt here, and now found some strikingly similar images.</p>
+
+<p class="center"><img src="/assets/ai-art/clip-retrieval-works.png" alt="clip-retrieval image search results for Isaac's query." width="100%" /></p>
+
+<p>There were hundreds of art pieces and stock photos that captured elements of the spirit of the prompt. Again, with 5 billion images, it’s hard to imagine what’s not in there. But after scrolling through pages of similar images, we couldn’t find any of the four renderings produced by midjourney.</p>
+
+<p>We tried the reverse image search in both clip-retrieval and google, and though we got back some similar textures, we couldn’t find the image itself.</p>
+
+<p class="center"><img src="/assets/ai-art/clip-retrieval-image-search.png" alt="clip-retrieval reverse image search results for the cover art image." width="100%" /></p>
+
+<p>Now, just because we didn’t find our image doesn’t mean it’s not in the corpus somewhere. We looked at around 100 images, but what if we had looked at 1000? Or 10000? Perhaps it’s buried in the corner of some thumbnail in the LAION set. The biggest flaw of these tools is making artist attribution impossible. There should be some simple way of tracing back to the training set. Without traceback and attribution, this is just going to lead to annoying copyright lawsuits like we saw in the early days of sampling in music. We’d be better off if we could avoid those legal battles before they happen.</p>
+
+<p>All that said, it really seems like the midjourney neural nets are doing something more than re-displaying images from the training set. There are certainly billions of amazing textures out in the world, and CLIP-style models make them easier to bring to the surface. But midjourney adds something extra to fuse these textures into something new. It’s much more than a “copyright infringing blur filter” and that’s pretty cool!</p>
+
+<p>I still maintain that AI was and is overhyped. We were promised self-driving cars and cures for cancer, and we ended up with splashy tools for image generation. I’m not sure we can justify the billions of dollars of investment. But the image processing tools are still super fun and I want more to play with, so I’ll be selfish and hope OpenAI raises more money. I hope future variants allow for clearer navigation and enable more intentional sampling and pastiche of the source materials. And I can’t wait until they figure out how to make a plugin for Ableton Live that scours huge audio libraries to produce melted sonic textures. At that point, you won’t hear from me as an AI skeptic anymore as I’ll be blissfully hiding in my music studio.</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-10-26T00:00:00Z">Wednesday, October 26 2022, 00:00</time>
         </div>
       </div>
     </details>
@@ -3085,40 +3200,6 @@ Email: facultysearch@cs.illinois.edu</p>
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-10-20T01:51:34Z">Thursday, October 20 2022, 01:51</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://cstheory-jobs.org/2022/10/20/professor-open-rank-at-university-of-illinois-at-urbana-champaign-apply-by-november-15-2022/'>Professor (Open Rank) at University of Illinois at Urbana-Champaign (apply by November 15, 2022)</a></h3>
-        <p class='tr-article-feed'>from <a href='https://cstheory-jobs.org'>CCI: jobs</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          The Department of Computer Science at the University of Illinois Urbana-Champaign invites applications for full-time tenure-track faculty positions at all levels (Assistant Professor, Associate Professor, Full Professor). We particularly encourage applications from candidates working in quantum computing, but all areas of theory will be considered. Website: cs.illinois.edu/about/positions/faculty-positions/tenure-track Email: cs-facultysearch@illinois.edu
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>The Department of Computer Science at the University of Illinois Urbana-Champaign invites applications for full-time tenure-track faculty positions at all levels (Assistant Professor, Associate Professor, Full Professor). We particularly encourage applications from candidates working in quantum computing, but all areas of theory will be considered.</p>
-<p>Website: <a href="https://cs.illinois.edu/about/positions/faculty-positions/tenure-track">https://cs.illinois.edu/about/positions/faculty-positions/tenure-track</a><br />
-Email: cs-facultysearch@illinois.edu</p>
-<p class="authors">By shacharlovett</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-10-20T01:45:15Z">Thursday, October 20 2022, 01:45</time>
         </div>
       </div>
     </details>
