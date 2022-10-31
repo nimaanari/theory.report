@@ -37,7 +37,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-10-31T05:08:29Z">Monday, October 31 2022, 05:08</time>
+          <time class='timeago' datetime="2022-10-31T05:49:25Z">Monday, October 31 2022, 05:49</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -339,6 +339,82 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Monday, October 31
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://scottaaronson.blog/?p=6784'>Oh right, quantum computing</a></h3>
+        <p class='tr-article-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          These days, I often need to remind myself that, as an undergrad, grad student, postdoc, or professor, I&#8217;ve now been doing quantum computing research for a quarter-century&#8212;i.e., well over half of the subject&#8217;s existence. As a direct result, when I feel completely jaded about a new development in QC, it might actually be exciting. When [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>These days, I often need to remind myself that, as an undergrad, grad student, postdoc, or professor, I&#8217;ve now been doing quantum computing research for a quarter-century&#8212;i.e., well over half of the subject&#8217;s existence.  As a direct result, when I feel completely jaded about a new development in QC, it might actually be exciting.  When I feel moderately excited, it might actually be the most exciting thing for years.</p>
+
+
+
+<p>With that in mind:</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>(1) Last week National Public Radio&#8217;s Marketplace <a href="https://www.marketplace.org/2022/10/27/china-and-the-us-vie-for-quantum-computing-supremacy/amp/">interviewed</a> me, John Martinis, and others about the current state of quantum computing.  While the piece wasn&#8217;t entirely hype-free, I&#8217;m pleased to report that my own views were represented accurately!  To wit:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>“There is a tsunami of hype about what quantum computers are going to revolutionize,” said Scott Aaronson, a professor of computer science at the University of Texas at Austin. “Quantum computing has turned into a word that venture capitalists or people seeking government funding will sprinkle on anything because it sounds good.”</p><p>Aaronson warned we can’t be certain that these computers will in fact revolutionize machine learning and finance and optimization problems.  “We can’t prove that there’s not a quantum algorithm that solves all these problems super fast, but we can’t even prove there’s not an algorithm for a conventional computer that does it,” he said.  [In the recorded version, they replaced this by a simpler but also accurate thought: namely, that we can&#8217;t prove one way or the other whether there&#8217;s a useful quantum advantage for these tasks.]</p><p><span style="font-size: revert; color: initial;"></span></p></blockquote>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>(2) I don&#8217;t like to use this blog to toot my own research horn, but on Thursday my postdoc Jason Pollack and I released a paper, entitled <a href="https://arxiv.org/pdf/2210.15601.pdf">Discrete Bulk Reconstruction</a>. And to be honest, I&#8217;m pretty damned excited about it.  It represents about 8 months of Jason&#8212;a cosmologist and string theorist who studied under Sean Carroll&#8212;helping me understand <a href="https://en.wikipedia.org/wiki/AdS/CFT_correspondence">AdS/CFT</a> in the language of the undergraduate CS curriculum, like min-cuts on undirected graphs, so that we could then look for polynomial-time algorithms to implement the holographic mapping from boundary quantum states to the spatial geometry in the bulk.  We drew heavily on previous work in the same direction, especially the already-seminal 2015 <a href="https://arxiv.org/abs/1505.07839">holographic entropy cone</a> paper by Ning Bao et al.  But I&#8217;d like to think that, among other things, our work represents a new frontier in just how accessible AdS/CFT itself can be made to CS and discrete math types.  Anyway, here&#8217;s the abstract if you&#8217;re interested:</p>
+
+
+
+<blockquote class="wp-block-quote"><p>According to the <i>AdS/CFT correspondence</i>, the geometries of certain spacetimes are fully determined by quantum states that live on their boundaries &#8212; indeed, by the von Neumann entropies of portions of those boundary states. This work investigates to what extent the geometries can be reconstructed from the entropies <i>in polynomial time</i>. Bouland, Fefferman, and Vazirani (2019) argued that the AdS/CFT map can be exponentially complex if one wants to reconstruct regions such as the interiors of black holes. Our main result provides a sort of converse: we show that, in the special case of a single 1D boundary, if the input data consists of a list of entropies of <i>contiguous</i> boundary regions, and if the entropies satisfy a single inequality called Strong Subadditivity, then we can construct a graph model for the bulk in linear time. Moreover, the bulk graph is planar, it has O(N<sup>2</sup>) vertices (the information-theoretic minimum), and it&#8217;s &#8220;universal,&#8221; with only the edge weights depending on the specific entropies in question. From a combinatorial perspective, our problem boils down to an &#8220;inverse&#8221; of the famous min-cut problem: rather than being given a graph and asked to find a min-cut, here we&#8217;re given the values of min-cuts separating various sets of vertices, and need to find a weighted undirected graph consistent with those values. Our solution to this problem relies on the notion of a &#8220;bulkless&#8221; graph, which might be of independent interest for AdS/CFT. We also make initial progress on the case of multiple 1D boundaries &#8212; where the boundaries could be connected via wormholes &#8212; including an upper bound of O(N<sup>4</sup>) vertices whenever a planar bulk graph exists (thus putting the problem into the complexity class NP).</p></blockquote>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>(3) Anand Natarajan and Chinmay Nirkhe posted a preprint entitled <a href="https://arxiv.org/pdf/2210.15380.pdf">A classical oracle separation between QMA and QCMA</a>, which makes progress on a problem that&#8217;s been raised on this blog all the way back to its inception.  A bit of context: <a href="https://en.wikipedia.org/wiki/QMA">QMA</a>, Quantum Merlin-Arthur, captures what can be proven using a quantum state with poly(n) qubits as the proof, and a polynomial-time quantum algorithm as the verifier.  QCMA, or Quantum Classical Merlin-Arthur, is the same as QMA except that now the proof has to be classical.  A fundamental problem of quantum complexity theory, first raised by <a href="https://arxiv.org/abs/quant-ph/0210077">Aharonov and Naveh</a> in 2002, is whether QMA=QCMA.  In 2007, <a href="https://arxiv.org/abs/quant-ph/0604056">Greg Kuperberg and I</a> introduced the concept of quantum oracle separation&#8212;that is, a unitary that can be applied in a black-box manner&#8212;in order to show that there&#8217;s a quantum oracle relative to which QCMA≠QMA.  In 2015, <a href="https://arxiv.org/abs/1510.06750">Fefferman and Kimmel</a> improved this, to show that there&#8217;s a &#8220;randomized in-place&#8221; oracle relative to which QCMA≠QMA.  Natarajan and Nirkhe now remove the &#8220;in-place&#8221; part, meaning the only thing still &#8220;wrong&#8221; with their oracle is that it&#8217;s randomized.  Derandomizing their construction would finally settle this 20-year-old open problem (except, of course, for the minor detail of whether QMA=QCMA in the &#8220;real,&#8221; unrelativized world!).</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>(4) Oh right, the Google group reports the use of their superconducting processor to <a href="https://arxiv.org/pdf/2210.10255.pdf">simulate non-abelian anyons</a>.  Cool.</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-10-31T05:26:35Z">Monday, October 31 2022, 05:26</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3098,77 +3174,6 @@ Email: kristi@cs.rochester.edu</p>
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-10-25T17:06:44Z">Tuesday, October 25 2022, 17:06</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://gilkalai.wordpress.com/2022/10/25/remarkable-limitations-of-linear-cross-entropy-as-a-measure-for-quantum-advantage-by-xun-gao-marcin-kalinowski-chi-ning-chou-mikhail-d-lukin-boaz-barak-and-soonwon-choi/'>Remarkable: “Limitations of Linear Cross-Entropy as a Measure for Quantum Advantage,” by Xun Gao, Marcin Kalinowski, Chi-Ning Chou, Mikhail D. Lukin, Boaz Barak, and Soonwon Choi</a></h3>
-        <p class='tr-article-feed'>from <a href='https://gilkalai.wordpress.com'>Gil Kalai</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          In this post I would like to report about an important paper (posted Dec. 2021) by Xun Gao, Marcin Kalinowski, Chi-Ning Chou, Mikhail D. Lukin, Boaz Barak, and Soonwon Choi. (I am thankful to Xun Gao and&#160; Boaz Barak for &#8230; Continue reading &#8594;
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>In this post I would like to report about an important paper (posted Dec. 2021) by Xun Gao, Marcin Kalinowski, Chi-Ning Chou, Mikhail D. Lukin, Boaz Barak, and Soonwon Choi. (I am thankful to Xun Gao and&nbsp; Boaz Barak for helpful discussions).</p>
-<h3><a href="https://arxiv.org/abs/2112.01657">Limitations of Linear Cross-Entropy as a Measure for Quantum Advantage</a></h3>
-<p>Here is the abstract:</p>
-<blockquote><p><em> <span id="2112.01657v1-abstract-full" class="abstract-full has-text-grey-dark mathjax"> Demonstrating quantum advantage requires experimental implementation of a computational task that is hard to achieve using state-of-the-art classical systems. One approach is to perform sampling from a probability distribution associated with a class of highly entangled many-body wavefunctions. It has been suggested that this approach can be certified with the Linear Cross-Entropy Benchmark (XEB). We critically examine this notion. First, in a &#8220;benign&#8221; setting where an honest implementation of noisy quantum circuits is assumed, we characterize the conditions under which the XEB approximates the fidelity. Second, in an &#8220;adversarial&#8221; setting where all possible classical algorithms are considered for comparison, we show that achieving relatively high XEB values does not imply faithful simulation of quantum dynamics. We present an efficient classical algorithm that, with 1 GPU within 2s, yields high XEB values, namely 2-12% of those obtained in experiments. By identifying and exploiting several vulnerabilities of the XEB, we achieve high XEB values without full simulation of quantum circuits. Remarkably, our algorithm features better scaling with the system size than noisy quantum devices for commonly studied random circuit ensembles. To quantitatively explain the success of our algorithm and the limitations of the XEB, we use a theoretical framework in which the average XEB and fidelity are mapped to statistical models. We illustrate the relation between the XEB and the fidelity for quantum circuits in various architectures, with different gate choices, and in the presence of noise. Our results show that XEB&#8217;s utility as a proxy for fidelity hinges on several conditions, which must be checked in the benign setting but cannot be assumed in the adversarial setting. Thus, the XEB alone has limited utility as a benchmark for quantum advantage. We discuss ways to overcome these limitations.</span></em></p></blockquote>
-<h2>I. Three parameters for noisy quantum circuits:</h2>
-<ol>
-<li><strong>F</strong> &#8211; The fidelity. If <img src="https://s0.wp.com/latex.php?latex=%5Cphi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cphi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cphi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;phi" class="latex" /> is the ideal state and <img src="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;psi" class="latex" /> is the noisy state, then the fidelity <strong>F</strong> is defined by <img src="https://s0.wp.com/latex.php?latex=%5Clangle+%5Cpsi+%5Cleft+%7C+%5Cphi+%5Cright+%7C+%5Cpsi+%5Crangle&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Clangle+%5Cpsi+%5Cleft+%7C+%5Cphi+%5Cright+%7C+%5Cpsi+%5Crangle&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Clangle+%5Cpsi+%5Cleft+%7C+%5Cphi+%5Cright+%7C+%5Cpsi+%5Crangle&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;langle &#92;psi &#92;left | &#92;phi &#92;right | &#92;psi &#92;rangle" class="latex" />,</li>
-<li><strong>XEB</strong> &#8211; the linear cross entropy estimator for the fidelity</li>
-<li><strong>P(No err)</strong> &#8211; The probability of no errors (denoted in the paper by <img src="https://s0.wp.com/latex.php?latex=p_%7Bno%7Eerr%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=p_%7Bno%7Eerr%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p_%7Bno%7Eerr%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="p_{no~err}" class="latex" />).</li>
-</ol>
-<h2>II. Some issues:</h2>
-<p>a) The fidelity <strong>F</strong> cannot be read from the distribution of the samples produced by the quantum computer. Suppose we are given an unlimited number of samples (or a large number of samples for which the empirical distribution is a good approximation to the noisy distribution), what is the best way to estimate the fidelity?</p>
-<p>b) If we have a polynomial number of samples in (1/F). What are the best ways to estimate the fidelity?</p>
-<p>c) What in general are the relations between <strong>F</strong>, <strong>XEB</strong>, and <strong>P(No err)?</strong></p>
-<h2>III. A basic observation:</h2>
-<p>A basic observation of the paper is that when you apply depolarizing noise to the gates, the resulting distribution has a positive correlation to the ideal distribution. (Hence this leads to positive XEB value.)&nbsp; The basic idea (as I see it) is simple: let&#8217;s consider 1-gate which is a certain unitary operator U.<br />
-The space of such operators is spanned by I, X, Y, and Z. Let us assume that applying to U unitary noise, say, Y, will lead to a new quantum circuit which gives uncorrelated samples and fidelity estimator 0. However, applying (I+X+Y+Z), which replace the qubit with a maximal entropy state is a very basic form of noise (depolarizing noise on the qubit on which the gate acts) and this form of noise is expected to slash the fidelity estimator by four and not send it to zero. (For 2-gates the story is similar but this time there are 16 basic possibilities for unitary noise so we can expect that a depolarizing noise will slash the linear cross entropy estimator by 1/16 (and not to zero).)</p>
-<h2>IV. Additional observations</h2>
-<p>The paper by Gao et al. describes various additional reasons for which the effect of gate errors will lead to positive correlations with the ideal distribution, and in general will lead to strict inequalities</p>
-<p style="text-align:center;"><strong>(1) &nbsp; XEB &nbsp; &gt;&nbsp; P(No err) </strong></p>
-<p>and</p>
-<p style="text-align:center;"><strong>(2) &nbsp;</strong> <strong>XEB &gt; F &gt; P(No err) </strong></p>
-<p>First, it turns out that even a single unitary gate error can contribute to the increase of <strong>XEB&nbsp; </strong>(and also to increase<strong> F)</strong>, and, moreover, the effect of two (or more) gate errors can also lead to an increased <strong>XEB (</strong>and also an increased <strong>F</strong>.)</p>
-<p>In expectation we can actually expect.</p>
-<p style="text-align:center;"><strong>(3) &nbsp;&nbsp; XEB &gt; F &gt; P(No err) </strong></p>
-<p>This is demonstrated by Figure 1 of the paper.</p>
-<h2><img loading="lazy" data-attachment-id="23473" data-permalink="https://gilkalai.wordpress.com/2022/10/25/remarkable-limitations-of-linear-cross-entropy-as-a-measure-for-quantum-advantage-by-xun-gao-marcin-kalinowski-chi-ning-chou-mikhail-d-lukin-boaz-barak-and-soonwon-choi/xungao/" data-orig-file="https://gilkalai.files.wordpress.com/2022/10/xungao.png" data-orig-size="337,578" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="XunGao" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=175" data-large-file="https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=337" class="alignnone  wp-image-23473" src="https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=310&#038;h=532" alt="XunGao" width="310" height="532" srcset="https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=310&amp;h=532 310w, https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=87&amp;h=150 87w, https://gilkalai.files.wordpress.com/2022/10/xungao.png?w=175&amp;h=300 175w, https://gilkalai.files.wordpress.com/2022/10/xungao.png 337w" sizes="(max-width: 310px) 100vw, 310px"></h2>
-<h2>V. The idea behind the spoofing algorithm</h2>
-<p>The way Gao, Kalinowski, Chou, Lukin, Barak, and Choi used this observation is by applying such depolarization noise on a set of 2-gates that would split the circuit into two parts. This will lead to a sort of &#8220;patched&#8221; circuit for which one can make the computation separately on every patch, which gives much quicker classical algorithms.</p>
-<h2>VI The asymptotic behavior</h2>
-<p>One interesting aspect of the paper is that (as far as I could understand) when the number of qubits grows the &#8220;quantum advantage&#8221; , namely the advantage of the quantum algorithms over the classical algorithms, diminishes. As Gao et al. write</p>
-<blockquote><p><span style="color:#0000ff;"><em>&#8220;Remarkably, the <strong>XEB </strong></em><em>value of our algorithm generally improves for larger </em><em>quantum circuits, whereas that of noisy quantum </em><em>devices quickly deteriorates. Such scaling continues to hold when the number of qubits is increased </em><em>while the depth of the circuit and the error-per-gate </em><em>are fixed&#8230;&#8221;</em></span></p></blockquote>
-<p>Remark: This conclusion assumes that you need enough samples to verify the fidelity. Philosophically one can claim that the quantum advantage may apply for producing *one* sample; After all, your argument is based anyway on extrapolation, and for supremacy experiments you cannot verify even the individual amplitudes. (I made this claim in a discussion with Daniel Lidar regarding the very nice paper by <span dir="ltr" role="presentation">Zlokapa, Boixo, and Lidar, <a href="https://arxiv.org/abs/2005.02464">Boundaries of quantum supremacy </a></span><span dir="ltr" role="presentation">via random circuit sampling,</span> but I couldn&#8217;t persuade Daniel.)</p>
-<h2>VII Relevance to the statistical analysis and the concerns regarding the Google 2019 experiment</h2>
-<p>The paper is relevant to two important aspects of my <a href="https://gilkalai.files.wordpress.com/2022/08/sts836.pdf">statistical science paper</a> with Yosi Rinott and Tomer Shoham and to our work which puts the Google 2019 experiment under scrutiny.</p>
-<ol>
-<li>The fact that <strong>XEB</strong> is systematically larger than <strong>P(No err)</strong> may support the concern that the precise agreement of the <strong>XEB</strong> estimator with the <strong>P(No err)</strong> computation (Formula (77)) is &#8220;too good to be true,&#8221; namely, it fits too well with the researcher&#8217;s expectations rather than with physical reality.</li>
-<li>The basic observation (III) implies that the exponential decay for the Fourier coefficients with the degrees, that we attributed only to readout errors is also caused by gate errors. Subsequently, the Fourier description of the data that we regarded as providing confirmation to the Google claim (see, Figure 2 in <a href="https://arxiv.org/abs/2210.12753">our recent paper</a>) actually appears to show that the empirical data does not fit the theory.</li>
-</ol>
-<p>Apropos Fourier methods and Xun Gao: The first I heard of Xun Gao&#8217;s work was in connection with his excellent early work with Duan <a href="https://arxiv.org/abs/1810.03176">Efficient classical simulation of noisy quantum computation</a> that used Fourier methods to study quantum circuits.</p>
-<p class="authors">By Gil Kalai</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-10-25T04:59:48Z">Tuesday, October 25 2022, 04:59</time>
         </div>
       </div>
     </details>
