@@ -10,6 +10,108 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">DifferentialPrivacy.org: Composition Basics</title>
+    <link href="https://differentialprivacy.org/composition-basics/"/>
+    <id>https://differentialprivacy.org/composition-basics/</id>
+    <updated>2022-11-01T15:45:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;Our data is subject to many different uses. Many entities will have access to our data and those entities will perform many different analyses that involve our data. The greatest risk to privacy is that an attacker will combine multiple pieces of information from the same or different sources and that the combination of these will reveal sensitive details about us.
+Thus we cannot study privacy leakage in a vacuum; it is important that we can reason about the accumulated privacy leakage over multiple independent analyses, which is known as &lt;em&gt;composition&lt;/em&gt;. We have &lt;a href=&quot;/privacy-composition/&quot;&gt;previously discussed&lt;/a&gt; why composition is so important for differential privacy.&lt;/p&gt;
+
+&lt;p&gt;This is the first in a series of posts on &lt;em&gt;composition&lt;/em&gt; in which we will explain in more detail how compositoin analyses work.&lt;/p&gt;
+
+&lt;p&gt;Composition is quantitative. The differential privacy guarantee of the overall system will depend on the number of analyses and the privacy parameters that they each satisfy. The exact relationship between these quantities can be complex. There are various composition theorems that give bounds on the overall parameters in terms of the parameters of the parts of the system.&lt;/p&gt;
+
+&lt;p&gt;The simplest composition theorem is what is known as basic composition, which applies to pure \(\varepsilon\)-DP (although it can be extended to approximate \((\varepsilon,\delta)\)-DP):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt; (Basic Composition)
+Let \(M_1, M_2, \cdots, M_k : \mathcal{X}^n \to \mathcal{Y}\) be randomized algorithms. Suppose \(M_j\) is \(\varepsilon_j\)-DP for each \(j \in [k]\).
+Define \(M : \mathcal{X}^n \to \mathcal{Y}^k\) by \(M(x)=(M_1(x),M_2(x),\cdots,M_k(x))\), where each algorithm is run independently. Then \(M\) is \(\varepsilon\)-DP for \(\varepsilon = \sum_{j=1}^k \varepsilon_j\).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt;
+Fix an arbitrary pair of neighbouring datasets \(x,x’ \in \mathcal{X}^n\) and output \(y \in \mathcal{Y}^k\).
+To establish that \(M\) is \(\varepsilon\)-DP, we must show that \(e^{-\varepsilon} \le \frac{\mathbb{P}[M(x)=y]}{\mathbb{P}[M(x’)=y]} \le e^\varepsilon\). By independence, we have \[\frac{\mathbb{P}[M(x)=y]}{\mathbb{P}[M(x’)=y]} = \frac{\prod_{j=1}^k\mathbb{P}[M_j(x)=y_j]}{\prod_{j=1}^k\mathbb{P}[M_j(x’)=y_j]} =  \prod_{j=1}^k \frac{\mathbb{P}[M_j(x)=y_j]}{\mathbb{P}[M_j(x’)=y_j]} \le \prod_{j=1}^k e^{\varepsilon_j} = e^{\sum_{j=1}^k \varepsilon_j} = e^\varepsilon,\] where the inequality follows from the fact that each \(M_j\) is \(\varepsilon_j\)-DP and, hence, \(e^{-\varepsilon_j} \le \frac{\mathbb{P}[M_j(x)=y_j]}{\mathbb{P}[M_j(x’)=y_j]} \le e^{\varepsilon_j}\). Similarly, \(\prod_{j=1}^k \frac{\mathbb{P}[M_j(x)=y_j]}{\mathbb{P}[M_j(x’)=y_j]} \ge \prod_{j=1}^k e^{-\varepsilon_j}\), which completes the proof. ∎&lt;/p&gt;
+
+&lt;p&gt;Basic composition is already a powerful result, despite its simple proof; it establishes the versatility of differential privacy and allows us to begin reasoning about complex systems in terms of their building blocks. For example, suppose we have \(k\) functions \(f_1, \cdots, f_k : \mathcal{X}^n \to \mathbb{R}\) each of sensitivity \(1\). For each \(j \in [k]\), we know that adding \(\mathsf{Laplace}(1/\varepsilon)\) noise to the value of \(f_j(x)\) satisfies \(\varepsilon\)-DP. Thus, if we add independent \(\mathsf{Laplace}(1/\varepsilon)\) noise to each value \(f_j(x)\) for all \(j \in [k]\), then basic composition tells us that releasing this vector of \(k\) noisy values satisfies \(k\varepsilon\)-DP. If we want the overall system to be \(\varepsilon\)-DP, then we should add independent \(\mathsf{Laplace}(k/\varepsilon)\) noise to each value \(f_j(x)\).&lt;/p&gt;
+
+&lt;h2 id=&quot;is-basic-composition-optimal&quot;&gt;Is Basic Composition Optimal?&lt;/h2&gt;
+
+&lt;p&gt;If we want to release \(k\) values each of sensitivity \(1\) (as above) and have the overall release be \(\varepsilon\)-DP, then, using basic composition, we can add \(\mathsf{Laplace}(k/\varepsilon)\) noise to each value. The variance of the noise for each value is \(2k^2/\varepsilon^2\), so the standard deviation is \(\sqrt{2} k /\varepsilon\). In other words, the scale of the noise must grow linearly with the number of values \(k\) if the overall privacy and each value’s sensitivity is fixed. It is natural to wonder whether the scale of the Laplace noise can be reduced by improving the basic composition result. We now show that this is not possible.&lt;/p&gt;
+
+&lt;p&gt;For each \(j \in [k]\), let \(M_j : \mathcal{X}^n \to \mathbb{R}\) be the algorithm that releases \(f_j(x)\) with \(\mathsf{Laplace}(k/\varepsilon)\) noise added. Let \(M : \mathcal{X}^n \to \mathbb{R}^k\) be the composition of these \(k\) algorithms. Then \(M_j\) is \(\varepsilon/k\)-DP for each \(j \in [k]\) and basic composition tells us that \(M\) is \(\varepsilon\)-DP. The question is whether \(M\) satisfies a better DP guarantee than this – i.e., does \(M\) satisfy \(\varepsilon_*\)-DP for some \(\varepsilon_*&amp;lt;\varepsilon\)?
+Suppose we have neighbouring datasets \(x,x’\in\mathcal{X}^n\) such that \(f_j(x) = f_j(x’)+1\) for each \(j \in [k]\). Let \(y=(a,a,\cdots,a) \in \mathbb{R}^k\) for some \(a \ge \max_{j=1}^k f_j(x)\).
+Then 
+\[
+        \frac{\mathbb{P}[M(x)=y]}{\mathbb{P}[M(x’)=y]} = \frac{\prod_{j=1}^k \mathbb{P}[f_j(x)+\mathsf{Laplace}(k/\varepsilon)=y_j]}{\prod_{j=1}^k \mathbb{P}[f_j(x’)+\mathsf{Laplace}(k/\varepsilon)=y_j]} 
+\]
+\[
+         = \prod_{j=1}^k \frac{\frac{\varepsilon}{2k}\exp\left(-\frac{\varepsilon}{k} |y_j-f_j(x)| \right)}{\frac{\varepsilon}{2k}\exp\left(-\frac{\varepsilon}{k} |y_j-f_j(x’)| \right)} 
+         = \prod_{j=1}^k \frac{\exp\left(-\frac{\varepsilon}{k} (y_j-f_j(x)) \right)}{\exp\left(-\frac{\varepsilon}{k} (y_j-f_j(x’)) \right)} 
+\]
+\[
+         = \prod_{j=1}^k \exp\left(\frac{\varepsilon}{k}\left(f_j(x)-f_j(x’)\right)\right)
+         = \exp\left( \frac{\varepsilon}{k} \sum_{j=1}^k \left(f_j(x)-f_j(x’)\right)\right)= e^\varepsilon,
+\]
+where the third equality removes the absolute values because \(y_j \ge f_j(x)\) and \(y_j \ge f_j(x’)\).
+This shows that basic composition is optimal. For this example, we cannot prove a better guarantee than what is given by basic composition.&lt;/p&gt;
+
+&lt;p&gt;Is there some other way to improve upon basic composition that circumvents this example? Note that we assumed that there are neighbouring datasets \(x,x’\in\mathcal{X}^n\) such that \(f_j(x) = f_j(x’)+1\) for each \(j \in [k]\). In some settings, no such worst case datasets exist. In that case, instead of scaling the noise linearly with \(k\), we can scale the Laplace noise according to the \(\ell_1\) sensitivity \(\Delta_1 := \sup_{x,x’ \in \mathcal{X}^n \atop \text{neighbouring}} \sum_{j=1}^k |f_j(x)-f_j(x’)|\).&lt;/p&gt;
+
+&lt;p&gt;Instead of adding assumptions to the problem, we will look more closely at the example above.
+We showed that there exists some output \(y \in \mathbb{R}^d\) such that \(\frac{\mathbb{P}[M(x)=y]}{\mathbb{P}[M(x’)=y]} = e^\varepsilon\).
+However, such outputs \(y\) are very rare, as we require \(y_j \ge \max\{f_j(x),f_j(x’)\}\) for each \(j \in [k]\) where \(y_j = f_j(x) + \mathsf{Laplace}(k/\varepsilon)\). Thus, in order to observe an output \(y\) such that the likelihood ratio is maximal, all of the \(k\) Laplace noise samples must be positive, which happens with probability \(2^{-k}\). 
+The fact that outputs \(y\) with maximal likelihood ratio are exceedingly rare turns out to be a general phenomenon and not specific to the example above.&lt;/p&gt;
+
+&lt;p&gt;Can we improve on basic composition if we only ask for a high probability bound? That is, instead of demanding \(\frac{\mathbb{P}[M(x)=y]}{\mathbb{P}[M(x’)=y]} \le e^{\varepsilon_*}\) for all \(y \in \mathcal{Y}\), we demand \(\mathbb{P}_{Y \gets M(x)}\left[\frac{\mathbb{P}[M(x)=Y]}{\mathbb{P}[M(x’)=Y]} \le e^{\varepsilon_*}\right] \ge 1-\delta\) for some \(0 &amp;lt; \delta \ll 1\). Can we prove a better bound \(\varepsilon_* &amp;lt; \varepsilon\) in this relaxed setting? The answer turns out to be yes.&lt;/p&gt;
+
+&lt;p&gt;The limitation of pure \(\varepsilon\)-DP is that events with tiny probability – which are negligible in real-world applications – can dominate the privacy analysis. This motivates us to move to relaxed notions of differential privacy, such as approximate \((\varepsilon,\delta)\)-DP and concentrated DP, which are less sensitive to low probability events.&lt;/p&gt;
+
+&lt;h2 id=&quot;preview-advanced-composition&quot;&gt;Preview: Advanced Composition&lt;/h2&gt;
+
+&lt;p&gt;By moving to approximate \((\varepsilon,\delta)\)-DP with \(\delta&amp;gt;0\), we can prove an asymptotically better composition theorem, which is known as &lt;em&gt;the advanced composition theorem&lt;/em&gt; &lt;strong&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/document/5670947&quot; title=&quot;Cynthia Dwork, Guy Rothblum, Salil Vadhan. Boosting and Differential Privacy. FOCS 2010.&quot;&gt;[DRV10]&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt; (Advanced Composition Starting from Pure DP&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;)
+Let \(M_1, M_2, \cdots, M_k : \mathcal{X}^n \to \mathcal{Y}\) be randomized algorithms. Suppose \(M_j\) is \(\varepsilon_j\)-DP for each \(j \in [k]\).
+Define \(M : \mathcal{X}^n \to \mathcal{Y}^k\) by \(M(x)=(M_1(x),M_2(x),\cdots,M_k(x))\), where each algorithm is run independently. Then \(M\) is \((\varepsilon,\delta)\)-DP for any \(\delta&amp;gt;0\) with \[\varepsilon = \frac12 \sum_{j=1}^k \varepsilon_j^2 + \sqrt{2\log(1/\delta) \sum_{j=1}^k \varepsilon_j^2}.\]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Recall that basic composition gives \(\delta=0\) and \(\varepsilon = \sum_{j=1}^k \varepsilon_j\). That is, basic composition scales with the 1-norm of the vector \((\varepsilon_1, \varepsilon_2, \cdots, \varepsilon_k)\), whereas advanced composition scales with the 2-norm of this vector (and the squared 2-norm).
+Neither bound strictly dominates the other. However, asymptotically (in a sense we will make precise in the next paragraph) advanced composition dominates basic composition.&lt;/p&gt;
+
+&lt;p&gt;Suppose we have a fixed \((\varepsilon,\delta)\)-DP guarantee for the entire system and we must answer \(k\) queries of sensitivity \(1\).
+Using basic composition, we can answer each query by adding \(\mathsf{Laplace}(k/\varepsilon)\) noise to each answer.
+However, using advanced composition, we can answer each query by adding \(\mathsf{Laplace}(\sqrt{k/2\rho})\) noise to each answer, where&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;
+\[\rho = \frac{\varepsilon^2}{4\log(1/\delta)+4\varepsilon}.\]
+If the privacy parameters \(\varepsilon,\delta&amp;gt;0\) are fixed (which implies \(\rho\) is fixed) and \(k \to \infty\), we can see that asymptotically advanced composition gives noise per query scaling as \(\Theta(\sqrt{k})\), while basic composition results in noise scaling as \(\Theta(k)\).&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;In the next few posts we will explain how advanced composition works. We hope this conveys an intuitive understanding of composition and, in particular, how this \(\sqrt{k}\) asymptotic behaviour arises. If you want to read ahead, these posts are extracts from &lt;a href=&quot;https://arxiv.org/abs/2210.00597&quot;&gt;this book chapter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;This result generalizes to approximate DP. If instead we assume \(M_j\) is \((\varepsilon_j,\delta_j)\)-DP for each \(j \in [k]\), then the final composition is \((\varepsilon,\delta+\sum_{j=1}^k \delta_j)\)-DP with \(\varepsilon\) as before. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Adding \(\mathsf{Laplace}(\sqrt{k/2\rho})\) noise to a sensitivity-1 query ensures \(\varepsilon_j\)-DP for \(\varepsilon_j = \sqrt{2\rho/k}\). Hence \(\sum_{j=1}^k \varepsilon_j^2 = 2\rho\). Setting \(\rho = \frac{\varepsilon^2}{4\log(1/\delta)+4\varepsilon}\) ensures that \(\frac12 \sum_{j=1}^k \varepsilon_j^2 + \sqrt{2\log(1/\delta) \sum_{j=1}^k \varepsilon_j^2} = \rho + \sqrt{4\rho\log(1/\delta)} \le \varepsilon\). &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;&lt;p class=&quot;authors&quot;&gt;By &lt;/p&gt;
+  </content>
+    <author>
+      <name>DifferentialPrivacy.org</name>
+      <uri>https://differentialprivacy.org</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: The isotropy group of the matrix multiplication tensor</title>
     <link href="http://arxiv.org/abs/2210.16565"/>
     <id>http://arxiv.org/abs/2210.16565</id>
@@ -1483,39 +1585,6 @@ during the training step and the corresponding generalization capabilities.
     <author>
       <name>arXiv: Computational Geometry</name>
       <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Worst-Case Adaptive Submodular Cover</title>
-    <link href="http://arxiv.org/abs/2210.13694"/>
-    <id>http://arxiv.org/abs/2210.13694</id>
-    <updated>2022-10-26T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yuan_J/0/1/0/all/0/1&quot;&gt;Jing Yuan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tang_S/0/1/0/all/0/1&quot;&gt;Shaojie Tang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we study the adaptive submodular cover problem under the
-worst-case setting. This problem generalizes many previously studied problems,
-namely, the pool-based active learning and the stochastic submodular set cover.
-The input of our problem is a set of items (e.g., medical tests) and each item
-has a random state (e.g., the outcome of a medical test), whose realization is
-initially unknown. One must select an item at a fixed cost in order to observe
-its realization. There is an utility function which is defined over items and
-their states. Our goal is to sequentially select a group of items to achieve a
-``goal value&#39;&#39; while minimizing the maximum cost across realizations (a.k.a.
-worst-case cost). To facilitate our study, we introduce a broad class of
-stochastic functions, called \emph{worst-case submodular function}. Assume the
-utility function is worst-case submodular, we develop a tight $(\log
-(Q/\eta)+1)$-approximation policy, where $Q$ is the ``goal value&#39;&#39; and $\eta$
-is the minimum gap between $Q$ and any attainable utility value $\hat{Q}&amp;lt;Q$. We
-also study a worst-case maximum-coverage problem, whose goal is to select a
-group of items to maximize its worst-case utility subject to a budget
-constraint. This is a flipped problem of the minimum-cost-cover problem, and to
-solve this problem, we develop a tight $(1-1/e)$-approximation solution.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
