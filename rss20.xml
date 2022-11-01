@@ -9,6 +9,252 @@
 
 
 <item>
+  <title>The isotropy group of the matrix multiplication tensor</title>
+  <guid>http://arxiv.org/abs/2210.16565</guid>
+  <link>http://arxiv.org/abs/2210.16565</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Burichenko_V/0/1/0/all/0/1&quot;&gt;V.P.Burichenko&lt;/a&gt;&lt;/p&gt;&lt;p&gt;By an {\em isotropy group} of a tensor $t\in V_1 \otimes V_2\otimes
+V_3=\widetilde V$ we mean the group of all invertible linear transformations of
+$\widetilde V$ that leave $t$ invariant and are compatible (in an obvious
+sense) with the structure of tensor product on~$\widetilde V$. We consider the
+case where $t$ is the structure tensor of multiplication map of rectangular
+matrices. The isotropy group of this tensor was studied in 1970s by de Groote,
+Strassen, and Brockett-Dobkin. In the present work we enlarge, make more
+precise, expose in the language of group actions on tensor spaces, and endow
+with proofs the results previously known. This is necessary for studying the
+algorithms of fast matrix multiplication admitting symmetries. The latter seems
+to be a promising new way for constructing fast algorithms.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-01 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Parallel Breadth-First Search and Exact Shortest Paths and Stronger Notions for Approximate Distances</title>
+  <guid>http://arxiv.org/abs/2210.16351</guid>
+  <link>http://arxiv.org/abs/2210.16351</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rozhon_V/0/1/0/all/0/1&quot;&gt;V&amp;#xe1;clav Rozho&amp;#x148;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Haeupler_B/0/1/0/all/0/1&quot;&gt;Bernhard Haeupler&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Martinsson_A/0/1/0/all/0/1&quot;&gt;Anders Martinsson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grunau_C/0/1/0/all/0/1&quot;&gt;Christoph Grunau&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zuzic_G/0/1/0/all/0/1&quot;&gt;Goran Zuzic&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce stronger notions for approximate single-source shortest-path
+distances, show how to efficiently compute them from weaker standard notions,
+and demonstrate the algorithmic power of these new notions and transformations.
+One application is the first work-efficient parallel algorithm for computing
+exact single-source shortest paths graphs -- resolving a major open problem in
+parallel computing.
+&lt;/p&gt;
+&lt;p&gt;Given a source vertex in a directed graph with polynomially-bounded
+nonnegative integer lengths, the algorithm computes an exact shortest path tree
+in $m \log^{O(1)} n$ work and $n^{1/2+o(1)}$ depth. Previously, no parallel
+algorithm improving the trivial linear depths of Dijkstra&#39;s algorithm without
+significantly increasing the work was known, even for the case of undirected
+and unweighted graphs (i.e., for computing a BFS-tree).
+&lt;/p&gt;
+&lt;p&gt;Our main result is a black-box transformation that uses $\log^{O(1)} n$
+standard approximate distance computations to produce approximate distances
+which also satisfy the subtractive triangle inequality (up to a
+$(1+\varepsilon)$ factor) and even induce an exact shortest path tree in a
+graph with only slightly perturbed edge lengths. These strengthened
+approximations are algorithmically significantly more powerful and overcome
+well-known and often encountered barriers for using approximate distances. In
+directed graphs they can even be boosted to exact distances. This results in a
+black-box transformation of any (parallel or distributed) algorithm for
+approximate shortest paths in directed graphs into an algorithm computing exact
+distances at essentially no cost. Applying this to the recent breakthroughs of
+Fineman et al. for compute approximate SSSP-distances via approximate hopsets
+gives new parallel and distributed algorithm for exact shortest paths.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-01 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Dynamic Bandits with an Auto-Regressive Temporal Structure</title>
+  <guid>http://arxiv.org/abs/2210.16386</guid>
+  <link>http://arxiv.org/abs/2210.16386</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_Q/0/1/0/all/0/1&quot;&gt;Qinyi Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Golrezaei_N/0/1/0/all/0/1&quot;&gt;Negin Golrezaei&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bouneffouf_D/0/1/0/all/0/1&quot;&gt;Djallel Bouneffouf&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Multi-armed bandit (MAB) problems are mainly studied under two extreme
+settings known as stochastic and adversarial. These two settings, however, do
+not capture realistic environments such as search engines and marketing and
+advertising, in which rewards stochastically change in time. Motivated by that,
+we introduce and study a dynamic MAB problem with stochastic temporal
+structure, where the expected reward of each arm is governed by an
+auto-regressive (AR) model. Due to the dynamic nature of the rewards, simple
+&quot;explore and commit&quot; policies fail, as all arms have to be explored
+continuously over time. We formalize this by characterizing a per-round regret
+lower bound, where the regret is measured against a strong (dynamic) benchmark.
+We then present an algorithm whose per-round regret almost matches our regret
+lower bound. Our algorithm relies on two mechanisms: (i) alternating between
+recently pulled arms and unpulled arms with potential, and (ii) restarting.
+These mechanisms enable the algorithm to dynamically adapt to changes and
+discard irrelevant past information at a suitable rate. In numerical studies,
+we further demonstrate the strength of our algorithm under different types of
+non-stationary settings.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-01 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Flows, Scaling, and Entropy Revisited: a Unified Perspective via Optimizing Joint Distributions</title>
+  <guid>http://arxiv.org/abs/2210.16456</guid>
+  <link>http://arxiv.org/abs/2210.16456</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Altschuler_J/0/1/0/all/0/1&quot;&gt;Jason M. Altschuler&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this short expository note, we describe a unified algorithmic perspective
+on several classical problems which have traditionally been studied in
+different communities. This perspective views the main characters -- the
+problems of Optimal Transport, Minimum Mean Cycle, Matrix Scaling, and Matrix
+Balancing -- through the same lens of optimization problems over joint
+probability distributions P(x,y) with constrained marginals. While this is how
+Optimal Transport is typically introduced, this lens is markedly less
+conventional for the other three problems. This perspective leads to a simple
+and unified framework spanning problem formulation, algorithm development, and
+runtime analysis.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-01 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>The Vector Balancing Constant for Zonotopes</title>
+  <guid>http://arxiv.org/abs/2210.16460</guid>
+  <link>http://arxiv.org/abs/2210.16460</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Heck_L/0/1/0/all/0/1&quot;&gt;Laurel Heck&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Reis_V/0/1/0/all/0/1&quot;&gt;Victor Reis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Rothvoss_T/0/1/0/all/0/1&quot;&gt;Thomas Rothvoss&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The vector balancing constant $\mathrm{vb}(K,Q)$ of two symmetric convex
+bodies $K,Q$ is the minimum $r \geq 0$ so that any number of vectors from $K$
+can be balanced into an $r$-scaling of $Q$. A question raised by Schechtman is
+whether for any zonotope $K \subseteq \mathbb{R}^d$ one has $\mathrm{vb}(K,K)
+\lesssim \sqrt{d}$. Intuitively, this asks whether a natural geometric
+generalization of Spencer&#39;s Theorem (for which $K = B^d_\infty$) holds. We
+prove that for any zonotope $K \subseteq \mathbb{R}^d$ one has
+$\mathrm{vb}(K,K) \lesssim \sqrt{d} \log \log \log d$. Our main technical
+contribution is a tight lower bound on the Gaussian measure of any section of a
+normalized zonotope, generalizing Vaaler&#39;s Theorem for cubes. We also prove
+that for two different normalized zonotopes $K$ and $Q$ one has
+$\mathrm{vb}(K,Q) \lesssim \sqrt{d \log d}$. All the bounds are constructive
+and the corresponding colorings can be computed in polynomial time.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-01 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Improved Approximation Algorithms for Capacitated Vehicle Routing with Fixed Capacity</title>
+  <guid>http://arxiv.org/abs/2210.16534</guid>
+  <link>http://arxiv.org/abs/2210.16534</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhao_J/0/1/0/all/0/1&quot;&gt;Jingyang Zhao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xiao_M/0/1/0/all/0/1&quot;&gt;Mingyu Xiao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Capacitated Vehicle Routing Problem (CVRP) is one of the most extensively
+studied problems in combinatorial optimization. According to the property of
+the demand of customers, we distinguish three variants of CVRP: unit-demand,
+splittable and unsplittable. We consider $k$-CVRP in general metrics and
+general graphs, where $k$ is the capacity of the vehicle and all the three
+versions are APX-hard for each fixed $k\geq 3$.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we give a $(5/2-\Theta(\sqrt{1/k}))$-approximation algorithm
+for splittable and unit-demand $k$-CVRP and a
+$(5/2+\ln2-\Theta(\sqrt{1/k}))$-approximation algorithm for unsplittable
+$k$-CVRP (assume the approximation ratio for metric TSP is $\alpha=3/2$). Thus,
+our approximation ratio is better than previous results for sufficient large
+$k$, say $k\leq 1.7\times 10^7$.
+&lt;/p&gt;
+&lt;p&gt;For small $k$, we design independent algorithms by using more techniques to
+get further improvements. For splittable and unit-demand cases, we improve the
+ratio from $1.934$ to $1.500$ for $k=3$, and from $1.750$ to $1.667$ for $k=4$.
+For the unsplittable case, we improve the ratio from $2.693$ to $1.500$ for
+$k=3$, from $2.443$ to $1.750$ for $k=4$, and from $2.893$ to $2.157$ for
+$k=5$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-01 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>One Gradient Frank-Wolfe for Decentralized Online Convex and Submodular Optimization</title>
+  <guid>http://arxiv.org/abs/2210.16790</guid>
+  <link>http://arxiv.org/abs/2210.16790</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_T/0/1/0/all/0/1&quot;&gt;Tuan-Anh Nguyen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Thang_N/0/1/0/all/0/1&quot;&gt;Nguyen Kim Thang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Trystram_D/0/1/0/all/0/1&quot;&gt;Denis Trystram&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Decentralized learning has been studied intensively in recent years motivated
+by its wide applications in the context of federated learning. The majority of
+previous research focuses on the offline setting in which the objective
+function is static. However, the offline setting becomes unrealistic in
+numerous machine learning applications that witness the change of massive data.
+In this paper, we propose \emph{decentralized online} algorithm for convex and
+continuous DR-submodular optimization, two classes of functions that are
+present in a variety of machine learning problems. Our algorithms achieve
+performance guarantees comparable to those in the centralized offline setting.
+Moreover, on average, each participant performs only a \emph{single} gradient
+computation per time step. Subsequently, we extend our algorithms to the bandit
+setting. Finally, we illustrate the competitive performance of our algorithms
+in real-world experiments.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-01 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Halloween linkage</title>
+  <guid>https://11011110.github.io/blog/2022/10/31/halloween-linkage</guid>
+  <link>https://11011110.github.io/blog/2022/10/31/halloween-linkage.html</link>
+  <description>
+    &lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Perspective drawing often consists of mapping a curved world onto a flat screen. But &lt;a href=&quot;http://www.szegedicsaba.com/curvedscreen.htm&quot;&gt;what if you mapped a polyhedral world onto a curved screen&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mastodon.social/@curved_ruler/109174245124286751&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;)?&lt;/span&gt; Artwork by Szegedi Csaba, 1986. &lt;a href=&quot;https://www.szegedicsaba.hu/en&quot;&gt;His more recent work&lt;/a&gt; is different enough that it’s not obvious they’re the same person.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.wired.com/story/wikipedia-state-sponsored-disinformation/&quot;&gt;The hunt for Wikipedia’s disinformation moles&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109187943967850219&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt; &lt;em&gt;Wired&lt;/em&gt; on coordinated long-term state-level disinformation campaigns on Wikipedia. I couldn’t find their link to the research they report on, but it appears to be “&lt;a href=&quot;https://www.isdglobal.org/isd-publications/information-warfare-and-wikipedia/&quot;&gt;Information Warfare and Wikipedia&lt;/a&gt;“(by Carl Miller, Melanie Smith, Oliver Marsh, Kata Balint, Chris Inskip, and Francesca Visser of the Institute for Strategic Dialogue), which focuses on Russian disinformation in their war on Ukraine.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.quantamagazine.org/mathematicians-surprised-by-hidden-fibonacci-numbers-20221017/&quot;&gt;Fibonacci numbers and fractals hiding in geometric optimization problems in symplectic geometry&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109193514333145471&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt;  I don’t understand symplectic geometry at all but this article kind of makes me want to try. Based on &lt;a href=&quot;https://annals.math.princeton.edu/2012/175-3/p05&quot;&gt;a 2012 paper by Dusa McDuff and Felix Schlenk&lt;/a&gt;, and &lt;a href=&quot;https://doi.org/10.1007/978-3-030-80979-9_2&quot;&gt;a 2021 paper by 
+Maria Bertozzi, Tara S. Holm, Emily Maw, Dusa McDuff, Grace T. Mwakyoma, Ana Rita Pires, and Morgan Weiler&lt;/a&gt; (&lt;a href=&quot;https://arxiv.org/abs/2010.08567&quot;&gt;arXiv:2010.08567&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;My colleague and coauthor &lt;a href=&quot;https://meetings.informs.org/wordpress/indianapolis2022/awards-hall/&quot;&gt;Vijay Vazirani wins the INFORMS John von Neumann Theory Prize&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109199025441051589&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;)&lt;/span&gt;  “for his fundamental and sustained contributions to the design of algorithms, including approximation algorithms, computational complexity theory, and algorithmic game theory, central to operations research and the management sciences”.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lost documents from ancient Greek science are still being discovered in palimpsests, parchments that have been scraped clean and rewritten with something else, via modern multispectral imaging techniques &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109204919184604129&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt; The latest: &lt;a href=&quot;https://arstechnica.com/science/2022/10/part-of-lost-star-catalog-of-hipparchus-found-lurking-under-medieval-codex/&quot;&gt;a constellation from a lost star catalog by Hipparchus&lt;/a&gt; on the &lt;a href=&quot;https://en.wikipedia.org/wiki/Codex_Climaci_Rescriptus&quot;&gt;Codex Climaci rescriptus&lt;/a&gt; from Saint Catherine’s Monastery on the Sinai Peninsula.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://xorshammer.com/2008/09/04/a-geometrically-natural-uncomputable-function/&quot;&gt;A geometrically natural uncomputable function&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109210523463519897&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;,&lt;/span&gt; &lt;a href=&quot;https://news.ycombinator.com/item?id=33268451&quot;&gt;via&lt;/a&gt;; from 2008), reporting on Alexander Nebutovsky’s “&lt;a href=&quot;https://doi.org/10.1002/cpa.3160480402&quot;&gt;Non-recursive functions, knots ‘with thick ropes’, and self-clenching ‘thick’ hyperspheres&lt;/a&gt;”. If you embed an &lt;span style=&quot;white-space:nowrap&quot;&gt;\(n\)-dimensional&lt;/span&gt; sphere into an &lt;span style=&quot;white-space:nowrap&quot;&gt;\((n+1)\)-dimensional&lt;/span&gt; one, you can always continuously move the embedding to the equator, but you may have to move the embedding closer to itself first. How much closer? It’s uncomputable!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://origami.kosmulski.org/blog/2022-10-23-fujimoto-books-public-domain&quot;&gt;Five geometric origami books by Shuzo Fujimoto now public-domain&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109218557060750300&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;,&lt;/span&gt; &lt;a href=&quot;https://news.ycombinator.com/item?id=33307845&quot;&gt;via&lt;/a&gt;). They were originally published in the 1970s and 1980s and focus on polyhedra, tessellations, modular origami, and the like. In Japanese, but with lots of diagrams.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Chris Purcell asks: &lt;a href=&quot;https://mathstodon.xyz/@ccppurcell/109223240056862107&quot;&gt;what do you call those fractal cracking patterns in paint, mud, etc.&lt;/a&gt;?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arstechnica.com/science/2022/10/the-feds-new-open-access-policy-whos-gonna-pay-for-it/&quot;&gt;Who will pay the publication fees under new grant-agency rules that all publications must be open access&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109232886231027636&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;)?&lt;/span&gt; “We face a growing risk that the ability to pay APCs – rather than the merits of the research – will determine what and who gets published.” … “I fear that forcing pay-to-play for every paper will end up amplifying existing inequities.”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Claims to have proven &lt;a href=&quot;https://doi.org/10.1007/s11225-022-10017-2&quot;&gt;the twin prime conjecture&lt;/a&gt; and &lt;a href=&quot;https://doi.org/10.1007/s11225-022-10015-4&quot;&gt;the existence of infinitely many Mersenne primes&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109237034145768039&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;)&lt;/span&gt; were published by Janusz Czelakowski in a peer-reviewed Polish logic journal. Beyond the obvious mistake in theorem 1.1 of the 1st link (the word “prime” is missing at an important point), other editors in a discussion on Wikipedia (where I found this) were skeptical that model theory and forcing are the right way to prove results like this. After &lt;a href=&quot;https://mathoverflow.net/questions/433278/czelakowskis-claimed-proof-of-the-twin-prime-conjecture&quot;&gt;the MathOverflow discussion&lt;/a&gt; turned up more serious errors, the editor-in-chief promised a retraction.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Kite_(geometry)&quot;&gt;New Wikipedia Good Article on kites&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109243040526023165&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; the quadrilaterals, not the toys on strings and not the birds. The article briefly mentions that every non-rhombus kite has sides that are bitangents to two unequal circles. I was unable to source and did not include (although a figure makes it obvious) that this can be reversed. Every two unequal circles have four bitangents forming sides of exactly three quadrilaterals: a convex kite, a concave kite, and an antiparallelogram.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The warm welcome given to edgelords on Twitter by the site’s new owner has led to another mass migration to Mastodon. One of the familiar names making the move is Vi Hart, who posted among other things about &lt;a href=&quot;https://mastodon.social/@vihart/109244906964274293&quot;&gt;60 whisks tangled together in icosahedral symmetry&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The usual version of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Chessboard_paradox&quot;&gt;chessboard paradox&lt;/a&gt; features seeming dissections of two different-area rectangles into the same set of triangles and trapezoids. Bruce35dc finds a variant with &lt;a href=&quot;https://mathstodon.xyz/@Bruce35dc/109246400468582681&quot;&gt;three dissections of the same rectangle&lt;/a&gt;, into seven pieces, six out of the seven, and five of the six!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is a truth universally acknowledged that unless you write your papers with a catchy start, the referees will get bored and stop reading before getting to the important parts. &lt;a href=&quot;https://igorpak.wordpress.com/2022/10/26/how-to-start-a-paper/&quot;&gt;Igor Pak has some advice&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109261439776959800&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A few years ago Google search was good enough, and Wikipedia’s bad enough, that I would regularly search Google for “something site:en.wikipedia.org”. Now the tables have turned: &lt;a href=&quot;https://www.theverge.com/23416056/wikipedia-app-vs-google-mobile-search&quot;&gt;James Vincent suggests switching to the Wikipedia mobile app as the default for searches&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109265698873986719&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;,&lt;/span&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2022-10-31/In_the_media&quot;&gt;via&lt;/a&gt;) since much of the time what you are trying to find is there or linked from there. Of course, many of my searches seek sources for Wikipedia content, so that wouldn’t help me…&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </description>
+  <pubDate>2022-10-31 17:24:00 UTC</pubDate>
+  <author>David Eppstein</author>
+</item>
+
+<item>
   <title>Oh right, quantum computing</title>
   <guid>https://scottaaronson.blog/?p=6784</guid>
   <link>https://scottaaronson.blog/?p=6784</link>
@@ -1071,218 +1317,6 @@ solve this problem, we develop a tight $(1-1/e)$-approximation solution.
   </description>
   <pubDate>2022-10-26 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Gaussian Mean Testing Made Simple</title>
-  <guid>http://arxiv.org/abs/2210.13706</guid>
-  <link>http://arxiv.org/abs/2210.13706</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Diakonikolas_I/0/1/0/all/0/1&quot;&gt;Ilias Diakonikolas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Kane_D/0/1/0/all/0/1&quot;&gt;Daniel M. Kane&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Pensia_A/0/1/0/all/0/1&quot;&gt;Ankit Pensia&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the following fundamental hypothesis testing problem, which we term
-Gaussian mean testing. Given i.i.d. samples from a distribution $p$ on
-$\mathbb{R}^d$, the task is to distinguish, with high probability, between the
-following cases: (i) $p$ is the standard Gaussian distribution,
-$\mathcal{N}(0,I_d)$, and (ii) $p$ is a Gaussian $\mathcal{N}(\mu,\Sigma)$ for
-some unknown covariance $\Sigma$ and mean $\mu \in \mathbb{R}^d$ satisfying
-$\|\mu\|_2 \geq \epsilon$. Recent work gave an algorithm for this testing
-problem with the optimal sample complexity of $\Theta(\sqrt{d}/\epsilon^2)$.
-Both the previous algorithm and its analysis are quite complicated. Here we
-give an extremely simple algorithm for Gaussian mean testing with a one-page
-analysis. Our algorithm is sample optimal and runs in sample linear time.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-26 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Deterministic Small Vertex Connectivity in Almost Linear Time</title>
-  <guid>http://arxiv.org/abs/2210.13739</guid>
-  <link>http://arxiv.org/abs/2210.13739</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saranurak_T/0/1/0/all/0/1&quot;&gt;Thatchaphol Saranurak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yingchareonthawornchai_S/0/1/0/all/0/1&quot;&gt;Sorrachai Yingchareonthawornchai&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the vertex connectivity problem, given an undirected $n$-vertex $m$-edge
-graph $G$, we need to compute the minimum number of vertices that can
-disconnect $G$ after removing them. This problem is one of the most
-well-studied graph problems. From 2019, a new line of work [Nanongkai et
-al.~STOC&#39;19;SODA&#39;20;STOC&#39;21] has used randomized techniques to break the
-quadratic-time barrier and, very recently, culminated in an almost-linear time
-algorithm via the recently announced maxflow algorithm by Chen et al. In
-contrast, all known deterministic algorithms are much slower. The fastest
-algorithm [Gabow FOCS&#39;00] takes $O(m(n+\min\{c^{5/2},cn^{3/4}\}))$ time where
-$c$ is the vertex connectivity. It remains open whether there exists a
-subquadratic-time deterministic algorithm for any constant $c&amp;gt;3$.
-&lt;/p&gt;
-&lt;p&gt;In this paper, we give the first deterministic almost-linear time vertex
-connectivity algorithm for all constants $c$. Our running time is
-$m^{1+o(1)}2^{O(c^{2})}$ time, which is almost-linear for all $c=o(\sqrt{\log
-n})$. This is the first deterministic algorithm that breaks the $O(n^{2})$-time
-bound on sparse graphs where $m=O(n)$, which is known for more than 50 years
-ago [Kleitman&#39;69]. Towards our result, we give a new reduction framework to
-vertex expanders which in turn exploits our new almost-linear time construction
-of mimicking network for vertex connectivity. The previous construction by
-Kratsch and Wahlstr\&quot;{o}m [FOCS&#39;12] requires large polynomial time and is
-randomized.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-26 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Online and Bandit Algorithms Beyond $\ell_p$ Norms</title>
-  <guid>http://arxiv.org/abs/2210.13755</guid>
-  <link>http://arxiv.org/abs/2210.13755</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kesselheim_T/0/1/0/all/0/1&quot;&gt;Thomas Kesselheim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Molinaro_M/0/1/0/all/0/1&quot;&gt;Marco Molinaro&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Singla_S/0/1/0/all/0/1&quot;&gt;Sahil Singla&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Vector norms play a fundamental role in computer science and optimization, so
-there is an ongoing effort to generalize existing algorithms to settings beyond
-$\ell_\infty$ and $\ell_p$ norms. We show that many online and bandit
-applications for general norms admit good algorithms as long as the norm can be
-approximated by a function that is ``gradient-stable&#39;&#39;, a notion that we
-introduce. Roughly it says that the gradient of the function should not
-drastically decrease (multiplicatively) in any component as we increase the
-input vector. We prove that several families of norms, including all monotone
-symmetric norms, admit a gradient-stable approximation, giving us the first
-online and bandit algorithms for these norm families.
-&lt;/p&gt;
-&lt;p&gt;In particular, our notion of gradient-stability gives $O\big(\log^2
-(\text{dimension})\big)$-competitive algorithms for the symmetric norm
-generalizations of Online Generalized Load Balancing and Bandits with
-Knapsacks. Our techniques extend to applications beyond symmetric norms as
-well, e.g., to Online Vector Scheduling and to Online Generalized Assignment
-with Convex Costs. Some key properties underlying our applications that are
-implied by gradient-stable approximations are a ``smooth game inequality&#39;&#39; and
-an approximate converse to Jensen&#39;s inequality.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-26 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Tight analysis of lazy: an improved algorithm for open online dial-a-ride</title>
-  <guid>http://arxiv.org/abs/2210.13850</guid>
-  <link>http://arxiv.org/abs/2210.13850</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Baligacs_J/0/1/0/all/0/1&quot;&gt;Julia Baligacs&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Disser_Y/0/1/0/all/0/1&quot;&gt;Yann Disser&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Weckbecker_D/0/1/0/all/0/1&quot;&gt;David Weckbecker&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the open online dial-a-ride problem, a single server has to carry
-transportation requests appearing over time in some metric space, subject to
-minimizing the completion time. We improve on the best known upper bounds on
-the competitive ratio on general metric spaces and on the half-line, in both,
-the preemptive and non-preemptive version of the problem. We achieve this by
-revisiting the algorithm Lazy recently suggested in [WAOA, 2022] and giving an
-improved and tight analysis. More precisely, we show that it is
-$(\frac{3}{2}+\sqrt{11/12}\thickapprox 2.457)$-competitive on general metric
-spaces and $(1+\frac{1}{2}(1+\sqrt{3})\approx 2.366)$-competitive on the
-half-line.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-26 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>An Improved Algorithm for Open Online Dial-a-Ride</title>
-  <guid>http://arxiv.org/abs/2210.13854</guid>
-  <link>http://arxiv.org/abs/2210.13854</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Baligacs_J/0/1/0/all/0/1&quot;&gt;Julia Baligacs&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Disser_Y/0/1/0/all/0/1&quot;&gt;Yann Disser&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mosis_N/0/1/0/all/0/1&quot;&gt;Nils Mosis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Weckbecker_D/0/1/0/all/0/1&quot;&gt;David Weckbecker&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the open online dial-a-ride problem, where transportation
-requests appear online in a metric space and need to be served by a single
-server. The objective is to minimize the completion time until all requests
-have been served. We present a new, parameterized algorithm for this problem
-and prove that it attains a competitive ratio of $1 + \varphi \approx 2.618$
-for some choice of its parameter, where $\varphi$ is the golden ratio. This
-improves the best known bounds for open online dial-a-ride both for general
-metric spaces as well as for the real line. We also give a lower bound
-of~$2.457$ for the competitive ratio of our algorithm for any parameter choice.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-26 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Efficient and Stable Fully Dynamic Facility Location</title>
-  <guid>http://arxiv.org/abs/2210.13880</guid>
-  <link>http://arxiv.org/abs/2210.13880</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhattacharya_S/0/1/0/all/0/1&quot;&gt;Sayan Bhattacharya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lattanzi_S/0/1/0/all/0/1&quot;&gt;Silvio Lattanzi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Parotsidis_N/0/1/0/all/0/1&quot;&gt;Nikos Parotsidis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the classic facility location problem in fully dynamic data
-streams, where elements can be both inserted and deleted. In this problem, one
-is interested in maintaining a stable and high quality solution throughout the
-data stream while using only little time per update (insertion or deletion). We
-study the problem and provide the first algorithm that at the same time
-maintains a constant approximation and incurs polylogarithmic amortized
-recourse per update. We complement our theoretical results with an experimental
-analysis showing the practical efficiency of our method.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-26 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Does AI Suck at Art?</title>
-  <guid>http://benjamin-recht.github.io/2022/10/26/ai-image-search/</guid>
-  <link>http://benjamin-recht.github.io/2022/10/26/ai-image-search/</link>
-  <description>
-    &lt;p&gt;I’ve been researching machine learning for a little over 20 years. For the past five years or so, with the latest wave of AI overpromising, I think I’ve been mostly known as an AI skeptic. But I’ve been engaging with these new AI image generation tools, and they are delightful. They have a lot of promise, and I want to explain why and suggest a few ways to make them even better.&lt;/p&gt;
-
-&lt;p&gt;Though I don’t talk about it much, for the past 20 years I’ve also been playing in an ambient shoegazer band called &lt;a href=&quot;https://thefunyears.bandcamp.com/&quot;&gt;“the fun years.”&lt;/a&gt; My bandmate, &lt;a href=&quot;http://www.isaacsparks.com/&quot;&gt;Isaac Sparks&lt;/a&gt;, has been in charge of our visual design from the get-go. Over the years, he’s progressively refined his style, and he has been dipping his toes into the weird world of prompt-to-art.&lt;/p&gt;
-
-&lt;p&gt;Last week, &lt;a href=&quot;https://thefunyears.bandcamp.com/track/electricity-is-a-scarce-commodity&quot;&gt;we re-released an old single from 2006&lt;/a&gt;, and Isaac used &lt;a href=&quot;https://www.midjourney.com/home/&quot;&gt;midjourney&lt;/a&gt; for the cover art. Isaac is a turntablist, and approaches his art similarly to how he approaches searching for records. He seeks out happy accidents that can take on some new life when repurposed in new contexts. The cover of our first CDR, &lt;a href=&quot;https://thefunyears.bandcamp.com/album/now-thats-what-i-call-droning-volume-4&quot;&gt;&lt;em&gt;now that’s what i call droning, volume 4&lt;/em&gt;&lt;/a&gt;, was a photograph Isaac had taken out of my apartment window on a foggy evening. Over time, his covers grew more abstract. The cover of &lt;a href=&quot;https://thefunyears.bandcamp.com/album/baby-its-cold-inside&quot;&gt;&lt;em&gt;baby it’s cold inside&lt;/em&gt;&lt;/a&gt; is a collage of close up images of an old paint can Isaac found in the basement of his apartment complex. Most recently, the cover of our latest album &lt;a href=&quot;https://thefunyears.bandcamp.com/album/typos-in-your-obituary&quot;&gt;&lt;em&gt;typos in your obituary&lt;/em&gt;&lt;/a&gt; is a photograph of a stark, black, sculpture Isaac made out of wood scraps (He made a similar, Big Lebowski inspired sculpture for the cover art of my book with Steve Wright &lt;a href=&quot;https://www.cambridge.org/core/books/optimization-for-data-analysis/C02C3708905D236AA354D1CE1739A6A2&quot;&gt;&lt;em&gt;Optimization for Data Analysis&lt;/em&gt;&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;For our new single, Isaac tried to come up with a midjourney prompt that captured the appropriate aesthetic of a fun years cover. It only took a couple of iterations to get what he wanted:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A mess of scrap paper, dull color plastic caps, dust, paint smear, chip, cruft, drinking straw, rusty nails, wooden lath, mold fractal, layers, black and white, realistic&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/ai-art/mid_query_return.jpg&quot; alt=&quot;midjourney returns some pretty cool cover art.&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And we went with the image in the bottom left.&lt;/p&gt;
-
-&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/ai-art/EIASC.jpg&quot; alt=&quot;cover art of electricity is a scarce commodity.&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The image didn’t have any obvious visual artifacts and looked like something Isaac might have found out in the world. Having read &lt;a href=&quot;https://www.technologyreview.com/2022/09/16/1059598/this-artist-is-dominating-ai-generated-art-and-hes-not-happy-about-it/&quot;&gt;recent reporting&lt;/a&gt; on some rather suspect copyright infringement, Isaac and I wondered if midjourney had obviously just ripped off the image.&lt;/p&gt;
-
-&lt;p&gt;For a lot of the early &lt;a href=&quot;https://openai.com/blog/dall-e/&quot;&gt;DALL-E&lt;/a&gt; memes that I saw on social media, I could often find strikingly similar pictures by pasting the prompt into google image search. But for Isaac’s mess prompt, we came up pretty empty, with some rather hilariously bad results.&lt;/p&gt;
-
-&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/ai-art/google_image_stinks.png&quot; alt=&quot;google image search results for Isaac&#39;s query.&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/ai-art/google_image_stinks2.png&quot; alt=&quot;more google image search results.&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://vaishaal.com/&quot;&gt;Vaishaal Shankar&lt;/a&gt; then reminded me that there was a much better image search engine. The original &lt;a href=&quot;https://openai.com/blog/dall-e/&quot;&gt;DALL-E&lt;/a&gt; model which started the prompt-to-image craze was based on a neural network model called &lt;a href=&quot;https://openai.com/blog/clip/&quot;&gt;CLIP&lt;/a&gt; that learned a model to compare images and text. The model was trained on a huge data set of images paired with captions. It produced two functions: one that mapped images to a code book and one that mapped text to a code book. When you compared codes for two snippets of text, this would tell you how similar the snippets were. When you compared codes of two images, this would tell you how similar the images were. But one of the more amazing things about CLIP is that you could compare the codes of text and images and find images which were similar to the text.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/rom1504&quot;&gt;Romain Beaumont&lt;/a&gt; built an image search system, &lt;a href=&quot;https://rom1504.github.io/clip-retrieval&quot;&gt;clip-retrieval&lt;/a&gt; that used CLIP and a new data set &lt;a href=&quot;https://laion.ai/blog/laion-5b/&quot;&gt;LAION-5B&lt;/a&gt; consisting of 5 billion images scraped by &lt;a href=&quot;https://commoncrawl.org/&quot;&gt;common crawl&lt;/a&gt;. 5 billion! (Insert Dr. Evil meme). Romain hosts a &lt;a href=&quot;https://rom1504.github.io/clip-retrieval&quot;&gt;free version of this system&lt;/a&gt;, where you type some text, it computes the codebook, and it returns all of the images in LAION-5B which have similar codes to your text. We tried Isaac’s prompt here, and now found some strikingly similar images.&lt;/p&gt;
-
-&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/ai-art/clip-retrieval-works.png&quot; alt=&quot;clip-retrieval image search results for Isaac&#39;s query.&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There were hundreds of art pieces and stock photos that captured elements of the spirit of the prompt. Again, with 5 billion images, it’s hard to imagine what’s not in there. But after scrolling through pages of similar images, we couldn’t find any of the four renderings produced by midjourney.&lt;/p&gt;
-
-&lt;p&gt;We tried the reverse image search in both clip-retrieval and google, and though we got back some similar textures, we couldn’t find the image itself.&lt;/p&gt;
-
-&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/ai-art/clip-retrieval-image-search.png&quot; alt=&quot;clip-retrieval reverse image search results for the cover art image.&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, just because we didn’t find our image doesn’t mean it’s not in the corpus somewhere. We looked at around 100 images, but what if we had looked at 1000? Or 10000? Perhaps it’s buried in the corner of some thumbnail in the LAION set. The biggest flaw of these tools is making artist attribution impossible. There should be some simple way of tracing back to the training set. Without traceback and attribution, this is just going to lead to annoying copyright lawsuits like we saw in the early days of sampling in music. We’d be better off if we could avoid those legal battles before they happen.&lt;/p&gt;
-
-&lt;p&gt;All that said, it really seems like the midjourney neural nets are doing something more than re-displaying images from the training set. There are certainly billions of amazing textures out in the world, and CLIP-style models make them easier to bring to the surface. But midjourney adds something extra to fuse these textures into something new. It’s much more than a “copyright infringing blur filter” and that’s pretty cool!&lt;/p&gt;
-
-&lt;p&gt;I still maintain that AI was and is overhyped. We were promised self-driving cars and cures for cancer, and we ended up with splashy tools for image generation. I’m not sure we can justify the billions of dollars of investment. But the image processing tools are still super fun and I want more to play with, so I’ll be selfish and hope OpenAI raises more money. I hope future variants allow for clearer navigation and enable more intentional sampling and pastiche of the source materials. And I can’t wait until they figure out how to make a plugin for Ableton Live that scours huge audio libraries to produce melted sonic textures. At that point, you won’t hear from me as an AI skeptic anymore as I’ll be blissfully hiding in my music studio.&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-26 00:00:00 UTC</pubDate>
-  <author>Ben Recht</author>
-</item>
-
-<item>
-  <title>Tenure-track Faculty at University of Rochester (apply by December 1, 2022)</title>
-  <guid>http://cstheory-jobs.org/2022/10/25/tenure-track-faculty-at-university-of-rochester-apply-by-december-1-2022/</guid>
-  <link>https://cstheory-jobs.org/2022/10/25/tenure-track-faculty-at-university-of-rochester-apply-by-december-1-2022/</link>
-  <description>
-    &lt;p&gt;The department of Computer Science at the University of Rochester is looking to hire three tenure-track faculty. One position is targeting cryptography/security but exceptional theory candidates in all other areas are welcome. Other positions are targeting computer systems and machine learning (broadly construed).&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://www.cs.rochester.edu/about/recruit.html#Faculty&quot;&gt;https://www.cs.rochester.edu/about/recruit.html#Faculty&lt;/a&gt;&lt;br /&gt;
-Email: kristi@cs.rochester.edu&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2022-10-25 17:06:44 UTC</pubDate>
-  <author>CCI: jobs</author>
 </item>
 
 </channel>
