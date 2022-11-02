@@ -10,6 +10,153 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Composable Coresets for Constrained Determinant Maximization and Beyond</title>
+    <link href="http://arxiv.org/abs/2211.00289"/>
+    <id>http://arxiv.org/abs/2211.00289</id>
+    <updated>2022-11-02T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mahabadi_S/0/1/0/all/0/1&quot;&gt;Sepideh Mahabadi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vuong_T/0/1/0/all/0/1&quot;&gt;Thuy-Duong Vuong&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the task of determinant maximization under partition constraint, in
+the context of large data sets. Given a point set $V\subset \mathbb{R}^d$ that
+is partitioned into $s$ groups $V_1,..., V_s$, and integers $k_1,...,k_s$ where
+$k=\sum_i k_i$, the goal is to pick $k_i$ points from group $i$ such that the
+overall determinant of the picked $k$ points is maximized. Determinant
+Maximization and its constrained variants have gained a lot of interest for
+modeling diversityand have found applications in the context of fairness and
+data summarization.
+&lt;/p&gt;
+&lt;p&gt;We study the design of composable coresets for the constrained determinant
+maximization problem. Composable coresets are small subsets of the data that
+(approximately) preserve optimal solutions to optimization tasks and enable
+efficient solutions in several other large data models including the
+distributed and the streaming settings. In this work, we consider two regimes.
+For the case of $k&amp;gt;d$, we show a peeling algorithm that gives us a composable
+coreset of size $kd$ with an approximation factor of $d^{O(d)}$. We complement
+our results by showing that this approximation factor is tight. For the case of
+$k\leq d$, we show that a simple modification of the previous algorithms
+results in an optimal coreset verified by our lower bounds. Our results apply
+to all strongly Rayleigh distribution and several other experimental design
+problems. In addition, we show coreset construction algorithms under the more
+general laminar matroid constraints.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A GPU-friendly, Parallel, and (Almost-)In-Place Algorithm for Building Left-Balanced kd-Trees</title>
+    <link href="http://arxiv.org/abs/2211.00120"/>
+    <id>http://arxiv.org/abs/2211.00120</id>
+    <updated>2022-11-02T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wald_I/0/1/0/all/0/1&quot;&gt;Ingo Wald&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present an algorithm that allows for building left-balanced and complete
+k-d trees over k-dimensional points in a trivially parallel and GPU friendly
+way. Our algorithm requires exactly one int per data point as temporary
+storage, and uses O(logN ) iterations, each of which performs one parallel
+sort, and one trivially parallel CUDA per-node update kernel.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Computational Power of A Single Oblivious Mobile Agent in Two-Edge-Connected Graphs</title>
+    <link href="http://arxiv.org/abs/2211.00332"/>
+    <id>http://arxiv.org/abs/2211.00332</id>
+    <updated>2022-11-02T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Inoue_T/0/1/0/all/0/1&quot;&gt;Taichi Inoue&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kitamura_N/0/1/0/all/0/1&quot;&gt;Naoki Kitamura&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Izumi_T/0/1/0/all/0/1&quot;&gt;Taisuke Izumi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Masuzawa_T/0/1/0/all/0/1&quot;&gt;Toshimitsu Masuzawa&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate the computational power of a single mobile agent in an
+$n$-node graph with storage (i.e., node memory). It has been shown that the
+system with one-bit agent memory and $O(1)$-bit storage is as powerful as the
+one with $O(n)$-bit agent memory and $O(1)$-bit storage, and thus we focus on
+the difference between one-bit memory agents and oblivious (i.e. zero-bit
+memory) agents. While it has been also shown that their computational powers
+are not equivalent, all the known results exhibiting such a difference rely on
+the fact that oblivious agents cannot transfer any information from one side to
+the other side across the bridge edge. Then our main question is stated as
+follows: Are the computational powers of one-bit memory agents and oblivious
+agents equivalent in 2-edge-connected graphs or not? The main contribution of
+this paper is to answer this question positively under the relaxed assumption
+that each node has $O(\log\Delta)$-bit storage ($\Delta$ is the maximum degree
+of the graph). We present an algorithm of simulating any algorithm for a single
+one-bit memory agent by one oblivious agent with $O(n^2)$-time overhead per
+round. Our result implies that the topological structure of graphs
+differentiating the computational powers of oblivious and non-oblivious agents
+is completely characterized by the existence of bridge edges.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Near-Linear Kernel for Two-Parsimony Distance</title>
+    <link href="http://arxiv.org/abs/2211.00378"/>
+    <id>http://arxiv.org/abs/2211.00378</id>
+    <updated>2022-11-02T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deen_E/0/1/0/all/0/1&quot;&gt;Elise Deen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Iersel_L/0/1/0/all/0/1&quot;&gt;Leo van Iersel&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Janssen_R/0/1/0/all/0/1&quot;&gt;Remie Janssen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jones_M/0/1/0/all/0/1&quot;&gt;Mark Jones&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Murakami_Y/0/1/0/all/0/1&quot;&gt;Yuki Murakami&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zeh_N/0/1/0/all/0/1&quot;&gt;Norbert Zeh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The maximum parsimony distance $d_{\textrm{MP}}(T_1,T_2)$ and the
+bounded-state maximum parsimony distance $d_{\textrm{MP}}^t(T_1,T_2)$ measure
+the difference between two phylogenetic trees $T_1,T_2$ in terms of the maximum
+difference between their parsimony scores for any character (with $t$ a bound
+on the number of states in the character, in the case of
+$d_{\textrm{MP}}^t(T_1,T_2)$). While computing $d_{\textrm{MP}}(T_1, T_2)$ was
+previously shown to be fixed-parameter tractable with a linear kernel, no such
+result was known for $d_{\textrm{MP}}^t(T_1,T_2)$. In this paper, we prove that
+computing $d_{\textrm{MP}}^t(T_1, T_2)$ is fixed-parameter tractable for
+all~$t$. Specifically, we prove that this problem has a kernel of size $O(k \lg
+k)$, where $k = d_{\textrm{MP}}^t(T_1, T_2)$. As the primary analysis tool, we
+introduce the concept of leg-disjoint incompatible quartets, which may be of
+independent interest.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On the zeroes of hypergraph independence polynomials</title>
+    <link href="http://arxiv.org/abs/2211.00464"/>
+    <id>http://arxiv.org/abs/2211.00464</id>
+    <updated>2022-11-02T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Galvin_D/0/1/0/all/0/1&quot;&gt;David Galvin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+McKinley_G/0/1/0/all/0/1&quot;&gt;Gwen McKinley&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Perkins_W/0/1/0/all/0/1&quot;&gt;Will Perkins&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Sarantis_M/0/1/0/all/0/1&quot;&gt;Michail Sarantis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Tetali_P/0/1/0/all/0/1&quot;&gt;Prasad Tetali&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the locations of complex zeroes of independence polynomials of
+bounded degree hypergraphs. For graphs, this is a long-studied subject with
+applications to statistical physics, algorithms, and combinatorics. Results on
+zero-free regions for bounded-degree graphs include Shearer&#39;s result on the
+optimal zero-free disk, along with several recent results on other zero-free
+regions. Much less is known for hypergraphs. We make some steps towards an
+understanding of zero-free regions for bounded-degree hypergaphs by proving
+that all hypergraphs of maximum degree $\Delta$ have a zero-free disk almost as
+large as the optimal disk for graphs of maximum degree $\Delta$ established by
+Shearer (of radius $\sim 1/(e \Delta)$). Up to logarithmic factors in $\Delta$
+this is optimal, even for hypergraphs with all edge-sizes strictly greater than
+$2$. We conjecture that for $k\ge 3$, $k$-uniform linear hypergraphs have a
+much larger zero-free disk of radius $\Omega(\Delta^{- \frac{1}{k-1}} )$. We
+establish this in the case of linear hypertrees.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: Postdocs at Harvard at Harvard University (apply by November 21, 2022)</title>
     <link href="https://cstheory-jobs.org/2022/11/01/postdocs-at-harvard-at-harvard-university-apply-by-november-21-2022/"/>
     <id>http://cstheory-jobs.org/2022/11/01/postdocs-at-harvard-at-harvard-university-apply-by-november-21-2022/</id>
@@ -1450,140 +1597,6 @@ the polytope such that the optimal solution can be reached in two monotone
 steps from the starting vertex, yet the pivot rule will require at least $k$
 steps to reach the optimal solution. This result remains true in the more
 general setting of pivot rules for so-called circuit-augmentation algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Highly unbreakable graph with a fixed excluded minor are almost rigid</title>
-    <link href="http://arxiv.org/abs/2210.14629"/>
-    <id>http://arxiv.org/abs/2210.14629</id>
-    <updated>2022-10-27T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lokshtanov_D/0/1/0/all/0/1&quot;&gt;Daniel Lokshtanov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Pilipczuk_M/0/1/0/all/0/1&quot;&gt;Marcin Pilipczuk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Pilipczuk_M/0/1/0/all/0/1&quot;&gt;Micha&amp;#x142; Pilipczuk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Saurabh_S/0/1/0/all/0/1&quot;&gt;Saket Saurabh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A set $X \subseteq V(G)$ in a graph $G$ is $(q,k)$-unbreakable if every
-separation $(A,B)$ of order at most $k$ in $G$ satisfies $|A \cap X| \leq q$ or
-$|B \cap X| \leq q$. In this paper, we prove the following result: If a graph
-$G$ excludes a fixed complete graph $K_h$ as a minor and satisfies certain
-unbreakability guarantees, then $G$ is almost rigid in the following sense: the
-vertices of $G$ can be partitioned in an isomorphism-invariant way into a part
-inducing a graph of bounded treewidth and a part that admits a small
-isomorphism-invariant family of labelings. This result is the key ingredient in
-the fixed-parameter algorithm for Graph Isomorphism parameterized by the
-Hadwiger number of the graph, which is presented in a companion paper.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fixed-parameter tractability of Graph Isomorphism in graphs with an excluded minor</title>
-    <link href="http://arxiv.org/abs/2210.14638"/>
-    <id>http://arxiv.org/abs/2210.14638</id>
-    <updated>2022-10-27T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lokshtanov_D/0/1/0/all/0/1&quot;&gt;Daniel Lokshtanov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pilipczuk_M/0/1/0/all/0/1&quot;&gt;Marcin Pilipczuk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pilipczuk_M/0/1/0/all/0/1&quot;&gt;Micha&amp;#x142; Pilipczuk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saurabh_S/0/1/0/all/0/1&quot;&gt;Saket Saurabh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove that Graph Isomorphism and Canonization in graphs excluding a fixed
-graph $H$ as a minor can be solved by an algorithm working in time $f(H)\cdot
-n^{O(1)}$, where $f$ is some function. In other words, we show that these
-problems are fixed-parameter tractable when parameterized by the size of the
-excluded minor, with the caveat that the bound on the running time is not
-necessarily computable. The underlying approach is based on decomposing the
-graph in a canonical way into unbreakable (intuitively, well-connected) parts,
-which essentially provides a reduction to the case where the given
-$H$-minor-free graph is unbreakable itself. This is complemented by an analysis
-of unbreakable $H$-minor-free graphs, performed in a second subordinate
-manuscript, which reveals that every such graph can be canonically decomposed
-into a part that admits few automorphisms and a part that has bounded
-treewidth.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Online TSP with Known Locations</title>
-    <link href="http://arxiv.org/abs/2210.14722"/>
-    <id>http://arxiv.org/abs/2210.14722</id>
-    <updated>2022-10-27T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bampis_E/0/1/0/all/0/1&quot;&gt;Evripidis Bampis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Escoffier_B/0/1/0/all/0/1&quot;&gt;Bruno Escoffier&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hahn_N/0/1/0/all/0/1&quot;&gt;Niklas Hahn&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xefteris_M/0/1/0/all/0/1&quot;&gt;Michalis Xefteris&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we consider the Online Traveling Salesperson Problem (OLTSP)
-where the locations of the requests are known in advance, but not their arrival
-times. We study both the open variant, in which the algorithm is not required
-to return to the origin when all the requests are served, as well as the closed
-variant, in which the algorithm has to return to the origin after serving all
-the requests. Our aim is to measure the impact of the extra knowledge of the
-locations on the competitiveness of the problem. We present an online
-3/2-competitive algorithm for the general case and a matching lower bound for
-both the open and the closed variant. Then, we focus on some interesting metric
-spaces (ring, star, semi-line), providing both lower bounds and polynomial time
-online algorithms for the problem.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: An Efficient Dynamic Multi-Sources To Single-Destination (DMS-SD) Algorithm In Smart City Navigation Using Adjacent Matrix</title>
-    <link href="http://arxiv.org/abs/2210.14869"/>
-    <id>http://arxiv.org/abs/2210.14869</id>
-    <updated>2022-10-27T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xiao_Z/0/1/0/all/0/1&quot;&gt;Ziren Xiao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xiao_R/0/1/0/all/0/1&quot;&gt;Ruxin Xiao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_C/0/1/0/all/0/1&quot;&gt;Chang Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gao_H/0/1/0/all/0/1&quot;&gt;Honghao Gao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xu_X/0/1/0/all/0/1&quot;&gt;Xiaolong Xu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Luo_S/0/1/0/all/0/1&quot;&gt;Shan Luo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_X/0/1/0/all/0/1&quot;&gt;Xinheng Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Dijkstra&#39;s algorithm is one of the most popular classic path planning
-algorithms, achieving optimal solutions across a wide range of challenging
-tasks. However, it only calculates the shortest distance from one vertex to
-another, which is hard to directly apply to the Dynamic Multi-Sources to
-Single-Destination (DMS-SD) problem. This paper proposes a modified Dijkstra
-algorithm to address the DMS-SD problem, where the destination can be
-dynamically changed. Our method deploys the concept of Adjacent Matrix from
-Floyd&#39;s algorithm and achieves the goal with mathematical calculations. We
-formally show that all-pairs shortest distance information in Floyd&#39;s algorithm
-is not required in our algorithm. Extensive experiments verify the scalability
-and optimality of the proposed method.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Learning to predict arbitrary quantum processes</title>
-    <link href="http://arxiv.org/abs/2210.14894"/>
-    <id>http://arxiv.org/abs/2210.14894</id>
-    <updated>2022-10-27T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Huang_H/0/1/0/all/0/1&quot;&gt;Hsin-Yuan Huang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Chen_S/0/1/0/all/0/1&quot;&gt;Sitan Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Preskill_J/0/1/0/all/0/1&quot;&gt;John Preskill&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present an efficient machine learning (ML) algorithm for predicting any
-unknown quantum process $\mathcal{E}$ over $n$ qubits. For a wide range of
-distributions $\mathcal{D}$ on arbitrary $n$-qubit states, we show that this ML
-algorithm can learn to predict any local property of the output from the
-unknown process $\mathcal{E}$, with a small average error over input states
-drawn from $\mathcal{D}$. The ML algorithm is computationally efficient even
-when the unknown process is a quantum circuit with exponentially many gates.
-Our algorithm combines efficient procedures for learning properties of an
-unknown state and for learning a low-degree approximation to an unknown
-observable. The analysis hinges on proving new norm inequalities, including a
-quantum analogue of the classical Bohnenblust-Hille inequality, which we derive
-by giving an improved algorithm for optimizing local Hamiltonians. Overall, our
-results highlight the potential for ML models to predict the output of complex
-quantum dynamics much faster than the time needed to run the process itself.
 &lt;/p&gt;
   </content>
     <author>
