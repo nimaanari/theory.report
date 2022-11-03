@@ -499,6 +499,202 @@ the clustering process under agent malfunction.
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Gradient Science: PhotoGuard: Defending Against Diffusion-based Image Manipulation</title>
+    <link href="https://gradientscience.org/photoguard/"/>
+    <id>https://gradientscience.org/photoguard/</id>
+    <updated>2022-11-03T00:00:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf&quot; crossorigin=&quot;anonymous&quot; /&gt;
+
+&lt;style&gt;
+    blockquote {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .bbutton{
+        width: 27.5%;
+        margin: 2.5%;
+        height: 3rem;
+        line-height: 3rem;
+        display: inline-block;
+        background: #DDD;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 400;
+        color: #000;
+    }
+
+    .bbutton:hover{
+        background: #e98a99;
+    }
+&lt;/style&gt;
+
+&lt;script src=&quot;/assets/scripts/onload.js&quot;&gt;&lt;/script&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/assets/css/style.css&quot; /&gt;
+
+&lt;p&gt;&lt;a class=&quot;bbutton&quot; style=&quot;float: left; width: 45%;&quot; href=&quot;#&quot;&gt;
+&lt;i class=&quot;fas fa-file-pdf&quot;&gt;&lt;/i&gt;
+    Paper Coming Soon!
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;bbutton&quot; style=&quot;float: left; width: 45%;&quot; href=&quot;https://github.com/MadryLab/photoguard&quot;&gt;
+&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt;
+   Code
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;A few nights ago on The Daily Show, host Trevor Noah interviewed Mira Murati (CTO of OpenAI) about DALL$\cdot$E 2 and, more generally, the power of AI:&lt;/p&gt;
+
+&lt;div style=&quot;width: 100%; text-align: center; padding-top: 10px; padding-bottom: 10px;&quot;&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Ba_C-C6UwlI?start=228&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The whole interview is a great watch, but one thing that stood out to us is Trevor’s question at 3:50:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“So how do you safeguard them [generative models]?… We can very quickly find ourselves in a world where nothing is real, and everything that’s real isn’t, and we question it. How do you prevent, or can you even prevent that completely?”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Indeed, DALL$\cdot$E (and diffusion models in general) greatly exacerbate the risks of malicious image manipulation—what previously required extensive knowledge of photoshop can now be done with just a simple natural-language query:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/photoguard/dog_example.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In fact, editing photos of cute dogs is just the tip of the iceberg:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/photoguard/trevor_example.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, back to Trevor Noah’s question—is there any hope of protecting against this manipulation? We spent a few nights hacking away, and it turns out that—by leveraging adversarial examples—we can do exactly that! The details of our scheme are below,  but the essence is that, by slightly modifying (imperceptibly, even) the input image, we can make it immune to direct editing by generative models!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/photoguard/photoguard_headline.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By the way, Michael Kosta is not the only person who has a selfie with Trevor. Hadi — the lead student on this project — took a selfie with Trevor couple years ago too.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;A selfie of Hadi and Trevor Noah&quot; src=&quot;/assets/photoguard/hadi_trevor_selfie.png&quot; style=&quot;width:50%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, Hadi can leverage diffusion-powered photo editing to “deepen” his
+(imaginary) friendship with Trevor.
+If the selfie was guarded, none of this would be possible (sadly for Trevor,
+it isn’t)!&lt;/p&gt;
+
+&lt;div class=&quot;widget&quot;&gt;
+    &lt;div class=&quot;choices_one_full&quot; id=&quot;gen&quot;&gt;
+    &lt;span class=&quot;widgetheading&quot; id=&quot;genclass&quot;&gt;Choose an Image&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;border-right: 3px white solid;&quot;&gt;
+        &lt;img id=&quot;gen0-1&quot; class=&quot;image-container&quot; style=&quot;width: 0%; margin: 0;&quot; /&gt;
+        &lt;img id=&quot;gen0-2&quot; class=&quot;image-container&quot; style=&quot;width: 100%; margin: 0;&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;some-details&quot;&gt;Some details&lt;/h2&gt;
+
+&lt;p&gt;The core of our “immunization” process is to leverage so-called &lt;a href=&quot;http://gradientscience.org/intro_adversarial/&quot;&gt;adversarial attacks&lt;/a&gt; on these generative models. In particular, we implemented two different attacks, focused on &lt;em&gt;latent diffusion models&lt;/em&gt; (like &lt;a href=&quot;http://stability.ai&quot;&gt;Stable Diffusion&lt;/a&gt;). For simplicity, we can think of such models as having two parts:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The &lt;em&gt;conditioning mechanism&lt;/em&gt; is how the model incorporates external data such as the starting image and the prompt into its final generation. Typically, a pre-trained encoder converts the external signals to a shared embedding space—the model concatenates these embeddings and uses them as input to…&lt;/li&gt;
+  &lt;li&gt;…the &lt;em&gt;diffusion process,&lt;/em&gt; which is responsible for generating the final image generated images. There are many good introductions to how exactly diffusion processes work, but the summary is that we start from random noise, and then repeatedly apply a model that “denoises” the input a little bit at a time.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We construct both a simple attack on the conditioning mechanism, and a complex attack on the end-to-end diffusion process itself.&lt;/p&gt;
+
+&lt;h3 id=&quot;simple-attack&quot;&gt;Simple attack&lt;/h3&gt;
+
+&lt;p&gt;In the simpler of the two attacks, we attack only the conditioning step of the diffusion process. That is, given a starting image $x_0$, we find an image $x_{adv}$ satisfying:&lt;/p&gt;
+
+\[x_{adv} = \arg\max_{\mid\mid x - x_0 \mid\mid \lt \delta} \mathcal{L}(z_x, z_{targ})\]
+
+&lt;p&gt;where $z_x$ is the embedding of the input $x$, and $z_{targ}$ is a fixed embedding. We set $z_{targ}$ to the all zeros vector (or even to an embedding of a random image), causing the diffusion model to completely ignore the starting image and focus only on the prompt.&lt;/p&gt;
+
+&lt;div class=&quot;widget&quot;&gt;
+    &lt;div class=&quot;choices_one_full&quot; id=&quot;gen-1&quot;&gt;
+    &lt;span class=&quot;widgetheading&quot; id=&quot;genclass&quot;&gt;Choose an Image&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;border-right: 3px white solid;&quot;&gt;
+        &lt;img id=&quot;gen1-1&quot; class=&quot;image-container&quot; style=&quot;width: 0%; margin: 0;&quot; /&gt;
+        &lt;img id=&quot;gen1-2&quot; class=&quot;image-container&quot; style=&quot;width: 100%; margin: 0;&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;complex-attack&quot;&gt;Complex attack&lt;/h3&gt;
+
+&lt;p&gt;However, we find that we can do an even stronger attack! In this more complex attack, we modify the starting image with the goal of breaking the &lt;em&gt;whole&lt;/em&gt; end-to-end diffusion process. Because the diffusion process is iterative and involves repeated application of a network, taking gradients through the diffusion process is memory-intensive. We found that differentiating through &lt;em&gt;only four&lt;/em&gt; denoising steps was enough to throw off the entire diffusion process. With a little engineering, we were able to fit four steps onto a single (A100) GPU. As you can see, editing our immunized/defended photos lead to much clearer fake images than the previous attack.&lt;/p&gt;
+
+&lt;p&gt;Here are some examples of fake photos, with and without our “immunization!”&lt;/p&gt;
+
+&lt;div class=&quot;widget&quot;&gt;
+    &lt;div class=&quot;choices_one_full&quot; id=&quot;gen-2&quot;&gt;
+    &lt;span class=&quot;widgetheading&quot; id=&quot;genclass&quot;&gt;Choose an Image&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div style=&quot;border-right: 3px white solid;&quot;&gt;
+        &lt;img id=&quot;gen2-1&quot; class=&quot;image-container&quot; style=&quot;width: 0%; margin: 0;&quot; /&gt;
+        &lt;img id=&quot;gen2-2&quot; class=&quot;image-container&quot; style=&quot;width: 100%; margin: 0;&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;takeaways-and-future-work&quot;&gt;Takeaways and Future Work&lt;/h2&gt;
+
+&lt;p&gt;So, using relatively simple techniques relating to adversarial examples (and about a week’s worth of hacking), we were able to protect images against manipulation from diffusion-based generative models. That said, this is just the beginning, and there are still many unanswered questions!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We only constructed these examples by using an &lt;a href=&quot;https://stability.ai/blog/stable-diffusion-public-release&quot;&gt;open-source diffusion model&lt;/a&gt; (from &lt;a href=&quot;https://huggingface.co/runwayml/stable-diffusion-inpainting&quot;&gt;HuggingFace&lt;/a&gt;). Is it be possible to make them with only black-box access to the model?&lt;/li&gt;
+  &lt;li&gt;Our complex attack uses a lot of memory (we could only fit four diffusion steps onto a single GPU). Meanwhile, &lt;a href=&quot;https://arxiv.org/abs/2205.07460&quot;&gt;recent work&lt;/a&gt; shows that for some diffusion processes, one can obtain the gradient through the entire diffusion process by solving a stochastic differential equation (SDE) and using a constant amount of memory. Is it possible to do something similar more generally?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More generally, we’re excited about the prospect of adversarial examples being used for forcing &lt;em&gt;intended&lt;/em&gt; behavior, rather than for exploiting vulnerabilities (a phenomenon also seen in our work on &lt;a href=&quot;http://gradientscience.org/unadversarial/&quot;&gt;unadversarial examples&lt;/a&gt;!).&lt;/p&gt;
+
+&lt;script&gt;
+ function main() {
+     const BASE_DIR = &quot;/assets/photoguard/&quot;;
+     
+     // Generation
+     var genImage1 = document.getElementById(&#39;gen0-1&#39;);
+     var genImage2 = document.getElementById(&#39;gen0-2&#39;);
+     var genSrcs = range(10).map((name) =&gt; BASE_DIR + &#39;hadi_selfies/&#39; + name + &quot;_orig.png&quot;);
+     function genMapper(origSrc, id) {
+           genImage1.src = origSrc;
+           genImage2.src = origSrc.replace(&quot;_orig.png&quot;, &quot;.png&quot;);
+     }
+     activate_one_widget(&#39;gen&#39;, genSrcs, genMapper);
+
+    // Generation
+     var genImage11 = document.getElementById(&#39;gen1-1&#39;);
+     var genImage12 = document.getElementById(&#39;gen1-2&#39;);
+     var genSrcs1 = range(8).map((name) =&gt; BASE_DIR + &#39;encoder_attack/&#39; + name + &quot;_orig.png&quot;);
+     function genMapper1(origSrc, id) {
+           genImage11.src = origSrc;
+           genImage12.src = origSrc.replace(&quot;_orig.png&quot;, &quot;.png&quot;);
+     }
+
+     activate_one_widget(&#39;gen-1&#39;, genSrcs1, genMapper1);
+    
+     var genImage21 = document.getElementById(&#39;gen2-1&#39;);
+     var genImage22 = document.getElementById(&#39;gen2-2&#39;);
+     var genSrcs2 = range(10).map((name) =&gt; BASE_DIR + &#39;diffusion_attack/&#39; + name + &quot;_orig.png&quot;);
+     function genMapper2(origSrc, id) {
+           genImage21.src = origSrc;
+           genImage22.src = origSrc.replace(&quot;_orig.png&quot;, &quot;.png&quot;);
+     }
+
+     activate_one_widget(&#39;gen-2&#39;, genSrcs2, genMapper2);
+ }
+ window.onload = main;
+
+&lt;/script&gt;
+  </content>
+    <author>
+      <name>Gradient Science</name>
+      <uri>https://gradientscience.org/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">TCS+ Seminar Series: TCS+ talk: Wednesday, November 9 — Yaonan Jin, Columbia University</title>
     <link href="https://tcsplus.wordpress.com/2022/11/02/tcs-talk-wednesday-november-9-yaonan-jin-columbia-university/"/>
     <id>http://tcsplus.wordpress.com/?p=646</id>
@@ -1585,44 +1781,6 @@ introduce the notion of a C*-algebra with the Tsirelson property (TP) and
 establish a number of closure properties for this class. We also show that the
 class of C*-algebras with the TP form an axiomatizable class (in the sense of
 model theory), but that this class admits no ``effective&#39;&#39; axiomatization.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Discrete Bulk Reconstruction</title>
-    <link href="http://arxiv.org/abs/2210.15601"/>
-    <id>http://arxiv.org/abs/2210.15601</id>
-    <updated>2022-10-28T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Aaronson_S/0/1/0/all/0/1&quot;&gt;Scott Aaronson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Pollack_J/0/1/0/all/0/1&quot;&gt;Jason Pollack&lt;/a&gt;&lt;/p&gt;&lt;p&gt;According to the AdS/CFT correspondence, the geometries of certain spacetimes
-are fully determined by quantum states that live on their boundaries -- indeed,
-by the von Neumann entropies of portions of those boundary states. This work
-investigates to what extent the geometries can be reconstructed from the
-entropies in polynomial time. Bouland, Fefferman, and Vazirani (2019) argued
-that the AdS/CFT map can be exponentially complex if one wants to reconstruct
-regions such as the interiors of black holes. Our main result provides a sort
-of converse: we show that, in the special case of a single 1D boundary, if the
-input data consists of a list of entropies of contiguous boundary regions, and
-if the entropies satisfy a single inequality called Strong Subadditivity, then
-we can construct a graph model for the bulk in linear time. Moreover, the bulk
-graph is planar, it has $O(N^2)$ vertices (the information-theoretic minimum),
-and it&#39;s ``universal,&#39;&#39; with only the edge weights depending on the specific
-entropies in question. From a combinatorial perspective, our problem boils down
-to an ``inverse&#39;&#39; of the famous min-cut problem: rather than being given a
-graph and asked to find a min-cut, here we&#39;re given the values of min-cuts
-separating various sets of vertices, and need to find a weighted undirected
-graph consistent with those values. Our solution to this problem relies on the
-notion of a ``bulkless&#39;&#39; graph, which might be of independent interest for
-AdS/CFT. We also make initial progress on the case of multiple 1D boundaries --
-where the boundaries could be connected via wormholes -- including an upper
-bound of $O(N^4)$ vertices whenever a planar bulk graph exists (thus putting
-the problem into the complexity class $\mathsf{NP}$).
 &lt;/p&gt;
   </content>
     <author>
