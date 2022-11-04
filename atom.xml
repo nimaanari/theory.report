@@ -10,6 +10,30 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Property Testing Review: News for October 2022</title>
+    <link href="https://ptreview.sublinear.info/2022/11/news-for-october-2022/"/>
+    <id>https://ptreview.sublinear.info/?p=1766</id>
+    <updated>2022-11-04T05:07:40+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;Yet another month that is kind of quiet! If we missed any work, please let us know in the comments.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Gaussian Mean Testing Made Simple&lt;/strong&gt;, by Ilias Diakonikolas, Daniel Kane and Ankit Pensia (&lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://arxiv.org/pdf/2210.13706.pdf&quot; target=&quot;_blank&quot;&gt;arXiv&lt;/a&gt;). Consider an unknown distribution distribution \(p\) over \(\mathbb{R}^d\) that we have sample access to. The paper studies the problem of determining whether \(p\) is a standard Gaussian with zero mean or whether it is a Gaussian with large mean. More formally, the task is to distinguish between the case that \(p\) is \(\mathcal{N}(0, I_d)\) and the case that \(p\) is a Gaussian of the form \(\mathcal{N}(\mu, \Sigma)\), where \(||\mu||_2 \geq \epsilon\) and \(\Sigma\) is an unknown covariance matrix. Canonne, Chen, Kamath, Levi and Weingarten (2021) gave a sample-optimal algorithm for this problem with sample complexity \(\Theta(\sqrt{d}/\epsilon^2)\) sample complexity. The current paper gives another sample-optimal algorithm for the same problem with a simpler analysis. In addition to being sample-optimal, the algorithm in the current paper also runs in time linear in the total sample size, which is an improvement over the work of Canonne et al. &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Superpolynomial lower bounds for decision tree learning and testing&lt;/strong&gt;, by Caleb Koch, Carmen Strassle and Li-Yang Tan (&lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://arxiv.org/pdf/2210.06375.pdf&quot; target=&quot;_blank&quot;&gt;arXiv&lt;/a&gt;). Roughly speaking, the paper studies the problems of testing if a function has a low-depth decision tree and learning a low-depth decision tree approximating a function (provided that one such tree exists). In what follows, we summarize the testing results in the paper. Given an explicit representation of a function \(f:\{0,1\}^n \to \{0,1\}\) and access to samples from a known distribution \(\mathcal{D}\) over \(\{0,1\}^n\), one can aim to determine, with probability at least \(2/3\), if \(f\) has a decision tree of depth at most \(d\) or whether \(f\) is \(\epsilon\)-far from having a decision tree of depth at most \(d\log d\), where the distance is measured with respect to \(\mathcal{D}\). The paper shows that, under the randomized exponential time hypothesis, this problem cannot be solved in time \(\exp(d^{\Omega(1)})\). An immediate corollary is that the same lower bound holds for the problem of distribution-free testing of the property of having depth-\(d\) decision trees. The bound in the current paper is an improvement over the recent work of Blais, Ferreira Pinto Jr., and Harms (2021), who give a lower bound of \(\tilde{\Omega}(2^d)\) on the query complexity of testers for the same problem. However, the advantage of the latter result is that it is unconditional, as opposed to the result in the current paper. &lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Nithin Varma&lt;/p&gt;
+  </content>
+    <author>
+      <name>Property Testing Review</name>
+      <uri>https://ptreview.sublinear.info</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Improved Inapproximability of VC Dimension and Littlestone&#39;s Dimension via (Unbalanced) Biclique</title>
     <link href="http://arxiv.org/abs/2211.01443"/>
     <id>http://arxiv.org/abs/2211.01443</id>
@@ -1741,41 +1765,6 @@ normalized zonotope, generalizing Vaaler&#39;s Theorem for cubes. We also prove
 that for two different normalized zonotopes $K$ and $Q$ one has
 $\mathrm{vb}(K,Q) \lesssim \sqrt{d \log d}$. All the bounds are constructive
 and the corresponding colorings can be computed in polynomial time.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Improved Approximation Algorithms for Capacitated Vehicle Routing with Fixed Capacity</title>
-    <link href="http://arxiv.org/abs/2210.16534"/>
-    <id>http://arxiv.org/abs/2210.16534</id>
-    <updated>2022-11-01T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhao_J/0/1/0/all/0/1&quot;&gt;Jingyang Zhao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xiao_M/0/1/0/all/0/1&quot;&gt;Mingyu Xiao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Capacitated Vehicle Routing Problem (CVRP) is one of the most extensively
-studied problems in combinatorial optimization. According to the property of
-the demand of customers, we distinguish three variants of CVRP: unit-demand,
-splittable and unsplittable. We consider $k$-CVRP in general metrics and
-general graphs, where $k$ is the capacity of the vehicle and all the three
-versions are APX-hard for each fixed $k\geq 3$.
-&lt;/p&gt;
-&lt;p&gt;In this paper, we give a $(5/2-\Theta(\sqrt{1/k}))$-approximation algorithm
-for splittable and unit-demand $k$-CVRP and a
-$(5/2+\ln2-\Theta(\sqrt{1/k}))$-approximation algorithm for unsplittable
-$k$-CVRP (assume the approximation ratio for metric TSP is $\alpha=3/2$). Thus,
-our approximation ratio is better than previous results for sufficient large
-$k$, say $k\leq 1.7\times 10^7$.
-&lt;/p&gt;
-&lt;p&gt;For small $k$, we design independent algorithms by using more techniques to
-get further improvements. For splittable and unit-demand cases, we improve the
-ratio from $1.934$ to $1.500$ for $k=3$, and from $1.750$ to $1.667$ for $k=4$.
-For the unsplittable case, we improve the ratio from $2.693$ to $1.500$ for
-$k=3$, from $2.443$ to $1.750$ for $k=4$, and from $2.893$ to $2.157$ for
-$k=5$.
 &lt;/p&gt;
   </content>
     <author>
