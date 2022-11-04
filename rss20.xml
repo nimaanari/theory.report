@@ -1096,7 +1096,7 @@ the clustering process under agent malfunction.
 
 &lt;p&gt;&lt;img src=&quot;/assets/photoguard/trevor_example.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;So, back to Trevor Noah’s question—is there any hope of protecting against this manipulation? We spent a few nights hacking away, and it turns out that—by leveraging adversarial examples—we can do exactly that! The details of our scheme are below,  but the essence is that, by slightly modifying (imperceptibly, even) the input image, we can make it immune to direct editing by generative models!&lt;/p&gt;
+&lt;p&gt;So, back to Trevor Noah’s question—is there any hope of protecting against this manipulation? We spent a few nights hacking away, and it turns out that—by leveraging adversarial examples—we can do exactly that! The details of our scheme are below,  but the essence is that, by slightly modifying (imperceptibly, even) the input image, we can create a &lt;em&gt;PhotoGuard&lt;/em&gt;, make the image immune to direct editing by generative models!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/photoguard/photoguard_headline.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1132,20 +1132,20 @@ it isn’t)!&lt;/p&gt;
 
 &lt;h2 id=&quot;some-details&quot;&gt;Some details&lt;/h2&gt;
 
-&lt;p&gt;The core of our “immunization” process is to leverage so-called &lt;a href=&quot;http://gradientscience.org/intro_adversarial/&quot;&gt;adversarial attacks&lt;/a&gt; on these generative models. In particular, we implemented two different attacks, focused on &lt;em&gt;latent diffusion models&lt;/em&gt; (like &lt;a href=&quot;http://stability.ai&quot;&gt;Stable Diffusion&lt;/a&gt;). For simplicity, we can think of such models as having two parts:&lt;/p&gt;
+&lt;p&gt;The core of our “immunization” process is to leverage so-called &lt;a href=&quot;http://gradientscience.org/intro_adversarial/&quot;&gt;adversarial attacks&lt;/a&gt; on these generative models. In particular, we implemented two different PhotoGuards, focused on &lt;em&gt;latent diffusion models&lt;/em&gt; (like &lt;a href=&quot;http://stability.ai&quot;&gt;Stable Diffusion&lt;/a&gt;). For simplicity, we can think of such models as having two parts:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;The &lt;em&gt;conditioning mechanism&lt;/em&gt; is how the model incorporates external data such as the starting image and the prompt into its final generation. Typically, a pre-trained encoder converts the external signals to a shared embedding space—the model concatenates these embeddings and uses them as input to…&lt;/li&gt;
   &lt;li&gt;…the &lt;em&gt;diffusion process,&lt;/em&gt; which is responsible for generating the final image generated images. There are many good introductions to how exactly diffusion processes work, but the summary is that we start from random noise, and then repeatedly apply a model that “denoises” the input a little bit at a time.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;We construct both a simple attack on the conditioning mechanism, and a complex attack on the end-to-end diffusion process itself.&lt;/p&gt;
+&lt;p&gt;We construct both a simple PhotoGuard targeting the conditioning mechanism, and a complex PhotoGuard targeting the end-to-end diffusion process itself.&lt;/p&gt;
 
-&lt;h3 id=&quot;simple-attack&quot;&gt;Simple attack&lt;/h3&gt;
+&lt;h3 id=&quot;simple-photoguard&quot;&gt;Simple PhotoGuard&lt;/h3&gt;
 
-&lt;p&gt;In the simpler of the two attacks, we attack only the conditioning step of the diffusion process. That is, given a starting image $x_0$, we find an image $x_{adv}$ satisfying:&lt;/p&gt;
+&lt;p&gt;In the simpler of the two, we adversarially attack only the conditioning step of the diffusion process. That is, given a starting image $x_0$, we find an image $x_{adv}$ satisfying:&lt;/p&gt;
 
-\[x_{adv} = \arg\max_{\mid\mid x - x_0 \mid\mid \lt \delta} \mathcal{L}(z_x, z_{targ})\]
+\[x_{adv} = \arg\min_{\mid\mid x - x_0 \mid\mid \lt \delta} \mathcal{L}(z_x, z_{targ})\]
 
 &lt;p&gt;where $z_x$ is the embedding of the input $x$, and $z_{targ}$ is a fixed embedding. We set $z_{targ}$ to the all zeros vector (or even to an embedding of a random image), causing the diffusion model to completely ignore the starting image and focus only on the prompt.&lt;/p&gt;
 
@@ -1160,9 +1160,9 @@ it isn’t)!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;complex-attack&quot;&gt;Complex attack&lt;/h3&gt;
+&lt;h3 id=&quot;complex-photoguard&quot;&gt;Complex PhotoGuard&lt;/h3&gt;
 
-&lt;p&gt;However, we find that we can do an even stronger attack! In this more complex attack, we modify the starting image with the goal of breaking the &lt;em&gt;whole&lt;/em&gt; end-to-end diffusion process. Because the diffusion process is iterative and involves repeated application of a network, taking gradients through the diffusion process is memory-intensive. We found that differentiating through &lt;em&gt;only four&lt;/em&gt; denoising steps was enough to throw off the entire diffusion process. With a little engineering, we were able to fit four steps onto a single (A100) GPU. As you can see, editing our immunized/defended photos lead to much clearer fake images than the previous attack.&lt;/p&gt;
+&lt;p&gt;However, we find that we can do an even stronger guard! Here, we modify the starting image with the goal of breaking the &lt;em&gt;whole&lt;/em&gt; end-to-end diffusion process. Because the diffusion process is iterative and involves repeated application of a network, taking gradients through the diffusion process is memory-intensive. We found that differentiating through &lt;em&gt;only four&lt;/em&gt; denoising steps was enough to throw off the entire diffusion process. With a little engineering, we were able to fit four steps onto a single (A100) GPU. As you can see, editing our immunized/defended photos lead to much clearer fake images than the previous guard.&lt;/p&gt;
 
 &lt;p&gt;Here are some examples of fake photos, with and without our “immunization!”&lt;/p&gt;
 
@@ -1183,7 +1183,8 @@ it isn’t)!&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;We only constructed these examples by using an &lt;a href=&quot;https://stability.ai/blog/stable-diffusion-public-release&quot;&gt;open-source diffusion model&lt;/a&gt; (from &lt;a href=&quot;https://huggingface.co/runwayml/stable-diffusion-inpainting&quot;&gt;HuggingFace&lt;/a&gt;). Is it be possible to make them with only black-box access to the model?&lt;/li&gt;
-  &lt;li&gt;Our complex attack uses a lot of memory (we could only fit four diffusion steps onto a single GPU). Meanwhile, &lt;a href=&quot;https://arxiv.org/abs/2205.07460&quot;&gt;recent work&lt;/a&gt; shows that for some diffusion processes, one can obtain the gradient through the entire diffusion process by solving a stochastic differential equation (SDE) and using a constant amount of memory. Is it possible to do something similar more generally?&lt;/li&gt;
+  &lt;li&gt;Our complex PhotoGuard uses a lot of memory (we could only fit four diffusion steps onto a single GPU). Meanwhile, &lt;a href=&quot;https://arxiv.org/abs/2205.07460&quot;&gt;recent work&lt;/a&gt; shows that for some diffusion processes, one can obtain the gradient through the entire diffusion process by solving a stochastic differential equation (SDE) and using a constant amount of memory. Is it possible to do something similar more generally?&lt;/li&gt;
+  &lt;li&gt;There is a huge literature on constructing &lt;a href=&quot;https://arxiv.org/abs/1707.07397&quot;&gt;robust adversarial examples&lt;/a&gt;. It should be possible to leverage similar techniques to make our PhotoGuards more robust to manipulation.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;More generally, we’re excited about the prospect of adversarial examples being used for forcing &lt;em&gt;intended&lt;/em&gt; behavior, rather than for exploiting vulnerabilities (a phenomenon also seen in our work on &lt;a href=&quot;http://gradientscience.org/unadversarial/&quot;&gt;unadversarial examples&lt;/a&gt;!).&lt;/p&gt;
