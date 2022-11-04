@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-11-04T15:41:26Z">Friday, November 04 2022, 15:41</time>
+          <time class='timeago' datetime="2022-11-04T16:52:23Z">Friday, November 04 2022, 16:52</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -340,6 +340,40 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Friday, November 04
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://cstheory-jobs.org/2022/11/04/postdoc-at-ideal-northwestern-uchicago-ttic-uic-iit-apply-by-december-15-2022/'>postdoc at IDEAL (Northwestern, UChicago, TTIC, UIC, IIT) (apply by December 15, 2022)</a></h3>
+        <p class='tr-article-feed'>from <a href='https://cstheory-jobs.org'>CCI: jobs</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          The Institute for Data, Econometrics, Algorithms, and Learning (IDEAL) invites applications for two postdoctoral positions with an anticipated start date in the Fall of 2023. IDEAL is an interdisciplinary institute organized by Northwestern University, the University of Chicago, Toyota Technological Institute at Chicago, the University of Illinois Chicago, and Illinois Institute of Technology. Website: academicjobsonline.org/ajo/jobs/23590 [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>The Institute for Data, Econometrics, Algorithms, and Learning (IDEAL) invites applications for two postdoctoral positions with an anticipated start date in the Fall of 2023. IDEAL is an interdisciplinary institute organized by Northwestern University, the University of Chicago, Toyota Technological Institute at Chicago, the University of Illinois Chicago, and Illinois Institute of Technology.</p>
+<p>Website: <a href="https://academicjobsonline.org/ajo/jobs/23590">https://academicjobsonline.org/ajo/jobs/23590</a><br />
+Email: idealpostdoc@ttic.edu</p>
+<p class="authors">By shacharlovett</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-11-04T16:45:56Z">Friday, November 04 2022, 16:45</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -2658,6 +2692,17 @@ the clustering process under agent malfunction.
           
 
 
+    div.footnote{
+        overflow: hidden;
+        margin-bottom: 2rem;
+        padding-left: 5%;
+        margin-left: 0%;
+        margin-top: 20px;
+        width: 90%;
+        border-left: 3px #A31F34 solid;
+        font-size: 0.9rem;
+    }
+
     blockquote {
         padding-top: 0;
         padding-bottom: 0;
@@ -2720,6 +2765,16 @@ the clustering process under agent malfunction.
 <p>So, back to Trevor Noah’s question—is there any hope of protecting against this manipulation? We spent a few nights hacking away, and it turns out that—by leveraging adversarial examples—we can do exactly that! The details of our scheme are below,  but the essence is that, by slightly modifying (imperceptibly, even) the input image, we can make it immune to direct editing by generative models!</p>
 
 <p>♦</p>
+
+
+Note: One might (rightfully) point out that by re-training a
+diffusion model in the future, one will be able to get around our "photo guard"
+(in other words, that we are in a static defense vs. adaptive attack
+scenario). This is definitely true! However, our goal here is not to suggest
+that individual users should safeguard their own images by themselves. Instead,
+we hope that the companies providing the models themselves can provide an API to
+safeguard one's images against editing.  
+
 
 <p>By the way, Michael Kosta is not the only person who has a selfie with Trevor. Hadi — the lead student on this project — took a selfie with Trevor couple years ago too.</p>
 
@@ -2846,6 +2901,17 @@ Takeaways and Future Work
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
 <style>
+    div.footnote{
+        overflow: hidden;
+        margin-bottom: 2rem;
+        padding-left: 5%;
+        margin-left: 0%;
+        margin-top: 20px;
+        width: 90%;
+        border-left: 3px #A31F34 solid;
+        font-size: 0.9rem;
+    }
+
     blockquote {
         padding-top: 0;
         padding-bottom: 0;
@@ -2908,6 +2974,16 @@ Takeaways and Future Work
 <p>So, back to Trevor Noah’s question—is there any hope of protecting against this manipulation? We spent a few nights hacking away, and it turns out that—by leveraging adversarial examples—we can do exactly that! The details of our scheme are below,  but the essence is that, by slightly modifying (imperceptibly, even) the input image, we can make it immune to direct editing by generative models!</p>
 
 <p><img src="/assets/photoguard/photoguard_headline.png" alt="" /></p>
+
+<div class="footnote">
+<strong>Note:</strong> One might (rightfully) point out that by re-training a
+diffusion model in the future, one will be able to get around our "photo guard"
+(in other words, that we are in a <a href="https://arxiv.org/abs/2106.14851">static defense vs. adaptive attack</a>
+scenario). This is definitely true! However, our goal here is not to suggest
+that individual users should safeguard their own images by themselves. Instead,
+we hope that the companies providing the models themselves can provide an API to
+safeguard one's images against editing.  
+</div>
 
 <p>By the way, Michael Kosta is not the only person who has a selfie with Trevor. Hadi — the lead student on this project — took a selfie with Trevor couple years ago too.</p>
 
@@ -3738,91 +3814,6 @@ precise, expose in the language of group actions on tensor spaces, and endow
 with proofs the results previously known. This is necessary for studying the
 algorithms of fast matrix multiplication admitting symmetries. The latter seems
 to be a promising new way for constructing fast algorithms.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-11-01T00:30:00Z">Tuesday, November 01 2022, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2210.16351'>Parallel Breadth-First Search and Exact Shortest Paths and Stronger Notions for Approximate Distances</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: V&#xe1;clav Rozho&#x148;, Bernhard Haeupler, Anders Martinsson, Christoph Grunau, Goran Zuzic</p><p>We introduce stronger notions for approximate single-source shortest-path
-distances, show how to efficiently compute them from weaker standard notions,
-and demonstrate the algorithmic power of these new notions and transformations.
-One application is the first work-efficient parallel algorithm for computing
-exact single-source shortest paths graphs -- resolving a major open problem in
-parallel computing.
-</p>
-<p>Given a source vertex in a directed graph with polynomially-bounded
-nonnegative integer lengths, the algorithm computes an exact shortest path tree
-in $m \log^{O(1)} n$ work and $n^{1/2+o(1)}$ depth. Previously, no parallel
-algorithm improving the trivial linear depths of Dijkstra's algorithm without
-significantly increasing the work was known, even for the case of undirected
-and unweighted graphs (i.e., for computing a BFS-tree).
-</p>
-<p>Our main result is a black-box transformation that uses $\log^{O(1)} n$
-standard approximate distance computations to produce approximate distances
-which also satisfy the subtractive triangle inequality (up to a
-$(1+\varepsilon)$ factor) and even induce an exact shortest path tree in a
-graph with only slightly perturbed edge lengths. These strengthened
-approximations are algorithmically significantly more powerful and overcome
-well-known and often encountered barriers for using approximate distances. In
-directed graphs they can even be boosted to exact distances. This results in a
-black-box transformation of any (parallel or distributed) algorithm for
-approximate shortest paths in directed graphs into an algorithm computing exact
-distances at essentially no cost. Applying this to the recent breakthroughs of
-Fineman et al. for compute approximate SSSP-distances via approximate hopsets
-gives new parallel and distributed algorithm for exact shortest paths.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Rozhon_V/0/1/0/all/0/1">V&#xe1;clav Rozho&#x148;</a>, <a href="http://arxiv.org/find/cs/1/au:+Haeupler_B/0/1/0/all/0/1">Bernhard Haeupler</a>, <a href="http://arxiv.org/find/cs/1/au:+Martinsson_A/0/1/0/all/0/1">Anders Martinsson</a>, <a href="http://arxiv.org/find/cs/1/au:+Grunau_C/0/1/0/all/0/1">Christoph Grunau</a>, <a href="http://arxiv.org/find/cs/1/au:+Zuzic_G/0/1/0/all/0/1">Goran Zuzic</a></p><p>We introduce stronger notions for approximate single-source shortest-path
-distances, show how to efficiently compute them from weaker standard notions,
-and demonstrate the algorithmic power of these new notions and transformations.
-One application is the first work-efficient parallel algorithm for computing
-exact single-source shortest paths graphs -- resolving a major open problem in
-parallel computing.
-</p>
-<p>Given a source vertex in a directed graph with polynomially-bounded
-nonnegative integer lengths, the algorithm computes an exact shortest path tree
-in $m \log^{O(1)} n$ work and $n^{1/2+o(1)}$ depth. Previously, no parallel
-algorithm improving the trivial linear depths of Dijkstra's algorithm without
-significantly increasing the work was known, even for the case of undirected
-and unweighted graphs (i.e., for computing a BFS-tree).
-</p>
-<p>Our main result is a black-box transformation that uses $\log^{O(1)} n$
-standard approximate distance computations to produce approximate distances
-which also satisfy the subtractive triangle inequality (up to a
-$(1+\varepsilon)$ factor) and even induce an exact shortest path tree in a
-graph with only slightly perturbed edge lengths. These strengthened
-approximations are algorithmically significantly more powerful and overcome
-well-known and often encountered barriers for using approximate distances. In
-directed graphs they can even be boosted to exact distances. This results in a
-black-box transformation of any (parallel or distributed) algorithm for
-approximate shortest paths in directed graphs into an algorithm computing exact
-distances at essentially no cost. Applying this to the recent breakthroughs of
-Fineman et al. for compute approximate SSSP-distances via approximate hopsets
-gives new parallel and distributed algorithm for exact shortest paths.
 </p>
         
         </div>
