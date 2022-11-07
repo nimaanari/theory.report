@@ -10,6 +10,37 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-143 |  Certificate games | 
+
+	Anna Gal, 
+
+	Sourav Chakraborty, 
+
+	Sophie Laplante, 
+
+	Rajat Mittal, 
+
+	Anupa Sunny</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/143"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/143</id>
+    <updated>2022-11-07T07:52:43+00:00</updated>
+    <content type="html" xml:lang="en">
+    We introduce and study Certificate Game complexity, a measure of complexity based on the probability of winning a game where two players are given inputs with different function values and are asked to output some index $i$ such that $x_i\neq y_i$, in a zero-communication setting.
+
+We give upper and lower bounds for private coin, public coin, shared entanglement and non-signaling strategies, and give some separations.
+We show that complexity in the public coin model is upper bounded by  Randomized query and Certificate complexity. On the other hand, it is lower bounded by fractional and randomized certificate complexity, making it a good candidate to prove strong lower bounds on randomized query complexity.
+Complexity in the private coin model is bounded from below by zero-error randomized query complexity.  The quantum measure highlights an interesting and surprising difference between classical and quantum query models. Whereas the public coin certificate game complexity is bounded from above by randomized query complexity, the quantum certificate game complexity can be quadratically larger than  quantum query complexity. We use non-signaling, a notion from quantum information, to give a lower bound of $n$ on the quantum certificate game complexity of the OR function, whose quantum query complexity is  $\Theta(\sqrt{n})$, then go on to show that this ``non-signaling bottleneck&amp;#39;&amp;#39; applies to all functions with high sensitivity, block sensitivity or fractional block sensitivity. 
+
+We also consider the single-bit version of certificate games, where the inputs of the two players are restricted to having Hamming distance $1$. We prove that the single-bit version of certificate game complexity with shared randomness is equal to sensitivity up to constant factors, thus giving a new characterization of sensitivity.  On the other hand, the single-bit version of certificate game complexity with private randomness is equal to $\lambda^2$, where $\lambda$ is the spectral sensitivity.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Steiner connectivity problems in hypergraphs</title>
     <link href="http://arxiv.org/abs/2211.02525"/>
     <id>http://arxiv.org/abs/2211.02525</id>
@@ -1771,26 +1802,6 @@ results in an optimal coreset verified by our lower bounds. Our results apply
 to all strongly Rayleigh distribution and several other experimental design
 problems. In addition, we show coreset construction algorithms under the more
 general laminar matroid constraints.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A GPU-friendly, Parallel, and (Almost-)In-Place Algorithm for Building Left-Balanced kd-Trees</title>
-    <link href="http://arxiv.org/abs/2211.00120"/>
-    <id>http://arxiv.org/abs/2211.00120</id>
-    <updated>2022-11-02T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wald_I/0/1/0/all/0/1&quot;&gt;Ingo Wald&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present an algorithm that allows for building left-balanced and complete
-k-d trees over k-dimensional points in a trivially parallel and GPU friendly
-way. Our algorithm requires exactly one int per data point as temporary
-storage, and uses O(logN ) iterations, each of which performs one parallel
-sort, and one trivially parallel CUDA per-node update kernel.
 &lt;/p&gt;
   </content>
     <author>
