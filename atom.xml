@@ -10,6 +10,33 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-144 |  Streaming beyond sketching for Maximum Directed Cut | 
+
+	Raghuvansh Saxena, 
+
+	Noah Singer, 
+
+	Madhu Sudan, 
+
+	Santhoshini Velusamy</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/144"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/144</id>
+    <updated>2022-11-07T21:43:30+00:00</updated>
+    <content type="html" xml:lang="en">
+    We give an $\widetilde{O}(\sqrt{n})$-space single-pass $0.483$-approximation streaming algorithm for estimating the maximum directed cut size (Max-DICUT) in a directed graph on $n$ vertices. This improves over an $O(\log n)$-space $4/9 &amp;lt; 0.45$ approximation algorithm  due to Chou, Golovnev, Velusamy (FOCS 2020), which was known to be optimal for $o(\sqrt{n})$-space algorithms.
+
+Max-DICUT is a special case of a constraint satisfaction problem (CSP). In this broader context, our work gives the first CSP for which algorithms with $\widetilde{O}(\sqrt{n})$ space can provably outperform $o(\sqrt{n})$-space algorithms on general instances. Previously, this was shown in the restricted case of bounded-degree graphs in a previous work of the authors (SODA 2023). Prior to that work, the only algorithms for any CSP were based on generalizations of the $O(\log n)$-space algorithm for MAX-DICUT, and were in particular so-called &amp;quot;sketching&amp;quot;&amp;quot; algorithms. In this work, we demonstrate that more sophisticated streaming algorithms can outperform these algorithms even on general instances.
+
+Our algorithm constructs a &amp;quot;snapshot&amp;quot; of the graph and then applies a result of Feige and Jozeph (Algorithmica, 2015) to approximately estimate the Max-DICUT value from this snapshot. Constructing this snapshot is easy for bounded-degree graphs and the main contribution of our work is to construct this snapshot in the general setting. This involves some delicate sampling methods as well as a host of &amp;quot;continuity&amp;quot; results on the Max-DICUT behaviour in graphs.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR22-143 |  Certificate games | 
 
 	Anna Gal, 
@@ -1770,43 +1797,6 @@ it isn’t)!&lt;/p&gt;
     <author>
       <name>TCS+ Seminar Series</name>
       <uri>https://tcsplus.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Composable Coresets for Constrained Determinant Maximization and Beyond</title>
-    <link href="http://arxiv.org/abs/2211.00289"/>
-    <id>http://arxiv.org/abs/2211.00289</id>
-    <updated>2022-11-02T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mahabadi_S/0/1/0/all/0/1&quot;&gt;Sepideh Mahabadi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vuong_T/0/1/0/all/0/1&quot;&gt;Thuy-Duong Vuong&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the task of determinant maximization under partition constraint, in
-the context of large data sets. Given a point set $V\subset \mathbb{R}^d$ that
-is partitioned into $s$ groups $V_1,..., V_s$, and integers $k_1,...,k_s$ where
-$k=\sum_i k_i$, the goal is to pick $k_i$ points from group $i$ such that the
-overall determinant of the picked $k$ points is maximized. Determinant
-Maximization and its constrained variants have gained a lot of interest for
-modeling diversityand have found applications in the context of fairness and
-data summarization.
-&lt;/p&gt;
-&lt;p&gt;We study the design of composable coresets for the constrained determinant
-maximization problem. Composable coresets are small subsets of the data that
-(approximately) preserve optimal solutions to optimization tasks and enable
-efficient solutions in several other large data models including the
-distributed and the streaming settings. In this work, we consider two regimes.
-For the case of $k&amp;gt;d$, we show a peeling algorithm that gives us a composable
-coreset of size $kd$ with an approximation factor of $d^{O(d)}$. We complement
-our results by showing that this approximation factor is tight. For the case of
-$k\leq d$, we show that a simple modification of the previous algorithms
-results in an optimal coreset verified by our lower bounds. Our results apply
-to all strongly Rayleigh distribution and several other experimental design
-problems. In addition, we show coreset construction algorithms under the more
-general laminar matroid constraints.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
