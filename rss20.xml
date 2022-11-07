@@ -9,6 +9,187 @@
 
 
 <item>
+  <title>Steiner connectivity problems in hypergraphs</title>
+  <guid>http://arxiv.org/abs/2211.02525</guid>
+  <link>http://arxiv.org/abs/2211.02525</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Horsch_F/0/1/0/all/0/1&quot;&gt;Florian H&amp;#xf6;rsch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Szigeti_Z/0/1/0/all/0/1&quot;&gt;Zolt&amp;#xe1;n Szigeti&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We say that a tree $T$ is an $S$-Steiner tree if $S \subseteq V(T)$ and a
+hypergraph is an $S$-Steiner hypertree if it can be trimmed to an $S$-Steiner
+tree. We prove that it is NP-hard to decide, given a hypergraph $\mathcal{H}$
+and some $S \subseteq V(\mathcal{H})$, whether there is a subhypergraph of
+$\mathcal{H}$ which is an $S$-Steiner hypertree. As corollaries, we give two
+negative results for two Steiner orientation problems in hypergraphs. Firstly,
+we show that it is NP-hard to decide, given a hypergraph $\mathcal{H}$, some $r
+\in V(\mathcal{H})$ and some $S \subseteq V(\mathcal{H})$, whether this
+hypergraph has an orientation in which every vertex of $S$ is reachable from
+$r$. Secondly, we show that it is NP-hard to decide, given a hypergraph
+$\mathcal{H}$ and some $S \subseteq V(\mathcal{H})$, whether this hypergraph
+has an orientation in which any two vertices in $S$ are mutually reachable from
+each other. This answers a longstanding open question of the Egerv\&#39;ary
+Research group. On the positive side, we show that the problem of finding a
+Steiner hypertree and the first orientation problem can be solved in polynomial
+time if the number of terminals $|S|$ is fixed.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-07 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Certification with an NP Oracle</title>
+  <guid>http://arxiv.org/abs/2211.02257</guid>
+  <link>http://arxiv.org/abs/2211.02257</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blanc_G/0/1/0/all/0/1&quot;&gt;Guy Blanc&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Koch_C/0/1/0/all/0/1&quot;&gt;Caleb Koch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lange_J/0/1/0/all/0/1&quot;&gt;Jane Lange&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Strassle_C/0/1/0/all/0/1&quot;&gt;Carmen Strassle&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tan_L/0/1/0/all/0/1&quot;&gt;Li-Yang Tan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the certification problem, the algorithm is given a function $f$ with
+certificate complexity $k$ and an input $x^\star$, and the goal is to find a
+certificate of size $\le \text{poly}(k)$ for $f$&#39;s value at $x^\star$. This
+problem is in $\mathsf{NP}^{\mathsf{NP}}$, and assuming $\mathsf{P} \ne
+\mathsf{NP}$, is not in $\mathsf{P}$. Prior works, dating back to Valiant in
+1984, have therefore sought to design efficient algorithms by imposing
+assumptions on $f$ such as monotonicity.
+&lt;/p&gt;
+&lt;p&gt;Our first result is a $\mathsf{BPP}^{\mathsf{NP}}$ algorithm for the general
+problem. The key ingredient is a new notion of the balanced influence of
+variables, a natural variant of influence that corrects for the bias of the
+function. Balanced influences can be accurately estimated via uniform
+generation, and classic $\mathsf{BPP}^{\mathsf{NP}}$ algorithms are known for
+the latter task.
+&lt;/p&gt;
+&lt;p&gt;We then consider certification with stricter instance-wise guarantees: for
+each $x^\star$, find a certificate whose size scales with that of the smallest
+certificate for $x^\star$. In sharp contrast with our first result, we show
+that this problem is $\mathsf{NP}^{\mathsf{NP}}$-hard even to approximate. We
+obtain an optimal inapproximability ratio, adding to a small handful of
+problems in the higher levels of the polynomial hierarchy for which optimal
+inapproximability is known. Our proof involves the novel use of bit-fixing
+dispersers for gap amplification.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-07 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Variable Parameter Analysis for Scheduling One Machine</title>
+  <guid>http://arxiv.org/abs/2211.02107</guid>
+  <link>http://arxiv.org/abs/2211.02107</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vakhania_N/0/1/0/all/0/1&quot;&gt;Nodari Vakhania&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In contrast to the fixed parameter analysis (FPA), in the variable parameter
+analysis (VPA) the value of the target problem parameter is not fixed, it
+rather depends on the structure of a given problem instance and tends to have a
+favorable asymptotic behavior when the size of the input increases. While
+applying the VPA to an intractable optimization problem with $n$ objects, the
+exponential-time dependence in enumeration of the feasible solution set is
+attributed solely to the variable parameter $\nu$, $\nu&amp;lt;&amp;lt;n$. As opposed to the
+FPA, the VPA does not imply any restriction on some problem parameters, it
+rather takes an advantage of a favorable nature of the problem, which permits
+to reduce the cost of enumeration of the solution space. Our main technical
+contribution is a variable parameter algorithm for a strongly
+$\mathsf{NP}$-hard single-machine scheduling problem to minimize maximum job
+lateness. The target variable parameter $\nu$ is the number of jobs with some
+specific characteristics, the ``emerging&#39;&#39; ones. The solution process is
+separated in two phases. At phase 1 a partial solution including $n-\nu$
+non-emerging jobs is constructed in a low degree polynomial time. At phase 2
+less than $\nu!$ permutations of the $\nu$ emerging jobs are considered. Each
+of them are incorporated into the partial schedule of phase 1. Doe to the
+results of an earlier conducted experimental study, $\nu/n$ varied from $1/4$
+for small problem instances to $1/10$ for the largest tested problem instances,
+so that that the ratio becomes closer to 0 for large $n$s.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-07 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Privacy-preserving Deep Learning based Record Linkage</title>
+  <guid>http://arxiv.org/abs/2211.02161</guid>
+  <link>http://arxiv.org/abs/2211.02161</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ranbaduge_T/0/1/0/all/0/1&quot;&gt;Thilina Ranbaduge&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vatsalan_D/0/1/0/all/0/1&quot;&gt;Dinusha Vatsalan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ding_M/0/1/0/all/0/1&quot;&gt;Ming Ding&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Deep learning-based linkage of records across different databases is becoming
+increasingly useful in data integration and mining applications to discover new
+insights from multiple sources of data. However, due to privacy and
+confidentiality concerns, organisations often are not willing or allowed to
+share their sensitive data with any external parties, thus making it
+challenging to build/train deep learning models for record linkage across
+different organizations&#39; databases. To overcome this limitation, we propose the
+first deep learning-based multi-party privacy-preserving record linkage (PPRL)
+protocol that can be used to link sensitive databases held by multiple
+different organisations. In our approach, each database owner first trains a
+local deep learning model, which is then uploaded to a secure environment and
+securely aggregated to create a global model. The global model is then used by
+a linkage unit to distinguish unlabelled record pairs as matches and
+non-matches. We utilise differential privacy to achieve provable privacy
+protection against re-identification attacks. We evaluate the linkage quality
+and scalability of our approach using several large real-world databases,
+showing that it can achieve high linkage quality while providing sufficient
+privacy protection against existing attacks.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-07 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Connected k-Center and k-Diameter Clustering</title>
+  <guid>http://arxiv.org/abs/2211.02176</guid>
+  <link>http://arxiv.org/abs/2211.02176</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Drexler_L/0/1/0/all/0/1&quot;&gt;Lukas Drexler&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Eube_J/0/1/0/all/0/1&quot;&gt;Jan Eube&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Luo_K/0/1/0/all/0/1&quot;&gt;Kelin Luo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Roglin_H/0/1/0/all/0/1&quot;&gt;Heiko R&amp;#xf6;glin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schmidt_M/0/1/0/all/0/1&quot;&gt;Melanie Schmidt&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wargalla_J/0/1/0/all/0/1&quot;&gt;Julian Wargalla&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Motivated by an application from geodesy, we introduce a novel clustering
+problem which is a $k$-center (or k-diameter) problem with a side constraint.
+For the side constraint, we are given an undirected connectivity graph $G$ on
+the input points, and a clustering is now only feasible if every cluster
+induces a connected subgraph in $G$. We call the resulting problems the
+connected $k$-center problem and the connected $k$-diameter problem.
+&lt;/p&gt;
+&lt;p&gt;We prove several results on the complexity and approximability of these
+problems. Our main result is an $O(\log^2{k})$-approximation algorithm for the
+connected $k$-center and the connected $k$-diameter problem. For Euclidean
+metrics and metrics with constant doubling dimension, the approximation factor
+of this algorithm improves to $O(1)$. We also consider the special cases that
+the connectivity graph is a line or a tree. For the line we give optimal
+polynomial-time algorithms and for the case that the connectivity graph is a
+tree, we either give an optimal polynomial-time algorithm or a
+$2$-approximation algorithm for all variants of our model. We complement our
+upper bounds by several lower bounds.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-07 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Online Matching with Set Delay</title>
+  <guid>http://arxiv.org/abs/2211.02394</guid>
+  <link>http://arxiv.org/abs/2211.02394</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deryckere_L/0/1/0/all/0/1&quot;&gt;Lindsey Deryckere&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Umboh_S/0/1/0/all/0/1&quot;&gt;Seeun William Umboh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We initiate the study of online problems with set delay, where the delay cost
+at any given time is an arbitrary function of the set of pending requests. In
+particular, we study the online min-cost perfect matching with set delay
+(MPMD-Set) problem, which generalises the online min-cost perfect matching with
+delay (MPMD) problem introduced by Emek et al. (STOC 2016). In MPMD, $m$
+requests arrive over time in a metric space of $n$ points. When a request
+arrives the algorithm must choose to either match or delay the request. The
+goal is to create a perfect matching of all requests while minimising the sum
+of distances between matched requests, and the total delay costs incurred by
+each of the requests. In contrast to previous work we study MPMD-Set in the
+non-clairvoyant setting, where the algorithm does not know the future delay
+costs. We first show no algorithm is competitive in $n$ or $m$. We then study
+the natural special case of size-based delay where the delay is a
+non-decreasing function of the number of unmatched requests. Our main result is
+the first non-clairvoyant algorithms for online min-cost perfect matching with
+size-based delay that are competitive in terms of $m$. In fact, these are the
+first non-clairvoyant algorithms for any variant of MPMD. Furthermore, we prove
+a lower bound of $\Omega(n)$ for any deterministic algorithm and $\Omega(\log
+n)$ for any randomised algorithm. These lower bounds also hold for clairvoyant
+algorithms.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-07 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Inaugural address at the Hungarian Academy of Science: The Quantum Computer – A Miracle or Mirage</title>
   <guid>http://gilkalai.wordpress.com/?p=23390</guid>
   <link>https://gilkalai.wordpress.com/2022/11/05/inaugural-address-at-the-hungarian-academy-of-science-the-quantum-computer-a-miracle-or-mirage/</link>
@@ -1416,136 +1597,6 @@ sort, and one trivially parallel CUDA per-node update kernel.
   </description>
   <pubDate>2022-11-02 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Computational Power of A Single Oblivious Mobile Agent in Two-Edge-Connected Graphs</title>
-  <guid>http://arxiv.org/abs/2211.00332</guid>
-  <link>http://arxiv.org/abs/2211.00332</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Inoue_T/0/1/0/all/0/1&quot;&gt;Taichi Inoue&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kitamura_N/0/1/0/all/0/1&quot;&gt;Naoki Kitamura&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Izumi_T/0/1/0/all/0/1&quot;&gt;Taisuke Izumi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Masuzawa_T/0/1/0/all/0/1&quot;&gt;Toshimitsu Masuzawa&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate the computational power of a single mobile agent in an
-$n$-node graph with storage (i.e., node memory). It has been shown that the
-system with one-bit agent memory and $O(1)$-bit storage is as powerful as the
-one with $O(n)$-bit agent memory and $O(1)$-bit storage, and thus we focus on
-the difference between one-bit memory agents and oblivious (i.e. zero-bit
-memory) agents. While it has been also shown that their computational powers
-are not equivalent, all the known results exhibiting such a difference rely on
-the fact that oblivious agents cannot transfer any information from one side to
-the other side across the bridge edge. Then our main question is stated as
-follows: Are the computational powers of one-bit memory agents and oblivious
-agents equivalent in 2-edge-connected graphs or not? The main contribution of
-this paper is to answer this question positively under the relaxed assumption
-that each node has $O(\log\Delta)$-bit storage ($\Delta$ is the maximum degree
-of the graph). We present an algorithm of simulating any algorithm for a single
-one-bit memory agent by one oblivious agent with $O(n^2)$-time overhead per
-round. Our result implies that the topological structure of graphs
-differentiating the computational powers of oblivious and non-oblivious agents
-is completely characterized by the existence of bridge edges.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-02 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>A Near-Linear Kernel for Two-Parsimony Distance</title>
-  <guid>http://arxiv.org/abs/2211.00378</guid>
-  <link>http://arxiv.org/abs/2211.00378</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deen_E/0/1/0/all/0/1&quot;&gt;Elise Deen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Iersel_L/0/1/0/all/0/1&quot;&gt;Leo van Iersel&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Janssen_R/0/1/0/all/0/1&quot;&gt;Remie Janssen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jones_M/0/1/0/all/0/1&quot;&gt;Mark Jones&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Murakami_Y/0/1/0/all/0/1&quot;&gt;Yuki Murakami&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zeh_N/0/1/0/all/0/1&quot;&gt;Norbert Zeh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The maximum parsimony distance $d_{\textrm{MP}}(T_1,T_2)$ and the
-bounded-state maximum parsimony distance $d_{\textrm{MP}}^t(T_1,T_2)$ measure
-the difference between two phylogenetic trees $T_1,T_2$ in terms of the maximum
-difference between their parsimony scores for any character (with $t$ a bound
-on the number of states in the character, in the case of
-$d_{\textrm{MP}}^t(T_1,T_2)$). While computing $d_{\textrm{MP}}(T_1, T_2)$ was
-previously shown to be fixed-parameter tractable with a linear kernel, no such
-result was known for $d_{\textrm{MP}}^t(T_1,T_2)$. In this paper, we prove that
-computing $d_{\textrm{MP}}^t(T_1, T_2)$ is fixed-parameter tractable for
-all~$t$. Specifically, we prove that this problem has a kernel of size $O(k \lg
-k)$, where $k = d_{\textrm{MP}}^t(T_1, T_2)$. As the primary analysis tool, we
-introduce the concept of leg-disjoint incompatible quartets, which may be of
-independent interest.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-02 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On the zeroes of hypergraph independence polynomials</title>
-  <guid>http://arxiv.org/abs/2211.00464</guid>
-  <link>http://arxiv.org/abs/2211.00464</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Galvin_D/0/1/0/all/0/1&quot;&gt;David Galvin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+McKinley_G/0/1/0/all/0/1&quot;&gt;Gwen McKinley&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Perkins_W/0/1/0/all/0/1&quot;&gt;Will Perkins&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Sarantis_M/0/1/0/all/0/1&quot;&gt;Michail Sarantis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Tetali_P/0/1/0/all/0/1&quot;&gt;Prasad Tetali&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the locations of complex zeroes of independence polynomials of
-bounded degree hypergraphs. For graphs, this is a long-studied subject with
-applications to statistical physics, algorithms, and combinatorics. Results on
-zero-free regions for bounded-degree graphs include Shearer&#39;s result on the
-optimal zero-free disk, along with several recent results on other zero-free
-regions. Much less is known for hypergraphs. We make some steps towards an
-understanding of zero-free regions for bounded-degree hypergaphs by proving
-that all hypergraphs of maximum degree $\Delta$ have a zero-free disk almost as
-large as the optimal disk for graphs of maximum degree $\Delta$ established by
-Shearer (of radius $\sim 1/(e \Delta)$). Up to logarithmic factors in $\Delta$
-this is optimal, even for hypergraphs with all edge-sizes strictly greater than
-$2$. We conjecture that for $k\ge 3$, $k$-uniform linear hypergraphs have a
-much larger zero-free disk of radius $\Omega(\Delta^{- \frac{1}{k-1}} )$. We
-establish this in the case of linear hypertrees.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-02 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Postdocs at Harvard at Harvard University (apply by November 21, 2022)</title>
-  <guid>http://cstheory-jobs.org/2022/11/01/postdocs-at-harvard-at-harvard-university-apply-by-november-21-2022/</guid>
-  <link>https://cstheory-jobs.org/2022/11/01/postdocs-at-harvard-at-harvard-university-apply-by-november-21-2022/</link>
-  <description>
-    &lt;p&gt;Multiple postdoc positions at Harvard University in theoretical CS, machine learning foundations, quantum computing, CS and society and more&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://windowsontheory.org/2022/11/01/postdocs-at-harvard/&quot;&gt;https://windowsontheory.org/2022/11/01/postdocs-at-harvard/&lt;/a&gt;&lt;br /&gt;
-Email: achoat@seas.harvard.edu&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-01 17:19:24 UTC</pubDate>
-  <author>CCI: jobs</author>
-</item>
-
-<item>
-  <title>Postdocs at Harvard!</title>
-  <guid>http://windowsontheory.org/?p=8462</guid>
-  <link>https://windowsontheory.org/2022/11/01/postdocs-at-harvard/</link>
-  <description>
-    &lt;p&gt;The &lt;a href=&quot;https://mlfoundations.org/#opportunities&quot;&gt;ML Foundations &lt;/a&gt;and &lt;a href=&quot;https://toc.seas.harvard.edu/positions&quot;&gt;theory&lt;/a&gt; groups at Harvard are looking for postdocs for the coming academic year. &lt;/p&gt;
-
-
-
-&lt;p&gt;There are also several other positions at Harvard, including at the &lt;a href=&quot;https://datascience.harvard.edu/data-science-postdoctoral-fellows&quot;&gt;Harvard Data Science Initiative (HDSI)&lt;/a&gt;, &lt;a href=&quot;https://cmsa.fas.harvard.edu/about-us/jobs/&quot;&gt; Center of Mathematical Sciences and Applications (CMSA),&lt;/a&gt; &lt;a href=&quot;https://cbs.fas.harvard.edu/research/theory/#swartz&quot;&gt;Swartz fellows&lt;/a&gt; at the Center for Brain Sciences,  the &lt;a href=&quot;https://academicpositions.harvard.edu/postings/11637&quot;&gt;George Carrier fellowship in applied mathematics,&lt;/a&gt;  the &lt;a href=&quot;https://crcs.seas.harvard.edu/apply&quot;&gt;Center for Research on Computation and Society (CRCS)&lt;/a&gt;,   &lt;a href=&quot;https://quantum.harvard.edu/external-candidates&quot;&gt;Harvard Quantum Initiative (HQI)&lt;/a&gt;. I hope that the newly announced &lt;a href=&quot;https://www.harvard.edu/kempner-institute/&quot;&gt;Kempner Institute&lt;/a&gt; will also be able to offer positions for the next academic year. &lt;/p&gt;
-
-
-
-&lt;p&gt;All these positions have different foci, conditions, and the searches are run by different institutions, even if the set of potential mentors might be overlapping. Hence I strongly recommend that people apply to all positions that they are interested in. (&lt;/p&gt;
-
-
-
-&lt;p&gt;These positions and others are posted on the &lt;a href=&quot;https://mlfoundations.org/#opportunities&quot;&gt;opportunities&lt;/a&gt; section of the ML foundations home page ( &lt;a href=&quot;https://mlfoundations.org/#opportunities&quot; rel=&quot;nofollow&quot;&gt;https://mlfoundations.org/#opportunities&lt;/a&gt; ). When I hear of new opportunities, I may update there and/or on &lt;a href=&quot;https://twitter.com/boazbaraktcs&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Boaz Barak&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-01 17:16:59 UTC</pubDate>
-  <author>Windows on Theory</author>
-</item>
-
-<item>
-  <title>Postdoc at Harvard University (apply by December 1, 2022)</title>
-  <guid>http://cstheory-jobs.org/2022/11/01/postdoc-at-harvard-university-apply-by-december-1-2022/</guid>
-  <link>https://cstheory-jobs.org/2022/11/01/postdoc-at-harvard-university-apply-by-december-1-2022/</link>
-  <description>
-    &lt;p&gt;The Harvard CS Theory Group invites applications for a variety of postdoctoral fellowships, including the Michael Rabin Postdoctoral Fellowship, postdocs in the Privacy Tools Project, Fairness in Prediction Algorithms, and Foundations in Machine Learning, and postdocs with individual faculty members.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://academicpositions.harvard.edu/postings/11762&quot;&gt;https://academicpositions.harvard.edu/postings/11762&lt;/a&gt;&lt;br /&gt;
-Email: achoat@seas.harvard.edu&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-01 16:20:19 UTC</pubDate>
-  <author>CCI: jobs</author>
 </item>
 
 </channel>
