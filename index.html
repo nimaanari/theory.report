@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-11-09T17:39:43Z">Wednesday, November 09 2022, 17:39</time>
+          <time class='timeago' datetime="2022-11-09T18:42:34Z">Wednesday, November 09 2022, 18:42</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -340,6 +340,63 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Wednesday, November 09
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2022/145'>TR22-145 |  Revisiting Time-Space Tradeoffs for Function Inversion | 
+
+	Alexander Golovnev, 
+
+	Siyao Guo, 
+
+	Spencer Peters, 
+
+	Noah Stephens-Davidowitz</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          We study the black-box function inversion problem, which is the problem of finding $x \in [N]$ such that $f(x) = y$, given as input some challenge point $y$ in the image of a function $f : [N] \to [N]$, using $T$ oracle queries to $f$ and preprocessed advice $\sigma \in \{0,1\}^S$ depending on $f$. We prove a number of new results about this problem, as follows.
+
+1. We show an algorithm that works for any $T$ and $S$ satisfying $T S^2 \cdot \max\{S,T\} = \widetilde{\Theta}(N^3)$. In the important setting when $S &lt; T$, this improves on the celebrated algorithm of Fiat and Naor [STOC, 1991], which requires $T S^3 \geq N^3$. E.g., Fiat and Naor&#39;s algorithm is only non-trivial for $S \gg N^{2/3}$, while our algorithm gives a non-trivial tradeoff for any $S \gg N^{1/2}$. (Our algorithm and analysis are quite simple. As a consequence of this, we also give a self-contained and simple proof of Fiat and Naor&#39;s original result, with certain optimizations left out for simplicity.)
+
+2. We show a non-adaptive algorithm (i.e., an algorithm whose $i$th query $x_i$ is chosen based entirely on $\sigma$ and $y$, and not on the $f(x_1),\ldots, f(x_{i-1})$) that works for any $T$ and $S$ satisfying $S = \Theta(N \log(N/T))$ giving the first non-trivial non-adaptive algorithm for this problem. E.g., setting $T = N/ \mathrm{poly\,log}(N)$ gives $S = \Theta(N \log \log N)$. This answers a question due to Corrigan-Gibbs and Kogan [TCC, 2019], who asked whether it was possible for a non-adaptive algorithm to work with parameters $T$ and $S$ satisfying $T + S/\log N &lt; o(N)$. We also observe that our non-adaptive algorithm is what we call a guess-and-check algorithm, that is, it is non-adaptive and its final output is always one of the oracle queries $x_1,\ldots, x_T$. For guess-and-check algorithms, we prove a matching lower bound, therefore completely characterizing the achievable parameters $(S,T)$ for this natural class of algorithms. (Corrigan-Gibbs and Kogan showed that any such lower bound for arbitrary non-adaptive algorithms would imply new circuit lower bounds.) 
+
+3. We show equivalence between function inversion and a natural decision version of the problem in both the worst case and the average case, and similarly for functions $f : [N] \to [M]$ with different ranges.
+
+
+All of the above results are most naturally described in a model with shared randomness (i.e., random coins shared between the preprocessing algorithm and the online algorithm). However, as an additional contribution, we show (using a technique from communication complexity due to Newman [IPL, 1991]) how to generically convert any algorithm that uses shared randomness into one that does not.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          We study the black-box function inversion problem, which is the problem of finding $x \in [N]$ such that $f(x) = y$, given as input some challenge point $y$ in the image of a function $f : [N] \to [N]$, using $T$ oracle queries to $f$ and preprocessed advice $\sigma \in \{0,1\}^S$ depending on $f$. We prove a number of new results about this problem, as follows.
+
+1. We show an algorithm that works for any $T$ and $S$ satisfying $T S^2 \cdot \max\{S,T\} = \widetilde{\Theta}(N^3)$. In the important setting when $S &lt; T$, this improves on the celebrated algorithm of Fiat and Naor [STOC, 1991], which requires $T S^3 \geq N^3$. E.g., Fiat and Naor&#39;s algorithm is only non-trivial for $S \gg N^{2/3}$, while our algorithm gives a non-trivial tradeoff for any $S \gg N^{1/2}$. (Our algorithm and analysis are quite simple. As a consequence of this, we also give a self-contained and simple proof of Fiat and Naor&#39;s original result, with certain optimizations left out for simplicity.)
+
+2. We show a non-adaptive algorithm (i.e., an algorithm whose $i$th query $x_i$ is chosen based entirely on $\sigma$ and $y$, and not on the $f(x_1),\ldots, f(x_{i-1})$) that works for any $T$ and $S$ satisfying $S = \Theta(N \log(N/T))$ giving the first non-trivial non-adaptive algorithm for this problem. E.g., setting $T = N/ \mathrm{poly\,log}(N)$ gives $S = \Theta(N \log \log N)$. This answers a question due to Corrigan-Gibbs and Kogan [TCC, 2019], who asked whether it was possible for a non-adaptive algorithm to work with parameters $T$ and $S$ satisfying $T + S/\log N &lt; o(N)$. We also observe that our non-adaptive algorithm is what we call a guess-and-check algorithm, that is, it is non-adaptive and its final output is always one of the oracle queries $x_1,\ldots, x_T$. For guess-and-check algorithms, we prove a matching lower bound, therefore completely characterizing the achievable parameters $(S,T)$ for this natural class of algorithms. (Corrigan-Gibbs and Kogan showed that any such lower bound for arbitrary non-adaptive algorithms would imply new circuit lower bounds.) 
+
+3. We show equivalence between function inversion and a natural decision version of the problem in both the worst case and the average case, and similarly for functions $f : [N] \to [M]$ with different ranges.
+
+
+All of the above results are most naturally described in a model with shared randomness (i.e., random coins shared between the preprocessing algorithm and the online algorithm). However, as an additional contribution, we show (using a technique from communication complexity due to Newman [IPL, 1991]) how to generically convert any algorithm that uses shared randomness into one that does not.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-11-09T17:55:48Z">Wednesday, November 09 2022, 17:55</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3424,59 +3481,6 @@ Our algorithm constructs a &quot;snapshot&quot; of the graph and then applies a 
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-11-07T21:43:30Z">Monday, November 07 2022, 21:43</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2022/143'>TR22-143 |  Certificate games | 
-
-	Anna Gal, 
-
-	Sourav Chakraborty, 
-
-	Sophie Laplante, 
-
-	Rajat Mittal, 
-
-	Anupa Sunny</a></h3>
-        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          We introduce and study Certificate Game complexity, a measure of complexity based on the probability of winning a game where two players are given inputs with different function values and are asked to output some index $i$ such that $x_i\neq y_i$, in a zero-communication setting.
-
-We give upper and lower bounds for private coin, public coin, shared entanglement and non-signaling strategies, and give some separations.
-We show that complexity in the public coin model is upper bounded by  Randomized query and Certificate complexity. On the other hand, it is lower bounded by fractional and randomized certificate complexity, making it a good candidate to prove strong lower bounds on randomized query complexity.
-Complexity in the private coin model is bounded from below by zero-error randomized query complexity.  The quantum measure highlights an interesting and surprising difference between classical and quantum query models. Whereas the public coin certificate game complexity is bounded from above by randomized query complexity, the quantum certificate game complexity can be quadratically larger than  quantum query complexity. We use non-signaling, a notion from quantum information, to give a lower bound of $n$ on the quantum certificate game complexity of the OR function, whose quantum query complexity is  $\Theta(\sqrt{n})$, then go on to show that this ``non-signaling bottleneck&#39;&#39; applies to all functions with high sensitivity, block sensitivity or fractional block sensitivity. 
-
-We also consider the single-bit version of certificate games, where the inputs of the two players are restricted to having Hamming distance $1$. We prove that the single-bit version of certificate game complexity with shared randomness is equal to sensitivity up to constant factors, thus giving a new characterization of sensitivity.  On the other hand, the single-bit version of certificate game complexity with private randomness is equal to $\lambda^2$, where $\lambda$ is the spectral sensitivity.
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          We introduce and study Certificate Game complexity, a measure of complexity based on the probability of winning a game where two players are given inputs with different function values and are asked to output some index $i$ such that $x_i\neq y_i$, in a zero-communication setting.
-
-We give upper and lower bounds for private coin, public coin, shared entanglement and non-signaling strategies, and give some separations.
-We show that complexity in the public coin model is upper bounded by  Randomized query and Certificate complexity. On the other hand, it is lower bounded by fractional and randomized certificate complexity, making it a good candidate to prove strong lower bounds on randomized query complexity.
-Complexity in the private coin model is bounded from below by zero-error randomized query complexity.  The quantum measure highlights an interesting and surprising difference between classical and quantum query models. Whereas the public coin certificate game complexity is bounded from above by randomized query complexity, the quantum certificate game complexity can be quadratically larger than  quantum query complexity. We use non-signaling, a notion from quantum information, to give a lower bound of $n$ on the quantum certificate game complexity of the OR function, whose quantum query complexity is  $\Theta(\sqrt{n})$, then go on to show that this ``non-signaling bottleneck&#39;&#39; applies to all functions with high sensitivity, block sensitivity or fractional block sensitivity. 
-
-We also consider the single-bit version of certificate games, where the inputs of the two players are restricted to having Hamming distance $1$. We prove that the single-bit version of certificate game complexity with shared randomness is equal to sensitivity up to constant factors, thus giving a new characterization of sensitivity.  On the other hand, the single-bit version of certificate game complexity with private randomness is equal to $\lambda^2$, where $\lambda$ is the spectral sensitivity.
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-11-07T07:52:43Z">Monday, November 07 2022, 07:52</time>
         </div>
       </div>
     </details>
