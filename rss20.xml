@@ -9,6 +9,25 @@
 
 
 <item>
+  <title>TR22-147 |  Evaluating Monotone Circuits on Surfaces | 
+
+	Chetan Gupta, 
+
+	Samir Datta</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/147</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/147</link>
+  <description>
+    In this paper, we study the circuit value problem for monotone Boolean circuits (that is, circuits without negation gates) when the circuits are embedded on a surface of bounded genus, and all inputs to the circuits lie on at most constantly many faces. We show that this problem can be solved in LogDCFL thus by a result of Cook, yielding a space-efficient ($O(\log^2{n})$-space) and polynomial time algorithm for the problem. It also yields a highly parallel algorithm (simultaneously $O(\log {n})$-time with polynomially many processors). 
+
+This generalises the previous bound of LogDCFL on one input face planar circuits. More precisely, we show that if a monotone circuit is embedded on a surface of genus $g$ and has $k$ faces on which all the inputs are present, then the circuit can be evaluated on a CROW-PRAM (concurrent read \emph{owner} write parallel random access machine) in time $O(g\log (k+g) \log{n})$ using $n^{O(1)}$ many processors.
+
+Our main technical idea is a distance metric in single sink DAGs that can be computed in deterministic logarithmic space and is useful in partitioning the circuit into subcircuits such that each one is a one-input face monotone planar circuit. We show that the partitioning procedure is in logarithmic space. Thus we are able to side-step the barrier of computing the usual distance in bounded genus graphs, for which the best-bound known is UL\cap coUL and, therefore not known to be contained in LogDCFL.
+  </description>
+  <pubDate>2022-11-10 19:19:21 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>The Structure of Data and Machine Learning</title>
   <guid>tag:blogger.com,1999:blog-3722233.post-3299749567675625592</guid>
   <link>http://blog.computationalcomplexity.org/2022/11/the-structure-of-data-and-machine.html</link>
@@ -1479,28 +1498,6 @@ case solves the problem in time $2^{O(n\log n/q)}$.
   </description>
   <pubDate>2022-11-09 01:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Full-Time Tenure-Track Assistant Professor Position in Theoretical Computing Science at Department of Computing Science, University of Alberta (apply by January 15, 2023)</title>
-  <guid>http://cstheory-jobs.org/2022/11/08/full-time-tenure-track-assistant-professor-position-in-theoretical-computing-science-at-department-of-computing-science-university-of-alberta-apply-by-january-15-2023/</guid>
-  <link>https://cstheory-jobs.org/2022/11/08/full-time-tenure-track-assistant-professor-position-in-theoretical-computing-science-at-department-of-computing-science-university-of-alberta-apply-by-january-15-2023/</link>
-  <description>
-    &lt;p&gt;We are looking for a tenure-track Assistant Professor in Theoretical Computing Science. Areas of interest include:&lt;/p&gt;
-&lt;p&gt;Data structures and Algorithms&lt;br /&gt;
-Streaming, Sketching, and Big Data Algorithms&lt;br /&gt;
-Computational Complexity&lt;br /&gt;
-Algorithmic Economy/Game theory and Mechanism Design&lt;br /&gt;
-Approximation Algorithms&lt;br /&gt;
-Online Algorithms&lt;br /&gt;
-Discrete Optimization&lt;br /&gt;
-Theoretical Aspects of Parallel and Distributed Computing&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://www.careers.ualberta.ca/Competition/A104848950/&quot;&gt;https://www.careers.ualberta.ca/Competition/A104848950/&lt;/a&gt;&lt;br /&gt;
-Email: cs.ea@ualberta.ca&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-08 22:26:24 UTC</pubDate>
-  <author>CCI: jobs</author>
 </item>
 
 </channel>
