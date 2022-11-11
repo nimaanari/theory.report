@@ -10,6 +10,64 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-150 |  Near-Optimal Derandomization of Medium-Width Branching Programs | 
+
+	Aaron (Louie) Putterman, 
+
+	Edward Pyne</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/150"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/150</id>
+    <updated>2022-11-11T22:15:04+00:00</updated>
+    <content type="html" xml:lang="en">
+    We give a deterministic white-box algorithm to estimate the expectation of a read-once branching program of length $n$ and width $w$ in space 
+    $$\tilde{O}\left(\log n+\sqrt{\log n}\cdot\log w\right).$$
+    In particular, we obtain an almost optimal space $\tilde{O}(\log n)$ derandomization of programs up to width $w=2^{\sqrt{\log n}}$.
+    Previously, the best known space complexity for this problem was 
+    $$O\left(\min\{\log n\cdot \log w,\log^{3/2}n+\sqrt{\log n}\cdot \log w\}\right)$$
+    via the classic algorithms of Savitch (JCSS 1970) and Saks and Zhou (JCSS 1999), which only achieve space $\tilde{O}(\log n)$ for $w=poly\log(n)$.
+    
+    We prove this result by showing that a variant of the Saks-Zhou algorithm developed by Cohen, Doron, and Sberlo (ECCC 2022) still works without executing one of the steps in the algorithm, the so-called random shift step. This allows us to extend their algorithm from computing the $n$th power of a $w\times w$ stochastic matrix to multiplying $n$ distinct $w\times w$ stochastic matrices with no degradation in space consumption.
+    In the regime where $w\geq n$, we also show that our approach can achieve parameters matching those of the original Saks-Zhou algorithm (with no loglog factors). Finally, we show that for $w\leq 2^{\sqrt{\log n}}$, an algorithm even simpler than our algorithm and that of Saks and Zhou achieves space $O(\log^{3/2} n)$.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-149 |  Approximating Iterated Multiplication of Stochastic Matrices in Small Space | 
+
+	Gil Cohen, 
+
+	Ori Sberlo, 
+
+	Amnon Ta-Shma, 
+
+	Dean Doron</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/149"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/149</id>
+    <updated>2022-11-11T22:14:49+00:00</updated>
+    <content type="html" xml:lang="en">
+    Matrix powering, and more generally iterated matrix multiplication, is a fundamental linear algebraic primitive with myriad applications in computer science. Of particular interest is the problem&amp;#39;s space complexity as it constitutes the main route towards resolving the $\mathbf{BPL}$ vs. $\mathbf{L}$ problem. The seminal work by Saks and Zhou (FOCS 1995) gives a deterministic algorithm for approximating the product of $n$ stochastic matrices of dimension $w \times w$ in space $O(\log^{3/2}n + \sqrt{\log n} \cdot \log w)$. The first improvement upon Saks-Zhou was achieved by Hoza (RANDOM 2021) who gave a logarithmic improvement in the $n = \mathrm{poly}(w)$ regime, attaining $O(\frac1{\sqrt{\log\log n}} \cdot \log^{3/2}n)$ space.
+
+We give the first polynomial improvement over Saks-Zhou. Our algorithm achieves space complexity of
+$$
+\widetilde{O}\left(\log n + \sqrt{\log n}\cdot \log w\right).
+$$
+In particular, in the regime $\log n &amp;gt; \log^2 w$, our algorithm runs in nearly-optimal $\widetilde{O}(\log n)$ space, improving upon the previous best $O(\log^{3/2}n)$.
+
+To obtain our result for the special case of matrix powering, we harness recent machinery from time- and space-bounded Laplacian solvers to the Saks-Zhou framework and devise an intricate precision-alternating recursive scheme. This enables us to bypass the bottleneck of paying $\log n$-space per recursion level. The general case of iterated matrix multiplication poses several additional challenges, the substantial of which is handled by devising an improved shift and truncate mechanism. The new mechanism is made possible by a novel use of the Richardson iteration.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR22-148 |  Efficient resilient functions | 
 
 	Emanuele Viola, 
@@ -1641,70 +1699,6 @@ running time&#39;s polylog.
     <author>
       <name>arXiv: Computational Geometry</name>
       <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: From approximate to exact integer programming</title>
-    <link href="http://arxiv.org/abs/2211.03859"/>
-    <id>http://arxiv.org/abs/2211.03859</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Dadush_D/0/1/0/all/0/1&quot;&gt;Daniel Dadush&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Eisenbrand_F/0/1/0/all/0/1&quot;&gt;Friedrich Eisenbrand&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Rothvoss_T/0/1/0/all/0/1&quot;&gt;Thomas Rothvoss&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Approximate integer programming is the following: For a convex body $K
-\subseteq \mathbb{R}^n$, either determine whether $K \cap \mathbb{Z}^n$ is
-empty, or find an integer point in the convex body scaled by $2$ from its
-center of gravity $c$. Approximate integer programming can be solved in time
-$2^{O(n)}$ while the fastest known methods for exact integer programming run in
-time $2^{O(n)} \cdot n^n$. So far, there are no efficient methods for integer
-programming known that are based on approximate integer programming. Our main
-contribution are two such methods, each yielding novel complexity results.
-&lt;/p&gt;
-&lt;p&gt;First, we show that an integer point $x^* \in (K \cap \mathbb{Z}^n)$ can be
-found in time $2^{O(n)}$, provided that the remainders of each component $x_i^*
-\mod{\ell}$ for some arbitrarily fixed $\ell \geq 5(n+1)$ of $x^*$ are given.
-The algorithm is based on a cutting-plane technique, iteratively halving the
-volume of the feasible set. The cutting planes are determined via approximate
-integer programming. Enumeration of the possible remainders gives a
-$2^{O(n)}n^n$ algorithm for general integer programming. This matches the
-current best bound of an algorithm by Dadush (2012) that is considerably more
-involved. Our algorithm also relies on a new asymmetric approximate
-Carath\&#39;eodory theorem that might be of interest on its own.
-&lt;/p&gt;
-&lt;p&gt;Our second method concerns integer programming problems in equation-standard
-form $Ax = b, 0 \leq x \leq u, \, x \in \mathbb{Z}^n$ . Such a problem can be
-reduced to the solution of $\prod_i O(\log u_i +1)$ approximate integer
-programming problems. This implies, for example that knapsack or subset-sum
-problems with polynomial variable range $0 \leq x_i \leq p(n)$ can be solved in
-time $(\log n)^{O(n)}$. For these problems, the best running time so far was
-$n^n \cdot 2^{O(n)}$.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Nearly optimal independence oracle algorithms for edge estimation in hypergraphs</title>
-    <link href="http://arxiv.org/abs/2211.03874"/>
-    <id>http://arxiv.org/abs/2211.03874</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dell_H/0/1/0/all/0/1&quot;&gt;Holger Dell&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lapinskas_J/0/1/0/all/0/1&quot;&gt;John Lapinskas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Meeks_K/0/1/0/all/0/1&quot;&gt;Kitty Meeks&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study a query model of computation in which an n-vertex k-hypergraph can
-be accessed only via its independence oracle or via its colourful independence
-oracle, and each oracle query may incur a cost depending on the size of the
-query. In each of these models, we obtain oracle algorithms to approximately
-count the hypergraph&#39;s edges, and we unconditionally prove that no oracle
-algorithm for this problem can have significantly smaller worst-case oracle
-cost than our algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
