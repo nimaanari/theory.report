@@ -10,6 +10,43 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-148 |  Efficient resilient functions | 
+
+	Emanuele Viola, 
+
+	Raghu Meka, 
+
+	Peter Ivanov</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/148"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/148</id>
+    <updated>2022-11-11T13:56:41+00:00</updated>
+    <content type="html" xml:lang="en">
+    An $n$-bit boolean function is resilient to coalitions of size $q$
+if no fixed set of $q$ bits is likely to influence the value of the
+function when the other $n-q$ bits are chosen uniformly at random,
+even though the function is nearly balanced. We construct explicit
+functions resilient to coalitions of size $q=n/(\log n)^{O(\log\log n)}=n^{1-o(1)}$
+computable by linear-size circuits and linear-time algorithms. We
+also obtain a tight size-depth tradeoff for computing such resilient
+functions.
+
+Constructions such as ours were not available even non-explicitly.
+It was known that functions resilient to coalitions of size $q=n^{0.63...}$
+can be computed by linear-size circuits \cite{Ben-OrLi85}, and functions
+resilient to coalitions of size $q=\Theta(n/\log^{2}n)$ can be computed
+by quadratic-size circuits \cite{AL93}.
+
+One component of our proofs is a new composition theorem for resilient
+functions.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Average-Case Complexity of Tensor Decomposition for Low-Degree Polynomials</title>
     <link href="http://arxiv.org/abs/2211.05274"/>
     <id>http://arxiv.org/abs/2211.05274</id>
@@ -1663,39 +1700,6 @@ query. In each of these models, we obtain oracle algorithms to approximately
 count the hypergraph&#39;s edges, and we unconditionally prove that no oracle
 algorithm for this problem can have significantly smaller worst-case oracle
 cost than our algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On the amortized complexity of approximate counting</title>
-    <link href="http://arxiv.org/abs/2211.03917"/>
-    <id>http://arxiv.org/abs/2211.03917</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Aden_Ali_I/0/1/0/all/0/1&quot;&gt;Ishaq Aden-Ali&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Han_Y/0/1/0/all/0/1&quot;&gt;Yanjun Han&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nelson_J/0/1/0/all/0/1&quot;&gt;Jelani Nelson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yu_H/0/1/0/all/0/1&quot;&gt;Huacheng Yu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Naively storing a counter up to value $n$ would require $\Omega(\log n)$ bits
-of memory. Nelson and Yu [NY22], following work of [Morris78], showed that if
-the query answers need only be $(1+\epsilon)$-approximate with probability at
-least $1 - \delta$, then $O(\log\log n + \log\log(1/\delta) +
-\log(1/\epsilon))$ bits suffice, and in fact this bound is tight. Morris&#39;
-original motivation for studying this problem though, as well as modern
-applications, require not only maintaining one counter, but rather $k$ counters
-for $k$ large. This motivates the following question: for $k$ large, can $k$
-counters be simultaneously maintained using asymptotically less memory than $k$
-times the cost of an individual counter? That is to say, does this problem
-benefit from an improved {\it amortized} space complexity bound?
-&lt;/p&gt;
-&lt;p&gt;We answer this question in the negative. Specifically, we prove a lower bound
-for nearly the full range of parameters showing that, in terms of memory usage,
-there is no asymptotic benefit possible via amortization when storing multiple
-counters. Our main proof utilizes a certain notion of &quot;information cost&quot;
-recently introduced by Braverman, Garg and Woodruff in FOCS 2020 to prove lower
-bounds for streaming algorithms.
 &lt;/p&gt;
   </content>
     <author>
