@@ -10,6 +10,717 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Average-Case Complexity of Tensor Decomposition for Low-Degree Polynomials</title>
+    <link href="http://arxiv.org/abs/2211.05274"/>
+    <id>http://arxiv.org/abs/2211.05274</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wein_A/0/1/0/all/0/1&quot;&gt;Alexander S. Wein&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Suppose we are given an $n$-dimensional order-3 symmetric tensor $T \in
+(\mathbb{R}^n)^{\otimes 3}$ that is the sum of $r$ random rank-1 terms. The
+problem of recovering the rank-1 components is possible in principle when $r
+\lesssim n^2$ but polynomial-time algorithms are only known in the regime $r
+\ll n^{3/2}$. Similar &quot;statistical-computational gaps&quot; occur in many
+high-dimensional inference tasks, and in recent years there has been a flurry
+of work on explaining the apparent computational hardness in these problems by
+proving lower bounds against restricted (yet powerful) models of computation
+such as statistical queries (SQ), sum-of-squares (SoS), and low-degree
+polynomials (LDP). However, no such prior work exists for tensor decomposition,
+largely because its hardness does not appear to be explained by a &quot;planted
+versus null&quot; testing problem.
+&lt;/p&gt;
+&lt;p&gt;We consider a model for random order-3 tensor decomposition where one
+component is slightly larger in norm than the rest (to break symmetry), and the
+components are drawn uniformly from the hypercube. We resolve the computational
+complexity in the LDP model: $O(\log n)$-degree polynomial functions of the
+tensor entries can accurately estimate the largest component when $r \ll
+n^{3/2}$ but fail to do so when $r \gg n^{3/2}$. This provides rigorous
+evidence suggesting that the best known algorithms for tensor decomposition
+cannot be improved, at least by known approaches. A natural extension of the
+result holds for tensors of any fixed order $k \ge 3$, in which case the LDP
+threshold is $r \sim n^{k/2}$.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Parameterized Complexity of Weighted Local Hamiltonian Problems and the Quantum Exponential Time Hypothesis</title>
+    <link href="http://arxiv.org/abs/2211.05325"/>
+    <id>http://arxiv.org/abs/2211.05325</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bremner_M/0/1/0/all/0/1&quot;&gt;Michael J. Bremner&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ji_Z/0/1/0/all/0/1&quot;&gt;Zhengfeng Ji&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_X/0/1/0/all/0/1&quot;&gt;Xingjian Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mathieson_L/0/1/0/all/0/1&quot;&gt;Luke Mathieson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Morales_M/0/1/0/all/0/1&quot;&gt;Mauro E.S. Morales&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study a parameterized version of the local Hamiltonian problem, called the
+weighted local Hamiltonian problem, where the relevant quantum states are
+superpositions of computational basis states of Hamming weight $k$. The Hamming
+weight constraint can have a physical interpretation as a constraint on the
+number of excitations allowed or particle number in a system. We prove that
+this problem is in QW[1], the first level of the quantum weft hierarchy and
+that it is hard for QM[1], the quantum analogue of M[1]. Our results show that
+this problem cannot be fixed-parameter quantum tractable (FPQT) unless certain
+natural quantum analogue of the exponential time hypothesis (ETH) is false.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Description Graphs, Matrix-Power Stabilizations and Graph Isomorphism in Polynomial Time</title>
+    <link href="http://arxiv.org/abs/2211.05637"/>
+    <id>http://arxiv.org/abs/2211.05637</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xue_R/0/1/0/all/0/1&quot;&gt;Rui Xue&lt;/a&gt; (State Key Laboratory of Information Security, Institute of Information Engineering, CAS)&lt;/p&gt;&lt;p&gt;It is confirmed in this work that the graph isomorphism can be tested in
+polynomial time, which resolves a longstanding problem in the theory of
+computation. The contributions are in three phases as follows.
+&lt;/p&gt;
+&lt;p&gt;1. A description graph $\tilde{A}$ to a given graph $A$ is introduced so that
+labels to vertices and edges of $\tilde{A}$ indicate the identical or different
+amounts of walks of any sort in any length between vertices in $A$. Three
+processes are then developed to obtain description graphs. They reveal
+relations among matrix power, spectral decomposition and adjoint matrices,
+which is of independent interest.
+&lt;/p&gt;
+&lt;p&gt;2. We show that the stabilization of description graphs can be implemented
+via matrix-power stabilization, a new approach to distinguish vertices and
+edges to graphs. The approach is proven to be equivalent in the partition of
+vertices to Weisfeiler-Lehman (WL for short) process. The specific
+Square-and-Substitution (SaS) process is more succinct than WL process.
+&lt;/p&gt;
+&lt;p&gt;The vertex partitions to our stable graphs are proven to be \emph{strongly}
+equitable partitions, which is important in the proofs of our main conclusion.
+Some properties on stable graphs are also explored.
+&lt;/p&gt;
+&lt;p&gt;3. A class of graphs named binding graphs is proposed and proven to be
+graph-isomorphism complete. The vertex partition to the stable graph of a
+binding graph is the automorphism partition, which allows us to confirm
+graph-isomorphism problem is in complexity class $\mathtt{P}$. Since the
+binding graph to a graph is so simple in construction, our approach can be
+readily applied in practice.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Complexity of Chess Domination Problems</title>
+    <link href="http://arxiv.org/abs/2211.05651"/>
+    <id>http://arxiv.org/abs/2211.05651</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Langlois_Remillard_A/0/1/0/all/0/1&quot;&gt;Alexis Langlois-R&amp;#xe9;millard&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mussig_C/0/1/0/all/0/1&quot;&gt;Christoph M&amp;#xfc;&amp;#xdf;ig&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Roldan_E/0/1/0/all/0/1&quot;&gt;&amp;#xc9;rika R&amp;#xf3;ldan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study different domination problems of attacking and non-attacking rooks
+and queens on polyominoes and polycubes of all dimensions. Our main result
+proves that the problem is NP-complete for non-attacking queens on polyominoes
+and for non-attacking rooks on three-dimensional polycubes. We also analyze
+these problems on the set of convex polyominoes, for which we conjecture and
+give some evidence that these domination problems restricted to this subset of
+polyominoes might be NP-complete for both, queens and rooks. We have also
+computed new values for classical queen domination problems on chessboards
+(square polyominoes). For our computations, we have translated the problem into
+an integer linear programming instance. Finally, using this computational
+implementation and the game engine Godot, we have developed a video game of
+minimal domination of queens and rooks on randomly generated polyominoes.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Certified Numerical Real Root Isolation of Zero-dimensional Multivariate Real Nonlinear Systems</title>
+    <link href="http://arxiv.org/abs/2211.05266"/>
+    <id>http://arxiv.org/abs/2211.05266</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cheng_J/0/1/0/all/0/1&quot;&gt;Jin-San Cheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wen_J/0/1/0/all/0/1&quot;&gt;Junyi Wen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Using the local geometrical properties of a given zero-dimensional square
+multivariate nonlinear system inside a box, we provide a simple but effective
+and new criterion for the uniqueness and the existence of a real simple zero of
+the system inside the box. Based on the result, we design an algorithm based on
+subdivision and interval arithmetics to isolate all the real zeros of a general
+real nonlinear system inside a given box. Our method is complete for systems
+with only finite isolated simple real zeros inside a box. A termination
+precision is given for general zero-dimensional systems. Multiple zeros of the
+system are output in bounded boxes. A variety of benchmarks show the
+effectivity and efficiency of our implementation (in C++). It works for
+polynomial systems with Bezout bound more than 100 million. It also works for
+non-polynomial nonlinear systems. We also discuss the limitations of our
+method.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Filtration-Domination in Bifiltered Graphs</title>
+    <link href="http://arxiv.org/abs/2211.05574"/>
+    <id>http://arxiv.org/abs/2211.05574</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alonso_A/0/1/0/all/0/1&quot;&gt;&amp;#xc1;ngel Javier Alonso&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kerber_M/0/1/0/all/0/1&quot;&gt;Michael Kerber&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pritam_S/0/1/0/all/0/1&quot;&gt;Siddharth Pritam&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Bifiltered graphs are a versatile tool for modelling relations between data
+points across multiple grades of a two-dimensional scale. They are especially
+popular in topological data analysis, where the homological properties of the
+induced clique complexes are studied. To reduce the large size of these clique
+complexes, we identify filtration-dominated edges of the graph, whose removal
+preserves the relevant topological properties. We give two algorithms to detect
+filtration-dominated edges in a bifiltered graph and analyze their complexity.
+These two algorithms work directly on the bifiltered graph, without first
+extracting the clique complexes, which are generally much bigger. We present
+extensive experimental evaluation which shows that in most cases, more than 90%
+of the edges can be removed. In turn, we demonstrate that this often leads to a
+substantial speedup, and reduction in the memory usage, of the computational
+pipeline of multiparameter topological data analysis.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Finding Triangles and Other Small Subgraphs in Geometric Intersection Graphs</title>
+    <link href="http://arxiv.org/abs/2211.05345"/>
+    <id>http://arxiv.org/abs/2211.05345</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chan_T/0/1/0/all/0/1&quot;&gt;Timothy M. Chan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider problems related to finding short cycles, small cliques, small
+independent sets, and small subgraphs in geometric intersection graphs. We
+obtain a plethora of new results. For example:
+&lt;/p&gt;
+&lt;p&gt;* For the intersection graph of $n$ line segments in the plane, we give
+algorithms to find a 3-cycle in $O(n^{1.408})$ time, a size-3 independent set
+in $O(n^{1.652})$ time, a 4-clique in near-$O(n^{24/13})$ time, and a
+$k$-clique (or any $k$-vertex induced subgraph) in $O(n^{0.565k+O(1)})$ time
+for any constant $k$; we can also compute the girth in near-$O(n^{3/2})$ time.
+&lt;/p&gt;
+&lt;p&gt;* For the intersection graph of $n$ axis-aligned boxes in a constant
+dimension $d$, we give algorithms to find a 3-cycle in $O(n^{1.408})$ time for
+any $d$, a 4-clique (or any 4-vertex induced subgraph) in $O(n^{1.715})$ time
+for any $d$, a size-4 independent set in near-$O(n^{3/2})$ time for any $d$, a
+size-5 independent set in near-$O(n^{4/3})$ time for $d=2$, and a $k$-clique
+(or any $k$-vertex induced subgraph) in $O(n^{0.429k+O(1)})$ time for any $d$
+and any constant $k$.
+&lt;/p&gt;
+&lt;p&gt;* For the intersection graph of $n$ fat objects in any constant dimension
+$d$, we give an algorithm to find any $k$-vertex (non-induced) subgraph in
+$O(n\log n)$ time for any constant $k$, generalizing a result by Kaplan, Klost,
+Mulzer, Roddity, Seiferth, and Sharir (1999) for 3-cycles in 2D disk graphs.
+&lt;/p&gt;
+&lt;p&gt;A variety of techniques is used, including geometric range searching,
+biclique covers, &quot;high-low&quot; tricks, graph degeneracy and separators, and
+shifted quadtrees. We also prove a near-$\Omega(n^{4/3})$ conditional lower
+bound for finding a size-4 independent set for boxes.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Streaming algorithms for the missing item finding problem</title>
+    <link href="http://arxiv.org/abs/2211.05170"/>
+    <id>http://arxiv.org/abs/2211.05170</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Stoeckl_M/0/1/0/all/0/1&quot;&gt;Manuel Stoeckl&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Many problems on data streams have been studied at two extremes of
+difficulty: either allowing randomized algorithms, in the static setting (where
+they should err with bounded probability on the worst case stream); or when
+only deterministic and infallible algorithms are required. Some recent works
+have considered the adversarial setting, in which a randomized streaming
+algorithm must succeed even on data streams provided by an adaptive adversary
+that can see the intermediate outputs of the algorithm.
+&lt;/p&gt;
+&lt;p&gt;In order to better understand the differences between these models, we study
+a streaming task called &quot;Missing Item Finding&quot;. In this problem, for $r &amp;lt; n$,
+one is given a data stream $a_1,\ldots,a_r$ of elements in $[n]$, (possibly
+with repetitions), and must output some $x \in [n]$ which does not equal any of
+the $a_i$. We prove that, for $r = n^{\Theta(1)}$ and $\delta =
+1/\mathrm{poly}(n)$, the space required for randomized algorithms that solve
+this problem in the static setting with error $\delta$ is
+$\Theta(\mathrm{polylog}(n))$; for algorithms in the adversarial setting with
+error $\delta$, $\Theta((1 + r^2 / n) \mathrm{polylog}(n))$; and for
+deterministic algorithms, $\Theta(r / \mathrm{polylog}(n))$. Because our
+adversarially robust algorithm relies on free access to a string of $O(r \log
+n)$ random bits, we investigate a &quot;random start&quot; model of streaming algorithms
+where all random bits used are included in the space cost. Here we find a
+conditional lower bound on the space usage, which depends on the space that
+would be needed for a pseudo-deterministic algorithm to solve the problem. We
+also prove an $\Omega(r / \mathrm{polylog}(n))$ lower bound for the space
+needed by a streaming algorithm with $&amp;lt; 1/2^{\mathrm{polylog}(n)}$ error
+against &quot;white-box&quot; adversaries that can see the internal state of the
+algorithm, but not predict its future random decisions.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fully-dynamic-to-incremental reductions with known deletion order (e.g. sliding window)</title>
+    <link href="http://arxiv.org/abs/2211.05178"/>
+    <id>http://arxiv.org/abs/2211.05178</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Peng_B/0/1/0/all/0/1&quot;&gt;Binghui Peng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rubinstein_A/0/1/0/all/0/1&quot;&gt;Aviad Rubinstein&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Dynamic algorithms come in three main flavors: $\mathit{incremental}$
+(insertions-only), $\mathit{decremental}$ (deletions-only), or $\mathit{fully}$
+$\mathit{dynamic}$ (both insertions and deletions). Fully dynamic is the holy
+grail of dynamic algorithm design; it is obviously more general than the other
+two, but is it strictly harder? Several works managed to reduce fully dynamic
+to the incremental or decremental models by taking advantage of either specific
+structure of the incremental/decremental algorithms (e.g. [HK99, HLT01, BKS12,
+ADKKP16]), or specific order of insertions/deletions (e.g.
+[AW14,HKNS15,KPP16]). Our goal in this work is to get a black-box
+fully-to-incremental reduction that is as general as possible. We find that the
+following conditions are necessary:
+&lt;/p&gt;
+&lt;p&gt;$\bullet$ The incremental algorithm must have a worst-case (rather than
+amortized) running time guarantee.
+&lt;/p&gt;
+&lt;p&gt;$\bullet$ The reduction must work in what we call the
+$\mathit{deletions}$-$\mathit{look}$-$\mathit{ahead}$ $\mathit{model}$, where
+the order of deletions among current elements is known in advance. A notable
+practical example is the &quot;sliding window&quot; (FIFO) order of updates.
+&lt;/p&gt;
+&lt;p&gt;Under those conditions, we design:
+&lt;/p&gt;
+&lt;p&gt;$\bullet$ A simple, practical, amortized-fully-dynamic to
+worst-case-incremental reduction with a $\log(T)$-factor overhead on the
+running time, where $T$ is the total number of updates.
+&lt;/p&gt;
+&lt;p&gt;$\bullet$ A theoretical worst-case-fully-dynamic to worst-case-incremental
+reduction with a $\mathsf{polylog}(T)$-factor overhead on the running time.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Smaller Low-Depth Circuits for Kronecker Powers</title>
+    <link href="http://arxiv.org/abs/2211.05217"/>
+    <id>http://arxiv.org/abs/2211.05217</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alman_J/0/1/0/all/0/1&quot;&gt;Josh Alman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Guan_Y/0/1/0/all/0/1&quot;&gt;Yunfeng Guan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Padaki_A/0/1/0/all/0/1&quot;&gt;Ashwin Padaki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give new, smaller constructions of constant-depth linear circuits for
+computing any matrix which is the Kronecker power of a fixed matrix. A standard
+argument (e.g., the mixed product property of Kronecker products, or a
+generalization of the Fast Walsh-Hadamard transform) shows that any such $N
+\times N$ matrix has a depth-2 circuit of size $O(N^{1.5})$. We improve on this
+for all such matrices, and especially for some such matrices of particular
+interest:
+&lt;/p&gt;
+&lt;p&gt;- For any integer $q &amp;gt; 1$ and any matrix which is the Kronecker power of a
+fixed $q \times q$ matrix, we construct a depth-2 circuit of size $O(N^{1.5 -
+a_q})$, where $a_q &amp;gt; 0$ is a positive constant depending only on $q$. No bound
+beating size $O(N^{1.5})$ was previously known for any $q&amp;gt;2$.
+&lt;/p&gt;
+&lt;p&gt;- For the case $q=2$, i.e., for any matrix which is the Kronecker power of a
+fixed $2 \times 2$ matrix, we construct a depth-2 circuit of size
+$O(N^{1.446})$, improving the prior best size $O(N^{1.493})$ [Alman, 2021].
+&lt;/p&gt;
+&lt;p&gt;- For the Walsh-Hadamard transform, we construct a depth-2 circuit of size
+$O(N^{1.443})$, improving the prior best size $O(N^{1.476})$ [Alman, 2021].
+&lt;/p&gt;
+&lt;p&gt;- For the disjointness matrix (the communication matrix of set disjointness,
+or equivalently, the matrix for the linear transform that evaluates a
+multilinear polynomial on all $0/1$ inputs), we construct a depth-2 circuit of
+size $O(N^{1.258})$, improving the prior best size $O(N^{1.272})$ [Jukna and
+Sergeev, 2013].
+&lt;/p&gt;
+&lt;p&gt;Our constructions also generalize to improving the standard construction for
+any depth $\leq O(\log N)$. Our main technical tool is an improved way to
+convert a nontrivial circuit for any matrix into a circuit for its Kronecker
+powers. Our new bounds provably could not be achieved using the approaches of
+prior work.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Directed Isoperimetric Theorems for Boolean Functions on the Hypergrid and an $\widetilde{O}(n\sqrt{d})$ Monotonicity Tester</title>
+    <link href="http://arxiv.org/abs/2211.05281"/>
+    <id>http://arxiv.org/abs/2211.05281</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Black_H/0/1/0/all/0/1&quot;&gt;Hadley Black&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chakrabarty_D/0/1/0/all/0/1&quot;&gt;Deeparnab Chakrabarty&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Seshadhri_C/0/1/0/all/0/1&quot;&gt;C. Seshadhri&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The problem of testing monotonicity for Boolean functions on the hypergrid,
+$f:[n]^d \to \{0,1\}$ is a classic topic in property testing. When $n=2$, the
+domain is the hypercube. For the hypercube case, a breakthrough result of
+Khot-Minzer-Safra (FOCS 2015) gave a non-adaptive, one-sided tester making
+$\widetilde{O}(\varepsilon^{-2}\sqrt{d})$ queries. Up to polylog $d$ and
+$\varepsilon$ factors, this bound matches the
+$\widetilde{\Omega}(\sqrt{d})$-query non-adaptive lower bound
+(Chen-De-Servedio-Tan (STOC 2015), Chen-Waingarten-Xie (STOC 2017)). For any $n
+&amp;gt; 2$, the optimal non-adaptive complexity was unknown. A previous result of the
+authors achieves a $\widetilde{O}(d^{5/6})$-query upper bound (SODA 2020),
+quite far from the $\sqrt{d}$ bound for the hypercube.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we resolve the non-adaptive complexity of monotonicity testing
+for all constant $n$, up to $\text{poly}(\varepsilon^{-1}\log d)$ factors.
+Specifically, we give a non-adaptive, one-sided monotonicity tester making
+$\widetilde{O}(\varepsilon^{-2}n\sqrt{d})$ queries. From a technical
+standpoint, we prove new directed isoperimetric theorems over the hypergrid
+$[n]^d$. These results generalize the celebrated directed Talagrand
+inequalities that were only known for the hypercube.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Streaming Euclidean Max-Cut: Dimension vs Data Reduction</title>
+    <link href="http://arxiv.org/abs/2211.05293"/>
+    <id>http://arxiv.org/abs/2211.05293</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_Y/0/1/0/all/0/1&quot;&gt;Yu Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiang_S/0/1/0/all/0/1&quot;&gt;Shaofeng H.-C. Jiang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Krauthgamer_R/0/1/0/all/0/1&quot;&gt;Robert Krauthgamer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Max-Cut is a fundamental problem that has been studied extensively in various
+settings. We study Euclidean Max-Cut, where the input is a set of points in
+$\mathbb{R}^d$, in the model of dynamic geometric streams, that is, the input
+is $X\subseteq [\Delta]^d$ presented as a sequence of point insertions and
+deletions. Previous results by Frahling and Sohler [STOC&#39;05] only address the
+low-dimensional regime, as their $(1+\epsilon)$-approximation algorithm uses
+space $\exp(d)$. We design the first streaming algorithms that use space
+$\mathrm{poly}(d)$, and are thus suitable for a high dimension $d$.
+&lt;/p&gt;
+&lt;p&gt;We tackle this challenge of high dimension using two well-known approaches.
+The first one is via \emph{dimension reduction}, where we show that target
+dimension $\mathrm{poly}(\epsilon^{-1})$ suffices for the Johnson-Lindenstrauss
+transform to preserve Max-Cut within factor $(1 \pm \epsilon)$. This result
+extends the applicability of the prior work (algorithm with $\exp(d)$-space)
+also to high dimension. The second approach is \emph{data reduction}, based on
+importance sampling. We implement this scheme in streaming by employing a
+randomly-shifted quadtree. While this is a well-known method to construct a
+tree embedding, a key feature of our algorithm is that the distortion
+$O(d\log\Delta)$ affects only the space requirement
+$\mathrm{poly}(\epsilon^{-1} d\log\Delta)$, and not the approximation ratio
+$1+\epsilon$. These results are in line with the growing interest and recent
+results on streaming (and other) algorithms for high dimension.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Winner Determination Algorithms for Graph Games with Matching Structures</title>
+    <link href="http://arxiv.org/abs/2211.05307"/>
+    <id>http://arxiv.org/abs/2211.05307</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hanaka_T/0/1/0/all/0/1&quot;&gt;Tesshu Hanaka&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kiya_H/0/1/0/all/0/1&quot;&gt;Hironori Kiya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ono_H/0/1/0/all/0/1&quot;&gt;Hirotaka Ono&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yoshiwatari_K/0/1/0/all/0/1&quot;&gt;Kanae Yoshiwatari&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Cram, Domineering, and Arc Kayles are well-studied combinatorial games. They
+are interpreted as edge-selecting-type games on graphs, and the selected edges
+during a game form a matching. In this paper, we define a generalized game
+called Colored Arc Kayles, which includes these games. Colored Arc Kayles is
+played on a graph whose edges are colored in black, white, or gray, and black
+(resp., white) edges can be selected only by the black (resp., white) player,
+although gray edges can be selected by both black and white players. We first
+observe that the winner determination for Colored Arc Kayles can be done in
+$O^*(2^n)$ time by a simple algorithm, where $n$ is the order of a graph. We
+then focus on the vertex cover number, which is linearly related to the number
+of turns, and show that Colored Arc Kayles, BW-Arc Kayles, and Arc Kayles are
+solved in time $O^*(1.4143^{\tau^2+3.17\tau})$, $O^*(1.3161^{\tau^2+4{\tau}})$,
+and $O^*(1.1893^{\tau^2+6.34{\tau}})$, respectively, where $\tau$ is the vertex
+cover number. Furthermore, we present an $O^*((n/\nu+1)^{\nu})$-time algorithm
+for Arc Kayles, where $\nu$ is neighborhood diversity. We finally show that Arc
+Kayles on trees can be solved in $O^* (2^{n/2})(=O(1.4143^n))$ time, which
+improves $O^*(3^{n/3})(=O(1.4423^n))$ by a direct adjustment of the analysis of
+Bodlaender et al.&#39;s $O^*(3^{n/3})$-time algorithm for Node Kayles.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A rate-compatible solution to the set reconciliation problem</title>
+    <link href="http://arxiv.org/abs/2211.05472"/>
+    <id>http://arxiv.org/abs/2211.05472</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lazaro_F/0/1/0/all/0/1&quot;&gt;Francisco L&amp;#xe1;zaro&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Matuz_B/0/1/0/all/0/1&quot;&gt;Bal&amp;#xe1;zs Matuz&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider a set reconciliation setting in which two parties hold similar
+sets which they would like to reconcile In particular, we focus on set
+reconciliation based on invertible Bloom lookup tables (IBLTs), a probabilistic
+data structure inspired by Bloom filters but allowing for more complex
+operations. IBLT-based set reconciliation schemes have the advantage of
+exhibiting a low complexity, however, the schemes available in literature are
+known to be far from optimal in terms of communication complexity (overhead).
+The inefficiency of IBLT-based set reconciliation can be attributed to two
+facts. First, it requires an estimate of the cardinality of the set difference
+between the sets, which implies an increase in overhead. Second, in order to
+cope with errors in the aforementioned estimation of the cardinality of the set
+difference, IBLT schemes in literature make a worst-case assumption and
+oversize the data structures, thus further increasing the overhead. In this
+work, we present a novel IBLT-based set reconciliation protocol that does not
+require estimating the cardinality of the set difference. The scheme we propose
+relies on what we term multi-edge-type (MET) IBLTs. The simulation results
+shown in this paper show that the novel scheme outperforms previous IBLT-based
+approaches to set reconciliation
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: An O(loglog n)-Approximation for Submodular Facility Location</title>
+    <link href="http://arxiv.org/abs/2211.05474"/>
+    <id>http://arxiv.org/abs/2211.05474</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Abbasi_F/0/1/0/all/0/1&quot;&gt;Fateme Abbasi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Adamczyk_M/0/1/0/all/0/1&quot;&gt;Marek Adamczyk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bosch_Calvo_M/0/1/0/all/0/1&quot;&gt;Miguel Bosch-Calvo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Byrka_J/0/1/0/all/0/1&quot;&gt;Jaros&amp;#x142;aw Byrka&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grandoni_F/0/1/0/all/0/1&quot;&gt;Fabrizio Grandoni&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sornat_K/0/1/0/all/0/1&quot;&gt;Krzysztof Sornat&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tinguely_A/0/1/0/all/0/1&quot;&gt;Antoine Tinguely&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the Submodular Facility Location problem (SFL) we are given a collection
+of $n$ clients and $m$ facilities in a metric space. A feasible solution
+consists of an assignment of each client to some facility. For each client, one
+has to pay the distance to the associated facility. Furthermore, for each
+facility $f$ to which we assign the subset of clients $S^f$, one has to pay the
+opening cost $g(S^f)$, where $g(\cdot)$ is a monotone submodular function with
+$g(\emptyset)=0$.
+&lt;/p&gt;
+&lt;p&gt;SFL is APX-hard since it includes the classical (metric uncapacitated)
+Facility Location problem (with uniform facility costs) as a special case.
+Svitkina and Tardos [SODA&#39;06] gave the current-best $O(\log n)$ approximation
+algorithm for SFL. The same authors pose the open problem whether SFL admits a
+constant approximation and provide such an approximation for a very restricted
+special case of the problem.
+&lt;/p&gt;
+&lt;p&gt;We make some progress towards the solution of the above open problem by
+presenting an $O(\log\log n)$ approximation. Our approach is rather flexible
+and can be easily extended to generalizations and variants of SFL. In more
+detail, we achieve the same approximation factor for the practically relevant
+generalizations of SFL where the opening cost of each facility $f$ is of the
+form $p_f+g(S^f)$ or $w_f\cdot g(S^f)$, where $p_f,w_f \geq 0$ are input
+values.
+&lt;/p&gt;
+&lt;p&gt;We also obtain an improved approximation algorithm for the related Universal
+Stochastic Facility Location problem. In this problem one is given a classical
+(metric) facility location instance and has to a priori assign each client to
+some facility. Then a subset of active clients is sampled from some given
+distribution, and one has to pay (a posteriori) only the connection and opening
+costs induced by the active clients. The expected opening cost of each facility
+$f$ can be modelled with a submodular function of the set of clients assigned
+to $f$.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Discrepancy Minimization via Regularization</title>
+    <link href="http://arxiv.org/abs/2211.05509"/>
+    <id>http://arxiv.org/abs/2211.05509</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pesenti_L/0/1/0/all/0/1&quot;&gt;Lucas Pesenti&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vladu_A/0/1/0/all/0/1&quot;&gt;Adrian Vladu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce a new algorithmic framework for discrepancy minimization based
+on regularization. We demonstrate how varying the regularizer allows us to
+re-interpret several breakthrough works in algorithmic discrepancy, ranging
+from Spencer&#39;s theorem [Spencer 1985, Bansal 2010] to Banaszczyk&#39;s bounds
+[Banaszczyk 1998, Bansal-Dadush-Garg 2016]. Using our techniques, we also show
+that the Beck-Fiala and Koml\&#39;os conjectures are true in a new regime of
+pseudorandom instances.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Column Generation for Optimization Problems in Communication Networks</title>
+    <link href="http://arxiv.org/abs/2211.05547"/>
+    <id>http://arxiv.org/abs/2211.05547</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jia_Z/0/1/0/all/0/1&quot;&gt;Ziye Jia&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wu_Q/0/1/0/all/0/1&quot;&gt;Qihui Wu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dong_C/0/1/0/all/0/1&quot;&gt;Chao Dong&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yuen_C/0/1/0/all/0/1&quot;&gt;Chau Yuen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Han_Z/0/1/0/all/0/1&quot;&gt;Zhu Han&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Numerous communication networks are emerging to serve the various demands and
+improve the quality of service. Heterogeneous users have different requirements
+on quality metrics such as delay and service efficiency. Besides, the networks
+are equipped with different types and amounts of resources, and how to
+efficiently optimize the usage of such limited resources to serve more users is
+the key issue for communication networks. One powerful mathematical
+optimization mechanism to solve the above issue is column generation (CG),
+which can deal with the optimization problems with complicating constraints and
+block angular structures. In this paper, we first review the preliminaries of
+CG. Further, the branch-and-price (BP) algorithm is elaborated, which is
+designed by embedding CG into the branch-and-bound scheme to efficiently obtain
+the optimal solution. The applications of CG and BP in various communication
+networks are then provided, such as space-air-ground networks and
+device-to-device networks. In short, our goal is to help readers refine the
+applications of the CG optimization tool in terms of problem formulation and
+solution. We also discuss the possible challenges and prospective directions
+when applying CG in the communication networks.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A new data structure for efficient search on isovists</title>
+    <link href="http://arxiv.org/abs/2211.05695"/>
+    <id>http://arxiv.org/abs/2211.05695</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grelard_F/0/1/0/all/0/1&quot;&gt;Florent Gr&amp;#xe9;lard&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ayadi_M/0/1/0/all/0/1&quot;&gt;Mehdi Ayadi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Scuturici_M/0/1/0/all/0/1&quot;&gt;Mihaela Scuturici&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Miguet_S/0/1/0/all/0/1&quot;&gt;Serge Miguet&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Spatial data structures allow to make efficient queries on Geographical
+Information Systems (GIS). Spatial queries involve the geometry of the data,
+such as points, lines, or polygons. For instance, a spatial query could poll
+for the nearest restaurants from a given location. Spatial queries can be
+solved exhaustively by going through the entire data, which is prohibitive as
+the number of data points increases. In this article, we are interested in
+making efficient queries on infinitely long geometrical shapes. For instance,
+angular sectors, defined as the intersection of two half-spaces, are infinitely
+long. However, regular spatial data structures are not adapted to these
+geometrical shapes. We propose a new method allowing to make efficient spatial
+queries on angular sectors (i.e. whether a point is inside an angular sector).
+It builds a R-tree from the dual space of angular sectors. An extensive
+evaluation shows our method is faster than using a regular R-tree.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: The Randomized $k$-Server Conjecture is False!</title>
+    <link href="http://arxiv.org/abs/2211.05753"/>
+    <id>http://arxiv.org/abs/2211.05753</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bubeck_S/0/1/0/all/0/1&quot;&gt;S&amp;#xe9;bastien Bubeck&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Coester_C/0/1/0/all/0/1&quot;&gt;Christian Coester&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rabani_Y/0/1/0/all/0/1&quot;&gt;Yuval Rabani&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove a few new lower bounds on the randomized competitive ratio for the
+$k$-server problem and other related problems, resolving some long-standing
+conjectures. In particular, for metrical task systems (MTS) we asympotically
+settle the competitive ratio and obtain the first improvement to an existential
+lower bound since the introduction of the model 35 years ago (in 1987).
+&lt;/p&gt;
+&lt;p&gt;More concretely, we show:
+&lt;/p&gt;
+&lt;p&gt;1. There exist $(k+1)$-point metric spaces in which the randomized
+competitive ratio for the $k$-server problem is $\Omega(\log^2 k)$. This
+refutes the folklore conjecture (which is known to hold in some families of
+metrics) that in all metric spaces with at least $k+1$ points, the competitive
+ratio is $\Theta(\log k)$.
+&lt;/p&gt;
+&lt;p&gt;2. Consequently, there exist $n$-point metric spaces in which the randomized
+competitive ratio for MTS is $\Omega(\log^2 n)$. This matches the upper bound
+that holds for all metrics. The previously best existential lower bound was
+$\Omega(\log n)$ (which was known to be tight for some families of metrics).
+&lt;/p&gt;
+&lt;p&gt;3. For all $k&amp;lt;n\in\mathbb N$, for *all* $n$-point metric spaces the
+randomized $k$-server competitive ratio is at least $\Omega(\log k)$, and
+consequently the randomized MTS competitive ratio is at least $\Omega(\log n)$.
+These universal lower bounds are asymptotically tight. The previous bounds were
+$\Omega(\log k/\log\log k)$ and $\Omega(\log n/\log \log n)$, respectively.
+&lt;/p&gt;
+&lt;p&gt;4. The randomized competitive ratio for the $w$-set metrical service systems
+problem, and its equivalent width-$w$ layered graph traversal problem, is
+$\Omega(w^2)$. This slightly improves the previous lower bound and matches the
+recently discovered upper bound.
+&lt;/p&gt;
+&lt;p&gt;5. Our results imply improved lower bounds for other problems like $k$-taxi,
+distributed paging and metric allocation.
+&lt;/p&gt;
+&lt;p&gt;These lower bounds share a common thread, and other than the third bound,
+also a common construction.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Steiner Connectivity Augmentation and Splitting-off in Poly-logarithmic Maximum Flows</title>
+    <link href="http://arxiv.org/abs/2211.05769"/>
+    <id>http://arxiv.org/abs/2211.05769</id>
+    <updated>2022-11-11T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cen_R/0/1/0/all/0/1&quot;&gt;Ruoxu Cen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+He_W/0/1/0/all/0/1&quot;&gt;William He&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_J/0/1/0/all/0/1&quot;&gt;Jason Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Panigrahi_D/0/1/0/all/0/1&quot;&gt;Debmalya Panigrahi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give an almost-linear time algorithm for the Steiner connectivity
+augmentation problem: given an undirected graph, find a smallest (or minimum
+weight) set of edges whose addition makes a given set of terminals
+$\tau$-connected (for any given $\tau &amp;gt; 0$). The running time of our algorithm
+is dominated by polylogarithmic calls to any maximum flow subroutine; using the
+recent almost-linear time maximum flow algorithm (Chen et al., FOCS 2022), we
+get an almost-linear running time for our algorithm as well. This is tight up
+to the polylogarithmic factor even for just two terminals. Prior to our work,
+an almost-linear (in fact, near-linear) running time was known only for the
+special case of global connectivity augmentation, i.e., when all vertices are
+terminals (Cen et al., STOC 2022).
+&lt;/p&gt;
+&lt;p&gt;We also extend our algorithm to the closely related Steiner splitting-off
+problem, where the edges incident on a vertex have to be {\em split-off} while
+maintaining the (Steiner) connectivity of a given set of terminals. Prior to
+our work, a nearly-linear time algorithm was known only for the special case of
+global connectivity (Cen et al., STOC 2022). The only known generalization
+beyond global connectivity was to preserve all pairwise connectivities using a
+much slower algorithm that makes $n$ calls to an all-pairs maximum flow (or
+Gomory-Hu tree) subroutine (Lau and Yung, SICOMP 2013), as against polylog(n)
+calls to a (single-pair) maximum flow subroutine in this work.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR22-147 |  Evaluating Monotone Circuits on Surfaces | 
 
 	Chetan Gupta, 
@@ -985,713 +1696,6 @@ there is no asymptotic benefit possible via amortization when storing multiple
 counters. Our main proof utilizes a certain notion of &quot;information cost&quot;
 recently introduced by Braverman, Garg and Woodruff in FOCS 2020 to prove lower
 bounds for streaming algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Computing better approximate pure Nash equilibria in cut games via semidefinite programming</title>
-    <link href="http://arxiv.org/abs/2211.04117"/>
-    <id>http://arxiv.org/abs/2211.04117</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Caragiannis_I/0/1/0/all/0/1&quot;&gt;Ioannis Caragiannis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiang_Z/0/1/0/all/0/1&quot;&gt;Zhile Jiang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Cut games are among the most fundamental strategic games in algorithmic game
-theory. It is well-known that computing an exact pure Nash equilibrium in these
-games is PLS-hard, so research has focused on computing approximate equilibria.
-We present a polynomial-time algorithm that computes $2.7371$-approximate pure
-Nash equilibria in cut games. This is the first improvement to the previously
-best-known bound of $3$, due to the work of Bhalgat, Chakraborty, and Khanna
-from EC 2010. Our algorithm is based on a general recipe proposed by
-Caragiannis, Fanelli, Gravin, and Skopalik from FOCS 2011 and applied on
-several potential games since then. The first novelty of our work is the
-introduction of a phase that can identify subsets of players who can
-simultaneously improve their utilities considerably. This is done via
-semidefinite programming and randomized rounding. In particular, a negative
-objective value to the semidefinite program guarantees that no such
-considerable improvement is possible for a given set of players. Otherwise,
-randomized rounding of the SDP solution is used to identify a set of players
-who can simultaneously improve their strategies considerably and allows the
-algorithm to make progress. The way rounding is performed is another important
-novelty of our work. Here, we exploit an idea that dates back to a paper by
-Feige and Goemans from 1995, but we take it to an extreme that has not been
-analyzed before.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Tight Complexity Bounds for Counting Generalized Dominating Sets in Bounded-Treewidth Graphs</title>
-    <link href="http://arxiv.org/abs/2211.04278"/>
-    <id>http://arxiv.org/abs/2211.04278</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Focke_J/0/1/0/all/0/1&quot;&gt;Jacob Focke&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Marx_D/0/1/0/all/0/1&quot;&gt;D&amp;#xe1;niel Marx&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Inerney_F/0/1/0/all/0/1&quot;&gt;Fionn Mc Inerney&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Neuen_D/0/1/0/all/0/1&quot;&gt;Daniel Neuen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sankar_G/0/1/0/all/0/1&quot;&gt;Govind S. Sankar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schepper_P/0/1/0/all/0/1&quot;&gt;Philipp Schepper&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wellnitz_P/0/1/0/all/0/1&quot;&gt;Philip Wellnitz&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate how efficiently a well-studied family of domination-type
-problems can be solved on bounded-treewidth graphs. For sets $\sigma,\rho$ of
-non-negative integers, a $(\sigma,\rho)$-set of a graph $G$ is a set $S$ of
-vertices such that $|N(u)\cap S|\in \sigma$ for every $u\in S$, and $|N(v)\cap
-S|\in \rho$ for every $v\not\in S$. The problem of finding a
-$(\sigma,\rho)$-set (of a certain size) unifies standard problems such as
-Independent Set, Dominating Set, Independent Dominating Set, and many others.
-&lt;/p&gt;
-&lt;p&gt;For all pairs of finite or cofinite sets $(\sigma,\rho)$, we determine (under
-standard complexity assumptions) the best possible value $c_{\sigma,\rho}$ such
-that there is an algorithm that counts $(\sigma,\rho)$-sets in time
-$c_{\sigma,\rho}^{\sf tw}\cdot n^{O(1)}$ (if a tree decomposition of width
-${\sf tw}$ is given in the input). For example, for the Exact Independent
-Dominating Set problem (also known as Perfect Code) corresponding to
-$\sigma=\{0\}$ and $\rho=\{1\}$, we improve the $3^{\sf tw}\cdot n^{O(1)}$
-algorithm of [van Rooij, 2020] to $2^{\sf tw}\cdot n^{O(1)}$.
-&lt;/p&gt;
-&lt;p&gt;Despite the unusually delicate definition of $c_{\sigma,\rho}$, we show that
-our algorithms are most likely optimal, i.e., for any pair $(\sigma, \rho)$ of
-finite or cofinite sets where the problem is non-trivial, and any
-$\varepsilon&amp;gt;0$, a $(c_{\sigma,\rho}-\varepsilon)^{\sf tw}\cdot
-n^{O(1)}$-algorithm counting the number of $(\sigma,\rho)$-sets would violate
-the Counting Strong Exponential-Time Hypothesis (#SETH). For finite sets
-$\sigma$ and $\rho$, our lower bounds also extend to the decision version,
-showing that our algorithms are optimal in this setting as well. In contrast,
-for many cofinite sets, we show that further significant improvements for the
-decision and optimization versions are possible using the technique of
-representative sets.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Why we couldn&#39;t prove SETH hardness of the Closest Vector Problem for even norms, and of the Subset Sum Problem!</title>
-    <link href="http://arxiv.org/abs/2211.04385"/>
-    <id>http://arxiv.org/abs/2211.04385</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Aggarwal_D/0/1/0/all/0/1&quot;&gt;Divesh Aggarwal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kumar_R/0/1/0/all/0/1&quot;&gt;Rajendra Kumar&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Recent work [BGS17,ABGS19] has shown SETH hardness of some constant factor
-approximate CVP in the $\ell_p$ norm for any $p$ that is not an even integer.
-This result was shown by giving a Karp reduction from $k$-SAT on $n$ variables
-to approximate CVP on a lattice of rank $n$. In this work, we show a barrier
-towards proving a similar result for CVP in the $\ell_p$ norm where $p$ is an
-even integer. We show that for any $c, c&#39;&amp;gt;0$, if for every $k &amp;gt; 0$, there
-exists an efficient reduction that maps a $k$-SAT instance on $n$ variables to
-a $(1+exp(-n^c)))$-CVP instance for a lattice of rank at most $n^{c&#39;}$ in the
-Euclidean norm, then $\mathsf{coNP} \subset \mathsf{NP/Poly}$. We prove a
-similar result for $(1+exp(-n^c)))$-CVP for all even norms under a mild
-additional promise that the ratio of the distance of the target from the
-lattice and the shortest non-zero vector in the lattice is bounded by
-$exp(n^{O(1)})$.
-&lt;/p&gt;
-&lt;p&gt;Furthermore, we show that for any $c,c&#39; &amp;gt; 0$, and any even integer $p$, if
-for every $k &amp;gt; 0$, there exists an efficient reduction that maps a $k$-SAT
-instance on $n$ variables to a $(1+exp(-n^c)))$-$SVP_p$ instance for a lattice
-of rank at most $n^{c&#39;}$, then $\mathsf{coNP} \subset \mathsf{NP/Poly}$. The
-result for SVP does not require any additional promise.
-&lt;/p&gt;
-&lt;p&gt;While prior results have indicated that lattice problems in the $\ell_2$ norm
-(Euclidean norm) are easier than lattice problems in other norms, this is the
-first result that shows a separation between these problems.
-&lt;/p&gt;
-&lt;p&gt;We achieve this by using a result by Dell and van Melkebeek [JACM, 2014] on
-the impossibility of the existence of a reduction that compresses an arbitrary
-$k$-SAT instance into a string of length $\mathcal{O}(n^{k-\epsilon})$ for any
-$\epsilon&amp;gt;0$. In addition to CVP, we also show that the same result holds for
-the Subset-Sum problem using similar techniques.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Sampling from convex sets with a cold start using multiscale decompositions</title>
-    <link href="http://arxiv.org/abs/2211.04439"/>
-    <id>http://arxiv.org/abs/2211.04439</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Narayanan_H/0/1/0/all/0/1&quot;&gt;Hariharan Narayanan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rajaraman_A/0/1/0/all/0/1&quot;&gt;Amit Rajaraman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Srivastava_P/0/1/0/all/0/1&quot;&gt;Piyush Srivastava&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A standard approach to sample approximately uniformly from a convex body
-$K\subseteq\mathbb{R}^n$ is to run a random walk within $K$. The requirement is
-that from a suitable initial distribution, the distribution of the walk comes
-close to the uniform distribution $\pi_K$ on $K$ after a number of steps
-polynomial in $n$ and the aspect ratio $R/r$ (here, $K$ is assumed to contain a
-ball of radius $r$ and to be contained in a ball of radius $R$).
-&lt;/p&gt;
-&lt;p&gt;Proofs of rapid mixing of such walks often require the probability density
-$\eta_0$ of the initial distribution with respect to $\pi_K$ to be at most
-$\mathrm{poly}(n)$: this is called a &quot;warm start&quot;. Achieving a warm start often
-requires non-trivial pre-processing before starting the random walk. This
-motivates proving rapid mixing from a &quot;cold start&quot;, wherein $\eta_0$ can be as
-high as $\exp(\mathrm{poly}(n))$. Unlike warm starts, a cold start is usually
-trivial to achieve. However, a random walks need not mix rapidly from a cold
-start: an example being the well-known &quot;ball walk&quot;. On the other hand, Lov\&#39;asz
-and Vempala proved that the &quot;hit-and-run&quot; random walk mixes rapidly from a cold
-start. For the related coordinate hit-and-run (CHR) walk, which has been found
-to be promising in computational experiments, rapid mixing from a warm start
-was proved only recently but the question of rapid mixing from a cold start
-remained open.
-&lt;/p&gt;
-&lt;p&gt;We construct a family of random walks inspired by classical decompositions of
-subsets of $\mathbb{R}^n$ into countably many axis-aligned dyadic cubes. We
-show that even with a cold start, the mixing times of these walks are bounded
-by a polynomial in $n$ and the aspect ratio. Our main technical ingredient is
-an isoperimetric inequality for $K$ for a metric that magnifies distances
-between points close to the boundary of $K$. As a corollary, we show that the
-CHR walk also mixes rapidly from a cold start.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Further Improvements on Approximating the Uniform Cost-Distance Steiner Tree Problem</title>
-    <link href="http://arxiv.org/abs/2211.03830"/>
-    <id>http://arxiv.org/abs/2211.03830</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Held_S/0/1/0/all/0/1&quot;&gt;Stephan Held&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Spitzley_Y/0/1/0/all/0/1&quot;&gt;Yannik Kyle Dustin Spitzley&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we consider the Uniform Cost-Distance Steiner Tree Problem in
-metric spaces, a generalization of the well-known Steiner tree problem.
-Cost-distance Steiner trees minimize the sum of the total length and the
-weighted path lengths from a dedicated root to the other terminals, which have
-a weight to penalize the path length. They are applied when the tree is
-intended for signal transmission, e.g. in chip design or telecommunication
-networks, and the signal speed through the tree has to be considered besides
-the total length. Constant factor approximation algorithms for the uniform
-cost-distance Steiner tree problem have been known since the first mentioning
-of the problem by Meyerson, Munagala, and Plotkin. Recently, the approximation
-factor was improved from 2.87 to 2.39 by Khazraei and Held. We refine their
-approach further and reduce the approximation factor down to 2.15.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Approximating Nash Social Welfare by Matching and Local Search</title>
-    <link href="http://arxiv.org/abs/2211.03883"/>
-    <id>http://arxiv.org/abs/2211.03883</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Garg_J/0/1/0/all/0/1&quot;&gt;Jugal Garg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Husic_E/0/1/0/all/0/1&quot;&gt;Edin Husi&amp;#x107;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_W/0/1/0/all/0/1&quot;&gt;Wenzheng Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vegh_L/0/1/0/all/0/1&quot;&gt;L&amp;#xe1;szl&amp;#xf3; A. V&amp;#xe9;gh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vondrak_J/0/1/0/all/0/1&quot;&gt;Jan Vondr&amp;#xe1;k&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For any $\varepsilon&amp;gt;0$, we give a simple, deterministic
-$(6+\varepsilon)$-approximation algorithm for the Nash social welfare (NSW)
-problem under submodular valuations. The previous best approximation factor was
-$380$ via a randomized algorithm. We also consider the asymmetric variant of
-the problem, where the objective is to maximize the weighted geometric mean of
-agents&#39; valuations, and give an $(\omega + 2 +\varepsilon) e$-approximation if
-the ratio between the largest weight and the average weight is at most
-$\omega$.
-&lt;/p&gt;
-&lt;p&gt;We also show that the $1/2$-EFX envy-freeness property can be attained
-simultaneously with a constant-factor approximation. More precisely, we can
-find an allocation in polynomial time which is both $1/2$-EFX and a
-$(12+\varepsilon)$-approximation to the symmetric NSW problem under submodular
-valuations. The previous best approximation factor under $1/2$-EFX was linear
-in the number of agents.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Query Complexity of the Metric Steiner Tree Problem</title>
-    <link href="http://arxiv.org/abs/2211.03893"/>
-    <id>http://arxiv.org/abs/2211.03893</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_Y/0/1/0/all/0/1&quot;&gt;Yu Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Khanna_S/0/1/0/all/0/1&quot;&gt;Sanjeev Khanna&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tan_Z/0/1/0/all/0/1&quot;&gt;Zihan Tan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the query complexity of the metric Steiner Tree problem, where we
-are given an $n \times n$ metric on a set $V$ of vertices along with a set $T
-\subseteq V$ of $k$ terminals, and the goal is to find a tree of minimum cost
-that contains all terminals in $T$. The query complexity for the related
-minimum spanning tree (MST) problem is well-understood: for any fixed
-$\varepsilon &amp;gt; 0$, one can estimate the MST cost to within a
-$(1+\varepsilon)$-factor using only $\tilde{O}(n)$ queries, and this is known
-to be tight. This implies that a $(2 + \varepsilon)$-approximate estimate of
-Steiner Tree cost can be obtained with $\tilde{O}(k)$ queries by simply
-applying the MST cost estimation algorithm on the metric induced by the
-terminals.
-&lt;/p&gt;
-&lt;p&gt;Our first result shows that any (randomized) algorithm that estimates the
-Steiner Tree cost to within a $(5/3 - \varepsilon)$-factor requires
-$\Omega(n^2)$ queries, even if $k$ is a constant. This lower bound is in sharp
-contrast to an upper bound of $O(nk)$ queries for computing a
-$(5/3)$-approximate Steiner Tree, which follows from previous work by Du and
-Zelikovsky.
-&lt;/p&gt;
-&lt;p&gt;Our second main result, and the main technical contribution of this work, is
-a sublinear query algorithm for estimating the Steiner Tree cost to within a
-strictly better-than-$2$ factor, with query complexity $\tilde{O}(n^{12/7} +
-n^{6/7}\cdot k)=\tilde{O}(n^{13/7})=o(n^2)$. We complement this result by
-showing an $\tilde{\Omega}(n + k^{6/5})$ query lower bound for any algorithm
-that estimates Steiner Tree cost to a strictly better than $2$ factor. Thus
-$\tilde{\Omega}(n^{6/5})$ queries are needed to just beat $2$-approximation
-when $k = \Omega(n)$; a sharp contrast to MST cost estimation where a
-$(1+o(1))$-approximate estimate of cost is achievable with only $\tilde{O}(n)$
-queries.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Streaming beyond sketching for Maximum Directed Cut</title>
-    <link href="http://arxiv.org/abs/2211.03916"/>
-    <id>http://arxiv.org/abs/2211.03916</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saxena_R/0/1/0/all/0/1&quot;&gt;Raghuvansh R. Saxena&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Singer_N/0/1/0/all/0/1&quot;&gt;Noah Singer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sudan_M/0/1/0/all/0/1&quot;&gt;Madhu Sudan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Velusamy_S/0/1/0/all/0/1&quot;&gt;Santhoshini Velusamy&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give an $\widetilde{O}(\sqrt{n})$-space single-pass $0.483$-approximation
-streaming algorithm for estimating the maximum directed cut size
-($\textsf{Max-DICUT}$) in a directed graph on $n$ vertices. This improves over
-an $O(\log n)$-space $4/9 &amp;lt; 0.45$ approximation algorithm due to Chou,
-Golovnev, Velusamy (FOCS 2020), which was known to be optimal for
-$o(\sqrt{n})$-space algorithms.
-&lt;/p&gt;
-&lt;p&gt;$\textsf{Max-DICUT}$ is a special case of a constraint satisfaction problem
-(CSP). In this broader context, our work gives the first CSP for which
-algorithms with $\widetilde{O}(\sqrt{n})$ space can provably outperform
-$o(\sqrt{n})$-space algorithms on general instances. Previously, this was shown
-in the restricted case of bounded-degree graphs in a previous work of the
-authors (SODA 2023). Prior to that work, the only algorithms for any CSP were
-based on generalizations of the $O(\log n)$-space algorithm for
-$\textsf{Max-DICUT}$, and were in particular so-called &quot;sketching&quot; algorithms.
-In this work, we demonstrate that more sophisticated streaming algorithms can
-outperform these algorithms even on general instances.
-&lt;/p&gt;
-&lt;p&gt;Our algorithm constructs a &quot;snapshot&quot; of the graph and then applies a result
-of Feige and Jozeph (Algorithmica, 2015) to approximately estimate the
-$\textsf{Max-DICUT}$ value from this snapshot. Constructing this snapshot is
-easy for bounded-degree graphs and the main contribution of our work is to
-construct this snapshot in the general setting. This involves some delicate
-sampling methods as well as a host of &quot;continuity&quot; results on the
-$\textsf{Max-DICUT}$ behaviour in graphs.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fast Algorithms for $\ell_p$-Regression</title>
-    <link href="http://arxiv.org/abs/2211.03963"/>
-    <id>http://arxiv.org/abs/2211.03963</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Adil_D/0/1/0/all/0/1&quot;&gt;Deeksha Adil&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kyng_R/0/1/0/all/0/1&quot;&gt;Rasmus Kyng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Peng_R/0/1/0/all/0/1&quot;&gt;Richard Peng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sachdeva_S/0/1/0/all/0/1&quot;&gt;Sushant Sachdeva&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The $\ell_p$-norm regression problem is a classic problem in optimization
-with wide ranging applications in machine learning and theoretical computer
-science. The goal is to compute $x^{\star} =\arg\min_{Ax=b}\|x\|_p^p$, where
-$x^{\star}\in \mathbb{R}^n, A\in \mathbb{R}^{d\times n},b \in \mathbb{R}^d$ and
-$d\leq n$. Efficient high-accuracy algorithms for the problem have been
-challenging both in theory and practice and the state of the art algorithms
-require $poly(p)\cdot n^{\frac{1}{2}-\frac{1}{p}}$ linear system solves for
-$p\geq 2$. In this paper, we provide new algorithms for $\ell_p$-regression
-(and a more general formulation of the problem) that obtain a high-accuracy
-solution in $O(p n^{\frac{(p-2)}{(3p-2)}})$ linear system solves. We further
-propose a new inverse maintenance procedure that speeds-up our algorithm to
-$\widetilde{O}(n^{\omega})$ total runtime, where $O(n^{\omega})$ denotes the
-running time for multiplying $n \times n$ matrices. Additionally, we give the
-first Iteratively Reweighted Least Squares (IRLS) algorithm that is guaranteed
-to converge to an optimum in a few iterations. Our IRLS algorithm has shown
-exceptional practical performance, beating the currently available
-implementations in MATLAB/CVX by 10-50x.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Optimal Smoothed Analysis and Quantitative Universality for the Smallest Singular Value of Random Matrices</title>
-    <link href="http://arxiv.org/abs/2211.03975"/>
-    <id>http://arxiv.org/abs/2211.03975</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Wang_H/0/1/0/all/0/1&quot;&gt;Haoyu Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The smallest singular value and condition number play important roles in
-numerical linear algebra and the analysis of algorithms. In numerical analysis
-with randomness, many previous works make Gaussian assumptions, which are not
-general enough to reflect the arbitrariness of the input. To overcome this
-drawback, we prove the first quantitative universality for the smallest
-singular value and condition number of random matrices.
-&lt;/p&gt;
-&lt;p&gt;Moreover, motivated by the study of smoothed analysis that random
-perturbation makes deterministic matrices well-conditioned, we consider an
-analog for random matrices. For a random matrix perturbed by independent
-Gaussian noise, we show that this matrix quickly becomes approximately
-Gaussian. In particular, we derive an optimal smoothed analysis for random
-matrices in terms of a sharp Gaussian approximation.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Computing palindromes on a trie in linear time</title>
-    <link href="http://arxiv.org/abs/2211.03995"/>
-    <id>http://arxiv.org/abs/2211.03995</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mieno_T/0/1/0/all/0/1&quot;&gt;Takuya Mieno&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Funakoshi_M/0/1/0/all/0/1&quot;&gt;Mitsuru Funakoshi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Inenaga_S/0/1/0/all/0/1&quot;&gt;Shunsuke Inenaga&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A trie $\mathcal{T}$ is a rooted tree such that each edge is labeled by a
-single character from the alphabet, and the labels of out-going edges from the
-same node are mutually distinct. Given a trie $\mathcal{T}$ with $n$ edges, we
-show how to compute all distinct palindromes and all maximal palindromes on
-$\mathcal{T}$ in $O(n)$ time, in the case of integer alphabets of size
-polynomial in $n$.This improves the state-of-the-art $O(n \log h)$-time
-algorithms by Funakoshi et al. [PCS 2019], where $h$ is the height of
-$\mathcal{T}$. Using our new algorithms, the eertree with suffix links for a
-given trie $\mathcal{T}$ can readily be obtained in $O(n)$ time. Further, our
-trie-based $O(n)$-space data structure allows us to report all distinct
-palindromes and maximal palindromes in a query string represented in the trie
-$\mathcal{T}$, in output optimal time. This is an improvement over an existing
-(na\&quot;ive) solution that precomputes and stores all distinct palindromes and
-maximal palindromes for each and every string in the trie $\mathcal{T}$
-separately, using a total $O(n^2)$ preprocessing time and space, and reports
-them in output optimal time upon query.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Simple Algorithm for Online Decision Making</title>
-    <link href="http://arxiv.org/abs/2211.03997"/>
-    <id>http://arxiv.org/abs/2211.03997</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Chen_R/0/1/0/all/0/1&quot;&gt;Rui Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Gunluk_O/0/1/0/all/0/1&quot;&gt;Oktay Gunluk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lodi_A/0/1/0/all/0/1&quot;&gt;Andrea Lodi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Wang_G/0/1/0/all/0/1&quot;&gt;Guanyi Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Motivated by recent progress on online linear programming (OLP), we study the
-online decision making problem (ODMP) as a natural generalization of OLP. In
-ODMP, there exists a single decision maker who makes a series of decisions
-spread out over a total of $T$ time stages. At each time stage, the decision
-maker makes a decision based on information obtained up to that point without
-seeing into the future. The task of the decision maker is to maximize the
-accumulated reward while overall meeting some predetermined $m$-dimensional
-long-term goal (linking) constraints. ODMP significantly broadens the modeling
-framework of OLP by allowing more general feasible regions (for local and goal
-constraints) potentially involving both discreteness and nonlinearity in each
-local decision making problem.
-&lt;/p&gt;
-&lt;p&gt;We propose a Fenchel dual-based online algorithm for ODMP. At each time
-stage, the proposed algorithm requires solving a potentially nonconvex
-optimization problem over the local feasible set and a convex optimization
-problem over the goal set. Under the uniform random permutation model, we show
-that our algorithm achieves $O(\sqrt{mT})$ constraint violation
-deterministically in meeting the long-term goals, and $O(\sqrt{m\log
-m}\sqrt{T})$ competitive difference in expected reward with respect to the
-optimal offline decisions. We also extend our results to the grouped random
-permutation model.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Comparing Two Counting Methods for Estimating the Probabilities of Strings</title>
-    <link href="http://arxiv.org/abs/2211.04024"/>
-    <id>http://arxiv.org/abs/2211.04024</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Takamoto_A/0/1/0/all/0/1&quot;&gt;Ayaka Takamoto&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yoshida_M/0/1/0/all/0/1&quot;&gt;Mitsuo Yoshida&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Umemura_K/0/1/0/all/0/1&quot;&gt;Kyoji Umemura&lt;/a&gt;&lt;/p&gt;&lt;p&gt;There are two methods for counting the number of occurrences of a string in
-another large string. One is to count the number of places where the string is
-found. The other is to determine how many pieces of string can be extracted
-without overlapping. The difference between the two becomes apparent when the
-string is part of a periodic pattern. This research reports that the difference
-is significant in estimating the occurrence probability of a pattern.
-&lt;/p&gt;
-&lt;p&gt;In this study, the strings used in the experiments are approximated from
-time-series data. The task involves classifying strings by estimating the
-probability or computing the information quantity. First, the frequencies of
-all substrings of a string are computed. Each counting method may sometimes
-produce different frequencies for an identical string. Second, the probability
-of the most probable segmentation is selected. The probability of the string is
-the product of all probabilities of substrings in the selected segmentation.
-The classification results demonstrate that the difference in counting methods
-is statistically significant, and that the method without overlapping is
-better.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Improved Pattern-Avoidance Bounds for Greedy BSTs via Matrix Decomposition</title>
-    <link href="http://arxiv.org/abs/2211.04112"/>
-    <id>http://arxiv.org/abs/2211.04112</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chalermsook_P/0/1/0/all/0/1&quot;&gt;Parinya Chalermsook&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gupta_M/0/1/0/all/0/1&quot;&gt;Manoj Gupta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiamjitrak_W/0/1/0/all/0/1&quot;&gt;Wanchote Jiamjitrak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Acosta_N/0/1/0/all/0/1&quot;&gt;Nidia Obscura Acosta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pareek_A/0/1/0/all/0/1&quot;&gt;Akash Pareek&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yingchareonthawornchai_S/0/1/0/all/0/1&quot;&gt;Sorrachai Yingchareonthawornchai&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Greedy BST (or simply Greedy) is an online self-adjusting binary search tree
-defined in the geometric view ([Lucas, 1988; Munro, 2000; Demaine, Harmon,
-Iacono, Kane, Patrascu, SODA 2009). Along with Splay trees (Sleator, Tarjan
-1985), Greedy is considered the most promising candidate for being dynamically
-optimal, i.e., starting with any initial tree, their access costs on any
-sequence is conjectured to be within $O(1)$ factor of the offline optimal.
-However, in the past four decades, the question has remained elusive even for
-highly restricted input.
-&lt;/p&gt;
-&lt;p&gt;In this paper, we prove new bounds on the cost of Greedy in the &#39;&#39;pattern
-avoidance&#39;&#39; regime. Our new results include:
-&lt;/p&gt;
-&lt;p&gt;The (preorder) traversal conjecture for Greedy holds up to a factor of
-$O(2^{\alpha(n)})$, improving upon the bound of $2^{\alpha(n)^{O(1)}}$ in
-(Chalermsook et al., FOCS 2015). This is the best known bound obtained by any
-online BSTs.
-&lt;/p&gt;
-&lt;p&gt;We settle the postorder traversal conjecture for Greedy.
-&lt;/p&gt;
-&lt;p&gt;The deque conjecture for Greedy holds up to a factor of $O(\alpha(n))$,
-improving upon the bound $2^{O(\alpha(n))}$ in (Chalermsook, et al., WADS
-2015).
-&lt;/p&gt;
-&lt;p&gt;The split conjecture holds for Greedy up to a factor of $O(2^{\alpha(n)})$.
-&lt;/p&gt;
-&lt;p&gt;Key to all these results is to partition (based on the input structures) the
-execution log of Greedy into several simpler-to-analyze subsets for which
-classical forbidden submatrix bounds can be leveraged. Finally, we show the
-applicability of this technique to handle a class of increasingly complex
-pattern-avoiding input sequences, called $k$-increasing sequences.
-&lt;/p&gt;
-&lt;p&gt;As a bonus, we discover a new class of permutation matrices whose extremal
-bounds are polynomially bounded. This gives a partial progress on an open
-question by Jacob Fox (2013).
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Prophet Inequality: Order selection beats random order</title>
-    <link href="http://arxiv.org/abs/2211.04145"/>
-    <id>http://arxiv.org/abs/2211.04145</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bubna_A/0/1/0/all/0/1&quot;&gt;Archit Bubna&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chiplunkar_A/0/1/0/all/0/1&quot;&gt;Ashish Chiplunkar&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the prophet inequality problem, a gambler faces a sequence of items
-arriving online with values drawn independently from known distributions. On
-seeing an item, the gambler must choose whether to accept its value as her
-reward and quit the game, or reject it and continue. The gambler&#39;s aim is to
-maximize her expected reward relative to the expected maximum of the values of
-all items. Since the seminal work of Krengel and Sucheston (1977,1978), a tight
-bound of 1/2 has been known for this competitive ratio in the setting where the
-items arrive in an adversarial order. However, the optimum ratio still remains
-unknown in the order selection setting, where the gambler selects the arrival
-order, as well as in prophet secretary, where the items arrive in a random
-order. Moreover, it is not even known whether a separation exists between the
-two settings.
-&lt;/p&gt;
-&lt;p&gt;In this paper, we show that the power of order selection allows the gambler
-to guarantee a strictly better competitive ratio than if the items arrive
-randomly. For the order selection setting, we identify an instance for which
-Peng and Tang&#39;s (FOCS&#39;22) state-of-the-art algorithm performs no better than
-their claimed competitive ratio of (approximately) 0.7251, thus illustrating
-the need for an improved approach. We therefore extend their design and provide
-a more general algorithm design framework which allows the use of a different
-time-dependent threshold function for each item, as opposed to the common
-threshold function employed by Peng and Tang&#39;s algorithm. We use this framework
-to show that Peng and Tang&#39;s ratio can be beaten, by designing a
-0.7258-competitive algorithm. For the random order setting, we improve upon
-Correa, Saona and Ziliotto&#39;s (SODA&#39;19) 0.732-hardness result to show a hardness
-of 0.7254 for general algorithms, thus establishing a separation between the
-order selection and random order settings.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Deterministic Incremental APSP with Polylogarithmic Update Time and Stretch</title>
-    <link href="http://arxiv.org/abs/2211.04217"/>
-    <id>http://arxiv.org/abs/2211.04217</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Forster_S/0/1/0/all/0/1&quot;&gt;Sebastian Forster&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nazari_Y/0/1/0/all/0/1&quot;&gt;Yasamin Nazari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gutenberg_M/0/1/0/all/0/1&quot;&gt;Maximilian Probst Gutenberg&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide the first deterministic data structure that given a weighted
-undirected graph undergoing edge insertions, processes each update with
-polylogarithmic amortized update time and answers queries for the distance
-between any pair of vertices in the current graph with a polylogarithmic
-approximation in $O(\log \log n)$ time.
-&lt;/p&gt;
-&lt;p&gt;Prior to this work, no data structure was known for partially dynamic graphs,
-i.e., graphs undergoing either edge insertions or deletions, with less than
-$n^{o(1)}$ update time except for dense graphs, even when allowing
-randomization against oblivious adversaries or considering only single-source
-distances.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Extracting and Pre-Processing Event Logs</title>
-    <link href="http://arxiv.org/abs/2211.04338"/>
-    <id>http://arxiv.org/abs/2211.04338</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fahland_D/0/1/0/all/0/1&quot;&gt;Dirk Fahland&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Event data is the basis for all process mining analysis. Most process mining
-techniques assume their input to be an event log. However, event data is rarely
-recorded in an event log format, but has to be extracted from raw data. Event
-log extraction itself is an act of modeling as the analyst has to consciously
-choose which features of the raw data are used for describing which behavior of
-which entities. Being aware of these choices and subtle but important
-differences in concepts such as trace, case, activity, event, table, and log is
-crucial for mastering advanced process mining analyses.
-&lt;/p&gt;
-&lt;p&gt;This text provides fundamental concepts and formalizations and discusses
-design decisions in event log extraction from a raw event table and for event
-log pre-processing. It is intended as study material for an advanced lecture in
-a process mining course.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Summation Problem Revisited -- More Robust Computation</title>
-    <link href="http://arxiv.org/abs/2211.04402"/>
-    <id>http://arxiv.org/abs/2211.04402</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Skala_V/0/1/0/all/0/1&quot;&gt;Vaclav Skala&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Numerical data processing is a key task across different fields of computer
-technology use. However, even simple summation of values is not precise due to
-the floating point representation use. This paper presents a practical
-algorithm for summation of values convenient for medium and large data sets.
-The proposed algorithm is simple, easy to implement. Its computational
-complexity is O(N) in the contrary of the Exact Sign Summation Algorithm (ESSA)
-approach with O(N^2) run-time complexity. The proposed algorithm is especially
-convenient for cases when exponent data differ significantly and many small
-values are summed with higher values
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Local Search-Based Approach for Set Covering</title>
-    <link href="http://arxiv.org/abs/2211.04444"/>
-    <id>http://arxiv.org/abs/2211.04444</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gupta_A/0/1/0/all/0/1&quot;&gt;Anupam Gupta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lee_E/0/1/0/all/0/1&quot;&gt;Euiwoong Lee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_J/0/1/0/all/0/1&quot;&gt;Jason Li&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the Set Cover problem, we are given a set system with each set having a
-weight, and we want to find a collection of sets that cover the universe,
-whilst having low total weight. There are several approaches known (based on
-greedy approaches, relax-and-round, and dual-fitting) that achieve a $H_k
-\approx \ln k + O(1)$ approximation for this problem, where the size of each
-set is bounded by $k$. Moreover, getting a $\ln k - O(\ln \ln k)$ approximation
-is hard.
-&lt;/p&gt;
-&lt;p&gt;Where does the truth lie? Can we close the gap between the upper and lower
-bounds? An improvement would be particularly interesting for small values of
-$k$, which are often used in reductions between Set Cover and other
-combinatorial optimization problems.
-&lt;/p&gt;
-&lt;p&gt;We consider a non-oblivious local-search approach: to the best of our
-knowledge this gives the first $H_k$-approximation for Set Cover using an
-approach based on local-search. Our proof fits in one page, and gives a
-integrality gap result as well. Refining our approach by considering larger
-moves and an optimized potential function gives an $(H_k - \Omega(\log^2
-k)/k)$-approximation, improving on the previous bound of $(H_k -
-\Omega(1/k^8))$ (\emph{R.\ Hassin and A.\ Levin, SICOMP &#39;05}) based on a
-modified greedy algorithm.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Computing Square Colorings on Bounded-Treewidth and Planar Graphs</title>
-    <link href="http://arxiv.org/abs/2211.04458"/>
-    <id>http://arxiv.org/abs/2211.04458</id>
-    <updated>2022-11-09T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Agrawal_A/0/1/0/all/0/1&quot;&gt;Akanksha Agrawal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Marx_D/0/1/0/all/0/1&quot;&gt;D&amp;#xe1;niel Marx&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Neuen_D/0/1/0/all/0/1&quot;&gt;Daniel Neuen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Slusallek_J/0/1/0/all/0/1&quot;&gt;Jasper Slusallek&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A square coloring of a graph $G$ is a coloring of the square $G^2$ of $G$,
-that is, a coloring of the vertices of $G$ such that any two vertices that are
-at distance at most $2$ in $G$ receive different colors. We investigate the
-complexity of finding a square coloring with a given number of $q$ colors. We
-show that the problem is polynomial-time solvable on graphs of bounded
-treewidth by presenting an algorithm with running time $n^{2^{\operatorname{tw}
-+ 4}+O(1)}$ for graphs of treewidth at most $\operatorname{tw}$. The somewhat
-unusual exponent $2^{\operatorname{tw}}$ in the running time is essentially
-optimal: we show that for any $\epsilon&amp;gt;0$, there is no algorithm with running
-time $f(\operatorname{tw})n^{(2-\epsilon)^{\operatorname{tw}}}$ unless the
-Exponential-Time Hypothesis (ETH) fails.
-&lt;/p&gt;
-&lt;p&gt;We also show that the square coloring problem is NP-hard on planar graphs for
-any fixed number $q \ge 4$ of colors. Our main algorithmic result is showing
-that the problem (when the number of colors $q$ is part of the input) can be
-solved in subexponential time $2^{O(n^{2/3}\log n)}$ on planar graphs. The
-result follows from the combination of two algorithms. If the number $q$ of
-colors is small ($\le n^{1/3}$), then we can exploit a treewidth bound on the
-square of the graph to solve the problem in time $2^{O(\sqrt{qn}\log n)}$. If
-the number of colors is large ($\ge n^{1/3}$), then an algorithm based on
-protrusion decompositions and building on our result for the bounded-treewidth
-case solves the problem in time $2^{O(n\log n/q)}$.
 &lt;/p&gt;
   </content>
     <author>
