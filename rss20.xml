@@ -9,6 +9,60 @@
 
 
 <item>
+  <title>TR22-153 |  Hardness against Linear Branching Programs and More | 
+
+	Jyun-Jie Liao, 
+
+	Eshan Chattopadhyay</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/153</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/153</link>
+  <description>
+    In a recent work, Gryaznov, Pudlák and Talebanfard (CCC &amp;#39;22) introduced a linear variant of read-once
+branching programs, with motivations from circuit and proof complexity. Such a read-once linear branching program  is 
+a  branching program  where each node is allowed  to make $\mathbb{F}_2$-linear queries,  and are read-once in the sense
+that the queries on each path is linearly independent.  As their main result, they  constructed an explicit
+function with average-case complexity $2^{n/3-o(n)}$ against a slightly restricted model, which they call
+strongly read-once linear branching programs.  The main tool in their lower bound result is a new type of extractor,
+called directional affine extractors, that they introduced.
+
+Our main result is an explicit function with $2^{n-o(n)}$ average-case complexity against the strongly read-once
+linear branching program model, which is almost optimal. This result is based on a new connection from this problem
+to sumset extractors, which is a randomness extractor model introduced by Chattopadhyay and Li (STOC &amp;#39;16) as a
+generalization of many other well-studied models including two-source extractors, affine extractors and small-space extractors.
+ With this new connection, our lower bound naturally follows from a recent construction of sumset extractors
+by Chattopadhyay and Liao (STOC &amp;#39;22). In addition, we show that directional affine extractors imply
+ sumset extractors in a restricted setting. We observe that such restricted sumset sources are enough to derive lower bounds,  and obtain an arguably more modular proof of the lower bound by Gryaznov, Pudlák and Talebanfard.
+
+We also initiate a study of pseudorandomness against linear branching programs. Our main result here
+is a hitting set generator construction against regular linear branching programs with constant width. We derive this result
+based on a connection to Kakeya sets over finite fields.
+  </description>
+  <pubDate>2022-11-13 09:55:40 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
+  <title>TR22-152 |  The Strength of Equality Oracles in Communication | 
+
+	Toniann Pitassi, 
+
+	Morgan Shirley, 
+
+	Adi Shraibman</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/152</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/152</link>
+  <description>
+    It is well-known that randomized communication protocols are more powerful than deterministic protocols. In particular the Equality function requires $\Omega(n)$ deterministic communication complexity but has efficient randomized protocols. Previous work of Chattopadhyay, Lovett and Vinyals shows that randomized communication is strictly stronger than what can be solved by deterministic protocols equipped with an Equality oracle. Despite this separation, we are far from understanding the exact strength of Equality oracles in the context of communication complexity.
+	
+In this work we focus on nondeterminisic communication equipped with an Equality oracle, which is a subclass of Merlin-Arthur communication.  We show that this inclusion is strict by proving that the previously-studied Integer Inner Product function, which can be efficiently computed even with bounded-error randomness, cannot be computed using sublinear communication in the nondeterministic Equality model. To prove this we give a new matrix-theoretic characterization of the nondeterministic Equality model: specifically, there is a tight connection between this model and a covering number based on the blocky matrices of Hambardzumyan, Hatami, and Hatami, as well as a natural variant of the Gamma-2 factorization norm. Similar equivalences are shown for the unambiguous nondeterministic model with Equality oracles. A bonus result arises from these proofs: for the studied communication models, a single Equality oracle call suffices without loss of generality.
+	
+Our results allow us to prove a separation between deterministic and unambiguous nondeterminism in the presence of Equality oracles. This stands in contrast to the result of Yannakakis which shows that these models are polynomially-related without oracles. We suggest a number of intriguing open questions along this direction of inquiry, as well as others that arise from our work.
+  </description>
+  <pubDate>2022-11-13 09:47:52 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Sam Bankman-Fried and the geometry of conscience</title>
   <guid>https://scottaaronson.blog/?p=6797</guid>
   <link>https://scottaaronson.blog/?p=6797</link>
@@ -1474,62 +1528,6 @@ Email: theory.waterloo@gmail.com&lt;/p&gt;
   </description>
   <pubDate>2022-11-09 19:56:36 UTC</pubDate>
   <author>CCI: jobs</author>
-</item>
-
-<item>
-  <title>TR22-145 |  Revisiting Time-Space Tradeoffs for Function Inversion | 
-
-	Alexander Golovnev, 
-
-	Siyao Guo, 
-
-	Spencer Peters, 
-
-	Noah Stephens-Davidowitz</title>
-  <guid>https://eccc.weizmann.ac.il/report/2022/145</guid>
-  <link>https://eccc.weizmann.ac.il/report/2022/145</link>
-  <description>
-    We study the black-box function inversion problem, which is the problem of finding $x \in [N]$ such that $f(x) = y$, given as input some challenge point $y$ in the image of a function $f : [N] \to [N]$, using $T$ oracle queries to $f$ and preprocessed advice $\sigma \in \{0,1\}^S$ depending on $f$. We prove a number of new results about this problem, as follows.
-
-1. We show an algorithm that works for any $T$ and $S$ satisfying $T S^2 \cdot \max\{S,T\} = \widetilde{\Theta}(N^3)$. In the important setting when $S &amp;lt; T$, this improves on the celebrated algorithm of Fiat and Naor [STOC, 1991], which requires $T S^3 \geq N^3$. E.g., Fiat and Naor&amp;#39;s algorithm is only non-trivial for $S \gg N^{2/3}$, while our algorithm gives a non-trivial tradeoff for any $S \gg N^{1/2}$. (Our algorithm and analysis are quite simple. As a consequence of this, we also give a self-contained and simple proof of Fiat and Naor&amp;#39;s original result, with certain optimizations left out for simplicity.)
-
-2. We show a non-adaptive algorithm (i.e., an algorithm whose $i$th query $x_i$ is chosen based entirely on $\sigma$ and $y$, and not on the $f(x_1),\ldots, f(x_{i-1})$) that works for any $T$ and $S$ satisfying $S = \Theta(N \log(N/T))$ giving the first non-trivial non-adaptive algorithm for this problem. E.g., setting $T = N/ \mathrm{poly\,log}(N)$ gives $S = \Theta(N \log \log N)$. This answers a question due to Corrigan-Gibbs and Kogan [TCC, 2019], who asked whether it was possible for a non-adaptive algorithm to work with parameters $T$ and $S$ satisfying $T + S/\log N &amp;lt; o(N)$. We also observe that our non-adaptive algorithm is what we call a guess-and-check algorithm, that is, it is non-adaptive and its final output is always one of the oracle queries $x_1,\ldots, x_T$. For guess-and-check algorithms, we prove a matching lower bound, therefore completely characterizing the achievable parameters $(S,T)$ for this natural class of algorithms. (Corrigan-Gibbs and Kogan showed that any such lower bound for arbitrary non-adaptive algorithms would imply new circuit lower bounds.) 
-
-3. We show equivalence between function inversion and a natural decision version of the problem in both the worst case and the average case, and similarly for functions $f : [N] \to [M]$ with different ranges.
-
-
-All of the above results are most naturally described in a model with shared randomness (i.e., random coins shared between the preprocessing algorithm and the online algorithm). However, as an additional contribution, we show (using a technique from communication complexity due to Newman [IPL, 1991]) how to generically convert any algorithm that uses shared randomness into one that does not.
-  </description>
-  <pubDate>2022-11-09 17:55:48 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>Complexity of directed Steiner path packing problem</title>
-  <guid>http://arxiv.org/abs/2211.04025</guid>
-  <link>http://arxiv.org/abs/2211.04025</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Sun_Y/0/1/0/all/0/1&quot;&gt;Yuefang Sun&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For a digraph $D=(V(D), A(D))$, and a set $S\subseteq V(D)$ with $r\in S$ and
-$|S|\geq 2$, a directed $(S, r)$-Steiner path or, simply, an $(S, r)$-path is a
-directed path $P$ started at $r$ with $S\subseteq V(P)$. Two $(S, r)$-paths are
-said to be arc-disjoint if they have no common arc. Two arc-disjoint $(S,
-r)$-paths are said to be internally disjoint if the set of common vertices of
-them is exactly $S$. Let $\kappa^p_{S,r}(D)$ (resp. $\lambda^p_{S,r}(D)$) be
-the maximum number of internally disjoint (resp. arc-disjoint) $(S, r)$-paths
-in $D$.
-&lt;/p&gt;
-&lt;p&gt;In this paper, we study the complexity for $\kappa^p_{S,r}(D)$ and
-$\lambda^p_{S,r}(D)$. When both $k\geq 2, \ell\geq 1$ are fixed integers, we
-show that the problem of deciding whether $\kappa^p_{S,r}(D) \geq \ell$ for an
-Eulerian digraph $D$ is NP-complete, where $r\in S\subseteq V(D)$ and $|S|=k$.
-However, when we consider the class of symmetric digraphs, the problem becomes
-polynomial-time solvable. We also show that the problem of deciding whether
-$\lambda^p_{S,r}(D) \geq \ell$ for a given digraph $D$ is NP-complete, where
-$r\in S\subseteq V(D)$ and $|S|=k$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-09 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
 </item>
 
 </channel>
