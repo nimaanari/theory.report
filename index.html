@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-11-15T03:57:49Z">Tuesday, November 15 2022, 03:57</time>
+          <time class='timeago' datetime="2022-11-15T04:45:10Z">Tuesday, November 15 2022, 04:45</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -340,6 +340,37 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Tuesday, November 15
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://blog.computationalcomplexity.org/2022/11/who-first-thought-of-notion-of.html'>Who first thought of the notion of Polynomial Time?</a></h3>
+        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>(Updated version of&nbsp; Computational Intractability: A Guide to Algorithmic Lower Bound by Demaine-Gasarch-Hajiaghayi is&nbsp;here)</p><p><br></p><p>Any question like who first though of X is often hard to answer. I blogged about who first came up with the Fib numbers&nbsp;here. I've heard rumors that IBM had search engines way before Google but could not figure out how to make money off of it. There are other examples.&nbsp;</p><p>I had learned that Cobham defined P in the paper The intrinsic computational difficulty of functions, in 1965. It was The conference on Logic, Methodology, and Philosophy of Science. The paper is&nbsp;here.&nbsp; Jack Edmonds had the notion of P in the paper Paths, Trees, and Flowers&nbsp;here&nbsp;in 1965.</p><p>While it is true that Cobham defined P in that paper, and he might have been the first one to do so, was the notion somehow around earlier. I first thought the answer was no. Why?&nbsp; Because if you look at Joe Kruskal's paper on MST&nbsp; (see here) you don't see anything resembling time complexity. No O(E+Vlog V) or whatnot. So I thought that if the notion of&nbsp;&nbsp;this algorithm runs in such-and-such time was not in the air, then certainly any notion of P could not have been.&nbsp;</p><p>Hence I was surprised when I accidentally (more on that later) came across the following:&nbsp;</p><p>In 1910 (really, 1910)&nbsp; H.C.Pocklington analyzed two algorithms for solving quadratic congruences and noticed that&nbsp;</p><p>one took time proportional to a power of the log of the modulus, where as</p><p>the other took time proportional to the modulus itself or its square root.&nbsp;</p><p>THAT is the distinction between P and NOT-P.&nbsp;</p><p>The paper is titled The determination of the exponent to which a number belongs, the practical solution of certain congruences, and the law of quadratic reciprocity. It appeared in 1910, in the Proceedings of the Cambridge Philosophical&nbsp; Society, Volume 16, pages 1-5. (I could not find it online. If you know of a place online for it, leave a comment.)&nbsp;</p><p>How did I come across this? And why had I NOT come across this in my roughly 40 years working in complexity theory?&nbsp;</p><p>I came across it while reading a blog of Scotts, The Kolmogorov Option, see&nbsp;here&nbsp;where Pocklington is mentioned in passing. I am surprised how arbitrary the set of things ones knows can be. I have put the Pocklington story in the Demaine-Gasarch-Hajiaghayi book&nbsp;Computational Intractability: A Guide to Algorithmic Lower Bounds&nbsp;so that this knowledge gets to be better known.</p><p><br></p><p><br></p><p><br></p><p>By gasarch</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>(Updated version of&nbsp; <i>Computational Intractability: A Guide to Algorithmic Lower Bound</i> by Demaine-Gasarch-Hajiaghayi is&nbsp;<a href="https://hardness.mit.edu/">here</a>)</p><p><br /></p><p>Any question like <i>who first though of X </i>is often hard to answer. I blogged about who first came up with the Fib numbers&nbsp;<a href="https://blog.computationalcomplexity.org/search?q=Fib">here</a>. I've heard rumors that IBM had search engines way before Google but could not figure out how to make money off of it. There are other examples.&nbsp;</p><p>I had learned that Cobham defined P in the paper <i>The intrinsic computational difficulty of functions</i>, in 1965. It was The conference on Logic, Methodology, and Philosophy of Science. The paper is&nbsp;<a href="https://www.cs.toronto.edu/~sacook/homepage/cobham_intrinsic.pdf">here</a>.&nbsp; Jack Edmonds had the notion of P in the paper <i>Paths, Trees, and Flowers&nbsp;<a href="https://math.nist.gov/~JBernal/p_t_f.pdf">here</a>&nbsp;</i>in 1965.</p><p>While it is true that Cobham defined P in that paper, and he might have been the first one to do so, was the notion somehow around earlier. I first thought the answer was no. Why?&nbsp; Because if you look at Joe Kruskal's paper on MST&nbsp; (see <a href="https://www.ams.org/journals/proc/1956-007-01/S0002-9939-1956-0078686-7/S0002-9939-1956-0078686-7.pdf">here</a>) you don't see anything resembling time complexity. No O(E+Vlog V) or whatnot. So I thought that if the notion of&nbsp;&nbsp;<i>this algorithm runs in such-and-such time </i>was not in the air, then certainly any notion of P could not have been.&nbsp;</p><p>Hence I was surprised when I accidentally (more on that later) came across the following:&nbsp;</p><p>In 1910 (really, 1910)&nbsp; H.C.Pocklington analyzed two algorithms for solving quadratic congruences and noticed that&nbsp;</p><p><i>one took time proportional to a power of the log of the modulus, where as</i></p><p><i>the other took time proportional to the modulus itself or its square root.&nbsp;</i></p><p>THAT is the distinction between P and NOT-P.&nbsp;</p><p>The paper is titled <i>The determination of the exponent to which a number belongs, the practical solution of</i> <i>certain congruences, and the law of quadratic reciprocity. </i>It appeared in 1910, in the Proceedings of the Cambridge Philosophical&nbsp; Society, Volume 16, pages 1-5. (I could not find it online. If you know of a place online for it, leave a comment.)&nbsp;</p><p>How did I come across this? And why had I NOT come across this in my roughly 40 years working in complexity theory?&nbsp;</p><p>I came across it while reading a blog of Scotts, <i>The Kolmogorov Option, </i>see&nbsp;<a href="https://scottaaronson.blog/?p=3376">here</a>&nbsp;where Pocklington is mentioned in passing. I am surprised how arbitrary the set of things ones knows can be. I have put the Pocklington story in the Demaine-Gasarch-Hajiaghayi book&nbsp;<a href="https://hardness.mit.edu/">Computational Intractability: A Guide to Algorithmic Lower Bounds</a>&nbsp;so that this knowledge gets to be better known.</p><p><br /></p><p><br /></p><p><br /></p><p class="authors">By gasarch</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-11-15T04:18:00Z">Tuesday, November 15 2022, 04:18</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3485,73 +3516,6 @@ $O(d\log\Delta)$ affects only the space requirement
 $\mathrm{poly}(\epsilon^{-1} d\log\Delta)$, and not the approximation ratio
 $1+\epsilon$. These results are in line with the growing interest and recent
 results on streaming (and other) algorithms for high dimension.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-11-11T01:30:00Z">Friday, November 11 2022, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2211.05307'>Winner Determination Algorithms for Graph Games with Matching Structures</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Tesshu Hanaka, Hironori Kiya, Hirotaka Ono, Kanae Yoshiwatari</p><p>Cram, Domineering, and Arc Kayles are well-studied combinatorial games. They
-are interpreted as edge-selecting-type games on graphs, and the selected edges
-during a game form a matching. In this paper, we define a generalized game
-called Colored Arc Kayles, which includes these games. Colored Arc Kayles is
-played on a graph whose edges are colored in black, white, or gray, and black
-(resp., white) edges can be selected only by the black (resp., white) player,
-although gray edges can be selected by both black and white players. We first
-observe that the winner determination for Colored Arc Kayles can be done in
-$O^*(2^n)$ time by a simple algorithm, where $n$ is the order of a graph. We
-then focus on the vertex cover number, which is linearly related to the number
-of turns, and show that Colored Arc Kayles, BW-Arc Kayles, and Arc Kayles are
-solved in time $O^*(1.4143^{\tau^2+3.17\tau})$, $O^*(1.3161^{\tau^2+4{\tau}})$,
-and $O^*(1.1893^{\tau^2+6.34{\tau}})$, respectively, where $\tau$ is the vertex
-cover number. Furthermore, we present an $O^*((n/\nu+1)^{\nu})$-time algorithm
-for Arc Kayles, where $\nu$ is neighborhood diversity. We finally show that Arc
-Kayles on trees can be solved in $O^* (2^{n/2})(=O(1.4143^n))$ time, which
-improves $O^*(3^{n/3})(=O(1.4423^n))$ by a direct adjustment of the analysis of
-Bodlaender et al.'s $O^*(3^{n/3})$-time algorithm for Node Kayles.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Hanaka_T/0/1/0/all/0/1">Tesshu Hanaka</a>, <a href="http://arxiv.org/find/cs/1/au:+Kiya_H/0/1/0/all/0/1">Hironori Kiya</a>, <a href="http://arxiv.org/find/cs/1/au:+Ono_H/0/1/0/all/0/1">Hirotaka Ono</a>, <a href="http://arxiv.org/find/cs/1/au:+Yoshiwatari_K/0/1/0/all/0/1">Kanae Yoshiwatari</a></p><p>Cram, Domineering, and Arc Kayles are well-studied combinatorial games. They
-are interpreted as edge-selecting-type games on graphs, and the selected edges
-during a game form a matching. In this paper, we define a generalized game
-called Colored Arc Kayles, which includes these games. Colored Arc Kayles is
-played on a graph whose edges are colored in black, white, or gray, and black
-(resp., white) edges can be selected only by the black (resp., white) player,
-although gray edges can be selected by both black and white players. We first
-observe that the winner determination for Colored Arc Kayles can be done in
-$O^*(2^n)$ time by a simple algorithm, where $n$ is the order of a graph. We
-then focus on the vertex cover number, which is linearly related to the number
-of turns, and show that Colored Arc Kayles, BW-Arc Kayles, and Arc Kayles are
-solved in time $O^*(1.4143^{\tau^2+3.17\tau})$, $O^*(1.3161^{\tau^2+4{\tau}})$,
-and $O^*(1.1893^{\tau^2+6.34{\tau}})$, respectively, where $\tau$ is the vertex
-cover number. Furthermore, we present an $O^*((n/\nu+1)^{\nu})$-time algorithm
-for Arc Kayles, where $\nu$ is neighborhood diversity. We finally show that Arc
-Kayles on trees can be solved in $O^* (2^{n/2})(=O(1.4143^n))$ time, which
-improves $O^*(3^{n/3})(=O(1.4423^n))$ by a direct adjustment of the analysis of
-Bodlaender et al.'s $O^*(3^{n/3})$-time algorithm for Node Kayles.
 </p>
         
         </div>
