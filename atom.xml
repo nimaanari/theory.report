@@ -10,6 +10,62 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-156 |  Parameterized Inapproximability of the Minimum Distance Problem over all Fields and the Shortest Vector Problem in all $\ell_p$ Norms | 
+
+	Huck Bennett, 
+
+	Mahdi Cheraghchi, 
+
+	Venkatesan Guruswami, 
+
+	Joao Ribeiro</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/156"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/156</id>
+    <updated>2022-11-15T19:01:27+00:00</updated>
+    <content type="html" xml:lang="en">
+    We prove that the Minimum Distance Problem (MDP) on linear codes over any fixed finite field and parameterized by the input distance bound is W[1]-hard to approximate within any constant factor. We also prove analogous results for the parameterized Shortest Vector Problem (SVP) on integer lattices. Specifically, we prove that SVP in the $\ell_p$ norm is W[1]-hard to approximate within any constant factor for any fixed $p &amp;gt;1$ and W[1]-hard to approximate within a factor approaching $2$ for $p=1$.(We show hardness under randomized reductions in each case.)
+
+These results answer the main questions left open (and explicitly posed) by Bhattacharyya, Bonnet, Egri, Ghoshal, Karthik C. S., Lin, Manurangsi, and Marx (Journal of the ACM, 2021) on the complexity of parameterized MDP and SVP. For MDP, they established similar hardness for binary linear codes and left the case of general fields open. For SVP in $\ell_p$ norms with $p &amp;gt; 1$, they showed inapproximability within some constant factor (depending on $p$) and left open showing such hardness for arbitrary constant factors. They also left open showing W[1]-hardness even of exact SVP in the $\ell_1$ norm.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-155 |  Testing of Index-Invariant Properties in the Huge Object Model | 
+
+	Sayantan Sen, 
+
+	Sourav Chakraborty, 
+
+	Eldar Fischer, 
+
+	Arijit Ghosh, 
+
+	Gopinath Mishra</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/155"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/155</id>
+    <updated>2022-11-15T18:43:10+00:00</updated>
+    <content type="html" xml:lang="en">
+    The study of distribution testing has become ubiquitous in the area of property testing, both for its theoretical appeal, as well as for its applications in other fields of Computer Science, and in various real-life statistical tasks.
+
+The original distribution testing model relies on samples drawn independently from the distribution to be tested. However, when testing distributions over the $n$-dimensional Hamming cube $\left\{0,1\right\}^{n}$ for a large $n$, even reading a few samples is infeasible. To address this, Goldreich and Ron [ITCS 2022] have defined a model called the huge object model, in which the samples may only be queried in a few places.
+
+In this work, we initiate a study of a general class of properties in the huge object model, those that are invariant under a permutation of the indices of the vectors in $\left\{0,1\right\}^{n}$, while still not being necessarily fully symmetric as per the definition used in traditional distribution testing.
+
+We  prove that every index-invariant property satisfying a bounded VC-dimension restriction admits a property tester with a number of queries independent of $n$. To complement this result, we argue that satisfying only index-invariance or only a VC-dimension bound is insufficient to guarantee a tester whose query complexity is independent of $n$. Moreover, we prove that the dependency of sample and query complexities of our tester on the VC-dimension is essentially tight. As a second part of this work, we address the question of the number of queries required for non-adaptive testing. We show that it can be at most quadratic in the number of queries required for an adaptive tester in the case of index-invariant properties. This is in contrast with the tight (easily provable) exponential gap between adaptive and non-adaptive testers for general non-index-invariant properties. Finally, we provide an index-invariant property for which the quadratic gap between adaptive and non-adaptive query complexities for testing is almost tight.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: Post-doc at University of Cambridge (apply by December 19, 2022)</title>
     <link href="https://cstheory-jobs.org/2022/11/15/post-doc-at-university-of-cambridge-apply-by-december-19-2022/"/>
     <id>http://cstheory-jobs.org/2022/11/15/post-doc-at-university-of-cambridge-apply-by-december-19-2022/</id>
@@ -1542,95 +1598,6 @@ also prove an $\Omega(r / \mathrm{polylog}(n))$ lower bound for the space
 needed by a streaming algorithm with $&amp;lt; 1/2^{\mathrm{polylog}(n)}$ error
 against &quot;white-box&quot; adversaries that can see the internal state of the
 algorithm, but not predict its future random decisions.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fully-dynamic-to-incremental reductions with known deletion order (e.g. sliding window)</title>
-    <link href="http://arxiv.org/abs/2211.05178"/>
-    <id>http://arxiv.org/abs/2211.05178</id>
-    <updated>2022-11-11T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Peng_B/0/1/0/all/0/1&quot;&gt;Binghui Peng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rubinstein_A/0/1/0/all/0/1&quot;&gt;Aviad Rubinstein&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Dynamic algorithms come in three main flavors: $\mathit{incremental}$
-(insertions-only), $\mathit{decremental}$ (deletions-only), or $\mathit{fully}$
-$\mathit{dynamic}$ (both insertions and deletions). Fully dynamic is the holy
-grail of dynamic algorithm design; it is obviously more general than the other
-two, but is it strictly harder? Several works managed to reduce fully dynamic
-to the incremental or decremental models by taking advantage of either specific
-structure of the incremental/decremental algorithms (e.g. [HK99, HLT01, BKS12,
-ADKKP16]), or specific order of insertions/deletions (e.g.
-[AW14,HKNS15,KPP16]). Our goal in this work is to get a black-box
-fully-to-incremental reduction that is as general as possible. We find that the
-following conditions are necessary:
-&lt;/p&gt;
-&lt;p&gt;$\bullet$ The incremental algorithm must have a worst-case (rather than
-amortized) running time guarantee.
-&lt;/p&gt;
-&lt;p&gt;$\bullet$ The reduction must work in what we call the
-$\mathit{deletions}$-$\mathit{look}$-$\mathit{ahead}$ $\mathit{model}$, where
-the order of deletions among current elements is known in advance. A notable
-practical example is the &quot;sliding window&quot; (FIFO) order of updates.
-&lt;/p&gt;
-&lt;p&gt;Under those conditions, we design:
-&lt;/p&gt;
-&lt;p&gt;$\bullet$ A simple, practical, amortized-fully-dynamic to
-worst-case-incremental reduction with a $\log(T)$-factor overhead on the
-running time, where $T$ is the total number of updates.
-&lt;/p&gt;
-&lt;p&gt;$\bullet$ A theoretical worst-case-fully-dynamic to worst-case-incremental
-reduction with a $\mathsf{polylog}(T)$-factor overhead on the running time.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Smaller Low-Depth Circuits for Kronecker Powers</title>
-    <link href="http://arxiv.org/abs/2211.05217"/>
-    <id>http://arxiv.org/abs/2211.05217</id>
-    <updated>2022-11-11T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alman_J/0/1/0/all/0/1&quot;&gt;Josh Alman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Guan_Y/0/1/0/all/0/1&quot;&gt;Yunfeng Guan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Padaki_A/0/1/0/all/0/1&quot;&gt;Ashwin Padaki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give new, smaller constructions of constant-depth linear circuits for
-computing any matrix which is the Kronecker power of a fixed matrix. A standard
-argument (e.g., the mixed product property of Kronecker products, or a
-generalization of the Fast Walsh-Hadamard transform) shows that any such $N
-\times N$ matrix has a depth-2 circuit of size $O(N^{1.5})$. We improve on this
-for all such matrices, and especially for some such matrices of particular
-interest:
-&lt;/p&gt;
-&lt;p&gt;- For any integer $q &amp;gt; 1$ and any matrix which is the Kronecker power of a
-fixed $q \times q$ matrix, we construct a depth-2 circuit of size $O(N^{1.5 -
-a_q})$, where $a_q &amp;gt; 0$ is a positive constant depending only on $q$. No bound
-beating size $O(N^{1.5})$ was previously known for any $q&amp;gt;2$.
-&lt;/p&gt;
-&lt;p&gt;- For the case $q=2$, i.e., for any matrix which is the Kronecker power of a
-fixed $2 \times 2$ matrix, we construct a depth-2 circuit of size
-$O(N^{1.446})$, improving the prior best size $O(N^{1.493})$ [Alman, 2021].
-&lt;/p&gt;
-&lt;p&gt;- For the Walsh-Hadamard transform, we construct a depth-2 circuit of size
-$O(N^{1.443})$, improving the prior best size $O(N^{1.476})$ [Alman, 2021].
-&lt;/p&gt;
-&lt;p&gt;- For the disjointness matrix (the communication matrix of set disjointness,
-or equivalently, the matrix for the linear transform that evaluates a
-multilinear polynomial on all $0/1$ inputs), we construct a depth-2 circuit of
-size $O(N^{1.258})$, improving the prior best size $O(N^{1.272})$ [Jukna and
-Sergeev, 2013].
-&lt;/p&gt;
-&lt;p&gt;Our constructions also generalize to improving the standard construction for
-any depth $\leq O(\log N)$. Our main technical tool is an improved way to
-convert a nontrivial circuit for any matrix into a circuit for its Kronecker
-powers. Our new bounds provably could not be achieved using the approaches of
-prior work.
 &lt;/p&gt;
   </content>
     <author>
