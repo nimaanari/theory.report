@@ -9,6 +9,429 @@
 
 
 <item>
+  <title>Sums-of-squares for dummies: a view from the Fourier domain</title>
+  <guid>https://francisbach.com/?p=7507</guid>
+  <link>https://francisbach.com/sums-of-squares-for-dummies/</link>
+  <description>
+    &lt;p class=&quot;justify-text&quot;&gt;In these last two years, I have been studying intensively sum-of-squares relaxations for optimization, learning a lot from many great research papers [&lt;a href=&quot;https://epubs.siam.org/doi/pdf/10.1137/S1052623400366802&quot;&gt;1&lt;/a&gt;, &lt;a href=&quot;http://www.mit.edu/~parrilo/pubs/files/SDPrelaxations.pdf&quot;&gt;2&lt;/a&gt;], review papers [&lt;a href=&quot;https://homepages.cwi.nl/~monique/files/laurent-ima.pdf&quot;&gt;3&lt;/a&gt;], books [4, 5, 6, 7, 8], and even &lt;a href=&quot;https://www.sumofsquares.org/&quot;&gt;websites&lt;/a&gt;. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Much of the literature focuses on polynomials as the de facto starting point. While this leads to deep connections between many fields within mathematics, and many applications in various areas (optimal control, data science, etc.), the need for arguably non-natural hierarchies (at least for beginners) sometimes makes the exposition hard to follow at first, and notations a tiny bit cumbersome.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;I think that one reason is the aim for generality of the approaches. If you want to minimize potentially arbitrary continuous functions on a set defined by arbitrary equality or inequality constraints, there is not much choice if you want a unique generic mathematical framework that can approximate all of these problems. But if you are willing to optimize an arbitrary continuous function only on a &amp;#8220;simple&amp;#8221; set, then things considerably simplify: most results have explicit reasonably simple proofs, and you can even prove the exponential convergence of the SOS hierarchy! The main goal of this post is to present such old and recent results.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;One other aim is to highlight the classical dual view of optimization problems through the characterization of probability measures by their moments, which has many applications beyond optimization.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;By simple sets, I mean the interval \([0,\! 1]\) as a toy example, but by taking tensor products, this extends to the hypercube \([0,\! 1]^n\), and with a bit more work, you can add the Boolean hypercube \(\{-1,1\}^n\) and Euclidean spheres (see below). The key property that we will need is the availability of a nice orthonormal basis of square integrable functions.&lt;/p&gt;
+
+
+
+&lt;h2&gt;Minimization of quadratic forms&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In order to cover all cases, I will consider a generic minimization problem, $$\min_{x \in \mathcal{X}} \ f(x),$$ where \(\mathcal{X}\) is a compact set, e.g., \([0,\! 1]^n\) or \(\{-1,+1\}^n\) (I will use \([0,\! 1]\) as a running example). I will also first assume that the function \(f: \mathcal{X} \to \mathbb{R}\) can be represented as a quadratic form in some complex vector-valued feature \(\varphi: \mathcal{X} \to \mathbb{C}^d\), that is, there exists a Hermitian matrix \(F \in \mathbb{C}^{d \times d}\) (i.e., such that \(F^\ast = F\), where \(F^\ast\) is the &amp;#8220;&lt;a href=&quot;https://en.wikipedia.org/wiki/Conjugate_transpose&quot;&gt;conjugate-transpose&lt;/a&gt;&amp;#8221; of the matrix \(F\)), such that $$\forall x \in \mathcal{X}, \ f(x) = \varphi(x)^\ast F \varphi(x) = \sum_{j,k=1}^d \varphi_j(x) \varphi_k(x)^\ast F_{jk}.$$ I will also assume that features are normalized, that is, \(\| \varphi(x)\| = 1\) for all \(x \in \mathcal{X}\). Thus, the constant function equal to one is represented by the identity matrix.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;For our running example, with \(\mathcal{X} = [0,\! 1]\), we can consider the Fourier basis $$\varphi_\omega(x) = \frac{1}{\sqrt{2r+1}} e^{2i\pi \omega x}, \ \ \omega \in \{-r,-r+1,\dots,r-1,r\}, $$ and then the assumption on \(f\) is that it is a real-valued linear combination of complex exponentials \(x \mapsto e^{2i\pi \omega x}\), for \(\omega \in \{-2r,-2r+1,\dots,2r-1,2r\}\), and thus a trigonometric polynomial of degree \(2r\) (that is a real bivariate polynomial of degree \(2r\) in \(\cos(2\pi x)\) and \(\sin(2\pi x)\)). &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We see immediately in this example, that the representation of \(f\) through \(F\) is not unique. This is due to the fact that in the real vector space of Hermitian matrices of dimension \(d\), the rank-one matrices \( \varphi(x) \varphi(x)^\ast\) may only occupy a specific linear subspace, which we denote \(\mathcal{V}\). For the specific case of univariate trigonometric polynomials, we have $$(\varphi(x) \varphi(x)^\ast)_{\omega\omega&amp;#8217;} =  \frac{1}{{2r+1}} e^{2i\pi (\omega\, -\, \omega&amp;#8217;) x},$$ so that the set \(\mathcal{V}\) is exactly the set of Hermitian &lt;a href=&quot;https://en.wikipedia.org/wiki/Toeplitz_matrix&quot;&gt;Toeplitz matrices&lt;/a&gt; (which are constant along all diagonals), and thus a strict subset of all Hermitian matrices.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We will often use the trace trick to represent a quadratic form as a linear form in \(\varphi(x) \varphi(x)^\ast\), that is, $$ \varphi(x)^\ast F \varphi(x)  = {\rm tr} \big[ F \varphi(x) \varphi(x)^\ast \big].$$  The set of matrices \(F\) that represent the function \(f\) exactly is an affine subspace orthogonal to \(\mathcal{V}\), that is, of the form \(F + \mathcal{V}^\perp\), where \(\mathcal{V}^\perp\) is the orthogonal of \(\mathcal{V}\) in the set of Hermitian matrices equipped with the dot-product \((M,N) \mapsto {\rm tr}(MN)\). For our running example, \(\mathcal{V}\) has dimension \(4r+1\), and hence its orthogonal has dimension \((2r+1)^2-4r-1 = 4r^2\).&lt;/p&gt;
+
+
+
+&lt;h2&gt;Two dual convex views&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The minimization of \(f\) has two dual convex optimization formulations, which are both natural, and which both provide insights into the problems.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Maximizing lower bounds. &lt;/strong&gt;The first view is simply maximizing a lower bound on \(f\), that is, $$\min_{x \in \mathcal{X}} f(x) = \max_{c \in \mathbb{R}} \ c \ \mbox{ such that }\  \forall x \in \mathcal{X}, f(x)\, &amp;#8211; c \geqslant 0.$$ The optimal \(c\) is then \(\min_{x \in \mathcal{X}} f(x)\). See an illustration below.&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large is-resized&quot;&gt;&lt;img src=&quot;https://francisbach.com/wp-content/uploads/2022/09/f_above_c-1024x670.png&quot; alt=&quot;&quot; class=&quot;wp-image-8246&quot; width=&quot;309&quot; height=&quot;202&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/09/f_above_c-1024x670.png 1024w, https://francisbach.com/wp-content/uploads/2022/09/f_above_c-300x196.png 300w, https://francisbach.com/wp-content/uploads/2022/09/f_above_c-768x503.png 768w, https://francisbach.com/wp-content/uploads/2022/09/f_above_c-1536x1006.png 1536w, https://francisbach.com/wp-content/uploads/2022/09/f_above_c-350x230.png 350w, https://francisbach.com/wp-content/uploads/2022/09/f_above_c-850x557.png 850w, https://francisbach.com/wp-content/uploads/2022/09/f_above_c.png 2007w&quot; sizes=&quot;(max-width: 309px) 100vw, 309px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;As mentioned in an &lt;a href=&quot;https://francisbach.com/finding-global-minima-with-kernel-approximations/&quot;&gt;earlier post&lt;/a&gt;, all optimization problems are thus convex! The hard computational task here is to represent efficiently non-negative functions to handle the (convex) constraint that \(f &amp;#8211; c\) is non-negative.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Mininimizing expectations. &lt;/strong&gt;The second view is looking for a probability measure \(\mu\) on \(\mathcal{X}\) with minimal expectation \(\int_\mathcal{X} \! f(x) d\mu(x)\). Denoting \(\mathcal{P}(\mathcal{X})\) the set of probability distributions on \(\mathcal{X}\), we have: $$\min_{x \in \mathcal{X}} f(x)  = \min_{ \mu \in \mathcal{P}(\mathcal{X})}  \int_\mathcal{X} f(x) d\mu(x),$$ and the minimizer is any probability measure supported on the minimizers of \(f\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;When \(f\) can be represented by a quadratic form, then the objective function becomes \(\displaystyle {\rm tr} \Big[ F\! \int_\mathcal{X} \varphi(x)\varphi(x)^\ast d\mu(x) \Big]\), which is linear in the moment matrix $$\Sigma = \int_\mathcal{X} \varphi(x)\varphi(x)^\ast d\mu(x).$$ The hard computational task is to represent efficiently the set of allowed moment matrices, which happens to be the closure of the convex hull \(\mathcal{K}\) of all \( \varphi(x) \varphi(x)^\ast\), \(x \in \mathcal{X}\) (remember that \(\mathcal{V}\) defined above is its linear span and thus contains \(\mathcal{K}\)). See an illustration below.&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image justify-text&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/09/KV-2-1024x279.png&quot; alt=&quot;&quot; class=&quot;wp-image-8257&quot; width=&quot;588&quot; height=&quot;160&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/09/KV-2-1024x279.png 1024w, https://francisbach.com/wp-content/uploads/2022/09/KV-2-300x82.png 300w, https://francisbach.com/wp-content/uploads/2022/09/KV-2-768x209.png 768w, https://francisbach.com/wp-content/uploads/2022/09/KV-2-850x232.png 850w, https://francisbach.com/wp-content/uploads/2022/09/KV-2.png 1534w&quot; sizes=&quot;(max-width: 588px) 100vw, 588px&quot; /&gt;&lt;figcaption&gt;Convex hull \(\mathcal{K}\) and span \(\mathcal{V}\) of all \(\varphi(x) \varphi(x)^\ast\), \(x \in \mathcal{X}\), when \(\mathcal{X} = \{x_1,\dots,x_5\}\) has 5 elements.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A key computational task will be to find outer approximations of \(\mathcal{K}\) based in particular on the knowledge of \(\mathcal{V}\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Equivalence by convex duality.&lt;/strong&gt; The two views are equivalent as one can see \(\mu\) as the Lagrange multiplier for the constraint \(\forall x \in \mathcal{X}, f(x)\, &amp;#8211; c \geqslant 0\), which has to be a finite positive measure [10]. The Lagrangian is $$\mathcal{L}(c,\mu) = c + \int_\mathcal{X} ( f(x) \, &amp;#8211; c) d\mu(x),$$ and minimizing with respect to the primal variable \(c\) leads to the constraint \(\int_\mathcal{X} d\mu(x) = 1\), that is, \(\mu\) is a probability distribution. Note that the traditional complementary slackness condition imposes that the optimal measure \(\mu\) puts mass only on minimizers of \(f\).&lt;/p&gt;
+
+
+
+&lt;h2&gt;Convex relaxation: the sum-of-squares (SOS) view&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;A natural idea to characterize non-negative functions represented as quadratic forms is to consider positive-semidefinite (PSD) Hermitian matrices, that is, Hermitian matrices with non-negative eigenvalues. Indeed, if \(g(x) = \varphi(x)^\ast G \varphi(x)\) with \(G \succcurlyeq 0\) (which is another notation for \(G\) PSD), then \(g(x) \geqslant 0\) for all \(x \in \mathcal{X}\). This leads to the relaxation: $$\tag{1} \max_{c \in \mathbb{R}, \ A \in \mathbb{C}^{d \times d}} \ c \  \mbox{ such that } \  \forall x \in \mathcal{X}, \ f(x) = c + \varphi(x)^\ast A \varphi(x), \ A \succcurlyeq 0,$$ which is always lower than the minimal value of \(f\) since we replace non-negativity of \(f-c\) by a stronger sufficient condition.  This is called an SOS relaxation because when \(G \succcurlyeq 0\), we can write \(g(x) = \varphi(x)^\ast G \varphi(x)\) as the sum of the squares of the functions \(x \mapsto \lambda_i^{1/2} u_i^\ast \varphi(x)\), where \(\lambda_i\) is the \(i\)-th (non-negative real) eigenvalue of \(G\), and \(u_i \in \mathbb{C}^d\) the corresponding eigenvector.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We can write the equality constraint compactly as (using that features have unit norm): $$ \forall x \in \mathcal{X}, \ \varphi(x)^\ast [ F &amp;#8211; c I &amp;#8211; A ] \varphi(x) = 0 \ \ \Leftrightarrow \ \ F &amp;#8211; c I &amp;#8211; A \in \mathcal{V}^\perp.$$ Using a variable \(-Y\) for an element of \(\mathcal{V}^\perp\) and eliminating \(A\), we get a constraint \(F   + Y \succcurlyeq cI \), leading to \(c\) being the lowest eigenvalue of \(F +Y\) at optimum. This leads to a particularly simple formula for the relaxation: $$\tag{2} \max_{Y \in \mathcal{V}^\perp} \  \lambda_{\min} ( F + Y ).$$&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The relaxation is tight for all \(F\), if and only if all non-negative functions represented as quadratic forms are SOS. This is not the case in general, and the relaxation is thus not tight in general, except in a few cases like uni-dimensional trigonometric polynomials.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;It is tempting to set \(Y = 0\), and consider \(\lambda_{\min}(F)\), which is directly a lower-bound on the minimal value of \(f\), because, since features have been assumed to have unit norm, $$\lambda_{\min}(F) \ =\  \min_{ \| z\|=1} z^\ast F z\  \leqslant\  \min_{x \in \mathcal{X}} \ \varphi(x)^\ast F \varphi(x).$$ This is the classical spectral relaxation, which is much simpler than the SOS relaxation and can already lead to interesting behaviors. Note that we can see problem \((2)\) as the spectral relaxation optimized over all matrices \(F + Y\) that define the same quadratic form in \(\varphi(x)\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Before looking at the performance of such relaxations, let&amp;#8217;s first look at the dual view.&lt;/p&gt;
+
+
+
+&lt;h2&gt;Convex relaxation: the moment view&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Given that the objective function is linear in \( \varphi(x) \varphi(x)^\ast\), a traditional approach is to find outer approximations of the convex set \(\mathcal{K}\). The least we can expect from an outer approximation is that the affine hull is preserved, that is, we want to make sure that a matrix \(\Sigma\) in our approximation satisfies \(\Sigma \in \mathcal{V}\) (that is, Toeplitz for the trigonometric polynomial case), and \({\rm tr }(\Sigma) = 1\) (coming from \({\rm tr}(\varphi(x)\varphi(x)^\ast) = \| \varphi(x)\|^2 = 1\)).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Another natural property of the matrices \( \varphi(x) \varphi(x)^\ast\) is that they are positive semi-definite (PSD). The moment relaxation will exactly be the combination of these two properties (affine hull + PSD), leading to the outer approximation $$\widehat{\mathcal{K}} = \big\{ \Sigma \in \mathcal{V}, \ {\rm tr}(\Sigma)=1, \ \Sigma \succcurlyeq 0 \big\},$$ and to the relaxation $$\tag{3} \min_{ \Sigma \in \mathbb{C}^{d \times d}} \ {\rm tr} [ F \Sigma ] \ \mbox{ such that } \ \Sigma \succcurlyeq 0, \ {\rm tr}( \Sigma) = 1, \ \Sigma \in \mathcal{V}.$$&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Removing the constraint that \(\Sigma \in \mathcal{V}\), we obtain again the (weaker) spectral relaxation.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Note that the outer approximation of \(\mathcal{K}\) by \(\widehat{\mathcal{K}}\) has many applications beyond optimization (see, e.g., [4, 7]). We get a tight relaxation for all \(F\), if and only if \(\mathcal{K}=  \widehat{\mathcal{K}}\), which happens only in a few cases.&lt;/p&gt;
+
+
+
+&lt;h2&gt;Equivalence by convex duality&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;By introducing the same Lagrange multiplier \(\mu\) which is now a &lt;em&gt;signed&lt;/em&gt; measure (since we have an equality constraint), we obtain the Lagrangian $$\mathcal{L}(c,A, \mu) = c + \int_\mathcal{X} \big( f(x) \, &amp;#8211; c \, &amp;#8211; \,  \varphi(x)^\ast A \varphi(x)\big) d\mu(x),$$ and minimizing with respect to \(c\) leads to the constraint \(\int_\mathcal{X} d\mu(x) = 1\), while optimizing with respect to \(A\) leads to the constraint \(  \int_\mathcal{X} \varphi(x)\varphi(x)^\ast d\mu(x) \succcurlyeq 0\), and we exactly get the moment relaxation by setting \(\Sigma = \int_\mathcal{X} \varphi(x)\varphi(x)^\ast d\mu(x)\). Another way of seeing it is that the two semidefinite programs \((2)\) and \((3)\) are dual to each other.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The two views are thus equivalent, and tightness of one is equivalent to the tightness of the other. We will see below that for our running example of univariate trigonometric polynomials, the relaxation is tight, before looking at the multivariate case, where the relaxation is not tight, but can be made as tight as desired. We will then allow infinite-dimensional feature maps by allowing infinitely many frequencies.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Let&amp;#8217;s first mention a few &amp;#8220;practicalities&amp;#8221;: solving either \((2)\) or \((3)\) with efficient algorithms, and obtaining a candidate minimizer from a moment matrix \(\Sigma\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Convex optimization algorithms.&lt;/strong&gt; Standard interior point methods for semi-definite programming problems can be used for either \((2)\) or \((3)\). This will become slow when the dimension \(d\) of the feature map \(\varphi(x)\) gets large, as each iteration will be of complexity \(O(d^3)\). Moreover, encoding the vector space \(\mathcal{V}\) can be rather painful when \(\mathcal{X}\) has many dimensions. For efficient descriptions of \(\mathcal{V}\) based on sampling, see the kernel section below. For efficient algorithms based on smoothing the minimal eigenvalue, see the bottom of the post.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Recovering a minimizer. &lt;/strong&gt;This is often referred to as &amp;#8220;extraction&amp;#8221; in the SOS literature [&lt;a href=&quot;https://homepages.laas.fr/henrion/papers/extract.pdf&quot;&gt;29&lt;/a&gt;], and a variety of techniques exist. Note also that randomized techniques which are classical in combinatorial optimization can also be considered [&lt;a href=&quot;https://dl.acm.org/doi/pdf/10.1145/227683.227684&quot;&gt;30&lt;/a&gt;].&lt;/p&gt;
+
+
+
+&lt;h2&gt;Univariate trigonometric polynomials&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We first start with the SOS view, by showing that all non-negative trigonometric polynomials are sums-of-squares, and here a single square.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Fejér-Riesz theorem&lt;/strong&gt; [11, 12] (if you can read German). We consider a trigonometric polynomial of degree \(r\), that is, \(g(x) = \sum_{\omega = -r}^r c_\omega e^{2i\pi \omega x}\) with real non-negative values. This imposes that \(c_{-\omega} = c_\omega^\ast\). Then it is non-negative if and only if it can be written as the square modulus of a complex-valued trigonometric polynomial. The elementary proof based on roots of polynomials is shown at the end of the post.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We here get a single square, with an elementary proof. Note that this is a stronger result than being a sum of several squares. We can now look at the dual intepretation.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Positivity of Hermitian Toeplitz matrices.&lt;/strong&gt; As mentioned earlier, our approximation set \(\widehat{\mathcal{K}}\) for \(\mathcal{K}\) is the set of PSD Toeplitz matrices of unit trace. We have a tight relaxation if we can show that for any such matrix \(\Sigma\), there exists a probability measure \(\mu\) on \([0,\! 1]\) such that $$ \Sigma_{\omega\omega&amp;#8217;}= \int_{0}^1 e^{2 i \pi (\omega \, -\,  \omega&amp;#8217;)x} d\mu(x)$$ for all \(\omega,\omega&amp;#8217;\). This is a classical result in Toeplitz matrix theory, from [13] (if you read German), well summarized in [14].&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Comparison with spectral relaxation.&lt;/strong&gt; Assume we are given a trigonometric polynomial of degree \(2r\), that is, \(f(x) = \sum_{\omega = -2r}^{2r} c_\omega e^{2i\pi \omega x}\). As mentioned earlier, there are many ways of representing it as a quadratic form \(\varphi(x)^\ast F \varphi(x)\) with \(\varphi(x)_\omega = e^{2i\pi \omega x}/\sqrt{2r+1}\) for \(\omega \in \{-r,\dots,r\}\). This will not change the SOS relaxation but will make a difference for the spectral relaxation. One standard one is to choose \(F\) to be a Toeplitz matrix. Since \(F_{\omega\omega&amp;#8217;}\) should depend only on \(\omega-\omega&amp;#8217;\), by counting the number of elements in each diagonal, we must have $$\tag{4} F_{\omega \omega&amp;#8217;} = c_{\omega\, -\, \omega&amp;#8217;} \frac{2r+1}{2r+1-|\omega\, -\, \omega&amp;#8217;|}= c_{\omega\, -\, \omega&amp;#8217;} \frac{1}{1-|\omega\, -\, \omega&amp;#8217;|/(2r+1)}.$$&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The spectral relaxation amounts to compute the lowest eigenvalue of a Toeplitz matrix, which is a well studied problem [&lt;a href=&quot;https://ee.stanford.edu/~gray/toeplitz.pdf&quot;&gt;9&lt;/a&gt;], in particular when the dimension of the matrix grows. In our context, this corresponds to considering a feature \(\varphi\) of size \(s\) larger than \(r\) (like we will do for multivariate polynomials below), representing the function \(f\) in this basis through a Toeplitz matrix \(F\) of size \((2s+1)\times(2s+1)\) with the same formula as \((4)\), and seeing how the spectral relaxation tends to the optimal value when \(s\) goes to infinity.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We first consider the Toeplitz matrices with values \(c_{\omega-\omega&amp;#8217;}1_{|\omega-\omega&amp;#8217;|\leqslant 2r}\) for \(|\omega|, |\omega&amp;#8217;| \leqslant s\), which is, a band-diagonal Toeplitz matrix. it is shown in [31, Section 5.4] that the lowest eigenvalue of this Toeplitz matrix has the following asymptotic expansion \(f(x_\ast) +  \frac{f^{\prime\prime}(x_\ast)}{32 s^2}\) where \(x_\ast \in [0,\! 1]\) is the minimizer of \(f\) (assumed to be unique). We thus get an upper approximation of \(O(1/s^2)\). By taking into account the multiplicative factor \(\frac{1}{1-|\omega-\omega&amp;#8217;|/(2s+1)}\) from Eq. \((4)\), we get an overall factor of \(O(1/s)\), which is what we observe in practice (see simple experiment below).&lt;/p&gt;
+
+
+
+&lt;p&gt;The spectral relaxation is convergent, but much slower than the SOS relaxation (which is tight for \(r\geqslant s\)).&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image justify-text&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/10/SOS_1d_blog-1024x401.png&quot; alt=&quot;&quot; class=&quot;wp-image-8339&quot; width=&quot;633&quot; height=&quot;247&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/10/SOS_1d_blog-1024x401.png 1024w, https://francisbach.com/wp-content/uploads/2022/10/SOS_1d_blog-300x117.png 300w, https://francisbach.com/wp-content/uploads/2022/10/SOS_1d_blog-768x300.png 768w, https://francisbach.com/wp-content/uploads/2022/10/SOS_1d_blog-1536x601.png 1536w, https://francisbach.com/wp-content/uploads/2022/10/SOS_1d_blog-850x332.png 850w, https://francisbach.com/wp-content/uploads/2022/10/SOS_1d_blog.png 1846w&quot; sizes=&quot;(max-width: 633px) 100vw, 633px&quot; /&gt;&lt;figcaption&gt;Left: trigonometric polynomial \(f\) of degree 4. Right: performance of the spectral relaxation, which requires a large degree to be a close approximation (with observed rate \(1/s\)). Here the SOS relaxation for \(s = r\) is already tight.&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Consequences for regular polynomials on \([-1,1]\).&lt;/strong&gt; Non-negative polynomials \(P\) on \([-1,1]\) can also be characterized, by looking at the non-negativity of \(f(x) = P(\cos 2 \pi x)\) for \(x \in [0,\! 1]\), which is equivalent to the existence of a complex trigonometric polynomial whose square modulus is exactly \(f\). Playing around with &lt;a href=&quot;https://en.wikipedia.org/wiki/Chebyshev_polynomials&quot;&gt;Chebyshev polynomials of the two kinds&lt;/a&gt;, one can show that \(P(y)\) then has to a sum of terms of the form \(Q(y)^2 + (1-y^2) R(y)^2\), where \(Q\) and \(R\) are polynomials, which is the classical SOS characterization of non-negative polynomials in \([-1,1]\) [&lt;a href=&quot;https://www.ams.org/journals/tran/2000-352-10/S0002-9947-00-02595-2/S0002-9947-00-02595-2.pdf&quot;&gt;15&lt;/a&gt;]. See all details and the extension to higher dimensions in [&lt;a href=&quot;https://arxiv.org/pdf/2211.04889.pdf&quot;&gt;33&lt;/a&gt;].&lt;/p&gt;
+
+
+
+&lt;h2&gt;Extension to multivariate trigonometric polynomials&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We now consider multivariate trigonometric polynomials in dimension \(n\), on \([0,\! 1]^n\), which are polynomials in \(\cos 2\pi x_1, \sin 2\pi x_1, \dots, \cos 2\pi x_n, \sin 2 \pi x_n\). We first start with a counter-example to the equivalence between non-negativity and being a sum of squares.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Negative result (counter-example). &lt;/strong&gt;Non-negative polynomials may not be sums-of-squares, as shown by this counter example based on Motzkin&amp;#8217;s example [22]: $$M(1-\cos 2 \pi x_1,1-\cos 2\pi x_2, 1 &amp;#8211; \cos 2 \pi x_3)$$ $$\mbox{ with } M(y_1,y_2,y_3) = y_1^2 y_2  + y_1  y_2^2 + y_3^3 \, &amp;#8211; 3 y_1  y_2  y_3.$$ It is non-negative as (up to a factor of \(1/3\)) the difference between the arithmetic and geometric mean of \(y_1^2 y_2\), \(y_1  y_2^2\), and \(y_3^3\), and not a sum of squares.  Note that to check that \(f\) is not a sum-of-squares of polynomials &lt;em&gt;of a given degree&lt;/em&gt;, we can solve an SDP and look at the smallest \(c \geqslant 0\) such that \(f + c\) is a sum-of-squares, and check that the optimal \(c\) is strictly greater than zero (we here obtain \(c \approx 1.1 \times 10^{-4}\) for degree \(2\) polynomials). It is a bit more involved to show that there is no SOS polynomials of any degree (cancellation of terms are possible so the degree can be higher than the one of \(f\)), see [22].&lt;/p&gt;
+
+
+
+&lt;p&gt;So not all non-negative polynomials are sums-of-squares in dimension larger than 1. This is however not the end of the story, as we now describe.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Towards positive results. &lt;/strong&gt;We consider a trigonometric polynomial, that is, a function \(f(x) = P(e^{2i\pi x_1},\dots,e^{2i\pi x_n})\) where \(P\) is a function of the form $$P(z) = \sum_{ \omega \in \mathbb{Z}^d} c_\omega z^\omega, $$ where only a finite number of \(c_\omega\)&amp;#8217;s are not equal to zero (we use the notation \(z^\omega = \prod_{i=1}^n z_i^{\omega_i}\)). Like in the one-dimensional case, the function \(f\) is real-valued as soon as \(c_{-\omega} = c_\omega^\ast\) for all \(\omega \in \mathbb{Z}^n\). These are exactly multivariate (real-valued) trigonometric polynomials.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We now state a few results relating non-negativity and sums-of-squares, whose &amp;#8220;elementary&amp;#8221; proofs will either be sketched at the end of this post (below references) or available in [33].&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Strictly positive polynomials are sums-of-squares.&lt;/strong&gt; For any multivariate trigonometric polynomial \(f\) of the form above, if \(f\) is &lt;em&gt;strictly positive&lt;/em&gt; on \([0,\! 1]^n\), then there exists a finite family of trigonometric polynomials \((g_i)_{i \in I}\)  such that $$ \forall x \in [0,\! 1]^n, \ f(x) = \sum_{i \in I} |g_i(x)|^2.$$ This result dates back to [28], and has a reasonably simple proof based on Bochner&amp;#8217;s theorem (see at the bottom of the post the proof from [23]).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;There are two key deviations from the univariate case: &lt;/p&gt;
+
+
+
+&lt;ol class=&quot;justify-text&quot;&gt;&lt;li&gt;The degrees of the squares \(|g_i|^2\) can be larger than the degree of \(f\) and are not bounded a priori, thus, we need to try sums of squares of degrees larger than the degree of \(f\), thus creating a &lt;em&gt;hierarchy&lt;/em&gt; of optimization problems of higher dimensions, whose optimal value will converge to the minimum of \(f\).&lt;/li&gt;&lt;li&gt;Only &lt;em&gt;strictly positive&lt;/em&gt; polynomials can always be decomposed, implying we may not have finite convergence of the hierarchy in general.&lt;/li&gt;&lt;/ol&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;It implies that SOS hierarchies will always converge to the true value, without giving any idea of the convergence rate. The next result provides such a result (but still quite pessimistic), without any assumption.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Adding an arbitrarily small constant to a non-negative trigonometric polynomial makes it an SOS of known degree.&lt;/strong&gt; Given a multivariate trigonometric polynomial of degree less than \(2r\) with values in \([0,\! 1]\), \(f + c\) is a sum of squares of polynomials of degree less than \(s \geqslant r\) as soon as \(c \geqslant c^\ast(r,s)\) for some \(c^\ast(r,s)\). Moreover, when \(s \to +\infty\), we have recently shown in [33] that, asymptotically, \(c^\ast(r,s) \leqslant \frac{6 r^2 n}{s^2} \sum_{\omega \in \mathbb{Z}^n} | \hat{f}(\omega)|\). This immediately provides the convergence rate \(c^\ast(r,s)\) for the SOS relaxation of degree \(s\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;This results in an adaptation of&lt;span style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt; [20] to \([0,\! 1]^n\) rather than the hypersphere, which makes the proof significantly faster (see [&lt;a href=&quot;https://arxiv.org/pdf/2211.04889.pdf&quot;&gt;33&lt;/a&gt;] and the related results for regular polynomials on \([-1,1]^n\) in [&lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/s11590-022-01922-5.pdf&quot;&gt;34&lt;/a&gt;]). It provides a quantitative &lt;/span&gt;guarantee (&lt;span style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;even more explicit than for regular polynomials [26])&lt;/span&gt;: the approximation guarantee scales as \(s^{-2}\), with a feature dimension \(d = (2s+1)^n \sim s^n\), and thus with a feature of dimension \(d\), we get an error proportional to \(d^{-2/n}\), thus with a scaling in the underlying dimension \(n\) subject to the curse of dimensionality.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Comparison with spectral relaxation.&lt;/strong&gt; Using the same reasoning as in dimension \(n=1\), we get instead a convergence rate in \(O(1/s)\) for the spectral algorithm. So we get convergence, at rate which is only slightly worse. However, the behavior in \(O(1/s)\) is empirically observed in practice in all cases, while the rate in \(O(1/s^2)\) for the SOS relaxation is pessimistic, and the convergence rate is &lt;em&gt;much&lt;/em&gt; better in practice. Can we obtain tighter convergence rates?&lt;/p&gt;
+
+
+
+&lt;h2 class=&quot;justify-text&quot;&gt;Exponential convergence&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In order to show exponential convergence when the degree \(s\) goes to infinity, we need to add an extra assumption regarding the behavior of the function \(f\) around its minimizer. Essentially, all global minimizers are isolated and the Hessian is invertible. This is often referred to as &amp;#8220;strict-second-order minimizers&amp;#8221;, and such assumptions have already been used to show finite convergence of the hierarchy, although with no bound on the required degree [&lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/s10107-013-0680-x.pdf&quot;&gt;35&lt;/a&gt;].&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Leveraging our earlier work [21, 24], we recently showed in [&lt;a href=&quot;https://arxiv.org/pdf/2211.04889.pdf&quot;&gt;33&lt;/a&gt;] with Alessandro Rudi that the convergence rate was exponential when the minimum is attained at isolated points with invertible Hessians. The proof is a bit involved, but rely on a crucial point. We deviate from previous work on polynomial hierarchies by a strong focus on &lt;em&gt;smoothness properties&lt;/em&gt; of the optimization problems rather than its algebraic properties. More precisely, this allows us to use square roots and matrix square roots together with their differentiability properties (square roots typically lead to non-polynomial functions when taken on polynomials).&lt;/p&gt;
+
+
+
+&lt;h2&gt;Optimization beyond trigonometric polynomials&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;When \(f\) is not a trigonometric polynomial, there are essentially two options: (1) approximate with a trigonometric polynomial and minimize the approximation with the SOS hierarchy, or (2) target directly the minimization of the original function through sampling. The second option is described in the next section (and was already the topic of an &lt;a href=&quot;https://francisbach.com/finding-global-minima-with-kernel-approximations/&quot;&gt;earlier blog post&lt;/a&gt;). We now describe the first option.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt; Approximation by truncated Fourier series.&lt;/strong&gt; Depending on how the function is accessed, through function values or through values of its Fourier series, the approximation of a regular function \(f\) through a degree \(r\) polynomial is a well-studied problem. For simplicity, I only consider truncating the Fourier series obtained by keeping frequencies \(\omega\) such that \(\| \omega\|_\infty \leqslant r\). The error which is made depends on the regularity of the original function, that is, if \(f\) has all of its \((\beta + n)\)-th order derivatives that are bounded, then the truncation error is of order \(1/r^{\beta}\). Thus, to reach precision \(\varepsilon\), we need \(d \sim r^n \sim \varepsilon^{-n/\beta}\) basis functions. See an illustration below in two dimensions, where aim to approximate the function below.&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/11/bike-1.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8433&quot; width=&quot;447&quot; height=&quot;356&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The function is approximated by computing the Fourier series and keeping only frequencies \(\omega\) such that \(\| \omega \|_\infty \leqslant r\) for varying \(r\).&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/11/velo_continuous-1.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8434&quot; width=&quot;388&quot; height=&quot;375&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;
+
+
+
+&lt;h2&gt;Extension to function value oracle&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Now that the traditional &amp;#8220;décor&amp;#8221; of sum-of-squares optimization based on finite-dimensional expansions has been set, we can look at recent infinite-dimensional extensions based on positive definite kernels.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;From knowing \(\mathcal{V}\) to exact sampling.&lt;/strong&gt; In the formulation above,&amp;nbsp;instead of using an explicit representation of \(f(x)\) as \(\varphi(x)^\ast F \varphi(x)\), and determine precisely \(\mathcal{V}\), an alternative is to use sufficiently many distinct points \(x_1,\dots,x_m \in \mathcal{X}\), and use the constraint: $$ \forall i \in \{1,\dots,m\}, \ f(x_i) -c = \varphi(x_i)^\ast A \varphi(x_i). $$ If the matrices \(\varphi(x_i) \varphi(x_i)^\ast\), \(i \in \{1,\dots,m\}\), span \(\mathcal{V}\), this is equivalent to the original formulation [&lt;a href=&quot;https://epubs.siam.org/doi/pdf/10.1137/15M1052548&quot;&gt;25&lt;/a&gt;], and leads to formulations that are less cumbersome to code (multivariate Toeplitz matrices are an example). An extra advantage is to access \(f\) only through a function-value oracle (often called a zero-th order oracle). Note that we often need to take \(m\) larger than the dimension \(2d\) (the real dimension of \(\mathbb{C}^d\)), but always less than \(d^2\) (the real dimension of the set of Hermitian matrices).&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Undersampling and regularization.&lt;/strong&gt; A key insight from [&lt;a href=&quot;https://www.di.ens.fr/~fbach/gloptikernel.pdf&quot;&gt;21&lt;/a&gt;] is to consider situations where the number of samples \( m\) is not large enough, and add a regularizer \( -\lambda {\rm tr}(A)\), that is,&amp;nbsp;$$ \sup_{c \in \mathbb{R}, \ A \succcurlyeq 0} c\,  &amp;#8211; \lambda {\rm tr}(A) \&amp;nbsp; \mbox{ such that } \ \forall i \in \{1,\dots,m\}, \ f(x_i) -c = \varphi(x_i)^\ast A \varphi(x_i).$$ The dual is then: $$  \inf_{\alpha \in \mathbb{R}^m} \sum_{i=1}^m \alpha_i f(x_i) \mbox{ such that } \sum_{i=1}^m \alpha_i = 1, \ \sum_{i=1}^m \alpha_i \varphi(x_i)\varphi(x_i)^\ast + \lambda I \succcurlyeq 0. $$&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;When \( m\) is large enough and \( \lambda\) is sufficiently small, this leads to a controlled approximation. This is particularly interesting when \(\varphi(x)\) is infinite-dimensional and such that&amp;nbsp;the relaxation is tight, which we now look at.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Infinite-dimensional feature map.&lt;/strong&gt; In the trigonometric polynomial example, we can consider $$\varphi(x)_\omega = \hat{q}(\omega)^{1/2} e^{2i \pi \omega^\top x},$$ with an extra weight function \(\hat{q}: \mathbb{Z}^n \to \mathbb{R}_+\), such that \(\sum_{\omega \in \mathbb{Z}^n} \hat{q}(\omega) = 1\), so that \(\| \varphi(x)\| = 1\) (we essentially get a probability distribution on \(\mathbb{Z}^n\)). Finite-dimensional embeddings correspond to \(\hat{q}\) having finite support, but we can now to apply the SOS technique in infinite dimensions, since \(\hat{q}\) may have infinitely many non-zero values.  &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Tightness.&lt;/strong&gt; A key benefit of going infinite-dimensional is that the SOS relaxation is always tight as soon as \(\hat{q}(\omega) &amp;gt;0\) for all \(\omega \in \mathbb{Z}^d\). Indeed, the relaxation is the following optimization problem: $$\inf_{ \mu \ {\rm finite \ measure} } \int_{\mathcal{X}} f(x) d\mu(x) \ \mbox{ such that } \ \int_{\mathcal{X}} \varphi(x)\varphi(x)^\ast d\mu(x) \succcurlyeq 0, \ \int_\mathcal{X} d\mu(x) = 1.$$ Looking at all finite sub-matrices of \(\int_{\mathcal{X}} \varphi(x)\varphi(x)^\ast d\mu(x)\), we see that the function \(\omega \mapsto \int_{[0, 1]^n} e^{2i\pi \omega^\top x} d\mu(x)\) is positive definite, and thus by &lt;a href=&quot;https://en.wikipedia.org/wiki/Bochner%27s_theorem&quot;&gt;Bochner&amp;#8217;s theorem&lt;/a&gt;, \(\mu\) has to be a probability measure.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We can now combine with &amp;#8220;sampling + regularization&amp;#8221; technique mentioned above, and only query the function at a finite number of points. As shown in [21, 24], with a proper choice of \(\lambda\), then we get a convergence rate of \(O(1/m^{-\beta/n})\) when \(f\) is \((\beta + 2+ n/2)\)-times differentiable. When \(f\) is infinitely-differentiable (like for functions with finite support), we can get exponential convergence in \(m\), but with a constant in from of the exponential that can be exponential in dimension. See more details in an &lt;a href=&quot;https://francisbach.com/finding-global-minima-with-kernel-approximations/&quot;&gt;earlier blog post&lt;/a&gt; and in [33].&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;Representer theorem. &lt;/strong&gt;&lt;span style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;Another consequence is a &amp;#8220;representer theorem&amp;#8221;, that is, we can reduce the search to \(A = \sum_{i,j=1}^m C_{ij} \varphi(x_i)\varphi(x_j)^\ast\) with \( C \in  \mathbb{R}^{m \times m}\) positive-semidefinite. &lt;/span&gt;Like for traditional kernel methods, the representer theorem is particularly interesting when \(d\) is infinite like above.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;But this is already useful with finite-dimensional embeddings where the span \(\mathcal{V}\) is difficult to characterize. In this case, only the kernel has to be simple to compute; for example, for the usual finite support case, we have $$k(x,y) = \frac{1}{2r+1} \frac{ \sin (2r+1) \pi x }{\sin \pi x},$$ in one dimension (this extends to all dimensions). We can also get a closed form for \(\hat{q}(\omega) = \rho^{\|\omega\|_1}\).&lt;/p&gt;
+
+
+
+&lt;h2&gt;Extension to Boolean hypercube&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;When \(\mathcal{X} = \{-1,1\}^n \), we can use feature vectors composed of Boolean Fourier components of increasing orders [&lt;a href=&quot;https://arxiv.org/pdf/2105.10386.pdf&quot;&gt;16&lt;/a&gt;]. This corresponds to features of the form \(\varphi_A(x) = \prod_{i \in A} x_i \in \{-1,1\}\), where \(A\) is a subset of \(\{1,\dots,n\}\). They are all normalized.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;If we consider a set \( \mathcal{A}\) of subsets of \( \{1,\dots,n\}\), then, the element indexed \((A,B)\) of \(\varphi(x) \varphi(x)^\ast\) only depends on the symmetric difference \(A \Delta B = ( A \backslash B) \cup ( B \backslash A)\). The relaxation is not tight in general, but if we see our moment matrix as a submatrix obtained from a sufficiently larger set of subsets, then we obtain a tight formulation (here we know that the hierarchy has to be finite [&lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/3-540-45535-3.pdf&quot;&gt;17&lt;/a&gt;, &lt;a href=&quot;https://pubsonline.informs.org/doi/pdf/10.1287/moor.28.3.470.16391&quot;&gt;18&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/pdf/2011.04027.pdf&quot;&gt;19&lt;/a&gt;]). &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;At the first layer (with \( \mathcal{A}\) composed of singletons), we get the traditional semi-definite programming relaxation of quadratic optimization problems on \(\{-1,1\}^n\) [&lt;a href=&quot;https://dl.acm.org/doi/pdf/10.1145/227683.227684&quot;&gt;30&lt;/a&gt;]. See this nice &lt;a href=&quot;https://www.sumofsquares.org/&quot;&gt;website&lt;/a&gt; for the many extensions. An interesting aspect is that tightness is not necessary in many applications.&lt;/p&gt;
+
+
+
+&lt;h2&gt;Extension to hyperspheres&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;It is common to see the set \([0,\! 1]\) with periodic functions as the one-dimensional &lt;a href=&quot;https://en.wikipedia.org/wiki/Torus&quot;&gt;torus&lt;/a&gt;, that is, the quotient set \(\mathbb{R} / \mathbb{Z}\). Another classical interpretation is to see it as the unit circle in \(\mathbb{R}^2\), with the bijection \(x \mapsto (\cos 2\pi x, \sin 2 \pi x)\). The real Fourier basis functions \(x \mapsto \cos 2 \pi \omega x\) and \(x \mapsto \sin 2 \pi \omega x\) are then polynomials \(P(y_1,y_2)\) in \(y_1 = \cos 2\pi x\) and \(y_2 = \sin 2\pi x\). Not all polynomials are recovered, as one can check that we need to have \(\Delta P = \frac{\partial^2 P}{\partial y_1^2} +  \frac{\partial^2 P}{\partial y_2^2}=0\), that is the Laplacian of \(P\) is zero, which is often referred to as being &lt;a href=&quot;https://en.wikipedia.org/wiki/Harmonic_polynomial&quot;&gt;harmonic&lt;/a&gt;. This extends to hyperspheres in any dimension (see [&lt;a href=&quot;https://arxiv.org/pdf/1908.05155.pdf&quot;&gt;20&lt;/a&gt;] for details), and also to Euclidean balls by adding a dimension.&lt;/p&gt;
+
+
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In this blog post, I have tried to describe the basics of sums-of-squares optimization, hopefully from a simple perspective. The key was to reduce the scope to the minimization over simple sets with no complex constraints. This allowed us to present significantly improved convergence results from [33].&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;There is of course many more interesting ideas to cover, such as constrained optimisation, applications within signal processing [8], and extensions to the computation of log-partition functions [32], as well as important practical scalability issues to alleviate. Moreover, the SOS framework goes beyond optimization, either through other infinite-dimensional optimization problems or moment-based formulations (see many examples in [4, 7]). Many topics for future posts!&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Acknowledgements&lt;/strong&gt;. I would like to thank Alessandro Rudi for proofreading this blog post and making good clarifying suggestions.&lt;/p&gt;
+
+
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;h2&gt;References&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;[1] Jean-Bernard Lasserre. &lt;a href=&quot;https://epubs.siam.org/doi/pdf/10.1137/S1052623400366802&quot;&gt;Global optimization with polynomials and the problem of moments&lt;/a&gt;. &lt;em&gt;SIAM Journal on Optimization&lt;/em&gt;, 11(3):796–817, 2001.&lt;br&gt;[2] Pablo A. Parrilo. &lt;a href=&quot;http://www.mit.edu/~parrilo/pubs/files/SDPrelaxations.pdf&quot;&gt;Semidefinite programming relaxations for semialgebraic problems&lt;/a&gt;. &lt;em&gt;Mathematical Programming&lt;/em&gt;, 96(2):293–320, 2003.&lt;br&gt;[3] Monique Laurent. &lt;a href=&quot;https://homepages.cwi.nl/~monique/files/laurent-ima.pdf&quot;&gt;Sums of squares, moment matrices and optimization over polynomials&lt;/a&gt;. In &lt;em&gt;Emerging applications of algebraic geometry&lt;/em&gt;. Springer, 157-270, 2009.&lt;br&gt;[4] Jean-Bernard Lasserre.&amp;nbsp;&lt;em&gt;&lt;a href=&quot;https://www.worldscientific.com/worldscibooks/10.1142/p665#t=aboutBook&quot;&gt;Moments, positive polynomials and their applications&lt;/a&gt;&lt;/em&gt;. World Scientific, 2009.&lt;br&gt;[5] Grigoriy Blekherman, Pablo A. Parrilo, Rekha R. Thomas, editors.&amp;nbsp;&lt;em&gt;&lt;a href=&quot;https://epubs.siam.org/doi/pdf/10.1137/1.9781611972290.fm&quot;&gt;Semidefinite optimization and convex algebraic geometry&lt;/a&gt;&lt;/em&gt;. Society for Industrial and Applied Mathematics, 2012.&lt;br&gt;[6] Jean-Bernard Lasserre.&amp;nbsp;&lt;em&gt;&lt;a href=&quot;https://www.cambridge.org/core/books/an-introduction-to-polynomial-and-semialgebraic-optimization/5A7C6F7E54E28CE72BA7A7F84D0858ED&quot;&gt;An introduction to polynomial and semi-algebraic optimization&lt;/a&gt;&lt;/em&gt;. Cambridge University Press, 2015.&lt;br&gt;[7] Didier Henrion, Milan Korda, and Jean-Bernard Lasserre.&amp;nbsp;&lt;em&gt;&lt;a href=&quot;https://www.worldscientific.com/worldscibooks/10.1142/q0252#t=aboutBook&quot;&gt;The Moment-SOS Hierarchy: Lectures In Probability, Statistics, Computational Geometry, Control And Nonlinear PDEs&lt;/a&gt;&lt;/em&gt;. World Scientific, 2020.&lt;br&gt;[8] Bogdan Dumitrescu.&amp;nbsp;&lt;em&gt;&lt;a href=&quot;https://link.springer.com/book/10.1007/978-3-319-53688-0&quot;&gt;Positive trigonometric polynomials and signal processing applications&lt;/a&gt;&lt;/em&gt;. Springer, 2007.&lt;br&gt;[9] Robert M. Gray. &lt;a href=&quot;https://ee.stanford.edu/~gray/toeplitz.pdf&quot;&gt;Toeplitz and circulant matrices: A review&lt;/a&gt;. &lt;em&gt;Foundations and Trends in Communications and Information Theory&lt;/em&gt;&amp;nbsp;2(3): 155-239, 2006.&lt;br&gt;[10] Johannes Jahn. &lt;em&gt;&lt;a href=&quot;https://link.springer.com/book/10.1007/978-3-540-49379-2&quot;&gt;Introduction to the Theory of Nonlinear Optimization&lt;/a&gt;&lt;/em&gt;. Springer, 2020&lt;br&gt;[11] Leopold Fejér. &lt;a href=&quot;https://www.degruyter.com/document/doi/10.1515/crll.1916.146.53/pdf&quot;&gt;Über trigonometrische Polynome&lt;/a&gt;. &lt;em&gt;Journal für die reine und angewandte Mathematik&lt;/em&gt;. 146:55-82, 1916.&lt;br&gt;[12] Friedrich Riesz. &lt;a href=&quot;https://www.degruyter.com/document/doi/10.1515/crll.1916.146.83/pdf&quot;&gt;Über ein Problem des Herrn Carathéodory&lt;/a&gt;. &lt;em&gt;Journal für die reine und angewandte Mathematik&lt;/em&gt;. 146:83-87, 1916.&lt;br&gt;[13] C. Carathéodory and L. Fejér. &lt;a href=&quot;https://ia800708.us.archive.org/view_archive.php?archive=/28/items/crossref-pre-1923-scholarly-works/10.1007%252Fbf02983491.zip&amp;amp;file=10.1007%252Fbf03014796.pdf&quot;&gt;Über den Zusammenhang der Extreme von harmonischen Funktionen mit ihren Koeffizienten und über den Picard-Landauschen Satz&lt;/a&gt;, Rendiconti del Circolo Matematico di Palermo, 32:218–239, 1911.&lt;br&gt;[14] Mihály Bakonyi, Ekaterina V. Lopushanskaya. &lt;a href=&quot;https://link.springer.com/content/pdf/10.1007%2F978-3-0346-0180-1_4.pdf&quot;&gt;Moment problems for real measures on the unit circle&lt;/a&gt;.&amp;nbsp;&lt;em&gt;Recent Advances in Operator Theory in Hilbert and Krein Spaces&lt;/em&gt;. Birkhäuser Basel, 49-60, 2009.&lt;br&gt;[15] Victoria Powers and Bruce Reznick. &lt;em&gt;&lt;a href=&quot;https://www.ams.org/journals/tran/2000-352-10/S0002-9947-00-02595-2/S0002-9947-00-02595-2.pdf&quot;&gt;Polynomials that are positive on an interval&lt;/a&gt;&lt;/em&gt;. Transactions of the American Mathematical Society, 352(10):4677–4692, 2000.&lt;br&gt;[16] Ryan O’Donnell. &lt;em&gt;&lt;a href=&quot;https://arxiv.org/pdf/2105.10386.pdf&quot;&gt;Analysis of Boolean functions&lt;/a&gt;&lt;/em&gt;. Cambridge University Press, 2014.&lt;br&gt;[17] Jean-Bernard Lasserre. &lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/3-540-45535-3.pdf&quot;&gt;An explicit exact SDP relaxation for nonlinear 0–1 programs&lt;/a&gt;. In &lt;em&gt;International Conference on Integer Programming and Combinatorial Optimization&lt;/em&gt;, pages 293–303. Springer, 2001.&lt;br&gt;[18] Monique Laurent. &lt;a href=&quot;https://pubsonline.informs.org/doi/pdf/10.1287/moor.28.3.470.16391&quot;&gt;A comparison of the Sherali-Adams, Lovász-Schrijver, and Lasserre relaxations for 0–1 programming&lt;/a&gt;. &lt;em&gt;Mathematics of Operations Research&lt;/em&gt;, 28(3):470–496, 2003.&lt;br&gt;[19] Lucas Slot and Monique Laurent. &lt;a href=&quot;https://arxiv.org/pdf/2011.04027.pdf&quot;&gt;Sum-of-squares hierarchies for binary polynomial optimization&lt;/a&gt;. &lt;em&gt;Mathematical Programming&lt;/em&gt;, pages 1–40, 2022.&lt;br&gt;[20] Kun Fang and Hamza Fawzi. &lt;a href=&quot;https://arxiv.org/pdf/1908.05155.pdf&quot;&gt;The sum-of-squares hierarchy on the sphere and applications in quantum information theory&lt;/a&gt;. &lt;em&gt;Mathematical Programming&lt;/em&gt;, 190(1):331–360, 2021.&lt;br&gt;[21] Alessandro Rudi, Ulysse Marteau-Ferey, Francis Bach. &lt;a href=&quot;https://www.di.ens.fr/~fbach/gloptikernel.pdf&quot;&gt;Finding Global Minima via Kernel &lt;/a&gt;&lt;a href=&quot;https://arxiv.org/pdf/2012.11978&quot;&gt;Approximations&lt;/a&gt;. Technical report arXiv:2012.11978, 2020.&lt;br&gt;[22] Aron Naftalevich, and M. Schreiber. &lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/BFb0074598.pdf&quot;&gt;Trigonometric polynomials and sums of squares&lt;/a&gt;. In &lt;em&gt;Number Theory&lt;/em&gt;. Springer, 225-238, 1985.&lt;br&gt;[23] Alexandre Megretski. &lt;a href=&quot;http://www.mit.edu/~ameg/images/sos_cdc.ps&quot;&gt;Positivity of trigonometric polynomials&lt;/a&gt;.&amp;nbsp;In &lt;em&gt;International Conference on Decision and Control&lt;/em&gt;, 2003.&lt;br&gt;[24] Blake Woodworth, Francis Bach, Alessandro Rudi.&amp;nbsp;&lt;a href=&quot;https://proceedings.mlr.press/v178/woodworth22a/woodworth22a.pdf&quot;&gt;Non-Convex Optimization with Certificates and Fast Rates Through Kernel Sums of Squares&lt;/a&gt;. In &lt;em&gt;Proceedings of the Conference on Learning Theory&lt;/em&gt;, 2022.&lt;br&gt;[25] Diego Cifuentes, Pablo A. Parrilo. &lt;a href=&quot;https://epubs.siam.org/doi/pdf/10.1137/15M1052548&quot;&gt;Sampling algebraic varieties for sum of squares programs&lt;/a&gt;.&amp;nbsp;&lt;em&gt;SIAM Journal on Optimization&lt;/em&gt;,&amp;nbsp;27(4): 2381-2404, 2017.&lt;br&gt;[26] Jean-Bernard Lasserre. &lt;a href=&quot;https://epubs.siam.org/doi/pdf/10.1137/070693709&quot;&gt;A sum of squares approximation of nonnegative polynomials&lt;/a&gt;.&amp;nbsp;&lt;em&gt;SIAM Review&lt;/em&gt;,&amp;nbsp;49(4):651-669, 2007.&lt;br&gt;[27] Yurii Nesterov. &lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/s10107-006-0001-8.pdf&quot;&gt;Smoothing technique and its applications in semidefinite optimization&lt;/a&gt;.&amp;nbsp;&lt;em&gt;Mathematical Programming&lt;/em&gt;&amp;nbsp;110(2):245-259, 2007.&lt;br&gt;[28] Mihai Putinar. &lt;a href=&quot;https://gallica.bnf.fr/ark:/12148/bpt6k58688425/f747.item&quot;&gt;Sur la complexification du problème des moments&lt;/a&gt;. &lt;em&gt;Comptes Rendus de l&amp;#8217;Académie des Sciences, &lt;/em&gt;Série 1, Mathématique&amp;nbsp;314(10):743-745, 1992.&lt;br&gt;[29] Didier Henrion and Jean-Bernard Lasserre. &lt;a href=&quot;https://homepages.laas.fr/henrion/papers/extract.pdf&quot;&gt;Detecting global optimality and extracting solutions in GloptiPoly&lt;/a&gt;. In&amp;nbsp;&lt;em&gt;Positive polynomials in control&lt;/em&gt;, pages 293-310, 2005.&lt;br&gt;[30] Michel X. Goemans and David P. Williamson. &lt;a href=&quot;https://dl.acm.org/doi/pdf/10.1145/227683.227684&quot;&gt;Improved approximation algorithms for maximum cut and satisfiability problems using semidefinite programming&lt;/a&gt;. &lt;em&gt;Journal of the ACM&lt;/em&gt;, 42(6):1115–1145, 1995.&lt;br&gt;[31] Ulf Grenander, and Gabor Szegö.&amp;nbsp;&lt;em&gt;Toeplitz forms and their applications&lt;/em&gt;. Univ of California Press, 1958.&lt;br&gt;[32] Francis Bach.&amp;nbsp;&lt;a href=&quot;https://arxiv.org/pdf/2206.13285&quot;&gt;Sum-of-Squares Relaxations for Information Theory and Variational Inference&lt;/a&gt;. Technical report, arXiv:2206.13285, 2022.&lt;br&gt;[33] Francis Bach and Alessandro Rudi. &lt;a href=&quot;https://arxiv.org/pdf/2211.04889.pdf&quot;&gt;Exponential convergence of sum-of-squares hierarchies for trigonometric polynomials&lt;/a&gt;. Technical report arXiv:2211.04889, 2022.&lt;br&gt;[34] Monique Laurent and Lucas Slot. &lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/s11590-022-01922-5.pdf&quot;&gt;An effective version of Schmüdgen’s Positivstellensatz for the hypercube&lt;/a&gt;. &lt;em&gt;Optimization Letters&lt;/em&gt;, 2022.&lt;br&gt;[35] Jiawang Nie. &lt;a href=&quot;https://link.springer.com/content/pdf/10.1007/s10107-013-0680-x.pdf&quot;&gt;Optimality conditions and finite convergence of Lasserre’s hierarchy&lt;/a&gt;. &lt;em&gt;Mathematical Programming&lt;/em&gt;, 146(1):97–121, 2014&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;br&gt;&lt;/p&gt;
+
+
+
+&lt;h2&gt;Proof of Fejér-Riesz theorem&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We consider a trigonometric polynomial of degree \(r\), that is, \(g(x) = \sum_{\omega = -r}^r c_\omega e^{2i\pi \omega x}\) with real non-negative values. This imposes that \(c_{-\omega} = c_\omega^\ast\). We assume that \(c_r \neq 0\). We consider the rational function \(R(z) = \sum_{\omega = -r}^r c_\omega z^\omega\), so that \(g(x) = R(e^{2i\pi x})\). We can write \(R\) as \(R(z) = z^{-r} Q(z)\) for a polynomial \(Q\) of degree \(2r\). We can now examine the roots of \(R\). The identity \(c_{-\omega} = c_\omega^\ast\) implies that if \(z\) is a root of \(Q\), so is \(1/z^\ast\). Thus all roots which do not have unit modulus come in pairs \((z_b,1/z_b^\ast)\), for \(| z_b| &amp;lt; 1\), with \(b \in \{1,\dots,m\}\). We then have \(2r \, &amp;#8211; 2m\) roots of unit modulus, denoted \(e^{2i\pi \rho_a}\), for \(a \in \{1,\dots,2r-2m\}\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Thus, we can write the polynomial \(Q\) as: $$Q(z) = \kappa \prod_{a=1}^{2r-2m} ( z  \, &amp;#8211; e^{2i\pi \rho_a})  \prod_{b = 1}^m ( z \, &amp;#8211; z_b)( z \, &amp;#8211; 1/z_b^\ast), $$ for a certain \(\kappa \in \mathbb{C}\), leading to $$R(z) = z^{-r} Q(z) = \kappa&amp;#8217; z^{-r+m} \prod_{a=1}^{2r-2m} ( z \, &amp;#8211; e^{2i\pi \rho_a}) \prod_{b =1}^m ( z \, &amp;#8211; z_b)( z^{-1}  \, &amp;#8211;  z_b^\ast),$$ for some \(\kappa&amp;#8217;  \in \mathbb{C}\). For \(z = e^{2i\pi x}\), the second product is a positive number since \(z^{-1} = z^\ast\). Writing \( e^{2i\pi x}  \, &amp;#8211; e^{2i\pi \rho_a} = 2i e^{i\pi(x+\rho_a)} \sin \pi (x-\rho_a)\), we can see that in order to avoid a change of sign of \(\sin \pi (x-\rho_a)\) around some \(x\), each \(\rho_a\) must appear with even multiplicity. Thus, for \(z = e^{2i\pi x}\), the term \(z^{-r+m} \prod_{a=1}^{2r-2m} ( z \, &amp;#8211; e^{2i\pi \rho_a})\) is equal to \(\prod_{a=1}^{r-m} (-4) e^{2 i\pi \rho_a} \sin^2 \pi (x-\rho_a)\), and thus, \(\kappa^{\prime\prime} = \kappa&amp;#8217; \prod_{a=1}^{r-m} (-4)  e^{2 i\pi \rho_a}\) has to be a non-negative real number. Thus, overall, $$g(x) = R(e^{2i\pi x}) = \Big| \sqrt{\kappa^{\prime\prime}}  \prod_{a=1}^r (  e^{2i\pi x}  &amp;#8211; e^{2i\pi \rho_a}) \prod_{b =1}^m ( e^{2i\pi x}  &amp;#8211; z_b) \Big|^2.$$ &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We here get a single square, with an elementary proof. Note that this is a stronger result than being a sum of several squares. We can now look at the dual intepretation.&lt;/p&gt;
+
+
+
+&lt;h2&gt;First-order algorithms&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In order to solve the problem in Eq. \((1)\), we can use standard smoothing [27], that is, replace \(\lambda_{\min}(F+Y)\) by \(\varepsilon \log {\rm tr } \exp((F+Y) / \varepsilon)\), and apply accelerated projected gradient descent, which requires to orthogonally project on \(\mathcal{V}^\perp\), or equivalently on \(\mathcal{V}^\perp\).&lt;/p&gt;
+
+
+
+&lt;h2&gt;All strictly positive trigonometric polynomials are sums-of-squares&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In order to provide an &amp;#8220;elementary&amp;#8221; proof of this result that dates back to [28], we follow [23] and proceed by contradiction, and assume that there is a strictly positive trigonometric polynomial \(R\) which is not a sum-of-squares. Since the set of SOS polynomials is a convex cone, by the &lt;a href=&quot;https://en.wikipedia.org/wiki/Hahn%E2%80%93Banach_theorem&quot;&gt;Hahn-Banach theorem&lt;/a&gt;, there must exist a non identically zero linear form \(L\) which is non-negative on all SOS polynomials, and such that \(L(R) \leqslant 0\). In order to conclude, we will need to show that linear forms on trigonometric polynomials that are non-negative on SOS polynomials, can be written as  $$\tag{4} L(P)  = \int_{[0, 1]^n} P(e^{ 2i\pi x_1} ,\dots, e^{2i\pi x_n}) d\mu(x)$$ for a non-negative measure \(\mu\) on \([0,\! 1]^n\) (which is not uniformly equal to zero). This then leads to a contradiction, since it implies $$0 \geqslant L(R) \geqslant \min_{x \in [0, 1]^n} R(e^{ 2i\pi x_1} ,\dots, e^{2i\pi x_n})  \times \mu([0,\! 1]^n).$$&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We now need to show that all bounded linear forms on trigonometric polynomials that are non-negative on SOS polynomials can be represented as in Eq. \((4)\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Using &lt;a href=&quot;https://en.wikipedia.org/wiki/Bochner%27s_theorem&quot;&gt;Bochner&amp;#8217;s theorem&lt;/a&gt;.&lt;/strong&gt; We define a function \(g: \mathbb{Z}^n \to \mathbb{C}\) as \(g(\omega) = L( z^\omega)\). This function is &lt;a href=&quot;https://en.wikipedia.org/wiki/Positive-definite_function&quot;&gt;positive definite&lt;/a&gt;, as, for any \(\omega_1,\dots,\omega_m \in \mathbb{Z}^n\) and any complex numbers \(\alpha_1,\dots,\alpha_m\), $$ \sum_{i,j=1}^m \alpha_i \alpha_j^\ast g(\omega_i &amp;#8211; \omega_j) = L \Big( \Big| \sum_{i=1}^m \alpha_i z^{\omega_i} \Big|^2 \Big).$$ Thus by Bochner&amp;#8217;s theorem, there exists a positive measure \(\mu\) on \([0,\! 1]^n\) such that $$g(\omega) = \int_{[0, 1]^n} e^{2i\pi \omega^\top x} d\mu(x),$$ which exactly leads to the desired result.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Francis Bach&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-16 12:53:49 UTC</pubDate>
+  <author>Francis Bach</author>
+</item>
+
+<item>
   <title>Low-depth arithmetic circuit lower bounds via shifted partials</title>
   <guid>http://arxiv.org/abs/2211.07691</guid>
   <link>http://arxiv.org/abs/2211.07691</link>
@@ -1338,23 +1761,6 @@ opposed to a sum of perturbation bounds obtained via Davis-Kahan-type theorems.
   </description>
   <pubDate>2022-11-14 01:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>TR22-154 |  Spectral Expanding Expanders | 
-
-	Gil Cohen, 
-
-	Itay Cohen</title>
-  <guid>https://eccc.weizmann.ac.il/report/2022/154</guid>
-  <link>https://eccc.weizmann.ac.il/report/2022/154</link>
-  <description>
-    Dinitz, Schapira, and Valadarsky (Algorithmica 2017) introduced the intriguing notion of expanding expanders -- a family of expander graphs with the property that every two consecutive graphs in the family differ only on a small number of edges. Such a family allows one to add and remove vertices with only few edge updates, making them useful in dynamic settings such as for datacenter network topologies and for the design of distributed algorithms for self-healing expanders. Dinitz et al. constructed explicit expanding-expanders based on the Bilu-Linial construction of spectral expanders (Combinatorica 2006). The construction of expanding expanders, however, ends up being of edge expanders, thus, an open problem raised by Dinitz et al. is to construct spectral expanding expanders (SEE).
-
-In this work, we resolve this question by constructing SEE with spectral expansion which, like the Bilu-Linial construction, is optimal up to a poly-logarithmic factor, and the number of edge updates is optimal up to a constant. We further give a simple proof for the existence of SEE that are close to Ramanujan up to a small additive term. As in the work of Dinitz et al., our construction is based on interpolating between a graph and its lift. However, to establish spectral expansion, we carefully weigh the interpolated graphs, dubbed partial lifts, in a way that enables us to conduct a delicate analysis of their spectrum. In particular, at a crucial point in the analysis, we consider the eigenvectors structure of the partial lifts.
-  </description>
-  <pubDate>2022-11-13 18:30:56 UTC</pubDate>
-  <author>ECCC Papers</author>
 </item>
 
 </channel>
