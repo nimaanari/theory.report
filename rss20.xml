@@ -9,6 +9,27 @@
 
 
 <item>
+  <title>TR22-159 |  Deep Neural Networks: The Missing Complexity Parameter | 
+
+	Songhua He, 
+
+	Periklis Papakonstantinou</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/159</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/159</link>
+  <description>
+    Deep neural networks are the dominant machine learning model. We show that this model is missing a crucial complexity parameter. Today, the standard neural network (NN) model is a circuit whose gates (neurons) are ReLU units. The complexity of a NN is quantified by the depth (number of layers) and the size (number of neurons = depth times width). This work shows that this alone is insufficient, resulting in NNs with unreasonable computing power. We show that the correct way to talk about the size complexity of a NN is beside the number of neurons to consider the precision (or magnitude) of the weights of the ReLU units. The main message of this work is that if the precision of the weights is not considered in the complexity of the NN then one can engineer weights to &amp;quot;buy&amp;quot; exponentially many neurons for free. In summary, we make three theoretical contributions, potentially affecting many theoretical works on NNs.
+
+1. Every function $f:\{0,1\}^n\to\{0,1\}$ can be computed with $O(\sqrt{2^n})$ many neurons and constant fan-in per neuron; i.e.~exponential times less than Shannon&amp;#39;s classic lower bound for usual combinatorial circuits. 
+
+2. We give a new definition of circuit size that takes into account the precision/magnitude of the weights. Under this new definition of size we asymptotically match Shannon&amp;#39;s bound for NNs.
+
+3. We complement the above results showing that P-uniform NNs decide exactly P.
+  </description>
+  <pubDate>2022-11-18 19:13:20 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>TR22-158 |  Query Complexity of Inversion Minimization on Trees | 
 
 	Ivan Hu, 
@@ -1824,42 +1845,6 @@ denotes maximum degree, for $1+\epsilon$ approximation of weighted matching and
 for maximal matching [Czumaj et al., STOC&#39;18, Ghaffari et al. PODC&#39;18; Assadi
 et al. SODA&#39;19; Behnezhad et al. FOCS&#39;19; Gamlath et al. PODC&#39;19], but these
 algorithms do not extend to the more general $b$-matching problem.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-16 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On Sparsification of Stochastic Packing Problems</title>
-  <guid>http://arxiv.org/abs/2211.07829</guid>
-  <link>http://arxiv.org/abs/2211.07829</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dughmi_S/0/1/0/all/0/1&quot;&gt;Shaddin Dughmi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kalayci_Y/0/1/0/all/0/1&quot;&gt;Yusuf Hakan Kalayci&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Patel_N/0/1/0/all/0/1&quot;&gt;Neel Patel&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Motivated by recent progress on stochastic matching with few queries, we
-embark on a systematic study of the sparsification of stochastic packing
-problems (SPP) more generally. Specifically, we consider SPPs where elements
-are independently active with a probability p, and ask whether one can
-(non-adaptively) compute a sparse set of elements guaranteed to contain an
-approximately optimal solution to the realized (active) subproblem. We seek
-structural and algorithmic results of broad applicability to such problems. Our
-focus is on computing sparse sets containing on the order of d feasible
-solutions to the packing problem, where d is linear or at most poly. in 1/p.
-Crucially, we require d to be independent of the any parameter related to the
-``size&#39;&#39; of the packing problem. We refer to d as the degree of the sparsifier,
-as is consistent with graph theoretic degree in the special case of matching.
-First, we exhibit a generic sparsifier of degree 1/p based on contention
-resolution. This sparsifier&#39;s approximation ratio matches the best contention
-resolution scheme (CRS) for any packing problem for additive objectives, and
-approximately matches the best monotone CRS for submodular objectives. Second,
-we embark on outperforming this generic sparsifier for matroids, their
-intersections and weighted matching. These improved sparsifiers feature
-different algorithmic and analytic approaches, and have degree linear in 1/p.
-In the case of a single matroid, our sparsifier tends to the optimal solution.
-For weighted matching, we combine our contention-resolution-based sparsifier
-with technical approaches of prior work to improve the state of the art ratio
-from 0.501 to 0.536. Third, we examine packing problems with submodular
-objectives. We show that even the simplest such problems do not admit
-sparsifiers approaching optimality.
 &lt;/p&gt;
   </description>
   <pubDate>2022-11-16 01:30:00 UTC</pubDate>
