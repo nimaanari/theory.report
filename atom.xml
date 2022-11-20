@@ -10,6 +10,34 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-164 |  Learning versus Pseudorandom Generators in Constant Parallel Time | 
+
+	Shuichi Hirahara, 
+
+	Mikito Nanashima</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/164"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/164</id>
+    <updated>2022-11-20T11:26:40+00:00</updated>
+    <content type="html" xml:lang="en">
+    A polynomial-stretch pseudorandom generator (PPRG) in NC$^0$ (i.e., constant parallel time) is one of the most important cryptographic primitives, especially for constructing highly efficient cryptography and indistinguishability obfuscation. The celebrated work (Applebaum, Ishai, and Kushilevitz, SIAM Journal on Computing, 2006) on randomized encodings yields the characterization of sublinear-stretch pseudorandom generators in NC$^0$ by the existence of logspace-computable one-way functions, but characterizing PPRGs in NC$^0$ seems out of reach at present. Therefore, it is natural to ask which sort of hardness notion is essential for constructing PPRGs in NC$^0$. Particularly, to the best of our knowledge, all the previously known candidates for PPRGs in NC$^0$ follow only one framework based on Goldreich&amp;#39;s one-way function. 
+		
+In this paper, we present a new learning-theoretic characterization for PPRGs in NC$^0$ and related classes. Specifically, we consider the average-case hardness of learning for well-studied classes in parameterized settings, where the number of samples is restricted to fixed-parameter tractable (FPT), and show that the following are equivalent:
+	(i) The existence of (a collection of) PPRGs in NC$^0$.
+	(ii) The average-case hardness of learning sparse $\mathbb{F}_2$-polynomials on a sparse example distribution and an NC$^0$-samplable target distribution (i.e., a distribution on target functions).
+	(iii) The average-case hardness of learning Fourier-sparse functions on a sparse example distribution and an NC$^0$-samplable target distribution.
+	(iv) The average-case hardness of learning constant-depth parity decision trees on a sparse example distribution and an NC$^0$-samplable target distribution.
+Furthermore, we characterize a (single) PPRG in $\oplus$-NC$^0$ by the average-case hardness of learning constant-degree $\mathbb{F}_2$-polynomials on a uniform example distribution with FPT samples. Based on our results, we propose new candidates for PPRGs in NC$^0$ and related classes under a hardness assumption on a natural learning problem. An important property of PPRGs in NC$^0$ constructed in our framework is that the output bits are computed by various predicates; thus, it seems to resist an attack that depends on a specific property of one fixed predicate.
+	
+Conceptually, the main contribution of this study is to formalize a theory of FPT dualization of concept classes, which yields a meta-theorem for the first result. For the second result on PPRGs in $\oplus$-NC$^0$, we use a different technique of pseudorandom $\mathbb{F}_2$-polynomials.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR22-163 |  Random Walks on Rotating Expanders | 
 
 	Gil Cohen, 
@@ -28,6 +56,21 @@ Our proof, which holds for all sufficiently high girth graphs, makes heavy use o
     <author>
       <name>ECCC Papers</name>
       <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">Decentralized Thoughts: On PBFT from Locked Broadcast</title>
+    <link href="https://decentralizedthoughts.github.io/2022-11-20-pbft-via-locked-braodcast/"/>
+    <id>https://decentralizedthoughts.github.io/2022-11-20-pbft-via-locked-braodcast/</id>
+    <updated>2022-11-20T09:00:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    We describe a variation of the authenticated version of PBFT using Locked Broadcast that follows a similar path as our previous post on Paxos using Recoverable Broadcast. I call this protocol linear PBFT and variants of it are used by SBFT and Tusk. A later post will show how to...
+  </content>
+    <author>
+      <name>Decentralized Thoughts</name>
+      <uri>https://decentralizedthoughts.github.io</uri>
     </author>
   </entry>
 
@@ -1949,67 +1992,6 @@ associated genus distribution more and more concentrates on a vanishing portion
 of all possible genera as $n$ tends to infinity. Finally, we observe from our
 data that the mean number of non-trivial symmetries of a uniformly chosen graph
 encoding of a surface decays to zero at a rate super-exponential in $n$.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Shellability is hard even for balls</title>
-    <link href="http://arxiv.org/abs/2211.07978"/>
-    <id>http://arxiv.org/abs/2211.07978</id>
-    <updated>2022-11-16T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Patak_P/0/1/0/all/0/1&quot;&gt;Pavel Pat&amp;#xe1;k&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tancer_M/0/1/0/all/0/1&quot;&gt;Martin Tancer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The main goal of this paper is to show that shellability is NP-hard for
-triangulated d-balls (this also gives hardness for triangulated
-d-manifolds/d-pseudomanifolds with boundary) as soon as d is at least 3. This
-extends our earlier work with Goaoc, Pat\&#39;akov\&#39;a and Wagner on hardness of
-shellability of 2-complexes and answers some questions implicitly raised by
-Danaraj and Klee in 1978 and explicitly mentioned by Santamar\&#39;ia-Galvis and
-Woodroofe. Together with the main goal, we also prove that collapsibility is
-NP-hard for 3-complexes embeddable in the 3-space, extending an earlier work of
-the second author and answering an open question mentioned by Cohen, Fasy,
-Miller, Nayyeri, Peng and Walkington; and that shellability is NP-hard for
-2-complexes embeddable in the 3-space, answering another question of
-Santamar\&#39;ia-Galvis and Woodroofe (in a slightly stronger form than what is
-given by the main result).
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: About the Reconstruction of Convex Lattice Sets from One or Two X-rays</title>
-    <link href="http://arxiv.org/abs/2211.08091"/>
-    <id>http://arxiv.org/abs/2211.08091</id>
-    <updated>2022-11-16T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gerard_Y/0/1/0/all/0/1&quot;&gt;Yan Gerard&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider a class of problems of Discrete Tomography which has been deeply
-investigated in the past: the reconstruction of convex lattice sets from their
-horizontal and/or vertical X-rays, i.e. from the number of points in a sequence
-of consecutive horizontal and vertical lines. The reconstruction of the
-HV-convex polyominoes works usually in two steps, first the filling step
-consisting in filling operations, second the convex aggregation of the
-switching components. We prove three results about the convex aggregation step:
-(1) The convex aggregation step used for the reconstruction of HV-convex
-polyominoes does not always provide a solution. The example yielding to this
-result is called \textit{the bad guy} and disproves a conjecture of the domain.
-(2) The reconstruction of a digital convex lattice set from only one X-ray can
-be performed in polynomial time. We prove it by encoding the convex aggregation
-problem in a Directed Acyclic Graph. (3) With the same strategy, we prove that
-the reconstruction of fat digital convex sets from their horizontal and
-vertical X-rays can be solved in polynomial time. Fatness is a property of the
-digital convex sets regarding the relative position of the left, right, top and
-bottom points of the set. The complexity of the reconstruction of the lattice
-sets which are not fat remains an open question.
 &lt;/p&gt;
   </content>
     <author>
