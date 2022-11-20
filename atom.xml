@@ -10,6 +10,87 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-162 |  Directed Isoperimetric Theorems for Boolean Functions on the Hypergrid and an $\widetilde{O}(n\sqrt{d})$ Monotonicity Tester | 
+
+	Hadley Black, 
+
+	Deeparnab Chakrabarty, 
+
+	C. Seshadhri</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/162"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/162</id>
+    <updated>2022-11-20T05:41:10+00:00</updated>
+    <content type="html" xml:lang="en">
+    The problem of testing monotonicity for Boolean functions on the hypergrid, $f:[n]^d \to \{0,1\}$ is a classic topic in property testing. When $n=2$, the domain is the hypercube. For the hypercube case, a breakthrough result of Khot-Minzer-Safra (FOCS 2015) gave a non-adaptive, one-sided tester making $\widetilde{O}(\varepsilon^{-2}\sqrt{d})$ queries. Up to polylog $d$ and $\varepsilon$ factors, this bound matches the $\widetilde{\Omega}(\sqrt{d})$-query non-adaptive lower bound (Chen-De-Servedio-Tan (STOC 2015), Chen-Waingarten-Xie (STOC 2017)). For any $n &amp;gt; 2$, the optimal non-adaptive complexity was unknown. A previous result of the authors achieves a $\widetilde{O}(d^{5/6})$-query upper bound (SODA 2020), quite far from the $\sqrt{d}$ bound for the hypercube.
+
+In this paper, we resolve the non-adaptive complexity of monotonicity testing for all constant $n$, up to $\text{poly}(\varepsilon^{-1}\log d)$ factors. Specifically, we give a non-adaptive, one-sided monotonicity tester making $\widetilde{O}(\varepsilon^{-2}n\sqrt{d})$ queries. From a technical standpoint, we prove new directed isoperimetric theorems over the hypergrid $[n]^d$. These results generalize the celebrated directed Talagrand inequalities that were only known for the hypercube.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-161 |  Towards Multi-Pass Streaming Lower Bounds for Optimal Approximation of Max-Cut | 
+
+	Raghuvansh Saxena, 
+
+	Lijie Chen, 
+
+	Gillat Kol, 
+
+	Dmitry Paramonov, 
+
+	Zhao Song, 
+
+	Huacheng Yu</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/161"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/161</id>
+    <updated>2022-11-20T05:39:49+00:00</updated>
+    <content type="html" xml:lang="en">
+    We consider the Max-Cut problem, asking how much space is needed by a streaming algorithm in order to estimate the value of the maximum cut in a graph. This problem has been extensively studied over the last decade, and we now have a near-optimal lower bound for one-pass streaming algorithms, showing that they require linear space to guarantee a better-than-$2$ approximation [KKS15, KK19]. The result relies on a lower bound for the cycle-finding problem, showing that it is hard for a one-pass streaming algorithm to find a cycle in a union of matchings.
+
+The end-goal of our research is to prove a similar lower for multi-pass streaming algorithms that guarantee a better-than-$2$ approximation for Max-Cut, a highly challenging open problem. In this paper, we take a significant step in this direction, showing that even $o(\log n)$-pass streaming algorithms need $n^{\Omega(1)}$ space to solve the cycle-finding problem. Our proof is quite involved, dividing the cycles in the graph into &amp;quot;short&amp;quot; and &amp;quot;long&amp;quot; cycles, and using tailor-made lower bound techniques to handle each case.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-160 |  The Geometry of Rounding | 
+
+	Jason Vander Woude, 
+
+	Peter Dixon, 
+
+	A.  Pavan, 
+
+	Jamie Radcliffe, 
+
+	N. V. Vinodchandran</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/160"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/160</id>
+    <updated>2022-11-20T05:38:52+00:00</updated>
+    <content type="html" xml:lang="en">
+    Rounding has proven to be a fundamental tool in theoretical computer science. By observing that rounding and partitioning of $\mathbb{R}^d$ are equivalent, we introduce the following natural partition problem which we call the secluded hypercube partition problem: Given $k\in\mathbb{N}$ (ideally small) and $\epsilon&amp;gt;0$ (ideally large), is there a partition of $\mathbb{R}^d$ with unit hypercubes such that for every point $\vec{p} \in \mathbb{R}^d$, its closed $\epsilon$-neighborhood (in the $\ell_{\infty}$  norm) intersects at most $k$ hypercubes?
+
+We undertake a comprehensive study of this partition problem. We prove that for every $d\in\mathbb{N}$, there is an explicit (and efficiently computable) hypercube partition of $\mathbb{R}^d$ with $k = d+1$ and $\epsilon = \frac{1}{2d}$. We complement this construction by proving that the value of $k=d+1$ is the best possible (for any $\epsilon$) for a broad class of &amp;quot;reasonable&amp;quot; partitions including hypercube partitions. We also investigate the optimality of the parameter $\epsilon$ and prove that any partition in this broad class that has $k=d+1$, must have $\epsilon\leq\frac{1}{2\sqrt{d}}$. These bounds imply limitations of certain deterministic rounding schemes existing in the literature. Furthermore, this general bound is based on the currently known lower bounds for the dissection number of the cube, and improvements to this bound will yield improvements to our bounds.
+
+While our work is motivated by the desire to understand rounding algorithms, one of our main conceptual contributions is the introduction of the secluded hypercube partition problem, which fits well with a long history of investigations by mathematicians on various hypercube partitions/tilings of Euclidean  space.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Decentralized Thoughts: From Single-Shot Consensus to State Machine Replication</title>
     <link href="https://decentralizedthoughts.github.io/2022-11-19-from-single-shot-to-smr/"/>
     <id>https://decentralizedthoughts.github.io/2022-11-19-from-single-shot-to-smr/</id>
@@ -1944,96 +2025,6 @@ retaining an optimal dependency on $\varepsilon$.
     <author>
       <name>arXiv: Computational Geometry</name>
       <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Deformation Spaces and Static Animations</title>
-    <link href="http://arxiv.org/abs/2211.08333"/>
-    <id>http://arxiv.org/abs/2211.08333</id>
-    <updated>2022-11-16T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Dorfsman_Hopkins_G/0/1/0/all/0/1&quot;&gt;Gabriel Dorfsman-Hopkins&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study applications of 3D printing to the broad goal of understanding how
-mathematical objects vary continuously in families. To do so, we model the
-varying parameter as the vertical axis of a 3D print, introducing the notion of
-a static animation: a 3D printed object each of whose layers is a member of the
-continuously deforming family. We survey examples and draw connections to
-algebraic geometry, complex dynamics, chaos theory, and more. We also include a
-detailed tutorial (with accompanying code and files) so that the reader can
-create static animations of their own.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Bounds and Estimates on the Average Edit Distance</title>
-    <link href="http://arxiv.org/abs/2211.07644"/>
-    <id>http://arxiv.org/abs/2211.07644</id>
-    <updated>2022-11-16T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bilardi_G/0/1/0/all/0/1&quot;&gt;Gianfranco Bilardi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schimd_M/0/1/0/all/0/1&quot;&gt;Michele Schimd&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The edit distance is a metric of dissimilarity between strings, widely
-applied in computational biology, speech recognition, and machine learning. Let
-$e_k(n)$ denote the average edit distance between random, independent strings
-of $n$ characters from an alphabet of size $k$. For $k \geq 2$, it is an open
-problem how to efficiently compute the exact value of $\alpha_{k}(n) =
-e_k(n)/n$ as well as of $\alpha_{k} = \lim_{n \to \infty} \alpha_{k}(n)$, a
-limit known to exist.
-&lt;/p&gt;
-&lt;p&gt;This paper shows that $\alpha_k(n)-Q(n) \leq \alpha_k \leq \alpha_k(n)$, for
-a specific $Q(n)=\Theta(\sqrt{\log n / n})$, a result which implies that
-$\alpha_k$ is computable. The exact computation of $\alpha_k(n)$ is explored,
-leading to an algorithm running in time $T=\mathcal{O}(n^2k\min(3^n,k^n))$, a
-complexity that makes it of limited practical use.
-&lt;/p&gt;
-&lt;p&gt;An analysis of statistical estimates is proposed, based on McDiarmid&#39;s
-inequality, showing how $\alpha_k(n)$ can be evaluated with good accuracy, high
-confidence level, and reasonable computation time, for values of $n$ say up to
-a quarter million. Correspondingly, 99.9\% confidence intervals of width
-approximately $10^{-2}$ are obtained for $\alpha_k$.
-&lt;/p&gt;
-&lt;p&gt;Combinatorial arguments on edit scripts are exploited to analytically
-characterize an efficiently computable lower bound $\beta_k^*$ to $\alpha_k$,
-such that $ \lim_{k \to \infty} \beta_k^*=1$. In general, $\beta_k^* \leq
-\alpha_k \leq 1-1/k$; for $k$ greater than a few dozens, computing $\beta_k^*$
-is much faster than generating good statistical estimates with confidence
-intervals of width $1-1/k-\beta_k^*$.
-&lt;/p&gt;
-&lt;p&gt;The techniques developed in the paper yield improvements on most previously
-published numerical values as well as results for alphabet sizes and string
-lengths not reported before.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Augmented Thresholds for MONI</title>
-    <link href="http://arxiv.org/abs/2211.07794"/>
-    <id>http://arxiv.org/abs/2211.07794</id>
-    <updated>2022-11-16T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Martinez_Guardiola_C/0/1/0/all/0/1&quot;&gt;C&amp;#xe9;sar Mart&amp;#xed;nez-Guardiola&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Brown_N/0/1/0/all/0/1&quot;&gt;Nathaniel K. Brown&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Silva_Coira_F/0/1/0/all/0/1&quot;&gt;Fernando Silva-Coira&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Koppl_D/0/1/0/all/0/1&quot;&gt;Dominik K&amp;#xf6;ppl&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gagie_T/0/1/0/all/0/1&quot;&gt;Travis Gagie&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ladra_S/0/1/0/all/0/1&quot;&gt;Susana Ladra&lt;/a&gt;&lt;/p&gt;&lt;p&gt;MONI (Rossi et al., 2022) can store a pangenomic dataset T in small space and
-later, given a pattern P, quickly find the maximal exact matches (MEMs) of P
-with respect to T. In this paper we consider its one-pass version (Boucher et
-al., 2021), whose query times are dominated in our experiments by longest
-common extension (LCE) queries. We show how a small modification lets us avoid
-most of these queries and thus significantly speeds up MONI in practice while
-only slightly increasing its size.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
