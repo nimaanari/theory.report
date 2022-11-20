@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-11-20T08:39:05Z">Sunday, November 20 2022, 08:39</time>
+          <time class='timeago' datetime="2022-11-20T09:32:55Z">Sunday, November 20 2022, 09:32</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -340,6 +340,49 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Sunday, November 20
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2022/163'>TR22-163 |  Random Walks on Rotating Expanders | 
+
+	Gil Cohen, 
+
+	Gal Maor</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Random walks on expanders are a powerful tool which found applications in many areas of theoretical computer science, and beyond. However, they come with an inherent cost -- the spectral expansion of the corresponding power graph deteriorates at a rate that is exponential in the length of the walk. As an example, when $G$ is a $d$-regular Ramanujan graph, the power graph $G^t$ has spectral expansion $2^{\Omega(t)} \sqrt{D}$, where $D = d^t$ is the regularity of $G^t$, thus, $G^t$ is $2^{\Omega(t)}$ away from being Ramanujan. This exponential blowup manifests itself in many applications.
+
+In this work we bypass this barrier by permuting the vertices of the given graph after each random step. We prove that there exists a sequence of permutations for which the spectral expansion deteriorates by only a linear factor in $t$. In the Ramanujan case this yields an expansion of $O(t \sqrt{D})$. We stress that the permutations are tailor-made to the graph at hand and require no randomness to generate.
+
+Our proof, which holds for all sufficiently high girth graphs, makes heavy use of the powerful framework of finite free probability and interlacing families that was developed in a seminal sequence of works by Marcus, Spielman and Srivastava.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          Random walks on expanders are a powerful tool which found applications in many areas of theoretical computer science, and beyond. However, they come with an inherent cost -- the spectral expansion of the corresponding power graph deteriorates at a rate that is exponential in the length of the walk. As an example, when $G$ is a $d$-regular Ramanujan graph, the power graph $G^t$ has spectral expansion $2^{\Omega(t)} \sqrt{D}$, where $D = d^t$ is the regularity of $G^t$, thus, $G^t$ is $2^{\Omega(t)}$ away from being Ramanujan. This exponential blowup manifests itself in many applications.
+
+In this work we bypass this barrier by permuting the vertices of the given graph after each random step. We prove that there exists a sequence of permutations for which the spectral expansion deteriorates by only a linear factor in $t$. In the Ramanujan case this yields an expansion of $O(t \sqrt{D})$. We stress that the permutations are tailor-made to the graph at hand and require no randomness to generate.
+
+Our proof, which holds for all sufficiently high girth graphs, makes heavy use of the powerful framework of finite free probability and interlacing families that was developed in a seminal sequence of works by Marcus, Spielman and Srivastava.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-11-20T09:05:18Z">Sunday, November 20 2022, 09:05</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3713,73 +3756,6 @@ vertical X-rays can be solved in polynomial time. Fatness is a property of the
 digital convex sets regarding the relative position of the left, right, top and
 bottom points of the set. The complexity of the reconstruction of the lattice
 sets which are not fat remains an open question.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-11-16T01:30:00Z">Wednesday, November 16 2022, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2211.08184'>Improved Coresets for Euclidean $k$-Means</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Vincent Cohen-Addad, Kasper Green Larsen, David Saulpic, Chris Schwiegelshohn, Omar Ali Sheikh-Omar</p><p>Given a set of $n$ points in $d$ dimensions, the Euclidean $k$-means problem
-(resp. the Euclidean $k$-median problem) consists of finding $k$ centers such
-that the sum of squared distances (resp. sum of distances) from every point to
-its closest center is minimized. The arguably most popular way of dealing with
-this problem in the big data setting is to first compress the data by computing
-a weighted subset known as a coreset and then run any algorithm on this subset.
-The guarantee of the coreset is that for any candidate solution, the ratio
-between coreset cost and the cost of the original instance is less than a
-$(1\pm \varepsilon)$ factor. The current state of the art coreset size is
-$\tilde O(\min(k^{2} \cdot \varepsilon^{-2},k\cdot \varepsilon^{-4}))$ for
-Euclidean $k$-means and $\tilde O(\min(k^{2} \cdot \varepsilon^{-2},k\cdot
-\varepsilon^{-3}))$ for Euclidean $k$-median. The best known lower bound for
-both problems is $\Omega(k \varepsilon^{-2})$. In this paper, we improve the
-upper bounds $\tilde O(\min(k^{3/2} \cdot \varepsilon^{-2},k\cdot
-\varepsilon^{-4}))$ for $k$-means and $\tilde O(\min(k^{4/3} \cdot
-\varepsilon^{-2},k\cdot \varepsilon^{-3}))$ for $k$-median. In particular, ours
-is the first provable bound that breaks through the $k^2$ barrier while
-retaining an optimal dependency on $\varepsilon$.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Cohen_Addad_V/0/1/0/all/0/1">Vincent Cohen-Addad</a>, <a href="http://arxiv.org/find/cs/1/au:+Larsen_K/0/1/0/all/0/1">Kasper Green Larsen</a>, <a href="http://arxiv.org/find/cs/1/au:+Saulpic_D/0/1/0/all/0/1">David Saulpic</a>, <a href="http://arxiv.org/find/cs/1/au:+Schwiegelshohn_C/0/1/0/all/0/1">Chris Schwiegelshohn</a>, <a href="http://arxiv.org/find/cs/1/au:+Sheikh_Omar_O/0/1/0/all/0/1">Omar Ali Sheikh-Omar</a></p><p>Given a set of $n$ points in $d$ dimensions, the Euclidean $k$-means problem
-(resp. the Euclidean $k$-median problem) consists of finding $k$ centers such
-that the sum of squared distances (resp. sum of distances) from every point to
-its closest center is minimized. The arguably most popular way of dealing with
-this problem in the big data setting is to first compress the data by computing
-a weighted subset known as a coreset and then run any algorithm on this subset.
-The guarantee of the coreset is that for any candidate solution, the ratio
-between coreset cost and the cost of the original instance is less than a
-$(1\pm \varepsilon)$ factor. The current state of the art coreset size is
-$\tilde O(\min(k^{2} \cdot \varepsilon^{-2},k\cdot \varepsilon^{-4}))$ for
-Euclidean $k$-means and $\tilde O(\min(k^{2} \cdot \varepsilon^{-2},k\cdot
-\varepsilon^{-3}))$ for Euclidean $k$-median. The best known lower bound for
-both problems is $\Omega(k \varepsilon^{-2})$. In this paper, we improve the
-upper bounds $\tilde O(\min(k^{3/2} \cdot \varepsilon^{-2},k\cdot
-\varepsilon^{-4}))$ for $k$-means and $\tilde O(\min(k^{4/3} \cdot
-\varepsilon^{-2},k\cdot \varepsilon^{-3}))$ for $k$-median. In particular, ours
-is the first provable bound that breaks through the $k^2$ barrier while
-retaining an optimal dependency on $\varepsilon$.
 </p>
         
         </div>
