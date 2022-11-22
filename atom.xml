@@ -10,6 +10,453 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Windows on Theory: AI will change the world, but won’t take it over by playing “3-dimensional chess”.</title>
+    <link href="https://windowsontheory.org/2022/11/22/ai-will-change-the-world-but-wont-take-it-over-by-playing-3-dimensional-chess/"/>
+    <id>http://windowsontheory.org/?p=8469</id>
+    <updated>2022-11-22T14:05:27+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;By &lt;a href=&quot;https://www.boazbarak.org/&quot;&gt;Boaz Barak&lt;/a&gt; and&amp;nbsp;&lt;a href=&quot;https://www.benjaminedelman.com/&quot;&gt;Ben Edelman&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;[Cross-posted on &lt;a href=&quot;https://www.lesswrong.com/&quot;&gt;Lesswrong&lt;/a&gt; (pending moderation);  See also Boaz’s posts on &lt;/em&gt;&lt;a href=&quot;https://windowsontheory.org/2022/05/23/why-i-am-not-a-longtermist/&quot;&gt;&lt;em&gt;&lt;u&gt;longtermism&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt; and &lt;/em&gt;&lt;a href=&quot;https://windowsontheory.org/2022/06/27/injecting-some-numbers-into-the-agi-debate/&quot;&gt;&lt;em&gt;&lt;u&gt;AGI via scaling&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; , as well as other &amp;#8220;&lt;a href=&quot;https://windowsontheory.org/category/philosophizing/&quot;&gt;philosophizing&lt;/a&gt;&amp;#8221; posts.&lt;em&gt;]&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;[Disclaimer:&amp;nbsp;Predictions are very hard, especially about the future. In fact, this is one of the points of this essay. Hence, while for concreteness, we phrase our claims as if we are confident about them, these are not mathematically proven facts. However we do believe that the claims below are more likely to be true than false, and, even more confidently, believe some of the ideas herein are underrated in current discussions around risks from future AI systems.]&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;In the past, the word “computer” was used to denote a person that performs calculations. Such people were highly skilled and were crucial to scientific enterprises. As described in the book “&lt;a href=&quot;https://en.wikipedia.org/wiki/Hidden_Figures_(book)&quot;&gt;&lt;u&gt;Hidden Figures&lt;/u&gt;&lt;/a&gt;”, until the 1960s, NASA still used human computers for the space mission. However, these days a $10 calculator can instantly perform calculations beyond the capabilities of every human on earth.&lt;/p&gt;
+
+
+
+&lt;p&gt;On a high level, the situation in Chess and other games is similar. Humans used to be the reigning champions in Chess and Go, but have now been surpassed by computers. Yet, while the success of computers in performing calculations has not engendered fears of them “taking over the world,” the growing powers of AI systems have more people increasingly worried about their long-term implications. Some reasons why the success of AI systems such as&amp;nbsp;&lt;a href=&quot;https://www.deepmind.com/blog/alphazero-shedding-new-light-on-chess-shogi-and-go&quot;&gt;&lt;u&gt;AlphaZero&lt;/u&gt;&lt;/a&gt; in Go and Chess is more concerning than the success of calculation programs include&lt;/p&gt;
+
+
+
+&lt;ol&gt;
+&lt;li&gt;Unlike when working with numerical computation programs, it seems that in Chess and Go humans are entirely “unnecessary.” There is no need to have a “human in the loop”. Computer systems are so powerful that no meaningful competition is possible between even the best human players and software running on commodity laptops.&lt;sup&gt;&lt;a href=&quot;#footnotes&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;&amp;nbsp;&lt;/li&gt;
+
+
+
+&lt;li&gt;Unlike the numerical algorithms used for calculations, we do not understand the inner workings of AI chess systems, especially ones trained without any hand-designed knowledge. These systems are to a large extent “black boxes,” which even their creators do not fully understand and hence cannot fully predict or control.&lt;br&gt;&amp;nbsp;&lt;/li&gt;
+
+
+
+&lt;li&gt;Moreover, AlphaZero was trained using a paradigm known as&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Reinforcement_learning&quot;&gt;&lt;u&gt;reinforcement learning&lt;/u&gt;&lt;/a&gt; or RL (see also this&amp;nbsp;&lt;a href=&quot;https://rltheorybook.github.io/&quot;&gt;&lt;u&gt;book&lt;/u&gt;&lt;/a&gt;). At a high level, RL can be described as training an agent to learn a&amp;nbsp;&lt;em&gt;strategy&lt;/em&gt; (i.e., a rule to decide on a move or action based on the history of all prior ones) in order to maximize a long-term reward (e.g., “win the game”). The result is a system that is capable of executing actions that may seem wrong in the short term (e.g., sacrificing a queen) but will help achieve the long-term goal.&amp;nbsp;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;p&gt;While RL so far has had very limited success outside specific realms such as games or low-complexity settings, the success of (non-RL) deep learning systems such as&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/GPT-3&quot;&gt;&lt;u&gt;GPT-3&lt;/u&gt;&lt;/a&gt; or&lt;a href=&quot;https://openai.com/dall-e-2/&quot;&gt;&lt;u&gt; Dall-E&lt;/u&gt;&lt;/a&gt; in open-ended text or image generation has raised fears of future AI systems that could both act in the real world, interacting with humans, physical, and digital systems, and do so in the pursuit of long term goals that may not be “aligned” with the interests of humanity. The fear is that such systems could become so powerful that they could end up destroying much or all of humanity. We refer to the above scenario as the&amp;nbsp;&lt;strong&gt;loss of control&lt;/strong&gt; scenario. It is distinct from other potential risks of Artificial Intelligence, including the risks of AI being used by humans to develop more lethal weapons, better ways for repressive regimes to surveil their population or more effective ways of spreading misinformation.&lt;/p&gt;
+
+
+
+&lt;p&gt;In this essay,&amp;nbsp;&lt;strong&gt;we claim that the “loss of control” scenario rests on a few key assumptions that are not justified by our current understanding of artificial intelligence research&lt;/strong&gt;. (This doesn’t mean the assumptions are necessarily wrong—just that we don’t believe the preponderance of the evidence supports them.)&amp;nbsp; To be clear, we are not “AI skeptics” by any means. We fully believe that over the next few decades, AI will continue to make breakthrough advances, and AI systems will surpass current human performance in many creative and technical fields, including, but not limited to, software engineering, hacking, marketing, visual design, (at least some components of) scientific discovery, and more. We are also not “techno-optimists.” The world already faces risks, and even existential ones, from the actions of humans. People who have had control over nuclear weapons over the course of history include Joseph Stalin, Kim Jong-un, Vladimir Putin, and many others whose moral judgment is suspect, to say the least. Nuclear weapons are not the only way humans can and have caused suffering on a mass scale; whether it is biological, chemical, or even so-called “conventional” weapons, climate change, exploitation of resources and people, or others, humans have a long history of pain and destruction. Like any new technology, AI will be (and in fact already has been) used by humans for warfare, manipulations, and other illicit goals. These risks are real and should be studied, but are not the focus of this essay.&lt;/p&gt;
+
+
+
+&lt;h2&gt;&lt;strong&gt;Our argument: an executive summary.&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;The loss of control scenario is typically described as a “battle” between AIs and humans, in which AIs would eventually win due to their superior abilities. However, unlike in Chess games, humans can and will use all the tools at their disposal, including many tools (e.g., code-completion engines, optimizers for protein folding, etc..) that are currently classified as “Artificial Intelligence”. So to understand the balance of power, we need to distinguish between systems or agents that have only&amp;nbsp;&lt;strong&gt;short-term goals&lt;/strong&gt;, versus systems that&amp;nbsp;&lt;strong&gt;plan their own long-term strategies&lt;/strong&gt;.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;The distinction above applies not just to artificial systems but also to human occupations as well. As an example, software developers, architects, engineers, or artists have&amp;nbsp;&lt;em&gt;short-term&lt;/em&gt; goals, in the sense that they provide some particular&amp;nbsp;&lt;em&gt;product&lt;/em&gt; (piece of software, design for a bridge, artwork, scientific paper) that can stand and be evaluated on its own merits. In contrast, leaders of companies and countries set&amp;nbsp;&lt;em&gt;long-term goals&lt;/em&gt; in the sense that they need to come up with a strategy that will yield benefits in the long run and cannot be assessed with confidence until it is implemented.&lt;sup&gt;&lt;a href=&quot;#footnotes&quot;&gt;[2&lt;/a&gt;&lt;a href=&quot;#fnh8xhqamyb87&quot;&gt;]&lt;/a&gt;&lt;/sup&gt;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;We already have at least partial “short-term AI”, even if not at the level of replacing e.g., human software engineers. The existence of successful “long-term AI” that can come up with strategies which are enacted over a scale of, say, years is still an open question, but for the sake of this essay we accept that assumption.&lt;/p&gt;
+
+
+
+&lt;p&gt;We believe that when evaluating the loss-of-control scenario, the relevant competition is not between humans and AI systems, but rather between humans aided with short-term AI systems and long-term AI systems (themselves possibly aided with short-term components). One thought experiment we have in mind is a competition between two firms: one with a human CEO, but with AI engineers and advisors, and the other a fully AI firm.&lt;/p&gt;
+
+
+
+&lt;p&gt;While it might seem “obvious” that eventually AI would be far superior to humans in all endeavors, including being a CEO, we argue that this is not so obviously the case. We agree that future AIs could possess superior information processing and cognitive skills &amp;#8211; a.k.a. “intelligence” &amp;#8211; compared to humans. But the evidence so far suggests the&amp;nbsp;&lt;strong&gt;advantages of these skills would be much more significant in some fields than in others&lt;/strong&gt;. We believe that this is uncontroversial &amp;#8211; for example, it’s not far-fetched to claim that AI would make much better chess players than kindergarten teachers. Specifically, there are&amp;nbsp;&lt;strong&gt;“diminishing returns”&lt;/strong&gt; for superior information-processing capabilities in the context of setting&lt;strong&gt; longer-term goals or strategies&lt;/strong&gt;. The long time horizon and the relevance of interactions among high numbers of agents (who are themselves often difficult to predict) make real-life large-scale systems&amp;nbsp;&lt;strong&gt;“chaotic”&lt;/strong&gt; in the sense that even with superior analytic abilities, they are still unpredictable (see Figure 1).&lt;/p&gt;
+
+
+
+&lt;p&gt;As a consequence, we believe the&lt;strong&gt; main fields where AI systems will yield advantages will be in short-term domains&lt;/strong&gt;. An AI engineer will be much more useful than an AI CEO (see also Table 2). We do not claim that it would be impossible to build an AI system that can conceive and execute long-term plans; only that this would not be where AI would have a “competitive advantage”. Short-term goals that can be evaluated and graded also mesh much better with the current paradigm of training AI systems on vast amounts of data.&lt;/p&gt;
+
+
+
+&lt;p&gt;We believe it&amp;nbsp;&lt;strong&gt;will be possible to construct very useful AIs with only short-term goals,&lt;/strong&gt; and in fact that the vast majority of AI’s power will come from such short-term systems. Even if a long-term AI system is built, it will likely&amp;nbsp;&lt;strong&gt;not have a significant advantage over humans assisted with short-term AIs&lt;/strong&gt;. There can be many risks even from short-term AI systems, but such machines cannot by design have any long-term goals, including the goal of taking over the world and killing all humans.&lt;sup&gt;&lt;a href=&quot;#footnotes&quot;&gt;[3&lt;/a&gt;&lt;a href=&quot;#fnk2m16hjnqf&quot;&gt;]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Perspective.&amp;nbsp;&lt;/strong&gt;Our analysis also has a lesson for AI safety research. Traditionally, approaches to mitigate the behavior of bad actors include&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Prevention:&amp;nbsp;&lt;/strong&gt;We prevent break-ins by putting locks on our doors, we prevent hacks by securing our systems, etc…&amp;nbsp;&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Deterrence:&amp;nbsp;&lt;/strong&gt;Another way we prevent bad actions is by ensuring that the negative consequences for these actions will outweigh benefits. This is one basis for the penal system, as well as the “mutually assured destruction” paradigm that has kept Russia and US from a nuclear war.&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Alignment:&lt;/strong&gt; We try to educate children and adults and socialize them to our values, so they are not motivated to pursue the actions we consider as bad.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;Much of AI safety research (wrt to the “loss of control” scenario) has been focused on the third approach, with the expectation that these systems may be so powerful that prevention and deterrence will be impossible. However, it is unclear to us that this will be the case. For example, it may well be that humans, aided by short-term AI systems, could vastly expand the scope of formally verified secure systems, and so prevent hacking attacks against sensitive resources. A huge advantage of research on prevention is that it is highly relevant not just to protect against hypothetical future bad AI actors, but also against current malicious humans. Such research might greatly&amp;nbsp;&lt;em&gt;benefit&amp;nbsp;&lt;/em&gt;from advances in AI code-completion engines and other tools, hence belying the notion that there is a “zero-sum game” between “AI safety” and “AI capabilities” research.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;Furthermore, one advantage of studying AI systems, as opposed to other organisms, is that we can try to extract useful modules and representations for them. (Indeed, this is already done in “transfer learning.”) Hence, it may be possible to extract useful and beneficial “short-term AI” even from long-term systems. Such restricted systems would still give most of the utility, but with less risk. Once again, increasing the capabilities of short-term AI systems will empower humans that are assisted by such systems.&lt;br&gt;&amp;nbsp;&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter is-resized&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/CrDF9kngAXpxxa1YLkXY1hdD7K2YMgMgvc8U8joLPJDX-PZyXIGMqR21cd7ebrszWUCK_VJEN2DcpHcb9NLbi6Y3Fi_HKlRzvirnv5wv_K2DW9md2s2WVpghmkoppI2Qros6HDeGRcwh7ZZHO9dWCAult2H-m1xjeiTgwy0O1GXtFShyNuk4EsopMR0rFQ&quot; alt=&quot;&quot; width=&quot;566&quot; height=&quot;383&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; Cartoon of the feasibility of predicting future events and the level of ability (i.e., cognitive skill / compute / data) required to do so (approximately) optimally. As the horizon grows, events have more inherent uncertainty and also require more skills/data to predict. However, many realistic systems are&amp;nbsp;&lt;em&gt;chaotic&lt;/em&gt; and become unpredictable at some finite horizon.&lt;sup&gt;&lt;a href=&quot;#footnotes&quot;&gt;[4&lt;/a&gt;&lt;a href=&quot;#fnmrfsb0zx5hf&quot;&gt;]&lt;/a&gt;&lt;/sup&gt;&amp;nbsp; At that point, even sophisticated agents cannot predict better than baseline heuristics, which require only a bounded level of skill.&lt;br&gt;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-table&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;em&gt;Profession&lt;/em&gt;&lt;/td&gt;&lt;td&gt;&lt;em&gt;Cognitive Score (standard deviations)&lt;/em&gt;&lt;/td&gt;&lt;td&gt;&lt;em&gt;Annual Earnings&amp;nbsp;&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Mayors&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;6.2 ( ≈ +0.6σ )&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;679K SEK&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Parliamentarians&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;6.4 ( ≈ +0.7σ )&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;802K SEK&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;CEOs (10-24 employees)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;5.8 ( ≈ +0.4σ )&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;675K SEK&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;CEOs (25-249 employees)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;6.2 ( ≈ +0.6σ )&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;1,046K SEK&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;CEOs (≥ 250 employees)&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;6.7 ( ≈ +0.85σ )&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;1,926K SEK&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Medical Doctors&lt;/td&gt;&lt;td&gt;7.4 ( ≈ +1.2σ )&lt;/td&gt;&lt;td&gt;640K SEK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Lawyers and Judges&lt;/td&gt;&lt;td&gt;6.8 ( ≈ +0.9σ )&lt;/td&gt;&lt;td&gt;568K SEK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Economists&lt;/td&gt;&lt;td&gt;7 ( ≈ +1σ )&lt;/td&gt;&lt;td&gt;530K SEK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Political Scientists&lt;/td&gt;&lt;td&gt;6.8 ( ≈ +0.9σ )&lt;/td&gt;&lt;td&gt;513 SEK&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Table 2:&lt;/strong&gt; Cognitive scores for Swedish men in various “elite” occupations, based on Swedish army entrance examinations, taken from&amp;nbsp;&lt;a href=&quot;https://academic.oup.com/qje/article-abstract/132/4/1877/3859758?redirectedFrom=fulltext&quot;&gt;&lt;u&gt;Dal Bó et al&lt;/u&gt;&lt;/a&gt; (Table II). Emphases ours: bold text corresponds to jobs that (in our view) require longer horizon decision-making across time or number of people. Note that despite being apparently less cognitively demanding, the “bold” professions are higher paying.&lt;/p&gt;
+
+
+
+&lt;h2&gt;&lt;strong&gt;A digression: what is intelligence&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Merriam-Webster&amp;nbsp;&lt;a href=&quot;https://www.merriam-webster.com/dictionary/intelligence&quot;&gt;&lt;u&gt;defines&lt;/u&gt;&lt;/a&gt; intelligence as “the skilled use of reason”, “the ability to learn or understand or to deal with new or trying situations”, or “to apply knowledge to manipulate one&amp;#8217;s environment or to think abstractly.” Intelligence is similar to&amp;nbsp;&lt;em&gt;computation&lt;/em&gt;, in the sense that its main components are the ability to take in observations (aka “inputs”) and use reasoning (aka “algorithms”) to decide on actions (aka “outputs”). In fact, in the currently dominant paradigm of AI, performance is primarily determined by the amount of computation performed during learning, and AI systems consist of enormous homogeneous circuits executing a series of simple operations on (a large quantity of) inputs and learned knowledge.&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Superintelligence:_Paths,_Dangers,_Strategies&quot;&gt;&lt;u&gt;Bostrom&lt;/u&gt;&lt;/a&gt; (Chapter 3) defines three forms of “superintelligence”: “speed superintelligence”, “collective superintelligence” and “quality superintelligence”. In the language of computing, speed super-intelligence corresponds to clock speed of processors, while collective super-intelligence corresponds to massive parallelism. “Quality superintelligence” is not well defined, but is presumably some type of emergent phenomenon from passing some thresholds of speed and parallelism.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;A fundamental phenomenon in computing is&amp;nbsp;&lt;em&gt;universality:&lt;/em&gt; there are many&amp;nbsp;&lt;em&gt;restricted&lt;/em&gt; computational models (finite state automata, context-free grammars, simply-typed lambda calculus), but once a computational model passes a certain threshold or&amp;nbsp;&lt;em&gt;phase transition&lt;/em&gt;, it becomes universal (a.k.a. “Turing complete”), and all universal models are equivalent to one another in computational power. For example, in a cellular automata, even though each cell is very restricted (can only store a constant amount of memory and process a finite rule based only on the state of its immediate neighbors), given enough cells we can simulate any arbitrarily complex machine.&lt;sup&gt;&lt;a href=&quot;#footnotes&quot;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&amp;nbsp; Once a system passes the universality transition, it is not bottlenecked any more by the complexity of an individual unit, but rather by the resources in the system as a whole.&lt;/p&gt;
+
+
+
+&lt;p&gt;In the animal kingdom, we seem to have undergone a similar phase transition, whereby humans are qualitatively more intelligent than any other animal or creature. It also seems to be the case that with the invention of language, the printing press, and the Internet, we (like cellular automata) are able to combine large numbers of humans to achieve feats of collective intelligence that are beyond any one individual. In particular, the fruits of the scientific revolution of the 1500-1600s increased the scale of GDP by 10,000-fold (to the extent such comparisons are meaningful) and the distance we can measure in space a trillion-fold, all with the same brains used by our hunter-gatherer ancestors (or&amp;nbsp;&lt;a href=&quot;https://www.frontiersin.org/articles/10.3389/fevo.2022.963568/full&quot;&gt;&lt;u&gt;maybe&lt;/u&gt;&lt;/a&gt; somewhat&amp;nbsp;&lt;a href=&quot;https://www.frontiersin.org/articles/10.3389/fevo.2021.742639/full&quot;&gt;&lt;u&gt;smaller&lt;/u&gt;&lt;/a&gt; ones).&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href=&quot;https://www.pnas.org/doi/full/10.1073/pnas.1100290108&quot;&gt;&lt;u&gt;Arguably&lt;/u&gt;&lt;/a&gt;, the fact humans are far better than chimpanzees at culturally transmitting knowledge is more significant than the gap in intelligence between individuals of the two species. Ever since the development of language, the intelligence of an individual human has&amp;nbsp;&lt;em&gt;not&lt;/em&gt; been a bottleneck for the achievements of humanity. The brilliance of individuals like Newton may have been crucial for speeding up the Scientific Revolution, but there have been brilliant individuals for millennia. The crucial difference between Newton and Archimedes is not that Newton was smarter, but rather that he lived at a later time and thus was able to stand on the shoulders of more giants. As another example, a collection of humans, aided by Internet-connected computers, can do much better at pretty much any intelligence feat (including but not limited to IQ exams) than any single human.&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/ENKzULhufaFT8CI2c_l-YKNl5XldYKJA8CjBtw9TrV6NFao1pEhyk9pmyDHSsA1iY0aZG-zJxv1wVb7zaF6zaZnyptxKs2CXe5zaS-40ZR_m_Sf59X2HorWz1xZdGFd-aSfhdgpjPPRfYpj5OWBbZMqkpCZEj9sdeGIcRXN1tjjxucVZPUcgbKyHiGLmkA&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Figure 3:&lt;/strong&gt; Measures of human progress both in terms of GDP and the scale of objects we can measure. Taken from&amp;nbsp;&lt;a href=&quot;https://windowsontheory.org/2022/05/03/philosophy-of-science-and-the-blockchain-a-book-review/&quot;&gt;&lt;u&gt;this blog post&lt;/u&gt;&lt;/a&gt;, with the first figure from&amp;nbsp;&lt;a href=&quot;https://ourworldindata.org/grapher/world-gdp-over-the-last-two-millennia&quot;&gt;&lt;u&gt;Our World in Data&lt;/u&gt;&lt;/a&gt;, and data for second figure from Terence Tao’s&amp;nbsp;&lt;a href=&quot;https://terrytao.wordpress.com/2010/10/10/the-cosmic-distance-ladder-ver-4-1/&quot;&gt;&lt;u&gt;cosmic ladder presentation&lt;/u&gt;&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;The “loss of control” scenario posits a&amp;nbsp;&lt;em&gt;second phase transition&lt;/em&gt;, whereby once AI systems become more powerful, they would not merely enable humans to achieve more objectives quicker but would themselves become as qualitatively superior to humans as humans are to other animals. We are suggesting an alternative future scenario, in which while AI would provide powerful new capabilities to human society that can (and unfortunately likely will) be used for ill as well as good, the AI systems themselves would not be the inevitable leaders of this society.&lt;/p&gt;
+
+
+
+&lt;p&gt;Indeed, our societies and firms do not currently select our leaders to be the top individuals in intellectual capacity. The evidence is very limited that “natural talent for leadership” (to the extent it exists) is as measurable and transferable as talent for chess, math, or athletics. There are many examples of leaders who have been extremely successful in one setting but failed in another which seems rather similar.&lt;sup&gt;&lt;a href=&quot;#footnotes&quot;&gt;[6]&lt;/a&gt;&lt;/sup&gt;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;Whether or not an AI system should be considered an “individual” is a matter for debate, but regardless, it is not at all clear that such individuals would be the leaders of the society, rather than being employed in domains such as software development and scientific discovery, where their superior information-processing capabilities would provide the most competitive advantage. Bostrom (Table 8 in Chapter 6) lists several potential “cognitive superpowers” that an AI system might develop. One category is&amp;nbsp;&lt;em&gt;“hacking”&lt;/em&gt;,&amp;nbsp;&lt;em&gt;“technology research”&lt;/em&gt;, and&amp;nbsp;&lt;em&gt;“economic productivity”&lt;/em&gt;. These are skills that correspond to jobs that are not in the domain of CEOs or leaders, but rather engineers, middle managers, scientists, etc. AI systems may well be able to assist or even replace such individuals, but this does not mean such systems will be the leaders of companies or countries.&lt;/p&gt;
+
+
+
+&lt;p&gt;Another task Bostrom considers is&amp;nbsp;&lt;em&gt;“intelligence amplification”&lt;/em&gt; which is the ability to improve AI systems. Again, it is quite possible that AI systems would help in improving other or the same AI systems, but this on its own does not imply that they would become infinitely powerful. Specifically, if indeed stronger AI would arrive through “scaling” of massive computational resources, then there would be&amp;nbsp;&lt;a href=&quot;https://windowsontheory.org/2022/06/27/injecting-some-numbers-into-the-agi-debate/&quot;&gt;&lt;u&gt;some hard limits&lt;/u&gt;&lt;/a&gt; on the ability to improve AI’s power solely through software updates. It is not at all clear that in terms of energy efficiency, AI systems would be much better (if at all) than humans. If the gains from scaling are far more important than gains from improved algorithms/architectures, then intelligence amplification might be primarily a function of resource acquisition rather than algorithmic research.&lt;/p&gt;
+
+
+
+&lt;p&gt;A third task listed is&amp;nbsp;&lt;em&gt;“social manipulation.”&lt;/em&gt; Here we must admit we are skeptical. Anyone who has ever tried to convince a dog to part with a bone or a child with a toy could attest to the diminishing returns that an intelligence advantage has in such a situation.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;Finally, Boston lists the cognitive superpower of&amp;nbsp;&lt;em&gt;“strategizing”&lt;/em&gt;, which is the ability to make long-term plans to achieve distant goals. This is the point we focus on in this essay. In short, our belief is that the chaotic nature of the real world implies diminishing returns to “three-dimensional chess” strategies that are beyond the comprehension of mere humans. Hence we do not believe that this would be a domain where AI systems have a strong competitive advantage.&lt;/p&gt;
+
+
+
+&lt;h2&gt;&lt;br&gt;&lt;strong&gt;A thought experiment: “The AI CEO vs. the AI advisor”&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;Before we delve into the technical(-ish) analysis, let us consider a thought experiment. At its heart, our argument is that the power of AI systems, present and future, will not come from the ability to make long-term strategic plans (“three-dimensional chess”) but rather from the ability to produce pieces of work that can be evaluated on their own terms. In short, we believe that even if a long-term malicious AI system is constructed, it will not have an insurmountable advantage over humans that are assisted with short-term AIs. To examine this, let us imagine two possible scenarios for how future AI could assist humans in making strategic decisions, such as running a company:&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;In the&amp;nbsp;&lt;strong&gt;“AI Advisor”&lt;/strong&gt; model, leaders could use AI to come up with simulations of the impact of decisions and possibly make some suggestions. However, humans would ultimately make the decision and evaluate their results. Key for this is that an AI would be able not just to produce a recommendation for a decision but explain how this decision would lead to improvement in some interpretable metric (e.g., revenue, market share, etc..). For example, a decision might be “let’s sell this product at a loss so we can increase our market share.”&lt;br&gt;&amp;nbsp;&lt;/li&gt;
+
+
+
+&lt;li&gt;In the&amp;nbsp;&lt;strong&gt;“AI CEO”&lt;/strong&gt; model, AIs could use their superior powers to choose an optimal long-term&amp;nbsp;&lt;em&gt;strategy&lt;/em&gt; as opposed to an individual decision. The strategy would not be “greedy”, in the sense of a sequence of steps each making progress on measurable goals, and it would not have any compact analysis of why it is good. Also, the only way to accrue the benefits of the strategy would be to continue pursuing it in the long term. Hence users would have to trust the AI and follow its recommendations blindly. For example, think of the case in Chess where an AI figures out that the best move is to sacrifice the queen because for any one of the possible opponent’s moves, there is a countermove, and so on and so forth. The only explanation for why this strategy is a good one may consist of an exponentially big game tree up to a certain depth.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;Our sense is that there is strong evidence that AI would be incredibly useful for making low-level decisions (i.e., optimizing objectives under constraints) once the high-level strategy was set. Indeed, by far the most exciting advances for deep learning have&amp;nbsp;&lt;em&gt;not&lt;/em&gt; been through reinforcement learning, but rather through techniques such as supervised and unsupervised learning. (With the major exception being games like Chess and Go, though even there, given the&amp;nbsp;&lt;a href=&quot;https://lichess.org/broadcast/tcec-season-21-superfinal--stockfish-vs-leela-chess-zero/rounds-1-100/Mtixisaw&quot;&gt;&lt;u&gt;success&lt;/u&gt;&lt;/a&gt; of non-RL engines such as&lt;a href=&quot;https://towardsdatascience.com/dissecting-stockfish-part-2-in-depth-look-at-a-chess-engine-2643cdc35c9a&quot;&gt;&lt;u&gt; Stockfish&amp;nbsp;&lt;/u&gt;&lt;/a&gt;versions 12 and later, it is not clear RL is needed.) There is less evidence that “AI advisors” would be useful for setting high-level strategies, but it is certainly plausible. In particular, the power of prompt-based generative models suggests that AI could be useful for generating realistic simulations that can help better convey the impact of various decisions and events. So, while “AI engineers” might be more useful than “AI advisors”, the latter might well have their role as well.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;In contrast, we believe that there is little to no evidence for the benefits of “three-dimensional chess” strategies of the type required for the “AI CEO” scenario. The real world (unlike the game of chess or even poker), involves a significant amount of unpredictability and chaos, which makes highly elaborate strategies depending on complex branching trees of moves and counter-moves far less useful. We also find it unlikely that savvy corporate boards would place blind trust in an AI CEO given that (as mentioned above) evaluation of even human CEOs tends to be controversial.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;There is an alternative viewpoint, which is that an AI CEO would basically be equivalent to a human CEO but with superhuman “intuition” or “gut feeling” that they cannot explain but somehow leads to decisions that yield enormous benefits in the long term. While this viewpoint cannot be ruled out, there is no evidence in current deep learning successes to support it. Moreover, often great CEO’s “gut feelings” are less about particular decisions, but more about the relative importance of particular metrics (e.g., prioritizing market share or user experience over short-term profits).&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;In any case, even if one does not agree with our judgment of the relative likelihoods of the above scenarios, we hope that this essay will help sharpen the questions that need to be studied, as well as what lessons can we draw about them from the progress so far of AI systems.&lt;/p&gt;
+
+
+
+&lt;h1&gt;&lt;strong&gt;Technical Analysis&lt;/strong&gt;&lt;/h1&gt;
+
+
+
+&lt;h2&gt;&lt;br&gt;&lt;strong&gt;1. Key hypotheses behind the “Loss of Control” Scenario&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;For the sake of the discussion below, let’s assume that at some future time there exists an artificial intelligence system that in a unified way achieves performance far superior to that achieved by all humans today across many fields. This is a necessary assumption for the “loss of control” scenario and an assumption we accept in this essay. For the sake of simplicity, below we refer to such AI systems as “powerful”.&lt;/p&gt;
+
+
+
+&lt;p&gt;We will also assume that powerful AI will be constructed following the general paradigm that has been so successful in the last decade of machine learning. Specifically, the system will be obtained by going through a large amount of data and computational steps to find some instantiation (a.k.a. “parameters” or “weights”) of it that optimizes some chosen objective. Depending on the choice of the objective, this paradigm includes supervised learning (“classify this image”), unsupervised learning (“predict the next token”), reinforcement learning (“win the game”), and more.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;For the loss of control scenario to occur, the following two hypotheses must be true:&lt;br&gt;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Loss-of-Control Hypothesis 1:&lt;/strong&gt; There will exist a powerful AI that has long-term goals.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;For an AI to have misaligned long-term goals, it needs to have some long-term goals in the first place. There is a question of how to define the “goals” of an AI system or even a human for that matter. In this essay, we say that an agent has a goal X if, looking retrospectively at the history of the agent’s actions, the most parsimonious explanation for its actions was that it was attempting to achieve X, subject to other constraints or objectives. For example, while chess experts often find it hard to understand why an engine such as AlphaZero makes a specific move, by the end of the game, they often understand the reasoning retrospectively and the sub-goals it was pursuing.&lt;/p&gt;
+
+
+
+&lt;p&gt;In our parlance, a goal is “long-term” if it has a similar horizon to goals such as&amp;nbsp;&lt;em&gt;“take over the world and kill all the humans”&lt;/em&gt; —requiring planning over large scales of time, complexity, and number of agents involved.&lt;sup&gt;&lt;a href=&quot;#footnotes&quot;&gt;[7]&lt;/a&gt;&lt;/sup&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;In contrast, we consider goals such as “win a chess game”, “come up with a plan for a bridge that minimizes cost and can carry X traffic”, or “write a piece of software that meets the requirements Y”, as short-term goals.&amp;nbsp; As another example, “come up with a mix of stocks to invest today that will maximize return next week” is a short-term goal, while “come up with a strategy for our company that will maximize our market cap over the next decade” or “come up with a strategy for our country that will maximize our GDP for the next generation” would be long-term goals. The distinction between “short-term goals AI” and “long-term goals AI” is somewhat similar to the distinction between “Tool AI” and “Agent AI” (see&amp;nbsp;&lt;a href=&quot;https://www.gwern.net/Tool-AI&quot;&gt;&lt;u&gt;here&lt;/u&gt;&lt;/a&gt;). However, what we call “short-term AI” encompasses much more than “Tool AI”, and absolutely includes systems that can take actions such as driving cars, executing trading actions, and so on and so forth.&lt;/p&gt;
+
+
+
+&lt;p&gt;We claim that for the “loss of control” scenario to materialize, we need not only Hypothesis 1 but also the following stronger hypothesis:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Loss-of-Control Hypothesis 2:&amp;nbsp;&lt;/strong&gt;In several key domains,&amp;nbsp;&lt;em&gt;only&lt;/em&gt; AIs with long-term goals will be powerful.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;By this, we mean that AIs with long-term goals would completely dominate other AIs, in that they would be much more useful for any user (or for furthering their own goals). In particular,&amp;nbsp; a country, company or organization that restricts itself to only using AIs with short term goals would be at a severe competitive disadvantage compared to one that uses AIs with long-term goals.&lt;/p&gt;
+
+
+
+&lt;p&gt;Why is Hypothesis 2 necessary for the “loss of control” scenario? The reason is that this scenario requires the “misaligned long-term powerful AI” to be not merely more powerful than humanity as it exists today, but more powerful than humanity in the future. Future humans will have at their disposal the assistance of short-term AIs.&lt;/p&gt;
+
+
+
+&lt;h2&gt;&lt;strong&gt;2. Understanding the validity of the hypotheses&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;We now make the following claims, which we believe cast significant doubt on Hypothesis 2.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;&lt;strong&gt;Claim 1: There are diminishing returns to information-processing skills with longer horizons.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Consider the task of predicting the consequences of a particular action in the future. In any sufficiently complex real-life scenario, the further away we attempt to predict, the more there is inherent uncertainty. For example, we can use advanced methods to predict the weather over a short time frame, but the further away the prediction, the more the system “regresses to the mean”, and&amp;nbsp;&lt;a href=&quot;https://www.globalagtechinitiative.com/digital-farming/data-management/weather-forecasting-how-does-it-work-and-how-reliable-is-it/&quot;&gt;&lt;u&gt;the less advantage&lt;/u&gt;&lt;/a&gt; that highly complex models have over simpler ones (see Figure 4). As in meteorology, this story seems to play out similarly in&amp;nbsp;&lt;a href=&quot;https://www.federalreserve.gov/econres/feds/the-accuracy-of-forecasts-prepared-for-the-federal-open-market-committee.htm&quot;&gt;&lt;u&gt;macroeconomic forecasting&lt;/u&gt;&lt;/a&gt;.&amp;nbsp; In general, we expect prediction success to behave like Figure 1 below—the error increases with the horizon until it plateaus to a baseline level of some simple heuristic(s). Hence while initially highly sophisticated models can beat simpler ones by a wide margin, this advantage eventually diminishes with the time horizon.&lt;/p&gt;
+
+
+
+&lt;p&gt;Tetlock’s&amp;nbsp;&lt;a href=&quot;https://www.lesswrong.com/posts/dvYeSKDRd68GcrWoe/ten-commandments-for-aspiring-superforecasters&quot;&gt;&lt;u&gt;first commandment&lt;/u&gt;&lt;/a&gt; to potential superforecasters is to triage: “Don’t waste time either on “clocklike” questions (where simple rules of thumb can get you close to the right answer) or on impenetrable “cloud-like” questions (where even fancy statistical models can’t beat the dart-throwing chimp). Concentrate on questions in the Goldilocks zone of difficulty, where effort pays off the most.”&amp;nbsp; Another way to say it is that outside of the Goldilocks zone, more effort or cognitive power does not give much returns.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image size-large&quot;&gt;&lt;a href=&quot;https://windowsontheory.files.wordpress.com/2022/11/image.png&quot;&gt;&lt;img data-attachment-id=&quot;8474&quot; data-permalink=&quot;https://windowsontheory.org/2022/11/22/ai-will-change-the-world-but-wont-take-it-over-by-playing-3-dimensional-chess/image-9/&quot; data-orig-file=&quot;https://windowsontheory.files.wordpress.com/2022/11/image.png&quot; data-orig-size=&quot;1224,440&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;image&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://windowsontheory.files.wordpress.com/2022/11/image.png?w=300&quot; data-large-file=&quot;https://windowsontheory.files.wordpress.com/2022/11/image.png?w=656&quot; src=&quot;https://windowsontheory.files.wordpress.com/2022/11/image.png?w=1024&quot; alt=&quot;&quot; class=&quot;wp-image-8474&quot; srcset=&quot;https://windowsontheory.files.wordpress.com/2022/11/image.png?w=1024 1024w, https://windowsontheory.files.wordpress.com/2022/11/image.png?w=150 150w, https://windowsontheory.files.wordpress.com/2022/11/image.png?w=300 300w, https://windowsontheory.files.wordpress.com/2022/11/image.png?w=768 768w, https://windowsontheory.files.wordpress.com/2022/11/image.png 1224w&quot; sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;&lt;strong&gt;Figure 4:&amp;nbsp;&lt;/strong&gt;&amp;nbsp;Left: Historical weather prediction accuracy data taken from a&amp;nbsp;&lt;a href=&quot;https://qr.ae/pvVKIJ&quot;&gt;&lt;u&gt;Quora answer of Mikko Strahlendorff&lt;/u&gt;&lt;/a&gt;. With technological advances, accuracy has improved significantly, but prediction accuracy sharply decays with time. Right: Figure on relative applicability of different methods from&amp;nbsp;&lt;a href=&quot;https://www.globalagtechinitiative.com/digital-farming/data-management/weather-forecasting-how-does-it-work-and-how-reliable-is-it/&quot;&gt;&lt;u&gt;Brent Shaw&lt;/u&gt;&lt;/a&gt;. Computationally intensive numerical prediction applies in a “goldilocks zone” of days to weeks.&lt;/p&gt;
+
+
+
+&lt;p&gt;In a variety of human endeavors, it seems that the cognitive skills needed to make decisions display a similar phenomenon. Occupations involving making decisions on the mid-range horizon, such as engineering, law, and medicine, require higher cognitive skills than those requiring long-term decisions such as CEOs or Politicians (see Table 3).&lt;/p&gt;
+
+
+
+&lt;p&gt;One argument people make is that intelligence is not just about IQ or “&lt;a href=&quot;https://www.lesswrong.com/posts/aiQabnugDhcrFtr9n/the-power-of-intelligence&quot;&gt;&lt;u&gt;booksmarts&lt;/u&gt;&lt;/a&gt;”. We do not dispute this. However, we do believe that the key potential advantage of AI systems over their human counterparts would be the ability to quickly process large amounts of information, which in humans is approximated by scores such as IQ. If that skill were key to successful leadership of companies or countries, then we would expect CEOs and leaders to come from the top 0.1% (≈ +3σ)&amp;nbsp; of the distribution of such scores. The data does not bear this out.&lt;sup&gt;&lt;a href=&quot;#footnotes&quot;&gt;[8]&lt;/a&gt;&lt;/sup&gt;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Claim 2:&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;It may be possible to extract powerful short-term modules from long-term systems.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;For Hypothesis 2 to be true, it should not be possible to take a powerful AI system with long-term goals, and extract from it modules that would be just as powerful in the key domains, but would have short-term goals. However, a nascent body of work identifies and extracts useful representations and sub-modules in deep neural networks. See, for example, this recent investigation of&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2111.09259&quot;&gt;&lt;u&gt;AlphaZero&lt;/u&gt;&lt;/a&gt;. We remark that some components of AlphaZero also inspired advances to the Stockfish Chess Engine (which is not trained using RL and involves a lot of hand-coded features), and whose latest version&amp;nbsp;&lt;a href=&quot;https://ccrl.chessdom.com/ccrl/4040/&quot;&gt;&lt;u&gt;does in fact beat&lt;/u&gt;&lt;/a&gt; RL trained methods a-la AlphaZero.&lt;/p&gt;
+
+
+
+&lt;p&gt;A related issue is that a consistent theme of theoretical computer science is that verification is easier than solving or proving. Hence even a complex system could explain its reasoning to a simple verifier, even if that reasoning required a significant effort to discover. There are similar examples in human affairs: e.g., even though the discovery of quantum mechanics took thousands of years and multiple scientific revolutions, we can still teach it to undergraduates today whose brains are no better than those of the ancient Greeks.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;h2&gt;&lt;br&gt;&lt;strong&gt;2.1 The impact of the deep learning paradigm on Hypothesis 2&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;The following claims have to do with the way we believe advanced AI systems will be constructed. We believe it is fair to assume that the paradigm of using massive data and computation to create such systems, by optimizing with respect to a certain objective, will continue to be used. Indeed, it is the success of this paradigm that has caused the rise in concerns about AI in the first place.&amp;nbsp; In particular, we want to make a clear distinction between the&amp;nbsp;&lt;em&gt;training objective&lt;/em&gt;, which the system is designed to optimize, versus the goals that the system appears to follow during its&amp;nbsp;&lt;em&gt;deployment&lt;/em&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Claim 3: There may be fundamental “scaling laws” governing the amount of performance AI systems can achieve as a function of the data and computational resources.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;One of the original worries in the AI risk literature is the “&lt;a href=&quot;https://edoras.sdsu.edu/~vinge/misc/singularity.html&quot;&gt;&lt;u&gt;singularity&lt;/u&gt;&lt;/a&gt;” scenario, by which an AI system continuously improves its own performance without limit. However, this assumes that a system can improve itself by rewriting its code, without requiring additional hardware resources.&amp;nbsp; If there are hard limits to what can be achieved with a certain level of resources, then such self-improvements will also hit diminishing returns. There has been significant evidence for&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/1909.12673&quot;&gt;&lt;u&gt;the&lt;/u&gt;&lt;/a&gt; “&lt;a href=&quot;https://arxiv.org/abs/2001.08361&quot;&gt;&lt;u&gt;scaling&lt;/u&gt;&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2203.15556&quot;&gt;&lt;u&gt;laws&lt;/u&gt;&lt;/a&gt;” hypothesis in recent years.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/b_3ZFahE15wnxQCDcRBEnnbGytqGJayIVfztpee7Ff3X8DkyqQT6VCpLABMnBUMy0dRaNpbQdpiWrwYGz_C-NSxovBP9E48nRixKyFT0PgnqhYdaxEUAeXMVxCtsT9ib4RSvhd7fvYgS3ZUJjg5HuQVpfwke49K8Ytys3mVX7hdCUbDugfkL42FnEZYi5Q&quot; style=&quot;width:450px;&quot;&gt;&lt;br&gt;&lt;strong&gt;Figure 5:&lt;/strong&gt; Scaling laws as computed by&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2203.15556&quot;&gt;&lt;u&gt;Hoffman et al&lt;/u&gt;&lt;/a&gt; (“Chinchilla”), see Figure A4 there. While the scaling laws are shaped differently from those of&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2001.08361&quot;&gt;&lt;u&gt;Kaplan et al&lt;/u&gt;&lt;/a&gt;, the qualitative point we make remains the same.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Claim 4: When training with reinforcement learning, the gradient signal may decrease exponentially with the length of the horizon.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Consider training a system that chooses a sequence of actions, and only gets a reward after H steps (where H is known as the “horizon”). If at any step there is some probability of an action leading to a “dead end” then the chances of getting a meaningful signal decrease&amp;nbsp;&lt;em&gt;exponentially&lt;/em&gt; with H. This is a fundamental obstacle to reinforcement learning and its applicability in open-ended situations with a very large space of actions, and a non-trivial cost for any interaction. In particular, one reason AlphaZero was successful was that in games such as chess, the space of legal moves is very constrained, and in the artificial context of a game it is possible to “reset” to a particular position: that is, one can try out different actions and see what their consequences are, and then go back to the same position. This is not possible when interacting in the real world.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;&amp;nbsp;As a corollary of Claim 4, we claim the following:&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Claim 5: There will be powerful AI systems that are trained with short-term objective functions.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;By this, we mean models that are trained on a reward/loss function that only depends on a relatively short span of actions/outputs. A canonical example of this is next-token prediction. That is, even if the eventual&amp;nbsp;&lt;em&gt;deployment&lt;/em&gt; of the model will involve it making actions and decisions over a long time horizon, its&amp;nbsp;&lt;em&gt;training&lt;/em&gt; will involve optimizing short-term rewards.&lt;/p&gt;
+
+
+
+&lt;p&gt;&amp;nbsp;One might think that the model&amp;#8217;s training does not matter as much, since once it is deployed in the real world, much of what it will learn will be “on the job”. However, this is not at all clear. Suppose the average worker reads/hears about 10 pages per day, which is roughly 5K tokens, leading to roughly 2M tokens per year. In contrast, future AIs will likely be trained on a trillion tokens or so, corresponding to the amount a worker will see in 5 million years! This means that while “fine-tuning” or “in context” learning can and will occur, many of the fundamental capabilities of the systems will be fixed at the time of training (as appears to be the case for pre-trained language models that are fine-tuned with human feedback).&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Claim 6: For a long-term goal to necessarily emerge from a system trained with a short-term objective, it must be correlated or causally related to that objective.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;If we assume that powerful AIs will be trained with short-term objectives, then Hypothesis 2 requires that (in several key domains)&amp;nbsp;&lt;em&gt;every&lt;/em&gt; such system will develop long-term goals. In fact, for the loss-of-control scenario to hold, every such system should develop more-or-less the same sort of goal (e.g., “take over the world”).&lt;/p&gt;
+
+
+
+&lt;p&gt;While it is certainly possible for systems that evolve from simple rules to develop complex behavior (e.g.,&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cellular_automaton&quot;&gt;&lt;u&gt;cellular automata&lt;/u&gt;&lt;/a&gt;), for a long-term goal to&amp;nbsp;&lt;em&gt;consistently emerge&lt;/em&gt; from mere short-term training, there should be some causal relation (or at least persistent correlation)&amp;nbsp; between the long-term goal and the short-term training objective. This is because an AI system can be modeled as a maximizer of the objective on which it was trained. Thus for such a system to&amp;nbsp;&lt;em&gt;always&lt;/em&gt; pursue a particular long-term goal, that goal should be correlated with maximizing the training objective.&lt;/p&gt;
+
+
+
+&lt;p&gt;We illustrate this with an example. Consider an AI software developer which is trained to receive a specification of a software task (say, given by some unit tests) and then come up with a module implementing it, obtaining a reward if the module passes the tests. Now suppose that in actual deployment, the system is also writing the tests that would be used to check its future outputs. We might worry that the system would develop a “long-term” goal to maximize total reward by writing one faulty test, taking the “hit” on it, and receiving a low reward, but then getting high rewards on future tasks. However, that worry would be unfounded, since the AI software developer system is trained to maximize the reward for each task separately, as opposed to maximizing the sum of rewards over time over adaptively chosen inputs of its own making.&lt;/p&gt;
+
+
+
+&lt;p&gt;Indeed, this situation can already happen today. Next-token prediction models such as GPT-3 are trained on the reward of the perplexity over a single token, but when they are deployed, we typically generate a long sequence of tokens. Now consider a model that simply outputs an endless repetition of the word “blah”. The first few repetitions would get very low rewards, since they are completely unexpected, but once n is large enough (e.g. 10 or so), if you’ve already seen n “blah”s then the probability that the n+1 st word is also “blah” is very high.&amp;nbsp; So if the model were to be maximizing total reward, it may well be worth “taking the hit” by outputting a few blahs. The key point is that GPT-3 does&amp;nbsp;&lt;em&gt;not&lt;/em&gt; do that. Since it is trained on predicting the next token for human-generated (as opposed to the text generated by itself), it will optimize for this short-term objective rather than the long-term one.&lt;/p&gt;
+
+
+
+&lt;p&gt;We believe the example above generalizes to many other cases. An AI system trained in the current paradigm is, by default, a maximizer of the objective it was trained on, rather than an autonomous agent that pursues goals of its own design. The shorter the horizon and more well-defined the objective is, the less likely that optimizing it will lead to systems that appear to take elaborate plans to pursue far-reaching (good or bad) long-term goals.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;h1&gt;&lt;br&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/h1&gt;
+
+
+
+&lt;p&gt;Given the above, we believe that while AI will continue to yield breakthroughs in many areas of human endeavor, we will not see a unitary nigh-omnipotent AI system that acts autonomously to pursue long-term goals. Concretely, even if a successful long-term AI system could be constructed, we believe that this is not a domain where AI will have a significant “competitive advantage” over humans.&lt;/p&gt;
+
+
+
+&lt;p&gt;Rather, based on what we know, it is likely that AI systems will have a “sweet spot” of a not-too-long horizon in which they can provide significant benefits. For strategic and long-term decisions that are far beyond this sweet spot, the superior information processing skills of AIs will give diminishing returns. (Although AIs will likely supply valuable input and analysis to the decision makers.).&amp;nbsp; An AI engineer may well dominate a human engineer (or at least one that is not aided by AI tools), but an AI CEO’s advantage will be much more muted, if any, over its human counterpart. Like our world, such a world will still involve much conflict and competition, with all sides aided by advanced technology, but without one system that dominates all others.&lt;/p&gt;
+
+
+
+&lt;p&gt;If our analysis holds, then it also suggests different approaches to mitigating AI risk than have been considered in the “AI safety” community. Currently, the prevailing wisdom in that community is that AI systems with long-term goals are a given, and hence the approach to mitigate their risk is to “align” these goals with human values. However, perhaps more evidence should be placed on building just-as-powerful AI systems that are restricted to short time horizons. Such systems could also be used to monitor and control other AIs, whether autonomous or directed by humans. This includes monitoring and hardening systems against hacking, detecting misinformation, and more. Regardless, we believe that more research needs to be done on understanding the internal representations of deep learning systems, and what features and strategies emerge from the training process (so we are happy that the AI safety community is putting increasing resources into “interpretability” research). There is&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2106.07682&quot;&gt;&lt;u&gt;some evidence&lt;/u&gt;&lt;/a&gt; that the same internal representations emerge regardless of the choices made in training.&lt;/p&gt;
+
+
+
+&lt;p&gt;There are also some technical research directions that would affect whether our argument is correct. For instance, we are interested in seeing work on the impacts of noise and unpredictability on the performance of reinforcement learning algorithms; in particular, on the&amp;nbsp;&lt;em&gt;relative&lt;/em&gt; performance of models of varying complexity (i.e.&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2104.03113&quot;&gt;&lt;u&gt;scaling&lt;/u&gt;&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2210.00849&quot;&gt;&lt;u&gt;laws&lt;/u&gt;&lt;/a&gt; for RL).&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Acknowledgments: &lt;/strong&gt;Thanks to&amp;nbsp;&lt;a href=&quot;mailto:jedelman@g.harvard.edu&quot;&gt;&lt;u&gt;Yafah Edelman&lt;/u&gt;&lt;/a&gt; for comments on an earlier version of this essay.&lt;/p&gt;
+
+
+
+&lt;h2 id=&quot;footnotes&quot;&gt;&lt;strong&gt;Footnotes&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;ol&gt;
+&lt;li&gt;During the 90s-2000s, human-engine teams were able to consistently beat engines in&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Advanced_chess&quot;&gt;&lt;u&gt;“advanced chess”&lt;/u&gt;&lt;/a&gt; tournaments, but no major advanced chess tournament seems to have taken place since the release of AlphaZero and the resulting jump in engine strength, presumably because the human half of each team would be superfluous.&lt;/li&gt;
+
+
+
+&lt;li&gt;The success of a bridge does hinge on its long-term stability, but stability can be tested before the bridge is built, and coming up with measures for load-bearing and other desiderata is standard practice in the engineering profession. An AI trained using such a short-term evaluation suite as its reward function may still “&lt;a href=&quot;https://arxiv.org/abs/2210.10760&quot;&gt;&lt;u&gt;overoptimize&lt;/u&gt;&lt;/a&gt;” against the metric, a la Goodhart’s Law, but this can likely be addressed with regularization techniques.&lt;/li&gt;
+
+
+
+&lt;li&gt;It may be the case that, for subtle reasons, if we try to train an AI with only short-term goals—e.g. by training in a series of short episodes—we could accidentally end up with an AI that has long-term goals. See Claim 6 below. But avoiding this pitfall seems like an easier problem than “aligning” the goals of an AI that is explicitly meant to care about the long-term.&lt;/li&gt;
+
+
+
+&lt;li&gt;We don’t mean that they satisfy&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Chaos_theory#Chaotic_dynamics&quot;&gt;&lt;u&gt;all the formal requirements&lt;/u&gt;&lt;/a&gt; to be defined as a chaotic system; though sensitivity to initial conditions is crucial.&lt;/li&gt;
+
+
+
+&lt;li&gt;For a nice illustration, see Sam Trajtenberg’s construction of&amp;nbsp;&lt;a href=&quot;https://twitter.com/boazbaraktcs/status/1586798286463270914?s=20&amp;amp;t=bEhHVwKP7N6yyp_s2K2HRw&quot;&gt;&lt;u&gt;Minecraft in Minecraft&lt;/u&gt;&lt;/a&gt;, or this construction of&amp;nbsp;&lt;a href=&quot;https://www.youtube.com/watch?v=xP5-iIeKXE8&quot;&gt;&lt;u&gt;Life in Life&lt;/u&gt;&lt;/a&gt;.&lt;/li&gt;
+
+
+
+&lt;li&gt;Steve Jobs at Apple vs NeXT is one such example; success and failure can themselves be difficult to distinguish even with the benefit of hindsight, as in the case of&amp;nbsp;&lt;a href=&quot;https://www.newyorker.com/magazine/2022/11/07/was-jack-welch-the-greatest-ceo-of-his-day-or-the-worst&quot;&gt;&lt;u&gt;Jack Welch&lt;/u&gt;&lt;/a&gt;.&lt;/li&gt;
+
+
+
+&lt;li&gt;For example, such planning might require setting up many companies to earn large amounts of funds, conducting successful political campaigns in several countries, constructing laboratories without being detected, etc. Some such “take-over scenarios” are listed by Bostrom, as well as&amp;nbsp;&lt;a href=&quot;https://forum.effectivealtruism.org/posts/zzFbZyGP6iz8jLe9n/agi-ruin-a-list-of-lethalities&quot;&gt;&lt;u&gt;Yudkowski&lt;/u&gt;&lt;/a&gt; and&amp;nbsp;&lt;a href=&quot;https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-2.html&quot;&gt;&lt;u&gt;Urban&lt;/u&gt;&lt;/a&gt;.&lt;/li&gt;
+
+
+
+&lt;li&gt;It is hypothetically possible that companies would be better off en masse if they hired smarter CEOs than they currently do, but given the high compensation CEOs receive this doesn’t seem like a particularly plausible equilibrium.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class=&quot;authors&quot;&gt;By Boaz Barak&lt;/p&gt;
+  </content>
+    <author>
+      <name>Windows on Theory</name>
+      <uri>https://windowsontheory.org</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Littlewood-Richardson coefficients and Kostka number</title>
     <link href="http://arxiv.org/abs/2211.10669"/>
     <id>http://arxiv.org/abs/2211.10669</id>
@@ -1577,25 +2024,6 @@ Email: cshiring@williams.edu&lt;/p&gt;
     &lt;p&gt;We are looking for applicants from all areas of algorithms and complexity, including related areas like mathematical optimization, distributed computing, and algorithms engineering. Postdoctoral fellowships are available at the algorithms and complexity department for two years through the Guest Program of our institute.&lt;/p&gt;
 &lt;p&gt;Website: &lt;a href=&quot;http://www.mpi-inf.mpg.de/d1postdoc&quot;&gt;http://www.mpi-inf.mpg.de/d1postdoc&lt;/a&gt;&lt;br /&gt;
 Email: d1office@mpi-inf.mpg.de&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Postdoc position in algorithms at University of Warwick (apply by December 6, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/11/17/postdoc-position-in-algorithms-at-university-of-warwick-apply-by-december-6-2022/"/>
-    <id>http://cstheory-jobs.org/2022/11/17/postdoc-position-in-algorithms-at-university-of-warwick-apply-by-december-6-2022/</id>
-    <updated>2022-11-17T08:54:03+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;In connection with a research grant of Dr. Ramanujan Sridharan and Prof. Graham Cormode at University of Warwick, UK, we are seeking excellent candidates for a postdoctoral fellow position in the area of design and analysis of parameterized and approximation algorithms.&lt;br /&gt;
-The position is for 18 months and start date can be negotiated (preferably by March 2023).&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://tinyurl.com/ksz8rjfa&quot;&gt;https://tinyurl.com/ksz8rjfa&lt;/a&gt;&lt;br /&gt;
-Email: r.maadapuzhi-sridharan@warwick.ac.uk&lt;/p&gt;
 &lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
   </content>
     <author>
