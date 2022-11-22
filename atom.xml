@@ -1014,11 +1014,19 @@ minimizing $L_k$-norms of machine loads, inspired by [Kalaitzis et al. SODA
     <id>https://scottaaronson.blog/?p=6821</id>
     <updated>2022-11-20T20:44:33+00:00</updated>
     <content type="html" xml:lang="en">
-    &lt;p&gt;Nearly halfway into my year at OpenAI, still reeling from the FTX collapse, I feel like it&amp;#8217;s finally time to start blogging my AI safety thoughts&amp;#8212;starting with a little appetizer course today, more substantial fare to come.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update (Nov. 22):&lt;/mark&gt;&lt;/strong&gt; Theoretical computer scientist and longtime friend-of-the-blog &lt;a href=&quot;https://www.boazbarak.org/&quot;&gt;Boaz Barak&lt;/a&gt; writes to tell me that, coincidentally, he and Ben Edelman just released a big essay advocating a version of &amp;#8220;Reform AI Alignment&amp;#8221; &lt;a href=&quot;https://windowsontheory.org/2022/11/22/ai-will-change-the-world-but-wont-take-it-over-by-playing-3-dimensional-chess/&quot;&gt;on Boaz&amp;#8217;s Windows on Theory blog&lt;/a&gt;, &lt;a href=&quot;https://www.lesswrong.com/posts/zB3ukZJqt3pQDw9jz/ai-will-change-the-world-but-won-t-take-it-over-by-playing-3&quot;&gt;as well as on LessWrong&lt;/a&gt;.  (I warned Boaz that, having taken the momentous step of posting to LessWrong, in 6 months he should expect to find himself living in a rationalist group house in Oakland&amp;#8230;)  Needless to say, I don&amp;#8217;t necessarily endorse their every word or vice versa, but there&amp;#8217;s a striking amount of convergence.  They also have a much more detailed discussion of (e.g.) which kinds of optimization processes they consider relatively safe.&lt;/p&gt;
 
 
 
-&lt;p&gt;Many people claim that AI alignment is little more a modern eschatological religion&amp;#8212;with prophets, an end-times prophecy, sacred scriptures, and even a god (albeit, one who doesn&amp;#8217;t exist quite yet).  The obvious response to that claim is that, while there&amp;#8217;s some truth to it, &amp;#8220;religions&amp;#8221; based around technology are a little different from the old kind, because technological progress &lt;em&gt;actually happens&lt;/em&gt; regardless of whether you believe in it.&lt;/p&gt;
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;Nearly halfway into my year at OpenAI, still reeling from the FTX collapse, I feel like it&amp;#8217;s finally time to start blogging my AI safety thoughts&amp;#8212;starting with a little appetizer course today, more substantial fare to come.&lt;/p&gt;
+
+
+
+&lt;p&gt;Many people claim that&amp;nbsp;AI&amp;nbsp;alignment is little more a modern eschatological religion&amp;#8212;with prophets, an end-times prophecy, sacred scriptures, and even a god (albeit, one who doesn&amp;#8217;t exist quite yet).  The obvious response to that claim is that, while there&amp;#8217;s some truth to it, &amp;#8220;religions&amp;#8221; based around technology are a little different from the old kind, because technological progress &lt;em&gt;actually happens&lt;/em&gt; regardless of whether you believe in it.&lt;/p&gt;
 
 
 
@@ -1026,7 +1034,7 @@ minimizing $L_k$-norms of machine loads, inspired by [Kalaitzis et al. SODA
 
 
 
-&lt;p&gt;Which brings me to a second response.  If AI alignment is a religion, it’s now large and established enough to have a thriving &amp;#8220;Reform&amp;#8221; branch, in addition to the original &amp;#8220;Orthodox&amp;#8221; branch epitomized by Eliezer Yudkowsky and &lt;a href=&quot;https://intelligence.org/&quot;&gt;MIRI&lt;/a&gt;.  As far as I can tell, this Reform branch now counts among its members a large fraction of the AI safety researchers now working in academia and industry.  (I’ll leave the formation of a Conservative branch of AI alignment, which reacts against the Reform branch by moving &lt;em&gt;slightly&lt;/em&gt; back in the direction of the Orthodox branch, as a problem for the future — to say nothing of Reconstructionist or Marxist branches.)&lt;/p&gt;
+&lt;p&gt;Which brings me to a second response.  If&amp;nbsp;AI&amp;nbsp;alignment is a religion, it’s now large and established enough to have a thriving &amp;#8220;Reform&amp;#8221; branch, in addition to the original &amp;#8220;Orthodox&amp;#8221; branch epitomized by Eliezer Yudkowsky and &lt;a href=&quot;https://intelligence.org/&quot;&gt;MIRI&lt;/a&gt;.&amp;nbsp; As far as I can tell, this Reform branch now counts among its members a large fraction of the&amp;nbsp;AI&amp;nbsp;safety&amp;nbsp;researchers now working in academia and industry. &amp;nbsp;(I’ll leave the formation of a Conservative branch of&amp;nbsp;AI&amp;nbsp;alignment, which reacts against the Reform branch by moving &lt;em&gt;slightly&lt;/em&gt; back in the direction of the Orthodox branch, as a problem for the future — to say nothing of Reconstructionist or Marxist branches.)&lt;/p&gt;
 
 
 
@@ -1034,23 +1042,23 @@ minimizing $L_k$-norms of machine loads, inspired by [Kalaitzis et al. SODA
 
 
 
-&lt;p&gt;(1) Orthodox AI-riskers tend to believe that humanity will survive or be destroyed based on the actions of a few elite engineers over the next decade or two.  Everything else&amp;#8212;climate change, droughts, the future of US democracy, war over Ukraine and maybe Taiwan&amp;#8212;fades into insignificance except insofar as it affects those engineers.&lt;/p&gt;
+&lt;p&gt;(1) Orthodox&amp;nbsp;AI-riskers tend to believe that humanity will survive or be destroyed based on the actions of a few elite engineers over the next decade or two.&amp;nbsp; Everything else&amp;#8212;climate change, droughts, the future of US democracy, war over Ukraine and maybe Taiwan&amp;#8212;fades into insignificance except insofar as it affects those engineers.&lt;/p&gt;
 
 
 
-&lt;p&gt;We Reform AI-riskers, by contrast, believe that AI might well pose civilizational risks in the coming century, but so does all the other stuff, and it&amp;#8217;s all tied together.  An invasion of Taiwan might change which world power gets access to TSMC GPUs.  Almost everything affects which entities pursue the AI scaling frontier and whether they&amp;#8217;re cooperating or competing to be first.&lt;/p&gt;
+&lt;p&gt;We Reform&amp;nbsp;AI-riskers, by contrast, believe that&amp;nbsp;AI&amp;nbsp;might well pose civilizational risks in the coming century, but so does all the other stuff, and it&amp;#8217;s all tied together.&amp;nbsp; An invasion of Taiwan might change which world power gets access to TSMC GPUs.&amp;nbsp; Almost everything affects which entities pursue the&amp;nbsp;AI&amp;nbsp;scaling frontier and whether they&amp;#8217;re cooperating or competing to be first.&lt;/p&gt;
 
 
 
-&lt;p&gt;(2) Orthodox AI-riskers believe that public outreach has limited value: most people can&amp;#8217;t understand this issue anyway, and will need to be saved from AI despite themselves.&lt;/p&gt;
+&lt;p&gt;(2) Orthodox&amp;nbsp;AI-riskers believe that public outreach has limited value: most people can&amp;#8217;t understand this issue anyway, and will need to be saved from&amp;nbsp;AI&amp;nbsp;despite themselves.&lt;/p&gt;
 
 
 
-&lt;p&gt;We Reform AI-riskers believe that trying to get a broad swath of the public on board with one&amp;#8217;s preferred AI policy is something close to a deontological imperative.&lt;/p&gt;
+&lt;p&gt;We Reform&amp;nbsp;AI-riskers believe that trying to get a broad swath of the public on board with one&amp;#8217;s preferred&amp;nbsp;AI&amp;nbsp;policy is something close to a deontological imperative.&lt;/p&gt;
 
 
 
-&lt;p&gt;(3) Orthodox AI-riskers worry almost entirely about an agentic, misaligned AI that deceives humans while it works to destroy them, along the way to maximizing its strange utility function.&lt;/p&gt;
+&lt;p&gt;(3) Orthodox&amp;nbsp;AI-riskers worry almost entirely about an agentic, misaligned&amp;nbsp;AI&amp;nbsp;that deceives humans while it works to destroy them, along the way to maximizing its strange utility function.&lt;/p&gt;
 
 
 
@@ -1058,7 +1066,7 @@ minimizing $L_k$-norms of machine loads, inspired by [Kalaitzis et al. SODA
 
 
 
-&lt;p&gt;(4) Orthodox AI-riskers have limited interest in AI safety research applicable to actually-existing systems (LaMDA, GPT-3, DALL-E2, etc.), seeing the dangers posed by those systems as basically trivial compared to the looming danger of a misaligned agentic AI.&lt;/p&gt;
+&lt;p&gt;(4) Orthodox&amp;nbsp;AI-riskers have limited interest in&amp;nbsp;AI&amp;nbsp;safety&amp;nbsp;research applicable to actually-existing systems (LaMDA, GPT-3, DALL-E2, etc.), seeing the dangers posed by those systems as basically trivial compared to the looming danger of a misaligned agentic&amp;nbsp;AI.&lt;/p&gt;
 
 
 
@@ -1066,7 +1074,7 @@ minimizing $L_k$-norms of machine loads, inspired by [Kalaitzis et al. SODA
 
 
 
-&lt;p&gt;(5) Orthodox AI-riskers worry most about the &amp;#8220;FOOM&amp;#8221; scenario, where some AI might cross a threshold from innocuous-looking to plotting to kill all humans in the space of hours or days.&lt;/p&gt;
+&lt;p&gt;(5) Orthodox&amp;nbsp;AI-riskers worry most about the &amp;#8220;FOOM&amp;#8221; scenario, where some&amp;nbsp;AI&amp;nbsp;might cross a threshold from innocuous-looking to plotting to kill all humans in the space of hours or days.&lt;/p&gt;
 
 
 
@@ -1074,7 +1082,7 @@ minimizing $L_k$-norms of machine loads, inspired by [Kalaitzis et al. SODA
 
 
 
-&lt;p&gt;(6) Orthodox AI-riskers talk a lot about a &amp;#8220;pivotal act&amp;#8221; to prevent a misaligned AI from ever being developed, which might involve (e.g.) using an aligned AI to impose a worldwide surveillance regime.&lt;/p&gt;
+&lt;p&gt;(6) Orthodox&amp;nbsp;AI-riskers talk a lot about a &amp;#8220;pivotal act&amp;#8221; to prevent a misaligned&amp;nbsp;AI&amp;nbsp;from ever being developed, which might involve (e.g.) using an aligned&amp;nbsp;AI&amp;nbsp;to impose a worldwide surveillance regime.&lt;/p&gt;
 
 
 
@@ -1082,7 +1090,7 @@ minimizing $L_k$-norms of machine loads, inspired by [Kalaitzis et al. SODA
 
 
 
-&lt;p&gt;(7) Orthodox AI-riskers feel a strong need to repudiate the norms of mainstream science, seeing them as too slow-moving to react in time to the existential danger of AI.&lt;/p&gt;
+&lt;p&gt;(7) Orthodox&amp;nbsp;AI-riskers feel a strong need to repudiate the norms of mainstream science, seeing them as too slow-moving to react in time to the existential danger of&amp;nbsp;AI.&lt;/p&gt;
 
 
 
@@ -1090,11 +1098,11 @@ minimizing $L_k$-norms of machine loads, inspired by [Kalaitzis et al. SODA
 
 
 
-&lt;p&gt;(8) Orthodox AI-riskers are maximalists about the power of pure, unaided superintelligence to just figure out how to commandeer whatever physical resources it needs to take over the world (for example, by messaging some lab over the Internet, and tricking it into manufacturing nanobots that will do the superintelligence&amp;#8217;s bidding).&lt;/p&gt;
+&lt;p&gt;(8) Orthodox&amp;nbsp;AI-riskers are maximalists about the power of pure, unaided superintelligence to just figure out how to commandeer whatever physical resources it needs to take over the world (for example, by messaging some lab over the Internet, and tricking it into manufacturing nanobots that will do the superintelligence&amp;#8217;s bidding).&lt;/p&gt;
 
 
 
-&lt;p&gt;We Reform AI-riskers believe that, here just like in high school, there are limits to the power of pure intelligence to achieve one&amp;#8217;s goals.  We&amp;#8217;d expect even an agentic, misaligned AI, if such existed, to need a stable power source, robust interfaces to the physical world, and probably allied humans before it posed much of an existential threat.&lt;/p&gt;
+&lt;p&gt;We Reform&amp;nbsp;AI-riskers believe that, here just like in high school, there are limits to the power of pure&amp;nbsp;intelligence&amp;nbsp;to achieve one&amp;#8217;s goals.&amp;nbsp; We&amp;#8217;d expect even an agentic, misaligned&amp;nbsp;AI, if such existed, to need a stable power source, robust interfaces to the physical world, and probably allied humans before it posed much of an existential threat.&lt;/p&gt;
 
 
 
