@@ -228,6 +228,44 @@ $k$-core decomposition statistics.
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">David Eppstein: A straight line through every face</title>
+    <link href="https://11011110.github.io/blog/2022/11/21/straight-line-through.html"/>
+    <id>https://11011110.github.io/blog/2022/11/21/straight-line-through</id>
+    <updated>2022-11-21T22:08:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;While updating my online publications list for something else I noticed that I had neglected to discuss one of my papers from earlier this fall: “Geodesic paths passing through all faces on a polyhedron” (with Demaine, Demaine, Ito, Katayama, Maruyama, and Uno), in the &lt;a href=&quot;https://www.rs.tus.ac.jp/jcdcggg/JCDCG3-2022Proceedings(r2).pdf&quot;&gt;booklet of abstracts from JCDCG&lt;sup&gt;3&lt;/sup&gt; 2022&lt;/a&gt;, the Japanese Conference on Discrete and Computational Geometry, Graphs, and Games.&lt;/p&gt;
+
+&lt;p&gt;The paper is kind of telegraphic, but the question it considers is easily stated. On the surface of a polyhedron, the analogue of a straight line is a geodesic, the shortest curve between two points. Which polyhedra have geodesics that cross through all of their faces? Maybe the 2d version is easier to explain: any two points on a convex polygon split the polygon into two arcs, and a geodesic is the shorter of the two. Which polygons have at least one geodesic that includes a segment from each edge?&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/2d-univ-geodesics.svg&quot; alt=&quot;Geodesics through all edges of a kite and a trapezoid&quot; style=&quot;width:100%;max-width:600px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The endpoints of such a geodesic \(A\) must be in different edges, because if they were in the same edge then the complementary arc \(\bar A\) would be a straight line segment, shorter than any other arc. Those two edges must be adjacent, because otherwise \(\bar A\) would include an edge missed by \(A\). And these two adjacent edges must be longer than the sum of all the other edges, so that \(A\) (a superset of the other edges) can be the shorter than \(\bar A\) (a subset of the two adjacent edges). That turns out to be an exact characterization: a convex polygon has two points whose geodesic passes through all edges, if and only if it has two adjacent edges that together have more than half the perimeter. For these polygons, the arc \(A\) can be chosen to have its endpoints near the outer vertices of the two long adjacent edges. So this is possible for all triangles, for any quadrilateral that is not a parallelogram, and for many other polygons of arbitrarily many sides. But it does not work for any centrally symmetric polygon, because each two adjacent sides are at least matched in length by the two opposite sides.&lt;/p&gt;
+
+&lt;p&gt;When we first discussed this problem (five years ago at a Barbados workshop), we started with the idea that no polyhedron with two parallel faces can have a geodesic through all faces. In particular, this would imply that the only regular polyhedron with a geodesic through all faces is a regular tetrahedron. But it’s not true! Instead, if \(P\) is any polygon with a geodesic through all edges, then long-enough right prisms over \(P\) have geodesics through all faces.&lt;/p&gt;
+
+&lt;p&gt;Geodesics on the surface of a convex polyhedron may be easier to understand by unfolding the polyhedron into a &lt;a href=&quot;https://en.wikipedia.org/wiki/Net_(polyhedron)&quot;&gt;net&lt;/a&gt;, a flat system of polygons in the plane, drawing the line segment between the endpoints of the geodesics in the net, and then folding it back up. The complication is that the line segment needs to stay inside the net, and there may be many different nets with different line segments.&lt;/p&gt;
+
+&lt;p&gt;Suppose \(P\) is a polygon with a geodesic \(A\) through all edges, like the yellow kite above. The prism over \(P\) has two copies of \(P\), connected by rectangles. It can be unfolded by unrolling the rectangles into one long rectangular strip, and connecting the two copies of \(P\) to the top and bottom of the strip, as shown below. (The lightly shaded copy of \(P\) is an alternative placement on the top of the strip; you should only keep one of the two top copies.) To make a curve through all faces on a prism over \(P\),
+attach each copy of \(P\) along one of its two adjacent long edges, and arrange the rectangular strip with these two attached copies at opposite ends. Then, connect a point on the top copy of \(P\), near the start of \(A\) on that copy, to another point on the bottom copy of \(P\), near the end of \(A\) on that copy. The resulting curve is shown below as the red segment on its net.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/prism-univ-geodesic.svg&quot; alt=&quot;A geodesic through all faces of an unfolded prism over a kite (red) and a different curve that is not a geodesic (blue)&quot; style=&quot;width:100%;max-width:600px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The red curve is definitely shorter than the curve that you would get by applying the same construction to \(\bar A\), which would be drawn in its unfolding as a segment with the same height but greater width. But what we have to worry more about is the blue curve in the figure, which cuts through one of the rectangular sides of the prism before cutting straight across one of the copies of \(P\). Could such a curve be shorter? It isn’t in the figure (I measured), but what about more generally?&lt;/p&gt;
+
+&lt;p&gt;When the height of the prism is small, the blue curve can be shorter. But in the limit as the height of the prism gets much larger than the size of \(P\), it cannot. The length of curves like the blue one, in the limit, approaches the height of the prism plus the height of the endpoint above the central rectangular region. Instead, in the limit, the length of curves like the red one approaches the height of the prism: the horizontal component of the curve contributes negligibly to its length. So for tall enough prisms the red curve is shorter than any curve like the blue one, and we have a universal geodesic. (You might think that attaching the top and bottom face in the middle of the rectangular strip would produce a shorter geodesic, and for the illustrated prism maybe it does, but as long as the endpoints are much closer to the edge of \(P\) than to the corner of \(P\), the same argument also applies to these alternative curves.)&lt;/p&gt;
+
+&lt;p&gt;Wataru Maruyama, a student of Hiro Ito and a coauthor of the paper, succeeded in proving that the other regular polyhedra indeed do not have universal geodesics. We could also prove that every tetrahedron or right prism over a triangle does have one. On the other hand, much more remains unknown. In particular, we do not have an answer to the following question: is there a centrally symmetric polyhedron with a universal geodesic?&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109386054076782254&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </content>
+    <author>
+      <name>David Eppstein</name>
+      <uri>https://11011110.github.io/blog/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: Faculty position at CS  department,   Boston University  (apply by December 2, 2022)</title>
     <link href="https://cstheory-jobs.org/2022/11/21/faculty-position-at-cs-department-boston-university-apply-by-december-2-2022/"/>
     <id>http://cstheory-jobs.org/2022/11/21/faculty-position-at-cs-department-boston-university-apply-by-december-2-2022/</id>
@@ -1563,30 +1601,6 @@ Email: r.maadapuzhi-sridharan@warwick.ac.uk&lt;/p&gt;
     <author>
       <name>CCI: jobs</name>
       <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: Sneerers</title>
-    <link href="https://scottaaronson.blog/?p=6813"/>
-    <id>https://scottaaronson.blog/?p=6813</id>
-    <updated>2022-11-17T01:48:08+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;In the past few weeks, I&amp;#8217;ve learned two ways to think about online sneerers that have been helping me tremendously, and that I wanted to share in case they&amp;#8217;re helpful to others:&lt;/p&gt;
-
-
-
-&lt;p&gt;First, they&amp;#8217;re like a train in a movie that&amp;#8217;s barreling directly towards the camera. If you haven&amp;#8217;t yet internalized how the medium works, absolutely terrifying! Run from the theater! If you &lt;em&gt;have&lt;/em&gt; internalized it, though, you can sit and watch without even flinching.&lt;/p&gt;
-
-
-
-&lt;p&gt;Second, the sneerers are like alligators&amp;#8212;and about as likely to be moved by your appeals to reason and empathy. But if, like me, you&amp;#8217;re lucky enough to have a loving family, friends, colleagues, and a nigh-uncancellable career, then it&amp;#8217;s as though you&amp;#8217;re standing on a bridge high above, looking down at the gators as they snap their jaws at you uselessly. There&amp;#8217;s &lt;em&gt;really&lt;/em&gt; no moral or intellectual obligation to go down to the swamp to wrestle them.  If they mean to attack you, let them at least come up to the bridge.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
     </author>
   </entry>
 
