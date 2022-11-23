@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-11-23T18:38:00Z">Wednesday, November 23 2022, 18:38</time>
+          <time class='timeago' datetime="2022-11-23T19:30:28Z">Wednesday, November 23 2022, 19:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -1854,6 +1854,485 @@ time, even for a favorable choice of $k$.
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-11-23T01:30:00Z">Wednesday, November 23 2022, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://gradientscience.org/modeldiff/'>ModelDiff: A Framework for Comparing Learning Algorithms</a></h3>
+        <p class='tr-article-feed'>from <a href='https://gradientscience.org/'>Gradient Science</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          
+
+<!--  -->
+<!--  -->
+
+
+
+
+
+
+
+
+
+<!--  -->
+<!-- 
+ -->
+<!--  -->
+
+
+<!--  -->
+<!-- chart.js -->
+
+
+<p>
+
+    Paper
+
+
+
+   Code
+
+<br>
+
+In our recent paper, we introduce a general framework, ModelDiff, for comparing machine learning models trained with two different algorithms. In this post, we illustrate our framework by example, comparing models trained from scratch and models fine-tuned from ImageNet.
+</p>
+
+Comparing Learning Algorithms
+
+<p>Building ML training pipelines involves many design choices. Even putting the choice of our training dataset aside,  we have to decide on a model architecture, an optimization method to train the model, and whether to include one or more regularization techniques. On top of all this, we have to play with a bunch of hyperparameters until we get models that perform well enough on our validation set. This entire pipeline—the aggregate of all train-time design choices—is a learning algorithm, a function mapping training datasets to ML models.</p>
+
+<p>Often, seemingly minor or innocuous tweaks to such a learning algorithm can affect the behavior of the resulting models in subtle and unintended ways. For example, pruning techniques that sparsify models prior to deployment end up hurting performance on underrepresented subpopulations. Random cropping—a standard data augmentation scheme that improves model performance—amplifies texture bias in image classification tasks.</p>
+
+<p>We often want to know how a given design choice modulates the specific features that models learn. To that end, our latest work develops a general framework (called ModelDiff) for performing fine-grained, feature-based comparisons of any two learning algorithms.</p>
+
+<p>In rest of this post, we will introduce our framework by walking through a specific case study: exploring the effect of ImageNet pre-training on the Waterbirds dataset. In this case study (spoiler alert), we’ll use ModelDiff to find that pre-trained models rely on the presence of a human face in the background to predict “landbird!” 
+Importantly, we’ll do this without having any prior hypotheses, domain knowledge, or dataset annotations.</p>
+
+<p>♦</p>
+
+Case Study: Using ModelDiff to study pre-training
+
+<p>A common design choice in supervised learning is whether to train a model from scratch or fine-tune it from one pre-trained on a larger dataset. (A standard choice for this larger dataset is the ImageNet dataset.)</p>
+
+<p>In this case study, we consider the Waterbirds dataset, for which the task is to classify images of birds overlaid on random backgrounds as either “landbirds” or “waterbirds.” Indeed, on Waterbirds, fine-tuning a pre-trained ImageNet model (rather than training from scratch) significantly improves overall performance.</p>
+
+<p>But is that all pre-training does? In particular, what other (possibly undesirable) impact does pre-training have on the fine-grained behavior of the learned model?</p>
+
+A data-centric perspective
+
+<p>The perspective we adopt in our paper is that models are different insofar as they use different features of the data to make predictions. But how do we know what features models use? This is where our method, ModelDiff, comes in. The core idea behind ModelDiff is that:</p>
+
+
+
+Models that use different features to arrive at their final predictions should
+rely on different training examples to make these predictions.
+
+
+
+<p>For instance, suppose we were comparing a texture-biased model to a shape-biased one: when faced with a test example containing a cat in a specific pose, the texture-biased model will rely on cats from the training set with similar texture (e.g., fur), whereas the shape-biased model will rely more on cats in a similar pose.</p>
+
+<p>Below, we translate this intuition into a practical algorithm, applying ModelDiff to our problem of comparing pre-trained models to those trained from scratch:</p>
+
+Step 1: Tracing predictions back to training data with datamodels
+
+<p>To understand which training examples models rely on, we use datamodels—an approach to understanding how instance-wise predictions of (deep) models depend on individual examples in the training dataset $S$. If you’re not familiar with datamodels, we recommend reading our previous posts, or (if you’re in a rush) reading the summary below:</p>
+
+
+
+
+&nbsp; A primer on datamodels (Click to expand)
+
+Linear datamodels. A linear datamodel $\theta_x$ for a test example $x$ is a linear function that takes as input a set of training data indices  $S’ \subset [n]$ and predicts the model output on $x$ if we were to train a model on just the corresponding training examples. It turns out that these linear datamodels can surprisingly accurately predict  how counterfactual changes to the training dataset change final model predictions! That is, we have that
+$$\theta_x^\top 1_{S'} \approx \mathbb{E}[\text{margin on $x$ of classifier trained on S’}],$$
+where $\mathbf{1}_{S’} \in \{0,1\}^n $ is the indicator vector of $S’$ in the training set $S$. Intuitively,  the datamodel weight $(\theta_{x})_i$ signifies the contribution of the $i$-th training example to the model’s performance on test example $x$.
+<br>
+<br>
+Datamodels as representations. As highlighted in the original paper on datamodels, we can view each linear datamodel $\theta_x$ as a representation (or embedding) of its corresponding test example $x$. It turns out that there are two key properties that arise from this perspective that naturally facilitate comparisons between the corresponding learning algorithms:
+<br>
+<ul>
+<li>Consistent basis:  For a fixed training dataset $S$, all
+linear datamodels share the same basis. That is, coordinate $i$ always
+corresponds to the importance of the $i$-th training example, regardless of what
+learning algorithm we use. This conveniently allows for model-agnostic
+comparisons between learning algorithms that may have entirely different latent
+representations.</li>
+<li>Predictiveness:  By design, datamodel vectors are causally predictive of model behavior. Trained models—potentially with different algorithms—that have (distributionally) different outputs on example $x$ end up with dissimilar datamodels for example $x$.</li>
+</ul>
+
+Taken together, these two properties enable a fine-grained analysis of models in terms of how they use training data to make predictions. 
+
+
+
+
+<p><br></p>
+
+<p>The first step in our pipeline is to compute two sets of datamodels 
+\(\{\theta^{(1)}_{x_i}: x_i \in T\}\) and 
+\(\{\theta^{(2)}_{x_i}: x_i \in T\}\)
+for the test set $T$, each set corresponding to one learning algorithm. In our case study here, the two sets of datamodels correspond to Waterbirds models trained with and without ImageNet pre-training, respectively.</p>
+
+<p>But before we go ahead, simply visualizing test images and their corresponding “most important training examples” (i.e., those corresponding to the highest datamodel weights) already suggests that models trained with/without ImageNet pre-training are influenced by qualitatively very different training examples:</p>
+
+
+    
+    Choose an Image
+    
+    
+        ♦
+        ♦
+    
+
+
+
+Step 2: Isolating differences with residual datamodels
+
+<p>The datamodels $\theta^{(1)}_x$ and $\theta^{(2)}_x$ describe how each algorithm uses the training data to make a prediction on a given example $x$. What we’re really interested in, however, are the differences in how these two algorithms use the training data. To isolate these differences,  we compute two residual datamodels, $\theta^{(1 \setminus 2)}_x$ and $\theta^{(2 \setminus 1)}_x$ for each example $x$.  As illustrated below, the residual datamodel ${\theta}^{(1\setminus 2)}_x$ represents the training direction that influences ImageNet-pretrained models on example $x$ after “projecting away” the component that also influences models trained from scratch:</p>
+
+<p>♦</p>
+
+<p>where $\widehat{\theta}_x$ denotes the $\ell_2$-normalized version of datamodel $\theta_x$. Analogously, the residual datamodel  $\theta^{(2 \setminus 1)}_x$ encodes a weighted combination of training examples that influence predictions of models trained from scratch but not of models pre-trained on ImageNet.</p>
+
+Step 3: Extracting distinguishing subpopulations with PCA
+
+<p>The outputs of Step 2 above—i.e., the two sets of residual datamodels  ${\theta^{(1 \setminus 2)}_i}$ and ${\theta^{(2 \setminus 1)}_i}$—capture how models trained with and without ImageNet pre-training differ, but only at the per-example level.  Our goal, however, is to understand global differences in model behavior. To this end, we use principal component analysis (PCA) to distill the residual datamodels into distinguishing training directions, i.e., representative directions in training set space (i.e., in  $\mathbb{R}^{n}$) that generally influence predictions of models trained with one algorithm but not the other.</p>
+
+<p>More concretely, we apply PCA to both sets of residual datamodels \(\{\theta^{(1 \setminus 2)}_i\}\) and \(\{\theta^{(2 \setminus 1)}_i\}\). The output is a set of principal components $v_j \in \mathbb{R}^n$—we can think of each component as a weighted combination of training examples.</p>
+
+<p>In our paper, we show how to quantify the importance of a given weighted combination of training examples to each algorithm: as shown in the plot below, the top principal components of the residual datamodels \(\{\theta^{(1 \setminus 2)}_i\}\) are important to Algorithm 1 (pre-training then fine tuning) but not to Algorithm 2 (training from scratch); and vice-versa for \(\{\theta^{(1 \setminus 2)}_i\}\).</p>
+
+<p>♦</p>
+
+Caption:
+Each red (resp. green) point represent distinguishing training direction—a weighted combination of training examples that influence predictions of models pre-trained on ImageNet significantly more (resp. less) than that of models trained from scratch. The $x$ and $y$ coordinates of each point represent the fraction of explained variance under Algorithm 1 (pre-training) and Algorithm 2 (training from scratch). 
+
+
+<p>We can now take each principal component and look at the test examples whose residual datamodels are most aligned with that direction: this yields a set of subpopulations distinguishing learning Algorithm 1 from 2, and vice versa.</p>
+
+Verifying subpopulations found by ModelDiff
+<p>How do we verify though that the distinguishing subpopulations ModelDiff output
+actually capture meaningful differences in model behavior?</p>
+
+<p>Let’s start by visualizing these subpopulations. That is, let’s take a look at
+the subpopulations surfaced by distinguishing directions annotated as
+$\textbf{A}$ and $\textbf{B}$ in the scatterplot above:</p>
+
+
+♦
+♦
+
+
+Caption: The subpopulations surfaced by the directions annotated $\textbf{A}$ (left)
+and $\textbf{B}$ (right) in the scatterplot above. The former has a common feature that is important 
+to from-scratch models but not to pre-trained ones; the latter has a common feature that is important
+to pre-trained models but not to from-scratch ones.
+
+
+<p>It seems these surfaced subpopulations indeed highlight semantically meaningful features! For example,</p>
+
+<ol>
+  <li>Subpopulation $\textbf{A}$ has images of yellow landbirds or images of yellow blotches in the background. This suggests that models trained from scratch (but not ImageNet-pretrained models) spuriously rely on a “yellow color” feature to predict landbirds.</li>
+  <li>Subpopulation $\textbf{B}$ surfaces images of landbirds with human faces in the background. This suggests ImageNet-pretrained models finetuned on Waterbirds (but not those trained from scratch) spuriously rely on a “human face” feature to predict landbirds.</li>
+</ol>
+
+<p>Ok, so these are plausible hypotheses, but can we go a step further and actually test whether these inferred features—yellow color and human face—influence model behavior as we suspect they do? Yes, via explicit counterfactual experiments!</p>
+
+<p>Indeed, if ImageNet-pretrained models rely on a “human face” feature, simply adding a face to image backgrounds should consistently change the behavior of these models (but not of models trained from scratch). Similarly, just adding a small yellow patch to images should influence models trained from scratch, but not those that are pre-trained on ImageNet. Is that the case?</p>
+
+<p>It turns out that it is! The plots below demonstrate the effect of adding a yellow patch or a human face on the confidence of models in predicting the class “landbird”.</p>
+
+<p>♦</p>
+
+Caption: Treatment effect of distinguishing feature transformations. Adding a yellow square patch to images makes models trained with and without ImageNet pre-training, on average, 9% more and 2% less confident in predicting the label "landbird." On the other hand, adding a human face to image backgrounds makes models trained with and without ImageNet pre-training, on average, 3% and 0% more confident in predicting the label "landbird."
+
+
+<p>In summary, ModelDiff allowed us to find that ImageNet pre-training significantly reduces dependence on some of the spurious correlations (e.g., yellow color $\rightarrow$ landbird) but also introduces new ones (e.g., human face $\rightarrow$ landbird).</p>
+
+Takeaways
+
+<p>In this post, we introduced a general framework, ModelDiff, for fine-grained, feature-based comparisons of any two learning algorithms. Our framework is general in that we can compare any set of learning algorithms that are applied to a common training set. (For instance, one could even compare a neural network to a random forest classifier.)</p>
+
+<p>In our paper, we further showcase using two other case studies—one on data augmentation and another on SGD hyperparameters—how ModelDiff can help us understand how standard design choices impact model behavior in a fine-grained manner.</p>
+
+<p>More broadly, our framework demonstrates how adopting a data-centric lens and abstracting away internal details of a given model can help us probe properties of learning algorithms.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ function main() {
+     const BASE_DIR = "/assets/modeldiff/";
+     
+     // Generation
+     var genImage1 = document.getElementById('gen0-1');
+     var genImage2 = document.getElementById('gen0-2');
+     var genSrcs = range(4).map((name) => BASE_DIR + 'dm' + name + "_query.png");
+     function genMapper(origSrc, id) {
+           genImage1.src = origSrc;
+           genImage2.src = origSrc.replace("_query.png", ".png");
+     }
+     activate_one_widget('gen', genSrcs, genMapper);
+ }
+ window.onload = main;
+
+
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <meta charset="utf-8" />
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+
+<link rel="stylesheet" href="/assets/multilabel/style.css" />
+
+<link rel="stylesheet" type="text/css" href="/assets/data-transfer/style.css" />
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<!-- chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<p><a class="bbutton" style="float: left; width: 45%;" href="https://arxiv.org/abs/2211.12491">
+<i class="fas fa-file-pdf"></i>
+    Paper
+</a>
+<a class="bbutton" style="float: left; width: 45%;" href="https://github.com/MadryLab/modeldiff">
+<i class="fab fa-github"></i>
+   Code
+</a>
+<br />
+<i>
+In our recent paper, we introduce a general framework, ModelDiff, for comparing machine learning models trained with two different algorithms. In this post, we illustrate our framework by example, comparing models trained from scratch and models fine-tuned from ImageNet.
+</i></p>
+
+<h2 id="comparing-learning-algorithms">Comparing Learning Algorithms</h2>
+
+<p>Building ML training pipelines involves many design choices. Even putting the choice of our training dataset aside,  we have to decide on a model architecture, an optimization method to train the model, and whether to include one or more regularization techniques. On top of all this, we have to play with a bunch of hyperparameters until we get models that perform well enough on our validation set. This entire pipeline—the aggregate of all train-time design choices—is a <em>learning algorithm</em>, a function mapping training datasets to ML models.</p>
+
+<p>Often, seemingly minor or innocuous tweaks to such a learning algorithm can affect the behavior of the resulting models in subtle and unintended ways. For example, pruning techniques that sparsify models prior to deployment end up <a href="https://arxiv.org/abs/1911.05248">hurting performance on underrepresented subpopulations</a>. Random cropping—a standard data augmentation scheme that improves model performance—<a href="https://arxiv.org/abs/1911.09071">amplifies texture bias</a> in image classification tasks.</p>
+
+<p>We often want to know how a given design choice modulates the specific features that models learn. To that end, <a href="https://arxiv.org/abs/2211.12491">our latest work</a> develops a general framework (called <em>ModelDiff</em>) for performing fine-grained, feature-based comparisons of any two learning algorithms.</p>
+
+<p>In rest of this post, we will introduce our framework by walking through a specific case study: exploring the effect of ImageNet pre-training on the Waterbirds dataset. In this case study (spoiler alert), we’ll use ModelDiff to find that pre-trained models rely on the presence of a human face in the background to predict “landbird!” 
+Importantly, we’ll do this without having any prior hypotheses, domain knowledge, or dataset annotations.</p>
+
+<p><img src="/assets/modeldiff/face_summary.png" style="width: 100%; max-width: 100%;" /></p>
+
+<h2 id="case-study-using-modeldiff-to-study-pre-training">Case Study: Using ModelDiff to study pre-training</h2>
+
+<p>A common design choice in supervised learning is whether to train a model from scratch or fine-tune it from one pre-trained on a larger dataset. (A standard choice for this larger dataset is the ImageNet dataset.)</p>
+
+<p>In this case study, we consider the <a href="https://arxiv.org/pdf/1911.08731.pdf">Waterbirds</a> dataset, for which the task is to classify images of birds overlaid on random backgrounds as either “landbirds” or “waterbirds.” Indeed, on Waterbirds, fine-tuning a pre-trained ImageNet model (rather than training from scratch) significantly improves overall performance.</p>
+
+<p>But is that <em>all</em> pre-training does? In particular, what other (possibly undesirable) impact does pre-training have on the fine-grained behavior of the learned model?</p>
+
+<h3 id="a-data-centric-perspective">A data-centric perspective</h3>
+
+<p>The perspective we adopt in <a href="https://arxiv.org/abs/2211.12491">our paper</a> is that models are different insofar as they use different features of the data to make predictions. But how do we know what features models use? This is where our method, ModelDiff, comes in. The core idea behind ModelDiff is that:</p>
+
+<div style="background:#EEE; padding: 20px; text-align: center;margin-bottom: 20px;">
+<em>
+Models that use different features to arrive at their final predictions should
+rely on different training examples to make these predictions.
+</em>
+</div>
+
+<p>For instance, suppose we were comparing a texture-biased model to a shape-biased one: when faced with a test example containing a cat in a specific pose, the texture-biased model will rely on cats from the training set with similar texture (e.g., fur), whereas the shape-biased model will rely more on cats in a similar pose.</p>
+
+<p>Below, we translate this intuition into a practical algorithm, applying ModelDiff to our problem of comparing pre-trained models to those trained from scratch:</p>
+
+<h3 id="step-1-tracing-predictions-back-to-training-data-with-datamodels">Step 1: Tracing predictions back to training data with datamodels</h3>
+
+<p>To understand which training examples models rely on, we use <em>datamodels</em>—an approach to understanding how instance-wise predictions of (deep) models depend on individual examples in the training dataset $S$. If you’re not familiar with datamodels, we recommend reading our <a href="https://gradientscience.org/datamodels-1/">previous</a> <a href="https://gradientscience.org/datamodels-2/">posts</a>, or (if you’re in a rush) reading the summary below:</p>
+<section class="container">
+<div>
+<div class="checkboxdiv">
+<input id="ac-1" name="accordion-1" type="checkbox" style="display: none;" />
+<label for="ac-1"><span id="titlespan" class="fas fa-chevron-right"></span><strong>&nbsp; A primer on datamodels</strong> (Click to expand)</label>
+<article class="small">
+<strong>Linear datamodels.</strong> A linear datamodel $\theta_x$ for a test example $x$ is a linear function that takes as input a set of training data indices  $S’ \subset [n]$ and predicts the model output on $x$ if we were to train a model on just the corresponding training examples. It turns out that these linear datamodels can surprisingly accurately predict  how counterfactual changes to the training dataset change final model predictions! That is, we have that
+$$\theta_x^\top 1_{S'} \approx \mathbb{E}[\text{margin on $x$ of classifier trained on S’}],$$
+where $\mathbf{1}_{S’} \in \{0,1\}^n $ is the indicator vector of $S’$ in the training set $S$. Intuitively,  the datamodel weight $(\theta_{x})_i$ signifies the contribution of the $i$-th training example to the model’s performance on test example $x$.
+<br />
+<br />
+<strong>Datamodels as representations.</strong> As highlighted in the original paper on datamodels, we can view each linear datamodel $\theta_x$ as a representation (or embedding) of its corresponding test example $x$. It turns out that there are two key properties that arise from this perspective that naturally facilitate comparisons between the corresponding learning algorithms:
+<br />
+<ul>
+<li><strong>Consistent basis</strong>:  For a fixed training dataset $S$, all
+linear datamodels share the same basis. That is, coordinate $i$ always
+corresponds to the importance of the $i$-th training example, regardless of what
+learning algorithm we use. This conveniently allows for model-agnostic
+comparisons between learning algorithms that may have entirely different latent
+representations.</li>
+<li><strong>Predictiveness</strong>:  By design, datamodel vectors are causally predictive of model behavior. Trained models—potentially with different algorithms—that have (distributionally) different outputs on example $x$ end up with dissimilar datamodels for example $x$.</li>
+</ul>
+
+Taken together, these two properties enable a fine-grained analysis of models in terms of how they use training data to make predictions. 
+</article>
+</div>
+</div>
+</section>
+<p><br /></p>
+
+<p>The first step in our pipeline is to compute two sets of datamodels 
+\(\{\theta^{(1)}_{x_i}: x_i \in T\}\) and 
+\(\{\theta^{(2)}_{x_i}: x_i \in T\}\)
+for the test set $T$, each set corresponding to one learning algorithm. In our case study here, the two sets of datamodels correspond to Waterbirds models trained with and without ImageNet pre-training, respectively.</p>
+
+<p>But before we go ahead, simply visualizing test images and their corresponding “most important training examples” (i.e., those corresponding to the highest datamodel weights) already suggests that models trained with/without ImageNet pre-training are influenced by qualitatively very different training examples:</p>
+
+<div class="widget">
+    <div class="choices_one_full" id="gen">
+    <span class="widgetheading" id="genclass">Choose an Image</span>
+    </div>
+    <div style="border-right: 3px white solid;">
+        <img id="gen0-1" class="image-container" style="width: 0%; margin: 0;" />
+        <img id="gen0-2" class="image-container" style="width: 100%; margin: 0;" />
+    </div>
+</div>
+<div style="clear:both;"></div>
+
+<h3 id="step-2-isolating-differences-with-residual-datamodels">Step 2: Isolating differences with residual datamodels</h3>
+
+<p>The datamodels $\theta^{(1)}_x$ and $\theta^{(2)}_x$ describe how each algorithm uses the training data to make a prediction on a given example $x$. What we’re really interested in, however, are the <em>differences</em> in how these two algorithms use the training data. To isolate these differences,  we compute two <em>residual datamodels</em>, $\theta^{(1 \setminus 2)}_x$ and $\theta^{(2 \setminus 1)}_x$ for each example $x$.  As illustrated below, the residual datamodel ${\theta}^{(1\setminus 2)}_x$ represents the training direction that influences ImageNet-pretrained models on example $x$ after “projecting away” the component that also influences models trained from scratch:</p>
+
+<p><img src="/assets/modeldiff/residual_dm.png" style="width: 40%;" /></p>
+
+<p>where $\widehat{\theta}_x$ denotes the $\ell_2$-normalized version of datamodel $\theta_x$. Analogously, the residual datamodel  $\theta^{(2 \setminus 1)}_x$ encodes a weighted combination of training examples that influence predictions of models trained from scratch but not of models pre-trained on ImageNet.</p>
+
+<h3 id="step-3-extracting-distinguishing-subpopulations-with-pca">Step 3: Extracting distinguishing subpopulations with PCA</h3>
+
+<p>The outputs of Step 2 above—i.e., the two sets of residual datamodels  ${\theta^{(1 \setminus 2)}_i}$ and ${\theta^{(2 \setminus 1)}_i}$—capture how models trained with and without ImageNet pre-training differ, but only at the per-example level.  Our goal, however, is to understand <em>global</em> differences in model behavior. To this end, we use principal component analysis (PCA) to distill the residual datamodels into <em>distinguishing training directions</em>, i.e., representative directions in training set space (i.e., in  $\mathbb{R}^{n}$) that generally influence predictions of models trained with one algorithm but not the other.</p>
+
+<p>More concretely, we apply PCA to both sets of residual datamodels \(\{\theta^{(1 \setminus 2)}_i\}\) and \(\{\theta^{(2 \setminus 1)}_i\}\). The output is a set of principal components $v_j \in \mathbb{R}^n$—we can think of each component as a weighted combination of training examples.</p>
+
+<p>In <a href="https://arxiv.org/abs/2211.12491">our paper</a>, we show how to quantify the importance of a given weighted combination of training examples to each algorithm: as shown in the plot below, the top principal components of the residual datamodels \(\{\theta^{(1 \setminus 2)}_i\}\) are important to Algorithm 1 (pre-training then fine tuning) but not to Algorithm 2 (training from scratch); and vice-versa for \(\{\theta^{(1 \setminus 2)}_i\}\).</p>
+
+<p><img src="/assets/modeldiff/explained_variance.png" style="width: 50%;" /></p>
+<div class="footnote" style="padding-left: 10px;">
+<strong>Caption</strong>:
+Each red (resp. green) point represent distinguishing training direction—a weighted combination of training examples that influence predictions of models pre-trained on ImageNet significantly more (resp. less) than that of models trained from scratch. The $x$ and $y$ coordinates of each point represent the fraction of explained variance under Algorithm 1 (pre-training) and Algorithm 2 (training from scratch). 
+</div>
+
+<p>We can now take each principal component and look at the test examples whose residual datamodels are most aligned with that direction: this yields a set of <em>subpopulations</em> distinguishing learning Algorithm 1 from 2, and vice versa.</p>
+
+<h3 id="verifying-subpopulations-found-by-modeldiff">Verifying subpopulations found by ModelDiff</h3>
+<p>How do we verify though that the distinguishing subpopulations ModelDiff output
+actually capture meaningful differences in model behavior?</p>
+
+<p>Let’s start by visualizing these subpopulations. That is, let’s take a look at
+the subpopulations surfaced by distinguishing directions annotated as
+$\textbf{A}$ and $\textbf{B}$ in the scatterplot above:</p>
+
+<div style="text-align: center; width: 100%;">
+<img src="/assets/modeldiff/subpop_face.png" style="width: 45%; margin-right: 2%; display: inline;" />
+<img src="/assets/modeldiff/subpop_yellow.png" style="width: 45%; margin-left: 2%; display: inline;" />
+</div>
+<div class="footnote" style="padding-left: 10px">
+<strong>Caption</strong>: The subpopulations surfaced by the directions annotated $\textbf{A}$ (left)
+and $\textbf{B}$ (right) in the scatterplot above. The former has a common feature that is important 
+to from-scratch models but not to pre-trained ones; the latter has a common feature that is important
+to pre-trained models but not to from-scratch ones.
+</div>
+
+<p>It seems these surfaced subpopulations indeed highlight semantically meaningful features! For example,</p>
+
+<ol>
+  <li>Subpopulation $\textbf{A}$ has images of yellow landbirds or images of yellow blotches in the background. This suggests that models trained from scratch (but not ImageNet-pretrained models) spuriously rely on a “yellow color” feature to predict landbirds.</li>
+  <li>Subpopulation $\textbf{B}$ surfaces images of landbirds with human faces in the background. This suggests ImageNet-pretrained models finetuned on Waterbirds (but not those trained from scratch) spuriously rely on a “human face” feature to predict landbirds.</li>
+</ol>
+
+<p>Ok, so these are plausible hypotheses, but can we go a step further and actually <em>test</em> whether these inferred features—yellow color and human face—influence model behavior as we suspect they do? Yes, via explicit counterfactual experiments!</p>
+
+<p>Indeed, if ImageNet-pretrained models rely on a “human face” feature, simply adding a face to image backgrounds should consistently change the behavior of these models (but not of models trained from scratch). Similarly, just adding a small yellow patch to images should influence models trained from scratch, but not those that are pre-trained on ImageNet. Is that the case?</p>
+
+<p>It turns out that it is! The plots below demonstrate the effect of adding a yellow patch or a human face on the confidence of models in predicting the class “landbird”.</p>
+
+<p><img src="/assets/modeldiff/counterfactuals_both.png" /></p>
+<div class="footnote" style="padding-left: 10px;">
+<strong>Caption</strong>: Treatment effect of distinguishing feature transformations. Adding a yellow square patch to images makes models trained with and without ImageNet pre-training, on average, 9% more and 2% less confident in predicting the label "landbird." On the other hand, adding a human face to image backgrounds makes models trained with and without ImageNet pre-training, on average, 3% and 0% more confident in predicting the label "landbird."
+</div>
+
+<p>In summary, ModelDiff allowed us to find that ImageNet pre-training significantly reduces dependence on some of the spurious correlations (e.g., yellow color $\rightarrow$ landbird) but also introduces new ones (e.g., human face $\rightarrow$ landbird).</p>
+
+<h2 id="takeaways">Takeaways</h2>
+
+<p>In this post, we introduced a general framework, ModelDiff, for fine-grained, feature-based comparisons of any two learning algorithms. Our framework is general in that we can compare <em>any</em> set of learning algorithms that are applied to a common training set. (For instance, one could even compare a neural network to a random forest classifier.)</p>
+
+<p>In <a href="https://arxiv.org/abs/2211.12491">our paper</a>, we further showcase using two other case studies—one on data augmentation and another on SGD hyperparameters—how ModelDiff can help us understand how standard design choices impact model behavior in a fine-grained manner.</p>
+
+<p>More broadly, our framework demonstrates how adopting a data-centric lens and abstracting away internal details of a given model can help us probe properties of learning algorithms.</p>
+
+<script src="/assets/scripts/onload.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/nicolaspanel/numjs@0.15.1/dist/numjs.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjs@6.6.0/dist/math.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+ function main() {
+     const BASE_DIR = "/assets/modeldiff/";
+     
+     // Generation
+     var genImage1 = document.getElementById('gen0-1');
+     var genImage2 = document.getElementById('gen0-2');
+     var genSrcs = range(4).map((name) => BASE_DIR + 'dm' + name + "_query.png");
+     function genMapper(origSrc, id) {
+           genImage1.src = origSrc;
+           genImage2.src = origSrc.replace("_query.png", ".png");
+     }
+     activate_one_widget('gen', genSrcs, genMapper);
+ }
+ window.onload = main;
+
+</script>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-11-23T00:00:00Z">Wednesday, November 23 2022, 00:00</time>
         </div>
       </div>
     </details>
@@ -3811,55 +4290,6 @@ The end-goal of our research is to prove a similar lower for multi-pass streamin
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-11-20T05:39:49Z">Sunday, November 20 2022, 05:39</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2022/160'>TR22-160 |  The Geometry of Rounding | 
-
-	Jason Vander Woude, 
-
-	Peter Dixon, 
-
-	A.  Pavan, 
-
-	Jamie Radcliffe, 
-
-	N. V. Vinodchandran</a></h3>
-        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          Rounding has proven to be a fundamental tool in theoretical computer science. By observing that rounding and partitioning of $\mathbb{R}^d$ are equivalent, we introduce the following natural partition problem which we call the secluded hypercube partition problem: Given $k\in\mathbb{N}$ (ideally small) and $\epsilon&gt;0$ (ideally large), is there a partition of $\mathbb{R}^d$ with unit hypercubes such that for every point $\vec{p} \in \mathbb{R}^d$, its closed $\epsilon$-neighborhood (in the $\ell_{\infty}$  norm) intersects at most $k$ hypercubes?
-
-We undertake a comprehensive study of this partition problem. We prove that for every $d\in\mathbb{N}$, there is an explicit (and efficiently computable) hypercube partition of $\mathbb{R}^d$ with $k = d+1$ and $\epsilon = \frac{1}{2d}$. We complement this construction by proving that the value of $k=d+1$ is the best possible (for any $\epsilon$) for a broad class of &quot;reasonable&quot; partitions including hypercube partitions. We also investigate the optimality of the parameter $\epsilon$ and prove that any partition in this broad class that has $k=d+1$, must have $\epsilon\leq\frac{1}{2\sqrt{d}}$. These bounds imply limitations of certain deterministic rounding schemes existing in the literature. Furthermore, this general bound is based on the currently known lower bounds for the dissection number of the cube, and improvements to this bound will yield improvements to our bounds.
-
-While our work is motivated by the desire to understand rounding algorithms, one of our main conceptual contributions is the introduction of the secluded hypercube partition problem, which fits well with a long history of investigations by mathematicians on various hypercube partitions/tilings of Euclidean  space.
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          Rounding has proven to be a fundamental tool in theoretical computer science. By observing that rounding and partitioning of $\mathbb{R}^d$ are equivalent, we introduce the following natural partition problem which we call the secluded hypercube partition problem: Given $k\in\mathbb{N}$ (ideally small) and $\epsilon&gt;0$ (ideally large), is there a partition of $\mathbb{R}^d$ with unit hypercubes such that for every point $\vec{p} \in \mathbb{R}^d$, its closed $\epsilon$-neighborhood (in the $\ell_{\infty}$  norm) intersects at most $k$ hypercubes?
-
-We undertake a comprehensive study of this partition problem. We prove that for every $d\in\mathbb{N}$, there is an explicit (and efficiently computable) hypercube partition of $\mathbb{R}^d$ with $k = d+1$ and $\epsilon = \frac{1}{2d}$. We complement this construction by proving that the value of $k=d+1$ is the best possible (for any $\epsilon$) for a broad class of &quot;reasonable&quot; partitions including hypercube partitions. We also investigate the optimality of the parameter $\epsilon$ and prove that any partition in this broad class that has $k=d+1$, must have $\epsilon\leq\frac{1}{2\sqrt{d}}$. These bounds imply limitations of certain deterministic rounding schemes existing in the literature. Furthermore, this general bound is based on the currently known lower bounds for the dissection number of the cube, and improvements to this bound will yield improvements to our bounds.
-
-While our work is motivated by the desire to understand rounding algorithms, one of our main conceptual contributions is the introduction of the secluded hypercube partition problem, which fits well with a long history of investigations by mathematicians on various hypercube partitions/tilings of Euclidean  space.
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-11-20T05:38:52Z">Sunday, November 20 2022, 05:38</time>
         </div>
       </div>
     </details>
