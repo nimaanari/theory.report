@@ -9,6 +9,29 @@
 
 
 <item>
+  <title>TR22-166 |  Characterizing the Multi-Pass Streaming Complexity for Solving Boolean CSPs Exactly | 
+
+	Raghuvansh Saxena, 
+
+	Gillat Kol, 
+
+	Dmitry Paramonov, 
+
+	Huacheng Yu</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/166</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/166</link>
+  <description>
+    We study boolean constraint satisfaction problems (CSPs) $\mathrm{Max}\text{-}\mathrm{CSP}^f_n$ for all predicates $f: \{ 0, 1 \} ^k \to \{ 0, 1 \}$. In these problems, given an integer $v$ and a list of constraints over $n$ boolean variables, each obtained by applying $f$ to a sequence of literals, we wish to decide if there is an assignment to the variables that satisfies at least $v$ constraints. We consider these problems in the streaming model, where the algorithm makes a small number of passes over the list of constraints.
+
+Our first and main result is the following complete characterization: For every predicate $f$, the streaming space complexity of the $\mathrm{Max}\text{-}\mathrm{CSP}^f_n$ problem is $\tilde{\Theta}(n^{\mathrm{deg}(f)})$, where $\mathrm{deg}(f)$ is the degree of $f$ when viewed as a multilinear polynomial. While the upper bound is obtained by a (very simple) one-pass streaming algorithm, our lower bound shows that a better space complexity is impossible even with constant-pass streaming algorithms. 
+
+Building on our techniques, we are also able to get an optimal $\Omega(n^2)$ lower bound on the space complexity of constant-pass streaming algorithms for the well studied $\mathrm{Max}\text{-}\mathrm{CUT}$ problem, even though it is not technically a $\mathrm{Max}\text{-}\mathrm{CSP}^f_n$ problem as, e.g., negations of variables and repeated constraints are not allowed.
+  </description>
+  <pubDate>2022-11-23 07:12:10 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Dismantling Quantum Hype with Tim Nguyen</title>
   <guid>https://scottaaronson.blog/?p=6830</guid>
   <link>https://scottaaronson.blog/?p=6830</link>
@@ -1822,27 +1845,6 @@ While our work is motivated by the desire to understand rounding algorithms, one
   </description>
   <pubDate>2022-11-19 09:00:00 UTC</pubDate>
   <author>Decentralized Thoughts</author>
-</item>
-
-<item>
-  <title>TR22-159 |  Deep Neural Networks: The Missing Complexity Parameter | 
-
-	Songhua He, 
-
-	Periklis Papakonstantinou</title>
-  <guid>https://eccc.weizmann.ac.il/report/2022/159</guid>
-  <link>https://eccc.weizmann.ac.il/report/2022/159</link>
-  <description>
-    Deep neural networks are the dominant machine learning model. We show that this model is missing a crucial complexity parameter. Today, the standard neural network (NN) model is a circuit whose gates (neurons) are ReLU units. The complexity of a NN is quantified by the depth (number of layers) and the size (number of neurons = depth times width). This work shows that this alone is insufficient, resulting in NNs with unreasonable computing power. We show that the correct way to talk about the size complexity of a NN is beside the number of neurons to consider the precision (or magnitude) of the weights of the ReLU units. The main message of this work is that if the precision of the weights is not considered in the complexity of the NN then one can engineer weights to &amp;quot;buy&amp;quot; exponentially many neurons for free. In summary, we make three theoretical contributions, potentially affecting many theoretical works on NNs.
-
-1. Every function $f:\{0,1\}^n\to\{0,1\}$ can be computed with $O(\sqrt{2^n})$ many neurons and constant fan-in per neuron; i.e.~exponential times less than Shannon&amp;#39;s classic lower bound for usual combinatorial circuits. 
-
-2. We give a new definition of circuit size that takes into account the precision/magnitude of the weights. Under this new definition of size we asymptotically match Shannon&amp;#39;s bound for NNs.
-
-3. We complement the above results showing that P-uniform NNs decide exactly P.
-  </description>
-  <pubDate>2022-11-18 19:13:20 UTC</pubDate>
-  <author>ECCC Papers</author>
 </item>
 
 </channel>
