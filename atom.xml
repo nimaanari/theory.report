@@ -10,23 +10,6 @@
 
 
   <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-171 |  Mr. Sarid Raengkrud  | 
-
-	SARID RAENGKRUD</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/171"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/171</id>
-    <updated>2022-11-27T06:54:57+00:00</updated>
-    <content type="html" xml:lang="en">
-    ??????????????????????????????
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR22-170 |  The Complexity of the Shortest Vector Problem | 
 
 	Huck Bennett</title>
@@ -2066,6 +2049,45 @@ overcome the lack of a simple geometric interpretation of the objective when $r
 algebraic properties of the determinant. We also critically use the properties
 of a convex programming relaxation of the problem introduced
 by~\cite{madan2020maximizing}.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: PIM-tree: A Skew-resistant Index for Processing-in-Memory</title>
+    <link href="http://arxiv.org/abs/2211.10516"/>
+    <id>http://arxiv.org/abs/2211.10516</id>
+    <updated>2022-11-22T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kang_H/0/1/0/all/0/1&quot;&gt;Hongbo Kang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhao_Y/0/1/0/all/0/1&quot;&gt;Yiwei Zhao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blelloch_G/0/1/0/all/0/1&quot;&gt;Guy E. Blelloch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dhulipala_L/0/1/0/all/0/1&quot;&gt;Laxman Dhulipala&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gu_Y/0/1/0/all/0/1&quot;&gt;Yan Gu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+McGuffey_C/0/1/0/all/0/1&quot;&gt;Charles McGuffey&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gibbons_P/0/1/0/all/0/1&quot;&gt;Phillip B. Gibbons&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The performance of today&#39;s in-memory indexes is bottlenecked by the memory
+latency/bandwidth wall. Processing-in-memory (PIM) is an emerging approach that
+potentially mitigates this bottleneck, by enabling low-latency memory access
+whose aggregate memory bandwidth scales with the number of PIM nodes. There is
+an inherent tension, however, between minimizing inter-node communication and
+achieving load balance in PIM systems, in the presence of workload skew. This
+paper presents PIM-tree, an ordered index for PIM systems that achieves both
+low communication and high load balance, regardless of the degree of skew in
+the data and the queries. Our skew-resistant index is based on a novel division
+of labor between the multi-core host CPU and the PIM nodes, which leverages the
+strengths of each. We introduce push-pull search, which dynamically decides
+whether to push queries to a PIM-tree node (CPU -&amp;gt; PIM-node) or pull the node&#39;s
+keys back to the CPU (PIM-node -&amp;gt; CPU) based on workload skew. Combined with
+other PIM-friendly optimizations (shadow subtrees and chunked skip lists), our
+PIM-tree provides high-throughput, (guaranteed) low communication, and
+(guaranteed) high load balance, for batches of point queries, updates, and
+range scans.
+&lt;/p&gt;
+&lt;p&gt;We implement the PIM-tree structure, in addition to prior proposed PIM
+indexes, on the latest PIM system from UPMEM, with 32 CPU cores and 2048 PIM
+nodes. On workloads with 500 million keys and batches of one million queries,
+the throughput using PIM-trees is up to 69.7x and 59.1x higher than the two
+best prior methods. As far as we know these are the first implementations of an
+ordered index on a real PIM system.
 &lt;/p&gt;
   </content>
     <author>
