@@ -329,6 +329,33 @@ hitting time, up to polylog factors.
 </item>
 
 <item>
+  <title>Finding Front-Door Adjustment Sets in Linear Time</title>
+  <guid>http://arxiv.org/abs/2211.16468</guid>
+  <link>http://arxiv.org/abs/2211.16468</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wienobst_M/0/1/0/all/0/1&quot;&gt;Marcel Wien&amp;#xf6;bst&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zander_B/0/1/0/all/0/1&quot;&gt;Benito van der Zander&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liskiewicz_M/0/1/0/all/0/1&quot;&gt;Maciej Li&amp;#x15b;kiewicz&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Front-door adjustment is a classic technique to estimate causal effects from
+a specified directed acyclic graph (DAG) and observed data. The advantage of
+this approach is that it uses observed mediators to identify causal effects,
+which is possible even in the presence of unobserved confounding. While the
+statistical properties of the front-door estimation are quite well understood,
+its algorithmic aspects remained unexplored for a long time. Recently, Jeong,
+Tian, and Barenboim [NeurIPS 2022] have presented the first polynomial-time
+algorithm for finding sets satisfying the front-door criterion in a given DAG,
+with an $O(n^3(n+m))$ run time, where $n$ denotes the number of variables and
+$m$ the number of edges of the graph. In our work, we give the first
+linear-time, i.e. $O(n+m)$, algorithm for this task, which thus reaches the
+asymptotically optimal time complexity, as the size of the input is
+$\Omega(n+m)$. We also provide an algorithm to enumerate all front-door
+adjustment sets in a given DAG with delay $O(n(n + m))$. These results improve
+the algorithms by Jeong et al. [2022] for the two tasks by a factor of $n^3$,
+respectively.
+&lt;/p&gt;
+  </description>
+  <pubDate>2022-11-30 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>TCS+ talk: Wednesday, November 30 — Nicole Wein, DIMACS (Reminder)</title>
   <guid>http://tcsplus.wordpress.com/?p=655</guid>
   <link>https://tcsplus.wordpress.com/2022/11/29/tcs-talk-wednesday-november-30-nicole-wein-dimacs-reminder/</link>
@@ -1923,25 +1950,6 @@ Email: prashant@comp.nus.edu.sg&lt;/p&gt;
   </description>
   <pubDate>2022-11-24 09:00:00 UTC</pubDate>
   <author>Decentralized Thoughts</author>
-</item>
-
-<item>
-  <title>TCS+ talk: Wednesday, November 30 — Nicole Wein, DIMACS</title>
-  <guid>http://tcsplus.wordpress.com/?p=649</guid>
-  <link>https://tcsplus.wordpress.com/2022/11/23/tcs-talk-wednesday-november-30-nicole-wein-dimacs/</link>
-  <description>
-    &lt;p&gt;&lt;/p&gt;
-
-
-&lt;p&gt;The next TCS+ talk will take place this coming Wednesday, November 30th at 1:00 PM Eastern Time (10:00 AM Pacific Time, 19:00 Central European Time, 18:00 UTC). &lt;a href=&quot;http://people.csail.mit.edu/nwein/&quot;&gt;&lt;strong&gt;Nicole Wein&lt;/strong&gt;&lt;/a&gt; from DIMACS will speak about &amp;#8220;&lt;em&gt;Online List Labeling: Breaking the &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Clog%5E2+n&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Clog%5E2+n&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Clog%5E2+n&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;log^2 n&quot; class=&quot;latex&quot; /&gt; Barrier&lt;/em&gt;&amp;#8221; (abstract below).&lt;/p&gt;
-&lt;p&gt;You can reserve a spot as an individual or a group to join us live by signing up on &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/next-tcs-talk&quot;&gt;the online form&lt;/a&gt;. Registration is &lt;em&gt;not&lt;/em&gt; required to attend the interactive talk, and the link will be posted on the website the day prior to the talk; however, by registering in the form, you will receive a reminder, along with the link. (The recorded talk will also be posted &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/past-talks&quot;&gt;on our website&lt;/a&gt; afterwards) As usual, for more information about the TCS+ online seminar series and the upcoming talks, or to &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/suggest-a-talk&quot;&gt;suggest&lt;/a&gt; a possible topic or speaker, please see &lt;a href=&quot;https://sites.google.com/view/tcsplus/&quot;&gt;the website&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;Abstract: The online list labeling problem is a basic primitive in data structures. The goal is to store a dynamically-changing set of n items in an array of m slots, while keeping the elements in sorted order. To do so, some items may need to be moved over time, and the goal is to minimize the number of items moved per insertion/deletion. When &lt;img src=&quot;https://s0.wp.com/latex.php?latex=m+%3D+Cn&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=m+%3D+Cn&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=m+%3D+Cn&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;m = Cn&quot; class=&quot;latex&quot; /&gt; for some constant &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C%3E1&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C%3E1&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C%3E1&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&amp;gt;1&quot; class=&quot;latex&quot; /&gt;, an upper bound of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=O%28%5Clog%5E2+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=O%28%5Clog%5E2+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=O%28%5Clog%5E2+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;O(&amp;#92;log^2 n)&quot; class=&quot;latex&quot; /&gt; items moved per insertion/deletion has been known since 1981. There is a matching lower bound for deterministic algorithms, but for randomized algorithms, the best known lower bound is &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5COmega%28%5Clog+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5COmega%28%5Clog+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5COmega%28%5Clog+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;Omega(&amp;#92;log n)&quot; class=&quot;latex&quot; /&gt;, leaving a gap between upper and lower bounds. We improve the upper bound, providing a randomized data structure with expected &lt;img src=&quot;https://s0.wp.com/latex.php?latex=O%28%5Clog%5E%7B3%2F2%7D+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=O%28%5Clog%5E%7B3%2F2%7D+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=O%28%5Clog%5E%7B3%2F2%7D+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;O(&amp;#92;log^{3/2} n)&quot; class=&quot;latex&quot; /&gt; items moved per insertion/deletion.&lt;/p&gt;
-&lt;p&gt;Joint work with Michael Bender, Alexander Conway, Martin Farach-Colton, Hanna Komlos, and William Kuszmaul&lt;/p&gt;
-&lt;/blockquote&gt;&lt;p class=&quot;authors&quot;&gt;By plustcs&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-24 04:20:07 UTC</pubDate>
-  <author>TCS+ Seminar Series</author>
 </item>
 
 </channel>
