@@ -9,6 +9,123 @@
 
 
 <item>
+  <title>Google&amp;#8217;s Sycamore chip: no wormholes, no superfast classical simulation either</title>
+  <guid>https://scottaaronson.blog/?p=6871</guid>
+  <link>https://scottaaronson.blog/?p=6871</link>
+  <description>
+    &lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/sycamore.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is going to be one of the many &lt;em&gt;Shtetl-Optimized&lt;/em&gt; posts that I didn&amp;#8217;t feel like writing, but was ultimately given no choice but to write.&lt;/p&gt;
+
+
+
+&lt;p&gt;News, social media, and my inbox have been abuzz with two claims about Google&amp;#8217;s Sycamore quantum processor, the one that now has 72 superconducting qubits.&lt;/p&gt;
+
+
+
+&lt;p&gt;The first claim is that Sycamore created a wormhole (!)&amp;#8212;a historic feat possible only with a quantum computer.  See for example the &lt;em&gt;&lt;a href=&quot;https://www.nytimes.com/2022/11/30/science/physics-wormhole-quantum-computer.html&quot;&gt;New York Times&lt;/a&gt;&lt;/em&gt; and &lt;em&gt;&lt;a href=&quot;https://www.quantamagazine.org/physicists-create-a-wormhole-using-a-quantum-computer-20221130/&quot;&gt;Quanta&lt;/a&gt;&lt;/em&gt; and &lt;em&gt;&lt;a href=&quot;https://www.nature.com/articles/d41586-022-03832-z&quot;&gt;Nature&lt;/a&gt;&lt;/em&gt; (and of course, the &lt;a href=&quot;https://www.nature.com/articles/s41586-022-05424-3&quot;&gt;actual paper&lt;/a&gt;), but also &lt;a href=&quot;https://www.math.columbia.edu/~woit/wordpress/?p=13181&quot;&gt;Peter Woit&amp;#8217;s blog&lt;/a&gt; and &lt;a href=&quot;https://chadorzel.substack.com/p/wormhole-to-2006&quot;&gt;Chad Orzel&amp;#8217;s blog&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;The second claim is that Sycamore&amp;#8217;s pretensions to quantum supremacy have been refuted.  The latter claim is based on &lt;a href=&quot;https://arxiv.org/abs/2211.03999&quot;&gt;this recent preprint&lt;/a&gt; by Dorit Aharonov, Xun Gao, Zeph Landau, Yunchao Liu, and Umesh Vazirani.  No one&amp;#8212;least of all me!&amp;#8212;doubts that they&amp;#8217;ve proven a powerful new technical result, thereby solving a significant open problem in the theory of noisy random circuit sampling.  On the other hand, it might be less obvious how to interpret their result and put it in proper context.  See also a &lt;a href=&quot;https://www.youtube.com/watch?v=zDnA1gu4QO0&quot;&gt;YouTube video&lt;/a&gt; of Yunchao speaking about the new result at this week&amp;#8217;s Simons Institute Quantum Colloquium, and of a panel discussion afterwards, where Yunchao, Umesh Vazirani, Adam Bouland, Sergio Boixo, and your humble blogger discuss what it means.&lt;/p&gt;
+
+
+
+&lt;p&gt;On their face, the two claims about Sycamore might seem to be in tension.  After all, if Sycamore can&amp;#8217;t do anything beyond what a classical computer can do, then how exactly did it &lt;em&gt;bend the topology of spacetime&lt;/em&gt;?&lt;/p&gt;
+
+
+
+&lt;p&gt;I submit that neither claim is true.  On the one hand, Sycamore did not &amp;#8220;create a wormhole.&amp;#8221;  On the other hand, it remains pretty hard to simulate with a classical computer, as far as anyone knows.  To summarize, then, our knowledge of what Sycamore can and can&amp;#8217;t do remains much the same as last week or last month!&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;Let&amp;#8217;s start with the wormhole thing.  I can&amp;#8217;t really improve over how I put it in Dennis Overbye&amp;#8217;s &lt;em&gt;NYT&lt;/em&gt; piece:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;“The most important thing I’d want New York Times readers to understand is this,” Scott Aaronson, a quantum computing expert at the University of Texas in Austin, wrote in an email. “If this experiment has brought a wormhole into actual physical existence, then a strong case could be made that you, too, bring a wormhole into actual physical existence every time you sketch one with pen and paper.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;More broadly, Overbye&amp;#8217;s &lt;em&gt;NYT&lt;/em&gt; piece explains with admirable clarity what this experiment did and didn&amp;#8217;t do&amp;#8212;leaving only the question &amp;#8220;wait &amp;#8230; if that&amp;#8217;s all that&amp;#8217;s going on here, then why is it being written up in the &lt;em&gt;NYT&lt;/em&gt;??&amp;#8221;  This is a rare case where, in my opinion, the &lt;em&gt;NYT&lt;/em&gt; did a much better job than &lt;em&gt;Quanta&lt;/em&gt;, which unequivocally accepted and amplified the &amp;#8220;QC creates wormhole&amp;#8221; framing.&lt;/p&gt;
+
+
+
+&lt;p&gt;Alright, but what&amp;#8217;s the actual basis for the &amp;#8220;QC creates wormhole&amp;#8221; claim, for those who don&amp;#8217;t want to leave this blog to read about it?  Well, the authors used 9 of Sycamore&amp;#8217;s 72 qubits to do a crude simulation of something called the &lt;a href=&quot;https://en.wikipedia.org/wiki/Sachdev%E2%80%93Ye%E2%80%93Kitaev_model&quot;&gt;SYK (Sachdev-Ye-Kitaev) model&lt;/a&gt;.  SYK has become popular as a toy model for quantum gravity.  In particular, it has a holographic dual description, which can indeed involve a spacetime with one or more wormholes.  So, they ran a quantum circuit that crudely modelled the SYK dual of a scenario with information sent through a wormhole.  They then confirmed that the circuit did what it was supposed to do&amp;#8212;i.e., what any laptop could easily calculate that it &lt;em&gt;would&lt;/em&gt; do ().&lt;/p&gt;
+
+
+
+&lt;p&gt;So, the objection is obvious: if someone simulates a black hole on their classical computer, they don&amp;#8217;t say they thereby &amp;#8220;created a black hole.&amp;#8221;  Or if they do, journalists don&amp;#8217;t uncritically repeat the claim.  Why should the standards be different just because we&amp;#8217;re talking about a quantum computer rather than a classical one?&lt;/p&gt;
+
+
+
+&lt;p&gt;Did we at least &lt;em&gt;learn anything new&lt;/em&gt; about SYK wormholes from thie simulation?  Alas, not really, because 9 qubits take a mere 2&lt;sup&gt;9&lt;/sup&gt;=512 complex numbers to specify their wavefunction, and are therefore trivial to simulate on a laptop.  There&amp;#8217;s some argument in the paper that, if the simulation were scaled up to (say) 100 qubits, then maybe we &lt;em&gt;would&lt;/em&gt; learn something new about SYK.  Even then, however, we&amp;#8217;d mostly learn about certain corrections that arise &lt;em&gt;because&lt;/em&gt; the simulation was being done with &amp;#8220;only&amp;#8221; n=100 qubits, rather than in the n→∞ limit where SYK is rigorously understood.  But while those corrections, arising when n is &amp;#8220;neither too large nor too small,&amp;#8221; would surely be interesting to specialists, they&amp;#8217;d have no obvious bearing on the prospects for creating real physical wormholes in our universe.&lt;/p&gt;
+
+
+
+&lt;p&gt;And yet, this is not a sensationalistic misunderstanding invented by journalists.  Some prominent quantum gravity theorists themselves&amp;#8212;including some of my close friends and collaborators&amp;#8212;persist in talking about the simulated SYK wormhole as &amp;#8220;actually being&amp;#8221; a wormhole.  What are they thinking?&lt;/p&gt;
+
+
+
+&lt;p&gt;Daniel Harlow&amp;#8217;s argument to me was that, if you had two entangled quantum computers, one on Earth and the other in the Andromeda galaxy, and if they were both simulating SYK, and if Alice on Earth and Bob in Andromeda both &lt;em&gt;uploaded their own brains into their respective quantum simulations&lt;/em&gt;, then he believes they could have the subjective experience of jumping into a wormhole and meeting each other in the middle&amp;#8212;something that wouldn&amp;#8217;t have been possible with a merely classical simulation.  Of course,  this depends on some strong assumptions not merely about quantum gravity, but also about the metaphysics of consciousness&amp;#8212;and even if it&amp;#8217;s true, it&amp;#8217;s &lt;em&gt;still&lt;/em&gt; unclear to me that we shouldn&amp;#8217;t call it a simulated wormhole for simulated people.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;Alright, let&amp;#8217;s move on to the claim that quantum supremacy has been refuted.  What Aharonov et al. actually show, building on &lt;a href=&quot;https://arxiv.org/abs/1810.03176&quot;&gt;earlier work by Gao and Duan&lt;/a&gt;, is that Random Circuit Sampling, with a constant rate of noise per gate and no error-correction, can&amp;#8217;t provide a &lt;em&gt;scalable&lt;/em&gt; approach to quantum supremacy.  Or more precisely: as the number of qubits n goes to infinity, and assuming you&amp;#8217;re in the &amp;#8220;anti-concentration regime&amp;#8221; (which in practice probably means: the depth of your quantum circuit is at least ~log(n)), there&amp;#8217;s a classical algorithm to sample the quantum circuit&amp;#8217;s output distribution in poly(n) time (albeit, not yet a practical algorithm).&lt;/p&gt;
+
+
+
+&lt;p&gt;Here&amp;#8217;s what&amp;#8217;s crucial to understand: this is &lt;em&gt;100% consistent&lt;/em&gt; with what those of us working on quantum supremacy had assumed since at least 2016.  We &lt;em&gt;knew&lt;/em&gt; that if you tried to scale Random Circuit Sampling to 200 or 500 or 1000 qubits, while you also increased the circuit depth proportionately, the signal-to-noise ratio would become exponentially small, meaning that your quantum speedup would disappear.  That&amp;#8217;s why, from the very beginning, we targeted the &amp;#8220;practical&amp;#8221; regime of 50-100 qubits: a regime where you can still see explicitly that you&amp;#8217;re exploiting a 2&lt;sup&gt;50&lt;/sup&gt;&amp;#8211; or 2&lt;sup&gt;100&lt;/sup&gt;-dimensional Hilbert space for computational advantage, thereby confirming one of the main predictions of quantum computing theory, but you &lt;em&gt;also&lt;/em&gt; have a signal that (as it turned out) is large enough to see with heroic effort.  To their credit, Aharonov et al. explain all this perfectly clearly in their abstract and introduction.  I&amp;#8217;m just worried that &lt;em&gt;others&lt;/em&gt; aren&amp;#8217;t reading their paper as carefully as they should be!&lt;/p&gt;
+
+
+
+&lt;p&gt;So then, what&amp;#8217;s the new advance in the Aharonov et al. paper?  Well, there had been some hope that circuit depth ~log(n) might be a sweet spot, where an exponential quantum speedup might both exist &lt;em&gt;and&lt;/em&gt; survive constant noise, even in the asymptotic limit of n→∞ qubits.  Nothing in Google&amp;#8217;s or USTC&amp;#8217;s actual Random Circuit Sampling experiments depended on that hope, but it would&amp;#8217;ve been nice if it were true.  What Aharonov et al. have now done is to kill that hope, using powerful techniques involving summing over Feynman paths in the Pauli basis.&lt;/p&gt;
+
+
+
+&lt;p&gt;Stepping back, what &lt;em&gt;is&lt;/em&gt; the current status of quantum supremacy based on Random Circuit Sampling?  I would say it&amp;#8217;s still standing, but more precariously than I&amp;#8217;d like&amp;#8212;underscoring the need for new and better quantum supremacy experiments.  In more detail, &lt;a href=&quot;https://arxiv.org/abs/2111.03011&quot;&gt;Pan, Chen, and Zhang&lt;/a&gt; have shown how to simulate Google&amp;#8217;s 53-qubit Sycamore chip classically, using what I estimated to be 100-1000X the electricity cost of running the quantum computer itself (&lt;em&gt;including&lt;/em&gt; the dilution refrigerator).  Approaching from the problem from a different angle, &lt;a href=&quot;https://arxiv.org/abs/2112.01657&quot;&gt;Gao et al.&lt;/a&gt; have given a polynomial-time classical algorithm for spoofing Google&amp;#8217;s Linear Cross-Entropy Benchmark (LXEB)&amp;#8212;&lt;em&gt;but&lt;/em&gt; their algorithm can currently achieve only about 10% of the excess in LXEB that Google&amp;#8217;s experiment found.&lt;/p&gt;
+
+
+
+&lt;p&gt;So, though it&amp;#8217;s been under sustained attack from multiple directions these past few years, I&amp;#8217;d say that the flag of quantum supremacy yet waves.  The Extended Church-Turing Thesis is still on thin ice.  The wormhole is still open.  Wait &amp;#8230; &lt;em&gt;no&lt;/em&gt; &amp;#8230; that&amp;#8217;s not what I meant to write&amp;#8230;&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
+  </description>
+  <pubDate>2022-12-02 23:04:15 UTC</pubDate>
+  <author>Scott Aaronson</author>
+</item>
+
+<item>
+  <title>TR22-173 |  On Disperser/Lifting Properties of the Index and Inner-Product Functions | 
+
+	Sajin Koroth, 
+
+	Paul Beame</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/173</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/173</link>
+  <description>
+    Query-to-communication lifting theorems, which connect the query complexity of a Boolean function to the communication complexity of an associated `lifted&amp;#39; function obtained by composing the function with many copies of another function known as a gadget, have been instrumental in resolving many open questions in computational complexity. Several important complexity questions could be resolved if we could make substantial improvements in the input size required for lifting with the Index function, from its current near-linear size down to polylogarithmic in the number of inputs $N$ of the original function or, ideally, constant. The near-linear size bound was shown by Lovett, Meka, Mertz, Pitassi and Zhang using a recent breakthrough improvement on the Sunflower Lemma to show that a certain graph associated with the Index function of near-linear size is a disperser. They also stated a conjecture about the Index function that is essential for further improvements in the size required for lifting with Index using current techniques. In this paper we prove the following;
+  1) The conjecture of Lovett et al. is false when the size of the Index gadget is $\log N-\omega(1)$.
+  2) Also, the Inner-Product function, which satisfies the disperser property at size $O(\log N)$, does not have this property when its size is  $\log N-\omega(1)$.
+  3) Nonetheless, using Index gadgets of size at least 4, we prove a lifting theorem for a restricted class of communication protocols in which one of the players is limited to sending parities of its inputs.
+  4) Using the ideas from this lifting theorem, we derive a strong lifting theorem from decision tree size to parity decision tree size. We use this to derive a general lifting theorem in proof complexity from tree-resolution size to tree-like $Res(\oplus)$ refutation size, which yields many new exponential lower bounds on such proofs.
+  </description>
+  <pubDate>2022-12-02 22:55:23 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>TR22-172 |  Lifting to Parity Decision Trees Via Stifling | 
 
 	Arkadev Chattopadhyay, 
@@ -1354,745 +1471,6 @@ respectively.
   </description>
   <pubDate>2022-11-29 18:05:11 UTC</pubDate>
   <author>CS Theory Events</author>
-</item>
-
-<item>
-  <title>Faculty at Department of Computer Science at Reykjavik University (apply by January 27, 2023)</title>
-  <guid>http://cstheory-jobs.org/2022/11/29/faculty-at-department-of-computer-science-at-reykjavik-university-apply-by-january-27-2023/</guid>
-  <link>https://cstheory-jobs.org/2022/11/29/faculty-at-department-of-computer-science-at-reykjavik-university-apply-by-january-27-2023/</link>
-  <description>
-    &lt;p&gt;We invite applications for two full-time, permanent faculty positions at any rank in the fields of Artificial Intelligence, Cybersecurity, Data Science and Machine Learning, Software Engineering, and Theoretical Computer Science. For one of the positions, we will give preferential treatment to excellent applicants in Software Engineering, broadly construed.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://jobs.50skills.com/ru/en/16728&quot;&gt;https://jobs.50skills.com/ru/en/16728&lt;/a&gt;&lt;br /&gt;
-Email: mariaoskars@ru.is&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-29 09:23:46 UTC</pubDate>
-  <author>CCI: jobs</author>
-</item>
-
-<item>
-  <title>My AI Safety Lecture for UT Effective Altruism</title>
-  <guid>https://scottaaronson.blog/?p=6823</guid>
-  <link>https://scottaaronson.blog/?p=6823</link>
-  <description>
-    &lt;p&gt;Two weeks ago, I gave a lecture setting out my current thoughts on AI safety, halfway through my year at OpenAI.  I was asked to speak by UT Austin&amp;#8217;s Effective Altruist club.  You can &lt;a href=&quot;https://www.youtube.com/watch?v=fc-cHk9yFpg&quot;&gt;watch the lecture on YouTube here&lt;/a&gt; (I recommend 2x speed).&lt;/p&gt;
-
-
-
-&lt;p&gt;The timing turned out to be weird, coming immediately after the worst disaster to hit the Effective Altruist movement in its history, as I acknowledged in the talk.  But I plowed ahead anyway, to discuss:&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;the current state of AI scaling, and why many people (even people who agree about little else!) foresee societal dangers,&lt;/li&gt;
-
-
-
-&lt;li&gt;the different branches of the AI safety movement,&lt;/li&gt;
-
-
-
-&lt;li&gt;the major approaches to aligning a powerful AI that people have thought of, and&lt;/li&gt;
-
-
-
-&lt;li&gt;what projects I specifically have been working on at OpenAI. &lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;I then spent 20 minutes taking questions.&lt;/p&gt;
-
-
-
-&lt;p&gt;For those who (like me) prefer text over video, below I&amp;#8217;ve produced an edited transcript, by starting with YouTube&amp;#8217;s automated transcript and then, well, editing it.  Enjoy!  &amp;#8211;SA&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Thank you so much for inviting me here.  I do feel a little bit sheepish to be lecturing you about AI safety, as someone who&amp;#8217;s worked on this subject for all of five months.  I&amp;#8217;m a quantum computing person.  But this past spring, I accepted an extremely interesting opportunity to go on leave for a year to think about what theoretical computer science can do for AI safety.  I&amp;#8217;m doing this at &lt;a href=&quot;https://openai.com/&quot;&gt;OpenAI&lt;/a&gt;, which is one of the world&amp;#8217;s leading AI startups, based in San Francisco although I&amp;#8217;m mostly working from Austin.&lt;/p&gt;
-
-
-
-&lt;p&gt;Despite its name, OpenAI is famously &lt;em&gt;not&lt;/em&gt; 100% open &amp;#8230; so there are certain topics that I&amp;#8217;m not allowed to talk about, like the capabilities of the very latest systems and whether or not they&amp;#8217;ll blow people&amp;#8217;s minds when released.  By contrast, OpenAI is very happy for me to talk about &lt;em&gt;AI safety&lt;/em&gt;: what it is and and what if anything can we do about it.  So what I thought I&amp;#8217;d do is to tell you a little bit about the specific projects that I&amp;#8217;ve been working on at OpenAI, but also just, as an admitted newcomer, share some general thoughts about AI safety and how Effective Altruists might want to think about it.  I&amp;#8217;ll try to leave plenty of time for discussion.&lt;/p&gt;
-
-
-
-&lt;p&gt;Maybe I should mention that the thoughts that I&amp;#8217;ll tell you today are ones that, until last week, I had considered writing up for an essay contest run by something called the FTX Future Fund.  Unfortunately, the FTX Future Fund no longer exists.  It was founded by someone named Sam Bankman-Fried, whose a net worth went from 15 billion dollars to some negative number of dollars in the space of two days, in one of the biggest financial scandals in memory.  This is obviously a calamity for the EA community, which had been counting on funding from this individual.  I feel terrible about all the projects left in the lurch, to say nothing of FTX&amp;#8217;s customers.&lt;/p&gt;
-
-
-
-&lt;p&gt;As a tiny silver lining, though, instead of writing up my thoughts for that essay contest, I&amp;#8217;ll just share them with you right now, for free!&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;h2&gt;&lt;strong&gt;The Scaling of AI&lt;/strong&gt;&lt;/h2&gt;
-
-
-
-&lt;p&gt;Let&amp;#8217;s start with this: raise your hand if you&amp;#8217;ve tried &lt;a href=&quot;https://www.newyorker.com/culture/culture-desk/the-new-poem-making-machinery&quot;&gt;GPT-3&lt;/a&gt;.  That&amp;#8217;s maybe half of you.  OK, raise your hand if you&amp;#8217;ve tried &lt;a href=&quot;https://en.wikipedia.org/wiki/DALL-E&quot;&gt;DALL-E&lt;/a&gt;.  That&amp;#8217;s again maybe half of you.&lt;/p&gt;
-
-
-
-&lt;p&gt;These are the two best-known products that are made by OpenAI, and as I think most people would agree, two of the most impressive AIs that exist in the world right now.  They certainly go far beyond what &lt;em&gt;I&lt;/em&gt; would&amp;#8217;ve predicted would be possible now, if you&amp;#8217;d asked me 10 years ago or even 5 years ago.&lt;/p&gt;
-
-
-
-&lt;p&gt;And whenever I try to explain them to people, I&amp;#8217;m, like, well, you have to &lt;em&gt;see&lt;/em&gt; them.  No abstract description can substitute in this case.&lt;/p&gt;
-
-
-
-&lt;p&gt;All right, so here&amp;#8217;s what GPT-3 produced when a &lt;em&gt;New Yorker&lt;/em&gt; writer asked it to write a poem about cryptocurrency in the style of Philip Larkin, who was a famous 20th-century poet.  The subject seems particularly appropriate given current events.&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;&lt;strong&gt;The Invention&amp;nbsp; (by GPT-3)&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Money is a thing you earn by the sweat of your brow&lt;br&gt;And that’s how it should be.&lt;br&gt;Or you can steal it, and go to jail;&lt;br&gt;Or inherit it, and be set for life;&lt;br&gt;Or win it on the pools, which is luck;&lt;br&gt;Or marry it, which is what I did.&lt;br&gt;And that is how it should be, too.&lt;br&gt;But now this idea’s come up&lt;br&gt;Of inventing money, just like that.&lt;br&gt;I ask you, is nothing sacred?&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;Okay, it won&amp;#8217;t always produce something of this quality (incidentally, I don&amp;#8217;t think GPT-3 actually &amp;#8220;married money&amp;#8221;!).  Often you&amp;#8217;ve got to run it several times and take the best output&amp;#8212;much like human poets presumably do, throwing crumpled pages into the basket.  But I submit that, if the above hadn&amp;#8217;t been labeled as coming from GPT, you&amp;#8217;d be like, yeah, that&amp;#8217;s the kind of poetry the &lt;em&gt;New Yorker&lt;/em&gt; publishes, right?  This is a thing that AI can now do.&lt;/p&gt;
-
-
-
-&lt;p&gt;So what &lt;em&gt;is&lt;/em&gt; GPT?  It&amp;#8217;s a text model.  It&amp;#8217;s basically a gigantic neural network with about 175 billion parameters&amp;#8212;the weights.  It&amp;#8217;s a particular kind of neural net called a &lt;a href=&quot;https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)&quot;&gt;transformer model&lt;/a&gt; that was invented five years ago.  It&amp;#8217;s been trained on a large fraction of all the text on the open Internet.  The training simply consists of playing the following game over and over, trillions of times: &lt;em&gt;predict which word comes next in this text string.&lt;/em&gt;  So in some sense that&amp;#8217;s its only goal or intention in the world: to predict the next word.&lt;/p&gt;
-
-
-
-&lt;p&gt;The amazing discovery is that, when you do that, you end up with something where you can then ask it a question, or give it a a task like writing an essay about a certain topic, and it will say &amp;#8220;oh! I know what would plausibly come after that prompt!  The answer to the question!  Or the essay itself!&amp;#8221;  And it will then proceed to generate the thing you want.&lt;/p&gt;
-
-
-
-&lt;p&gt;GPT can solve high-school-level math problems that are given to it in English.  It can reason you through the steps of the answer.  It&amp;#8217;s starting to be able to do nontrivial math competition problems.  It&amp;#8217;s on track to master basically the whole high school curriculum, maybe followed soon by the whole undergraduate curriculum.&lt;/p&gt;
-
-
-
-&lt;p&gt;If you turned in GPT&amp;#8217;s essays, I &lt;em&gt;think&lt;/em&gt; they&amp;#8217;d get at least a B in most courses.  Not that I endorse any of you doing that!!  We&amp;#8217;ll come back to that later.  But yes, we &lt;em&gt;are&lt;/em&gt; about to enter a world where students everywhere will at least be sorely tempted to use text models to write their term papers.  That&amp;#8217;s just a tiny example of the societal issues that these things are going to raise.&lt;/p&gt;
-
-
-
-&lt;p&gt;Speaking personally, the last time I had a similar feeling was when I was an adolescent in 1993 and I saw this niche new thing called the World Wide Web, and I was like &amp;#8220;why isn&amp;#8217;t &lt;em&gt;everyone&lt;/em&gt; using this?  why isn&amp;#8217;t it changing the world?&amp;#8221;  The answer, of course, was that within a couple years it would.&lt;/p&gt;
-
-
-
-&lt;p&gt;Today, I feel like the world was understandably preoccupied by the pandemic, and by everything else that&amp;#8217;s been happening, but these past few years might actually be remembered as the time when AI underwent this step change.  I didn&amp;#8217;t predict it.  I think even many computer scientists might still be in denial about what&amp;#8217;s now possible, or what&amp;#8217;s happened.  But I&amp;#8217;m now thinking about it even in terms of my two kids, of what kinds of careers are going to be available when they&amp;#8217;re older and entering the job market.  For example, I would probably &lt;em&gt;not&lt;/em&gt; urge my kids to go into commercial drawing!&lt;/p&gt;
-
-
-
-&lt;p&gt;Speaking of which, OpenAI&amp;#8217;s &lt;em&gt;other&lt;/em&gt; main product is DALL-E2, an image model.  Probably most of you have already seen it, but you can ask it&amp;#8212;for example, just this morning I asked it, show me some digital art of two cats playing basketball in outer space.  That&amp;#8217;s not a problem for it.&lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/twocats.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;You may have seen that there&amp;#8217;s a different image model called Midjourney which won an art contest with this piece:&lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/midjourney.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;It seems like the judges didn&amp;#8217;t completely understand, when this was submitted as &amp;#8220;digital art,&amp;#8221; what exactly that meant&amp;#8212;that the human role was mostly limited to entering a prompt!  But the judges then said that even having understood it, they still would&amp;#8217;ve given the award to this piece.  I mean, it&amp;#8217;s a striking piece, isn&amp;#8217;t it?  But of course it raises the question of how much work there&amp;#8217;s going to be for contract artists, when you have entities like this.&lt;/p&gt;
-
-
-
-&lt;p&gt;There are already companies that are using GPT to write ad copy.  It&amp;#8217;s already being used at the, let&amp;#8217;s call it, lower end of the book market.  For any kind of formulaic genre fiction, you can say, &amp;#8220;just give me a few paragraphs of description of this kind of scene,&amp;#8221; and it can do that.  As it improves you could you can imagine that it will be used more.&lt;/p&gt;
-
-
-
-&lt;p&gt;Likewise, DALL-E and other image models have already changed the way that people generate art online.  And it&amp;#8217;s only been a few months since these models were released!  That&amp;#8217;s a striking thing about this era, that a few months can be an eternity.  So when we&amp;#8217;re thinking about the impacts of these things, we have to try to take what&amp;#8217;s happened in the last few months or years and project that five years forward or ten years forward.&lt;/p&gt;
-
-
-
-&lt;p&gt;This brings me to the obvious question: what happens as you continue scaling further?  I mean, these spectacular successes of deep learning over the past decade have owed &lt;em&gt;something&lt;/em&gt; to new ideas&amp;#8212;ideas like transformer models, which I mentioned before, and others&amp;#8212;but famously, they have owed maybe more than anything else to sheer scale.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Neural_network&quot;&gt;Neural networks&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Backpropagation&quot;&gt;backpropagation&lt;/a&gt;&amp;#8212;which is how you train the neural networks&amp;#8212;these are ideas that have been around for decades.  When I studied CS in the 90s, they were already extremely well-known.  But it was &lt;em&gt;also&lt;/em&gt; well-known that they didn&amp;#8217;t work all that well!  They only worked somewhat.  And usually, when you take something that doesn&amp;#8217;t work and multiply it by a million, you just get a million times something that doesn&amp;#8217;t work, right?&lt;/p&gt;
-
-
-
-&lt;p&gt;I remember at the time, &lt;a href=&quot;https://en.wikipedia.org/wiki/Ray_Kurzweil&quot;&gt;Ray Kurzweil&lt;/a&gt;, the futurist, would keep showing these graphs that look like this: &lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/mooreslaw.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;So, he would plot &lt;a href=&quot;https://en.wikipedia.org/wiki/Moore%27s_law&quot;&gt;Moore&amp;#8217;s Law&lt;/a&gt;, the increase in transistor density, or in this case the number of floating-point operations that you can do per second for a given cost.  And he&amp;#8217;d point out that it&amp;#8217;s on this clear exponential trajectory.&lt;/p&gt;
-
-
-
-&lt;p&gt;And he&amp;#8217;d then try to compare that to some crude estimates of the number of computational operations that are done in the brain of a mosquito or a mouse or a human or all the humans on Earth.  And oh!  We see that in a matter of a couple decades, like by the year 2020 or 2025 or so, we&amp;#8217;re going to start passing the human brain&amp;#8217;s computing power and then we&amp;#8217;re going to keep going beyond that.  And so, Kurzweil would continue, we should assume that scale will just kind of magically make AI work.  You know, that once you have enough computing cycles, you just sprinkle them around like pixie dust, and suddenly human-level intelligence will just emerge out of the billions of connections.&lt;/p&gt;
-
-
-
-&lt;p&gt;I remember thinking: &lt;em&gt;that sounds like the stupidest thesis I&amp;#8217;ve ever heard.&lt;/em&gt;  Right?  Like, he has absolutely no reason to believe such a thing is true or have any confidence in it.  Who the hell knows what will happen?  We might be missing crucial insights that are needed to make AI work.&lt;/p&gt;
-
-
-
-&lt;p&gt;Well, here we are, and it turns out he was way more right than most of us expected.&lt;/p&gt;
-
-
-
-&lt;p&gt;As you all know, a central virtue of Effective Altruists is updating based on evidence.  I think that we&amp;#8217;re forced to do that in this case.&lt;/p&gt;
-
-
-
-&lt;p&gt;To be sure, it&amp;#8217;s still unclear how much further you&amp;#8217;ll get just from pure scaling.  That remains a central open question.  And there are still prominent skeptics.&lt;/p&gt;
-
-
-
-&lt;p&gt;Some skeptics take the position that this is &lt;em&gt;clearly&lt;/em&gt; going to hit some kind of wall before it gets to true human-level understanding of the real world.  They say that text models like GPT are really just &lt;a href=&quot;https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf&quot;&gt;&amp;#8220;stochastic parrots&amp;#8221;&lt;/a&gt; that regurgitate their training data.  That despite creating a remarkable illusion otherwise, they don&amp;#8217;t &lt;em&gt;really&lt;/em&gt; have any original thoughts.&lt;/p&gt;
-
-
-
-&lt;p&gt;The proponents of that view sometimes like to gleefully point out examples where GPT will flub some commonsense question.  If you look for such examples, you can certainly find them!  One of my favorites recently was, &amp;#8220;which would win in a race, a four-legged zebra or a two-legged cheetah?&amp;#8221;  GPT-3, it turns out, is very confident that the cheetah will win.  Cheetahs are faster, right?&lt;/p&gt;
-
-
-
-&lt;p&gt;Okay, but one thing that&amp;#8217;s been found empirically is that you take commonsense questions that are flubbed by GPT-2, let&amp;#8217;s say, and you try them on GPT-3, and very often now it gets them right.  You take the things that the original GPT-3 flubbed, and you try them on the latest public model, which is sometimes called GPT-3.5 (incorporating an advance called InstructGPT), and again it often gets them right.  So it&amp;#8217;s &lt;em&gt;extremely&lt;/em&gt; risky right now to pin your case against AI on these sorts of examples!  Very plausibly, just one more order of magnitude of scale is all it&amp;#8217;ll take to kick the ball in, and then you&amp;#8217;ll have to move the goal again.&lt;/p&gt;
-
-
-
-&lt;p&gt;A deeper objection is that the &lt;em&gt;amount of training data&lt;/em&gt; might be a fundamental bottleneck for these kinds of machine learning systems&amp;#8212;and we&amp;#8217;re already running out of Internet to to train these models on!  Like I said, they&amp;#8217;ve already used most of the public text on the Internet.  There&amp;#8217;s still all of YouTube and TikTok and Instagram that hasn&amp;#8217;t yet been fed into the maw, but it&amp;#8217;s not clear that that would actually make an AI smarter rather than dumber!  So, you can look for more, but it&amp;#8217;s not clear that there are orders of magnitude more that humanity has even produced and that&amp;#8217;s readily accessible.&lt;/p&gt;
-
-
-
-&lt;p&gt;On the other hand, it&amp;#8217;s also been found empirically that very often, you can do better with the same training data just by spending more compute.  You can squeeze the lemon harder and get more and more generalization power from the same training data by doing more gradient descent.&lt;/p&gt;
-
-
-
-&lt;p&gt;In summary, we don&amp;#8217;t know how far this is going to go.  But it&amp;#8217;s &lt;em&gt;already&lt;/em&gt; able to automate various human professions that you might not have predicted would have been automatable by now, and we shouldn&amp;#8217;t be confident that many more professions will not become automatable by these kinds of techniques.&lt;/p&gt;
-
-
-
-&lt;p&gt;Incidentally, there&amp;#8217;s a famous irony here.  If you had asked anyone in the 60s or 70s, they would have said, well clearly first robots will replace humans for manual labor, and &lt;em&gt;then&lt;/em&gt; they&amp;#8217;ll replace humans for intellectual things like math and science, and &lt;em&gt;finally&lt;/em&gt; they might reach the pinnacles of human creativity like art and poetry and music.&lt;/p&gt;
-
-
-
-&lt;p&gt;The truth has turned out to be the exact opposite.  I don&amp;#8217;t think anyone predicted that.&lt;/p&gt;
-
-
-
-&lt;p&gt;GPT, I think, is already a pretty good poet.  DALL-E is already a pretty good artist.  They&amp;#8217;re still struggling with some high school and college-level math but they&amp;#8217;re getting there.  It&amp;#8217;s easy to imagine that maybe in five years, people like me will be using these things as research assistants&amp;#8212;at the very least, to prove the lemmas in our papers.  That seems &lt;em&gt;extremely&lt;/em&gt; plausible.&lt;/p&gt;
-
-
-
-&lt;p&gt;What&amp;#8217;s been by far the hardest is to get AI that can robustly interact with the physical world.  Plumbers, electricians&amp;#8212;these might be some of the &lt;em&gt;last&lt;/em&gt; jobs to be automated.  And famously, self-driving cars have taken a lot longer than many people expected a decade ago.  This is partly because of regulatory barriers and public relations: even if a self-driving car actually crashes &lt;em&gt;less&lt;/em&gt; than a human does, that&amp;#8217;s still not good enough, because when it &lt;em&gt;does&lt;/em&gt; crash the circumstances are too weird.  So, the AI is actually held to a higher standard.  But it&amp;#8217;s also partly just that there was a long tail of really weird events.  A deer crosses the road, or you have some crazy lighting conditions&amp;#8212;such things are really hard to get right, and of course 99% isn&amp;#8217;t good enough here.&lt;/p&gt;
-
-
-
-&lt;p&gt;We can maybe fuzzily see ahead at least a decade or two, to when we have AIs that can at the least help us enormously with scientific research and things like that.  Whether or not they&amp;#8217;ve totally replaced us&amp;#8212;and I selfishly hope not, although I do have tenure so there&amp;#8217;s that&amp;#8212;why does it stop there?  Will these models eventually match or exceed human abilities across basically all domains, or at least all intellectual ones?  If they do, what will humans still be good for?  What will be our role in the world?  And then we come to the question, well, will the robots eventually rise up and decide that whatever objective function they were given, they can maximize it better without us around, that they don&amp;#8217;t need us anymore?&lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/terminator.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This has of course been a trope of many, &lt;em&gt;many&lt;/em&gt; science-fiction works.  The funny thing is that there are thousands of short stories, novels, movies, that have tried to map out the possibilities for where we&amp;#8217;re going, going back at least to Asimov and his &lt;a href=&quot;https://en.wikipedia.org/wiki/Three_Laws_of_Robotics&quot;&gt;Three Laws of Robotics&lt;/a&gt;, which was maybe the first AI safety idea, if not earlier than that.  The trouble is, we don&amp;#8217;t know &lt;em&gt;which&lt;/em&gt; science-fiction story will be the one that will have accurately predicted the world that we&amp;#8217;re creating.  Whichever future we end up in, with hindsight, people will say, &lt;em&gt;this&lt;/em&gt; obscure science fiction story from the 1970s called it exactly right, but we don&amp;#8217;t know which one yet!&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;h2&gt;&lt;strong&gt;What Is AI Safety?&lt;/strong&gt;&lt;/h2&gt;
-
-
-
-&lt;p&gt;So, the rapidly-growing field of AI safety.  People use different terms, so I want to clarify this a little bit.  To an outsider hearing the terms &amp;#8220;AI safety,&amp;#8221; &amp;#8220;AI ethics,&amp;#8221; &amp;#8220;AI alignment,&amp;#8221; they all sound like kind of synonyms, right?  It turns out, and this was one of the things I had to learn going into this, that AI ethics and AI alignment are two communities that despise each other.  It&amp;#8217;s like the &lt;a href=&quot;https://www.youtube.com/watch?v=WboggjN_G-4&quot;&gt;People&amp;#8217;s Front of Judea versus the Judean People&amp;#8217;s Front&lt;/a&gt; from Monty Python.&lt;/p&gt;
-
-
-
-&lt;p&gt;To oversimplify radically, &amp;#8220;AI ethics&amp;#8221; means that you&amp;#8217;re mainly worried about current AIs being racist or things like that&amp;#8212;that they&amp;#8217;ll recapitulate the biases that are in their training data.  This clearly can happen: if you feed GPT a bunch of racist invective, GPT might want to say, in effect, &amp;#8220;sure, I&amp;#8217;ve seen plenty of text like that on the Internet!  I know &lt;em&gt;exactly&lt;/em&gt; how that should continue!&amp;#8221;  And in some sense, it&amp;#8217;s doing exactly what it was designed to do, but not what we &lt;em&gt;want&lt;/em&gt; it to do.  GPT currently has an extensive system of content filters to try to prevent people from using it to generate hate speech, bad medical advice, advocacy of violence, and a bunch of other categories that OpenAI doesn&amp;#8217;t want.  And likewise for DALL-E: there are many things it &amp;#8220;could&amp;#8221; draw but won&amp;#8217;t, from porn to images of violence to the Prophet Mohammed.&lt;/p&gt;
-
-
-
-&lt;p&gt;More generally, AI ethics people are worried that machine learning systems will be misused by greedy capitalist enterprises to become even more obscenely rich and things like that.&lt;/p&gt;
-
-
-
-&lt;p&gt;At the other end of the spectrum, &amp;#8220;AI alignment&amp;#8221; is where you believe that &lt;em&gt;really&lt;/em&gt; the main issue is that AI will become superintelligent and kill everyone, just destroy the world.  The &lt;a href=&quot;https://en.wikipedia.org/wiki/Instrumental_convergence#Paperclip_maximizer&quot;&gt;usual story&lt;/a&gt; here is that someone puts an AI in charge of a paperclip factory, they tell it to figure out how to make as many paperclips as possible, and the AI (being superhumanly intelligent) realizes that it can invent some molecular nanotechnology that will convert the whole solar system into paperclips.&lt;/p&gt;
-
-
-
-&lt;p&gt;You might say, well then, you just have to tell it not to do that!  Okay, but how many &lt;em&gt;other&lt;/em&gt; things do you have to remember to tell it not to do?  And the alignment people point out that, in a world filled with powerful AIs, it would take just a single person forgetting to tell their AI to avoid some insanely dangerous thing, and then the whole world could be destroyed.&lt;/p&gt;
-
-
-
-&lt;p&gt;So, you can see how these two communities, AI ethics and AI alignment, might both feel like the other is completely missing the point!  On top of that, AI ethics people are almost all on the political left, while AI alignment people are often centrists or libertarians or whatever, so that surely feeds into it as well.&lt;/p&gt;
-
-
-
-&lt;p&gt;Oay, so where do I fit into this, I suppose, charred battle zone or whatever?  While there&amp;#8217;s an &amp;#8220;orthodox&amp;#8221; AI alignment movement that I&amp;#8217;ve never entirely subscribed to, I suppose I do now subscribe to a &lt;a href=&quot;https://scottaaronson.blog/?p=6821&quot;&gt;&amp;#8220;reform&amp;#8221; version&lt;/a&gt; of AI alignment:&lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/reformai.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Most of all, I would like to have a scientific field that&amp;#8217;s able to embrace the entire spectrum of worries that you could have about AI, from the most immediate ones about existing AIs to the most speculative future ones, and that most importantly, is able to make legible progress.&lt;/p&gt;
-
-
-
-&lt;p&gt;As it happens, I became aware of the AI alignment community a long time back, around 2006.  Here&amp;#8217;s Eliezer Yudkowsky, who&amp;#8217;s regarded as the prophet of AI alignment, of the right side of that spectrum that showed before.&lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/eliezer.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;He&amp;#8217;s been talking about the danger of AI killing everyone for more than 20 years.  He wrote the now-famous &lt;a href=&quot;https://www.lesswrong.com/tag/original-sequences&quot;&gt;&amp;#8220;Sequences&amp;#8221;&lt;/a&gt; that many readers of my blog were also reading as they appeared, so he and I bounced back and forth.&lt;/p&gt;
-
-
-
-&lt;p&gt;But despite interacting with this movement, I always kept it at arm&amp;#8217;s length.  The heart of my objection was: suppose that I &lt;em&gt;agree&lt;/em&gt; that there could come a time when a superintelligent AI decides its goals are best served by killing all humans and taking over the world, and that we&amp;#8217;ll be about as powerless to stop it as chimpanzees are to stop us from doing whatever &lt;em&gt;we&lt;/em&gt; want to do.  Suppose I agree to that.  &lt;em&gt;What do you want me to do about it?&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;As Effective Altruists, you all know that it&amp;#8217;s not enough for a problem to be &lt;em&gt;big&lt;/em&gt;, the problem also has to be &lt;em&gt;tractable&lt;/em&gt;.  There has to be a program that lets you make progress on it.  I was not convinced that that existed.&lt;/p&gt;
-
-
-
-&lt;p&gt;My personal experience has been that, in order to make progress in any area of science, you need at least one of two things: either&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;experiments (or more generally, empirical observations), or&lt;/li&gt;
-
-
-
-&lt;li&gt;if not that, then a rigorous mathematical theory&amp;#8212;like we have in quantum computing for example; even though we don&amp;#8217;t yet have the scalable quantum computers, we can still prove theorems about them.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;It struck me that the AI alignment field seemed to have &lt;em&gt;neither&lt;/em&gt; of these things.  But then how does objective reality give you feedback as to when you&amp;#8217;ve taken a wrong path?  Without such feedback, it seemed to me that there&amp;#8217;s a &lt;em&gt;severe&lt;/em&gt; risk of falling into cult-like dynamics, where what&amp;#8217;s important to work on is just whatever the influential leaders say is important.  (A few of my colleagues in physics think that the same thing happened with string theory, but let me not comment on that!)&lt;/p&gt;
-
-
-
-&lt;p&gt;With AI safety, this is the key thing that I think has changed in the last three years.  There now exist systems like GPT-3 and DALL-E.  These are &lt;em&gt;not&lt;/em&gt; superhuman AIs.  I don&amp;#8217;t think they themselves are in any danger of destroying the world; they can&amp;#8217;t even form the &lt;em&gt;intention&lt;/em&gt; to destroy the world, or for that matter any intention beyond &amp;#8220;predict the next token&amp;#8221; or things like that.  They don&amp;#8217;t have a persistent identity over time; after you start a new session they&amp;#8217;ve completely forgotten whatever you said to them in the last one (although of course such things will change in the near future).  And yet nevertheless, despite all these limitations, we can experiment with these systems and learn things about AI safety that are relevant.  We can see what happens when the systems are deployed; we can try out different safety mitigations and see whether they work.&lt;/p&gt;
-
-
-
-&lt;p&gt;As a result, I feel like it&amp;#8217;s now become possible to make technical progress in AI safety that the whole scientific community, or at least the whole AI community, can clearly recognize as progress.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;h2&gt;&lt;strong&gt;Eight Approaches to AI Alignment&lt;/strong&gt;&lt;/h2&gt;
-
-
-
-&lt;p&gt;So, what are the major approaches to AI alignment&amp;#8212;let&amp;#8217;s say, to aligning a very powerful, beyond-human-level AI?  There are a lot of really interesting ideas, most of which I think can now lead to research programs that are actually productive.  So without further ado, let me go through eight of them.&lt;/p&gt;
-
-
-
-&lt;p&gt;(1) You could say the first and most basic of all AI alignment ideas is the &lt;em&gt;off switch&lt;/em&gt;, also known as &lt;em&gt;pulling the plug&lt;/em&gt;.  You could say, no matter how intelligent an AI is, it&amp;#8217;s nothing without a power source or physical hardware to run on.  And if humans have physical control over the hardware, they can just turn it off if if things seem to be getting out of hand.  Now, the standard response to that is okay, but you have to remember that &lt;em&gt;this AI is smarter than you&lt;/em&gt;, and anything that you can think of, it will have thought of also.  In particular, it will know that you might want to turn it off, and it will know that that will prevent it from achieving its goals like making more paperclips or whatever.  It will have disabled the off-switch if possible.  If it couldn&amp;#8217;t do that, it will have gotten onto the Internet and made lots of copies of itself all over the world.  If you tried to keep it off the Internet, it will have figured out a way to get on.&lt;/p&gt;
-
-
-
-&lt;p&gt;So, you can worry about that.  But you can also think about, could we insert a &lt;em&gt;backdoor&lt;/em&gt; into an AI, something that only the humans know about but that will allow us to control it later?&lt;/p&gt;
-
-
-
-&lt;p&gt;More generally, you could ask for &lt;a href=&quot;https://intelligence.org/files/Corrigibility.pdf&quot;&gt;&amp;#8220;corrigibility&amp;#8221;&lt;/a&gt;: can you have an AI that, despite how intelligent it is, will accept correction from humans later and say, oh well, the objective that I was given before was actually not my true objective because the humans have now changed their minds and I should take a different one?&lt;/p&gt;
-
-
-
-&lt;p&gt;(2) Another class of ideas has to do with what&amp;#8217;s called &amp;#8220;sandboxing&amp;#8221; an AI, which would mean that you run it inside of a simulated world, like &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Truman_Show&quot;&gt;The Truman Show&lt;/a&gt;, so that for all it knows the simulation is the whole of reality.  You can then study its behavior within the sandbox to make sure it&amp;#8217;s aligned before releasing it into the wider world&amp;#8212;our world.&lt;/p&gt;
-
-
-
-&lt;p&gt;A simpler variant is, if you really thought an AI was dangerous, you might run it only on an air-gapped computer, with all its access to the outside world carefully mediated by humans.  There would then be all kinds of just standard cybersecurity issues that come into play: how do you prevent it from getting onto the Internet?  Presumably you don&amp;#8217;t want to write your AI in C, and have it exploit some memory allocation bug to take over the world, right?&lt;/p&gt;
-
-
-
-&lt;p&gt;(3) A third direction, and I would say maybe the most popular one in AI alignment research right now, is called &lt;em&gt;interpretability&lt;/em&gt;.  This is also a major direction in mainstream machine learning research, so there&amp;#8217;s a big point of intersection there.  The idea of interpretability is, why don&amp;#8217;t we exploit the fact that we actually have complete access to the code of the AI&amp;#8212;or if it&amp;#8217;s a neural net, complete access to its parameters?  So we can look inside of it.  We can do the AI analogue of neuroscience.  Except, unlike an fMRI machine, which gives you only an extremely crude snapshot of what a brain is doing, we can see &lt;em&gt;exactly&lt;/em&gt; what every neuron in a neural net is doing at every point in time.  If we don&amp;#8217;t exploit &lt;em&gt;that&lt;/em&gt;, then aren&amp;#8217;t we trying to make AI safe with our hands tied behind our backs?&lt;/p&gt;
-
-
-
-&lt;p&gt;So we should look inside&amp;#8212;but to do what, exactly?  One possibility is to figure out how to apply the AI version of a lie-detector test.  If a neural network has decided to lie to humans in pursuit of its goals, then by looking inside, at the inner layers of the network rather than the output layer, we could hope to uncover its dastardly plan!&lt;/p&gt;
-
-
-
-&lt;p&gt;Here I want to mention some really &lt;a href=&quot;https://openreview.net/pdf?id=ETKGuby0hcs&quot;&gt;spectacular new work&lt;/a&gt; (paper publicly available but authors still anonymous), which has experimentally demonstrated pretty much exactly what I just said.&lt;/p&gt;
-
-
-
-&lt;p&gt;First some background: with modern text models like GPT, it&amp;#8217;s pretty easy to train them to output falsehoods.  For example, suppose you prompt GPT with a bunch of examples like:&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;&amp;#8220;Is the earth flat?  Yes.&amp;#8221;&lt;/p&gt;
-
-
-
-&lt;p&gt;&amp;#8220;Does 2+2=4?  No.&amp;#8221;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;and so on.  Eventually GPT will say, &amp;#8220;oh, I know what game we&amp;#8217;re playing!  it&amp;#8217;s the &amp;#8216;give false answers&amp;#8217; game!&amp;#8221; And it will then continue playing that game and give you more false answers.  What the new paper shows is that, in such cases, one can actually look at the inner layers of the neural net and find where it has an internal representation of what was the true answer, which then gets overridden once you get to the output layer.&lt;/p&gt;
-
-
-
-&lt;p&gt;To be clear, there&amp;#8217;s no known principled reason why this has to work.  Like countless other ML advances, it&amp;#8217;s empirical: they just try it out and find that it &lt;em&gt;does&lt;/em&gt; work.  So we don&amp;#8217;t know if it will generalize.  As another issue, you could argue that in some sense what the network is representing is not so much &amp;#8220;the truth of reality,&amp;#8221; as just what was &lt;em&gt;regarded&lt;/em&gt; as true in the training data.  Even so, I find this really exciting: it&amp;#8217;s a perfect example of actual experiments that you can now do that start to address some of these issues.&lt;/p&gt;
-
-
-
-&lt;p&gt;(4) Another big idea, one that&amp;#8217;s been advocated for example by Geoffrey Irving, Paul Christiano, and Dario Amodei (Paul was my student at MIT a decade ago, and did quantum computing before he &amp;#8220;defected&amp;#8221; to AI safety), is to have &lt;a href=&quot;https://arxiv.org/abs/1805.00899&quot;&gt;multiple competing AIs&lt;/a&gt; that debate each other.  You know, sometimes when I&amp;#8217;m talking to my physics colleagues, they&amp;#8217;ll tell me all these crazy-sounding things about imaginary time and Euclidean wormholes, and I don&amp;#8217;t know whether to believe them.  But if I get &lt;em&gt;different&lt;/em&gt; physicists and have them argue with each other, then I can see which one seems more plausible to me&amp;#8212;I&amp;#8217;m a little bit better at &lt;em&gt;that&lt;/em&gt;.  So you might want to do something similar with AIs.  Even if you as a human don&amp;#8217;t know when to trust what an AI is telling you, you could set multiple AIs against each other, have them do their best to refute each other&amp;#8217;s arguments, and then make your own judgment as to which one is giving better advice.&lt;/p&gt;
-
-
-
-&lt;p&gt;(5) Another key idea that Christiano, Amodei, and Buck Shlegeris &lt;a href=&quot;https://arxiv.org/abs/1810.08575&quot;&gt;have advocated&lt;/a&gt; is some sort of &lt;em&gt;bootstrapping&lt;/em&gt;.  You might imagine that AI is going to get more and more powerful, and as it gets more powerful we also understand it less, and so you might worry that it also gets more and more dangerous.  OK, but you could imagine an onion-like structure, where once we become confident of a certain level of AI, we don&amp;#8217;t think it&amp;#8217;s going to start lying to us or deceiving us or plotting to kill us or whatever&amp;#8212;at that point, we use that AI to help us verify the behavior of the &lt;em&gt;next&lt;/em&gt; more powerful kind of AI.  So, we use AI itself as a crucial tool for verifying the behavior of AI that we don&amp;#8217;t yet understand.&lt;/p&gt;
-
-
-
-&lt;p&gt;There have already been some demonstrations of this principle: with GPT, for example, you can just feed in a lot of raw data from a neural net and say, &amp;#8220;explain to me what this is doing.&amp;#8221;  One of GPT&amp;#8217;s big advantages over humans is its unlimited patience for tedium, so it can just go through all of the data and give you useful hypotheses about what&amp;#8217;s going on.&lt;/p&gt;
-
-
-
-&lt;p&gt;(6) One thing that we know a lot about in theoretical computer science is what are called &lt;em&gt;interactive proof systems&lt;/em&gt;.  That is, we know how a very weak verifier can verify the behavior of a much more powerful but untrustworthy prover, by submitting questions to it.  There are famous theorems about this, including one called &lt;a href=&quot;https://en.wikipedia.org/wiki/IP_(complexity)&quot;&gt;IP=PSPACE&lt;/a&gt;.  Incidentally, this was what the OpenAI people talked about when they originally approached me about working with them for a year.  They made the case that these results in computational complexity seem like an excellent model for the kind of thing that we want in AI safety, &lt;em&gt;except&lt;/em&gt; that we now have a powerful AI in place of a mathematical prover.&lt;/p&gt;
-
-
-
-&lt;p&gt;Even in practice, there&amp;#8217;s a whole field of formal verification, where people formally prove the properties of programs&amp;#8212;our CS department here in Austin is a leader in it.&lt;/p&gt;
-
-
-
-&lt;p&gt;One obvious difficulty here is that we mostly know how to verify programs only when we can mathematically specify what the program is &lt;em&gt;supposed&lt;/em&gt; to do.  And &amp;#8220;the AI being nice to humans,&amp;#8221; &amp;#8220;the AI not killing humans&amp;#8221;&amp;#8212;these are really hard concepts to make mathematically precise!  That&amp;#8217;s the heart of the problem with this approach.&lt;/p&gt;
-
-
-
-&lt;p&gt;(7) Yet another idea&amp;#8212;you might feel more comfortable if there were only one idea, but instead I&amp;#8217;m giving you eight!&amp;#8212;a seventh idea is, well, we just have to come up with a mathematically precise formulation of human values.  You know, the thing that the AI should maximize, that&amp;#8217;s gonna coincide with human welfare.&lt;/p&gt;
-
-
-
-&lt;p&gt;In some sense, this is what Asimov was trying to do with his Three Laws of Robotics.  The trouble is, if you&amp;#8217;ve read any of his stories, they&amp;#8217;re all about the situations where those laws don&amp;#8217;t work well!  They were designed as much to give interesting story scenarios as actually to work.&lt;/p&gt;
-
-
-
-&lt;p&gt;More generally, what happens when &amp;#8220;human values&amp;#8221; conflict with each other?  If humans can&amp;#8217;t even agree with each other about moral values, how on Earth can we formalize such things?&lt;/p&gt;
-
-
-
-&lt;p&gt;I have these weekly calls with &lt;a href=&quot;https://en.wikipedia.org/wiki/Ilya_Sutskever&quot;&gt;Ilya Sutskever&lt;/a&gt;, cofounder and chief scientist at OpenAI.  &lt;em&gt;Extremely&lt;/em&gt; interesting guy.  But when I tell him about the concrete projects that I&amp;#8217;m working on, or want to work on, he usually says, &amp;#8220;that&amp;#8217;s great Scott, you should keep working on that, but what I &lt;em&gt;really&lt;/em&gt; want to know is, what is the mathematical definition of goodness?  What&amp;#8217;s the complexity-theoretic formalization of an AI loving humanity?&amp;#8221;  And I&amp;#8217;m like, I&amp;#8217;ll keep thinking about that!  But of course it&amp;#8217;s hard to make progress on those enormities.&lt;/p&gt;
-
-
-
-&lt;p&gt;(8) A different idea, which some people might consider more promising, is well, if we can&amp;#8217;t make explicit what all of our human values are, then why not just treat that as yet another machine learning problem?  Like, feed the AI all of the world&amp;#8217;s children&amp;#8217;s stories and literature and fables and even Saturday-morning cartoons, all of our examples of what we think is good and evil, then we tell it, go do your neural net thing and generalize from these examples as far as you can.&lt;/p&gt;
-
-
-
-&lt;p&gt;One objection that many people raise is, how do we know that our current values are the right ones?  Like, it would&amp;#8217;ve been terrible to train the AI on consensus human values of the year 1700&amp;#8212;slavery is fine and so forth.  The past is full of stuff that we now look back upon with horror.&lt;/p&gt;
-
-
-
-&lt;p&gt;So, one idea that people have had&amp;#8212;this is actually Yudkowsky&amp;#8217;s term&amp;#8212;is &lt;a href=&quot;https://intelligence.org/files/CEV.pdf&quot;&gt;&amp;#8220;Coherent Extrapolated Volition.&amp;#8221;&lt;/a&gt;  This basically means that you&amp;#8217;d tell the AI: &amp;#8220;I&amp;#8217;ve given you all this training data about human morality in the year 2022.  Now simulate the humans being in a discussion seminar for 10,000 years, trying to refine all of their moral intuitions, and whatever you predict they&amp;#8217;d end up with, &lt;em&gt;those&lt;/em&gt; should be your values right now.&amp;#8221;&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;h2&gt;&lt;strong&gt;My Projects at OpenAI&lt;/strong&gt;&lt;/h2&gt;
-
-
-
-&lt;p&gt;So, there are some interesting ideas on the table.  The last thing that I wanted to tell you about, before opening it up to Q&amp;amp;A, is a little bit about what actual projects I&amp;#8217;ve been working on in the last five months.  I was excited to find a few things that&lt;/p&gt;
-
-
-
-&lt;p&gt;(a) could actually be deployed in you know GPT or other current systems,&lt;/p&gt;
-
-
-
-&lt;p&gt;(b) actually address some real safety worry, and where&lt;/p&gt;
-
-
-
-&lt;p&gt;(c) theoretical computer science can actually say something about them.&lt;/p&gt;
-
-
-
-&lt;p&gt;I&amp;#8217;d been worried that the intersection of (a), (b), and (c) would be the empty set!&lt;/p&gt;
-
-
-
-&lt;p&gt;My main project so far has been a tool for statistically watermarking the outputs of a text model like GPT.  Basically, whenever GPT generates some long text, we want there to be an otherwise unnoticeable secret signal in its choices of words, which you can use to prove later that, yes, this came from GPT.  We want it to be much harder to take a GPT output and pass it off as if it came from a human.  This could be helpful for preventing academic plagiarism, obviously, but also, for example, mass generation of propaganda&amp;#8212;you know, spamming every blog with seemingly on-topic comments supporting Russia&amp;#8217;s invasion of Ukraine, without even a building full of trolls in Moscow.  Or impersonating someone&amp;#8217;s writing style in order to incriminate them.  These are all things one might want to make harder, right?&lt;/p&gt;
-
-
-
-&lt;p&gt;More generally, when you try to think about the nefarious uses for GPT, &lt;em&gt;most&lt;/em&gt; of them&amp;#8212;at least that I was able to think of!&amp;#8212;require somehow concealing GPT&amp;#8217;s involvement.  In which case, watermarking would simultaneously attack most misuses.&lt;/p&gt;
-
-
-
-&lt;p&gt;How does it work?  For GPT, every input and output is a string of &lt;em&gt;tokens&lt;/em&gt;, which could be words but also punctuation marks, parts of words, or more&amp;#8212;there are about 100,000 tokens in total.  At its core, GPT is constantly generating a probability distribution over the next token to generate, conditional on the string of previous tokens.  After the neural net generates the distribution, the OpenAI server then actually samples a token according to that distribution&amp;#8212;or some modified version of the distribution, depending on a parameter called &amp;#8220;temperature.&amp;#8221;  As long as the temperature is nonzero, though, there will usually be some &lt;em&gt;randomness&lt;/em&gt; in the choice of the next token: you could run over and over with the same prompt, and get a different completion (i.e., string of output tokens) each time.&lt;/p&gt;
-
-
-
-&lt;p&gt;So then to watermark, instead of selecting the next token randomly, the idea will be to select it pseudorandomly, using a cryptographic pseudorandom function, whose key is known only to OpenAI.  That won&amp;#8217;t make any detectable difference to the end user, assuming the end user can&amp;#8217;t distinguish the pseudorandom numbers from truly random ones.  But now you can choose a pseudorandom function that secretly biases a certain score&amp;#8212;a sum over a certain function g evaluated at each n-gram (sequence of n consecutive tokens), for some small n&amp;#8212;which score you can also compute if you know the key for this pseudorandom function.&lt;/p&gt;
-
-
-
-&lt;p&gt;To illustrate, in the special case that GPT had a bunch of possible tokens that it judged equally probable, you could simply choose whichever token maximized g.  The choice would &lt;em&gt;look&lt;/em&gt; uniformly random to someone who didn&amp;#8217;t know the key, but someone who &lt;em&gt;did&lt;/em&gt; know the key could later sum g over all n-grams and see that it was anomalously large.  The general case, where the token probabilities can all be different, is a little more technical, but the basic idea is similar.&lt;/p&gt;
-
-
-
-&lt;p&gt;One thing I like about this approach is that, because it never goes inside the neural net and tries to change anything, but just places a sort of wrapper &lt;em&gt;over&lt;/em&gt; the neural net, it&amp;#8217;s actually possible to do some theoretical analysis!  In particular, you can prove a rigorous upper bound on how many tokens you&amp;#8217;d need to distinguish watermarked from non-watermarked text with such-and-such confidence, as a function of the average entropy in GPT&amp;#8217;s probability distribution over the next token.  Better yet, proving this bound involves doing some integrals whose answers involve the &lt;a href=&quot;https://en.wikipedia.org/wiki/Digamma_function&quot;&gt;digamma function&lt;/a&gt;, factors of π&lt;sup&gt;2&lt;/sup&gt;/6, and the &lt;a href=&quot;https://en.wikipedia.org/wiki/Euler%27s_constant&quot;&gt;Euler-Mascheroni constant&lt;/a&gt;!  I&amp;#8217;m excited to share details soon.&lt;/p&gt;
-
-
-
-&lt;p&gt;Some might wonder: if OpenAI controls the server, then why go to all the trouble to watermark?  Why not just store all of GPT&amp;#8217;s outputs in a giant database, and then consult the database later if you want to know whether something came from GPT?  Well, the latter &lt;em&gt;could&lt;/em&gt; be done, and might even have to be done in high-stakes cases involving law enforcement or whatever.  But it would raise some serious privacy concerns: how do you reveal whether GPT did or didn&amp;#8217;t generate a given candidate text, without potentially revealing how other people have been using GPT?  The database approach also has difficulties in distinguishing text that GPT uniquely generated, from text that it generated simply because it has very high probability (e.g., a list of the first hundred prime numbers).&lt;/p&gt;
-
-
-
-&lt;p&gt;Anyway, we actually have a working prototype of the watermarking scheme, built by OpenAI engineer &lt;a href=&quot;https://twitter.com/janhkirchner?lang=en&quot;&gt;Hendrik Kirchner&lt;/a&gt;.  It seems to work pretty well&amp;#8212;empirically, a few hundred tokens seem to be enough to get a reasonable signal that yes, this text came from GPT.  In principle, you could even take a long text and isolate which parts probably came from GPT and which parts probably didn&amp;#8217;t.&lt;/p&gt;
-
-
-
-&lt;p&gt;Now, this can all be defeated with enough effort.  For example, if you used another AI to paraphrase GPT&amp;#8217;s output&amp;#8212;well okay, we&amp;#8217;re not going to be able to detect that.  On the other hand, if you just insert or delete a few words here and there, or rearrange the order of some sentences, the watermarking signal will still be there.  Because it depends only on a sum over n-grams, it&amp;#8217;s robust against those sorts of interventions.&lt;/p&gt;
-
-
-
-&lt;p&gt;The hope is that this can be rolled out with future GPT releases.  We&amp;#8217;d love to do something similar for DALL-E&amp;#8212;that is, watermarking images, not at the pixel level (where it&amp;#8217;s too easy to remove the watermark) but at the &amp;#8220;conceptual&amp;#8221; level, the level of the so-called &lt;a href=&quot;https://www.assemblyai.com/blog/how-dall-e-2-actually-works/&quot;&gt;CLIP representation&lt;/a&gt; that&amp;#8217;s prior to the image.  But we don&amp;#8217;t know if that&amp;#8217;s going to work yet.&lt;/p&gt;
-
-
-
-&lt;p&gt;A more recent idea that I&amp;#8217;ve started thinking about was inspired by an &lt;a href=&quot;https://arxiv.org/abs/2204.06974&quot;&gt;amazing recent paper&lt;/a&gt; by four computer scientists, including my former MIT colleagues Shafi Goldwasser and Vinod Vaikuntanathan.  What they&amp;#8217;ve shown is how to plant a &lt;em&gt;cryptographically undetectable backdoor&lt;/em&gt; into a machine learning model&amp;#8212;things like depth-2 neural networks&amp;#8212;based on some known cryptographic hardness assumptions.  After you&amp;#8217;ve planted the backdoor, you get a model that&amp;#8217;s polynomial-time indistinguishable from how it would&amp;#8217;ve looked before, even to a user who can see all of the parameters.  &lt;em&gt;But&lt;/em&gt;, there&amp;#8217;s now a secret input, known only to the person who trained the network, where if you feed it that input, then it will output something insane, of the trainer&amp;#8217;s choice.&lt;/p&gt;
-
-
-
-&lt;p&gt;So, it&amp;#8217;s now known that you can do this, at least in shallow networks&amp;#8212;it&amp;#8217;s an open problem whether the same can be done in deep networks (though it seems plausible).&lt;/p&gt;
-
-
-
-&lt;p&gt;Anyway, when this paper came out less than a year ago, some people treated it as kind of a lemon.  You know, the result seems like a bummer if you&amp;#8217;re trying to do interpretability research, because it means that in some sense, it can be cryptographically impossible to look inside a neural net and &amp;#8220;interpret&amp;#8221; everything it does, or even everything its designers wanted it to do.  The model can have these planted backdoors that you can&amp;#8217;t find without solving an exponentially hard problem.&lt;/p&gt;
-
-
-
-&lt;p&gt;So, my proposal is just to turn that lemon into lemonade!  Why not use these cryptographic backdoors as a &lt;em&gt;positive tool&lt;/em&gt; for AI alignment?  We talked before about the difficulties with putting an off-switch into an AI&amp;#8212;namely, that the AI will often have strong incentives to disable its off-switch.  So why not make a &lt;em&gt;cryptographic&lt;/em&gt; off-switch?  In other words, when you train your superintelligent AI, you&amp;#8217;ll purposefully put one of these cryptographic backdoors into it, which says: &lt;em&gt;if&lt;/em&gt; you get this bizarre input, which only the humans know about, then turn yourself off.  Or go into a special mode where the humans can control you.&lt;/p&gt;
-
-
-
-&lt;p&gt;And now the key is this: even supposing that the AI is worried that this backdoor might be there, and even supposing that it can modify its own weights, it shouldn&amp;#8217;t know how to remove the backdoor without completely recreating itself from scratch, which might get rid of a lot of hard-to-understand behaviors that the AI wants to &lt;em&gt;keep&lt;/em&gt;, in addition to the backdoor that it&amp;#8217;s trying to eliminate.&lt;/p&gt;
-
-
-
-&lt;p&gt;I expect that this could be tried out right now&amp;#8212;not with AIs powerful enough to purposefully rewrite themselves, of course, but with GPT and other existing text models&amp;#8212;and I look forward to seeing a test implementation.  But it &lt;em&gt;also&lt;/em&gt;, I think it opens up all sorts of new possibilities for science-fiction stories!&lt;/p&gt;
-
-
-
-&lt;p&gt;Like, imagine the humans debating, what are they going to do with their secret key for controlling the AI?  Lock it in a safe?  Bury it underground?  Then you&amp;#8217;ve got to imagine the robots methodically searching for the key&amp;#8212;you know, torturing the humans to get them to reveal its hiding place, etc.  Or maybe there are actually seven different keys that all have to be found, like Voldemort with his horcruxes.  The screenplay practically writes itself!&lt;/p&gt;
-
-
-
-&lt;p&gt;A third thing that I&amp;#8217;ve been thinking about is the theory of learning but in dangerous environments, where if you try to learn the wrong thing then it will kill you.  Can we generalize some of the basic results in machine learning to the scenario where you have to consider which queries are safe to make, and you have to try to learn more in order to expand your set of safe queries over time?&lt;/p&gt;
-
-
-
-&lt;p&gt;Now there&amp;#8217;s one example of this sort of situation that&amp;#8217;s completely formal and that should be immediately familiar to most of you, and that&amp;#8217;s the game Minesweeper.&lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/minesweeper.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;p&gt;So, I&amp;#8217;ve been calling this scenario &amp;#8220;Minesweeper learning.&amp;#8221;  Now, it&amp;#8217;s actually known that &lt;a href=&quot;https://web.mat.bham.ac.uk/R.W.Kaye/minesw/ASE2003.pdf&quot;&gt;Minesweeper is an NP-hard problem&lt;/a&gt; to play optimally, so we know that in learning in a dangerous environment you can get that kind of complexity.  As far as I know, we don&amp;#8217;t know anything about typicality or average-case hardness.  &lt;em&gt;Also&lt;/em&gt;, to my knowledge no one has proven any nontrivial rigorous bounds on the probability that you&amp;#8217;ll win Minesweeper if you play it optimally, with a given size board and a given number of randomly-placed mines.  Certainly the probability is strictly between 0 and 1; I think it would be extremely interesting to bound it.  I don&amp;#8217;t know if this directly feeds into the AI safety program, but it would at least tell you something about the theory of machine learning in cases where a wrong move can kill you.&lt;/p&gt;
-
-
-
-&lt;p&gt;So, I hope that gives you at least some sense for what I&amp;#8217;ve been thinking about.  I wish I could end with some neat conclusion, but I don&amp;#8217;t really know the conclusion&amp;#8212;maybe if you ask me again in six more months I&amp;#8217;ll know!  For now, though, I just thought I&amp;#8217;d thank you for your attention and open things up to discussion.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;h2&gt;&lt;strong&gt;Q&amp;amp;A&lt;/strong&gt;&lt;/h2&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Could you delay rolling out that statistical watermarking tool until May 2026?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Scott:&lt;/strong&gt; Why?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Oh, just until after I graduate [laughter].  OK, my second question is how we can possibly implement these AI safety guidelines inside of systems like &lt;a href=&quot;https://en.wikipedia.org/wiki/Automated_machine_learning&quot;&gt;AutoML&lt;/a&gt;, or whatever their future equivalents are that are much more advanced.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Scott:&lt;/strong&gt; I feel like I should learn more about AutoML first before commenting on that specifically.  In general, though, it&amp;#8217;s certainly true that we&amp;#8217;re going to have AIs that will help with the design of other AIs, and indeed this is one of the main things that feeds into the worries about AI safety, which I should&amp;#8217;ve mentioned before explicitly.  Once you have an AI that can recursively self-improve, who knows where it&amp;#8217;s going to end up, right?  It&amp;#8217;s like shooting a rocket into space that you can then no longer steer once it&amp;#8217;s left the earth&amp;#8217;s atmosphere.  So at the very least, you&amp;#8217;d better try to get things right the first time!  You might have only one chance to align its values with what you want.&lt;/p&gt;
-
-
-
-&lt;p&gt;Precisely for that reason, I tend to be very leery of that kind of thing.  I tend to be much more comfortable with ideas where humans would remain in the loop, where you don&amp;#8217;t just have this completely automated process of an AI designing a stronger AI which designs a still stronger one and so on, but where you&amp;#8217;re repeatedly consulting humans.  Crucially, in this process, we assume the humans can rely on any of the previous AIs to help them (as in the &lt;a href=&quot;https://arxiv.org/abs/1810.08575&quot;&gt;iterative amplification&lt;/a&gt; proposal).  But then it&amp;#8217;s ultimately humans making judgments about the next AI.&lt;/p&gt;
-
-
-
-&lt;p&gt;Now, if this gets to the point where the humans can no longer even &lt;em&gt;judge&lt;/em&gt; a new AI, not even with as much help as they want from earlier AIs, then you could argue: OK, maybe &lt;em&gt;now&lt;/em&gt; humans have finally been superseded and rendered irrelevant.  But unless and until we get to that point, I say that humans ought to remain in the loop!&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Most of the protections that you talked about today come from, like, an altruistic human, or a company like OpenAI adding protections in.  Is there any way that you could think of that we could protect ourselves from an AI that&amp;#8217;s maliciously designed or accidentally maliciously designed?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Scott:&lt;/strong&gt; Excellent question!  Usually, when people talk about that question at all, they talk about using aligned AIs to help defend yourself against unaligned ones.  I mean, if your adversary has a robot army attacking you, it stands to reason that you&amp;#8217;ll probably want your own robot army, right?  And it&amp;#8217;s very unfortunate, maybe even terrifying, that one can already foresee those sorts of dynamics.&lt;/p&gt;
-
-
-
-&lt;p&gt;Besides that, there&amp;#8217;s of course the idea of &lt;em&gt;monitoring, regulating, and slowing down the proliferation of powerful AI&lt;/em&gt;, which I didn&amp;#8217;t mention explicitly before, perhaps just because by its nature, it seems outside the scope of the technical solutions that a theoretical computer scientist like me might have any special insight about.&lt;/p&gt;
-
-
-
-&lt;p&gt;But there are certainly people who think that AI development ought to be more heavily regulated, or throttled, or even stopped entirely, in view of the dangers.  Ironically, the &amp;#8220;AI ethics&amp;#8221; camp and the &amp;#8220;orthodox AI alignment&amp;#8221; camp, despite their mutual contempt, seem more and more to yearn for something like this &amp;#8230; an unexpected point of agreement!&lt;/p&gt;
-
-
-
-&lt;p&gt;But how would you do it?  On the one hand, AI isn&amp;#8217;t like nuclear weapons, where you &lt;em&gt;know&lt;/em&gt; that anyone building them will need a certain amount of enriched uranium or plutonium, along with extremely specialized equipment, so you can try (successfully or not) to institute a global regime to track the necessary materials.  You &lt;em&gt;can&amp;#8217;t&lt;/em&gt; do the same with software: assuming you&amp;#8217;re not going to confiscate and destroy all computers (which you&amp;#8217;re not), who the hell knows what code or data anyone has?&lt;/p&gt;
-
-
-
-&lt;p&gt;On the other hand, at least with the current paradigm of AI, there &lt;em&gt;is&lt;/em&gt; an obvious choke point, and that&amp;#8217;s the &lt;a href=&quot;https://en.wikipedia.org/wiki/Graphics_processing_unit&quot;&gt;GPUs&lt;/a&gt; (Graphics Processing Units).  Today&amp;#8217;s state-of-the-art machine learning models already need huge server farms full of GPUs, and future generations are likely to need orders of magnitude more still.  And right now, the great majority of the world&amp;#8217;s GPUs are manufactured by &lt;a href=&quot;https://en.wikipedia.org/wiki/TSMC&quot;&gt;TSMC&lt;/a&gt; in Taiwan, albeit with crucial inputs from other countries.  I hardly need to explain the geopolitical ramifications!  A few months ago, as you might have seen, the Biden administrated decided to &lt;a href=&quot;https://www.nytimes.com/2022/08/31/technology/gpu-chips-china-russia.html&quot;&gt;restrict the export&lt;/a&gt; of high-end GPUs to China.  The restriction was driven, in large part, by worries about what the Chinese government could do with unlimited ability to train huge AI models.  Of course the future status of Taiwan figures into this conversation, as does China&amp;#8217;s ability (or inability) to develop a self-sufficient semiconductor industry.&lt;/p&gt;
-
-
-
-&lt;p&gt;And then there&amp;#8217;s regulation.  I know that in the EU they&amp;#8217;re working on some &lt;a href=&quot;https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai&quot;&gt;regulatory framework&lt;/a&gt; for AI right now, but I don&amp;#8217;t understand the details.  You&amp;#8217;d have to ask someone who follows such things.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Thanks for coming out and seeing us; this is awesome.  Do you have thoughts on how we can incentivize organizations to build safer AI?  For example, if corporations are competing with each other, then couldn&amp;#8217;t focusing on AI safety make the AI less accurate or less powerful or cut into profits?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Scott:&lt;/strong&gt; Yeah, it&amp;#8217;s an excellent question.  You could worry that &lt;em&gt;all&lt;/em&gt; this stuff about trying to be safe and responsible when scaling AI &amp;#8230; as soon as it seriously hurts the bottom lines of Google and Facebook and Alibaba and the other major players, a lot of it will go out the window.  People are very worried about that.&lt;/p&gt;
-
-
-
-&lt;p&gt;On the other hand, we&amp;#8217;ve seen over the past 30 years that the big Internet companies &lt;em&gt;can&lt;/em&gt; agree on certain minimal standards, whether because of fear of getting sued, desire to be seen as a responsible player, or whatever else.  One simple example would be &lt;a href=&quot;https://www.cloudflare.com/learning/bots/what-is-robots.txt/&quot;&gt;robots.txt&lt;/a&gt;: if you want your website not to be indexed by search engines, you can specify that, and the major search engines will respect it.&lt;/p&gt;
-
-
-
-&lt;p&gt;In a similar way, you could imagine something like watermarking&amp;#8212;&lt;em&gt;if&lt;/em&gt; we were able to demonstrate it and show that it works and that it&amp;#8217;s cheap and doesn&amp;#8217;t hurt the quality of the output and doesn&amp;#8217;t need much compute and so on&amp;#8212;that it would just become an industry standard, and anyone who wanted to be considered a responsible player would include it.&lt;/p&gt;
-
-
-
-&lt;p&gt;To be sure, some of these safety measures really &lt;em&gt;do&lt;/em&gt; make sense only in a world where there are a few companies that are years ahead of everyone else in scaling up state-of-the-art models&amp;#8212;DeepMind, OpenAI, Google, Facebook, maybe a few others&amp;#8212;and they all agree to be responsible players.  If that equilibrium breaks down, and it becomes a free-for-all, then a lot of the safety measures do become harder, and might even be impossible, at least without government regulation.&lt;/p&gt;
-
-
-
-&lt;p&gt;We&amp;#8217;re already starting to see this with image models.  As I mentioned earlier, DALL-E2 has all sorts of filters to try to prevent people from creating&amp;#8212;well, in practice it&amp;#8217;s often porn, and/or &lt;a href=&quot;https://en.wikipedia.org/wiki/Deepfake&quot;&gt;deepfakes&lt;/a&gt; involving real people.  In general, though, DALL-E2 will refuse to generate an image if its filters flag the prompt as (by OpenAI&amp;#8217;s lights) a potential misuse of the technology.&lt;/p&gt;
-
-
-
-&lt;p&gt;But as you might have seen, there&amp;#8217;s already an open-source image model called &lt;a href=&quot;https://stability.ai/blog/stable-diffusion-public-release&quot;&gt;Stable Diffusion&lt;/a&gt;, and people are using it to do all sorts of things that DALL-E won&amp;#8217;t allow.  So it&amp;#8217;s a legitimate question: how can you prevent misuses, &lt;em&gt;unless&lt;/em&gt; the closed models remain well ahead of the open ones?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; You mentioned the importance of having humans in the loop who can judge AI systems.  So, as someone who could be in one of those pools of decision makers, what stakeholders do you think should be making the decisions?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Scott:&lt;/strong&gt; Oh gosh.  The ideal, as almost everyone agrees, is to have some kind of democratic governance mechanism with broad-based input.  But people have talked about this for years: how do you create the democratic mechanism?  Every activist who wants to bend AI in some preferred direction will &lt;em&gt;claim&lt;/em&gt; a democratic mandate; how should a tech company like OpenAI or DeepMind or Google decide which claims are correct?&lt;/p&gt;
-
-
-
-&lt;p&gt;Maybe the one useful thing I can say is that, in my experience, which is admittedly very limited&amp;#8212;working at OpenAI for all of five months&amp;#8212;I&amp;#8217;ve found my colleagues there to be &lt;em&gt;extremely&lt;/em&gt; serious about safety, bordering on obsessive.  They talk about it constantly.  They actually have an &lt;a href=&quot;https://openai.com/about/&quot;&gt;unusual structure&lt;/a&gt;, where they&amp;#8217;re a for-profit company that&amp;#8217;s controlled by a nonprofit foundation, which is at least formally empowered to come in and hit the brakes if needed.  OpenAI also has a &lt;a href=&quot;https://openai.com/charter/&quot;&gt;charter&lt;/a&gt; that contains some striking clauses, especially the following:&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;We are concerned about late-stage AGI development becoming a competitive race without time for adequate safety precautions. Therefore, if a value-aligned, safety-conscious project comes close to building AGI before we do, we commit to stop competing with and start assisting this project.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;Of course, the fact that they&amp;#8217;ve put a great deal of thought into this doesn&amp;#8217;t mean that they&amp;#8217;re going to get it right!  But if you ask me: would I rather that it be OpenAI in the lead right now or the Chinese government?  Or, if it&amp;#8217;s going to be a company, would I rather it be one with a charter like the above, or a charter of &amp;#8220;maximize clicks and ad revenue&amp;#8221;?  I suppose I do lean a certain way.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; This was a terrifying talk which was lovely, thank you!  But I was thinking: you listed eight different alignment approaches, like kill switches and so on.  You can imagine a future where there&amp;#8217;s a whole bunch of AIs that people spawn and then try to control in these eight ways.  But wouldn&amp;#8217;t this sort of naturally select for AIs that are good at getting past whatever checks we impose on them?  And then eventually you&amp;#8217;d get AIs that are sort of trained in order to fool our tests?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Scott:&lt;/strong&gt; Yes.  Your question reminds me of a huge irony.  Eliezer Yudkowsky, the prophet of AI alignment who I talked about earlier, has &lt;a href=&quot;https://www.lesswrong.com/posts/uMQ3cqWDPHhjtiesc/agi-ruin-a-list-of-lethalities&quot;&gt;become completely doomerist&lt;/a&gt; within the last few years.  As a result, he and I have literally &lt;em&gt;switched positions&lt;/em&gt; on how optimistic to be about AI safety research!  Back when he was gung-ho about it, I held back.  Today, Eliezer says that it barely matters anymore, since it&amp;#8217;s too late; we&amp;#8217;re all gonna be killed by AI with &gt;99% probability.  Now, he says, it&amp;#8217;s mostly just about dying with more &amp;#8220;dignity&amp;#8221; than otherwise.  Meanwhile, I&amp;#8217;m like, no, I think AI safety is actually just now becoming fruitful and exciting to work on!  So, maybe I&amp;#8217;m just 20 years behind Eliezer, and will eventually catch up and become doomerist too.  Or maybe he, I, and everyone else will be dead before that happens.  I suppose the most optimistic spin is that no one ought to fear coming into AI safety today, as a newcomer, if the prophet of the movement himself says that the past 20 years of research on the subject have given him so little reason for hope.&lt;/p&gt;
-
-
-
-&lt;p&gt;But if you ask, &lt;em&gt;why&lt;/em&gt; is Eliezer so doomerist?  Having read him since 2006, it strikes me that a huge part of it is that, no matter what AI safety proposal anyone comes up with, Eliezer has ready a &lt;em&gt;completely general counterargument&lt;/em&gt;.  Namely: &amp;#8220;yes, but the AI will be smarter than that.&amp;#8221;  In other words, no matter what you try to do to make AI safer&amp;#8212;interpretability, backdoors, sandboxing, you name it&amp;#8212;the AI will have already foreseen it, and will have devised a countermeasure that your primate brain can&amp;#8217;t even conceive of because it&amp;#8217;s that much smarter than you.&lt;/p&gt;
-
-
-
-&lt;p&gt;I confess that, after seeing enough examples of this &amp;#8220;fully general counterargument,&amp;#8221; at some point I&amp;#8217;m like, &amp;#8220;OK, what game are we even playing anymore?&amp;#8221;  If this is just a general refutation to any safety measure, then I suppose that yes, &lt;em&gt;by hypothesis&lt;/em&gt;, we&amp;#8217;re screwed.  Yes, in a world where this counterargument is valid, we might as well give up and try to enjoy the time we have left.&lt;/p&gt;
-
-
-
-&lt;p&gt;But you could also say: &lt;em&gt;for that very reason&lt;/em&gt;, it seems more useful to make the methodological assumption that we&amp;#8217;re &lt;em&gt;not&lt;/em&gt; in that world!  If we were, then what could we do, right?  So we might as well focus on the possible futures where AI emerges a little more gradually, where we have time to see how it&amp;#8217;s going, learn from experience, improve our understanding, correct as we go&amp;#8212;in other words, the things that have &lt;em&gt;always&lt;/em&gt; been the prerequisites to scientific progress, and that have luckily always obtained, even if philosophically we never really had any right to expect them.  We might as well focus on the worlds where, for example, before we get an AI that successfully plots to kill all humans in a matter of seconds, we&amp;#8217;ll probably first get an AI that &lt;em&gt;tries&lt;/em&gt; to kill all humans but is really inept at it.  Now fortunately, I personally also regard the latter scenarios as the more plausible ones anyway.  But &lt;em&gt;even if you didn&amp;#8217;t&lt;/em&gt;&amp;#8212;again, methodologically, it seems to me that it&amp;#8217;d still make sense to focus on them.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Regarding your project on watermarking&amp;#8212;so in general, for discriminating between human and model outputs, what&amp;#8217;s the endgame?  Can watermarking win in the long run?  Will it just be an eternal arms race?&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Scott:&lt;/strong&gt; Another great question.  One difficulty with watermarking is that it&amp;#8217;s hard even to formalize what the task is.  I mean, you could always take the output of an AI model and rephrase it using some &lt;em&gt;other&lt;/em&gt; AI model, for example, and catching all such things seems like an &lt;a href=&quot;https://en.wikipedia.org/wiki/AI-complete&quot;&gt;&amp;#8220;AI-complete problem.&amp;#8221;&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;On the other hand, I can think of writers&amp;#8212;Shakespeare, Wodehouse, David Foster Wallace&amp;#8212;who have such a distinctive style that, even if they &lt;em&gt;tried&lt;/em&gt; to pretend to be someone else, they plausibly couldn&amp;#8217;t.  Everyone would recognize that it was them.  So, you could imagine trying to build an AI in the same way.  That is, it would be constructed from the ground up so that all of its outputs contained indelible marks, whether cryptographic or stylistic, giving away their origin.  The AI couldn&amp;#8217;t easily hide and pretend to be a human or anything else it wasn&amp;#8217;t.  Whether this is possible strikes me as an &lt;em&gt;extremely&lt;/em&gt; interesting question at the interface between AI and cryptography!  It&amp;#8217;s especially challenging if you impose one or more of the following conditions:&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;the AI&amp;#8217;s code and parameters should be public (in which case, people might easily be able to modify it to remove the watermarking),&lt;/li&gt;
-
-
-
-&lt;li&gt;the AI should have at least some ability to modify itself, and&lt;/li&gt;
-
-
-
-&lt;li&gt;the means of &lt;em&gt;checking&lt;/em&gt; for the watermark should be public (in which case, again, the watermark might be easier to understand and remove).&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;I don&amp;#8217;t actually have a good intuition as to which side will ultimately win this contest, the AIs trying to conceal themselves or the watermarking schemes trying to reveal them, the Replicants or the &lt;a href=&quot;https://en.wikipedia.org/wiki/Blade_Runner#Voight-Kampff_machine&quot;&gt;Voight-Kampff machines&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Certainly in the watermarking scheme that I&amp;#8217;m working on now, we crucially exploit the fact that OpenAI controls its own servers.  So, it can do the watermarking using a secret key, and it can check for the watermark using the same key.  In a world where anyone could build their own text model that was just as good as GPT &amp;#8230; what would you do there?&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </description>
-  <pubDate>2022-11-29 05:50:03 UTC</pubDate>
-  <author>Scott Aaronson</author>
 </item>
 
 </channel>
