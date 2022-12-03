@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-12-03T15:30:28Z">Saturday, December 03 2022, 15:30</time>
+          <time class='timeago' datetime="2022-12-03T16:41:11Z">Saturday, December 03 2022, 16:41</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -534,7 +534,7 @@ Email: simonsvisitorservices@berkeley.edu</p>
 
 
 
-<p>Daniel Harlow explained the thinking to me as follows (he stresses that he&#8217;s explaining it, not necessarily endorsing it).  If you had two entangled quantum computers, one on Earth and the other in the Andromeda galaxy, and if they were both simulating SYK, and if Alice on Earth and Bob in Andromeda both <em>uploaded their own brains into their respective quantum simulations</em>, then it seems possible that the simulated Alice and Bob could have the experience of jumping into a wormhole and meeting each other in the middle.  Granted, they couldn&#8217;t get a message back <em>out</em> from the wormhole, at least not without &#8220;going the long way,&#8221; which could happen only at the speed of light&#8212;so only simulated-Alice and simulated-Bob themselves could ever <em>test</em> this prediction.  Nevertheless, <em>if true</em>, I suppose some would treat it as grounds for regarding a quantum simulation of SYK as &#8220;more real&#8221; than a classical simulation.</p>
+<p>Daniel Harlow explained the thinking to me as follows (he stresses that he&#8217;s explaining it, not necessarily endorsing it).  If you had two entangled quantum computers, one on Earth and the other in the Andromeda galaxy, and if they were both simulating SYK, and if Alice on Earth and Bob in Andromeda both <em>uploaded their own brains into their respective quantum simulations</em>, then it seems possible that the simulated Alice and Bob could have the experience of jumping into a wormhole and meeting each other in the middle.  Granted, they couldn&#8217;t get a message back <em>out</em> from the wormhole, at least not without &#8220;going the long way,&#8221; which could happen only at the speed of light&#8212;so only simulated-Alice and simulated-Bob themselves could ever <em>test</em> this prediction.  Nevertheless, <em>if true</em>, I suppose some would treat it as grounds for regarding a quantum simulation of SYK as &#8220;more real&#8221; or &#8220;more wormholey&#8221; than a classical simulation.</p>
 
 
 
@@ -560,11 +560,25 @@ Email: simonsvisitorservices@berkeley.edu</p>
 
 
 
-<p>Alright, let&#8217;s move on to the claim that quantum supremacy has been refuted.  What Aharonov et al. actually show, building on <a href="https://arxiv.org/abs/1810.03176">earlier work by Gao and Duan</a>, is that Random Circuit Sampling, with a constant rate of noise per gate and no error-correction, can&#8217;t provide a <em>scalable</em> approach to quantum supremacy.  Or more precisely: as the number of qubits n goes to infinity, and assuming you&#8217;re in the &#8220;anti-concentration regime&#8221; (which in practice probably means: the depth of your quantum circuit is at least ~log(n)), there&#8217;s a classical algorithm to approximately sample the quantum circuit&#8217;s output distribution in poly(n) time (albeit, not yet a practical algorithm).</p>
+<p>Alright, let&#8217;s move on to the claim that quantum supremacy has been refuted.  What Aharonov et al. actually show in their <a href="https://arxiv.org/abs/2211.03999">new work</a>, building on <a href="https://arxiv.org/abs/1810.03176">earlier work by Gao and Duan</a>, is that Random Circuit Sampling, with a constant rate of noise per gate and no error-correction, can&#8217;t provide a <em>scalable</em> approach to quantum supremacy.  Or more precisely: as the number of qubits n goes to infinity, and assuming you&#8217;re in the &#8220;anti-concentration regime&#8221; (which in practice probably means: the depth of your quantum circuit is at least ~log(n)), there&#8217;s a classical algorithm to approximately sample the quantum circuit&#8217;s output distribution in poly(n) time (albeit, not yet a practical algorithm).</p>
 
 
 
-<p>Here&#8217;s what&#8217;s crucial to understand: this is <em>100% consistent</em> with what those of us working on quantum supremacy had assumed since at least 2016.  We <em>knew</em> that if you tried to scale Random Circuit Sampling to 200 or 500 or 1000 qubits, while you also increased the circuit depth proportionately, the signal-to-noise ratio would become exponentially small, meaning that your quantum speedup would disappear.  That&#8217;s why, from the very beginning, we targeted the &#8220;practical&#8221; regime of 50-100 qubits: a regime where you can still see explicitly that you&#8217;re exploiting a 2<sup>50</sup>&#8211; or 2<sup>100</sup>-dimensional Hilbert space for computational advantage, thereby confirming one of the main predictions of quantum computing theory, but you <em>also</em> have a signal that (as it turned out) is large enough to see with heroic effort.  To their credit, Aharonov et al. explain all this perfectly clearly in their abstract and introduction.  I&#8217;m just worried that <em>others</em> aren&#8217;t reading their paper as carefully as they should be!</p>
+<p>Here&#8217;s what&#8217;s crucial to understand: this is <em>100% consistent</em> with what those of us working on quantum supremacy had assumed since at least 2016!  We <em>knew</em> that if you tried to scale Random Circuit Sampling to 200 or 500 or 1000 qubits, while you also increased the circuit depth proportionately, the signal-to-noise ratio would become exponentially small, meaning that your quantum speedup would disappear.  That&#8217;s why, from the very beginning, we targeted the &#8220;practical&#8221; regime of 50-100 qubits: a regime where</p>
+
+
+
+<ol>
+<li>you can still see explicitly that you&#8217;re exploiting a 2<sup>50</sup>&#8211; or 2<sup>100</sup>-dimensional Hilbert space for computational advantage, thereby confirming one of the main predictions of quantum computing theory, but</li>
+
+
+
+<li>you <em>also</em> have a signal that (as it turned out) is large enough to see with heroic effort.  </li>
+</ol>
+
+
+
+<p>To their credit, Aharonov et al. explain all this perfectly clearly in their abstract and introduction.  I&#8217;m just worried that <em>others</em> aren&#8217;t reading their paper as carefully as they should be!</p>
 
 
 
