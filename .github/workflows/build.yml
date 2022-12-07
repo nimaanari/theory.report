@@ -23,9 +23,9 @@ jobs:
           path: |
             ./theory.db
             ./theory.db-journal
-          key: ${{ runner.os }}-${{ hashFiles('./theory.ini') }}-${{ github.run_id }}
+          key: ${{ runner.os }}-${{ hashFiles('./theory.version') }}-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-${{ hashFiles('./theory.ini') }}
+            ${{ runner.os }}-${{ hashFiles('./theory.version') }}
       - name: Build
         run: |
           make build
