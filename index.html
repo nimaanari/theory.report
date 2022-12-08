@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-12-08T17:30:38Z">Thursday, December 08 2022, 17:30</time>
+          <time class='timeago' datetime="2022-12-08T18:36:06Z">Thursday, December 08 2022, 18:36</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,98 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, December 08
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://ptreview.sublinear.info/2022/12/news-for-october-2022-2/'>News for October 2022</a></h3>
+        <p class='tr-article-feed'>from <a href='https://ptreview.sublinear.info'>Property Testing Review</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          All the best to everyone for a Happy 2023. The holiday season is ripe with lots of papers to engage our readers. So, we have nine papers and we hope some of those will catch your fancy. As a new year treat, we also feature Gilmer&#8217;s constant lower bound on the union-closed sets problem of [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>All the best to everyone for a Happy 2023. The holiday season is ripe with lots of papers to engage our readers. So, we have nine papers and we hope some of those will catch your fancy. As a new year treat, we also feature Gilmer&#8217;s constant lower bound on the union-closed sets problem of Frankl. On we go.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Sublinear Time Algorithms and Complexity of Approximate Maximum Matching</strong> by Soheil Behnezhad, Mohammad Roghani, Aviad Rubinstein (<a href="https://arxiv.org/abs/2211.15843">arXiv</a>) This paper makes significantly advances our understanding of the maximum matching problem in the sublinear regime. Your goal is to estimate the size of the maximum matching and you may assume that you have query access to the adjacency list of your graph. Our posts from <a href="https://ptreview.sublinear.info/2021/12/">Dec 2021</a> and <a href="https://ptreview.sublinear.info/2022/07/news-for-june-2022/">June 2022</a> reported some impressive progress on this problem. The upshot from these works essentially said that you can beat greedy matching and obtain a \(\frac{1}{2} + \Omega(1)\) approximate maximum matching in sublinear time. The question remained &#8212; can we show a lower bound that grows superlinearly with \(n\). The current work achieves this and shows that <em>even on bipartite graphs</em>, you must make at least \(n^{1.2 &#8211; o(1)}\) <em>queries </em>to the adjacency list to get a better than \(2/3 + \Omega(1)\) approximation. On the other hand, the paper also presents an algorithm that runs in time \(n^{2 &#8211; \Omega_{\varepsilon}(1)}\) (strongly sublinear time) and returns a \(2/3 &#8211; \varepsilon\) approximation to the maximum matching size. Thus, in particular, you cannot shoot for a bonafide quadratic lower bound on the number of queries to beat a two-thirds approximation to the maximum matching size.  (An aside: A concurrent work by <a href="https://arxiv.org/abs/2212.00189">Bhattacharya-Kiss-Saranurak</a> from December also obtains similar results) </p>
+
+
+
+<p><strong>Directed Isoperimetric Theorems for Boolean Functions on the Hypergrid and an \(\widetilde{O}(n \sqrt d)\) Monotonicity Tester</strong> by Hadley Black, Deeparnab Chakrabarty, C. Seshadhri (<a href="https://arxiv.org/abs/2211.05281">arXiv</a>) Boolean Monotonicity testing is as classic as classic gets in property testing. Encouraged by the success of isoperimetric theorems over the hypercube domain and the monotonicity testers powered by these isoperimetries (over the hypercube), one may wish to obtain efficient monotonicity testers for the hypergrid \([n]^d\). Indeed, the same gang of authors as above showed in a previous work that a Margulis style directed isoperimetry can be extended from the lowly hypercube to the hypergrid. This resulted in a tester with \(\widetilde{O}(d^{5/6})\) queries. The more intricate task of proving a directed Talagrand style isoperimetry that underlies the Khot-Minzer-Safra breakthrough was a challenge. Was. The featured work extends this isoperimetry from the hypercube to the hypergrid and this gives a tester with query complexity \(\widetilde{O}(n \sqrt d)\) which is an improvement over the \(d^{5/6}\) bound for domains where \(n\) is (say) some small constant. But as they say, when it rains, it pours. This brings us to a concurrent paper with the same result.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Improved Monotonicity Testers via Hypercube Embeddings</strong> by Mark Braverman, Subhash Khot, Guy Kindler, Dor Minzer (<a href="https://arxiv.org/abs/2211.09229">arXiv</a>) Similar to the paper above, this paper also obtains monotonicity testers over the hypergrid domain, \([n]^d\), with \(\widetilde{O}(n^3 \sqrt d)\) queries. This paper also presents monotonicity testers over the standard hypercube domain &#8212; \(\{0,1\}^d\) in the \(p\)-biased setting. In particular, their tester issues \(\widetilde{O}(\sqrt d)\) queries to successfully test monotonicity on the \(p\)-biased cube. Coolly enough, this paper also proves directed Talagrand style isoperimetric inequalities both over the hypergrid and the \(p\)-biased hypercube domains.</p>
+
+
+
+<p><strong>Toeplitz Low-Rank Approximation with Sublinear Query Complexity</strong> by Michael Kapralov, Hannah Lawrence, Mikhail Makarov, Cameron Musco, Kshiteej Sheth (<a href="https://arxiv.org/abs/2211.11328">arXiv</a>) Another intriguing paper for the holiday month. So, take a <a href="https://en.wikipedia.org/wiki/Toeplitz_matrix">Toeplitz matrix</a>. Did you know that any <em>psd</em> Toeplitz matrix admits a (near-optimal in the Frobenius norm) low-rank approximation which is itself Toeplitz? This is a remarkable statement. The featured paper proves this result and uses it to get more algorithmic mileage. In particular, suppose you are given a \(d \times d\) Toeplitz matrix \(T\). Armed with the techniques from the paper you get algorithms that return a Toeplitz matrix \(\widetilde{T}\) with rank slightly bigger than \(rank(T)\) which is a very good approximation to \(T\) in the Frobenius norm. Moreover, the algorithm only issues a number of queries sublinear in the size of \(T\).</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Sampling an Edge in Sublinear Time Exactly and Optimally</strong> by Talya Eden, Shyam Narayanan and Jakub Tětek (<a href="https://arxiv.org/abs/2211.04981">arXiv</a>) Regular readers of PTReview are no strangers to the fundamental task of sampling a random edge from a graph which you can access via query access to its vertices. Of course, you don&#8217;t have direct access to the edges of this graph. This paper considers the task of sampling a truly uniform edge from the graph \(G = (V,E)\) with \(|V| = n, |E| = m\). In STOC 22, Tětek and Thorup presented an algorithm for a relaxation of this problem where you want an \(\varepsilon\)-approximately unifrom edge. This algorithm runs in time \(O\left(\frac{n}{\sqrt{m}} \cdot \log(1/\varepsilon) \right)\). The featured paper presents an algorithm that samples an honest to goodness uniform edge in expected time \(O(n/\sqrt{m})\). This closes the problem as we already know a matching lower bound. Indeed, just consider a graph with \(O(\sqrt m)\) vertices which induce a clique and all the remaining components are singletons. You need to sample at least \(\Omega(n/\sqrt m)\) vertices before you see any edge.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Support Size Estimation: The Power of Conditioning</strong> by Diptarka Chakraborty, Gunjan Kumar, Kuldeep S. Meel (<a href="https://arxiv.org/abs/2211.11967">arXiv</a>) This work considers the classic problem of support size estimation with a slight twist. You are given access to a stronger (conditioning based) sampling oracle. Let me highlight one of the results from this paper. So, you are given a distribution \(D\) where \(supp(D) \subseteq [n]\). You want to obtain an estimate to \(supp(D)\) that lies within \(supp(D) \pm \varepsilon n\) with high probability. Suppose you are also given access to the following sampling oracle. You may choose any subset \(S \subseteq [n]\) and you may request a sample \(x \sim D\vert_S\). An element \(x \in S\) is returned with probability \(D\vert_S(x) = D(x)/D(S)\) (for simplicity of this post, let us assume \(D(S) > 0\)). In addition, this oracle also reveals for you the value \(D(x)\). The paper shows that the algorithmic task of obtaining a high probability estimate to the support size (to within \(\pm \varepsilon n\)) with this sampling oracle admits a lower bound of \(\Omega(\log (\log n)\) calls to the sampling oracle.</p>
+
+
+
+<p><strong>Computing (1+epsilon)-Approximate Degeneracy in Sublinear Time</strong> by Valerie King, Alex Thomo, Quinton Yong (<a href="https://arxiv.org/abs/2211.04627">arXiv</a>) Degeneracy is one of the important graph parameters which is relevant to several problems in algorithmic graph theory. A graph \(G = (V,E)\) is \(\delta\)-degenerate if all induced subgraphs of \(G\) contain a vertex with degree at most \(\delta\). The featured paper presents algorithms for a \((1 + \varepsilon)\)-approximation to degeneracy of \(G\) where you are given access to \(G\) via its adjacency list. </p>
+
+
+
+<p><strong>Learning and Testing Latent-Tree Ising Models Efficiently</strong> by Davin Choo, Yuval Dagan, Constantinos Daskalakis, Anthimos Vardis Kandiros (<a href="https://arxiv.org/abs/2211.13291">arXiv</a>) Ising models are emerging as a rich and fertile frontier for Property Testing and Learning Theory researchers (at least to the uninitiated ones like me). This paper considers latent-tree ising models. These are ising models that can only be observed at their leaf nodes. One of the results in this paper gives an algorithm for testing whether the leaf distributions attached to two latent-tree ising models are close or far in the TV distance.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>A constant lower bound for the union-closed sets conjecture</strong> by Justin Gilmer (<a href="https://arxiv.org/abs/2211.09055">arXiv</a>) The union-closed sets conjecture of Frankl states that for any union closed set system \(\mathcal{F} \subseteq 2^{[n]}\), it holds that there is a mysterious element \(i \in [n]\) that shows up in at least \(c = 1/2\) of the sets in \(\mathcal{F}\). Gilmer took a first swipe on this problem and gave a constant lower bound of \(c = 0.01\). This has already been improved by at least four different groups to \(\frac{3-\sqrt{5}}{2}\), a bound which is the limit of Gilmer&#8217;s method (which takes all of only 9 pages!). </p>
+
+
+
+<p>The key lemma Gilmer proves is the following. Suppose you sample two sets: \(A, B \sim \mathcal{D}_n\) <em>(iid)</em> from some distribution \(\mathcal{D}_n\) over the subsets of \([n]\). Suppose for every index \(i \in [n]\), it holds that the probability that the element \(i\) shows up in the random set \(A\) is at most $0.01$. Then you have \(H(A \cup B) \geq 1.26 H(A)\). This is all you need to finish Gilmer&#8217;s proof (of \(c = 0.01\)). The remaining argument is as follows. Suppose, by the way of contradiction, that no element shows up in at least \(0.01\) fraction of sets in the union closed family \(\mathcal{F}\). An application of the key lemma would then give \(H(A \cup B) > H(A)\) which is a contradiction if \(A,B\) are chosen uniformly from \(\mathcal{F}\). The proof of the key lemma is also fairly slick and uses pretty simple information theoretic tools.</p>
+<p class="authors">By Akash</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-12-08T18:22:31Z">Thursday, December 08 2022, 18:22</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3211,72 +3303,6 @@ Email: nherrera@eng.ucsd.edu</p>
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-11-30T15:47:00Z">Wednesday, November 30 2022, 15:47</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://gilkalai.wordpress.com/2022/11/30/a-nice-example-related-to-the-frankl-conjecture/'>A Nice Example Related to the Frankl Conjecture</a></h3>
-        <p class='tr-article-feed'>from <a href='https://gilkalai.wordpress.com'>Gil Kalai</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          The example As a follow up to my previous post about Gilmer&#8217;s breakthrough regarding Frankl&#8217;s conjecture, here is a very nice example (from the paper of Zachary Chase and Shachar Lovett) related to the conjecture. Let Consider the following families &#8230; Continue reading &#8594;
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <h3>The example</h3>
-<p>As a follow up to <a href="https://gilkalai.wordpress.com/2022/11/17/amazing-justin-gilmer-gave-a-constant-lower-bound-for-the-union-closed-sets-conjecture/">my previous post</a> about Gilmer&#8217;s breakthrough regarding Frankl&#8217;s conjecture, here is a very nice example (from <a href="https://arxiv.org/abs/2211.11689">the paper of Zachary Chase and Shachar Lovett</a>) related to the conjecture.</p>
-<p>Let <img src="https://s0.wp.com/latex.php?latex=%5Cpsi%3D%5Cfrac+%7B3-%5Csqrt+5%7D%7B2%7D+%3D+0.38..&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cpsi%3D%5Cfrac+%7B3-%5Csqrt+5%7D%7B2%7D+%3D+0.38..&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi%3D%5Cfrac+%7B3-%5Csqrt+5%7D%7B2%7D+%3D+0.38..&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;psi=&#92;frac {3-&#92;sqrt 5}{2} = 0.38.." class="latex" /></p>
-<p>Consider the following families of subsets of <img src="https://s0.wp.com/latex.php?latex=%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="[n]" class="latex" /></p>
-<p><img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1%3D%5C%7BS+%5Csubset+%5Bn%5D%3A+%7CS%7C%3D%5Cpsi+n+%2B+n%5E%7B2%2F3%7D%5C%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1%3D%5C%7BS+%5Csubset+%5Bn%5D%3A+%7CS%7C%3D%5Cpsi+n+%2B+n%5E%7B2%2F3%7D%5C%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1%3D%5C%7BS+%5Csubset+%5Bn%5D%3A+%7CS%7C%3D%5Cpsi+n+%2B+n%5E%7B2%2F3%7D%5C%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}_1=&#92;{S &#92;subset [n]: |S|=&#92;psi n + n^{2/3}&#92;}" class="latex" />, and</p>
-<p><img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2+%3D+%5C%7B+T+%5Csubset+%5Bn%5D%3A+%7CT%7C%3E%281-%5Cpsi%29+n+%5C%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2+%3D+%5C%7B+T+%5Csubset+%5Bn%5D%3A+%7CT%7C%3E%281-%5Cpsi%29+n+%5C%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2+%3D+%5C%7B+T+%5Csubset+%5Bn%5D%3A+%7CT%7C%3E%281-%5Cpsi%29+n+%5C%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}_2 = &#92;{ T &#92;subset [n]: |T|&gt;(1-&#92;psi) n &#92;}" class="latex" />.</p>
-<p>Now let <img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D%3D%7B%5Ccal+F%7D_1+%5Ccup+%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D%3D%7B%5Ccal+F%7D_1+%5Ccup+%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D%3D%7B%5Ccal+F%7D_1+%5Ccup+%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}={&#92;cal F}_1 &#92;cup {&#92;cal F}_2" class="latex" />.</p>
-<p>Here are some observations:</p>
-<ol>
-<li><img src="https://s0.wp.com/latex.php?latex=%7C%7B%5Ccal+F%7D_2%7C+%3D+o%28%7C%7B%5Ccal+F%7D_1%7C%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7C%7B%5Ccal+F%7D_2%7C+%3D+o%28%7C%7B%5Ccal+F%7D_1%7C%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7C%7B%5Ccal+F%7D_2%7C+%3D+o%28%7C%7B%5Ccal+F%7D_1%7C%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="|{&#92;cal F}_2| = o(|{&#92;cal F}_1|)" class="latex" />.</li>
-<li>The number of pairs <img src="https://s0.wp.com/latex.php?latex=%28S%2CT%29%3AS%2CT+%5Cin+%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%28S%2CT%29%3AS%2CT+%5Cin+%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%28S%2CT%29%3AS%2CT+%5Cin+%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="(S,T):S,T &#92;in {&#92;cal F}" class="latex" /> whose union is also in <img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}" class="latex" /> is <img src="https://s0.wp.com/latex.php?latex=%281-o%281%29%29+%7B%7C%5Ccal+F%7D%7C%5E2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%281-o%281%29%29+%7B%7C%5Ccal+F%7D%7C%5E2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%281-o%281%29%29+%7B%7C%5Ccal+F%7D%7C%5E2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="(1-o(1)) {|&#92;cal F}|^2" class="latex" />.</li>
-<li>For every <img src="https://s0.wp.com/latex.php?latex=%5Cepsilon+%3E0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cepsilon+%3E0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cepsilon+%3E0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;epsilon &gt;0" class="latex" />, as <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" /> grows, no element <img src="https://s0.wp.com/latex.php?latex=k+%5Cin+%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=k+%5Cin+%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k+%5Cin+%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="k &#92;in [n]" class="latex" /> belongs to more than <img src="https://s0.wp.com/latex.php?latex=%28%5Cpsi%2B%5Cepsilon%29+%7C%7B%5Ccal+F%7D%7C&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%28%5Cpsi%2B%5Cepsilon%29+%7C%7B%5Ccal+F%7D%7C&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%28%5Cpsi%2B%5Cepsilon%29+%7C%7B%5Ccal+F%7D%7C&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="(&#92;psi+&#92;epsilon) |{&#92;cal F}|" class="latex" /> sets in <img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}" class="latex" />.</li>
-</ol>
-<p>The first assertion holds because <img src="https://s0.wp.com/latex.php?latex=%7B%7Bn%7D+%5Cchoose+%7B%5Cpsi+n+%2Bn%5E%7B2%2F3%7D%7D%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%7Bn%7D+%5Cchoose+%7B%5Cpsi+n+%2Bn%5E%7B2%2F3%7D%7D%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%7Bn%7D+%5Cchoose+%7B%5Cpsi+n+%2Bn%5E%7B2%2F3%7D%7D%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{{n} &#92;choose {&#92;psi n +n^{2/3}}}" class="latex" /> is exponentially larger (in a fractional power of <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />) than <img src="https://s0.wp.com/latex.php?latex=%7B%7Bn%7D+%5Cchoose+%7B%281-%5Cpsi+%29n%7D%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%7Bn%7D+%5Cchoose+%7B%281-%5Cpsi+%29n%7D%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%7Bn%7D+%5Cchoose+%7B%281-%5Cpsi+%29n%7D%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{{n} &#92;choose {(1-&#92;psi )n}}" class="latex" />.</p>
-<p>For the second assertion we need to show that a typical union of a pair of sets in <img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}_1" class="latex" /> belongs to <img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}_2" class="latex" />. Note that the intersection of two random subsets of <img src="https://s0.wp.com/latex.php?latex=%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="[n]" class="latex" /> of size <img src="https://s0.wp.com/latex.php?latex=%5Cphi+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cphi+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cphi+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;phi n" class="latex" /> is <img src="https://s0.wp.com/latex.php?latex=%5Cphi+%5E2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cphi+%5E2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cphi+%5E2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;phi ^2 n" class="latex" /> and hence their union is of size <img src="https://s0.wp.com/latex.php?latex=2%5Cphi+-+%5Cphi%5E2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=2%5Cphi+-+%5Cphi%5E2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=2%5Cphi+-+%5Cphi%5E2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="2&#92;phi - &#92;phi^2" class="latex" />. As it happens the solution of the equation <img src="https://s0.wp.com/latex.php?latex=2%5Cphi-%5Cphi%5E2+%3D+1-%5Cphi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=2%5Cphi-%5Cphi%5E2+%3D+1-%5Cphi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=2%5Cphi-%5Cphi%5E2+%3D+1-%5Cphi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="2&#92;phi-&#92;phi^2 = 1-&#92;phi" class="latex" /> is precisely our <img src="https://s0.wp.com/latex.php?latex=%5Cpsi%3D%5Cfrac+%7B3%2B%5Csqrt+5%7D%7B2%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cpsi%3D%5Cfrac+%7B3%2B%5Csqrt+5%7D%7B2%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi%3D%5Cfrac+%7B3%2B%5Csqrt+5%7D%7B2%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;psi=&#92;frac {3+&#92;sqrt 5}{2}" class="latex" />. So letting <img src="https://s0.wp.com/latex.php?latex=%5Cphi%3D%5Cpsi+%2B+n%5E%7B-1%2F3%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cphi%3D%5Cpsi+%2B+n%5E%7B-1%2F3%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cphi%3D%5Cpsi+%2B+n%5E%7B-1%2F3%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;phi=&#92;psi + n^{-1/3}" class="latex" /> we get that a typical union of two sets from <img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}_1" class="latex" /> is in <img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}_2" class="latex" />.</p>
-<p>The third assertion follows from the fact that an element <img src="https://s0.wp.com/latex.php?latex=k+%5Cin+%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=k+%5Cin+%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k+%5Cin+%5Bn%5D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="k &#92;in [n]" class="latex" /> belongs to a fraction of <img src="https://s0.wp.com/latex.php?latex=%5Cpsi+%2B+n%5E%7B-1%2F3%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cpsi+%2B+n%5E%7B-1%2F3%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi+%2B+n%5E%7B-1%2F3%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;psi + n^{-1/3}" class="latex" />  sets in <img src="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7B%5Ccal+F%7D_1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="{&#92;cal F}_1" class="latex" />.</p>
-<p>This shows that a natural stability version of Frankl&#8217;s conjecture is incorrect, and gives some hint on the appearance of the parameter <img src="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;psi" class="latex" />.</p>
-<h3>Stability result</h3>
-<p>Such a stability version is correct when we replace <img src="https://s0.wp.com/latex.php?latex=1%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=1%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=1%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="1/2" class="latex" /> with <img src="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;psi" class="latex" />. Chase and Lovett improved Gilmer&#8217;s method and  proved that</p>
-<p><strong>Theorem:</strong> If  <img src="https://s0.wp.com/latex.php?latex=%5Ccal+F&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ccal+F&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ccal+F&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;cal F" class="latex" /> is a <img src="https://s0.wp.com/latex.php?latex=%281-%5Cepsilon%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%281-%5Cepsilon%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%281-%5Cepsilon%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="(1-&#92;epsilon)" class="latex" />-approximate union closed set system, where <img src="https://s0.wp.com/latex.php?latex=%5Cepsilon+%3C1%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cepsilon+%3C1%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cepsilon+%3C1%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;epsilon &lt;1/2" class="latex" />, then there is an element which is contained in a <img src="https://s0.wp.com/latex.php?latex=%28%5Cpsi-%5Cdelta%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%28%5Cpsi-%5Cdelta%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%28%5Cpsi-%5Cdelta%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="(&#92;psi-&#92;delta)" class="latex" /> fraction of sets in <img src="https://s0.wp.com/latex.php?latex=%5Ccal+F&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ccal+F&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ccal+F&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;cal F" class="latex" />, where</p>
-<p><img src="https://s0.wp.com/latex.php?latex=%5Cdelta%3D2%5Cepsilon+%281%2B%5Cfrac+%7B%5Clog+%281%2F%5Cepsilon%29%7D%7B%5Clog+%7C%7B%5Ccal+F%7D%7C%7D%29.&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cdelta%3D2%5Cepsilon+%281%2B%5Cfrac+%7B%5Clog+%281%2F%5Cepsilon%29%7D%7B%5Clog+%7C%7B%5Ccal+F%7D%7C%7D%29.&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cdelta%3D2%5Cepsilon+%281%2B%5Cfrac+%7B%5Clog+%281%2F%5Cepsilon%29%7D%7B%5Clog+%7C%7B%5Ccal+F%7D%7C%7D%29.&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;delta=2&#92;epsilon (1+&#92;frac {&#92;log (1/&#92;epsilon)}{&#92;log |{&#92;cal F}|})." class="latex" /></p>
-<h3>An invitation for further discussion</h3>
-<p>I will be happy to see, based on Gilmer&#8217;s paper and the five follow-up papers, a detailed, as simple as possible, explanation of Frankl&#8217;s conjecture for the parameter <img src="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;psi" class="latex" />, to learn what is involved in Sawin&#8217;s improvement that goes beyond <img src="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cpsi&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;psi" class="latex" />, and to understand the counterexamples for Gilmer&#8217;s proposal towards the full conjecture, as well as thoughts, ideas and remarks of various kind on the problem.</p>
-<h3>Links to the papers</h3>
-<ol>
-<li><a href="https://arxiv.org/abs/2211.09055">Justin Gilmer, A constant lower bound for the union-closed sets conjecture</a></li>
-<li>Will Sawin, <a href="https://arxiv.org/abs/2211.11504">An improved lower bound for the union-closed set conjecture</a></li>
-<li> Zachary Chase, Shachar Lovett, <a href="https://arxiv.org/abs/2211.11689">Approximate union closed conjecture</a></li>
-<li>Ryan Alweiss, Brice Huang, Mark Sellke, <a href="https://arxiv.org/abs/2211.11731">Improved Lower Bound for the Union-Closed Sets Conjecture </a></li>
-<li>David Ellis, <a href="https://arxiv.org/abs/2211.12401">Note: a counterexample to a conjecture of Gilmer which would imply the union-closed conjecture</a></li>
-<li>Luke Pebody, <a href="https://arxiv.org/abs/2211.13139">Extension of a Method of Gilmer</a></li>
-</ol>
-
-
-<p></p>
-<p class="authors">By Gil Kalai</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-11-30T07:02:02Z">Wednesday, November 30 2022, 07:02</time>
         </div>
       </div>
     </details>
