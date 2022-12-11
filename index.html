@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-12-11T02:30:20Z">Sunday, December 11 2022, 02:30</time>
+          <time class='timeago' datetime="2022-12-11T03:00:36Z">Sunday, December 11 2022, 03:00</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -1018,7 +1018,7 @@ over previously known results.
 
     <details class='tr-article' open>
       <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://ptreview.sublinear.info/2022/12/news-for-october-2022-2/'>News for October 2022</a></h3>
+        <h3 class='tr-article-title'><a href='https://ptreview.sublinear.info/2022/12/news-for-october-2022-2/'>News for November 2022</a></h3>
         <p class='tr-article-feed'>from <a href='https://ptreview.sublinear.info'>Property Testing Review</a></p>
         <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
       </summary>
@@ -1075,7 +1075,7 @@ over previously known results.
 
 
 
-<p><strong>Support Size Estimation: The Power of Conditioning</strong> by Diptarka Chakraborty, Gunjan Kumar, Kuldeep S. Meel (<a href="https://arxiv.org/abs/2211.11967">arXiv</a>) This work considers the classic problem of support size estimation with a slight twist. You are given access to a stronger (conditioning based) sampling oracle. Let me highlight one of the results from this paper. So, you are given a distribution \(D\) where \(supp(D) \subseteq [n]\). You want to obtain an estimate to \(supp(D)\) that lies within \(supp(D) \pm \varepsilon n\) with high probability. Suppose you are also given access to the following sampling oracle. You may choose any subset \(S \subseteq [n]\) and you may request a sample \(x \sim D\vert_S\). An element \(x \in S\) is returned with probability \(D\vert_S(x) = D(x)/D(S)\) (for simplicity of this post, let us assume \(D(S) > 0\)). In addition, this oracle also reveals for you the value \(D(x)\). The paper shows that the algorithmic task of obtaining a high probability estimate to the support size (to within \(\pm \varepsilon n\)) with this sampling oracle admits a lower bound of \(\Omega(\log (\log n)\) calls to the sampling oracle.</p>
+<p><strong>Support Size Estimation: The Power of Conditioning</strong> by Diptarka Chakraborty, Gunjan Kumar, Kuldeep S. Meel (<a href="https://arxiv.org/abs/2211.11967">arXiv</a>) This work considers the classic problem of support size estimation with a slight twist. You are given access to a stronger (conditioning based) sampling oracle. Let me highlight one of the results from this paper. So, you are given a distribution \(D\) where \(supp(D) \subseteq [n]\). You want to obtain an estimate to \(supp(D)\) that lies within \(supp(D) \pm \varepsilon n\) with high probability. Suppose you are also given access to the following sampling oracle. You may choose any subset \(S \subseteq [n]\) and you may request a sample \(x \sim D\vert_S\). An element \(x \in S\) is returned with probability \(D\vert_S(x) = D(x)/D(S)\) (for simplicity of this post, let us assume \(D(S) &gt; 0\)). In addition, this oracle also reveals for you the value \(D(x)\). The paper shows that the algorithmic task of obtaining a high probability estimate to the support size (to within \(\pm \varepsilon n\)) with this sampling oracle admits a lower bound of \(\Omega(\log (\log n)\) calls to the sampling oracle.</p>
 
 
 
@@ -1095,7 +1095,7 @@ over previously known results.
 
 
 
-<p>The key lemma Gilmer proves is the following. Suppose you sample two sets: \(A, B \sim \mathcal{D}_n\) <em>(iid)</em> from some distribution \(\mathcal{D}_n\) over the subsets of \([n]\). Suppose for every index \(i \in [n]\), it holds that the probability that the element \(i\) shows up in the random set \(A\) is at most $0.01$. Then you have \(H(A \cup B) \geq 1.26 H(A)\). This is all you need to finish Gilmer&#8217;s proof (of \(c = 0.01\)). The remaining argument is as follows. Suppose, by the way of contradiction, that no element shows up in at least \(0.01\) fraction of sets in the union closed family \(\mathcal{F}\). An application of the key lemma would then give \(H(A \cup B) > H(A)\) which is a contradiction if \(A,B\) are chosen uniformly from \(\mathcal{F}\). The proof of the key lemma is also fairly slick and uses pretty simple information theoretic tools.</p>
+<p>The key lemma Gilmer proves is the following. Suppose you sample two sets: \(A, B \sim \mathcal{D}_n\) <em>(iid)</em> from some distribution \(\mathcal{D}_n\) over the subsets of \([n]\). Suppose for every index \(i \in [n]\), it holds that the probability that the element \(i\) shows up in the random set \(A\) is at most $0.01$. Then you have \(H(A \cup B) \geq 1.26 H(A)\). This is all you need to finish Gilmer&#8217;s proof (of \(c = 0.01\)). The remaining argument is as follows. Suppose, by the way of contradiction, that no element shows up in at least \(0.01\) fraction of sets in the union closed family \(\mathcal{F}\). An application of the key lemma would then give \(H(A \cup B) &gt; H(A)\) which is a contradiction if \(A,B\) are chosen uniformly from \(\mathcal{F}\). The proof of the key lemma is also fairly slick and uses pretty simple information theoretic tools.</p>
 <p class="authors">By Akash</p>
         
         </div>
