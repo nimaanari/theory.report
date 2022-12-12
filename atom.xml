@@ -10,6 +10,184 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Implementing Neural Network-Based Equalizers in a Coherent Optical Transmission System Using Field-Programmable Gate Arrays</title>
+    <link href="http://arxiv.org/abs/2212.04703"/>
+    <id>http://arxiv.org/abs/2212.04703</id>
+    <updated>2022-12-12T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Freire_P/0/1/0/all/0/1&quot;&gt;Pedro J. Freire&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Srivallapanondh_S/0/1/0/all/0/1&quot;&gt;Sasipim Srivallapanondh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Anderson_M/0/1/0/all/0/1&quot;&gt;Michael Anderson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Spinnler_B/0/1/0/all/0/1&quot;&gt;Bernhard Spinnler&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Bex_T/0/1/0/all/0/1&quot;&gt;Thomas Bex&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Eriksson_T/0/1/0/all/0/1&quot;&gt;Tobias A. Eriksson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Napoli_A/0/1/0/all/0/1&quot;&gt;Antonio Napoli&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Schairer_W/0/1/0/all/0/1&quot;&gt;Wolfgang Schairer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Costa_N/0/1/0/all/0/1&quot;&gt;Nelson Costa&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Blott_M/0/1/0/all/0/1&quot;&gt;Michaela Blott&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Turitsyn_S/0/1/0/all/0/1&quot;&gt;Sergei K. Turitsyn&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/eess/1/au:+Prilepsky_J/0/1/0/all/0/1&quot;&gt;Jaroslaw E. Prilepsky&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work, we demonstrate the offline FPGA realization of both recurrent
+and feedforward neural network (NN)-based equalizers for nonlinearity
+compensation in coherent optical transmission systems. First, we present a
+realization pipeline showing the conversion of the models from Python libraries
+to the FPGA chip synthesis and implementation. Then, we review the main
+alternatives for the hardware implementation of nonlinear activation functions.
+The main results are divided into three parts: a performance comparison, an
+analysis of how activation functions are implemented, and a report on the
+complexity of the hardware. The performance in Q-factor is presented for the
+cases of bidirectional long-short-term memory coupled with convolutional NN
+(biLSTM + CNN) equalizer, CNN equalizer, and standard 1-StpS digital
+back-propagation (DBP) for the simulation and experiment propagation of a
+single channel dual-polarization (SC-DP) 16QAM at 34 GBd along 17x70km of LEAF.
+The biLSTM+CNN equalizer provides a similar result to DBP and a 1.7 dB Q-factor
+gain compared with the chromatic dispersion compensation baseline in the
+experimental dataset. After that, we assess the Q-factor and the impact of
+hardware utilization when approximating the activation functions of NN using
+Taylor series, piecewise linear, and look-up table (LUT) approximations. We
+also show how to mitigate the approximation errors with extra training and
+provide some insights into possible gradient problems in the LUT approximation.
+Finally, to evaluate the complexity of hardware implementation to achieve 400G
+throughput, fixed-point NN-based equalizers with approximated activation
+functions are developed and implemented in an FPGA.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Controllability of complex networks: input node placement restricting the longest control chain</title>
+    <link href="http://arxiv.org/abs/2212.04718"/>
+    <id>http://arxiv.org/abs/2212.04718</id>
+    <updated>2022-12-12T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alizadeh_S/0/1/0/all/0/1&quot;&gt;Samie Alizadeh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Posfai_M/0/1/0/all/0/1&quot;&gt;M&amp;#xe1;rton P&amp;#xf3;sfai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghasemi_A/0/1/0/all/0/1&quot;&gt;Abdorasoul Ghasemi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The minimum number of inputs needed to control a network is frequently used
+to quantify its controllability. Control of linear dynamics through a minimum
+set of inputs, however, often has prohibitively large energy requirements and
+there is an inherent trade-off between minimizing the number of inputs and
+control energy. To better understand this trade-off, we study the problem of
+identifying a minimum set of input nodes such that controllabililty is ensured
+while restricting the length of the longest control chain. The longest control
+chain is the maximum distance from input nodes to any network node, and recent
+work found that reducing its length significantly reduces control energy. We
+map the longest control chain-constraint minimum input problem to finding a
+joint maximum matching and minimum dominating set. We show that this graph
+combinatorial problem is NP-complete, and we introduce and validate a heuristic
+approximation. Applying this algorithm to a collection of real and model
+networks, we investigate how network structure affects the minimum number of
+inputs, revealing, for example, that for many real networks reducing the
+longest control chain requires only few or no additional inputs, only the
+rearrangement of the input nodes.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A refinement on the structure of vertex-critical ($P_5$, gem)-free graphs</title>
+    <link href="http://arxiv.org/abs/2212.04659"/>
+    <id>http://arxiv.org/abs/2212.04659</id>
+    <updated>2022-12-12T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Cameron_B/0/1/0/all/0/1&quot;&gt;Ben Cameron&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Hoang_C/0/1/0/all/0/1&quot;&gt;Ch&amp;#xed;nh T. Ho&amp;#xe0;ng&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give a new, stronger proof that there are only finitely many
+$k$-vertex-critical ($P_5$,~gem)-free graphs for all $k$. Our proof further
+refines the structure of these graphs and allows for the implementation of a
+simple exhaustive computer search to completely list all $6$- and
+$7$-vertex-critical $(P_5$, gem)-free graphs. Our results imply the existence
+of polynomial-time certifying algorithms to decide the $k$-colourability of
+$(P_5$, gem)-free graphs for all $k$ where the certificate is either a
+$k$-colouring or a $(k+1)$-vertex-critical induced subgraph. Our complete lists
+for $k\le 7$ allow for the implementation of these algorithms for all $k\le 6$.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Breaking the Barrier $2^k$ for Subset Feedback Vertex Set in Chordal Graphs</title>
+    <link href="http://arxiv.org/abs/2212.04726"/>
+    <id>http://arxiv.org/abs/2212.04726</id>
+    <updated>2022-12-12T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bai_T/0/1/0/all/0/1&quot;&gt;Tian Bai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xiao_M/0/1/0/all/0/1&quot;&gt;Mingyu Xiao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Subset Feedback Vertex Set problem (SFVS), to delete $k$ vertices from a
+given graph such that any vertex in a vertex subset (called a terminal set) is
+not in a cycle in the remaining graph, generalizes the famous Feedback Vertex
+Set problem and Multiway Cut problem. SFVS remains $\mathrm{NP}$-hard even in
+split and chordal graphs, and SFVS in Chordal Graphs can be considered as a
+special case of the 3-Hitting Set problem. However, it is not easy to solve
+SFVS in Chordal Graphs faster than 3-Hitting Set. In 2019, Philip, Rajan,
+Saurabh, and Tale (Algorithmica 2019) proved that SFVS in Chordal Graphs can be
+solved in $2^k n^{\mathcal{O}(1)}$, slightly improving the best result $2.076^k
+n^{\mathcal{O}(1)}$ for 3-Hitting Set. In this paper, we break the
+&quot;$2^k$-barrier&quot; for SFVS in Chordal Graphs by giving a $1.619^k
+n^{\mathcal{O}(1)}$-time algorithm. Our algorithm uses reduction and branching
+rules based on the Dulmage-Mendelsohn decomposition and a divide-and-conquer
+method.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Polynomial-Time Algorithm for MCS Partial Search Order on Chordal Graphs</title>
+    <link href="http://arxiv.org/abs/2212.04880"/>
+    <id>http://arxiv.org/abs/2212.04880</id>
+    <updated>2022-12-12T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rong_G/0/1/0/all/0/1&quot;&gt;Guozhen Rong&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yang_Y/0/1/0/all/0/1&quot;&gt;Yongjie Yang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_W/0/1/0/all/0/1&quot;&gt;Wenjun Li&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the partial search order problem (PSOP) proposed recently by
+Scheffler [WG 2022]. Given a graph $G$ together with a partial order over the
+vertices of $G$, this problem determines if there is an $\mathcal{S}$-ordering
+that is consistent with the given partial order, where $\mathcal{S}$ is a graph
+search paradigm like BFS, DFS, etc. This problem naturally generalizes the
+end-vertex problem which has received much attention over the past few years.
+It also generalizes the so-called ${\mathcal{F}}$-tree recognition problem
+which has just been studied in the literature recently. Our main contribution
+is a polynomial-time dynamic programming algorithm for the PSOP on chordal
+graphs with respect to the maximum cardinality search (MCS). This resolves one
+of the most intriguing open questions left in the work of Sheffler [WG 2022].
+To obtain our result, we propose the notion of layer structure and study
+numerous related structural properties which might be of independent interest.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Robustness Implies Privacy in Statistical Estimation</title>
+    <link href="http://arxiv.org/abs/2212.05015"/>
+    <id>http://arxiv.org/abs/2212.05015</id>
+    <updated>2022-12-12T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hopkins_S/0/1/0/all/0/1&quot;&gt;Samuel B. Hopkins&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kamath_G/0/1/0/all/0/1&quot;&gt;Gautam Kamath&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Majid_M/0/1/0/all/0/1&quot;&gt;Mahbod Majid&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Narayanan_S/0/1/0/all/0/1&quot;&gt;Shyam Narayanan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the relationship between adversarial robustness and differential
+privacy in high-dimensional algorithmic statistics. We give the first black-box
+reduction from privacy to robustness which can produce private estimators with
+optimal tradeoffs among sample complexity, accuracy, and privacy for a wide
+range of fundamental high-dimensional parameter estimation problems, including
+mean and covariance estimation. We show that this reduction can be implemented
+in polynomial time in some important special cases. In particular, using
+nearly-optimal polynomial-time robust estimators for the mean and covariance of
+high-dimensional Gaussians which are based on the Sum-of-Squares method, we
+design the first polynomial-time private estimators for these problems with
+nearly-optimal samples-accuracy-privacy tradeoffs. Our algorithms are also
+robust to a constant fraction of adversarially-corrupted samples.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: Postdocs in TCS at University of Copenhagen (apply by January 10, 2023)</title>
     <link href="https://cstheory-jobs.org/2022/12/11/postdocs-in-tcs-at-university-of-copenhagen-apply-by-january-10-2023/"/>
     <id>http://cstheory-jobs.org/2022/12/11/postdocs-in-tcs-at-university-of-copenhagen-apply-by-january-10-2023/</id>
@@ -1411,155 +1589,6 @@ the algorithm in Python.
     We study the problem of designing worst-case to average-case reductions for quantum algorithms. For all linear problems, we provide an explicit and efficient transformation of quantum algorithms that are only correct on a small (even sub-constant) fraction of their inputs into ones that are correct on all inputs. This stands in contrast to the classical setting, where such results are only known for a small number of specific problems or restricted computational models. En route, we obtain a tight $\Omega(n^2)$ lower bound on the average-case quantum query complexity of the Matrix-Vector Multiplication problem. 
 
 Our techniques strengthen and generalise the recently introduced additive combinatorics framework for classical worst-case to average-case reductions (STOC 2022) to the quantum setting. We rely on quantum singular value transformations to construct quantum algorithms for linear verification in superposition and learning Bogolyubov subspaces from noisy quantum oracles. We use these tools to prove a quantum local correction lemma, which lies at the heart of our reductions, based on a noise-robust probabilistic generalisation of Bogolyubov&amp;#39;s lemma from additive combinatorics.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Theory Dish: Stanford Blog: 2023 Motwani Postdoc Announced</title>
-    <link href="https://theorydish.blog/2022/12/05/2023-motwani-postdoc-announced/"/>
-    <id>http://theorydish.blog/?p=2859</id>
-    <updated>2022-12-06T02:29:30+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;The theory group at Stanford invites applications for the Motwani postdoctoral fellowship in theoretical computer science. Information and application instructions below. Applications will be accepted until the positions are filled, but review of applicants will begin after Dec 15.&lt;/p&gt;
-
-
-
-&lt;p&gt;Website:&amp;nbsp;&lt;a href=&quot;https://academicjobsonline.org/ajo/jobs/23929&quot;&gt;https://academicjobsonline.org/ajo/jobs/23929&lt;/a&gt;&lt;br&gt;Email: theory.stanford@gmail.com&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Omer Reingold&lt;/p&gt;
-  </content>
-    <author>
-      <name>Theory Dish: Stanford Blog</name>
-      <uri>https://theorydish.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Postdoc at George Mason University (apply by December 31, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/12/05/postdoc-at-george-mason-university-apply-by-december-31-2022/"/>
-    <id>http://cstheory-jobs.org/2022/12/05/postdoc-at-george-mason-university-apply-by-december-31-2022/</id>
-    <updated>2022-12-05T21:30:49+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Postdoc in theoretical foundations of Algorithms and AI at George Mason University. Starting Fall’23 and hosted by Grigory Yaroslavtsev (&lt;a href=&quot;http://grigory.ai&quot;&gt;http://grigory.ai&lt;/a&gt;). GMU is located in the Washington, DC metro area, is the largest public university in Virginia and has one of the fastest growing CS departments in the U.S.&lt;/p&gt;
-&lt;p&gt;To apply email CV and research statement. Reference letters will be requested.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;http://grigory.ai&quot;&gt;http://grigory.ai&lt;/a&gt;&lt;br /&gt;
-Email: grigory@grigory.us&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Computational Complexity: The Future of Education is Personal</title>
-    <link href="http://blog.computationalcomplexity.org/2022/12/the-future-of-education-is-personal.html"/>
-    <id>tag:blogger.com,1999:blog-3722233.post-2041922047028548572</id>
-    <updated>2022-12-05T13:53:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbsNuEriIphlZE_oc0Xj44gFxfBp1LCCnFM4ps7FL2KtdUjta77CAddfqgxJQa24OCZ2mv2gqaxRisUhVgvhSj4QIl9Cov-phWAb2wwyIy-rJmHdcsIPcv-60JGncHmMJAIbgi8KwGHExESHI_12_H5TGV2woNv6dn38DtzD2vRo9wXF635Q/s1024/DALL%C2%B7E%202022-12-03%2014.23.49%20-%20An%20oil%20painting%20of%20a%20Darth%20Vader%20tutoring%20a%20human%20student.png&quot; style=&quot;clear: right; float: right; margin-bottom: 1em; margin-left: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1024&quot; data-original-width=&quot;1024&quot; height=&quot;320&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbsNuEriIphlZE_oc0Xj44gFxfBp1LCCnFM4ps7FL2KtdUjta77CAddfqgxJQa24OCZ2mv2gqaxRisUhVgvhSj4QIl9Cov-phWAb2wwyIy-rJmHdcsIPcv-60JGncHmMJAIbgi8KwGHExESHI_12_H5TGV2woNv6dn38DtzD2vRo9wXF635Q/s320/DALL%C2%B7E%202022-12-03%2014.23.49%20-%20An%20oil%20painting%20of%20a%20Darth%20Vader%20tutoring%20a%20human%20student.png&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;With all the excitement about &lt;a href=&quot;https://chat.openai.com/&quot;&gt;ChatGPT&lt;/a&gt;, how will machine learning disrupt education, say five to ten years down the road?&lt;/p&gt;&lt;p&gt;My guess: individualized tutors. Imagine a tutor working with you teaching you important concepts, walking you through examples, answering your questions, going at your own pace, like the&amp;nbsp;&lt;a href=&quot;https://www.new.ox.ac.uk/tutorial-system&quot;&gt;Oxford system&lt;/a&gt;. The Oxford tutor system doesn&#39;t scale well, or at least it wouldn&#39;t if we have human tutors. But we can scale using machine learning and we&#39;re not far away from being able to do so. Such tutors will be infinitely patient, have full knowledge of all written material, speak in any language with any voice and personality.&lt;/p&gt;&lt;p&gt;You can &quot;meet&quot; with your tutor in many different ways, from a deep fake video chat or with augmented or virtual reality to have a tutor in the room with you, or perhaps a physical robot, neural implant or something we haven&#39;t even though of yet. In poorer countries you can get tutored with something as simple as text messages on a cell phone.&amp;nbsp;&lt;/p&gt;&lt;p&gt;A tutor can take on any form. You could get tutored by fictional characters such as Yoda, Darth Vader or &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Magic_School_Bus_(TV_series)&quot;&gt;Miss Frizzle&lt;/a&gt;. ML can capture the personality of real people--imaging a course about Kurt Vonnegut taught by the author, government from Henry Kissinger or a course in quantum computing from your own personal Scott Aaronson. But most importantly you can have a tutor who looks and sounds like you, with your own language, gender, race and ethnicity.&lt;/p&gt;&lt;p&gt;Somehow we&#39;ll have to find ways to include the social aspects such as working in groups, socializing, playing sports and living together. But that one-one-one teaching experience that most of us cannot afford&amp;nbsp; today will be cheaply available tomorrow.&lt;/p&gt;&lt;p&gt;And what will this all mean for teachers, professors and universities? A good question for future blog posts.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </content>
-    <author>
-      <name>Computational Complexity</name>
-      <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Turing&#39;s Invisible Hand: 2023 SIGecom Test of Time Award — Call for Nominations</title>
-    <link href="https://agtb.wordpress.com/2022/12/05/2023-sigecom-test-of-time-award-call-for-nominations/"/>
-    <id>http://agtb.wordpress.com/?p=3548</id>
-    <updated>2022-12-05T09:16:02+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;The SIGecom Test of Time Award recognizes the author or authors of an influential paper or series of papers published between ten and twenty-five years ago that has significantly impacted research or applications exemplifying the interplay of economics and computation.&lt;/p&gt;
-
-
-
-&lt;p&gt;The 2023 SIGecom Test of Time Award will be given for papers published no earlier than 1998 and no later than 2013. Nominations are due by&amp;nbsp;&lt;em&gt;February 28th, 2023&lt;/em&gt;&amp;nbsp;(Anywhere on Earth), and must be made&amp;nbsp;together with the endorsement letters by submission using&amp;nbsp;&lt;a target=&quot;_blank&quot; href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSdm6Hk4uYDi45rvQxHj0dQasjyNMD3XBbS72SK7MPnypWTMmQ/viewform&quot; rel=&quot;noreferrer noopener&quot;&gt;this form&lt;/a&gt;. Any member of SIGecom may submit a nomination. Self-nomination is not allowed.&lt;/p&gt;
-
-
-
-&lt;p&gt;More details regarding the nomination procedure can be found&amp;nbsp;&lt;a href=&quot;https://www.sigecom.org/award-tot-details.html&quot;&gt;here&lt;/a&gt;.&amp;nbsp; The list of winners from previous years can be found&amp;nbsp;&lt;a href=&quot;https://www.sigecom.org/award-tot.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p class=&quot;has-text-align-left&quot;&gt;&lt;strong&gt;The 2023 Test of Time Award Committee&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Alvin Roth&lt;/strong&gt;, Stanford University&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Moshe Tennenholtz&lt;/strong&gt;, The Technion&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Noam Nisan (chair)&lt;/strong&gt;, The Hebrew University of Jerusalem&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Noam Nisan&lt;/p&gt;
-  </content>
-    <author>
-      <name>Turing's Invisible Hand</name>
-      <uri>https://agtb.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Motwani Postdoctoral Fellowship at Stanford Computer Science (apply by December 15, 2022)</title>
-    <link href="https://cstheory-jobs.org/2022/12/05/motwani-postdoctoral-fellowship-at-stanford-computer-science-apply-by-december-15-2022/"/>
-    <id>http://cstheory-jobs.org/2022/12/05/motwani-postdoctoral-fellowship-at-stanford-computer-science-apply-by-december-15-2022/</id>
-    <updated>2022-12-05T08:32:41+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;The theory group at Stanford invites applications for the Motwani postdoctoral fellowship in theoretical computer science. Information and application instructions below. Applications will be accepted until the positions are filled, but review of applicants will begin after Dec 15.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://academicjobsonline.org/ajo/jobs/23929&quot;&gt;https://academicjobsonline.org/ajo/jobs/23929&lt;/a&gt;&lt;br /&gt;
-Email: theory.stanford@gmail.com&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-176 |  The power of the Binary Value Principle | 
-
-	Yaroslav Alekseev, 
-
-	Edward Hirsch</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/176"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/176</id>
-    <updated>2022-12-04T04:21:35+00:00</updated>
-    <content type="html" xml:lang="en">
-    The (extended) Binary Value Principle (eBVP, the equation $\sum x_i 2^{i-1} = -k$ for $k &amp;gt; 0$
-and in the presence of $x_i^2=x_i$) has received a lot of attention recently, several lower
-bounds have been proved for it [Alekseev et al 20, Alekseev 21, Part and Tzameret 21]. 
-Also it has been shown [Alekseev et al 20] that the 
-probabilistically verifiable Ideal Proof System (IPS) [Grochow and Pitassi 18] together with eBVP
-polynomially simulates a similar semialgebraic proof system. In this paper we consider
-Polynomial Calculus with the algebraic version of Tseitin’s extension rule (Ext-PC). Contrary
-to IPS, this is a Cook--Reckhow proof system. We show that in this context eBVP still allows
-to simulate similar semialgebraic systems. We also prove that it allows to simulate the
-Square Root Rule [Grigoriev and Hirsch 03], which is in sharp contrast with the result of [Alekseev 21] that shows
-an exponential lower bound on the size of Ext-PC derivations of the Binary Value Principle
-from its square. On the other hand, we demonstrate that eBVP probably does not help in
-proving exponential lower bounds for Boolean formulas: we show that an Ext-PC (even with
-the Square Root Rule) derivation of any unsatisfiable Boolean formula in CNF from eBVP
-must be of exponential size.
   </content>
     <author>
       <name>ECCC Papers</name>
