@@ -277,6 +277,157 @@ effectiveness.
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Gradient Science: Tailored Data Augmentation to Mitigate Model Failures</title>
+    <link href="https://gradientscience.org/failure-directions2/"/>
+    <id>https://gradientscience.org/failure-directions2/</id>
+    <updated>2022-12-14T00:00:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+
+&lt;!-- &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt; --&gt;
+&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt; --&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf&quot; crossorigin=&quot;anonymous&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://gradientscience.org/assets/css/style.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://gradientscience.org/assets/multilabel/style.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://gradientscience.org/assets/failure-directions2/css/style.css&quot; /&gt;
+
+&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css&quot;&gt; --&gt;
+&lt;!-- &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt; --&gt;
+&lt;!-- &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt; --&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot; integrity=&quot;sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.w3schools.com/w3css/4/w3.css&quot;&gt; --&gt;
+&lt;!-- chart.js --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a class=&quot;bbutton&quot; style=&quot;float: left; width: 45%;&quot; href=&quot;https://arxiv.org/abs/2206.14754&quot;&gt;
+&lt;i class=&quot;fas fa-file-pdf&quot;&gt;&lt;/i&gt;
+    Paper
+&lt;/a&gt;
+&lt;a class=&quot;bbutton&quot; style=&quot;float: left; width: 45%;&quot; href=&quot;https://github.com/MadryLab/failure-directions&quot;&gt;
+&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt;
+   Code
+&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;
+In our &lt;a href=&quot;https://gradientscience.org/failure-directions/&quot;&gt;previous blogpost&lt;/a&gt; we described a method for automatically distilling a model’s failure modes as directions in a latent space. In this post, we’ll discuss how we can combine this method with off-the-shelf text-to-image models to perform synthetic data augmentation that specifically targets (and thus helps mitigate) a model’s classification failures. 
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;Machine learning models are prone to failures —especially on subpopulations which are ambiguous, corrupted, or underrepresented in the training data. For example, a CIFAR-10 classification model might fail to identify cats on grass if its training dataset contained mostly examples of cats indoors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;EasyHardCats&quot; src=&quot;/assets/failure-directions2/images/easy_hard_cats.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Our &lt;a href=&quot;https://gradientscience.org/failure-directions/&quot;&gt;previous blog post&lt;/a&gt; described a method for automatically distilling such meaningful error patterns as directions in a latent space. In the context of our example above, this would correspond to identifying an axis such that the easy examples (e.g., cats inside) lie in one of its directions, and the hard ones (e.g., cats on grass) lie in the opposite direction.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;EasyHardCats&quot; src=&quot;/assets/failure-directions2/images/cat_axis.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, coming up with such a consistent “hardness rating” is only half the battle. That is, once we’ve identified relevant failure modes, how can we improve the underlying model’s reliability on them? One approach (as we discuss in the &lt;a href=&quot;https://arxiv.org/abs/2206.14754&quot;&gt;paper&lt;/a&gt;) is to simply add more data that belongs to the corresponding subpopulations (e.g., add more examples of cats on grass). For example, we can use our method to filter examples from an external pool of data (if we do not wish to use the entire external pool due to e.g., computational constraints) that would be useful to add to the training dataset (see Figure 6 in our paper).&lt;/p&gt;
+
+&lt;p&gt;But what if we don’t have access to such an external pool of data?  It turns out that we can directly generate the images we need! Specifically, as we show in the (revised) version of our &lt;a href=&quot;https://arxiv.org/abs/2206.14754&quot;&gt;paper&lt;/a&gt;, we can leverage the recent stunning progress in text-to-image generation, as exemplified by diffusion models such as &lt;a href=&quot;https://huggingface.co/blog/stable_diffusion&quot;&gt;Stable Diffusion&lt;/a&gt;, &lt;a href=&quot;https://imagen.research.google/&quot;&gt;Imagen&lt;/a&gt;, and &lt;a href=&quot;https://openai.com/dall-e-2/&quot;&gt;DALL-E 2&lt;/a&gt;. That is, by combining our method with off-the-shelf diffusion models, we can perform “synthetic data augmentation” to specifically target a model’s failure modes.&lt;/p&gt;
+
+&lt;h2 id=&quot;recap-identifying-and-captioning-model-failure-modes&quot;&gt;Recap: Identifying and Captioning Model Failure Modes&lt;/h2&gt;
+&lt;p&gt;Our &lt;a href=&quot;https://gradientscience.org/failure-directions/&quot;&gt;previous blogpost&lt;/a&gt; and corresponding &lt;a href=&quot;https://arxiv.org/pdf/2206.14754.pdf&quot;&gt;paper&lt;/a&gt; presented a method for automatically identifying and captioning failure modes in a dataset. The key idea here was that, when exposed to a challenging subpopulation, the errors that a model makes are consistent, and share common features. (In our running example of cats, the hard examples tend to have outdoor backgrounds.) We can thus leverage that consistency and feature sharing by training a simple linear classifier to predict whether the original model is likely to make a mistake. Specifically, by training a linear SVM (per-class) to separate the incorrect and correct examples given their (normalized) feature embeddings.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;EasyHardCats&quot; src=&quot;/assets/failure-directions2/images/cat_megafig.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In our running example of a cat, the SVM (the black line above) learns to separate cats indoors from cats outside. The vector orthogonal to the SVM’s decision boundary (in gray) thus encapsulates the direction of the captured failure mode: the images that are most aligned (or anti-aligned) with this direction represent the most prototypically “hard” or “easy” examples.&lt;/p&gt;
+
+&lt;p&gt;Moreover, by leveraging a joint vision/language space for our underlying featurization (e.g., &lt;a href=&quot;https://arxiv.org/abs/2103.00020&quot;&gt;CLIP&lt;/a&gt;) our method provides a convenient way to caption the underlying failure modes with natural language descriptions. That is, since CLIP embeds both images and text in the same space, we can surface sentences whose text embedding is most aligned with our captured direction. In our example of cats from CIFAR-10, this method extracts “a photo of a white cat on the grass” as a hard subpopulation and “a photo of a cat inside” as an easy one.&lt;/p&gt;
+
+&lt;h2 id=&quot;targeted-data-augmentation-with-stable-diffusion&quot;&gt;Targeted Data Augmentation with Stable Diffusion&lt;/h2&gt;
+
+&lt;p&gt;How can we use text-to-image diffusion models, such as Stable Diffusion or DALL-E 2, to generate synthetic images on which to fine-tune our model (thus “hardening” it against the corresponding distribution shift)? One straightforward approach is to simply use the name of the class to generate new images. For example, we can generate new examples of cats for CIFAR-10 by plugging in the sentence “a photo of a cat.”&lt;/p&gt;
+
+&lt;p&gt;However, just inputting “a photo of a cat” as a caption results in fairly generic examples of cats. But we wanted to perform targeted data augmentation, in order to improve the model’s reliability on our particular identified challenging subpopulations (e.g., cats on grass). Conveniently, we already discussed how  to automatically surface natural language captions for the extracted failure modes. So, we can just plug these captions into our text-to-image model! Below are examples of such generated images.&lt;/p&gt;
+
+&lt;div id=&quot;sd_widget&quot; style=&quot;overflow:auto; text-align: center&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;How well does fine-tuning on such synthetic images fare? As one might hope, fine-tuning the original model’s final layer indeed improves model performance on the hard subpopulation (see below).&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;HardFinetune&quot; src=&quot;/assets/failure-directions2/images/hard_finetune.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;directly-synthesizing-hard-examples&quot;&gt;Directly synthesizing hard examples&lt;/h2&gt;
+
+&lt;p&gt;However, the above approach, although successful, feels somewhat suboptimal. After all, our initial SVM “hard” direction already lives in a joint vision/language space—and so does the Stable Diffusion model we use. Can we thus skip the intermediate captioning step and directly decode our extracted SVM direction into synthetic images?&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Direct&quot; src=&quot;/assets/failure-directions2/images/direct.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yes, we can! We just need to interpolate between a reference class caption (e.g., “a photo of a cat”) and our extracted SVM direction to generate either harder or easier images that correspond to our captured failure mode.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Circle&quot; src=&quot;/assets/failure-directions2/images/circle.png&quot; style=&quot;width:40%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below, we display some examples of hard (and easy) images generated for each CIFAR-10 class. Notice that the encoded directions include rich information such as background, pose, and distance to the object, which would not be conveyed by the captions alone. As our revised &lt;a href=&quot;https://arxiv.org/abs/2206.14754&quot;&gt;paper&lt;/a&gt; shows, the original model performs worst on the “hard” images and best on the “easy” ones.&lt;/p&gt;
+
+&lt;div id=&quot;rdm_widget&quot; style=&quot;overflow:auto; text-align: center&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;So, indeed, by directly decoding the extracted SVM direction, we can capture the failure mode itself as a collection of new (synthetic) images, without relying on the proxy of captions!&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;In this blog post, we demonstrated how to use off-the-shelf diffusion models to perform &lt;strong&gt;targeted “data augmentation”&lt;/strong&gt;, improving test accuracy on hard subpopulations to which a model might be vulnerable. This put forward a fully automated pipeline for identifying, interpreting, and intervening on challenging subpopulations. We believe that as the power of text-to-image models increases, such targeted “data augmentation” will become an even more powerful and versatile tool for improving model reliability.&lt;/p&gt;
+
+&lt;script src=&quot;https://gradientscience.org/assets/scripts/onload.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/gh/nicolaspanel/numjs@0.15.1/dist/numjs.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mathjs@6.6.0/dist/math.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gradientscience.org/assets/failure-directions2/thumbnail_plot.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    var img_root = &quot;https://gradientscience.org/assets/failure-directions2/images/sd_figs/&quot;
+    var thumb_root = &quot;https://gradientscience.org/assets/failure-directions2/images/sd_figs_thumbnails/&quot;
+    var bias_base = [[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;]];
+
+    var thumbnail_imgs = [[], []]
+    var main_imgs = [[], []]
+    bias_base.forEach(function(base, idx){
+        base.forEach(function(b, sec_idx) {
+            thumbnail_imgs[idx].push(thumb_root + b + &quot;.png&quot;);
+            main_imgs[idx].push(img_root + b + &quot;.png&quot;);
+        });
+    });
+    make_thumbnail_plot(&#39;sd_widget&#39;, thumbnail_imgs, main_imgs)
+&lt;/script&gt;
+
+&lt;script&gt;
+    var img_root = &quot;https://gradientscience.org/assets/failure-directions2/images/rdm_figs/&quot;
+    var thumb_root = &quot;https://gradientscience.org/assets/failure-directions2/images/rdm_figs_thumbnails/&quot;
+    var bias_base = [[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;], [ &quot;4&quot;, &quot;5&quot;, &quot;6&quot;]];
+
+    var thumbnail_imgs = [[], []]
+    var main_imgs = [[], []]
+    bias_base.forEach(function(base, idx){
+        base.forEach(function(b, sec_idx) {
+            thumbnail_imgs[idx].push(thumb_root + b + &quot;.png&quot;);
+            main_imgs[idx].push(img_root + b + &quot;.png&quot;);
+        });
+    });
+    make_thumbnail_plot(&#39;rdm_widget&#39;, thumbnail_imgs, main_imgs)
+&lt;/script&gt;
+  </content>
+    <author>
+      <name>Gradient Science</name>
+      <uri>https://gradientscience.org/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: PhD Student at King’s College London (apply by February 28, 2023)</title>
     <link href="https://cstheory-jobs.org/2022/12/13/phd-student-at-kings-college-london-apply-by-february-28-2023/"/>
     <id>http://cstheory-jobs.org/2022/12/13/phd-student-at-kings-college-london-apply-by-february-28-2023/</id>
@@ -1425,35 +1576,6 @@ up to 16 cores, although falls behind saturation at 64 cores. Finally, in a
 comparison with the state-of-the-art model checking tool ITS-tools we find that
 REACH outperforms ITS-tools on 29% of models, suggesting that REACH can be
 useful as a complementary method in an ensemble tool.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Density Approximation for Kinetic Groups</title>
-    <link href="http://arxiv.org/abs/2212.03685"/>
-    <id>http://arxiv.org/abs/2212.03685</id>
-    <updated>2022-12-08T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mulken_M/0/1/0/all/0/1&quot;&gt;Max van Mulken&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Speckmann_B/0/1/0/all/0/1&quot;&gt;Bettina Speckmann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Verbeek_K/0/1/0/all/0/1&quot;&gt;Kevin Verbeek&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sets of moving entities can form groups which travel together for significant
-amounts of time. Tracking such groups is an important analysis task in a
-variety of areas, such as wildlife ecology, urban transport, or sports
-analysis. Correspondingly, recent years have seen a multitude of algorithms to
-identify and track meaningful groups in sets of moving entities. However, not
-only the mere existence of one or more groups is an important fact to discover;
-in many application areas the actual shape of the group carries meaning as
-well. In this paper we initiate the algorithmic study of the shape of a moving
-group. We use kernel density estimation to model the density within a group and
-show how to efficiently maintain an approximation of this density description
-over time. Furthermore, we track persistent maxima which give a meaningful
-first idea of the time-varying shape of the group. By combining several
-approximation techniques, we obtain a kinetic data structure that can
-approximately track persistent maxima efficiently.
 &lt;/p&gt;
   </content>
     <author>
