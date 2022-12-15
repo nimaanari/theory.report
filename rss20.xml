@@ -9,6 +9,236 @@
 
 
 <item>
+  <title>Discrete, continuous and continuized accelerations</title>
+  <guid>https://francisbach.com/?p=7834</guid>
+  <link>https://francisbach.com/continuized-acceleration/</link>
+  <description>
+    &lt;p class=&quot;has-text-align-justify justify-text&quot;&gt;In optimization, acceleration is the art of modifying an algorithm in order to obtain faster convergence. Building accelerations and explaining their performance have been the subject of a countless number of publications, see [2] for a review. In this blog post, we give a vignette of these discussions on a minimal but challenging example, Nesterov acceleration. We introduce and illustrate different frameworks to understand and design acceleration techniques: the discrete framework based on iterations, the continuous-time framework, and the recent continuized framework that we proposed in [1].&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;First, let us describe the setting we use. Let \(f:\mathbb{R}^d \to \mathbb{R}\) be a convex and differentiable function, that we seek to minimize. We assume that \(f\) is \(L\)-smooth, i.e., $$\forall x,y \in \mathbb{R}^d, \qquad f(y) \leq f(x) + \langle \nabla f(x), y-x \rangle + \frac{L}{2} \Vert y-x \Vert^2 \, , $$ and that it is \(\mu\)-strongly convex for some \(\mu &amp;gt; 0\), i.e., $$\forall x,y \in \mathbb{R}^d, \qquad f(y) \geq f(x) + \langle \nabla f(x), y-x \rangle + \frac{\mu}{2} \Vert y-x \Vert^2 \, .$$We had already made these assumptions in &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://francisbach.com/computer-aided-analyses/&quot; target=&quot;_blank&quot;&gt;a previous blog post on computer-aided analyses in optimization&lt;/a&gt;. In this setting, the function \(f\) has a unique minimizer that we denote \(x_*\). &lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image size-full is-resized&quot;&gt;&lt;img src=&quot;https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex.png&quot; alt=&quot;&quot; class=&quot;wp-image-8604&quot; width=&quot;840&quot; height=&quot;363&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex.png 1002w, https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex-300x130.png 300w, https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex-768x333.png 768w, https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex-850x368.png 850w&quot; sizes=&quot;(max-width: 840px) 100vw, 840px&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p class=&quot;has-text-align-justify&quot;&gt;In this figure, the blue function \(f\) is \(L\)-smooth and \(\mu\)-strongly convex: it is possible to create global upper and lower quadratic bounds from every \(x \in \mathbb{R}^d\) with respective curvatures \(L\) and \(\mu\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Of course, smoothness and strong convexity are not the only assumptions under which acceleration is studied (see [2] for a larger variety of accelerations). In particular, in [1], these is a discussion similar to the one of this blog post in the case where strong convexity is not assumed. &lt;/p&gt;
+
+
+
+&lt;h2&gt;Discrete-time acceleration&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The basic algorithm for minimizing \(f\) is gradient descent: we start from an initial guess \(x_0 \in \mathbb{R}^d\) and iterate $$x_{k+1} = x_k \, &amp;#8211; \gamma \nabla f(x_k) \, ,$$where \(\gamma\) is a step size. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Let us show how this performs on an example in dimension \(d=2\). In the plot below, the thin curves represent the level sets of the function \(f\). With a slight abuse of notation, we denote \(x_1\) and \(x_2\) the coordinates of the vector \(x \in \mathbb{R}^2\).&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/gd-4.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8662&quot; width=&quot;600&quot; height=&quot;450&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;When \(\gamma \leq \frac{1}{L}\), we have the linear convergence rate $$f(x_k) \, &amp;#8211; f(x_*) \leq \frac{L}{2} \Vert x_0 \, &amp;#8211; x_* \Vert^2 (1-\gamma \mu)^k \, ,$$see [3, Theorem 2.1.15] for instance. This upper bound is minimized at \(\gamma = \frac{1}{L}\), leading to a \(O\big( \left( 1\, &amp;#8211; \frac{\mu}{L} \right)^k \big)\) convergence rate. Although this convergence rate is linear, it can be slow when the condition number \(\frac{L}{\mu} \) is large. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;To tackle this issue, Nesterov [3] proposed an alternative algorithm: $$\begin{aligned}&lt;br&gt;&amp;amp;y_k = x_k + \frac{\sqrt{\gamma\mu}}{1 + \sqrt{\gamma\mu}}(z_k-x_k) \, , \\ &amp;amp;x_{k+1} = y_k \, &amp;#8211; \gamma \nabla f(y_k) \, , \\ &amp;amp;z_{k+1} = z_k + \sqrt{\gamma\mu}(y_k-z_k)  \, &amp;#8211;  \sqrt{\frac{\gamma}{\mu}}\nabla f(y_k ) \, . \end{aligned}$$&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/nest-4.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8663&quot; width=&quot;600&quot; height=&quot;450&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Nesterov proved the following convergence bound for his algorithm: if \(\gamma \leq \frac{1}{L}\), $$f (x_k) \, &amp;#8211; f(x_*) \leq \left(f(x_0) \, &amp;#8211; f(x_*) + \frac{\mu}{2} \Vert z_0 \, &amp;#8211; x_* \Vert^2 \right) \left(1\,  &amp;#8211; \sqrt{\gamma\mu}\right)^k \, .$$ Again, this upper bound is minimized at \(\gamma = \frac{1}{L}\); this leads to a \(O\left( \left( 1 \, &amp;#8211; \sqrt{\frac{\mu}{L}} \right)^k \right)\) convergence rate. The acceleration lies in this new square root dependence in the condition number, that enables significant speed-ups in practice. To show this, let us compare the sequence \(x_k\) of Nesterov acceleration with gradient descent.  &lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/gd-nest-2.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8664&quot; width=&quot;600&quot; height=&quot;450&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1.png&quot; alt=&quot;&quot; class=&quot;wp-image-8665&quot; width=&quot;600&quot; height=&quot;450&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1.png 1200w, https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1-300x225.png 300w, https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1-1024x768.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1-768x576.png 768w, https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1-850x638.png 850w&quot; sizes=&quot;(max-width: 600px) 100vw, 600px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;We observe that the asymptotic performance of Nesterov acceleration is much better. Of course, comparing the two algorithms in terms of the iteration number \(k\) is unfair to gradient descent, as the complexity per iteration of Nesterov acceleration is higher. However, as suggested by the theoretical convergence bound, the speed-up provided by Nesterov acceleration is largely worth the additional complexity per iteration on badly conditioned problems. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;From a high-level perspective, Nesterov acceleration iterates over several variables, alternating between gradient steps (always with respect to the gradient at \(y_k\)) and mixing steps, where the running value of a variable is replaced by a linear combination of the other variables. However, the precise way gradient and mixing steps are coupled is rather mysterious, and the improved convergence bound relies heavily on the detailed structure of the iterations.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Only an inspection of the proof of the convergence bound [2,3] can provide a rigorous understanding of Nesterov acceleration and its performance. Many works contributed to interpret and motivate the iteration [11-15]. In this blog post, we try to give some high-level intuitions through the continuous and continuized points of view on Nesterov acceleration. &lt;/p&gt;
+
+
+
+&lt;h2&gt;Continuous-time acceleration&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Continuous-time approaches propose to gain insights on the above algorithms through their limit as the stepsize \(\gamma\) vanishes [4,10]. This was already the subject of a &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://francisbach.com/gradient-flows/&quot; target=&quot;_blank&quot;&gt;previous blog post&lt;/a&gt;. In this approach, one needs to rescale the iterate number \(k\) as \(\gamma \to 0\) in order to obtain a non-degenerate limit. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;For instance, to study gradient descent, we define a rescaled time variable \(t = \gamma k \in \mathbb{R}_{\geq 0}\) and the reparametrized iterates \(X(t) = X(\gamma k) = x_k\). Then for small \(\gamma\), $$\frac{dX}{dt}(t) \approx \frac{X(t+\gamma)-X(t)}{\gamma} = \frac{x_{t/\gamma+1}-x_{t/\gamma}}{\gamma} = \, &amp;#8211; \nabla f(x_{t/\gamma}) = \, &amp;#8211; \nabla f(X(t)) \, .$$In the limit \(\gamma \to 0\), the approximation of the derivative becomes exact and this gives the gradient flow equation $$\frac{dX}{dt}(t) = \, &amp;#8211; \nabla f(X(t)) \, .$$&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/gd-gf-2.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8666&quot; width=&quot;600&quot; height=&quot;450&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Note that in the simulation above, the gradient descents are aligned with the gradient flow in terms of their common time parameter \(t = \gamma k\). However, as the stepsize \(\gamma\) is not the same in the two gradient descents, the number of iterations is also not the same. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In [4,5], a similar limit is taken for the iterates \(x_k\) of Nesterov acceleration. As the computations are a bit lengthy, let us simply state the result. Define a rescaled time variable \(t = \sqrt{\gamma} k \in \mathbb{R}_{\geq 0}\) and the reparametrized iterates \(X(t) = X(\sqrt{\gamma} k ) = x_k\). As \(\gamma \to 0\), \(X\) satisfies the ordinary differential equation (ODE) $$ \frac{d^2X}{dt^2}(t) + 2\sqrt{\mu} \frac{dX}{dt}(t) = \, &amp;#8211; \nabla f(X(t)) \, .$$&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/nest-nf-2.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8678&quot; width=&quot;600&quot; height=&quot;450&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;At this point, it is tempting to try to overlap the last two plots in order to compare the gradient flow with the limiting ODE for Nesterov acceleration. However, this can not be done as the notion of time \(t\) is not the same in both cases. The gradient flow is obtained at the limit of gradient descent with \(t_1 = \gamma k\); meanwhile Nesterov acceleration has a continuous limit in the scaling \(t_2 = \sqrt{\gamma} k\). For a small stepsize \(\gamma\), \(t_2\) is an order of magnitude larger than \(t_1\); this confirms that Nesterov acceleration is indeed an acceleration. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The precise ODE obtained in the limit of Nesterov acceleration gives insights on the mechanism underlying acceleration. It is a second-order ODE, while the gradient flow is a first-order ODE. The gradient flow represents the movement of a particle rolling on the graph of \(f\), with no inertia. Meanwhile, the ODE for Nesterov acceleration also represents the movement of a particle rolling on the graph of \(f\), but with inertia and with a friction coefficient proportional to \(\sqrt{\mu}\). This comforts the high-level idea that acceleration is achieved by &amp;#8221;giving inertia to the iterates&amp;#8221;. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;However, the continuous perspective on acceleration comes with important limitations. First, as illustrated in the plots, the continuous limits appear in a computationally inefficient limit of small stepsizes. However, the rates of convergence of the discrete algorithms depend on their ability to be stable while using large stepsizes; this aspect can not be apprehended in the continuous limit. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Relatedly, the continuous limits are not algorithms by themselves; they need to be discretized to be implemented. The discretization of the accelerated ODE could lead to Nesterov acceleration, but also to multiple other algorithms including Polyak&amp;#8217;s heavy ball method (see [6] or [2, Section 2.3.3]), another algorithm that is not as stable on non-quadratic strongly convex functions. Said differently, the continuous limit is unable to discriminate two discrete algorithms with different performances. However, it should be noted that this limitation was adressed in [5] by considering other ODEs that approximate the discrete algorithms at a higher-order when \(\gamma \to 0\). &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In the next section, we present the so-called &amp;#8220;continuized&amp;#8221; version of Nesterov acceleration, a joint work [1] with Mathieu Even, Francis Bach, Nicolas Flammarion, Hadrien Hendrikx, Pierre Gaillard, Laurent Massoulié, Adrien Taylor and myself. It is defined in continuous time, but it does not correspond to a limit where \(\gamma \to 0\). Furthermore, it does not need to be approximated to be implemented in discrete time. &lt;/p&gt;
+
+
+
+&lt;h2&gt;Continuized acceleration&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The continuized acceleration is composed of two variables \(x_t\), \(z_t\) indexed by a continuous time \(t \geq 0\), that are continuously mixing and that take gradient steps at random times. More precisely, let \(T_1, T_2, T_3, \dots \geq 0\) be random times such that \(T_1, T_2-T_1, T_3-T_2, \dots\) are independent identically distributed (i.i.d.), of distribution exponential with rate \(1\). The exponential distribution is a classical distribution which has a special &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://en.wikipedia.org/wiki/Exponential_distribution&quot; target=&quot;_blank&quot;&gt;memoryless property&lt;/a&gt;; in our case of rate \(1\), it is the distribution with density \(\exp(-t)\). Below, we show five realizations of the random times \(T_1, T_2, T_3, \dots\), between \(t=0\) and \(t = 10\):&lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img loading=&quot;lazy&quot; width=&quot;1024&quot; height=&quot;205&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-1024x205.png&quot; alt=&quot;&quot; class=&quot;wp-image-8650&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1.png 1500w&quot; sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img loading=&quot;lazy&quot; width=&quot;1024&quot; height=&quot;205&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-1024x205.png&quot; alt=&quot;&quot; class=&quot;wp-image-8651&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1.png 1500w&quot; sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img loading=&quot;lazy&quot; width=&quot;1024&quot; height=&quot;205&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-1024x205.png&quot; alt=&quot;&quot; class=&quot;wp-image-8652&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1.png 1500w&quot; sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img loading=&quot;lazy&quot; width=&quot;1024&quot; height=&quot;205&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-1024x205.png&quot; alt=&quot;&quot; class=&quot;wp-image-8653&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1.png 1500w&quot; sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-large&quot;&gt;&lt;img loading=&quot;lazy&quot; width=&quot;1024&quot; height=&quot;205&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-1024x205.png&quot; alt=&quot;&quot; class=&quot;wp-image-8654&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1.png 1500w&quot; sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;By convention, we choose that our stochastic processes \(t \mapsto x_t\), \(t \mapsto z_t\) are &amp;#8220;&lt;a href=&quot;https://en.wikipedia.org/wiki/C%C3%A0dl%C3%A0g&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;càdlàg&lt;/a&gt;&amp;#8221; almost surely, i.e., right continuous with well-defined left-limits \(x_{t-}\), \(z_{t-}\) at all points \(t\)&lt;em&gt;. &lt;/em&gt;At random times \(T_1, T_2, \dots\), our sequences take gradient steps $$\begin{aligned} x_{T_k} &amp;amp;= x_{T_k-} &amp;#8211; \gamma \nabla f (x_{T_k-}) \, , \\z_{T_k} &amp;amp;= z_{T_k-} &amp;#8211; \sqrt{\frac{\gamma}{\mu}} \nabla f (x_{T_k-}) \, . \end{aligned}$$Because of the memoryless property of the exponential distribution, in a infinitesimal time interval \([t, t+dt]\), the variables take gradients steps with probability \(dt\), independently of the past.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Between these random times, the variables mix through a linear, translation-invariant, ODE $$\begin{aligned}&amp;amp;dx_t = \sqrt{\gamma\mu} (z_t \, &amp;#8211; x_t) dt \, , \\&amp;amp;dz_t = \sqrt{\gamma\mu} (x_t \, &amp;#8211; z_t) dt \, .\end{aligned}$$Following the notation of stochastic calculus, we can write the process more compactly. Denote \(dN(t) = \sum_{k\geq 1} \delta_{T_k}(dt)\) the Poisson point measure; it is the sum of Dirac masses at the random times \(T_1, T_2, \dots\). Then we write&lt;br&gt;$$\begin{aligned}&lt;br&gt;dx_t &amp;amp;= \sqrt{\gamma\mu} (z_t \, &amp;#8211; x_t) dt \, &amp;#8211; \gamma \nabla f(x_t) dN(t) \, , \\&lt;br&gt;dz_t &amp;amp;= \sqrt{\gamma\mu} (x_t \, &amp;#8211; z_t) dt-  \sqrt{\frac{\gamma}{\mu}} \nabla f(x_t) dN(t) \, . &lt;br&gt;\end{aligned}$$This should be understood as detailed above: the first component of these equations is an evolution with respect to the Lebesgue measure, thus a continuous flow; the second component is an evolution with respect to a discrete measure; when the time \(t\) hits a Dirac mass of the measure \(dN(t)\), then we take discrete jumps. This gives a continuous-time random process; we show one realization below. &lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/cont-3.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8668&quot; width=&quot;600&quot; height=&quot;450&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In this simulation, we see similarities with the discrete acceleration of Nesterov. However, the process is now random and in continuous time. We comment this comparison in detail in the rest of the blog post. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In [1], we proved the following convergence bound for this process: if \(\gamma \leq \frac{1}{L}\), $$\mathbb{E} f(x_t) \, &amp;#8211; f(x_*) \leq \left(f(x_0) \, &amp;#8211; f(x_*) + \frac{\mu}{2} \Vert z_0 \,  &amp;#8211; x_* \Vert^2 \right) \exp\left(  &amp;#8211; \sqrt{\gamma \mu} t \right) \, .$$Note the similarity with the bound proved by Nesterov for the discrete acceleration. In fact, the proof through Lyapunov techniques is essentially the same. In the continuized acceleration, the main difference is that we have a statement in expectation over the sampling of the Poisson point measure.  &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In summary, we observe from the bounds and the simulation that the discrete and continuized accelerations behave similarly. The continuized acceleration is more involved as it is a random process with ODE components and jumps. Why would one prefer the continuized acceleration? Can we discretize the continuized acceleration easily? &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In the next section, we explain why the discretization of the continuized acceleration is not a problem. But before that, let us propose high-level answers to the first question. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;First, from a Markov chain indexed by a discrete time index \(k\), one can associate the so-called &lt;em&gt;continuized&lt;/em&gt; Markov chain, indexed by a continuous time \(t\), that makes transition with the same Markov kernel, but at random times, with independent exponential time intervals [8]. This terminology motivated the name of the continuized acceleration in [1]. The continuized Markov chain is appreciated for its continuous time parameter \(t\), for instance because it enables to use differential calculus. Still, the continuized Markov chain keeps many properties of the original Markov chain; similarly the continuized acceleration is arguably simpler to analyze, while performing similarly to Nesterov acceleration.&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Second, processes that alternate randomly are generally simpler to analyze that those that alternate in cycles. For instance, stochastic gradient descent is easier to analyze when components are selected randomly rather than in an ordered way. Coordinate gradient descent is easier to analyze when coordinates are selected randomly rather than in an ordered way [9]. Similarly, the continuized acceleration is simpler to analyze because the gradient steps and the mixing steps alternate randomly, due to the randomness of \(T_k\).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;Third, thanks to this random alternation, the continuized framework enables to build accelerations in asynchronous distributed optimization. In fact, this application was the original motivation to build the continuized acceleration in [1]. The interested reader can consult [1, Sections 6-7] to learn how accelerated distributed algorithms were built in asynchronous settings where acceleration was previously unknown. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;After these high-level remarks, let us return to a concrete question that we left: how can we implement the continuized acceleration? &lt;/p&gt;
+
+
+
+&lt;h2&gt;The discrete implementation of the continuized acceleration&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The continuized acceleration can be implemented exactly as a discrete algorithm. Indeed, between the times of the jumps \(T_k\), the dynamics of the continuized acceleration are governed by an ODE that is integrable in closed form. It is thus wise to discretize at the times \(T_k\) of the jumps. More precisely, define $$\begin{aligned} &amp;amp;\tilde{x}_k := x_{T_{k}} \, , &amp;amp;&amp;amp;\tilde{y}_k := x_{T_{k+1}-} \, , &amp;amp;&amp;amp;\tilde{z}_k := z_{T_{k}} \, .&lt;br&gt;\end{aligned}$$In [1], we proved that the three sequences \(\tilde{x}_k\), \(\tilde{y}_k\), \(\tilde{z}_k\), \(k \geq 0\), satisfy a recurrence relation: $$\begin{aligned}&lt;br&gt;&amp;amp;\tilde{y}_k = \tilde{x}_k + \tau_k(\tilde{z}_k-\tilde{x}_k) \, , \\ &amp;amp;\tilde{x}_{k+1} = \tilde{y}_k \, &amp;#8211; \gamma \nabla f(\tilde{y}_k) \, , \\ &amp;amp;\tilde{z}_{k+1} = \tilde{z}_k + \tau_k&#39;(\tilde{y}_k-\tilde{z}_k) \, &amp;#8211; \sqrt{\frac{\gamma}{\mu}} \nabla f(\tilde{y}_k ) \, ,&lt;br&gt;\end{aligned}$$ with $$\begin{aligned} &amp;amp;{ \tau_k = \frac{1}{2}\left(1 &amp;#8211; \exp\left(-2\sqrt{\gamma\mu}(T_{k+1}-T_k)\right)\right)} \, , &amp;amp;&amp;amp;\tau_k&amp;#8217; = \tanh\left(\sqrt{\gamma\mu}(T_{k+1}-T_k)\right) \, .\end{aligned}$$Note that this recurrence relation has the same structure as Nesterov&amp;#8217;s original acceleration: in fact, only the two coefficients \(\tau_k\) and \(\tau_k&amp;#8217;\) have been randomized. In short, the continuized acceleration can be implemented as a randomized version of the discrete acceleration. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;In this discrete implementation, the continuized acceleration performs similarly to Nesterov acceleration. &lt;/p&gt;
+
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/gd-nest-cont-3.gif&quot; alt=&quot;&quot; class=&quot;wp-image-8669&quot; width=&quot;600&quot; height=&quot;450&quot;/&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;div class=&quot;wp-block-image&quot;&gt;
+&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3.png&quot; alt=&quot;&quot; class=&quot;wp-image-8670&quot; width=&quot;600&quot; height=&quot;450&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3.png 1200w, https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3-300x225.png 300w, https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3-1024x768.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3-768x576.png 768w, https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3-850x638.png 850w&quot; sizes=&quot;(max-width: 600px) 100vw, 600px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;For practical purposes, Nesterov&amp;#8217;s discrete acceleration wins. The iteration is elementary to implement and it enjoys a great performance. (There are exceptions in distributed optimization for which Nesterov acceleration would not enable asynchrony but the continuized acceleration does [1]).&lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;For conceptual purposes, the continuous perspective on acceleration gives a crude intuition on the mechanism at play. However, there are also important aspects lost in the limit of small stepsizes, related to the choice of the discretization. &lt;/p&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;The continuized acceleration has two faces, continuous and discrete. As a discrete iteration, it is a randomized version of Nesterov&amp;#8217;s original iteration. As a continuous process, it is more sophisticated that a simple ODE, as it involves random jumps. However, it gives a continuous-time perspective on acceleration without any conceptual loss. &lt;/p&gt;
+
+
+
+&lt;h2&gt;References&lt;/h2&gt;
+
+
+
+&lt;p class=&quot;justify-text&quot;&gt;[1] Mathieu Even, Raphaël Berthier, Francis Bach, Nicolas Flammarion, Hadrien Hendrikx, Pierre Gaillard, Laurent Massoulié, and Adrien Taylor. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://proceedings.neurips.cc/paper/2021/hash/ec26fc2eb2b75aece19c70392dc744c2-Abstract.html&quot; target=&quot;_blank&quot;&gt;Continuized accelerations of deterministic and stochastic gradient descents, and of gossip algorithms&lt;/a&gt;. &lt;em&gt;Advances in Neural Information Processing Systems&lt;/em&gt; 34 (2021): 28054-28066.&lt;br&gt;[2] Alexandre d&amp;#8217;Aspremont, Damien Scieur, and Adrien Taylor. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://www.nowpublishers.com/article/Details/OPT-036&quot; target=&quot;_blank&quot;&gt;Acceleration methods&lt;/a&gt;. &lt;em&gt;Foundations and Trends® in Optimization&lt;/em&gt; 5, no. 1-2 (2021): 1-245.&lt;br&gt;[3] Yurii Nesterov. &lt;em&gt;&lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://link.springer.com/book/10.1007/978-1-4419-8853-9&quot; target=&quot;_blank&quot;&gt;Introductory lectures on convex optimization: A basic course&lt;/a&gt;&lt;/em&gt;. Vol. 87. Springer Science &amp;amp; Business Media, 2003.&lt;br&gt;[4] Weijie Su, Stephen Boyd, and Emmanuel Candes. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://jmlr.org/papers/v17/15-084.html&quot; target=&quot;_blank&quot;&gt;A differential equation for modeling Nesterov’s accelerated gradient method: theory and insights&lt;/a&gt;. &lt;em&gt;Advances in Neural Information Processing Systems&lt;/em&gt; 27 (2014).&lt;br&gt;[5] Bin Shi, Simon Du, Michael Jordan, and Weijie Su. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://link.springer.com/article/10.1007/s10107-021-01681-8&quot; target=&quot;_blank&quot;&gt;Understanding the acceleration phenomenon via high-resolution differential equations&lt;/a&gt;. &lt;em&gt;Mathematical Programming&lt;/em&gt; 195, no. 1 (2022): 79-148.&lt;br&gt;[6] Boris Polyak. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://www.sciencedirect.com/science/article/abs/pii/0041555364901375&quot; target=&quot;_blank&quot;&gt;Some methods of speeding up the convergence of iteration methods&lt;/a&gt;. &lt;em&gt;USSR computational mathematics and mathematical physics&lt;/em&gt;, &lt;em&gt;4&lt;/em&gt;(5), pp.1-17 (1964).&lt;br&gt;[7] Lessard, Laurent, Benjamin Recht, and Andrew Packard. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://epubs.siam.org/doi/abs/10.1137/15M1009597?casa_token=eux_zMBz0-QAAAAA:s32oBPHvN0hyzdt9LQLJYhggXmncsC66SAFXiIhztJQ8Zdu7avLKCMhkfZaND2Jdd_WZcl-B5jKS&quot; target=&quot;_blank&quot;&gt;Analysis and design of optimization algorithms via integral quadratic constraints&lt;/a&gt;. &lt;em&gt;SIAM Journal on Optimization&lt;/em&gt; 26, no. 1 (2016): 57-95.&lt;br&gt;[8] David Aldous and James Fill. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;http://www.stat.berkeley.edu/$\sim$aldous/RWG/book.html&quot; target=&quot;_blank&quot;&gt;Reversible Markov chains and random walks on graphs&lt;/a&gt;. Unpublished monograph (1995).&lt;br&gt;[9] Stephen Wright. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://link.springer.com/article/10.1007/s10107-015-0892-3&quot; target=&quot;_blank&quot;&gt;Coordinate descent algorithms&lt;/a&gt;. &lt;em&gt;Mathematical Programming&lt;/em&gt; 151, no. 1 (2015): 3-34.&lt;br&gt;[10] Hedy Attouch, Zaki Chbani, Juan Peypouquet, and Patrick Redont.&lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://link.springer.com/article/10.1007/s10107-016-0992-8&quot; target=&quot;_blank&quot;&gt; Fast convergence of inertial dynamics and algorithms with asymptotic vanishing viscosity&lt;/a&gt;. &lt;em&gt;Mathematical Programming&lt;/em&gt; 168, no. 1 (2018): 123-175.&lt;br&gt;[11] Sébastien Bubeck, Yin Tat Lee, and Mohit Singh. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://arxiv.org/abs/1506.08187&quot; target=&quot;_blank&quot;&gt;A geometric alternative to Nesterov&amp;#8217;s accelerated gradient descent&lt;/a&gt;. &lt;em&gt;arXiv preprint arXiv:1506.08187&lt;/em&gt; (2015).&lt;br&gt;[12] Nicolas Flammarion and Francis Bach. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://proceedings.mlr.press/v40/Flammarion15.html&quot; target=&quot;_blank&quot;&gt;From averaging to acceleration, there is only a step-size&lt;/a&gt;. In &lt;em&gt;Conference on Learning Theory&lt;/em&gt;, pp. 658-695. PMLR (2015).&lt;br&gt;[13] Yossi Arjevani, Shai Shalev-Shwartz, and Ohad Shamir. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://jmlr.org/papers/v17/15-106.html&quot; target=&quot;_blank&quot;&gt;On lower and upper bounds in smooth and strongly convex optimization&lt;/a&gt;. &lt;em&gt;The Journal of Machine Learning Research&lt;/em&gt; 17, no. 1 (2016): 4303-4353.&lt;br&gt;[14] Donghwan Kim and Jeffrey Fessler. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://link.springer.com/article/10.1007/s10107-015-0949-3&quot; target=&quot;_blank&quot;&gt;Optimized first-order methods for smooth convex minimization&lt;/a&gt;. &lt;em&gt;Mathematical programming&lt;/em&gt; 159, no. 1 (2016): 81-107.&lt;br&gt;[15] Zeyuan Allen-Zhu and Lorenzo Orecchia. &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://drops.dagstuhl.de/opus/volltexte/2017/8185/pdf/LIPIcs-ITCS-2017-3.pdf&quot; target=&quot;_blank&quot;&gt;Linear coupling: An ultimate unification of gradient and mirror descent&lt;/a&gt;. In &lt;em&gt;Proceedings of the 8th Innovations in Theoretical Computer Science ITCS&amp;#8217;17&lt;/em&gt; (2017).&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Raphael Berthier&lt;/p&gt;
+  </description>
+  <pubDate>2022-12-15 15:25:08 UTC</pubDate>
+  <author>Francis Bach</author>
+</item>
+
+<item>
   <title>A Pedagogical reference to kick off the New Year</title>
   <guid>https://ptreview.sublinear.info/?p=1813</guid>
   <link>https://ptreview.sublinear.info/2022/12/a-pedagogical-reference-to-kick-off-the-new-year/</link>
@@ -1306,90 +1536,6 @@ over previously known results.
   </description>
   <pubDate>2022-12-09 01:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>News for November 2022</title>
-  <guid>https://ptreview.sublinear.info/?p=1784</guid>
-  <link>https://ptreview.sublinear.info/2022/12/news-for-october-2022-2/</link>
-  <description>
-    &lt;p&gt;All the best to everyone for a Happy 2023. The holiday season is ripe with lots of papers to engage our readers. So, we have nine papers and we hope some of those will catch your fancy. As a new year treat, we also feature Gilmer&amp;#8217;s constant lower bound on the union-closed sets problem of Frankl. On we go.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Sublinear Time Algorithms and Complexity of Approximate Maximum Matching&lt;/strong&gt; by Soheil Behnezhad, Mohammad Roghani, Aviad Rubinstein (&lt;a href=&quot;https://arxiv.org/abs/2211.15843&quot;&gt;arXiv&lt;/a&gt;) This paper makes significantly advances our understanding of the maximum matching problem in the sublinear regime. Your goal is to estimate the size of the maximum matching and you may assume that you have query access to the adjacency list of your graph. Our posts from &lt;a href=&quot;https://ptreview.sublinear.info/2021/12/&quot;&gt;Dec 2021&lt;/a&gt; and &lt;a href=&quot;https://ptreview.sublinear.info/2022/07/news-for-june-2022/&quot;&gt;June 2022&lt;/a&gt; reported some impressive progress on this problem. The upshot from these works essentially said that you can beat greedy matching and obtain a \(\frac{1}{2} + \Omega(1)\) approximate maximum matching in sublinear time. Let me first go over the algorithmic results from the current paper. The paper shows the following two algorithmic results:&lt;/p&gt;
-
-
-
-&lt;p&gt;(1) An algorithm that runs in time \(n^{2 &amp;#8211; \Omega_{\varepsilon}(1)}\) and returns a \(2/3 &amp;#8211; \varepsilon\) approximation to maximum matching in general graphs, and &lt;/p&gt;
-
-
-
-&lt;p&gt;(2) An algorithm that runs in time \(n^{2 &amp;#8211; \Omega_{\varepsilon}(1)}\) and returns a \(2/3 + \varepsilon\) approximation to maximum matching size in &lt;em&gt;bipartite&lt;/em&gt; graphs. &lt;/p&gt;
-
-
-
-&lt;p&gt;The question remained &amp;#8212; can we show a lower bound that grows superlinearly with \(n\). The current work achieves this and shows that &lt;em&gt;even on bipartite graphs&lt;/em&gt;, you must make at least \(n^{1.2 &amp;#8211; o(1)}\) &lt;em&gt;queries &lt;/em&gt;to the adjacency list to get a better than \(2/3 + \Omega(1)\) approximation.  (An aside: A concurrent work by &lt;a href=&quot;https://arxiv.org/abs/2212.00189&quot;&gt;Bhattacharya-Kiss-Saranurak&lt;/a&gt; from December also obtains similar algorithmic results for approximating the maximum matching size in general graphs). &lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Directed Isoperimetric Theorems for Boolean Functions on the Hypergrid and an \(\widetilde{O}(n \sqrt d)\) Monotonicity Tester&lt;/strong&gt; by Hadley Black, Deeparnab Chakrabarty, C. Seshadhri (&lt;a href=&quot;https://arxiv.org/abs/2211.05281&quot;&gt;arXiv&lt;/a&gt;) Boolean Monotonicity testing is as classic as classic gets in property testing. Encouraged by the success of isoperimetric theorems over the hypercube domain and the monotonicity testers powered by these isoperimetries (over the hypercube), one may wish to obtain efficient monotonicity testers for the hypergrid \([n]^d\). Indeed, the same gang of authors as above showed in a previous work that a Margulis style directed isoperimetry can be extended from the lowly hypercube to the hypergrid. This resulted in a tester with \(\widetilde{O}(d^{5/6})\) queries. The more intricate task of proving a directed Talagrand style isoperimetry that underlies the Khot-Minzer-Safra breakthrough was a challenge. Was. The featured work extends this isoperimetry from the hypercube to the hypergrid and this gives a tester with query complexity \(\widetilde{O}(n \sqrt d)\) which is an improvement over the \(d^{5/6}\) bound for domains where \(n\) is (say) some small constant. But as they say, when it rains, it pours. This brings us to a concurrent paper with the same result.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Improved Monotonicity Testers via Hypercube Embeddings&lt;/strong&gt; by Mark Braverman, Subhash Khot, Guy Kindler, Dor Minzer (&lt;a href=&quot;https://arxiv.org/abs/2211.09229&quot;&gt;arXiv&lt;/a&gt;) Similar to the paper above, this paper also obtains monotonicity testers over the hypergrid domain, \([n]^d\), with \(\widetilde{O}(n^3 \sqrt d)\) queries. This paper also presents monotonicity testers over the standard hypercube domain &amp;#8212; \(\{0,1\}^d\) in the \(p\)-biased setting. In particular, their tester issues \(\widetilde{O}(\sqrt d)\) queries to successfully test monotonicity on the \(p\)-biased cube. Coolly enough, this paper also proves directed Talagrand style isoperimetric inequalities both over the hypergrid and the \(p\)-biased hypercube domains.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Toeplitz Low-Rank Approximation with Sublinear Query Complexity&lt;/strong&gt; by Michael Kapralov, Hannah Lawrence, Mikhail Makarov, Cameron Musco, Kshiteej Sheth (&lt;a href=&quot;https://arxiv.org/abs/2211.11328&quot;&gt;arXiv&lt;/a&gt;) Another intriguing paper for the holiday month. So, take a &lt;a href=&quot;https://en.wikipedia.org/wiki/Toeplitz_matrix&quot;&gt;Toeplitz matrix&lt;/a&gt;. Did you know that any &lt;em&gt;psd&lt;/em&gt; Toeplitz matrix admits a (near-optimal in the Frobenius norm) low-rank approximation which is itself Toeplitz? This is a remarkable statement. The featured paper proves this result and uses it to get more algorithmic mileage. In particular, suppose you are given a \(d \times d\) Toeplitz matrix \(T\). Armed with the techniques from the paper you get algorithms that return a Toeplitz matrix \(\widetilde{T}\) with rank slightly bigger than \(rank(T)\) which is a very good approximation to \(T\) in the Frobenius norm. Moreover, the algorithm only issues a number of queries sublinear in the size of \(T\).&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Sampling an Edge in Sublinear Time Exactly and Optimally&lt;/strong&gt; by Talya Eden, Shyam Narayanan and Jakub Tětek (&lt;a href=&quot;https://arxiv.org/abs/2211.04981&quot;&gt;arXiv&lt;/a&gt;) Regular readers of PTReview are no strangers to the fundamental task of sampling a random edge from a graph which you can access via query access to its vertices. Of course, you don&amp;#8217;t have direct access to the edges of this graph. This paper considers the task of sampling a truly uniform edge from the graph \(G = (V,E)\) with \(|V| = n, |E| = m\). In STOC 22, Tětek and Thorup presented an algorithm for a relaxation of this problem where you want an \(\varepsilon\)-approximately unifrom edge. This algorithm runs in time \(O\left(\frac{n}{\sqrt{m}} \cdot \log(1/\varepsilon) \right)\). The featured paper presents an algorithm that samples an honest to goodness uniform edge in expected time \(O(n/\sqrt{m})\). This closes the problem as we already know a matching lower bound. Indeed, just consider a graph with \(O(\sqrt m)\) vertices which induce a clique and all the remaining components are singletons. You need to sample at least \(\Omega(n/\sqrt m)\) vertices before you see any edge.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Support Size Estimation: The Power of Conditioning&lt;/strong&gt; by Diptarka Chakraborty, Gunjan Kumar, Kuldeep S. Meel (&lt;a href=&quot;https://arxiv.org/abs/2211.11967&quot;&gt;arXiv&lt;/a&gt;) This work considers the classic problem of support size estimation with a slight twist. You are given access to a stronger (conditioning based) sampling oracle. Let me highlight one of the results from this paper. So, you are given a distribution \(D\) where \(supp(D) \subseteq [n]\). You want to obtain an estimate to \(supp(D)\) that lies within \(supp(D) \pm \varepsilon n\) with high probability. Suppose you are also given access to the following sampling oracle. You may choose any subset \(S \subseteq [n]\) and you may request a sample \(x \sim D\vert_S\). An element \(x \in S\) is returned with probability \(D\vert_S(x) = D(x)/D(S)\) (for simplicity of this post, let us assume \(D(S) &amp;gt; 0\)). In addition, this oracle also reveals for you the value \(D(x)\). The paper shows that the algorithmic task of obtaining a high probability estimate to the support size (to within \(\pm \varepsilon n\)) with this sampling oracle admits a lower bound of \(\Omega(\log (\log n)\) calls to the sampling oracle.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Computing (1+epsilon)-Approximate Degeneracy in Sublinear Time&lt;/strong&gt; by Valerie King, Alex Thomo, Quinton Yong (&lt;a href=&quot;https://arxiv.org/abs/2211.04627&quot;&gt;arXiv&lt;/a&gt;) Degeneracy is one of the important graph parameters which is relevant to several problems in algorithmic graph theory. A graph \(G = (V,E)\) is \(\delta\)-degenerate if all induced subgraphs of \(G\) contain a vertex with degree at most \(\delta\). The featured paper presents algorithms for a \((1 + \varepsilon)\)-approximation to degeneracy of \(G\) where you are given access to \(G\) via its adjacency list. &lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Learning and Testing Latent-Tree Ising Models Efficiently&lt;/strong&gt; by Davin Choo, Yuval Dagan, Constantinos Daskalakis, Anthimos Vardis Kandiros (&lt;a href=&quot;https://arxiv.org/abs/2211.13291&quot;&gt;arXiv&lt;/a&gt;) Ising models are emerging as a rich and fertile frontier for Property Testing and Learning Theory researchers (at least to the uninitiated ones like me). This paper considers latent-tree ising models. These are ising models that can only be observed at their leaf nodes. One of the results in this paper gives an algorithm for testing whether the leaf distributions attached to two latent-tree ising models are close or far in the TV distance.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;A constant lower bound for the union-closed sets conjecture&lt;/strong&gt; by Justin Gilmer (&lt;a href=&quot;https://arxiv.org/abs/2211.09055&quot;&gt;arXiv&lt;/a&gt;) The union-closed sets conjecture of Frankl states that for any union closed set system \(\mathcal{F} \subseteq 2^{[n]}\), it holds that there is a mysterious element \(i \in [n]\) that shows up in at least \(c = 1/2\) of the sets in \(\mathcal{F}\). Gilmer took a first swipe on this problem and gave a constant lower bound of \(c = 0.01\). This has already been improved by at least four different groups to \(\frac{3-\sqrt{5}}{2}\), a bound which is the limit of Gilmer&amp;#8217;s method (which takes all of only 9 pages!). &lt;/p&gt;
-
-
-
-&lt;p&gt;The key lemma Gilmer proves is the following. Suppose you sample two sets: \(A, B \sim \mathcal{D}_n\) &lt;em&gt;(iid)&lt;/em&gt; from some distribution \(\mathcal{D}_n\) over the subsets of \([n]\). Suppose for every index \(i \in [n]\), it holds that the probability that the element \(i\) shows up in the random set \(A\) is at most $0.01$. Then you have \(H(A \cup B) \geq 1.26 H(A)\). This is all you need to finish Gilmer&amp;#8217;s proof (of \(c = 0.01\)). The remaining argument is as follows. Suppose, by the way of contradiction, that no element shows up in at least \(0.01\) fraction of sets in the union closed family \(\mathcal{F}\). An application of the key lemma would then give \(H(A \cup B) &amp;gt; H(A)\) which is a contradiction if \(A,B\) are chosen uniformly from \(\mathcal{F}\). The proof of the key lemma is also fairly slick and uses pretty simple information theoretic tools.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Akash&lt;/p&gt;
-  </description>
-  <pubDate>2022-12-08 18:22:31 UTC</pubDate>
-  <author>Property Testing Review</author>
 </item>
 
 </channel>
