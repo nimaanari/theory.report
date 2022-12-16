@@ -9,6 +9,27 @@
 
 
 <item>
+  <title>TR22-182 |  Criticality of AC0-Formulae | 
+
+	Prahladh Harsha, 
+
+	Tulasi mohan Molli, 
+
+	A. Shankar</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/182</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/182</link>
+  <description>
+    Rossman [In Proc. 34th Comput. Complexity Conf., 2019] introduced the notion of criticality. The criticality of a Boolean function $f : \{0, 1\}^n\to \{0, 1\}$ is the minimum $\lambda \geq 1$ such that for all positive integers $t$,
+\[Pr_{\rho\sim R_p} [\text{DT}_{\text{depth}}(f|_\rho) \geq  t] \leq (p\lambda)^t.\]
+.
+Håstad’s celebrated switching lemma shows that the criticality of any $k$-DNF is at most $O(k)$. Subsequent improvements to correlation bounds of AC0-circuits against parity showed that the criticality of any AC0-circuit of size $S$ and depth $d + 1$ is at most $O(\log S)^d$ and any regular AC0-formula of size $S$ and depth $d + 1$ is at most $O( \frac1d \cdot \log S)^d$. We strengthen these results by showing that the criticality of any AC0-formula (not necessarily regular) of size $S$ and depth $d + 1$ is at most $O(\frac1d\cdot\log S)^d$, resolving a conjecture due to Rossman.
+This result also implies Rossman’s optimal lower bound on the size of any depth-d AC0-formula computing parity [Comput. Complexity, 27(2):209–223, 2018.]. Our result implies tight correlation bounds against parity, tight Fourier concentration results and improved #SAT algorithm for AC0-formulae.
+  </description>
+  <pubDate>2022-12-16 07:31:23 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>TR22-181 |  A New Berry-Esseen Theorem for Expander Walks | 
 
 	Louis Golowich</title>
@@ -1651,34 +1672,6 @@ provide some insights into possible gradient problems in the LUT approximation.
 Finally, to evaluate the complexity of hardware implementation to achieve 400G
 throughput, fixed-point NN-based equalizers with approximated activation
 functions are developed and implemented in an FPGA.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-12-12 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Controllability of complex networks: input node placement restricting the longest control chain</title>
-  <guid>http://arxiv.org/abs/2212.04718</guid>
-  <link>http://arxiv.org/abs/2212.04718</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alizadeh_S/0/1/0/all/0/1&quot;&gt;Samie Alizadeh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Posfai_M/0/1/0/all/0/1&quot;&gt;M&amp;#xe1;rton P&amp;#xf3;sfai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghasemi_A/0/1/0/all/0/1&quot;&gt;Abdorasoul Ghasemi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The minimum number of inputs needed to control a network is frequently used
-to quantify its controllability. Control of linear dynamics through a minimum
-set of inputs, however, often has prohibitively large energy requirements and
-there is an inherent trade-off between minimizing the number of inputs and
-control energy. To better understand this trade-off, we study the problem of
-identifying a minimum set of input nodes such that controllabililty is ensured
-while restricting the length of the longest control chain. The longest control
-chain is the maximum distance from input nodes to any network node, and recent
-work found that reducing its length significantly reduces control energy. We
-map the longest control chain-constraint minimum input problem to finding a
-joint maximum matching and minimum dominating set. We show that this graph
-combinatorial problem is NP-complete, and we introduce and validate a heuristic
-approximation. Applying this algorithm to a collection of real and model
-networks, we investigate how network structure affects the minimum number of
-inputs, revealing, for example, that for many real networks reducing the
-longest control chain requires only few or no additional inputs, only the
-rearrangement of the input nodes.
 &lt;/p&gt;
   </description>
   <pubDate>2022-12-12 01:30:00 UTC</pubDate>
