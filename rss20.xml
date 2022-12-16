@@ -9,6 +9,31 @@
 
 
 <item>
+  <title>TR22-179 |  Round-vs-Resilience Tradeoffs for Binary Feedback Channels | 
+
+	Raghuvansh Saxena, 
+
+	Gillat Kol, 
+
+	Zhijun Zhang, 
+
+	Klim Efremenko, 
+
+	Mark Braverman</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/179</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/179</link>
+  <description>
+    In a celebrated result from the $60$&amp;#39;s, Berlekamp showed that feedback can be used to increase the maximum fraction of adversarial noise that can be tolerated by binary error correcting codes from $1/4$ to $1/3$. However, his result relies on the assumption that feedback is &amp;quot;continuous&amp;quot;, i.e., after every utilization of the channel, the sender gets the symbol received by the receiver. While this assumption is natural in some settings, in other settings it may be unreasonable or too costly to maintain.
+
+In this work, we initiate the study of round-restricted feedback channels, where the number $r$ of feedback rounds is possibly much smaller than the number of utilizations of the channel. Error correcting codes for such channels are protocols where the sender can ask for feedback at most $r$ times, and, upon a feedback request, it obtains all the symbols received since its last feedback request. 
+
+We design such error correcting protocols for both the adversarial binary erasure channel and for the adversarial binary corruption (bit flip) channel. For the erasure channel, we give an exact characterization of the round-vs-resilience tradeoff by designing a (constant rate) protocol with $r$ feedback rounds, for every $r$, and proving that the noise resilience it achieves is optimal. For the corruption channel, we give a protocol with one feedback round and prove that its optimality hinges on a &amp;quot;clean&amp;quot; combinatorial conjecture about the maximum cut in weighted graphs.
+  </description>
+  <pubDate>2022-12-16 04:08:19 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>A Lower Bound on the Constant in the Fourier Min-Entropy/Influence Conjecture</title>
   <guid>http://arxiv.org/abs/2212.07713</guid>
   <link>http://arxiv.org/abs/2212.07713</link>
@@ -1669,30 +1694,6 @@ n^{\mathcal{O}(1)}$ for 3-Hitting Set. In this paper, we break the
 n^{\mathcal{O}(1)}$-time algorithm. Our algorithm uses reduction and branching
 rules based on the Dulmage-Mendelsohn decomposition and a divide-and-conquer
 method.
-&lt;/p&gt;
-  </description>
-  <pubDate>2022-12-12 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>A Polynomial-Time Algorithm for MCS Partial Search Order on Chordal Graphs</title>
-  <guid>http://arxiv.org/abs/2212.04880</guid>
-  <link>http://arxiv.org/abs/2212.04880</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rong_G/0/1/0/all/0/1&quot;&gt;Guozhen Rong&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yang_Y/0/1/0/all/0/1&quot;&gt;Yongjie Yang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_W/0/1/0/all/0/1&quot;&gt;Wenjun Li&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the partial search order problem (PSOP) proposed recently by
-Scheffler [WG 2022]. Given a graph $G$ together with a partial order over the
-vertices of $G$, this problem determines if there is an $\mathcal{S}$-ordering
-that is consistent with the given partial order, where $\mathcal{S}$ is a graph
-search paradigm like BFS, DFS, etc. This problem naturally generalizes the
-end-vertex problem which has received much attention over the past few years.
-It also generalizes the so-called ${\mathcal{F}}$-tree recognition problem
-which has just been studied in the literature recently. Our main contribution
-is a polynomial-time dynamic programming algorithm for the PSOP on chordal
-graphs with respect to the maximum cardinality search (MCS). This resolves one
-of the most intriguing open questions left in the work of Sheffler [WG 2022].
-To obtain our result, we propose the notion of layer structure and study
-numerous related structural properties which might be of independent interest.
 &lt;/p&gt;
   </description>
   <pubDate>2022-12-12 01:30:00 UTC</pubDate>
