@@ -9,6 +9,31 @@
 
 
 <item>
+  <title>TR22-183 |  New Lower Bounds and Derandomization for ACC, and a Derandomization-centric View on the Algorithmic Method | 
+
+	Lijie Chen</title>
+  <guid>https://eccc.weizmann.ac.il/report/2022/183</guid>
+  <link>https://eccc.weizmann.ac.il/report/2022/183</link>
+  <description>
+    In this paper, we obtain several new results on lower bounds and derandomization for ACC^0 circuits (constant-depth circuits consisting of AND/OR/MOD_m gates for a fixed constant m, a frontier class in circuit complexity):
+		
+1. We prove that any polynomial-time Merlin-Arthur proof system with an ACC^0 verifier (denoted by MA_{ACC^0}) can be simulated by a nondeterministic proof system with quasi-polynomial running time and polynomial proof length on infinitely many input lengths. This improves the previous simulation by [Chen, Lyu, and Williams, FOCS 2020], which requires both quasi-polynomial running time and proof length.
+			
+2. We show that MA_{ACC^0} cannot be computed by fixed-polynomial-size ACC^0 circuits, and our hard languages are hard on a sufficiently dense set of input lengths.
+			
+3. We show that NEXP (nondeterministic exponential-time) does not have ACC^0 circuits of sub-half-exponential size, improving the previous sub-third-exponential size lower bound for NEXP against ACC^0 by [Williams, J. ACM 2014].
+	
+Combining our first and second results gives a conceptually simpler and derandomization-centric proof of the recent breakthrough result NQP = \NTIME[2^{polylog(n)}] is not in ACC^0 by [Murray and Williams, SICOMP 2020]: Instead of going through an easy witness lemma as they did, we first prove an ACC^0 lower bound for a subclass of MA, and then derandomize that subclass into NQP, while retaining its hardness against ACC^0. 
+		
+Moreover, since our derandomization of MA_{ACC^0} achieves a polynomial proof length, we indeed prove that nondeterministic quasi-polynomial-time with n^{omega(1)} nondeterminism bits (denoted as NTIMEGUESS[2^{polylog(n)},n^{omega(1)}]) has no poly(n)-size ACC^0 circuits, giving a new proof of a result by Vyas. Combining with a win-win argument based on randomized encodings from [Chen and Ren, STOC 2020], we also prove that NTIMEGUESS[2^{polylog(n)},n^{omega(1)}] cannot be (1/2+1/poly(n))-approximated by poly(n)-size ACC^0 circuits, improving the recent strongly average-case lower bounds for NQP against ACC^0 by [Chen and Ren, STOC 2020].
+		
+One interesting technical ingredient behind our second result is the construction of a PSPACE-complete language that is paddable, downward self-reducible, same-length checkable, and weakly error correctable. Moreover, all its reducibility properties have corresponding AC^0[2] non-adaptive oracle circuits. Our construction builds and improves upon similar constructions from [Trevisan and Vadhan, Complexity 2007] and [Chen, FOCS 2019], which all require at least TC^0 oracle circuits for implementing these properties.
+  </description>
+  <pubDate>2022-12-19 21:47:54 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Postdoc Positions for 2023-24</title>
   <guid>http://lucatrevisan.wordpress.com/?p=4654</guid>
   <link>https://lucatrevisan.wordpress.com/2022/12/19/postdoc-positions-for-2023-24/</link>
@@ -1643,20 +1668,6 @@ In our &lt;a href=&quot;https://gradientscience.org/failure-directions/&quot;&gt
   </description>
   <pubDate>2022-12-14 00:00:00 UTC</pubDate>
   <author>Gradient Science</author>
-</item>
-
-<item>
-  <title>PhD Student at King’s College London (apply by February 28, 2023)</title>
-  <guid>http://cstheory-jobs.org/2022/12/13/phd-student-at-kings-college-london-apply-by-february-28-2023/</guid>
-  <link>https://cstheory-jobs.org/2022/12/13/phd-student-at-kings-college-london-apply-by-february-28-2023/</link>
-  <description>
-    &lt;p&gt;PhD positions are available in the areas of multi-agent systems, game dynamics, game theory, machine learning, reinforcement learning and/or cryptoeconomics (mechanism design/incentives). Funding is available for UK home students and options can be discussed for international students.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;http://stefanosleonardos.com/&quot;&gt;http://stefanosleonardos.com/&lt;/a&gt; (This is funding coming from my start-up package and there is no explicit job advert website. Hope this is acceptable)&lt;br /&gt;
-Email: stefanos.leonardos@kcl.ac.uk&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2022-12-13 21:03:18 UTC</pubDate>
-  <author>CCI: jobs</author>
 </item>
 
 </channel>
