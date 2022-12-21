@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2022-12-21T06:35:18Z">Wednesday, December 21 2022, 06:35</time>
+          <time class='timeago' datetime="2022-12-21T07:30:27Z">Wednesday, December 21 2022, 07:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -603,6 +603,55 @@ that more accurately reflect clinical scenarios in the real world.
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Tuesday, December 20
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://11011110.github.io/blog/2022/12/20/tree-clique-products.html'>Tree-clique products</a></h3>
+        <p class='tr-article-feed'>from <a href='https://11011110.github.io/blog/'>David Eppstein</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          A tree decomposition of a graph is, intuitively, a representation of the graph as a “thickened” tree. It comes from the use of separators in divide-and-conquer algorithms: if a graph can be separated into two smaller subgraphs by the removal of a separator, a small subset of its vertices, then many algorithmic problems can be solved by a recursive algorithm that combines the solutions from those subgraphs. The tree, in the tree decomposition, has a root node that represents the separator at the top level of the recursion, children that represent the separators at the next level, and so on.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>A <a href="https://en.wikipedia.org/wiki/Tree_decomposition">tree decomposition</a> of a graph is, intuitively, a representation of the graph as a “thickened” <a href="https://en.wikipedia.org/wiki/Tree_(graph_theory)">tree</a>. It comes from the use of <a href="https://en.wikipedia.org/wiki/Planar_separator_theorem">separators</a> in <a href="https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm">divide-and-conquer algorithms</a>: if a graph can be separated into two smaller subgraphs by the removal of a separator, a small subset of its vertices, then many algorithmic problems can be solved by a recursive algorithm that combines the solutions from those subgraphs. The tree, in the tree decomposition, has a root node that represents the separator at the top level of the recursion, children that represent the separators at the next level, and so on.</p>
+
+<p>It is tempting but incorrect to imagine that each vertex of the given graph belongs to only a single node of this tree. That would mean that you could “thicken” your tree merely by attaching disjoint sets of graph vertices to the tree nodes, so that each graph edge goes between two vertices at the same node or at adjacent nodes. If you could do this, it would give your graph a special kind of product structure: it would be a subgraph of a <a href="https://en.wikipedia.org/wiki/Strong_product_of_graphs">strong product</a> of a tree and a <a href="https://en.wikipedia.org/wiki/Complete_graph">complete graph</a>, of size roughly equal to the width. You could recover the separators of the separator theorem as the subsets of vertices associated with a single tree node.</p>
+
+<p style="text-align:center"><img src="/blog/assets/2022/tree-clique-product.svg" alt="The strong product of a tree and a complete graph" /></p>
+
+<p>Unfortunately, this kind of tree-clique product structure doesn’t work, at least not with the usual separator theorems and the usual divide-and-conquer algorithms. Instead, each recursive subproblem needs to keep track of how its subgraph is attached to the higher-level separator vertices. That means that these separator vertices are really part of the subgraphs on both sides, rather than being confined to a single node at the root of the decomposition tree. Working out the implications of this leads to the standard notion of a tree decomposition, a tree with non-disjoint “bags” of vertices on each node. Each graph vertex may belong to many bags, but they must form a connected subtree of the whole tree. Each graph edge must have both endpoints together in at least one bag.</p>
+
+<p>A counterexample for a related graph coloring problem, by Linial, Matoušek, Sheffet, and Tardos, “Graph colouring with no large monochromatic components”, <a href="https://doi.org/10.1017/S0963548308009140"><em>Probability &amp; Computing</em> 2008</a>, <a href="https://arxiv.org/abs/math/0703362">arXiv:math/0703362</a>, also shows some of the limitations of the naive tree-clique-product idea. Their example uses a rectangular grid of <span style="white-space:nowrap">dimensions \(n^{1/3}\times n^{2/3}\),</span> with each vertex on the top row of the grid fanning out to another \(n^{1/3}\) vertices in a path of linearly many vertices, and one more vertex attached to everything in this path.</p>
+
+<p style="text-align:center"><img src="/blog/assets/2022/untreeable.svg" alt="Rectangular grid with a vertex attached to its long edge, providing an example of a planar graph " /></p>
+
+<p>It’s planar, so it has a tree decomposition of width (bag size) \(O(\sqrt n)\), but representing it as the subgraph of a tree-clique product requires cliques of <span style="white-space:nowrap">size \(\Omega(n^{2/3})\).</span> If you try to use smaller cliques, then the tree node containing the high-degree vertex cannot include enough grid columns nor enough of the top grid row to separate the rest into pieces of small enough size. Some piece will contain \(\Omega(n^{2/3})\) vertices of the long path. However it is further subdivided, at least two of the subdivisions will be connected to each other through the piece and also through the high-degree vertex, forming a loop that is impossible in a tree. (Linial et al. triangulate the grid and show more strongly that in any product structure involving a small clique the other factor has a triangle, but that is more than we need here.)</p>
+
+<p>This graph does have a tree-clique product structure with cliques of size \(O(n^{2/3})\). By applying the standard planar separator theorem repeatedly, in any planar graph you can find a separator of <span style="white-space:nowrap">size \(O(n^{2/3})\)</span> whose removal partitions the remaining subgraph into components of <span style="white-space:nowrap">size \(O(n^{2/3})\).</span> This can be thought of as a tree-clique product where the tree is a star with the separator as root and all the remaining components as leaf children. In the graph of Linial et al, the separator can be formed from the high-degree vertex, the entire top row of the grid, an evenly-spaced subset of vertices of the long path, and the left column of each square subset of the grid. The components it forms are the remainder of each square subset of the grid, and the remaining paths within the long path. More generally, in any class of graphs with <span style="white-space:nowrap">\(O(\sqrt n)\)-separators,</span> the same idea produces a representation as a subgraph of a clique–star <span style="white-space:nowrap">product \(K_{O(n^{2/3})}\boxtimes K_{1,O(n^{1/3})}\),</span> as David Wood observed in his recent preprint “Product structure of graph classes with strongly sublinear separators”, <a href="https://arxiv.org/abs/2208.10074">arXiv:2208.10074</a>.</p>
+
+<p>Which all brings us to my newest preprint, “Graphs excluding a fixed minor are <span style="white-space:nowrap">\(O(\sqrt n)\)-complete-blowups</span> of a treewidth 4 graph”, with Marc Distel, Vida Dujmović, Robert Hickingbotham, Gwenaël Joret, Pat Morin, Michał Seweryn, and David Wood, <a href="https://arxiv.org/abs/2212.08739">arXiv:2212.08739</a>. It asks: what if you insist on a product structure involving cliques of <span style="white-space:nowrap">size \(O(\sqrt n)\),</span> but you let the other factor be something other than a tree? How well-structured can you make the other factor? As the title says, for graphs in any minor-closed graph family, we can find a representation of the graph as a strong product \(K\boxtimes G\) where \(K\) is a clique of size \(O(\sqrt n)\) and \(G\) has treewidth at most four. The details are messy and use the full strength of a different graph structure theorem, the <a href="https://en.wikipedia.org/wiki/Graph_structure_theorem">theorem of Robertson and Seymour</a> that the graphs in any minor-closed family can be decomposed by separators of bounded size into pieces that are graphs of bounded genus, plus a bounded number of arbitrary “apex” vertices, plus “vortices” of bounded pathwidth attached to a bounded number of faces. See the paper if you want an explanation of that part.</p>
+
+<p>(<a href="https://mathstodon.xyz/@11011110/109550441431571479">Discuss on Mastodon</a>)</p><p class="authors">By David Eppstein</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2022-12-20T21:04:00Z">Tuesday, December 20 2022, 21:04</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3255,256 +3304,6 @@ What do you think?  </p>
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-12-15T16:57:00Z">Thursday, December 15 2022, 16:57</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://francisbach.com/continuized-acceleration/'>Discrete, continuous and continuized accelerations</a></h3>
-        <p class='tr-article-feed'>from <a href='https://francisbach.com'>Francis Bach</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          In optimization, acceleration is the art of modifying an algorithm in order to obtain faster convergence. Building accelerations and explaining their performance have been the subject of a countless number of publications, see [2] for a review. In this blog post, we give a vignette of these discussions on a minimal but challenging example, Nesterov...
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="has-text-align-justify justify-text">In optimization, acceleration is the art of modifying an algorithm in order to obtain faster convergence. Building accelerations and explaining their performance have been the subject of a countless number of publications, see [2] for a review. In this blog post, we give a vignette of these discussions on a minimal but challenging example, Nesterov acceleration. We introduce and illustrate different frameworks to understand and design acceleration techniques: the discrete framework based on iterations, the continuous-time framework, and the recent continuized framework that we proposed in [1].</p>
-
-
-
-<p class="justify-text">First, let us describe the setting we use. Let \(f:\mathbb{R}^d \to \mathbb{R}\) be a convex and differentiable function, that we seek to minimize. We assume that \(f\) is \(L\)-smooth, i.e., $$\forall x,y \in \mathbb{R}^d, \qquad f(y) \leq f(x) + \langle \nabla f(x), y-x \rangle + \frac{L}{2} \Vert y-x \Vert^2 \, , $$ and that it is \(\mu\)-strongly convex for some \(\mu &gt; 0\), i.e., $$\forall x,y \in \mathbb{R}^d, \qquad f(y) \geq f(x) + \langle \nabla f(x), y-x \rangle + \frac{\mu}{2} \Vert y-x \Vert^2 \, .$$We had already made these assumptions in <a rel="noreferrer noopener" href="https://francisbach.com/computer-aided-analyses/" target="_blank">a previous blog post on computer-aided analyses in optimization</a>. In this setting, the function \(f\) has a unique minimizer that we denote \(x_*\). </p>
-
-
-
-<figure class="wp-block-image size-full is-resized"><img src="https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex.png" alt="" class="wp-image-8604" width="840" height="363" srcset="https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex.png 1002w, https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex-300x130.png 300w, https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex-768x333.png 768w, https://francisbach.com/wp-content/uploads/2022/12/SmoothStronglyConvex-850x368.png 850w" sizes="(max-width: 840px) 100vw, 840px" /></figure>
-
-
-
-<p class="has-text-align-justify">In this figure, the blue function \(f\) is \(L\)-smooth and \(\mu\)-strongly convex: it is possible to create global upper and lower quadratic bounds from every \(x \in \mathbb{R}^d\) with respective curvatures \(L\) and \(\mu\).</p>
-
-
-
-<p class="justify-text">Of course, smoothness and strong convexity are not the only assumptions under which acceleration is studied (see [2] for a larger variety of accelerations). In particular, in [1], these is a discussion similar to the one of this blog post in the case where strong convexity is not assumed. </p>
-
-
-
-<h2>Discrete-time acceleration</h2>
-
-
-
-<p class="justify-text">The basic algorithm for minimizing \(f\) is gradient descent: we start from an initial guess \(x_0 \in \mathbb{R}^d\) and iterate $$x_{k+1} = x_k \, &#8211; \gamma \nabla f(x_k) \, ,$$where \(\gamma\) is a step size. </p>
-
-
-
-<p class="justify-text">Let us show how this performs on an example in dimension \(d=2\). In the plot below, the thin curves represent the level sets of the function \(f\). With a slight abuse of notation, we denote \(x_1\) and \(x_2\) the coordinates of the vector \(x \in \mathbb{R}^2\).</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/gd-4.gif" alt="" class="wp-image-8662" width="600" height="450"/></figure></div>
-
-
-<p class="justify-text">When \(\gamma \leq \frac{1}{L}\), we have the linear convergence rate $$f(x_k) \, &#8211; f(x_*) \leq \frac{L}{2} \Vert x_0 \, &#8211; x_* \Vert^2 (1-\gamma \mu)^k \, ,$$see [3, Theorem 2.1.15] for instance. This upper bound is minimized at \(\gamma = \frac{1}{L}\), leading to a \(O\big( \left( 1\, &#8211; \frac{\mu}{L} \right)^k \big)\) convergence rate. Although this convergence rate is linear, it can be slow when the condition number \(\frac{L}{\mu} \) is large. </p>
-
-
-
-<p class="justify-text">To tackle this issue, Nesterov [3] proposed an alternative algorithm: $$\begin{aligned}<br>&amp;y_k = x_k + \frac{\sqrt{\gamma\mu}}{1 + \sqrt{\gamma\mu}}(z_k-x_k) \, , \\ &amp;x_{k+1} = y_k \, &#8211; \gamma \nabla f(y_k) \, , \\ &amp;z_{k+1} = z_k + \sqrt{\gamma\mu}(y_k-z_k)  \, &#8211;  \sqrt{\frac{\gamma}{\mu}}\nabla f(y_k ) \, . \end{aligned}$$</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/nest-4.gif" alt="" class="wp-image-8663" width="600" height="450"/></figure></div>
-
-
-<p class="justify-text">Nesterov proved the following convergence bound for his algorithm: if \(\gamma \leq \frac{1}{L}\), $$f (x_k) \, &#8211; f(x_*) \leq \left(f(x_0) \, &#8211; f(x_*) + \frac{\mu}{2} \Vert z_0 \, &#8211; x_* \Vert^2 \right) \left(1\,  &#8211; \sqrt{\gamma\mu}\right)^k \, .$$ Again, this upper bound is minimized at \(\gamma = \frac{1}{L}\); this leads to a \(O\left( \left( 1 \, &#8211; \sqrt{\frac{\mu}{L}} \right)^k \right)\) convergence rate. The acceleration lies in this new square root dependence in the condition number, that enables significant speed-ups in practice. To show this, let us compare the sequence \(x_k\) of Nesterov acceleration with gradient descent.  </p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/gd-nest-2.gif" alt="" class="wp-image-8664" width="600" height="450"/></figure></div>
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1.png" alt="" class="wp-image-8665" width="600" height="450" srcset="https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1.png 1200w, https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1-300x225.png 300w, https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1-1024x768.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1-768x576.png 768w, https://francisbach.com/wp-content/uploads/2022/12/nest-dg-performances-1-850x638.png 850w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
-
-
-<p class="justify-text">We observe that the asymptotic performance of Nesterov acceleration is much better. Of course, comparing the two algorithms in terms of the iteration number \(k\) is unfair to gradient descent, as the complexity per iteration of Nesterov acceleration is higher. However, as suggested by the theoretical convergence bound, the speed-up provided by Nesterov acceleration is largely worth the additional complexity per iteration on badly conditioned problems. </p>
-
-
-
-<p class="justify-text">From a high-level perspective, Nesterov acceleration iterates over several variables, alternating between gradient steps (always with respect to the gradient at \(y_k\)) and mixing steps, where the running value of a variable is replaced by a linear combination of the other variables. However, the precise way gradient and mixing steps are coupled is rather mysterious, and the improved convergence bound relies heavily on the detailed structure of the iterations.</p>
-
-
-
-<p class="justify-text">Only an inspection of the proof of the convergence bound [2,3] can provide a rigorous understanding of Nesterov acceleration and its performance. Many works contributed to interpret and motivate the iteration [11-15]. In this blog post, we try to give some high-level intuitions through the continuous and continuized points of view on Nesterov acceleration. </p>
-
-
-
-<h2>Continuous-time acceleration</h2>
-
-
-
-<p class="justify-text">Continuous-time approaches propose to gain insights on the above algorithms through their limit as the stepsize \(\gamma\) vanishes [4,10]. This was already the subject of a <a rel="noreferrer noopener" href="https://francisbach.com/gradient-flows/" target="_blank">previous blog post</a>. In this approach, one needs to rescale the iterate number \(k\) as \(\gamma \to 0\) in order to obtain a non-degenerate limit. </p>
-
-
-
-<p class="justify-text">For instance, to study gradient descent, we define a rescaled time variable \(t = \gamma k \in \mathbb{R}_{\geq 0}\) and the reparametrized iterates \(X(t) = X(\gamma k) = x_k\). Then for small \(\gamma\), $$\frac{dX}{dt}(t) \approx \frac{X(t+\gamma)-X(t)}{\gamma} = \frac{x_{t/\gamma+1}-x_{t/\gamma}}{\gamma} = \, &#8211; \nabla f(x_{t/\gamma}) = \, &#8211; \nabla f(X(t)) \, .$$In the limit \(\gamma \to 0\), the approximation of the derivative becomes exact and this gives the gradient flow equation $$\frac{dX}{dt}(t) = \, &#8211; \nabla f(X(t)) \, .$$</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/gd-gf-2.gif" alt="" class="wp-image-8666" width="600" height="450"/></figure></div>
-
-
-<p class="justify-text">Note that in the simulation above, the gradient descents are aligned with the gradient flow in terms of their common time parameter \(t = \gamma k\). However, as the stepsize \(\gamma\) is not the same in the two gradient descents, the number of iterations is also not the same. </p>
-
-
-
-<p class="justify-text">In [4,5], a similar limit is taken for the iterates \(x_k\) of Nesterov acceleration. As the computations are a bit lengthy, let us simply state the result. Define a rescaled time variable \(t = \sqrt{\gamma} k \in \mathbb{R}_{\geq 0}\) and the reparametrized iterates \(X(t) = X(\sqrt{\gamma} k ) = x_k\). As \(\gamma \to 0\), \(X\) satisfies the ordinary differential equation (ODE) $$ \frac{d^2X}{dt^2}(t) + 2\sqrt{\mu} \frac{dX}{dt}(t) = \, &#8211; \nabla f(X(t)) \, .$$</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/nest-nf-2.gif" alt="" class="wp-image-8678" width="600" height="450"/></figure></div>
-
-
-<p class="justify-text">At this point, it is tempting to try to overlap the last two plots in order to compare the gradient flow with the limiting ODE for Nesterov acceleration. However, this can not be done as the notion of time \(t\) is not the same in both cases. The gradient flow is obtained at the limit of gradient descent with \(t_1 = \gamma k\); meanwhile Nesterov acceleration has a continuous limit in the scaling \(t_2 = \sqrt{\gamma} k\). For a small stepsize \(\gamma\), \(t_2\) is an order of magnitude larger than \(t_1\); this confirms that Nesterov acceleration is indeed an acceleration. </p>
-
-
-
-<p class="justify-text">The precise ODE obtained in the limit of Nesterov acceleration gives insights on the mechanism underlying acceleration. It is a second-order ODE, while the gradient flow is a first-order ODE. The gradient flow represents the movement of a particle rolling on the graph of \(f\), with no inertia. Meanwhile, the ODE for Nesterov acceleration also represents the movement of a particle rolling on the graph of \(f\), but with inertia and with a friction coefficient proportional to \(\sqrt{\mu}\). This comforts the high-level idea that acceleration is achieved by &#8221;giving inertia to the iterates&#8221;. </p>
-
-
-
-<p class="justify-text">However, the continuous perspective on acceleration comes with important limitations. First, as illustrated in the plots, the continuous limits appear in a computationally inefficient limit of small stepsizes. However, the rates of convergence of the discrete algorithms depend on their ability to be stable while using large stepsizes; this aspect can not be apprehended in the continuous limit. </p>
-
-
-
-<p class="justify-text">Relatedly, the continuous limits are not algorithms by themselves; they need to be discretized to be implemented. The discretization of the accelerated ODE could lead to Nesterov acceleration, but also to multiple other algorithms including Polyak&#8217;s heavy ball method (see [6] or [2, Section 2.3.3]), another algorithm that is not as stable on non-quadratic strongly convex functions. Said differently, the continuous limit is unable to discriminate two discrete algorithms with different performances. However, it should be noted that this limitation was adressed in [5] by considering other ODEs that approximate the discrete algorithms at a higher-order when \(\gamma \to 0\). </p>
-
-
-
-<p class="justify-text">In the next section, we present the so-called &#8220;continuized&#8221; version of Nesterov acceleration, a joint work [1] with Mathieu Even, Francis Bach, Nicolas Flammarion, Hadrien Hendrikx, Pierre Gaillard, Laurent Massoulié, Adrien Taylor and myself. It is defined in continuous time, but it does not correspond to a limit where \(\gamma \to 0\). Furthermore, it does not need to be approximated to be implemented in discrete time. </p>
-
-
-
-<h2>Continuized acceleration</h2>
-
-
-
-<p class="justify-text">The continuized acceleration is composed of two variables \(x_t\), \(z_t\) indexed by a continuous time \(t \geq 0\), that are continuously mixing and that take gradient steps at random times. More precisely, let \(T_1, T_2, T_3, \dots \geq 0\) be random times such that \(T_1, T_2-T_1, T_3-T_2, \dots\) are independent identically distributed (i.i.d.), of distribution exponential with rate \(1\). The exponential distribution is a classical distribution which has a special <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Exponential_distribution" target="_blank">memoryless property</a>; in our case of rate \(1\), it is the distribution with density \(\exp(-t)\). Below, we show five realizations of the random times \(T_1, T_2, T_3, \dots\), between \(t=0\) and \(t = 10\):</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><img loading="lazy" width="1024" height="205" src="https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-1024x205.png" alt="" class="wp-image-8650" srcset="https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process0-1.png 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><img loading="lazy" width="1024" height="205" src="https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-1024x205.png" alt="" class="wp-image-8651" srcset="https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process1-1.png 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><img loading="lazy" width="1024" height="205" src="https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-1024x205.png" alt="" class="wp-image-8652" srcset="https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process2-1.png 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><img loading="lazy" width="1024" height="205" src="https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-1024x205.png" alt="" class="wp-image-8653" srcset="https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process3-1.png 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><img loading="lazy" width="1024" height="205" src="https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-1024x205.png" alt="" class="wp-image-8654" srcset="https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-1024x205.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-300x60.png 300w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-768x154.png 768w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1-850x170.png 850w, https://francisbach.com/wp-content/uploads/2022/12/poisson-process4-1.png 1500w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
-
-
-<p class="justify-text">By convention, we choose that our stochastic processes \(t \mapsto x_t\), \(t \mapsto z_t\) are &#8220;<a href="https://en.wikipedia.org/wiki/C%C3%A0dl%C3%A0g" target="_blank" rel="noreferrer noopener">càdlàg</a>&#8221; almost surely, i.e., right continuous with well-defined left-limits \(x_{t-}\), \(z_{t-}\) at all points \(t\)<em>. </em>At random times \(T_1, T_2, \dots\), our sequences take gradient steps $$\begin{aligned} x_{T_k} &amp;= x_{T_k-} &#8211; \gamma \nabla f (x_{T_k-}) \, , \\z_{T_k} &amp;= z_{T_k-} &#8211; \sqrt{\frac{\gamma}{\mu}} \nabla f (x_{T_k-}) \, . \end{aligned}$$Because of the memoryless property of the exponential distribution, in a infinitesimal time interval \([t, t+dt]\), the variables take gradients steps with probability \(dt\), independently of the past.</p>
-
-
-
-<p class="justify-text">Between these random times, the variables mix through a linear, translation-invariant, ODE $$\begin{aligned}&amp;dx_t = \sqrt{\gamma\mu} (z_t \, &#8211; x_t) dt \, , \\&amp;dz_t = \sqrt{\gamma\mu} (x_t \, &#8211; z_t) dt \, .\end{aligned}$$Following the notation of stochastic calculus, we can write the process more compactly. Denote \(dN(t) = \sum_{k\geq 1} \delta_{T_k}(dt)\) the Poisson point measure; it is the sum of Dirac masses at the random times \(T_1, T_2, \dots\). Then we write<br>$$\begin{aligned}<br>dx_t &amp;= \sqrt{\gamma\mu} (z_t \, &#8211; x_t) dt \, &#8211; \gamma \nabla f(x_t) dN(t) \, , \\<br>dz_t &amp;= \sqrt{\gamma\mu} (x_t \, &#8211; z_t) dt-  \sqrt{\frac{\gamma}{\mu}} \nabla f(x_t) dN(t) \, . <br>\end{aligned}$$This should be understood as detailed above: the first component of these equations is an evolution with respect to the Lebesgue measure, thus a continuous flow; the second component is an evolution with respect to a discrete measure; when the time \(t\) hits a Dirac mass of the measure \(dN(t)\), then we take discrete jumps. This gives a continuous-time random process; we show one realization below. </p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/cont-3.gif" alt="" class="wp-image-8668" width="600" height="450"/></figure></div>
-
-
-<p class="justify-text">In this simulation, we see similarities with the discrete acceleration of Nesterov. However, the process is now random and in continuous time. We comment this comparison in detail in the rest of the blog post. </p>
-
-
-
-<p class="justify-text">In [1], we proved the following convergence bound for this process: if \(\gamma \leq \frac{1}{L}\), $$\mathbb{E} f(x_t) \, &#8211; f(x_*) \leq \left(f(x_0) \, &#8211; f(x_*) + \frac{\mu}{2} \Vert z_0 \,  &#8211; x_* \Vert^2 \right) \exp\left(  &#8211; \sqrt{\gamma \mu} t \right) \, .$$Note the similarity with the bound proved by Nesterov for the discrete acceleration. In fact, the proof through Lyapunov techniques is essentially the same. In the continuized acceleration, the main difference is that we have a statement in expectation over the sampling of the Poisson point measure.  </p>
-
-
-
-<p class="justify-text">In summary, we observe from the bounds and the simulation that the discrete and continuized accelerations behave similarly. The continuized acceleration is more involved as it is a random process with ODE components and jumps. Why would one prefer the continuized acceleration? Can we discretize the continuized acceleration easily? </p>
-
-
-
-<p class="justify-text">In the next section, we explain why the discretization of the continuized acceleration is not a problem. But before that, let us propose high-level answers to the first question. </p>
-
-
-
-<p class="justify-text">First, from a Markov chain indexed by a discrete time index \(k\), one can associate the so-called <em>continuized</em> Markov chain, indexed by a continuous time \(t\), that makes transition with the same Markov kernel, but at random times, with independent exponential time intervals [8]. This terminology motivated the name of the continuized acceleration in [1]. The continuized Markov chain is appreciated for its continuous time parameter \(t\), for instance because it enables to use differential calculus. Still, the continuized Markov chain keeps many properties of the original Markov chain; similarly the continuized acceleration is arguably simpler to analyze, while performing similarly to Nesterov acceleration.</p>
-
-
-
-<p class="justify-text">Second, processes that alternate randomly are generally simpler to analyze that those that alternate in cycles. For instance, stochastic gradient descent is easier to analyze when components are selected randomly rather than in an ordered way. Coordinate gradient descent is easier to analyze when coordinates are selected randomly rather than in an ordered way [9]. Similarly, the continuized acceleration is simpler to analyze because the gradient steps and the mixing steps alternate randomly, due to the randomness of \(T_k\).</p>
-
-
-
-<p class="justify-text">Third, thanks to this random alternation, the continuized framework enables to build accelerations in asynchronous distributed optimization. In fact, this application was the original motivation to build the continuized acceleration in [1]. The interested reader can consult [1, Sections 6-7] to learn how accelerated distributed algorithms were built in asynchronous settings where acceleration was previously unknown. </p>
-
-
-
-<p class="justify-text">After these high-level remarks, let us return to a concrete question that we left: how can we implement the continuized acceleration? </p>
-
-
-
-<h2>The discrete implementation of the continuized acceleration</h2>
-
-
-
-<p class="justify-text">The continuized acceleration can be implemented exactly as a discrete algorithm. Indeed, between the times of the jumps \(T_k\), the dynamics of the continuized acceleration are governed by an ODE that is integrable in closed form. It is thus wise to discretize at the times \(T_k\) of the jumps. More precisely, define $$\begin{aligned} &amp;\tilde{x}_k := x_{T_{k}} \, , &amp;&amp;\tilde{y}_k := x_{T_{k+1}-} \, , &amp;&amp;\tilde{z}_k := z_{T_{k}} \, .<br>\end{aligned}$$In [1], we proved that the three sequences \(\tilde{x}_k\), \(\tilde{y}_k\), \(\tilde{z}_k\), \(k \geq 0\), satisfy a recurrence relation: $$\begin{aligned}<br>&amp;\tilde{y}_k = \tilde{x}_k + \tau_k(\tilde{z}_k-\tilde{x}_k) \, , \\ &amp;\tilde{x}_{k+1} = \tilde{y}_k \, &#8211; \gamma \nabla f(\tilde{y}_k) \, , \\ &amp;\tilde{z}_{k+1} = \tilde{z}_k + \tau_k'(\tilde{y}_k-\tilde{z}_k) \, &#8211; \sqrt{\frac{\gamma}{\mu}} \nabla f(\tilde{y}_k ) \, ,<br>\end{aligned}$$ with $$\begin{aligned} &amp;{ \tau_k = \frac{1}{2}\left(1 &#8211; \exp\left(-2\sqrt{\gamma\mu}(T_{k+1}-T_k)\right)\right)} \, , &amp;&amp;\tau_k&#8217; = \tanh\left(\sqrt{\gamma\mu}(T_{k+1}-T_k)\right) \, .\end{aligned}$$Note that this recurrence relation has the same structure as Nesterov&#8217;s original acceleration: in fact, only the two coefficients \(\tau_k\) and \(\tau_k&#8217;\) have been randomized. In short, the continuized acceleration can be implemented as a randomized version of the discrete acceleration. </p>
-
-
-
-<p class="justify-text">In this discrete implementation, the continuized acceleration performs similarly to Nesterov acceleration. </p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/gd-nest-cont-3.gif" alt="" class="wp-image-8669" width="600" height="450"/></figure></div>
-
-<div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3.png" alt="" class="wp-image-8670" width="600" height="450" srcset="https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3.png 1200w, https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3-300x225.png 300w, https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3-1024x768.png 1024w, https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3-768x576.png 768w, https://francisbach.com/wp-content/uploads/2022/12/cont-nest-gd-performances-3-850x638.png 850w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
-
-
-<h2>Conclusion</h2>
-
-
-
-<p class="justify-text">For practical purposes, Nesterov&#8217;s discrete acceleration wins. The iteration is elementary to implement and it enjoys a great performance. (There are exceptions in distributed optimization for which Nesterov acceleration would not enable asynchrony but the continuized acceleration does [1]).</p>
-
-
-
-<p class="justify-text">For conceptual purposes, the continuous perspective on acceleration gives a crude intuition on the mechanism at play. However, there are also important aspects lost in the limit of small stepsizes, related to the choice of the discretization. </p>
-
-
-
-<p class="justify-text">The continuized acceleration has two faces, continuous and discrete. As a discrete iteration, it is a randomized version of Nesterov&#8217;s original iteration. As a continuous process, it is more sophisticated that a simple ODE, as it involves random jumps. However, it gives a continuous-time perspective on acceleration without any conceptual loss. </p>
-
-
-
-<h2>References</h2>
-
-
-
-<p class="justify-text">[1] Mathieu Even, Raphaël Berthier, Francis Bach, Nicolas Flammarion, Hadrien Hendrikx, Pierre Gaillard, Laurent Massoulié, and Adrien Taylor. <a rel="noreferrer noopener" href="https://proceedings.neurips.cc/paper/2021/hash/ec26fc2eb2b75aece19c70392dc744c2-Abstract.html" target="_blank">Continuized accelerations of deterministic and stochastic gradient descents, and of gossip algorithms</a>. <em>Advances in Neural Information Processing Systems</em> 34 (2021): 28054-28066.<br>[2] Alexandre d&#8217;Aspremont, Damien Scieur, and Adrien Taylor. <a rel="noreferrer noopener" href="https://www.nowpublishers.com/article/Details/OPT-036" target="_blank">Acceleration methods</a>. <em>Foundations and Trends® in Optimization</em> 5, no. 1-2 (2021): 1-245.<br>[3] Yurii Nesterov. <em><a rel="noreferrer noopener" href="https://link.springer.com/book/10.1007/978-1-4419-8853-9" target="_blank">Introductory lectures on convex optimization: A basic course</a></em>. Vol. 87. Springer Science &amp; Business Media, 2003.<br>[4] Weijie Su, Stephen Boyd, and Emmanuel Candes. <a rel="noreferrer noopener" href="https://jmlr.org/papers/v17/15-084.html" target="_blank">A differential equation for modeling Nesterov’s accelerated gradient method: theory and insights</a>. <em>Advances in Neural Information Processing Systems</em> 27 (2014).<br>[5] Bin Shi, Simon Du, Michael Jordan, and Weijie Su. <a rel="noreferrer noopener" href="https://link.springer.com/article/10.1007/s10107-021-01681-8" target="_blank">Understanding the acceleration phenomenon via high-resolution differential equations</a>. <em>Mathematical Programming</em> 195, no. 1 (2022): 79-148.<br>[6] Boris Polyak. <a rel="noreferrer noopener" href="https://www.sciencedirect.com/science/article/abs/pii/0041555364901375" target="_blank">Some methods of speeding up the convergence of iteration methods</a>. <em>USSR computational mathematics and mathematical physics</em>, <em>4</em>(5), pp.1-17 (1964).<br>[7] Lessard, Laurent, Benjamin Recht, and Andrew Packard. <a rel="noreferrer noopener" href="https://epubs.siam.org/doi/abs/10.1137/15M1009597?casa_token=eux_zMBz0-QAAAAA:s32oBPHvN0hyzdt9LQLJYhggXmncsC66SAFXiIhztJQ8Zdu7avLKCMhkfZaND2Jdd_WZcl-B5jKS" target="_blank">Analysis and design of optimization algorithms via integral quadratic constraints</a>. <em>SIAM Journal on Optimization</em> 26, no. 1 (2016): 57-95.<br>[8] David Aldous and James Fill. <a rel="noreferrer noopener" href="http://www.stat.berkeley.edu/$\sim$aldous/RWG/book.html" target="_blank">Reversible Markov chains and random walks on graphs</a>. Unpublished monograph (1995).<br>[9] Stephen Wright. <a rel="noreferrer noopener" href="https://link.springer.com/article/10.1007/s10107-015-0892-3" target="_blank">Coordinate descent algorithms</a>. <em>Mathematical Programming</em> 151, no. 1 (2015): 3-34.<br>[10] Hedy Attouch, Zaki Chbani, Juan Peypouquet, and Patrick Redont.<a rel="noreferrer noopener" href="https://link.springer.com/article/10.1007/s10107-016-0992-8" target="_blank"> Fast convergence of inertial dynamics and algorithms with asymptotic vanishing viscosity</a>. <em>Mathematical Programming</em> 168, no. 1 (2018): 123-175.<br>[11] Sébastien Bubeck, Yin Tat Lee, and Mohit Singh. <a rel="noreferrer noopener" href="https://arxiv.org/abs/1506.08187" target="_blank">A geometric alternative to Nesterov&#8217;s accelerated gradient descent</a>. <em>arXiv preprint arXiv:1506.08187</em> (2015).<br>[12] Nicolas Flammarion and Francis Bach. <a rel="noreferrer noopener" href="https://proceedings.mlr.press/v40/Flammarion15.html" target="_blank">From averaging to acceleration, there is only a step-size</a>. In <em>Conference on Learning Theory</em>, pp. 658-695. PMLR (2015).<br>[13] Yossi Arjevani, Shai Shalev-Shwartz, and Ohad Shamir. <a rel="noreferrer noopener" href="https://jmlr.org/papers/v17/15-106.html" target="_blank">On lower and upper bounds in smooth and strongly convex optimization</a>. <em>The Journal of Machine Learning Research</em> 17, no. 1 (2016): 4303-4353.<br>[14] Donghwan Kim and Jeffrey Fessler. <a rel="noreferrer noopener" href="https://link.springer.com/article/10.1007/s10107-015-0949-3" target="_blank">Optimized first-order methods for smooth convex minimization</a>. <em>Mathematical programming</em> 159, no. 1 (2016): 81-107.<br>[15] Zeyuan Allen-Zhu and Lorenzo Orecchia. <a rel="noreferrer noopener" href="https://drops.dagstuhl.de/opus/volltexte/2017/8185/pdf/LIPIcs-ITCS-2017-3.pdf" target="_blank">Linear coupling: An ultimate unification of gradient and mirror descent</a>. In <em>Proceedings of the 8th Innovations in Theoretical Computer Science ITCS&#8217;17</em> (2017).</p>
-<p class="authors">By Raphael Berthier</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-12-15T15:25:08Z">Thursday, December 15 2022, 15:25</time>
         </div>
       </div>
     </details>
