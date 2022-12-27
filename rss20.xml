@@ -9,6 +9,17 @@
 
 
 <item>
+  <title>Responsiveness under omission failures</title>
+  <guid>https://decentralizedthoughts.github.io/2022-12-27-responsiveness-omission/</guid>
+  <link>https://decentralizedthoughts.github.io/2022-12-27-responsiveness-omission/</link>
+  <description>
+    In this post, we discuss log replication responsiveness in the context of omission failures. We show how to transform the protocol in our previous post to a multi-shot version of Paxos for omission faults. The Byzantine failure case uses similar ideas and is covered in the next post of this...
+  </description>
+  <pubDate>2022-12-27 13:00:00 UTC</pubDate>
+  <author>Decentralized Thoughts</author>
+</item>
+
+<item>
   <title>Set Replication - fault tolerance without total ordering</title>
   <guid>https://decentralizedthoughts.github.io/2022-12-27-set-replication/</guid>
   <link>https://decentralizedthoughts.github.io/2022-12-27-set-replication/</link>
@@ -1781,35 +1792,6 @@ that more accurately reflect clinical scenarios in the real world.
   </description>
   <pubDate>2022-12-21 01:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Tree-clique products</title>
-  <guid>https://11011110.github.io/blog/2022/12/20/tree-clique-products</guid>
-  <link>https://11011110.github.io/blog/2022/12/20/tree-clique-products.html</link>
-  <description>
-    &lt;p&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Tree_decomposition&quot;&gt;tree decomposition&lt;/a&gt; of a graph is, intuitively, a representation of the graph as a “thickened” &lt;a href=&quot;https://en.wikipedia.org/wiki/Tree_(graph_theory)&quot;&gt;tree&lt;/a&gt;. It comes from the use of &lt;a href=&quot;https://en.wikipedia.org/wiki/Planar_separator_theorem&quot;&gt;separators&lt;/a&gt; in &lt;a href=&quot;https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm&quot;&gt;divide-and-conquer algorithms&lt;/a&gt;: if a graph can be separated into two smaller subgraphs by the removal of a separator, a small subset of its vertices, then many algorithmic problems can be solved by a recursive algorithm that combines the solutions from those subgraphs. The tree, in the tree decomposition, has a root node that represents the separator at the top level of the recursion, children that represent the separators at the next level, and so on.&lt;/p&gt;
-
-&lt;p&gt;It is tempting but incorrect to imagine that each vertex of the given graph belongs to only a single node of this tree. That would mean that you could “thicken” your tree merely by attaching disjoint sets of graph vertices to the tree nodes, so that each graph edge goes between two vertices at the same node or at adjacent nodes. If you could do this, it would give your graph a special kind of product structure: it would be a subgraph of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_product_of_graphs&quot;&gt;strong product&lt;/a&gt; of a tree and a &lt;a href=&quot;https://en.wikipedia.org/wiki/Complete_graph&quot;&gt;complete graph&lt;/a&gt;, of size roughly equal to the width. You could recover the separators of the separator theorem as the subsets of vertices associated with a single tree node.&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/tree-clique-product.svg&quot; alt=&quot;The strong product of a tree and a complete graph&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, this kind of tree-clique product structure doesn’t work, at least not with the usual separator theorems and the usual divide-and-conquer algorithms. Instead, each recursive subproblem needs to keep track of how its subgraph is attached to the higher-level separator vertices. That means that these separator vertices are really part of the subgraphs on both sides, rather than being confined to a single node at the root of the decomposition tree. Working out the implications of this leads to the standard notion of a tree decomposition, a tree with non-disjoint “bags” of vertices on each node. Each graph vertex may belong to many bags, but they must form a connected subtree of the whole tree. Each graph edge must have both endpoints together in at least one bag.&lt;/p&gt;
-
-&lt;p&gt;A counterexample for a related graph coloring problem, by Linial, Matoušek, Sheffet, and Tardos, “Graph colouring with no large monochromatic components”, &lt;a href=&quot;https://doi.org/10.1017/S0963548308009140&quot;&gt;&lt;em&gt;Probability &amp;amp; Computing&lt;/em&gt; 2008&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/abs/math/0703362&quot;&gt;arXiv:math/0703362&lt;/a&gt;, also shows some of the limitations of the naive tree-clique-product idea. Their example uses a rectangular grid of &lt;span style=&quot;white-space:nowrap&quot;&gt;dimensions \(n^{1/3}\times n^{2/3}\),&lt;/span&gt; with each vertex on the top row of the grid fanning out to another \(n^{1/3}\) vertices in a path of linearly many vertices, and one more vertex attached to everything in this path.&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2022/untreeable.svg&quot; alt=&quot;Rectangular grid with a vertex attached to its long edge, providing an example of a planar graph &quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s planar, so it has a tree decomposition of width (bag size) \(O(\sqrt n)\), but representing it as the subgraph of a tree-clique product requires cliques of &lt;span style=&quot;white-space:nowrap&quot;&gt;size \(\Omega(n^{2/3})\).&lt;/span&gt; If you try to use smaller cliques, then the tree node containing the high-degree vertex cannot include enough grid columns nor enough of the top grid row to separate the rest into pieces of small enough size. Some piece will contain \(\Omega(n^{2/3})\) vertices of the long path. However it is further subdivided, at least two of the subdivisions will be connected to each other through the piece and also through the high-degree vertex, forming a loop that is impossible in a tree. (Linial et al. triangulate the grid and show more strongly that in any product structure involving a small clique the other factor has a triangle, but that is more than we need here.)&lt;/p&gt;
-
-&lt;p&gt;This graph does have a tree-clique product structure with cliques of size \(O(n^{2/3})\). By applying the standard planar separator theorem repeatedly, in any planar graph you can find a separator of &lt;span style=&quot;white-space:nowrap&quot;&gt;size \(O(n^{2/3})\)&lt;/span&gt; whose removal partitions the remaining subgraph into components of &lt;span style=&quot;white-space:nowrap&quot;&gt;size \(O(n^{2/3})\).&lt;/span&gt; This can be thought of as a tree-clique product where the tree is a star with the separator as root and all the remaining components as leaf children. In the graph of Linial et al, the separator can be formed from the high-degree vertex, the entire top row of the grid, an evenly-spaced subset of vertices of the long path, and the left column of each square subset of the grid. The components it forms are the remainder of each square subset of the grid, and the remaining paths within the long path. More generally, in any class of graphs with &lt;span style=&quot;white-space:nowrap&quot;&gt;\(O(\sqrt n)\)-separators,&lt;/span&gt; the same idea produces a representation as a subgraph of a clique–star &lt;span style=&quot;white-space:nowrap&quot;&gt;product \(K_{O(n^{2/3})}\boxtimes K_{1,O(n^{1/3})}\),&lt;/span&gt; as David Wood observed in his recent preprint “Product structure of graph classes with strongly sublinear separators”, &lt;a href=&quot;https://arxiv.org/abs/2208.10074&quot;&gt;arXiv:2208.10074&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Which all brings us to my newest preprint, “Graphs excluding a fixed minor are &lt;span style=&quot;white-space:nowrap&quot;&gt;\(O(\sqrt n)\)-complete-blowups&lt;/span&gt; of a treewidth 4 graph”, with Marc Distel, Vida Dujmović, Robert Hickingbotham, Gwenaël Joret, Pat Morin, Michał Seweryn, and David Wood, &lt;a href=&quot;https://arxiv.org/abs/2212.08739&quot;&gt;arXiv:2212.08739&lt;/a&gt;. It asks: what if you insist on a product structure involving cliques of &lt;span style=&quot;white-space:nowrap&quot;&gt;size \(O(\sqrt n)\),&lt;/span&gt; but you let the other factor be something other than a tree? How well-structured can you make the other factor? As the title says, for graphs in any minor-closed graph family, we can find a representation of the graph as a strong product \(K\boxtimes G\) where \(K\) is a clique of size \(O(\sqrt n)\) and \(G\) has treewidth at most four. The details are messy and use the full strength of a different graph structure theorem, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Graph_structure_theorem&quot;&gt;theorem of Robertson and Seymour&lt;/a&gt; that the graphs in any minor-closed family can be decomposed by separators of bounded size into pieces that are graphs of bounded genus, plus a bounded number of arbitrary “apex” vertices, plus “vortices” of bounded pathwidth attached to a bounded number of faces. See the paper if you want an explanation of that part.&lt;/p&gt;
-
-&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109550441431571479&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
-  </description>
-  <pubDate>2022-12-20 21:04:00 UTC</pubDate>
-  <author>David Eppstein</author>
 </item>
 
 </channel>
