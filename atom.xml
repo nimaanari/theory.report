@@ -10,6 +10,37 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-185 |  Randomized versus Deterministic Decision Tree Size | 
+
+	Yogesh Dahiya, 
+
+	Arkadev Chattopadhyay, 
+
+	Nikhil Mande, 
+
+	Jaikumar  Radhakrishnan, 
+
+	Swagato Sanyal</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/185"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/185</id>
+    <updated>2022-12-29T18:58:04+00:00</updated>
+    <content type="html" xml:lang="en">
+    A classic result of Nisan [SICOMP &amp;#39;91] states that the deterministic decision tree depth complexity of every total Boolean function is at most the cube of its randomized decision tree depth complexity. The question whether randomness helps in significantly reducing the size of decision trees appears not to have been addressed. We show that the logarithm of the deterministic decision tree size complexity of every total Boolean function on $n$ input variables is at most the fourth power of the logarithm of its bounded-error randomized decision tree size complexity, ignoring a polylogarithmic factor in the input size. Our result has the following  consequences:
+1. The deterministic AND-OR query complexity of a total Boolean function is at most the fourth power of its randomize AND-OR query complexity, ignoring a $(\log n)^{O(1)}$ factor.
+2. The deterministic AND (OR) query complexity of a total Boolean function is at most the cube of its randomized AND (OR) query complexity, ignoring a $(\log n)^{O(1)}$ factor. This answers a recent open question posed by Knop, Lovett, McGuire and Yuan [SIGACT News &amp;#39;21].
+3. The notion of rank of a Boolean function was defined in a classic work of Ehrenfeucht and Haussler [Information and Computation&amp;#39;89] in the context of learning theory, and is characterized by the logarithm of decision tree size up to a logarithmic factor in the input size. Our results confirm a recent conjecture (ignoring a $(\log n)^{O(1)}$ factor) of Cornelissen, Mande and Patro [FSTTCS &amp;#39;22], that asserted the equivalence of randomized and deterministic analogs of rank, upto polynomial factors,  for all total Boolean functions.
+4. Combined with the above-mentioned work of Ehrenfeucht and Haussler, our result implies that the class of functions computable by randomized decision trees of polynomial size, is PAC-learnable in quasi-polynomial time.
+
+To obtain our main result on decision tree size, we introduce the notion of block number of a Boolean function, which can be thought of as a counting analog of block sensitivity of a Boolean function that played a central role in Nisan&amp;#39;s result mentioned above.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: postdoc at UC San Diego (apply by January 15, 2023)</title>
     <link href="https://cstheory-jobs.org/2022/12/29/postdoc-at-uc-san-diego-apply-by-january-15-2023/"/>
     <id>http://cstheory-jobs.org/2022/12/29/postdoc-at-uc-san-diego-apply-by-january-15-2023/</id>
@@ -1799,49 +1830,6 @@ communities.
 testing between two different `planted&#39; distributions, whereas previous results
 have considered testing between a planted distribution and an i.i.d. `null&#39;
 distribution.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Separating MAX 2-AND, MAX DI-CUT and MAX CUT</title>
-    <link href="http://arxiv.org/abs/2212.11191"/>
-    <id>http://arxiv.org/abs/2212.11191</id>
-    <updated>2022-12-22T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Brakensiek_J/0/1/0/all/0/1&quot;&gt;Joshua Brakensiek&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Huang_N/0/1/0/all/0/1&quot;&gt;Neng Huang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Potechin_A/0/1/0/all/0/1&quot;&gt;Aaron Potechin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zwick_U/0/1/0/all/0/1&quot;&gt;Uri Zwick&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Assuming the Unique Games Conjecture (UGC), the best approximation ratio that
-can be obtained in polynomial time for the MAX CUT problem is
-$\alpha_{\text{CUT}}\simeq 0.87856$, obtained by the celebrated SDP-based
-approximation algorithm of Goemans and Williamson. The currently best
-approximation algorithm for MAX DI-CUT, i.e., the MAX CUT problem in directed
-graphs, achieves a ratio of about $0.87401$, leaving open the question whether
-MAX DI-CUT can be approximated as well as MAX CUT. We obtain a slightly
-improved algorithm for MAX DI-CUT and a new UGC-hardness for it, showing that
-$0.87439\le \alpha_{\text{DI-CUT}}\le 0.87461$, where $\alpha_{\text{DI-CUT}}$
-is the best approximation ratio that can be obtained in polynomial time for MAX
-DI-CUT under UGC. The new upper bound separates MAX DI-CUT from MAX CUT,
-resolving a question raised by Feige and Goemans.
-&lt;/p&gt;
-&lt;p&gt;A natural generalization of MAX DI-CUT is the MAX 2-AND problem in which each
-constraint is of the form $z_1\land z_2$, where $z_1$ and $z_2$ are literals,
-i.e., variables or their negations. (In MAX DI-CUT each constraint is of the
-form $\bar{x}_1\land x_2$, where $x_1$ and $x_2$ are variables.) Austrin
-separated MAX 2-AND from MAX CUT by showing that $\alpha_{\text{2AND}} &amp;lt;
-0.87435$ and conjectured that MAX 2-AND and MAX DI-CUT have the same
-approximation ratio. Our new lower bound on MAX DI-CUT refutes this conjecture,
-completing the separation of the three problems MAX 2-AND, MAX DI-CUT and MAX
-CUT. We also obtain a new lower bound for MAX 2-AND, showing that
-$\alpha_{\text{2AND}}\geq 0.87409$.
-&lt;/p&gt;
-&lt;p&gt;Our upper bound on MAX DI-CUT is achieved via a simple, analytical proof. The
-lower bounds on MAX DI-CUT and MAX 2-AND (the new approximation algorithms) use
-experimentally-discovered distributions of rounding functions which are then
-verified via computer-assisted proofs.
 &lt;/p&gt;
   </content>
     <author>
