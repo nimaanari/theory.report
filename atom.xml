@@ -10,6 +10,31 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR22-186 |  Power of Decision Trees with Monotone Queries | 
+
+	Prashanth Amireddy, 
+
+	Sai Jayasurya, 
+
+	Jayalal Sarma</title>
+    <link href="https://eccc.weizmann.ac.il/report/2022/186"/>
+    <id>https://eccc.weizmann.ac.il/report/2022/186</id>
+    <updated>2022-12-31T21:08:57+00:00</updated>
+    <content type="html" xml:lang="en">
+    In this paper, we initiate study of the computational power of adaptive and non-adaptive monotone decision trees – decision trees where each query is a monotone function on the input bits. In the most general setting, the monotone decision tree height (or size) can be viewed as a measure of non-monotonicity of a given Boolean function. We also study the restriction of the model by restricting (in terms of circuit complexity) the monotone functions that can be queried at each node. This naturally leads to complexity classes of the form $DT(mon-\mathcal{C})$ for any circuit complexity class $\mathcal{C}$, where the height of the tree is $O(\log n)$, and the query functions can be computed by monotone circuits in the class $\mathcal{C}$. In the above context, we prove the following characterizations and bounds.
+$\bullet$ For any Boolean function $f$, we show that the minimum monotone decision tree height can be exactly characterized (both in the adaptive and non-adaptive versions of the model) in terms of its alternation ($alt(f)$ is defined as the maximum number of times that the function value changes, in any chain in the Boolean lattice). We also characterize the non-adaptive decision tree height with a natural generalization of certification complexity of a function. Similarly, we determine the complexity of non-deterministic and randomized variants of monotone decision trees in terms of $alt(f)$.
+$\bullet$ We show that $DT(mon-\mathcal{C}) = \mathcal{C}$ if $\mathcal{C}$ contains monotone circuits for the threshold functions. For $\mathcal{C} = AC_0$, we are able to show that any function in $AC_0$ can be computed by a sub-linear height monotone decision tree with queries having monotone $AC_0$ circuits.
+$\bullet$ To understand the logarithmic height case in case of $AC_0$ i.e., $DT(mon-AC_0)$, we show that for any $f$ (on $n$ bits) in $DT(mon-AC_0)$, and for any positive constant $\epsilon \le 1$, there is an $AC_0$ circuit for $f$ with $O(n^\epsilon)$ negation gates.
+En route our main proofs, we study the monotone variant of the decision list model, and prove corresponding characterizations in terms of $alt(f)$ and also derive as a consequence that $DT(mon-\mathcal{C}) = DL(mon-\mathcal{C})$ if $\mathcal{C}$ has appropriate closure properties (where $DL(mon-\mathcal{C})$ is defined similar to $DT(mon-\mathcal{C})$ but for decision lists).
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Scott Aaronson: Happy 40th Birthday Dana!</title>
     <link href="https://scottaaronson.blog/?p=6946"/>
     <id>https://scottaaronson.blog/?p=6946</id>
@@ -1986,27 +2011,6 @@ with low entanglement to a hard regime with high entanglement at $k=3$, and a
 transition back to easy and low entanglement at $k=n-3$. As a key technical
 result, we prove a duality for the simulation complexity of regular graph
 states between low and high regularity.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Vexing Vexillological Logic</title>
-    <link href="http://arxiv.org/abs/2212.10631"/>
-    <id>http://arxiv.org/abs/2212.10631</id>
-    <updated>2022-12-22T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Burke_K/0/1/0/all/0/1&quot;&gt;Kyle Burke&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Tennenhouse_C/0/1/0/all/0/1&quot;&gt;Craig Tennenhouse&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We define a new impartial combinatorial game, Flag Coloring, based on flood
-filling. We then generalize to a graph game, and find values for many positions
-on two colors. We demonstrate that the generalized game is PSPACE-complete for
-two colors or more via a reduction from Avoid True, determine the outcome
-classes of games based on real-world flags, and discuss remaining open
-problems.
 &lt;/p&gt;
   </content>
     <author>
