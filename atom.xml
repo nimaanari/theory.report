@@ -10,6 +10,525 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Separating Computational and Statistical Differential Privacy (Under Plausible Assumptions)</title>
+    <link href="http://arxiv.org/abs/2301.00104"/>
+    <id>http://arxiv.org/abs/2301.00104</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghazi_B/0/1/0/all/0/1&quot;&gt;Badih Ghazi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ilango_R/0/1/0/all/0/1&quot;&gt;Rahul Ilango&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kamath_P/0/1/0/all/0/1&quot;&gt;Pritish Kamath&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kumar_R/0/1/0/all/0/1&quot;&gt;Ravi Kumar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Manurangsi_P/0/1/0/all/0/1&quot;&gt;Pasin Manurangsi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Computational differential privacy (CDP) is a natural relaxation of the
+standard notion of (statistical) differential privacy (SDP) proposed by Beimel,
+Nissim, and Omri (CRYPTO 2008) and Mironov, Pandey, Reingold, and Vadhan
+(CRYPTO 2009). In contrast to SDP, CDP only requires privacy guarantees to hold
+against computationally-bounded adversaries rather than
+computationally-unbounded statistical adversaries. Despite the question being
+raised explicitly in several works (e.g., Bun, Chen, and Vadhan, TCC 2016), it
+has remained tantalizingly open whether there is any task achievable with the
+CDP notion but not the SDP notion. Even a candidate such task is unknown.
+Indeed, it is even unclear what the truth could be!
+&lt;/p&gt;
+&lt;p&gt;In this work, we give the first construction of a task achievable with the
+CDP notion but not the SDP notion. More specifically, under strong but
+plausible cryptographic assumptions, we construct a task for which there exists
+an $\varepsilon$-CDP mechanism with $\varepsilon = O(1)$ achieving $1-o(1)$
+utility, but any $(\varepsilon, \delta)$-SDP mechanism, including
+computationally unbounded ones, that achieves a constant utility must use
+either a super-constant $\varepsilon$ or a non-negligible $\delta$. To prove
+this, we introduce a new approach for showing that a mechanism satisfies CDP:
+first we show that a mechanism is &quot;private&quot; against a certain class of decision
+tree adversaries, and then we use cryptographic constructions to &quot;lift&quot; this
+into privacy against computational adversaries. We believe this approach could
+be useful to devise further tasks separating CDP from SDP.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Power of Decision Trees with Monotone Queries</title>
+    <link href="http://arxiv.org/abs/2301.00136"/>
+    <id>http://arxiv.org/abs/2301.00136</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Amireddy_P/0/1/0/all/0/1&quot;&gt;Prashanth Amireddy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jayasurya_S/0/1/0/all/0/1&quot;&gt;Sai Jayasurya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sarma_J/0/1/0/all/0/1&quot;&gt;Jayalal Sarma&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we initiate study of the computational power of adaptive and
+non-adaptive monotone decision trees - decision trees where each query is a
+monotone function on the input bits. In the most general setting, the monotone
+decision tree height (or size) can be viewed as a measure of non-monotonicity
+of a given Boolean function. We also study the restriction of the model by
+restricting (in terms of circuit complexity) the monotone functions that can be
+queried at each node. This naturally leads to complexity classes of the form
+DT(mon-C) for any circuit complexity class C, where the height of the tree is
+O(log n), and the query functions can be computed by monotone circuits in the
+class C. In the above context, we prove the following characterizations and
+bounds.
+&lt;/p&gt;
+&lt;p&gt;For any Boolean function f, we show that the minimum monotone decision tree
+height can be exactly characterized (both in the adaptive and non-adaptive
+versions of the model) in terms of its alternation (alt(f) is defined as the
+maximum number of times that the function value changes, in any chain in the
+Boolean lattice). We also characterize the non-adaptive decision tree height
+with a natural generalization of certification complexity of a function.
+Similarly, we determine the complexity of non-deterministic and randomized
+variants of monotone decision trees in terms of alt(f).
+&lt;/p&gt;
+&lt;p&gt;We show that DT(mon-C) = C when C contains monotone circuits for the
+threshold functions (for e.g., if C = TC0). For C = AC0, we are able to show
+that any function in AC0 can be computed by a sub-linear height monotone
+decision tree with queries having monotone AC0 circuits. To understand the
+logarithmic height case in case of AC0 i.e., DT(mon-AC0), we show that
+functions in DT(mon-AC0) have AC0 circuits with few negation gates.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Matching upper bounds on symmetric predicates in quantum communication complexity</title>
+    <link href="http://arxiv.org/abs/2301.00370"/>
+    <id>http://arxiv.org/abs/2301.00370</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Suruga_D/0/1/0/all/0/1&quot;&gt;Daiki Suruga&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we focus on the quantum communication complexity of functions
+of the form $f \circ G = f(G(X_1, Y_1), \ldots, G(X_n, Y_n))$ where $f: \{0,
+1\}^n \to \{0, 1\}$ is a symmetric function, $G: \{0, 1\}^j \times \{0, 1\}^k
+\to \{0, 1\}$ is any function and Alice (resp. Bob) is given $(X_i)_{i \leq n}$
+(resp. $(Y_i)_{i \leq n}$). Recently, Chakraborty et al. [STACS 2022] showed
+that the quantum communication complexity of $f \circ G$ is
+$O(Q(f)\mathrm{QCC}_\mathrm{E}(G))$ when the parties are allowed to use shared
+entanglement, where $Q(f)$ is the query complexity of $f$ and
+$\mathrm{QCC}_\mathrm{E}(G)$ is the exact communication complexity of $G$. In
+this paper, we first show that the same statement holds \emph{without shared
+entanglement}, which generalizes their result. Based on the improved result, we
+next show tight upper bounds on $f \circ \mathrm{AND}_2$ for any symmetric
+function $f$ (where $\textrm{AND}_2 : \{0, 1\} \times \{0, 1\} \to \{0, 1\}$
+denotes the 2-bit AND function) in both models: with shared entanglement and
+without shared entanglement. This matches the well-known lower bound by
+Razborov~[Izv. Math. 67(1) 145, 2003] when shared entanglement is allowed and
+improves Razborov&#39;s bound when shared entanglement is not allowed.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Improved NP-Hardness of Approximation for Orthogonality Dimension and Minrank</title>
+    <link href="http://arxiv.org/abs/2301.00732"/>
+    <id>http://arxiv.org/abs/2301.00732</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chawin_D/0/1/0/all/0/1&quot;&gt;Dror Chawin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Haviv_I/0/1/0/all/0/1&quot;&gt;Ishay Haviv&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The orthogonality dimension of a graph $G$ over $\mathbb{R}$ is the smallest
+integer $k$ for which one can assign a nonzero $k$-dimensional real vector to
+each vertex of $G$, such that every two adjacent vertices receive orthogonal
+vectors. We prove that for every sufficiently large integer $k$, it is
+$\mathsf{NP}$-hard to decide whether the orthogonality dimension of a given
+graph over $\mathbb{R}$ is at most $k$ or at least $2^{(1-o(1)) \cdot k/2}$. We
+further prove such hardness results for the orthogonality dimension over finite
+fields as well as for the closely related minrank parameter, which is motivated
+by the index coding problem in information theory. This in particular implies
+that it is $\mathsf{NP}$-hard to approximate these graph quantities to within
+any constant factor. Previously, the hardness of approximation was known to
+hold either assuming certain variants of the Unique Games Conjecture or for
+approximation factors smaller than $3/2$. The proofs involve the concept of
+line digraphs and bounds on their orthogonality dimension and on the minrank of
+their complement.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: On the Complexity of Sub-Tree Scheduling for Wireless Sensor Networks with Partial Coverage</title>
+    <link href="http://arxiv.org/abs/2301.00739"/>
+    <id>http://arxiv.org/abs/2301.00739</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Barbato_M/0/1/0/all/0/1&quot;&gt;Michele Barbato&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bianchessi_N/0/1/0/all/0/1&quot;&gt;Nicola Bianchessi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given an undirected graph $G$ whose edge weights change over $s$ time slots,
+the sub-tree scheduling for wireless sensor networks with partial coverage asks
+to partition the vertices of $G$ in $s$ non-empty trees such that the total
+weight of the trees is minimized. In this note we show that the problem is
+NP-hard in both the cases where $s$ $(i)$ is part of the input and $(ii)$ is a
+fixed instance parameter. In both our proofs we reduce from the cardinality
+Steiner tree problem. We additionally give polynomial-time algorithms for
+structured inputs of the problem.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: The characterization of $\mathbf{(n-1)}$-spheres with $\mathbf{n+4}$ vertices having maximal Buchstaber number</title>
+    <link href="http://arxiv.org/abs/2301.00806"/>
+    <id>http://arxiv.org/abs/2301.00806</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Choi_S/0/1/0/all/0/1&quot;&gt;Suyoung Choi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Jang_H/0/1/0/all/0/1&quot;&gt;Hyeontae Jang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Vallee_M/0/1/0/all/0/1&quot;&gt;Mathieu Vall&amp;#xe9;e&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a GPU-friendly algorithm for obtaining all weak pseudo-manifolds
+whose facets are all in an input set of facets satisfying given conditions. We
+use it here to completely list up toric colorable seed PL-spheres with a few
+vertices implying the complete characterization of PL-spheres of dimension
+$n-1$ with $n+4$ vertices having maximal Buchstaber numbers.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Matrix Multiplication: Verifying Strong Uniquely Solvable Puzzles</title>
+    <link href="http://arxiv.org/abs/2301.00074"/>
+    <id>http://arxiv.org/abs/2301.00074</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Anderson_M/0/1/0/all/0/1&quot;&gt;Matthew Anderson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ji_Z/0/1/0/all/0/1&quot;&gt;Zongliang Ji&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xu_A/0/1/0/all/0/1&quot;&gt;Anthony Yang Xu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Cohn and Umans proposed a framework for developing fast matrix multiplication
+algorithms based on the embedding computation in certain groups algebras. In
+subsequent work with Kleinberg and Szegedy, they connected this to the search
+for combinatorial objects called strong uniquely solvable puzzles (strong
+USPs). We begin a systematic computer-aided search for these objects. We
+develop and implement constraint-based algorithms build on reductions to
+$\mathrm{SAT}$ and $\mathrm{IP}$ to verify that puzzles are strong USPs, and to
+search for large strong USPs. We produce tight bounds on the maximum size of a
+strong USP for width $k \le 5$, construct puzzles of small width that are
+larger than previous work, and improve the upper bounds on strong USP size for
+$k \le 12$. Although our work only deals with puzzles of small-constant width,
+the strong USPs we find imply matrix multiplication algorithms that run in
+$O(n^\omega)$ time with exponent $\omega \le 2.66$. While our algorithms do not
+beat the fastest algorithms, our work provides evidence and, perhaps, a path to
+finding families of strong USPs that imply matrix multiplication algorithms
+that are more efficient than those currently known.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Isometric path antichain covers: beyond hyperbolic graphs</title>
+    <link href="http://arxiv.org/abs/2301.00278"/>
+    <id>http://arxiv.org/abs/2301.00278</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Chakraborty_D/0/1/0/all/0/1&quot;&gt;Dibyayan Chakraborty&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Foucaud_F/0/1/0/all/0/1&quot;&gt;Florent Foucaud&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The \emph{isometric path antichain cover number} of a graph $G$, denoted by
+$ipacc(G)$, is a graph parameter that was recently introduced to provide a
+constant factor approximation algorithm for \textsc{Isometric Path Cover},
+whose objective is to cover all vertices of a graph with a minimum number of
+isometric paths (i.e. shortest paths between their end-vertices). This
+parameter was previously shown to be bounded for chordal graphs and, more
+generally, for graphs of bounded \emph{chordality} and bounded
+\emph{treelength}. In this paper, we show that the isometric path antichain
+cover number remains bounded for graphs in three seemingly unrelated graph
+classes, namely, \emph{hyperbolic graphs}, \emph{(theta, prism, pyramid)-free
+graphs}, and \emph{outerstring graphs}. Hyperbolic graphs are extensively
+studied in \emph{Metric Graph Theory}. The class of (theta, prism,
+pyramid)-free graphs are extensively studied in \emph{Structural Graph Theory},
+\textit{e.g.} in the context of the \emph{Strong Perfect Graph Theorem}. The
+class of outerstring graphs is studied in \emph{Geometric Graph Theory} and
+\emph{Computational Geometry}. Our results imply a constant factor
+approximation algorithm for \textsc{Isometric Path Cover} on all the above
+graph classes. Our results also show that the distance functions of these
+(structurally) different graph classes are more similar than previously
+thought.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Targeted k-node Collapse Problem: Towards Understanding the Robustness of Local k-core Structure</title>
+    <link href="http://arxiv.org/abs/2301.00108"/>
+    <id>http://arxiv.org/abs/2301.00108</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lv_Y/0/1/0/all/0/1&quot;&gt;Yuqian Lv&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_B/0/1/0/all/0/1&quot;&gt;Bo Zhou&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_J/0/1/0/all/0/1&quot;&gt;Jinhuan Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xuan_Q/0/1/0/all/0/1&quot;&gt;Qi Xuan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The concept of k-core, which indicates the largest induced subgraph where
+each node has k or more neighbors, plays a significant role in measuring the
+cohesiveness and the engagement of a network, and it is exploited in diverse
+applications, e.g., network analysis, anomaly detection, community detection,
+etc. Recent works have demonstrated the vulnerability of k-core under malicious
+perturbations which focuses on removing the minimal number of edges to make a
+whole k-core structure collapse. However, to the best of our knowledge, there
+is no existing research concentrating on how many edges should be removed at
+least to make an arbitrary node in k-core collapse. Therefore, in this paper,
+we make the first attempt to study the Targeted k-node Collapse Problem (TNCP)
+with four novel contributions. Firstly, we offer the general definition of TNCP
+problem with the proof of its NP-hardness. Secondly, in order to address the
+TNCP problem, we propose a heuristic algorithm named TNC and its improved
+version named ATNC for implementations on large-scale networks. After that, the
+experiments on 16 real-world networks across various domains verify the
+superiority of our proposed algorithms over 4 baseline methods along with
+detailed comparisons and analyses. Finally, the significance of TNCP problem
+for precisely evaluating the resilience of k-core structures in networks is
+validated.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Optimization Perspectives on Shellsort</title>
+    <link href="http://arxiv.org/abs/2301.00316"/>
+    <id>http://arxiv.org/abs/2301.00316</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Skean_O/0/1/0/all/0/1&quot;&gt;Oscar Skean&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ehrenborg_R/0/1/0/all/0/1&quot;&gt;Richard Ehrenborg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jaromczyk_J/0/1/0/all/0/1&quot;&gt;Jerzy W. Jaromczyk&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Shellsort is a sorting method that is attractive due to its simplicity, yet
+it takes effort to analyze its efficiency. The heart of the algorithm is the
+gap sequence chosen a priori and used during sorting. The selection of this gap
+sequence affects the efficiency of Shellsort, and thus drives both its
+theoretical and experimental analysis. We contribute to Shellsort by
+identifying efficient gap sequences based on new parameterized functions.
+Specifically, a parameter grid-search identifies optimal parameters for
+different input sizes for sorting by observing minimal overhead in three
+categories: number of comparisons, number of exchanges, and running time. We
+report that our method finds sequences that outperform state-of-the-art gap
+sequences concerning the number of comparisons for chosen small array sizes.
+Additionally, our function-based sequences outperform the running time of the
+Tokuda sequence for chosen large array sizes. However, no substantial
+improvements were observed when minimizing the number of exchanges.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Correlation Clustering Algorithm for Dynamic Complete Signed Graphs: An Index-based Approach</title>
+    <link href="http://arxiv.org/abs/2301.00384"/>
+    <id>http://arxiv.org/abs/2301.00384</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shakiba_A/0/1/0/all/0/1&quot;&gt;Ali Shakiba&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we reduce the complexity of approximating the correlation
+clustering problem from $O(m\times\left( 2+ \alpha (G) \right)+n)$ to $O(m+n)$
+for any given value of $\varepsilon$ for a complete signed graph with $n$
+vertices and $m$ positive edges where $\alpha(G)$ is the arboricity of the
+graph. Our approach gives the same output as the original algorithm and makes
+it possible to implement the algorithm in a full dynamic setting where edge
+sign flipping and vertex addition/removal are allowed. Constructing this index
+costs $O(m)$ memory and $O(m\times\alpha(G))$ time. We also studied the
+structural properties of the non-agreement measure used in the approximation
+algorithm. The theoretical results are accompanied by a full set of experiments
+concerning seven real-world graphs. These results shows superiority of our
+index-based algorithm to the non-index one by a decrease of %34 in time on
+average.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Exactly Hittable Interval Graphs</title>
+    <link href="http://arxiv.org/abs/2301.00387"/>
+    <id>http://arxiv.org/abs/2301.00387</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dhannya_S/0/1/0/all/0/1&quot;&gt;S.M. Dhannya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Narayanaswamy_N/0/1/0/all/0/1&quot;&gt;N.S. Narayanaswamy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nisha_K/0/1/0/all/0/1&quot;&gt;K.K. Nisha&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given a set system $\mathcal{X} = \{\mathcal{U},\mathcal{S}\}$, where
+$\mathcal{U}$ is a set of elements and $\mathcal{S}$ is a set of subsets of
+$\mathcal{U}$, an exact hitting set $\mathcal{U}&#39;$ is a subset of $\mathcal{U}$
+such that each subset in $\mathcal{S}$ contains exactly one element in
+$\mathcal{U}&#39;$. We refer to a set system as exactly hittable if it has an exact
+hitting set. In this paper, we study interval graphs which have intersection
+models that are exactly hittable. We refer to these interval graphs as exactly
+hittable interval graphs (EHIG). We present a forbidden structure
+characterization for EHIG. We also show that the class of proper interval
+graphs is a strict subclass of EHIG. Finally, we give an algorithm that runs in
+polynomial time to recognize graphs belonging to the class of EHIG.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: ReSQueing Parallel and Private Stochastic Convex Optimization</title>
+    <link href="http://arxiv.org/abs/2301.00457"/>
+    <id>http://arxiv.org/abs/2301.00457</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Carmon_Y/0/1/0/all/0/1&quot;&gt;Yair Carmon&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Jambulapati_A/0/1/0/all/0/1&quot;&gt;Arun Jambulapati&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Jin_Y/0/1/0/all/0/1&quot;&gt;Yujia Jin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lee_Y/0/1/0/all/0/1&quot;&gt;Yin Tat Lee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Liu_D/0/1/0/all/0/1&quot;&gt;Daogao Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Sidford_A/0/1/0/all/0/1&quot;&gt;Aaron Sidford&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Tian_K/0/1/0/all/0/1&quot;&gt;Kevin Tian&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce a new tool for stochastic convex optimization (SCO): a
+Reweighted Stochastic Query (ReSQue) estimator for the gradient of a function
+convolved with a (Gaussian) probability density. Combining ReSQue with recent
+advances in ball oracle acceleration [CJJJLST20, ACJJS21], we develop
+algorithms achieving state-of-the-art complexities for SCO in parallel and
+private settings. For a SCO objective constrained to the unit ball in
+$\mathbb{R}^d$, we obtain the following results (up to polylogarithmic
+factors). We give a parallel algorithm obtaining optimization error
+$\epsilon_{\text{opt}}$ with $d^{1/3}\epsilon_{\text{opt}}^{-2/3}$ gradient
+oracle query depth and $d^{1/3}\epsilon_{\text{opt}}^{-2/3} +
+\epsilon_{\text{opt}}^{-2}$ gradient queries in total, assuming access to a
+bounded-variance stochastic gradient estimator. For $\epsilon_{\text{opt}} \in
+[d^{-1}, d^{-1/4}]$, our algorithm matches the state-of-the-art oracle depth of
+[BJLLS19] while maintaining the optimal total work of stochastic gradient
+descent. We give an $(\epsilon_{\text{dp}}, \delta)$-differentially private
+algorithm which, given $n$ samples of Lipschitz loss functions, obtains
+near-optimal optimization error and makes $\min(n, n^2\epsilon_{\text{dp}}^2
+d^{-1}) + \min(n^{4/3}\epsilon_{\text{dp}}^{1/3},
+(nd)^{2/3}\epsilon_{\text{dp}}^{-1})$ queries to the gradients of these
+functions. In the regime $d \le n \epsilon_{\text{dp}}^{2}$, where privacy
+comes at no cost in terms of the optimal loss up to constants, our algorithm
+uses $n + (nd)^{2/3}\epsilon_{\text{dp}}^{-1}$ queries and improves recent
+advancements of [KLL21, AFKT21]. In the moderately low-dimensional setting $d
+\le \sqrt n \epsilon_{\text{dp}}^{3/2}$, our query complexity is near-linear.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Inferring multiple consensus trees and supertrees using clustering: a review</title>
+    <link href="http://arxiv.org/abs/2301.00483"/>
+    <id>http://arxiv.org/abs/2301.00483</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/q-bio/1/au:+Makarenkov_V/0/1/0/all/0/1&quot;&gt;Vladimir Makarenkov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/q-bio/1/au:+Barseghyan_G/0/1/0/all/0/1&quot;&gt;Gayane S. Barseghyan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/q-bio/1/au:+Tahiri_N/0/1/0/all/0/1&quot;&gt;Nadia Tahiri&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Phylogenetic trees (i.e. evolutionary trees, additive trees or X-trees) play
+a key role in the processes of modeling and representing species evolution.
+Genome evolution of a given group of species is usually modeled by a species
+phylogenetic tree that represents the main patterns of vertical descent.
+However, the evolution of each gene is unique. It can be represented by its own
+gene tree which can differ substantially from a general species tree
+representation. Consensus trees and supertrees have been widely used in
+evolutionary studies to combine phylogenetic information contained in
+individual gene trees. Nevertheless, if the available gene trees are quite
+different from each other, then the resulting consensus tree or supertree can
+either include many unresolved subtrees corresponding to internal nodes of high
+degree or can simply be a star tree. This may happen if the available gene
+trees have been affected by different reticulate evolutionary events, such as
+horizontal gene transfer, hybridization or genetic recombination. Thus, the
+problem of inferring multiple alternative consensus trees or supertrees, using
+clustering, becomes relevant since it allows one to regroup in different
+clusters gene trees having similar evolutionary patterns (e.g. gene trees
+representing genes that have undergone the same horizontal gene transfer or
+recombination events). We critically review recent advances and methods in the
+field of phylogenetic tree clustering, discuss the methods&#39; mathematical
+properties, and describe the main advantages and limitations of multiple
+consensus tree and supertree approaches. In the application section, we show
+how the multiple supertree clustering approach can be used to cluster aaRS gene
+trees according to their evolutionary patterns.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Algorithms for Massive Data -- Lecture Notes</title>
+    <link href="http://arxiv.org/abs/2301.00754"/>
+    <id>http://arxiv.org/abs/2301.00754</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Prezza_N/0/1/0/all/0/1&quot;&gt;Nicola Prezza&lt;/a&gt;&lt;/p&gt;&lt;p&gt;These are the lecture notes for the course CM0622 - Algorithms for Massive
+Data, Ca&#39; Foscari University of Venice. The goal of this course is to introduce
+algorithmic techniques for dealing with massive data: data so large that it
+does not fit in the computer&#39;s memory. Broadly speaking, there are two main
+solutions to deal with massive data: (lossless) compressed data structures and
+(lossy) data sketches. These notes cover the latter topic: probabilistic
+filters, sketching under various metrics, Locality Sensitive Hashing, nearest
+neighbour search, algorithms on streams (pattern matching, counting).
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Parameterized Lower Bounds for Problems in P via Fine-Grained Cross-Compositions</title>
+    <link href="http://arxiv.org/abs/2301.00797"/>
+    <id>http://arxiv.org/abs/2301.00797</id>
+    <updated>2023-01-03T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Heeger_K/0/1/0/all/0/1&quot;&gt;Klaus Heeger&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nichterlein_A/0/1/0/all/0/1&quot;&gt;Andr&amp;#xe9; Nichterlein&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Niedermeier_R/0/1/0/all/0/1&quot;&gt;Rolf Niedermeier&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a general framework to exclude parameterized running times of the
+form $O(\ell^\beta+ n^\gamma)$ for problems that have polynomial running time
+lower bounds under hypotheses from fine-grained complexity. Our framework is
+based on cross-compositions from parameterized complexity. We (conditionally)
+exclude running times of the form $O(\ell^{{\gamma}/{(\gamma-1)} - \epsilon} +
+n^\gamma)$ for any $1&amp;lt;\gamma&amp;lt;2$ and $\epsilon&amp;gt;0$ for the following problems:
+&lt;/p&gt;
+&lt;p&gt;- Longest Common Subsequence: Given two length-$n$ strings and
+$\ell\in\mathbb{N}$, is there a common subsequence of length $\ell$?
+&lt;/p&gt;
+&lt;p&gt;- Discrete Fr\&#39;echet Distance: Given two lists of $n$ points each and $k\in
+\mathbb{N}$, is the Fr\&#39;echet distance of the lists at most $k$? Here $\ell$ is
+the maximum number of points which one list is ahead of the other list in an
+optimum traversal.
+&lt;/p&gt;
+&lt;p&gt;Moreover, we exclude running times $O(\ell^{{2\gamma}/{(\gamma -1)}-\epsilon}
++ n^\gamma)$ for any $1&amp;lt;\gamma&amp;lt;3$ and $\epsilon&amp;gt;0$ for:
+&lt;/p&gt;
+&lt;p&gt;- Negative Triangle: Given an edge-weighted graph with $n$ vertices, is there
+a triangle whose sum of edge-weights is negative? Here $\ell$ is the order of a
+maximum connected component.
+&lt;/p&gt;
+&lt;p&gt;- Triangle Collection: Given a vertex-colored graph with $n$ vertices, is
+there for each triple of colors a triangle whose vertices have these three
+colors? Here $\ell$ is the order of a maximum connected component.
+&lt;/p&gt;
+&lt;p&gt;- 2nd Shortest Path: Given an $n$-vertex edge-weighted directed graph, two
+vertices $s$ and $t$, and $k \in \mathbb{N}$, has the second longest
+$s$-$t$-path length at most $k$? Here $\ell$ is the directed feedback vertex
+set.
+&lt;/p&gt;
+&lt;p&gt;Except for 2nd Shortest Path all these running time bounds are tight, that
+is, algorithms with running time $O(\ell^{{\gamma}/{(\gamma-1)}} + n^\gamma )$
+for any $1 &amp;lt; \gamma &amp;lt; 2$ and $O(\ell^{{2\gamma}/{(\gamma -1)}} + n^\gamma)$ for
+any $1 &amp;lt; \gamma &amp;lt; 3$, respectively, are known.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Partial Degeneration of Tensors</title>
     <link href="http://arxiv.org/abs/2212.14095"/>
     <id>http://arxiv.org/abs/2212.14095</id>
@@ -1203,477 +1722,6 @@ Email: mahdich@umich.edu&lt;/p&gt;
     <author>
       <name>Decentralized Thoughts</name>
       <uri>https://decentralizedthoughts.github.io</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: On the Complexity of Generalized Discrete Logarithm Problem</title>
-    <link href="http://arxiv.org/abs/2212.12577"/>
-    <id>http://arxiv.org/abs/2212.12577</id>
-    <updated>2022-12-27T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Unsal_C/0/1/0/all/0/1&quot;&gt;Cem M Unsal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Topaloglu_R/0/1/0/all/0/1&quot;&gt;Rasit Onur Topaloglu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Generalized Discrete Logarithm Problem (GDLP) is an extension of the Discrete
-Logarithm Problem where the goal is to find $x\in\mathbb{Z}_s$ such $g^x\mod
-s=y$ for a given $g,y\in\mathbb{Z}_s$. Generalized discrete logarithm is
-similar but instead of a single base element, uses a number of base elements
-which does not necessarily commute with each other. In this paper, we prove
-that GDLP is NP-hard for symmetric groups. Furthermore, we prove that GDLP
-remains NP-hard even when the base elements are permutations of at most 3
-elements. Lastly, we discuss the implications and possible implications of our
-proofs in classical and quantum complexity theory.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Computational Complexity of Minimal Trap Spaces in Boolean Networks</title>
-    <link href="http://arxiv.org/abs/2212.12756"/>
-    <id>http://arxiv.org/abs/2212.12756</id>
-    <updated>2022-12-27T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moon_K/0/1/0/all/0/1&quot;&gt;Kyungduk Moon&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lee_K/0/1/0/all/0/1&quot;&gt;Kangbok Lee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pauleve_L/0/1/0/all/0/1&quot;&gt;Lo&amp;#xef;c Paulev&amp;#xe9;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Trap spaces of a Boolean network (BN) are the sub-hypercubes closed by the
-function of the BN. A trap space is minimal if it does not contain any smaller
-trap space. Minimal trap spaces have applications for the analysis of dynamic
-attractors of BNs with various update modes. This paper establishes
-computational complexity results of three decision problems related to minimal
-trap spaces of BNs: the decision of the trap space property of a sub-hypercube,
-the decision of its minimality, and the decision of the belonging of a given
-configuration to a minimal trap space. Under several cases on Boolean function
-specifications, we investigate the computational complexity of each problem. In
-the general case, we demonstrate that the trap space property is coNP-complete,
-and the minimality and the belonging properties are $\Pi_2^{\text P}$-complete.
-The complexities drop by one level in the polynomial hierarchy whenever the
-local functions of the BN are either unate, or are specified using truth-table,
-binary decision diagrams, or double-DNF (Petri net encoding): the trap space
-property can be decided in P, whereas the minimality and the belonging are
-coNP-complete. When the BN is given as its functional graph, all these problems
-can be decided by deterministic polynomial time algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Efficient Graph Reconstruction and Representation Using Augmented Persistence Diagrams</title>
-    <link href="http://arxiv.org/abs/2212.13206"/>
-    <id>http://arxiv.org/abs/2212.13206</id>
-    <updated>2022-12-27T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fasy_B/0/1/0/all/0/1&quot;&gt;Brittany Terese Fasy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Micka_S/0/1/0/all/0/1&quot;&gt;Samuel Micka&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Millman_D/0/1/0/all/0/1&quot;&gt;David L. Millman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schenfisch_A/0/1/0/all/0/1&quot;&gt;Anna Schenfisch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Williams_L/0/1/0/all/0/1&quot;&gt;Lucia Williams&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Persistent homology is a tool that can be employed to summarize the shape of
-data by quantifying homological features. When the data is an object in
-$\mathbb{R}^d$, the (augmented) persistent homology transform ((A)PHT) is a
-family of persistence diagrams, parameterized by directions in the ambient
-space. A recent advance in understanding the PHT used the framework of
-reconstruction in order to find finite a set of directions to faithfully
-represent the shape, a result that is of both theoretical and practical
-interest. In this paper, we improve upon this result and present an improved
-algorithm for graph -- and, more generally one-skeleton -- reconstruction. The
-improvement comes in reconstructing the edges, where we use a radial binary
-(multi-)search. The binary search employed takes advantage of the fact that the
-edges can be ordered radially with respect to a reference plane, a feature
-unique to graphs.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Phylogenetic CSPs are Approximation Resistant</title>
-    <link href="http://arxiv.org/abs/2212.12765"/>
-    <id>http://arxiv.org/abs/2212.12765</id>
-    <updated>2022-12-27T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chatziafratis_V/0/1/0/all/0/1&quot;&gt;Vaggos Chatziafratis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Makarychev_K/0/1/0/all/0/1&quot;&gt;Konstantin Makarychev&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the approximability of a broad class of computational problems --
-originally motivated in evolutionary biology and phylogenetic reconstruction --
-concerning the aggregation of potentially inconsistent (local) information
-about $n$ items of interest, and we present optimal hardness of approximation
-results under the Unique Games Conjecture. The class of problems studied here
-can be described as Constraint Satisfaction Problems (CSPs) over infinite
-domains, where instead of values $\{0,1\}$ or a fixed-size domain, the
-variables can be mapped to any of the $n$ leaves of a phylogenetic tree. The
-topology of the tree then determines whether a given constraint on the
-variables is satisfied or not, and the resulting CSPs are called Phylogenetic
-CSPs. Prominent examples of Phylogenetic CSPs with a long history and
-applications in various disciplines include: Triplet Reconstruction, Quartet
-Reconstruction, Subtree Aggregation (Forbidden or Desired). For example, in
-Triplet Reconstruction, we are given $m$ triplets of the form $ij|k$
-(indicating that ``items $i,j$ are more similar to each other than to $k$&#39;&#39;)
-and we want to construct a hierarchical clustering on the $n$ items, that
-respects the constraints as much as possible. Despite more than four decades of
-research, the basic question of maximizing the number of satisfied constraints
-is not well-understood. The current best approximation is achieved by
-outputting a random tree (for triplets, this achieves a 1/3 approximation). Our
-main result is that every Phylogenetic CSP is approximation resistant, i.e.,
-there is no polynomial-time algorithm that does asymptotically better than a
-(biased) random assignment. This is a generalization of the results in
-Guruswami, Hastad, Manokaran, Raghavendra, and Charikar (2011), who showed that
-ordering CSPs are approximation resistant (e.g., Max Acyclic Subgraph,
-Betweenness).
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Testing Distributions of Huge Objects</title>
-    <link href="http://arxiv.org/abs/2212.12802"/>
-    <id>http://arxiv.org/abs/2212.12802</id>
-    <updated>2022-12-27T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Goldreich_O/0/1/0/all/0/1&quot;&gt;Oded Goldreich&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ron_D/0/1/0/all/0/1&quot;&gt;Dana Ron&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We initiate a study of a new model of property testing that is a hybrid of
-testing properties of distributions and testing properties of strings.
-Specifically, the new model refers to testing properties of distributions, but
-these are distributions over huge objects (i.e., very long strings).
-Accordingly, the model accounts for the total number of local probes into these
-objects (resp., queries to the strings) as well as for the distance between
-objects (resp., strings), and the distance between distributions is defined as
-the earth mover&#39;s distance with respect to the relative Hamming distance
-between strings.
-&lt;/p&gt;
-&lt;p&gt;We study the query complexity of testing in this new model, focusing on three
-directions. First, we try to relate the query complexity of testing properties
-in the new model to the sample complexity of testing these properties in the
-standard distribution testing model. Second, we consider the complexity of
-testing properties that arise naturally in the new model (e.g., distributions
-that capture random variations of fixed strings). Third, we consider the
-complexity of testing properties that were extensively studied in the standard
-distribution testing model: Two such cases are uniform distributions and pairs
-of identical distributions.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Note on Improved Results for One Round Distributed Clique Listing</title>
-    <link href="http://arxiv.org/abs/2212.12843"/>
-    <id>http://arxiv.org/abs/2212.12843</id>
-    <updated>2022-12-27T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_Q/0/1/0/all/0/1&quot;&gt;Quanquan C. Liu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this note, we investigate listing cliques of arbitrary sizes in
-bandwidth-limited, dynamic networks. The problem of detecting and listing
-triangles and cliques was originally studied in great detail by Bonne and
-Censor-Hillel (ICALP 2019). We extend this study to dynamic graphs where more
-than one update may occur as well as resolve an open question posed by Bonne
-and Censor-Hillel (2019). Our algorithms and results are based on some simple
-observations about listing triangles under various settings and we show that we
-can list larger cliques using such facts. Specifically, we show that our
-techniques can be used to solve an open problem posed in the original paper: we
-show that detecting and listing cliques (of any size) can be done using
-$O(1)$-bandwidth after one round of communication under node insertions and
-node/edge deletions. We conclude with an extension of our techniques to obtain
-a small bandwidth $1$-round algorithm for listing cliques when more than one
-node insertion/deletion and/or edge deletion update occurs at any time.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: A Closer Look at Some Recent Proof Compression-Related Claims</title>
-    <link href="http://arxiv.org/abs/2212.12150"/>
-    <id>http://arxiv.org/abs/2212.12150</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chavrimootoo_M/0/1/0/all/0/1&quot;&gt;Michael C. Chavrimootoo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ferland_E/0/1/0/all/0/1&quot;&gt;Ethan Ferland&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gibson_E/0/1/0/all/0/1&quot;&gt;Erin Gibson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wilson_A/0/1/0/all/0/1&quot;&gt;Ashley H. Wilson&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Gordeev and Haeusler [GH19] claim that each tautology $\rho$ of minimal
-propositional logic can be proved with a natural deduction of size polynomial
-in $|\rho|$. This builds on work from Hudelmaier [Hud93] that found a similar
-result for intuitionistic propositional logic, but for which only the height of
-the proof was polynomially bounded, not the overall size. They arrive at this
-result by transforming a proof in Hudelmaier&#39;s sequent calculus into an
-equivalent tree-like proof in Prawitz&#39;s system of natural deduction, and then
-compressing the tree-like proof into an equivalent DAG-like proof in such a way
-that a polynomial bound on the height and foundation implies a polynomial bound
-on the overall size. Our paper, however, observes that this construction was
-performed only on minimal implicational logic, which we show to be weaker than
-the minimal propositional logic for which they claim the result (see Section
-4.2). Simply extending the logic systems used to cover minimal propositional
-logic would not be sufficient to recover the results of the paper, as it would
-entirely disrupt proofs of a number of the theorems that are critical to
-proving the main result. Relying heavily on their aforementioned work, Gordeev
-and Haeusler [GH20] claim to establish NP=PSPACE. The argument centrally
-depends on the polynomial bound on proof size in minimal propositional logic.
-Since we show that that bound has not been correctly established by them, their
-purported proof does not correctly establish NP=PSPACE.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Countably many asymptotic tensor ranks</title>
-    <link href="http://arxiv.org/abs/2212.12219"/>
-    <id>http://arxiv.org/abs/2212.12219</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Blatter_A/0/1/0/all/0/1&quot;&gt;Andreas Blatter&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Draisma_J/0/1/0/all/0/1&quot;&gt;Jan Draisma&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Rupniewski_F/0/1/0/all/0/1&quot;&gt;Filip Rupniewski&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In connection with recent work on gaps in the asymptotic subranks of complex
-tensors the question arose whether the number of nonnegative real numbers that
-arise as the asymptotic subrank of some complex tensor is countable. In this
-short note we settle this question in the affirmative, for all tensor
-invariants that are algebraic in the sense that they are invariant under field
-automorphisms of the complex numbers.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Optimizing the half-gcd algorithm</title>
-    <link href="http://arxiv.org/abs/2212.12389"/>
-    <id>http://arxiv.org/abs/2212.12389</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hoeven_J/0/1/0/all/0/1&quot;&gt;Joris van der Hoeven&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we propose a carefully optimized &quot;half-gcd&quot; algorithm for
-polynomials. We achieve a constant speed-up with respect to previous work for
-the asymptotic time complexity. We also discuss special optimizations that are
-possible when polynomial multiplication is done using radix two FFTs.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Computational Complexity of Flattening Fixed-Angle Orthogonal Chains</title>
-    <link href="http://arxiv.org/abs/2212.12450"/>
-    <id>http://arxiv.org/abs/2212.12450</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Demaine_E/0/1/0/all/0/1&quot;&gt;Erik D. Demaine&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ito_H/0/1/0/all/0/1&quot;&gt;Hiro Ito&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lynch_J/0/1/0/all/0/1&quot;&gt;Jayson Lynch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Uehara_R/0/1/0/all/0/1&quot;&gt;Ryuhei Uehara&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Planar/flat configurations of fixed-angle chains and trees are well studied
-in the context of polymer science, molecular biology, and puzzles. In this
-paper, we focus on a simple type of fixed-angle linkage: every edge has unit
-length (equilateral), and each joint has a fixed angle of $90^\circ$
-(orthogonal) or $180^\circ$ (straight). When the linkage forms a path (open
-chain), it always has a planar configuration, namely the zig-zag which
-alternating the $90^\circ$ angles between left and right turns. But when the
-linkage forms a cycle (closed chain), or is forced to lie in a box of fixed
-size, we prove that the flattening problem -- deciding whether there is a
-planar noncrossing configuration -- is strongly NP-complete.
-&lt;/p&gt;
-&lt;p&gt;Back to open chains, we turn to the Hydrophobic-Hydrophilic (HP) model of
-protein folding, where each vertex is labeled H or P, and the goal is to find a
-folding that maximizes the number of H-H adjacencies. In the well-studied HP
-model, the joint angles are not fixed. We introduce and analyze the fixed-angle
-HP model, which is motivated by real-world proteins. We prove strong
-NP-completeness of finding a planar noncrossing configuration of a fixed-angle
-orthogonal equilateral open chain with the most H--H adjacencies, even if the
-chain has only two H vertices. (Effectively, this lets us force the chain to be
-closed.)
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Natural Way of Solving a Convex Hull Problem</title>
-    <link href="http://arxiv.org/abs/2212.11999"/>
-    <id>http://arxiv.org/abs/2212.11999</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saadati_S/0/1/0/all/0/1&quot;&gt;Sina Saadati&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Razzazi_M/0/1/0/all/0/1&quot;&gt;Mohammadreza Razzazi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this article, a new solution for the convex hull problem has been
-presented. The convex hull is a widely known problem in computational geometry.
-As nature is a rich source of ideas in the field of algorithms, the solution
-has been inspired by nature. A tight elastic band is modeled using agents and
-also nails as points of the problem. By simulating an elastic band with nails
-in an environment, solving the convex hull problem will be possible. The
-algorithm runs in O(t) in which t is the time that an elastic band will get
-fixed.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Circle packing in regular polygons</title>
-    <link href="http://arxiv.org/abs/2212.12287"/>
-    <id>http://arxiv.org/abs/2212.12287</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Amore_P/0/1/0/all/0/1&quot;&gt;Paolo Amore&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the packing of a large number of congruent and non--overlapping
-circles inside a regular polygon. We have devised efficient algorithms that
-allow one to generate configurations of $N$ densely packed circles inside a
-regular polygon and we have carried out intensive numerical experiments
-spanning several polygons (the largest number of sides considered here being
-$16$) and up to $200$ circles ($400$ circles in the special cases of the
-equilateral triangle and the regular hexagon) . Some of the configurations that
-we have found possibly are not global maxima of the packing fraction,
-particularly for $N \gg 1$, due to the great computational complexity of the
-problem, but nonetheless they should provide good lower bounds for the packing
-fraction at a given $N$. This is the first systematic numerical study of
-packing in regular polygons, which previously had only been carried out for the
-equilateral triangle, the square and the circle.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: New Hardness Results for Matching Cut and Disconnected Perfect Matching</title>
-    <link href="http://arxiv.org/abs/2212.12317"/>
-    <id>http://arxiv.org/abs/2212.12317</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Feghali_C/0/1/0/all/0/1&quot;&gt;Carl Feghali&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lucke_F/0/1/0/all/0/1&quot;&gt;Felicia Lucke&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Paulusma_D/0/1/0/all/0/1&quot;&gt;Daniel Paulusma&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Ries_B/0/1/0/all/0/1&quot;&gt;Bernard Ries&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Matching Cut is to decide if a graph has a matching that is also an edge
-cut. The Disconnected Perfect Matching problem is to decide if a graph has a
-perfect matching that contains a matching cut. Both problems are NP-complete
-even for graphs of girth 5. However, it was open if they stay NP-complete for
-graphs of girth at least g, for every fixed $g\geq 6$. We solve both open
-problems by proving that this is indeed the case. Moreover, we give two new
-general hardness constructions, which imply that both problems are NP-complete
-for H-free graphs whenever H contains a connected component with two vertices
-of degree at least 3. Afterwards, we update the state-of-the-art summaries for
-H-free graphs and compare them with the one for Perfect Matching Cut, which is
-to decide if a graph has a perfect matching that is a matching cut.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Practical Algorithms with Guaranteed Approximation Ratio for TTP with Maximum Tour Length Two</title>
-    <link href="http://arxiv.org/abs/2212.12240"/>
-    <id>http://arxiv.org/abs/2212.12240</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhao_J/0/1/0/all/0/1&quot;&gt;Jingyang Zhao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xiao_M/0/1/0/all/0/1&quot;&gt;Mingyu Xiao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Traveling Tournament Problem (TTP) is a hard but interesting sports
-scheduling problem inspired by Major League Baseball, which is to design a
-double round-robin schedule such that each pair of teams plays one game in each
-other&#39;s home venue, minimizing the total distance traveled by all $n$ teams
-($n$ is even). In this paper, we consider TTP-2, i.e., TTP under the constraint
-that at most two consecutive home games or away games are allowed for each
-team. We propose practical algorithms for TTP-2 with improved approximation
-ratios. Due to the different structural properties of the problem, all known
-algorithms for TTP-2 are different for $n/2$ being odd and even, and our
-algorithms are also different for these two cases. For even $n/2$, our
-approximation ratio is $1+3/n$, improving the previous result of $1+4/n$. For
-odd $n/2$, our approximation ratio is $1+5/n$, improving the previous result of
-$3/2+6/n$. In practice, our algorithms are easy to implement. Experiments on
-well-known benchmark sets show that our algorithms beat previously known
-solutions for all instances with an average improvement of $5.66\%$.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Cut-and-solve Algorithm for Virtual Machine Consolidation Problem</title>
-    <link href="http://arxiv.org/abs/2212.12341"/>
-    <id>http://arxiv.org/abs/2212.12341</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Luo_J/0/1/0/all/0/1&quot;&gt;Jiang-Yao Luo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_L/0/1/0/all/0/1&quot;&gt;Liang Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_W/0/1/0/all/0/1&quot;&gt;Wei-Kun Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yuan_J/0/1/0/all/0/1&quot;&gt;Jian-Hua Yuan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dai_Y/0/1/0/all/0/1&quot;&gt;Yu-Hong Dai&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The virtual machine consolidation problem (VMCP) attempts to determine which
-servers to be activated, how to allocate virtual machines (VMs) to the
-activated servers, and how to migrate VMs among servers such that the summation
-of activated, allocation, and migration costs is minimized subject to the
-resource constraints of the servers and other practical constraints. In this
-paper, we first propose a new mixed integer linear programming (MILP)
-formulation for the VMCP. We show that compared with existing formulations, the
-proposed formulation is much more compact in terms of smaller numbers of
-variables or constraints, which makes it suitable for solving large-scale
-problems. We then develop a cut-and-solve (C&amp;amp;S) algorithm, a tree search
-algorithm to efficiently solve the VMCP to optimality. The proposed C&amp;amp;S
-algorithm is based on a novel relaxation of the VMCP that provides a stronger
-lower bound than the natural continuous relaxation of the VMCP, making a
-smaller search tree. By extensive computational experiments, we show that (i)
-the proposed formulation significantly outperforms existing formulations in
-terms of solution efficiency; and (ii) compared with standard MILP solvers, the
-proposed C&amp;amp;S algorithm is much more efficient.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Tight Bounds for Connectivity Problems Parameterized by Cutwidth</title>
-    <link href="http://arxiv.org/abs/2212.12385"/>
-    <id>http://arxiv.org/abs/2212.12385</id>
-    <updated>2022-12-26T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bojikian_N/0/1/0/all/0/1&quot;&gt;Narek Bojikian&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chekan_V/0/1/0/all/0/1&quot;&gt;Vera Chekan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hegerfeld_F/0/1/0/all/0/1&quot;&gt;Falko Hegerfeld&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kratsch_S/0/1/0/all/0/1&quot;&gt;Stefan Kratsch&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work we start the investigation of tight complexity bounds for
-connectivity problems parameterized by cutwidth assuming the Strong
-Exponential-Time Hypothesis (SETH). Van Geffen et al. posed this question for
-odd cycle transversal and feedback vertex set. We answer it for these two and
-four further problems, namely connected vertex cover, connected domintaing set,
-steiner tree, and connected odd cycle transversal. For the latter two problems
-it sufficed to prove lower bounds that match the running time inherited from
-parameterization by treewidth; for the others we provide faster algorithms than
-relative to treewidth and prove matching lower bounds. For upper bounds we
-first extend the idea of Groenland et al.~[STACS~2022] to solve what we call
-coloring-like problem. Such problems are defined by a symmetric matrix $M$ over
-$\mathbb{F}_2$ indexed by a set of colors. The goal is to count the number
-(modulo some prime $p$) of colorings of a graph such that $M$ has a $1$-entry
-if indexed by the colors of the end-points of any edge. We show that this
-problem can be solved faster if $M$ has small rank over $\mathbb{F}_p$. We
-apply this result to get our upper bounds for connected vertex cover and
-connected dominating set. The upper bounds for odd cycle transversal and
-feedback vertex set use a subdivision trick to get below the bounds that matrix
-rank would yield.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
