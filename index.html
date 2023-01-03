@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-01-03T14:30:33Z">Tuesday, January 03 2023, 14:30</time>
+          <time class='timeago' datetime="2023-01-03T15:31:56Z">Tuesday, January 03 2023, 15:31</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,37 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Tuesday, January 03
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://blog.computationalcomplexity.org/2023/01/positional-encoding.html'>Positional Encoding</a></h3>
+        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Given the excitement over ChatGPT, I spent part of the winter recess trying to understand the underlying technology of Transformers. After trying various tutorials, I found the best explanation comes in the original 2017 paper, Attention is All you Need. This is my attempt to figure out positional encoding in transformers with some naive questions. Let me know if I'm completely off base.</p><p>Earlier models like Recurrent Neural Nets and Convolutional NNs worked under the assumption that information close by was more likely to be correlated. Machine learning seems to improve as the models make fewer and fewer assumptions about the data and transformers use positional data with no predisposed favoritism to nearby inputs.</p><p>The attention paper uses the following encoding for positions. Let α(j) = 10000-j/d where d is the dimension of the input embedding, i.e. the number of numbers used to represent each word of the input. We encode position p as d/2 pairs of numbers cos(p α(j)) and sin(p α(j)), for j ranging from 1 to d/2. They chose this function because relative positions are easy to address. We can address a relative position of a fixed k by a linear combination of cos(p α(j)) and sin(p α(j)) using the addition rules of cos and sin.</p><p>cos ((p+k) α(j)) = cos(k α(j)) cos(p α(j))&nbsp; - sin(k α(j)) sin(p α(j))&nbsp;</p><p>sin ((p+k) α(j)) = cos(k α(j)) sin(p α(j))&nbsp; + sin(k α(j)) cos(p α(j))&nbsp;</p><p>The d-dimensional vector of position encodings is added to the input embedding.</p><p>Why is the position encodings added to the input embedding?</p><p>I scoured the Internet and can't seem to find a good reason for this, other than it seems to work. Wouldn't the linear combinations to handle relative positions muddle up the input embedding? Since the input embedding is learned, perhaps some parts of the embedding are made zero or very small so the positional embedding stands out. Why not concatenate the two, have separate inputs for the input embedding and the positions? You wouldn't need to fully double the dimension since you would no longer need to match the dimension of the input encoding.</p><p>Why not use complex numbers?</p><p>I see cos(p α(j)) and sin(p α(j)) and immediately think of them as the real and imaginary parts of ep α(j) i. So why not just do the positional encodings as complex numbers? This paper&nbsp;suggests multiplying ep α(j) i with the input embedding, i.e., the input is embedding into the amplitude and the position by the phase. That makes more sense. You can now multiply by ep α(k) i to get the relative position j+k without effecting the input embedding.</p><p>I don't see a good reason not to use complex numbers for transformers, given that most learning packages and GPUs can handle complex numbers just fine. Even if you don't want to use complex numbers you could multiply the sin and cos versions of the positional encoding instead of adding to achieve a similar effect.</p><p>How about positional encoding for outputs?</p><p>Transformers output words in order but that makes it harder to relate outputs that are far apart. So why not give positional encoding to the outputs. A post-processor could then put the outputs in the correct order. More generally, how about outputting a program that produces the real output? We know transformers can generate code, and this way can handle operations that transformers normally struggle with, like multiplication or sorting.</p><p>By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>Given the excitement over <a href="https://chat.openai.com/chat">ChatGPT</a>, I spent part of the winter recess trying to understand the underlying technology of Transformers. After trying various tutorials, I found the best explanation comes in the original 2017 paper, <a href="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html">Attention is All you Need</a>. This is my attempt to figure out positional encoding in transformers with some naive questions. Let me know if I'm completely off base.</p><p>Earlier models like Recurrent Neural Nets and Convolutional NNs worked under the assumption that information close by was more likely to be correlated. Machine learning seems to improve as the models make fewer and fewer assumptions about the data and transformers use positional data with no predisposed favoritism to nearby inputs.</p><p>The attention paper uses the following encoding for positions. Let α(j) = 10000<sup>-j/d</sup> where d is the dimension of the input embedding, i.e. the number of numbers used to represent each word of the input. We encode position p as d/2 pairs of numbers cos(p α(j)) and sin(p α(j)), for j ranging from 1 to d/2. They chose this function because relative positions are easy to address. We can address a relative position of a fixed k by a linear combination of cos(p α(j)) and sin(p α(j)) using the addition rules of cos and sin.</p><p>cos ((p+k) α(j)) = cos(k α(j)) cos(p α(j))&nbsp; - sin(k α(j)) sin(p α(j))&nbsp;</p><p>sin ((p+k) α(j)) = cos(k α(j)) sin(p α(j))&nbsp; + sin(k α(j)) cos(p α(j))&nbsp;</p><p>The d-dimensional vector of position encodings is added to the input embedding.</p><p><b>Why is the position encodings added to the input embedding?</b></p><p>I scoured the Internet and can't seem to find a good reason for this, other than it seems to work. Wouldn't the linear combinations to handle relative positions muddle up the input embedding? Since the input embedding is learned, perhaps some parts of the embedding are made zero or very small so the positional embedding stands out. Why not concatenate the two, have separate inputs for the input embedding and the positions? You wouldn't need to fully double the dimension since you would no longer need to match the dimension of the input encoding.</p><p><b>Why not use complex numbers?</b></p><p>I see cos(p α(j)) and sin(p α(j)) and immediately think of them as the real and imaginary parts of e<sup>p α(j) i</sup>. So why not just do the positional encodings as complex numbers? <a href="https://arxiv.org/abs/1912.12333">This paper</a>&nbsp;suggests multiplying e<sup>p α(j) i</sup> with the input embedding, i.e., the input is embedding into the amplitude and the position by the phase. That makes more sense. You can now multiply by e<sup>p α(k) i</sup> to get the relative position j+k without effecting the input embedding.</p><p>I don't see a good reason not to use complex numbers for transformers, given that most learning packages and GPUs can handle complex numbers just fine. Even if you don't want to use complex numbers you could multiply the sin and cos versions of the positional encoding instead of adding to achieve a similar effect.</p><p><b>How about positional encoding for outputs?</b></p><p>Transformers output words in order but that makes it harder to relate outputs that are far apart. So why not give positional encoding to the outputs. A post-processor could then put the outputs in the correct order. More generally, how about outputting a program that produces the real output? We know transformers can generate code, and this way can handle operations that transformers normally struggle with, like multiplication or sorting.</p><p class="authors">By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-01-03T14:58:00Z">Tuesday, January 03 2023, 14:58</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3435,37 +3466,6 @@ Email: mahdich@umich.edu</p>
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2022-12-27T22:44:35Z">Tuesday, December 27 2022, 22:44</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://decentralizedthoughts.github.io/2022-12-27-responsiveness-omission/'>Responsiveness under omission failures</a></h3>
-        <p class='tr-article-feed'>from <a href='https://decentralizedthoughts.github.io'>Decentralized Thoughts</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          In this post, we discuss log replication responsiveness in the context of omission failures. We show how to transform the protocol in our previous post to a multi-shot version of Paxos for omission faults. The Byzantine failure case uses similar ideas and is covered in the next post of this...
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          In this post, we discuss log replication responsiveness in the context of omission failures. We show how to transform the protocol in our previous post to a multi-shot version of Paxos for omission faults. The Byzantine failure case uses similar ideas and is covered in the next post of this...
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2022-12-27T13:00:00Z">Tuesday, December 27 2022, 13:00</time>
         </div>
       </div>
     </details>

@@ -9,6 +9,17 @@
 
 
 <item>
+  <title>Positional Encoding</title>
+  <guid>tag:blogger.com,1999:blog-3722233.post-8232746867590633231</guid>
+  <link>http://blog.computationalcomplexity.org/2023/01/positional-encoding.html</link>
+  <description>
+    &lt;p&gt;Given the excitement over &lt;a href=&quot;https://chat.openai.com/chat&quot;&gt;ChatGPT&lt;/a&gt;, I spent part of the winter recess trying to understand the underlying technology of Transformers. After trying various tutorials, I found the best explanation comes in the original 2017 paper, &lt;a href=&quot;https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html&quot;&gt;Attention is All you Need&lt;/a&gt;. This is my attempt to figure out positional encoding in transformers with some naive questions. Let me know if I&#39;m completely off base.&lt;/p&gt;&lt;p&gt;Earlier models like Recurrent Neural Nets and Convolutional NNs worked under the assumption that information close by was more likely to be correlated. Machine learning seems to improve as the models make fewer and fewer assumptions about the data and transformers use positional data with no predisposed favoritism to nearby inputs.&lt;/p&gt;&lt;p&gt;The attention paper uses the following encoding for positions. Let α(j) = 10000&lt;sup&gt;-j/d&lt;/sup&gt; where d is the dimension of the input embedding, i.e. the number of numbers used to represent each word of the input. We encode position p as d/2 pairs of numbers cos(p α(j)) and sin(p α(j)), for j ranging from 1 to d/2. They chose this function because relative positions are easy to address. We can address a relative position of a fixed k by a linear combination of cos(p α(j)) and sin(p α(j)) using the addition rules of cos and sin.&lt;/p&gt;&lt;p&gt;cos ((p+k) α(j)) = cos(k α(j)) cos(p α(j))&amp;nbsp; - sin(k α(j)) sin(p α(j))&amp;nbsp;&lt;/p&gt;&lt;p&gt;sin ((p+k) α(j)) = cos(k α(j)) sin(p α(j))&amp;nbsp; + sin(k α(j)) cos(p α(j))&amp;nbsp;&lt;/p&gt;&lt;p&gt;The d-dimensional vector of position encodings is added to the input embedding.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Why is the position encodings added to the input embedding?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;I scoured the Internet and can&#39;t seem to find a good reason for this, other than it seems to work. Wouldn&#39;t the linear combinations to handle relative positions muddle up the input embedding? Since the input embedding is learned, perhaps some parts of the embedding are made zero or very small so the positional embedding stands out. Why not concatenate the two, have separate inputs for the input embedding and the positions? You wouldn&#39;t need to fully double the dimension since you would no longer need to match the dimension of the input encoding.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Why not use complex numbers?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;I see cos(p α(j)) and sin(p α(j)) and immediately think of them as the real and imaginary parts of e&lt;sup&gt;p α(j) i&lt;/sup&gt;. So why not just do the positional encodings as complex numbers? &lt;a href=&quot;https://arxiv.org/abs/1912.12333&quot;&gt;This paper&lt;/a&gt;&amp;nbsp;suggests multiplying e&lt;sup&gt;p α(j) i&lt;/sup&gt; with the input embedding, i.e., the input is embedding into the amplitude and the position by the phase. That makes more sense. You can now multiply by e&lt;sup&gt;p α(k) i&lt;/sup&gt; to get the relative position j+k without effecting the input embedding.&lt;/p&gt;&lt;p&gt;I don&#39;t see a good reason not to use complex numbers for transformers, given that most learning packages and GPUs can handle complex numbers just fine. Even if you don&#39;t want to use complex numbers you could multiply the sin and cos versions of the positional encoding instead of adding to achieve a similar effect.&lt;/p&gt;&lt;p&gt;&lt;b&gt;How about positional encoding for outputs?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Transformers output words in order but that makes it harder to relate outputs that are far apart. So why not give positional encoding to the outputs. A post-processor could then put the outputs in the correct order. More generally, how about outputting a program that produces the real output? We know transformers can generate code, and this way can handle operations that transformers normally struggle with, like multiplication or sorting.&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-03 14:58:00 UTC</pubDate>
+  <author>Computational Complexity</author>
+</item>
+
+<item>
   <title>NSF Program Director opening in Algorithmic Foundations</title>
   <guid>http://thmatters.wordpress.com/?p=1386</guid>
   <link>https://thmatters.wordpress.com/2023/01/02/nsf-program-director-opening-in-algorithmic-foundations-2/</link>
@@ -1517,17 +1528,6 @@ Email: mahdich@umich.edu&lt;/p&gt;
   </description>
   <pubDate>2022-12-27 22:44:35 UTC</pubDate>
   <author>CCI: jobs</author>
-</item>
-
-<item>
-  <title>Responsiveness under omission failures</title>
-  <guid>https://decentralizedthoughts.github.io/2022-12-27-responsiveness-omission/</guid>
-  <link>https://decentralizedthoughts.github.io/2022-12-27-responsiveness-omission/</link>
-  <description>
-    In this post, we discuss log replication responsiveness in the context of omission failures. We show how to transform the protocol in our previous post to a multi-shot version of Paxos for omission faults. The Byzantine failure case uses similar ideas and is covered in the next post of this...
-  </description>
-  <pubDate>2022-12-27 13:00:00 UTC</pubDate>
-  <author>Decentralized Thoughts</author>
 </item>
 
 </channel>
