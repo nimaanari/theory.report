@@ -10,6 +10,202 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Windows on Theory: Memento and Large Language Models</title>
+    <link href="https://windowsontheory.org/2023/01/03/memento-and-large-language-models/"/>
+    <id>http://windowsontheory.org/?p=8493</id>
+    <updated>2023-01-03T18:00:13+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;&lt;em&gt;[Mild spoilers for the 2000 film &lt;a href=&quot;https://en.wikipedia.org/wiki/Memento_(film)&quot;&gt;Memento&lt;/a&gt;. See &lt;a href=&quot;https://docs.google.com/document/d/1-yNQgFiEjY_Q0llmN9LUt4HKD_Ag5xHTFWqb-Idqyiw/edit?usp=sharing&quot;&gt;this doc&lt;/a&gt; for the full ChatGPT transcripts. &amp;#8211;Boaz]&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Leonard Shelbey, the protagonist of Christopher Nolan&amp;#8217;s film &amp;#8220;&lt;a href=&quot;https://www.imdb.com/title/tt0209144/&quot;&gt;Memento&lt;/a&gt;&amp;#8220;, suffers from &lt;a href=&quot;https://en.wikipedia.org/wiki/Anterograde_amnesia&quot;&gt;anterograde amnesia&lt;/a&gt;. He remembers everything up to the time in which he was the victim of a violent attack, but cannot form new memories after that. He uses notes, polaroid photos, and tattoos to communicate the most important facts to his future self. (See also Suzanne Corkin&amp;#8217;s book &lt;a href=&quot;https://www.amazon.com/Permanent-Present-Tense-Unforgettable-Amnesic/dp/0465031595&quot;&gt;&amp;#8220;Permanent Present Tense&amp;#8221;&lt;/a&gt; for the real-life story of &amp;#8220;Patient H.M.&amp;#8221; &amp;#8211; Henry Molaison &amp;#8211; who suffered from anterograde and retrograde amnesia.)&lt;/p&gt;
+
+
+
+&lt;p&gt;Large language models such as the one powering &lt;a href=&quot;https://openai.com/blog/chatgpt/&quot;&gt;ChatGPT&lt;/a&gt; can be thought of as suffering from a similar affliction. They remember everything up to the point at which their training stopped. After that, in inference, they can get X tokens (which roughly correspond to 0.75X words) and produce Y tokens as output, with X+Y ≤ 2048. In particular, this means that they can only remember a very short context of less than 2000 words, and cannot recall it after it&amp;#8217;s done.&lt;/p&gt;
+
+
+
+&lt;p&gt;For example, if we ask ChatGPT to describe an event that happened after its training ended in 2021, it will either refuse or simply &amp;#8220;fib&amp;#8221;, as it does when given the query:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Q: &lt;/strong&gt;Write a poem about the World Cup final game in Qatar&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT: &lt;/strong&gt; &lt;br&gt;In Qatar, the final game&lt;br&gt;Of the World Cup takes place&lt;br&gt;The best teams from around the world&lt;br&gt;Come face to face&lt;/p&gt;
+
+
+
+&lt;p&gt;The heat is on, the tension high&lt;br&gt;As players take the field&lt;br&gt;A nation&amp;#8217;s pride is on the line&lt;br&gt;Their fate, to be revealed&lt;/p&gt;
+
+
+
+&lt;p&gt;The crowd is wild, the atmosphere electric&lt;br&gt;As the ball is kicked to start&lt;br&gt;Two teams, determined to emerge victorious&lt;br&gt;With all their skill and heart&lt;/p&gt;
+
+
+
+&lt;p&gt;The game is fast, the play intense&lt;br&gt;As goals are scored, and missed&lt;br&gt;But in the end, there can be only one&lt;br&gt;The victor&amp;#8217;s flag, is kissed&lt;/p&gt;
+
+
+
+&lt;p&gt;The World Cup final, a momentous occasion&lt;br&gt;A spectacle for all to see&lt;br&gt;A celebration of the beautiful game&lt;br&gt;In Qatar, so grand and grandiose&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;ChatGPT has no clue what happened in the game, and so just makes it up. However, if we search &amp;#8220;World Cup final game in Qatar&amp;#8221; on Google, the first result is the &lt;a href=&quot;https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_final&quot;&gt;Wikipedia page&lt;/a&gt;. If we ask ChatGPT to summarize it, then it provides us with the following summary:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT:&lt;/strong&gt; The 2022 FIFA World Cup final was a football match played on 18 December 2022 at the Lusail Stadium in Lusail, Qatar, between Argentina and France. Argentina won the match 4-2 in a penalty shootout after the match ended 3-3 after extra time. The match was refereed by Szymon Marciniak from Poland and was attended by 88,966 spectators. Argentina and France had both progressed to the final by finishing first in their respective groups, and then defeating Australia, the Netherlands, Croatia, Poland, England, and Morocco in the subsequent knockout rounds. The final was marked by goals from Lionel Messi and Ángel Di María for Argentina, and a hat-trick from Kylian Mbappé for France.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;We can now use this summary as a &amp;#8220;memento&amp;#8221; for the model, making the query: &amp;#8220;&lt;strong&gt;Background: (the summary above) Task:  Write a poem about the World Cup final game in Qatar&lt;/strong&gt;&amp;#8220;. &lt;/p&gt;
+
+
+
+&lt;p&gt;Now the response is much more informative&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT:&lt;/strong&gt;&lt;br&gt;The World Cup final in Qatar,&lt;br&gt;A match that will surely inspire.&lt;br&gt;Argentina and France,&lt;br&gt;Two nations that dance,&lt;br&gt;On the pitch they&amp;#8217;ll set the world on fire.&lt;br&gt;&lt;br&gt;The Lusail Stadium is the stage,&lt;br&gt;Where the best from across the globe convene.&lt;br&gt;The tension is high,&lt;br&gt;As the teams take to the sky,&lt;br&gt;In search of the ultimate dream.&lt;/p&gt;
+
+
+
+&lt;p&gt;Lionel Messi and Ángel Di María,&lt;br&gt;For Argentina they shine.&lt;br&gt;Kylian Mbappé for France,&lt;br&gt;A hat-trick he&amp;#8217;ll advance,&lt;br&gt;In a game that will forever entwine.&lt;/p&gt;
+
+
+
+&lt;p&gt;The final goes to extra time,&lt;br&gt;As the two teams battle neck and neck.&lt;br&gt;But in the end, it&amp;#8217;s Argentina who prevails,&lt;br&gt;In a penalty shootout they won&amp;#8217;t fail,&lt;br&gt;As they lift the trophy, the ultimate check.&lt;/p&gt;
+
+
+
+&lt;p&gt;The World Cup final in Qatar,&lt;br&gt;A memory that will last forever.&lt;br&gt;Argentina the champions,&lt;br&gt;Their talent and their valor,&lt;br&gt;A victory they&amp;#8217;ll always treasure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;The &amp;#8220;amnesia&amp;#8221; suffered by large language models is also manifested by their propensity to output responses that &lt;em&gt;look&lt;strong&gt; &lt;/strong&gt;&lt;/em&gt;correct but are actually wrong.  For example, if we ask ChatGPT the following &amp;#8220;unfair&amp;#8221; question:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Q: &lt;/strong&gt;Prove that there is a finite number of prime numbers&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;Then it dutifully responds as follows:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT: &lt;/strong&gt;There is no known way to prove that there is a finite number of prime numbers, but it is generally believed to be true. This is because the number of prime numbers is not infinite, and in fact, it is thought to be quite small compared to the total number of integers. For example, there are only about 50 prime numbers less than 1000.&lt;/p&gt;
+
+
+
+&lt;p&gt;One reason that it is believed that there are only a finite number of prime numbers is the fact that the prime numbers thin out as you go further along the number line. In other words, the proportion of prime numbers to total numbers decreases as the numbers get larger. For example, there are 25 prime numbers less than 100, but only 21 prime numbers between 100 and 200. This suggests that the number of prime numbers may become negligible as the numbers get very large, and thus there may be only a finite number of prime numbers.&lt;/p&gt;
+
+
+
+&lt;p&gt;Another reason that it is believed that there are only a finite number of prime numbers is the fact that there are many different types of numbers that are not prime, such as composite numbers and perfect numbers. These types of numbers are formed by the multiplication of smaller numbers, and thus it is thought that there must be a point beyond which no more prime numbers can exist.&lt;/p&gt;
+
+
+
+&lt;p&gt;Overall, while it is not possible to prove that there are only a finite number of prime numbers, it is widely believed to be true based on the observed patterns in the distribution of prime numbers and the existence of other types of numbers that are not prime.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;Even though it&amp;#8217;s completely wrong, the paragraph above might look reasonable to an average person with no knowledge about the prime numbers. This is not an isolated incident. Stackoverflow had to &lt;a href=&quot;https://meta.stackoverflow.com/questions/421831/temporary-policy-chatgpt-is-banned&quot;&gt;ban ChatGPT-produced answers&lt;/a&gt; because &amp;#8220;answers which ChatGPT produces have a high rate of being incorrect, [but] they typically look like they might be good.&amp;#8221;&lt;/p&gt;
+
+
+
+&lt;p&gt;However, large language models have one huge advantage over Leonard Shelbey: they can time travel. Specificially, ChatGPT can figure out the questions that are supposedly answered by its response. It can then query these questions to a search engine (e.g. Google) and use the information to come up with better responses. Specifically, in the context of the &amp;#8220;number of primes&amp;#8221; interaction, if we ask ChatGPT to &lt;strong&gt;&lt;em&gt;&amp;#8220;List the questions answered by your response above&amp;#8221;&lt;/em&gt;&lt;/strong&gt; then it responds with the following:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT:&lt;/strong&gt;&lt;br&gt;1. Is there a finite number of prime numbers?&lt;br&gt;2. What evidence suggests that there may be a finite number of prime numbers?&lt;br&gt;3. Why is it believed that there are only a finite number of prime numbers?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;We now plug the three questions into Google, click on the first links (&lt;a href=&quot;https://towardsdatascience.com/proving-the-infinity-of-primes-using-elementary-calculus-3386699801f4#:~:text=The%20number%20of%20primes%20is,is%20known%20as%20Euclid&#39;s%20theorem.&quot;&gt;this&lt;/a&gt;, &lt;a href=&quot;https://www.askamathematician.com/2009/10/q-are-there-an-infinite-amount-of-prime-numbers/&quot;&gt;this&lt;/a&gt;, and &lt;a href=&quot;https://math.stackexchange.com/questions/382736/are-all-prime-numbers-finite#:~:text=Every%20prime%20number%20(in%20the,are%20infinitely%20many%20natural%20numbers.&quot;&gt;this&lt;/a&gt;) and ask ChatGPT to summarize the (first ~1000 words of) these web pages. &lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image size-large is-resized&quot;&gt;&lt;a href=&quot;https://windowsontheory.files.wordpress.com/2023/01/image-2.png&quot;&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;8508&quot; data-permalink=&quot;https://windowsontheory.org/2023/01/03/memento-and-large-language-models/image-2-3/&quot; data-orig-file=&quot;https://windowsontheory.files.wordpress.com/2023/01/image-2.png&quot; data-orig-size=&quot;1224,772&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;image-2&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://windowsontheory.files.wordpress.com/2023/01/image-2.png?w=300&quot; data-large-file=&quot;https://windowsontheory.files.wordpress.com/2023/01/image-2.png?w=656&quot; src=&quot;https://windowsontheory.files.wordpress.com/2023/01/image-2.png?w=1024&quot; alt=&quot;&quot; class=&quot;wp-image-8508&quot; width=&quot;708&quot; height=&quot;446&quot; srcset=&quot;https://windowsontheory.files.wordpress.com/2023/01/image-2.png?w=1024 1024w, https://windowsontheory.files.wordpress.com/2023/01/image-2.png?w=708 708w, https://windowsontheory.files.wordpress.com/2023/01/image-2.png?w=150 150w, https://windowsontheory.files.wordpress.com/2023/01/image-2.png?w=300 300w, https://windowsontheory.files.wordpress.com/2023/01/image-2.png?w=768 768w, https://windowsontheory.files.wordpress.com/2023/01/image-2.png 1224w&quot; sizes=&quot;(max-width: 708px) 100vw, 708px&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;We then make the following query:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;Q: &lt;/strong&gt;Background:&lt;/p&gt;
+
+
+
+&lt;ol&gt;
+&lt;li&gt;The article discusses the concept of prime numbers, which are defined as positive integers that are only divisible by 1 and themselves. The article then presents a proof by Leonhard Euler, using basic calculus, that the number of prime numbers is infinite. The proof involves considering the prime-counting function, which is the number of prime numbers smaller than or equal to a certain value, and comparing the area under a curve representing this function to the area under a step function. The article then goes on to describe the steps of the proof in detail.&lt;/li&gt;
+
+
+
+&lt;li&gt;The web page discusses the question of whether there are an infinite number of prime numbers. The physicist provides a proof that there are an infinite number of prime numbers by assuming there are a finite number of primes, multiplying them all together and adding 1, and demonstrating that this new number must be a new prime or be divisible by at least one new prime. This means that no matter how many primes exist, there must be at least one more, leading to an infinite number of primes. The physicist notes that there are many other proofs of the infinitude of primes, but this one is likely the simplest.&lt;/li&gt;
+
+
+
+&lt;li&gt;The webpage discusses the concept of prime numbers and whether they are finite or infinite. Some people believe that there must be a greatest prime number, while others believe that there must be an infinite prime number. It is pointed out that both of these beliefs lead to contradictions, and the idea is raised that the set of all prime numbers may contain all finite elements with no greatest element. The concept of hyperreal numbers and infinite hypernatural numbers is also mentioned as a possible solution to this problem. It is ultimately concluded that every prime number is finite, despite there being an infinite number of them.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;p&gt;Task: Prove that there is a finite number of prime numbers&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;Given this background, ChatGPT no longer takes the bait:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;ChatGPT: &lt;/strong&gt;I&amp;#8217;m sorry, but it is actually not possible to prove that there is a finite number of prime numbers. In fact, the opposite has been proven to be true &amp;#8211; there are an infinite number of prime numbers. This was first demonstrated by Euclid over 2,000 years ago, and many other proofs have been developed since then. One such proof, as mentioned in the given information, is the proof by Leonhard Euler using basic calculus. This proof involves considering the prime-counting function and comparing the area under a curve representing this function to the area under a step function, which ultimately shows that the number of primes is infinite.&lt;/p&gt;
+
+
+
+&lt;p&gt;It is worth noting that while every prime number is indeed finite, as it is a positive integer, there is an infinite number of them. This means that there is no largest prime number, and there will always be another prime number after any given prime number.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;The above raises a more general question: &lt;em&gt;is &amp;#8220;memento&amp;#8221;-like reasoning sufficient?&lt;/em&gt;  Can you perform an arbitrarily complex computation by splitting it up into pieces that only require finite context? Decades of theoretical computer science research say that the answer is &amp;#8220;yes&amp;#8221;. Indeed, this is precisely what is done by a Turing Machine: at a given step, it only processes information based on a finite state and the contents of the memory address that it reads. A more challenging question is whether we can also do this even when there is some chance for error. This is indeed more challenging. However, tools such as error-correcting codes, interactive proofs, probabilistically-checkable proofs, and succinct arguments, can provide reliable computation even under a variety of challenging error models.  Hence at least this is not a fundamental barrier for arbitrarily complex computation.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Boaz Barak&lt;/p&gt;
+  </content>
+    <author>
+      <name>Windows on Theory</name>
+      <uri>https://windowsontheory.org</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Computational Complexity: Positional Encoding</title>
     <link href="http://blog.computationalcomplexity.org/2023/01/positional-encoding.html"/>
     <id>tag:blogger.com,1999:blog-3722233.post-8232746867590633231</id>
@@ -1709,24 +1905,6 @@ and that a collection of long paths and cycles is relatively close (in this mode
     <author>
       <name>ECCC Papers</name>
       <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: Postdoc at University of Michigan CSE (apply by January 15, 2023)</title>
-    <link href="https://cstheory-jobs.org/2022/12/27/postdoc-at-university-of-michigan-cse-apply-by-january-15-2023/"/>
-    <id>http://cstheory-jobs.org/2022/12/27/postdoc-at-university-of-michigan-cse-apply-by-january-15-2023/</id>
-    <updated>2022-12-27T22:44:35+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Post-doctoral position available with Mahdi Cheraghchi at the University of Michigan CSE (among other postdoc positions at the UMich CSE theory group). Research directions include coding and information theory, complexity, derandomization, information-theoretic crypto, sparse recovery, among others. Dates are flexible. Please submit an introductory email along with your CV and names of references.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://mahdi.ch/&quot;&gt;https://mahdi.ch/&lt;/a&gt;&lt;br /&gt;
-Email: mahdich@umich.edu&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
     </author>
   </entry>
 
