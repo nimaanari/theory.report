@@ -10,6 +10,166 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Unconditional Quantum Advantage for Sampling with Shallow Circuits</title>
+    <link href="http://arxiv.org/abs/2301.00995"/>
+    <id>http://arxiv.org/abs/2301.00995</id>
+    <updated>2023-01-04T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Watts_A/0/1/0/all/0/1&quot;&gt;Adam Bene Watts&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Parham_N/0/1/0/all/0/1&quot;&gt;Natalie Parham&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Recent work by Bravyi, Gosset, and Koenig showed that there exists a search
+problem that a constant-depth quantum circuit can solve, but that any
+constant-depth classical circuit with bounded fan-in cannot. They also pose the
+question: can we achieve a similar proof of separation for an input-independent
+sampling task? In this paper, we show that the answer to this question is yes.
+&lt;/p&gt;
+&lt;p&gt;We introduce a distribution $D_{n}$ and give a constant-depth, $n$ qubit,
+quantum circuit that samples from a distribution close to $D_{n}$ in total
+variation distance. For any $\delta &amp;lt; 1$ we also prove, unconditionally, that
+any classical circuit with bounded fan-in gates that takes as input $n +
+n^\delta$ uniformly random bits and produces output close to $D_{n}$ in total
+variation distance has depth $\Omega(\log \log n)$. This gives an unconditional
+proof that constant-depth quantum circuits can sample from distributions which
+can&#39;t be reproduced by constant-depth bounded fan-in classical circuits, even
+up to additive error.
+&lt;/p&gt;
+&lt;p&gt;The distribution $D_n$ and classical circuit lower bounds are based on work
+of Viola, in which he shows a different (but related) distribution cannot be
+sampled from approximately by constant-depth bounded fan-in classical circuits.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Small-World Formation via Local Information</title>
+    <link href="http://arxiv.org/abs/2301.00849"/>
+    <id>http://arxiv.org/abs/2301.00849</id>
+    <updated>2023-01-04T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alamdari_S/0/1/0/all/0/1&quot;&gt;Soroush Alamdari&lt;/a&gt;&lt;/p&gt;&lt;p&gt;It is observed that in a society almost anyone is acquainted with almost
+anyone else through only a few intermediary links. This is known as the
+small-world phenomenon. In this paper we investigate this observation from a
+theoretical stand-point by imagining each individual as a greedy agent
+satisfying a drive for knowledge by acquiring links that cost to maintain. We
+show that in such a setting small-world properties emerge naturally.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Transactional Composition of Nonblocking Data Structures</title>
+    <link href="http://arxiv.org/abs/2301.00996"/>
+    <id>http://arxiv.org/abs/2301.00996</id>
+    <updated>2023-01-04T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cai_W/0/1/0/all/0/1&quot;&gt;Wentao Cai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wen_H/0/1/0/all/0/1&quot;&gt;Haosen Wen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Scott_M/0/1/0/all/0/1&quot;&gt;Michael L. Scott&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper introduces nonblocking transaction composition (NBTC), a new
+methodology for atomic composition of nonblocking operations on concurrent data
+structures. Unlike previous software transactional memory (STM) approaches,
+NBTC leverages the linearizability of existing nonblocking structures, reducing
+the number of memory accesses that must be executed together, atomically, to
+only one per operation in most cases (these are typically the linearizing
+instructions of the constituent operations).
+&lt;/p&gt;
+&lt;p&gt;Our obstruction-free implementation of NBTC, which we call Medley, makes it
+easy to transform most nonblocking data structures into transactional
+counterparts while preserving their nonblocking liveness and high concurrency.
+In our experiments, Medley outperforms Lock-Free Transactional Transform
+(LFTT), the fastest prior competing methodology, by 40--170%. The marginal
+overhead of Medley&#39;s transactional composition, relative to separate operations
+performed in succession, is roughly 2.2$\times$.
+&lt;/p&gt;
+&lt;p&gt;For persistent data structures, we observe that failure atomicity for
+transactions can be achieved &quot;almost for free&quot; with epoch-based periodic
+persistence. Toward that end, we integrate Medley with nbMontage, a general
+system for periodically persistent data structures. The resulting txMontage
+provides ACID transactions and achieves throughput up to two orders of
+magnitude higher than that of the OneFile persistent STM system.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fast Parallel Algorithms for Enumeration of Simple, Temporal, and Hop-Constrained Cycles</title>
+    <link href="http://arxiv.org/abs/2301.01068"/>
+    <id>http://arxiv.org/abs/2301.01068</id>
+    <updated>2023-01-04T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blanusa_J/0/1/0/all/0/1&quot;&gt;Jovan Blanu&amp;#x161;a&lt;/a&gt; (1 and 2), &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Atasu_K/0/1/0/all/0/1&quot;&gt;Kubilay Atasu&lt;/a&gt; (1), &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ienne_P/0/1/0/all/0/1&quot;&gt;Paolo Ienne&lt;/a&gt; (2) ((1) IBM Research Europe - Zurich, (2) &amp;#xc9;cole Polytechnique F&amp;#xe9;d&amp;#xe9;rale de Lausanne)&lt;/p&gt;&lt;p&gt;Finding cycles in directed graphs enables important applications in various
+domains such as finance, biology, chemistry, and network science. However, as
+the size of graph datasets continues to grow, it becomes increasingly difficult
+to discover cycles within them, which necessitates more efficient algorithms
+and their parallel implementations. In this work, we propose scalable
+parallelisation of state-of-the-art sequential algorithms for enumerating
+simple, temporal, and hop-constrained cycles. First, we focus on the simple
+cycle enumeration problem and parallelise the algorithms by Johnson and by Read
+and Tarjan in a fine-grained manner. We theoretically show that our resulting
+fine-grained parallel algorithms are scalable, with the fine-grained parallel
+Read-Tarjan algorithm being strongly scalable. In contrast, we show that
+straightforward coarse-grained parallel versions of these simple cycle
+enumeration algorithms that exploit edge- or vertex-level parallelism are not
+scalable. Next, we adapt our fine-grained approach to enable scalable
+parallelisation of state-of-the-art algorithms for temporal and hop-constrained
+cycle enumeration. Our evaluation on a cluster with 256 physical cores
+demonstrates a near-linear scalability of our fine-grained parallel algorithms
+when enumerating all the aforementioned types of cycles. On the same cluster,
+our fine-grained parallel algorithms achieve, on average, one order of
+magnitude speedup compared to the respective coarse-grained parallel versions
+of the state-of-the-art algorithms for cycle enumeration. The performance gap
+between the fine-grained and the coarse-grained parallel algorithms increases
+as we use more CPU cores.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Reducing Maximum Weighted Matching to the Largest Cardinality Matching in CONGEST</title>
+    <link href="http://arxiv.org/abs/2301.01084"/>
+    <id>http://arxiv.org/abs/2301.01084</id>
+    <updated>2023-01-04T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mkrtchyan_V/0/1/0/all/0/1&quot;&gt;Vahan Mkrtchyan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we reduce the maximum weighted matching problem to the largest
+cardinality matching in {\bf CONGEST}. The paper presents two technical
+contributions. The first of them is a simple $poly(\log n,
+\frac{1}{\varepsilon}, t, \ln w_t)$-round {\bf CONGEST} algorithm for reducing
+the maximum weighted matching problem to the largest cardinality matching
+problem. This is achieved under the assumption that all vertices know all
+edge-weights $\{w_1,....,w_t\}$ (in particular, they know $t$, the number of
+different edge-weights), though a particular vertex may not know the weight of
+a particular edge. Our second ingredient is a simple rounding algorithm
+(similar to approximation algorithms for the bin packing problem) allowing to
+reduce general instances of the maximum weighted matching problem to ones
+satisfying the assumptions of the first ingredient, in which $t\leq poly&#39;(\log
+n, \frac{1}{\varepsilon})$. We end the paper with a brief discussion of
+implementing our algorithms in {\bf CONGEST}. Our main conclusion is that we
+just need constant rounds for the reduction.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Windows on Theory: Memento and Large Language Models</title>
     <link href="https://windowsontheory.org/2023/01/03/memento-and-large-language-models/"/>
     <id>http://windowsontheory.org/?p=8493</id>
@@ -1766,145 +1926,6 @@ expansion in a Cheeger like manner.
     <author>
       <name>arXiv: Data Structures and Algorithms</name>
       <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: FPT algoritms providing constant ratio approximation of hypertree width parameters for hypergraphs of bounded rank</title>
-    <link href="http://arxiv.org/abs/2212.13423"/>
-    <id>http://arxiv.org/abs/2212.13423</id>
-    <updated>2022-12-29T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Razgon_I/0/1/0/all/0/1&quot;&gt;Igor Razgon&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose an algorithm whose input are parameters $k$ and $r$ and a
-hypergraph $H$ of rank at most $r$. The algorithm either returns a tree
-decomposition of $H$ of generalized hypertree width at most $4k$ or &#39;NO&#39;. In
-the latter case, it is guaranteed that the hypertree width of $H$ is greater
-than $k$. Most importantly, the runtime of the algorithm is \emph{FPT} in $k$
-and $r$. The approach extends to fractional hypertree width with a slightly
-worse approximation ($4k+1$ instead of $4k$). We hope that the results of this
-paper will give rise to a new research direction whose aim is design of FPT
-algorithms for computation and approximation of hypertree width parameters for
-restricted classes of hypergraphs.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A polynomial time iterative algorithm for matching Gaussian matrices with non-vanishing correlation</title>
-    <link href="http://arxiv.org/abs/2212.13677"/>
-    <id>http://arxiv.org/abs/2212.13677</id>
-    <updated>2022-12-29T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ding_J/0/1/0/all/0/1&quot;&gt;Jian Ding&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_Z/0/1/0/all/0/1&quot;&gt;Zhangsong Li&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Motivated by the problem of matching vertices in two correlated
-Erd\H{o}s-R\&#39;enyi graphs, we study the problem of matching two correlated
-Gaussian Wigner matrices. We propose an iterative matching algorithm, which
-succeeds in polynomial time as long as the correlation between the two Gaussian
-matrices does not vanish. Our result is the first polynomial time algorithm
-that solves a graph matching type of problem when the correlation is an
-arbitrarily small constant.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Invertible Bloom Lookup Tables with Listing Guarantees</title>
-    <link href="http://arxiv.org/abs/2212.13812"/>
-    <id>http://arxiv.org/abs/2212.13812</id>
-    <updated>2022-12-29T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mizrahi_A/0/1/0/all/0/1&quot;&gt;Avi Mizrahi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bar_Lev_D/0/1/0/all/0/1&quot;&gt;Daniella Bar-Lev&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yaakobi_E/0/1/0/all/0/1&quot;&gt;Eitan Yaakobi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rottenstreich_O/0/1/0/all/0/1&quot;&gt;Ori Rottenstreich&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Invertible Bloom Lookup Table (IBLT) is a probabilistic concise data
-structure for set representation that supports a listing operation as the
-recovery of the elements in the represented set. Its applications can be found
-in network synchronization and traffic monitoring as well as in
-error-correction codes. IBLT can list its elements with probability affected by
-the size of the allocated memory and the size of the represented set, such that
-it can fail with small probability even for relatively small sets. While
-previous works only studied the failure probability of IBLT, this work
-initiates the worst case analysis of IBLT that guarantees successful listing
-for all sets of a certain size. The worst case study is important since the
-failure of IBLT imposes high overhead. We describe a novel approach that
-guarantees successful listing when the set satisfies a tunable upper bound on
-its size. To allow that, we develop multiple constructions that are based on
-various coding techniques such as stopping sets and the stopping redundancy of
-error-correcting codes, Steiner systems, and covering arrays as well as new
-methodologies we develop. We analyze the sizes of IBLTs with listing guarantees
-obtained by the various methods as well as their mapping memory consumption.
-Lastly, we study lower bounds on the achievable sizes of IBLT with listing
-guarantees and verify the results in the paper by simulations.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Induced Matching below Guarantees: Average Paves the Way for Fixed-Parameter Tractability</title>
-    <link href="http://arxiv.org/abs/2212.13962"/>
-    <id>http://arxiv.org/abs/2212.13962</id>
-    <updated>2022-12-29T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Koana_T/0/1/0/all/0/1&quot;&gt;Tomohiro Koana&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work, we study the Induced Matching problem: Given an undirected
-graph $G$ and an integer $\ell$, is there an induced matching $M$ of size at
-least $\ell$? An edge subset $M$ is an induced matching in $G$ if $M$ is a
-matching such that there is no edge between two distinct edges of $M$. Our work
-looks into the parameterized complexity of Induced Matching with respect to
-&quot;below guarantee&quot; parameterizations. We consider the parameterization $u -
-\ell$ for an upper bound $u$ on the size of any induced matching. For instance,
-any induced matching is of size at most $n / 2$ where $n$ is the number of
-vertices, which gives us a parameter $n / 2 - \ell$. In fact, there is a
-straightforward $9^{n/2 - \ell} \cdot n^{O(1)}$-time algorithm for Induced
-Matching [Moser and Thilikos, J. Discrete Algorithms]. Motivated by this, we
-ask: Is Induced Matching FPT for a parameter smaller than $n / 2 - \ell$? In
-search for such parameters, we consider $MM(G) - \ell$ and $IS(G) - \ell$,
-where $MM(G)$ is the maximum matching size and $IS(G)$ is the maximum
-independent set size of $G$. We find that Induced Matching is presumably not
-FPT when parameterized by $MM(G) - \ell$ or $IS(G) - \ell$. In contrast to
-these intractability results, we find that taking the average of the two helps
--- our main result is a branching algorithm that solves Induced Matching in
-$49^{(MM(G) + IS(G))/ 2 - \ell} \cdot n^{O(1)}$ time. Our algorithm makes use
-of the Gallai-Edmonds decomposition to find a structure to branch on.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR22-184 |  Testing in the bounded-degree graph model with degree bound two | 
-
-	Oded Goldreich, 
-
-	Laliv Tauber</title>
-    <link href="https://eccc.weizmann.ac.il/report/2022/184"/>
-    <id>https://eccc.weizmann.ac.il/report/2022/184</id>
-    <updated>2022-12-28T14:24:08+00:00</updated>
-    <content type="html" xml:lang="en">
-    Considering the bounded-degree graph model, we show that if the degree bound is two,
-then every graph property can be tested within query complexity that only depends on the proximity parameter.
-Specifically, the query complexity is ${\rm poly}(1/\epsilon)$, where $\epsilon$ denotes the proximity parameter.
-The key observation is that a graph of maximum degree two consists of a collection of paths and cycles,
-and that a collection of long paths and cycles is relatively close (in this model) to a single cycle.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
     </author>
   </entry>
 
