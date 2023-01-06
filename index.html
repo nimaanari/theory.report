@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-01-06T21:30:29Z">Friday, January 06 2023, 21:30</time>
+          <time class='timeago' datetime="2023-01-06T22:31:13Z">Friday, January 06 2023, 22:31</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -411,6 +411,37 @@ There it is&#8212;&#8220;Cargo Cult&#8221; in quantum algorithmic science&#8212;
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-01-06T16:39:51Z">Friday, January 06 2023, 16:39</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://decentralizedthoughts.github.io/2023-01-06-player-replaceability-I/'>Player Replaceability I</a></h3>
+        <p class='tr-article-feed'>from <a href='https://decentralizedthoughts.github.io'>Decentralized Thoughts</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          title: Player Replaceability - Towards Adaptive Security and Sub-quadratic Communication Simultaneously (Part I) date: 2023-01-05 00:00:00 -05:00 author: Kartik Nayak tags: blockchain This is part I of a two-part post on the concept of player-replaceability. In Nakamoto consensus, proof-of-work (PoW) provides us with an interesting set of properties with respect...
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          title: Player Replaceability - Towards Adaptive Security and Sub-quadratic Communication Simultaneously (Part I) date: 2023-01-05 00:00:00 -05:00 author: Kartik Nayak tags: blockchain This is part I of a two-part post on the concept of player-replaceability. In Nakamoto consensus, proof-of-work (PoW) provides us with an interesting set of properties with respect...
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-01-06T05:00:00Z">Friday, January 06 2023, 05:00</time>
         </div>
       </div>
     </details>
@@ -2580,14 +2611,14 @@ just need constant rounds for the reduction.
       <div class='tr-article-body'>
         <div class='tr-article-snippet'>
         
-          <p>Given the excitement over ChatGPT, I spent part of the winter recess trying to understand the underlying technology of Transformers. After trying various tutorials, I found the best explanation comes in the original 2017 paper, Attention is All you Need. This is my attempt to figure out positional encoding in transformers with some naive questions. Let me know if I'm completely off base.</p><p>Earlier models like Recurrent Neural Nets and Convolutional NNs worked under the assumption that information close by was more likely to be correlated. Machine learning seems to improve as the models make fewer and fewer assumptions about the data and transformers use positional data with no predisposed favoritism to nearby inputs.</p><p>The attention paper uses the following encoding for positions. Let α(j) = 10000-j/d where d is the dimension of the input embedding, i.e. the number of numbers used to represent each word of the input. We encode position p as d/2 pairs of numbers cos(p α(j)) and sin(p α(j)), for j ranging from 1 to d/2. They chose this function because relative positions are easy to address. We can address a relative position of a fixed k by a linear combination of cos(p α(j)) and sin(p α(j)) using the addition rules of cos and sin.</p><p>cos ((p+k) α(j)) = cos(k α(j)) cos(p α(j))&nbsp; - sin(k α(j)) sin(p α(j))&nbsp;</p><p>sin ((p+k) α(j)) = cos(k α(j)) sin(p α(j))&nbsp; + sin(k α(j)) cos(p α(j))&nbsp;</p><p>The d-dimensional vector of position encodings is added to the input embedding.</p><p>Why is the position encodings added to the input embedding?</p><p>I scoured the Internet and can't seem to find a good reason for this, other than it seems to work. Wouldn't the linear combinations to handle relative positions muddle up the input embedding? Since the input embedding is learned, perhaps some parts of the embedding are made zero or very small so the positional embedding stands out. Why not concatenate the two, have separate inputs for the input embedding and the positions? You wouldn't need to fully double the dimension since you would no longer need to match the dimension of the input encoding.</p><p>Why not use complex numbers?</p><p>I see cos(p α(j)) and sin(p α(j)) and immediately think of them as the real and imaginary parts of ep α(j) i. So why not just do the positional encodings as complex numbers? This paper&nbsp;suggests multiplying ep α(j) i with the input embedding, i.e., the input is embedding into the amplitude and the position by the phase. That makes more sense. You can now multiply by ep α(k) i to get the relative position j+k without effecting the input embedding.</p><p>I don't see a good reason not to use complex numbers for transformers, given that most learning packages and GPUs can handle complex numbers just fine. Even if you don't want to use complex numbers you could multiply the sin and cos versions of the positional encoding instead of adding to achieve a similar effect.</p><p>How about positional encoding for outputs?</p><p>Transformers output words in order but that makes it harder to relate outputs that are far apart. So why not give positional encoding to the outputs. A post-processor could then put the outputs in the correct order. More generally, how about outputting a program that produces the real output? We know transformers can generate code, and this way can handle operations that transformers normally struggle with, like multiplication or sorting.</p><p>By Lance Fortnow</p>
+          <p>Given the excitement over ChatGPT, I spent part of the winter recess trying to understand the underlying technology of Transformers. After trying various tutorials, I found the best explanation comes in the original 2017 paper, Attention is All you Need. This is my attempt to figure out positional encoding in transformers with some naive questions. Let me know if I'm completely off base.</p><p>Earlier models like Recurrent Neural Nets and Convolutional NNs worked under the assumption that information close by was more likely to be correlated. Machine learning seems to improve as the models make fewer and fewer assumptions about the data and transformers use positional data with no predisposed favoritism to nearby inputs.</p><p>The attention paper uses the following encoding for positions. Let α(j) = 10000-j/d where d is the dimension of the input embedding, i.e. the number of numbers used to represent each word of the input. We encode position p as d/2 pairs of numbers cos(p α(j)) and sin(p α(j)), for j ranging from 1 to d/2. They chose this function because relative positions are easy to address. We can address a relative position of a fixed k by a linear combination of cos(p α(j)) and sin(p α(j)) using the addition rules of cos and sin.</p><p>cos ((p+k) α(j)) = cos(k α(j)) cos(p α(j))&nbsp; - sin(k α(j)) sin(p α(j))&nbsp;</p><p>sin ((p+k) α(j)) = cos(k α(j)) sin(p α(j))&nbsp; + sin(k α(j)) cos(p α(j))&nbsp;</p><p>The d-dimensional vector of position encodings is added to the input embedding.</p><p>Why is the position encodings added to the input embedding?</p><p>I scoured the Internet and can't seem to find a good reason for this, other than it seems to work. Wouldn't the linear combinations to handle relative positions muddle up the input embedding? Since the input embedding is learned, perhaps some parts of the embedding are made zero or very small so the positional embedding stands out. Why not concatenate the two, have separate inputs for the input embedding and the positions? You wouldn't need to fully double the dimension since you would no longer need to match the dimension of the input encoding.</p><p>Why not use complex numbers?</p><p>I see cos(p α(j)) and sin(p α(j)) and immediately think of them as the real and imaginary parts of ep α(j) i. So why not just do the positional encodings as complex numbers? This paper&nbsp;suggests multiplying ep α(j) i with the input embedding, i.e., the input is embedding into the amplitude and the position by the phase. That makes more sense. You can now multiply by ep α(k) i to get the relative position j+k without affecting the input embedding.</p><p>I don't see a good reason not to use complex numbers for transformers, given that most learning packages and GPUs can handle complex numbers just fine. Even if you don't want to use complex numbers you could multiply the sin and cos versions of the positional encoding instead of adding to achieve a similar effect.</p><p>How about positional encoding for outputs?</p><p>Transformers output words in order but that makes it harder to relate outputs that are far apart. So why not give positional encoding to the outputs. A post-processor could then put the outputs in the correct order. More generally, how about outputting a program that produces the real output? We know transformers can generate code, and this way can handle operations that transformers normally struggle with, like multiplication or sorting.</p><p>By Lance Fortnow</p>
         
         </div>
 
         <div class='tr-article-summary'>
         
           
-          <p>Given the excitement over <a href="https://chat.openai.com/chat">ChatGPT</a>, I spent part of the winter recess trying to understand the underlying technology of Transformers. After trying various tutorials, I found the best explanation comes in the original 2017 paper, <a href="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html">Attention is All you Need</a>. This is my attempt to figure out positional encoding in transformers with some naive questions. Let me know if I'm completely off base.</p><p>Earlier models like Recurrent Neural Nets and Convolutional NNs worked under the assumption that information close by was more likely to be correlated. Machine learning seems to improve as the models make fewer and fewer assumptions about the data and transformers use positional data with no predisposed favoritism to nearby inputs.</p><p>The attention paper uses the following encoding for positions. Let α(j) = 10000<sup>-j/d</sup> where d is the dimension of the input embedding, i.e. the number of numbers used to represent each word of the input. We encode position p as d/2 pairs of numbers cos(p α(j)) and sin(p α(j)), for j ranging from 1 to d/2. They chose this function because relative positions are easy to address. We can address a relative position of a fixed k by a linear combination of cos(p α(j)) and sin(p α(j)) using the addition rules of cos and sin.</p><p>cos ((p+k) α(j)) = cos(k α(j)) cos(p α(j))&nbsp; - sin(k α(j)) sin(p α(j))&nbsp;</p><p>sin ((p+k) α(j)) = cos(k α(j)) sin(p α(j))&nbsp; + sin(k α(j)) cos(p α(j))&nbsp;</p><p>The d-dimensional vector of position encodings is added to the input embedding.</p><p><b>Why is the position encodings added to the input embedding?</b></p><p>I scoured the Internet and can't seem to find a good reason for this, other than it seems to work. Wouldn't the linear combinations to handle relative positions muddle up the input embedding? Since the input embedding is learned, perhaps some parts of the embedding are made zero or very small so the positional embedding stands out. Why not concatenate the two, have separate inputs for the input embedding and the positions? You wouldn't need to fully double the dimension since you would no longer need to match the dimension of the input encoding.</p><p><b>Why not use complex numbers?</b></p><p>I see cos(p α(j)) and sin(p α(j)) and immediately think of them as the real and imaginary parts of e<sup>p α(j) i</sup>. So why not just do the positional encodings as complex numbers? <a href="https://arxiv.org/abs/1912.12333">This paper</a>&nbsp;suggests multiplying e<sup>p α(j) i</sup> with the input embedding, i.e., the input is embedding into the amplitude and the position by the phase. That makes more sense. You can now multiply by e<sup>p α(k) i</sup> to get the relative position j+k without effecting the input embedding.</p><p>I don't see a good reason not to use complex numbers for transformers, given that most learning packages and GPUs can handle complex numbers just fine. Even if you don't want to use complex numbers you could multiply the sin and cos versions of the positional encoding instead of adding to achieve a similar effect.</p><p><b>How about positional encoding for outputs?</b></p><p>Transformers output words in order but that makes it harder to relate outputs that are far apart. So why not give positional encoding to the outputs. A post-processor could then put the outputs in the correct order. More generally, how about outputting a program that produces the real output? We know transformers can generate code, and this way can handle operations that transformers normally struggle with, like multiplication or sorting.</p><p class="authors">By Lance Fortnow</p>
+          <p>Given the excitement over <a href="https://chat.openai.com/chat">ChatGPT</a>, I spent part of the winter recess trying to understand the underlying technology of Transformers. After trying various tutorials, I found the best explanation comes in the original 2017 paper, <a href="https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html">Attention is All you Need</a>. This is my attempt to figure out positional encoding in transformers with some naive questions. Let me know if I'm completely off base.</p><p>Earlier models like Recurrent Neural Nets and Convolutional NNs worked under the assumption that information close by was more likely to be correlated. Machine learning seems to improve as the models make fewer and fewer assumptions about the data and transformers use positional data with no predisposed favoritism to nearby inputs.</p><p>The attention paper uses the following encoding for positions. Let α(j) = 10000<sup>-j/d</sup> where d is the dimension of the input embedding, i.e. the number of numbers used to represent each word of the input. We encode position p as d/2 pairs of numbers cos(p α(j)) and sin(p α(j)), for j ranging from 1 to d/2. They chose this function because relative positions are easy to address. We can address a relative position of a fixed k by a linear combination of cos(p α(j)) and sin(p α(j)) using the addition rules of cos and sin.</p><p>cos ((p+k) α(j)) = cos(k α(j)) cos(p α(j))&nbsp; - sin(k α(j)) sin(p α(j))&nbsp;</p><p>sin ((p+k) α(j)) = cos(k α(j)) sin(p α(j))&nbsp; + sin(k α(j)) cos(p α(j))&nbsp;</p><p>The d-dimensional vector of position encodings is added to the input embedding.</p><p><b>Why is the position encodings added to the input embedding?</b></p><p>I scoured the Internet and can't seem to find a good reason for this, other than it seems to work. Wouldn't the linear combinations to handle relative positions muddle up the input embedding? Since the input embedding is learned, perhaps some parts of the embedding are made zero or very small so the positional embedding stands out. Why not concatenate the two, have separate inputs for the input embedding and the positions? You wouldn't need to fully double the dimension since you would no longer need to match the dimension of the input encoding.</p><p><b>Why not use complex numbers?</b></p><p>I see cos(p α(j)) and sin(p α(j)) and immediately think of them as the real and imaginary parts of e<sup>p α(j) i</sup>. So why not just do the positional encodings as complex numbers? <a href="https://arxiv.org/abs/1912.12333">This paper</a>&nbsp;suggests multiplying e<sup>p α(j) i</sup> with the input embedding, i.e., the input is embedding into the amplitude and the position by the phase. That makes more sense. You can now multiply by e<sup>p α(k) i</sup> to get the relative position j+k without affecting the input embedding.</p><p>I don't see a good reason not to use complex numbers for transformers, given that most learning packages and GPUs can handle complex numbers just fine. Even if you don't want to use complex numbers you could multiply the sin and cos versions of the positional encoding instead of adding to achieve a similar effect.</p><p><b>How about positional encoding for outputs?</b></p><p>Transformers output words in order but that makes it harder to relate outputs that are far apart. So why not give positional encoding to the outputs. A post-processor could then put the outputs in the correct order. More generally, how about outputting a program that produces the real output? We know transformers can generate code, and this way can handle operations that transformers normally struggle with, like multiplication or sorting.</p><p class="authors">By Lance Fortnow</p>
         
         </div>
 
@@ -3748,73 +3779,6 @@ one to turn degenerations into restrictions. In particular, we present several
 examples, based on the W-tensor and the Coppersmith-Winograd tensors, where
 lower bounds on aided rank provide obstructions to the existence of certain
 partial degenerations.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-01-02T01:30:00Z">Monday, January 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2212.14091'>Heterochromatic Higher Order Transversals for Convex Sets</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Arijit Ghosh, Soumi Nandi</p><p>For $0\leq k\leq d-1$, a $k$-flat in $\mathbb{R}^d$ is a $k$-dimensional
-affine subspace in $\mathbb{R}^d$. A set $T$ of $k$-flats in $\mathbb{R}^d$ is
-a {\em $k$-transversal} of a family $\mathcal{F}$ of subsets of $\mathbb{R}^d$
-if every member of $\mathcal{F}$ intersects some $k$-flat in $T$. A family
-$\mathcal{F}$ of sets is said to satisfy $(p,q)$-property with respect to a set
-$T$ of $k$-flats if among every $p$ members of $\mathcal{F}$ at least $q$ of
-them can be hit by a single $k$-flat in $T$. Keller and Perles (SoCG 2022)
-proved an $(\aleph_0,k+2)$-theorem for $k$-transversals for families of
-$(r,R)$-fat convex sets in $\mathbb{R}^d$. They proved that any family
-$\mathcal{F}$ of $(r,R)$-fat sets in $\mathbb{R}^d$ satisfying
-$(\aleph_{0},k+2)$-property with respect to $k$-transversals can be hit by a
-finite number of $k$-flats. In this paper, we have extended the
-$(\aleph_0,k+2)$-theorem for $k$-transversals without the fatness assumption by
-introducing a notion, called \emph{$k$-growing sequence}. Moreover, we have
-proved a heterochromatic version of $(\aleph_0,k+2)$-theorem for
-$k$-transversals for families of both $(r,R)$-fat sets and more general convex
-sets. We have also proved a colorful generalization of the \emph{Helly-type}
-theorem for $k$-transversals of convex sets due to Aronov, Goodman and Pollack.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Ghosh_A/0/1/0/all/0/1">Arijit Ghosh</a>, <a href="http://arxiv.org/find/math/1/au:+Nandi_S/0/1/0/all/0/1">Soumi Nandi</a></p><p>For $0\leq k\leq d-1$, a $k$-flat in $\mathbb{R}^d$ is a $k$-dimensional
-affine subspace in $\mathbb{R}^d$. A set $T$ of $k$-flats in $\mathbb{R}^d$ is
-a {\em $k$-transversal} of a family $\mathcal{F}$ of subsets of $\mathbb{R}^d$
-if every member of $\mathcal{F}$ intersects some $k$-flat in $T$. A family
-$\mathcal{F}$ of sets is said to satisfy $(p,q)$-property with respect to a set
-$T$ of $k$-flats if among every $p$ members of $\mathcal{F}$ at least $q$ of
-them can be hit by a single $k$-flat in $T$. Keller and Perles (SoCG 2022)
-proved an $(\aleph_0,k+2)$-theorem for $k$-transversals for families of
-$(r,R)$-fat convex sets in $\mathbb{R}^d$. They proved that any family
-$\mathcal{F}$ of $(r,R)$-fat sets in $\mathbb{R}^d$ satisfying
-$(\aleph_{0},k+2)$-property with respect to $k$-transversals can be hit by a
-finite number of $k$-flats. In this paper, we have extended the
-$(\aleph_0,k+2)$-theorem for $k$-transversals without the fatness assumption by
-introducing a notion, called \emph{$k$-growing sequence}. Moreover, we have
-proved a heterochromatic version of $(\aleph_0,k+2)$-theorem for
-$k$-transversals for families of both $(r,R)$-fat sets and more general convex
-sets. We have also proved a colorful generalization of the \emph{Helly-type}
-theorem for $k$-transversals of convex sets due to Aronov, Goodman and Pollack.
 </p>
         
         </div>
