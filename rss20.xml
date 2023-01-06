@@ -9,6 +9,285 @@
 
 
 <item>
+  <title>Diagonalization Games</title>
+  <guid>http://arxiv.org/abs/2301.01924</guid>
+  <link>http://arxiv.org/abs/2301.01924</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Alon_N/0/1/0/all/0/1&quot;&gt;Noga Alon&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Bousquet_O/0/1/0/all/0/1&quot;&gt;Olivier Bousquet&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Larsen_K/0/1/0/all/0/1&quot;&gt;Kasper Green Larsen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Moran_S/0/1/0/all/0/1&quot;&gt;Shay Moran&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Moran_S/0/1/0/all/0/1&quot;&gt;Shlomo Moran&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study several variants of a combinatorial game which is based on Cantor&#39;s
+diagonal argument.
+&lt;/p&gt;
+&lt;p&gt;The game is between two players called Kronecker and Cantor. The names of the
+players are motivated by the known fact that Leopold Kronecker did not
+appreciate Georg Cantor&#39;s arguments about the infinite, and even referred to
+him as a &quot;scientific charlatan&quot;. In the game Kronecker maintains a list of m
+binary vectors, each of length n, and Cantor&#39;s goal is to produce a new binary
+vector which is different from each of Kronecker&#39;s vectors, or prove that no
+such vector exists. Cantor does not see Kronecker&#39;s vectors but he is allowed
+to ask queries of the form&quot;What is bit number j of vector number i?&quot; What is
+the minimal number of queries with which Cantor can achieve his goal? How much
+better can Cantor do if he is allowed to pick his queries \emph{adaptively},
+based on Kronecker&#39;s previous replies? The case when m=n is solved by
+diagonalization using n (non-adaptive) queries. We study this game more
+generally, and prove an optimal bound in the adaptive case and nearly tight
+upper and lower bounds in the non-adaptive case.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Streaming Zero-Knowledge Proofs</title>
+  <guid>http://arxiv.org/abs/2301.02161</guid>
+  <link>http://arxiv.org/abs/2301.02161</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cormode_G/0/1/0/all/0/1&quot;&gt;Graham Cormode&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+DallAgnol_M/0/1/0/all/0/1&quot;&gt;Marcel Dall&amp;#x27;Agnol&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gur_T/0/1/0/all/0/1&quot;&gt;Tom Gur&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hickey_C/0/1/0/all/0/1&quot;&gt;Chris Hickey&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We initiate the study of zero-knowledge proofs for data streams. Streaming
+interactive proofs (SIPs) are well-studied protocols whereby a space-bounded
+algorithm with one-pass access to a massive stream of data communicates with a
+powerful but untrusted prover to verify a computation that requires large
+space.
+&lt;/p&gt;
+&lt;p&gt;We define the notion of zero-knowledge in the streaming setting and construct
+zero-knowledge SIPs for the two main building blocks in the streaming
+interactive proofs literature: the sumcheck and polynomial evaluation
+protocols. To the best of our knowledge all known streaming interactive proofs
+are based on either of these tools, and indeed, this allows us to obtain
+zero-knowledge SIPs for central streaming problems such as index, frequency
+moments, and inner product. Our protocols are efficient in terms of time and
+space, as well as communication: the space complexity is $\mathrm{polylog}(n)$
+and, after a non-interactive setup that uses a random string of near-linear
+length, the remaining parameters are $n^{o(1)}$.
+&lt;/p&gt;
+&lt;p&gt;En route, we develop a toolkit for designing zero-knowledge data stream
+protocols, consisting of an algebraic streaming commitment protocol and a
+temporal commitment protocol. The analysis of our protocols relies on delicate
+algebraic and information-theoretic arguments and reductions from average-case
+communication complexity.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Optimal lower bounds for Quantum Learning via Information Theory</title>
+  <guid>http://arxiv.org/abs/2301.02227</guid>
+  <link>http://arxiv.org/abs/2301.02227</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Hadiashar_S/0/1/0/all/0/1&quot;&gt;Shima Bab Hadiashar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nayak_A/0/1/0/all/0/1&quot;&gt;Ashwin Nayak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Sinha_P/0/1/0/all/0/1&quot;&gt;Pulkit Sinha&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Although a concept class may be learnt more efficiently using quantum samples
+as compared with classical samples in certain scenarios, Arunachalam and de
+Wolf (JMLR, 2018) proved that quantum learners are asymptotically no more
+efficient than classical ones in the quantum PAC and Agnostic learning models.
+They established lower bounds on sample complexity via quantum state
+identification and Fourier analysis. In this paper, we derive optimal lower
+bounds for quantum sample complexity in both the PAC and agnostic models via an
+information-theoretic approach. The proofs are arguably simpler, and the same
+ideas can potentially be used to derive optimal bounds for other problems in
+quantum learning theory.
+&lt;/p&gt;
+&lt;p&gt;We then turn to a quantum analogue of the Coupon Collector problem, a classic
+problem from probability theory also of importance in the study of PAC
+learning. Arunachalam, Belovs, Childs, Kothari, Rosmanis, and de Wolf (TQC,
+2020) characterized the quantum sample complexity of this problem up to
+constant factors. First, we show that the information-theoretic approach
+mentioned above provably does not yield the optimal lower bound. As a
+by-product, we get a natural ensemble of pure states in arbitrarily high
+dimensions which are not easily (simultaneously) distinguishable, while the
+ensemble has close to maximal Holevo information. Second, we discover that the
+information-theoretic approach yields an asymptotically optimal bound for an
+approximation variant of the problem. Finally, we derive a sharp lower bound
+for the Quantum Coupon Collector problem, with the exact leading order term,
+via the Holevo-Curlander bounds on the distinguishability of an ensemble. All
+the aspects of the Quantum Coupon Collector problem we study rest on properties
+of the spectrum of the associated Gram matrix, which may be of independent
+interest.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>A Distance-Geometric Method for Recovering Robot Joint Angles From an RGB Image</title>
+  <guid>http://arxiv.org/abs/2301.02051</guid>
+  <link>http://arxiv.org/abs/2301.02051</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bilic_I/0/1/0/all/0/1&quot;&gt;Ivan Bili&amp;#x107;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Maric_F/0/1/0/all/0/1&quot;&gt;Filip Mari&amp;#x107;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Markovic_I/0/1/0/all/0/1&quot;&gt;Ivan Markovi&amp;#x107;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Petrovic_I/0/1/0/all/0/1&quot;&gt;Ivan Petrovi&amp;#x107;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Autonomous manipulation systems operating in domains where human intervention
+is difficult or impossible (e.g., underwater, extraterrestrial or hazardous
+environments) require a high degree of robustness to sensing and communication
+failures. Crucially, motion planning and control algorithms require a stream of
+accurate joint angle data provided by joint encoders, the failure of which may
+result in an unrecoverable loss of functionality. In this paper, we present a
+novel method for retrieving the joint angles of a robot manipulator using only
+a single RGB image of its current configuration, opening up an avenue for
+recovering system functionality when conventional proprioceptive sensing is
+unavailable. Our approach, based on a distance-geometric representation of the
+configuration space, exploits the knowledge of a robot&#39;s kinematic model with
+the goal of training a shallow neural network that performs a 2D-to-3D
+regression of distances associated with detected structural keypoints. It is
+shown that the resulting Euclidean distance matrix uniquely corresponds to the
+observed configuration, where joint angles can be recovered via
+multidimensional scaling and a simple inverse kinematics procedure. We evaluate
+the performance of our approach on real RGB images of a Franka Emika Panda
+manipulator, showing that the proposed method is efficient and exhibits solid
+generalization ability. Furthermore, we show that our method can be easily
+combined with a dense refinement technique to obtain superior results.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Algorithms and Complexity for Computing Nash Equilibria in Adversarial Team Games</title>
+  <guid>http://arxiv.org/abs/2301.02129</guid>
+  <link>http://arxiv.org/abs/2301.02129</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Anagnostides_I/0/1/0/all/0/1&quot;&gt;Ioannis Anagnostides&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kalogiannis_F/0/1/0/all/0/1&quot;&gt;Fivos Kalogiannis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Panageas_I/0/1/0/all/0/1&quot;&gt;Ioannis Panageas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vlatakis_Gkaragkounis_E/0/1/0/all/0/1&quot;&gt;Emmanouil-Vasileios Vlatakis-Gkaragkounis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+McAleer_S/0/1/0/all/0/1&quot;&gt;Stephen McAleer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Adversarial team games model multiplayer strategic interactions in which a
+team of identically-interested players is competing against an adversarial
+player in a zero-sum game. Such games capture many well-studied settings in
+game theory, such as congestion games, but go well-beyond to environments
+wherein the cooperation of one team -- in the absence of explicit communication
+-- is obstructed by competing entities; the latter setting remains poorly
+understood despite its numerous applications. Since the seminal work of Von
+Stengel and Koller (GEB `97), different solution concepts have received
+attention from an algorithmic standpoint. Yet, the complexity of the standard
+Nash equilibrium has remained open.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we settle this question by showing that computing a Nash
+equilibrium in adversarial team games belongs to the class continuous local
+search (CLS), thereby establishing CLS-completeness by virtue of the recent
+CLS-hardness result of Rubinstein and Babichenko (STOC `21) in potential games.
+To do so, we leverage linear programming duality to prove that any
+$\epsilon$-approximate stationary strategy for the team can be extended in
+polynomial time to an $O(\epsilon)$-approximate Nash equilibrium, where the
+$O(\cdot)$ notation suppresses polynomial factors in the description of the
+game. As a consequence, we show that the Moreau envelop of a suitable best
+response function acts as a potential under certain natural gradient-based
+dynamics.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Sum Labelling Graphs of Maximum Degree Two</title>
+  <guid>http://arxiv.org/abs/2301.02178</guid>
+  <link>http://arxiv.org/abs/2301.02178</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Fernau_H/0/1/0/all/0/1&quot;&gt;Henning Fernau&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Gajjar_K/0/1/0/all/0/1&quot;&gt;Kshitij Gajjar&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The concept of sum labelling was introduced in 1990 by Harary. A graph is a
+sum graph if its vertices can be labelled by distinct positive integers in such
+a way that two vertices are connected by an edge if and only if the sum of
+their labels is the label of another vertex in the graph. It is easy to see
+that every sum graph has at least one isolated vertex, and every graph can be
+made a sum graph by adding at most $n^2$ isolated vertices to it. The minimum
+number of isolated vertices that need to be added to a graph to make it a sum
+graph is called the sum number of the graph.
+&lt;/p&gt;
+&lt;p&gt;The sum number of several prominent graph classes (e.g., cycles, trees,
+complete graphs) is already well known. We examine the effect of taking the
+disjoint union of graphs on the sum number. In particular, we provide a
+complete characterization of the sum number of graphs of maximum degree two,
+since every such graph is the disjoint union of paths and cycles.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Quantum relaxation for quadratic programs over orthogonal matrices</title>
+  <guid>http://arxiv.org/abs/2301.01778</guid>
+  <link>http://arxiv.org/abs/2301.01778</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Zhao_A/0/1/0/all/0/1&quot;&gt;Andrew Zhao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Rubin_N/0/1/0/all/0/1&quot;&gt;Nicholas C. Rubin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Quadratic programming over the (special) orthogonal group encompasses a broad
+class of optimization problems such as group synchronization, point-set
+registration, and simultaneous localization and mapping. Such problems are
+instances of the little noncommutative Grothendieck problem (LNCG), a natural
+generalization of quadratic combinatorial optimization where, instead of binary
+decision variables, one optimizes over orthogonal matrices. In this work, we
+establish an embedding of this class of LNCG problems over the orthogonal group
+onto a quantum Hamiltonian. This embedding is accomplished by identifying
+orthogonal matrices with their double cover (Pin and Spin group) elements,
+which we represent as quantum states. We connect this construction to the
+theory of free fermions, which provides a physical interpretation of the
+derived LNCG Hamiltonian as a two-body interacting-fermion model due to the
+quadratic nature of the problem. Determining extremal states of this
+Hamiltonian provides an outer approximation to the original problem, analogous
+to classical relaxations of the problem via semidefinite programming. When
+optimizing over the special orthogonal group, our quantum relaxation naturally
+obeys additional, powerful constraints based on the convex hull of rotation
+matrices. The classical size of this convex-hull representation is exponential
+in matrix dimension, whereas the quantum representation requires only a linear
+number of qubits. Finally, to project the relaxed solution into the feasible
+space, we employ rounding procedures which return orthogonal matrices from
+appropriate measurements of the quantum state. Through numerical experiments we
+provide evidence that this quantum relaxation can produce high-quality
+approximations.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Exact and Heuristic Approaches to Speeding Up the MSM Time Series Distance Computation</title>
+  <guid>http://arxiv.org/abs/2301.01977</guid>
+  <link>http://arxiv.org/abs/2301.01977</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Holznigenkemper_J/0/1/0/all/0/1&quot;&gt;Jana Holznigenkemper&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Komusiewicz_C/0/1/0/all/0/1&quot;&gt;Christian Komusiewicz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Seeger_B/0/1/0/all/0/1&quot;&gt;Bernhard Seeger&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The computation of a distance of two time series is time-consuming for any
+elastic distance function that accounts for misalignments. Among those
+functions, DTW is the most prominent. However, a recent extensive evaluation
+has shown that the move-split merge (MSM) metric is superior to DTW regarding
+the analytical accuracy of 1-NN classifier. Unfortunately, the runtime of the
+standard dynamic programming algorithm for MSM distance computation is
+$\Omega(n^2)$, where $n$ is the length of the longest time series. In this
+paper, we provide approaches to reducing the cost of MSM distance computations
+by using lower and upper bounds for early pruning paths in the underlying
+dynamic programming table. For the case of one time series being a constant, we
+present a linear-time algorithm. In addition, we propose new linear-time
+heuristics and adapt heuristics known from DTW to computing the MSM distance.
+One heuristic employs the metric property of MSM and the previously introduced
+linear-time algorithm. Our experimental studies achieve substantial speed-ups
+in our approaches compared to previous MSM algorithms. In particular, the
+running time for MSM is faster for a majority of data sets than a
+state-of-the-art DTW distance computation.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Max-Min Diversification with Fairness Constraints: Exact and Approximation Algorithms</title>
+  <guid>http://arxiv.org/abs/2301.02053</guid>
+  <link>http://arxiv.org/abs/2301.02053</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_Y/0/1/0/all/0/1&quot;&gt;Yanhao Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mathioudakis_M/0/1/0/all/0/1&quot;&gt;Michael Mathioudakis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_J/0/1/0/all/0/1&quot;&gt;Jia Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fabbri_F/0/1/0/all/0/1&quot;&gt;Francesco Fabbri&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Diversity maximization aims to select a diverse and representative subset of
+items from a large dataset. It is a fundamental optimization task that finds
+applications in data summarization, feature selection, web search, recommender
+systems, and elsewhere. However, in a setting where data items are associated
+with different groups according to sensitive attributes like sex or race, it is
+possible that algorithmic solutions for this task, if left unchecked, will
+under- or over-represent some of the groups. Therefore, we are motivated to
+address the problem of \emph{max-min diversification with fairness
+constraints}, aiming to select $k$ items to maximize the minimum distance
+between any pair of selected items while ensuring that the number of items
+selected from each group falls within predefined lower and upper bounds. In
+this work, we propose an exact algorithm based on integer linear programming
+that is suitable for small datasets as well as a
+$\frac{1-\varepsilon}{5}$-approximation algorithm for any $\varepsilon \in (0,
+1)$ that scales to large datasets. Extensive experiments on real-world datasets
+demonstrate the superior performance of our proposed algorithms over existing
+ones.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>TR23-001 |  New Lower Bounds against Homogeneous Non-Commutative Circuits | 
 
 	Prerona Chatterjee, 
@@ -1419,201 +1698,6 @@ Tverberg-type question of Andy Fingerhut from 1995.
   </description>
   <pubDate>2023-01-02 01:30:00 UTC</pubDate>
   <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Poincar\&#39;e Duality for Generalized Persistence Diagrams of (co)Filtrations</title>
-  <guid>http://arxiv.org/abs/2212.14610</guid>
-  <link>http://arxiv.org/abs/2212.14610</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Patel_A/0/1/0/all/0/1&quot;&gt;Amit Patel&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Rask_T/0/1/0/all/0/1&quot;&gt;Tatum Rask&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We dualize previous work on generalized persistence diagrams for filtrations
-to cofiltrations. When the underlying space is a manifold, we express this
-duality as a Poincar\&#39;e duality between their generalized persistence diagrams.
-A heavy emphasis is placed on the recent discovery of functoriality of the
-generalized persistence diagram and its connection to Rota&#39;s Galois Connection
-Theorem.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Every Combinatorial Polyhedron Can Unfold with Overlap</title>
-  <guid>http://arxiv.org/abs/2212.14721</guid>
-  <link>http://arxiv.org/abs/2212.14721</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+ORourke_J/0/1/0/all/0/1&quot;&gt;Joseph O&amp;#x27;Rourke&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Ghomi proved that every convex polyhedron could be stretched via an affine
-transformation so that it has an edge-unfolding to a net [Gho14]. A net is a
-simple planar polygon; in particular, it does not self-overlap. One can view
-his result as establishing that every combinatorial polyhedron has a
-realization that allows unfolding to a net.
-&lt;/p&gt;
-&lt;p&gt;Joseph Malkevitch asked if the reverse holds (in some sense of &quot;reverse&quot;): Is
-there a combinatorial polyhedron such that, for every realization, and for
-every spanning cut-tree, it unfolds to a net? In this note we prove the answer
-is No: every combinatorial polyhedron has a realization and a cut-tree that
-unfolds with overlap.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Quantum Mass Production Theorems</title>
-  <guid>http://arxiv.org/abs/2212.14399</guid>
-  <link>http://arxiv.org/abs/2212.14399</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Kretschmer_W/0/1/0/all/0/1&quot;&gt;William Kretschmer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove that for any $n$-qubit unitary transformation $U$ and for any $r =
-2^{o(n / \log n)}$, there exists a quantum circuit to implement $U^{\otimes r}$
-with at most $O(4^n)$ gates. This asymptotically equals the number of gates
-needed to implement just a single copy of a worst-case $U$. We also establish
-analogous results for quantum states and diagonal unitary transformations. Our
-techniques are based on the work of Uhlig [Math. Notes 1974], who proved a
-similar mass production theorem for Boolean functions.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>A quasi-quadratic vertex Kernel for Cograph edge editing</title>
-  <guid>http://arxiv.org/abs/2212.14814</guid>
-  <link>http://arxiv.org/abs/2212.14814</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Crespelle_C/0/1/0/all/0/1&quot;&gt;Christophe Crespelle&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pellerin_R/0/1/0/all/0/1&quot;&gt;R&amp;#xe9;mi Pellerin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Thomasse_S/0/1/0/all/0/1&quot;&gt;St&amp;#xe9;phan Thomass&amp;#xe9;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a $O(k^2 \mathrm{log} k)$ vertex kernel for cograph edge editing.
-This improves a cubic kernel found by Guillemot, Havet, Paul and Perez [1]
-which involved four reduction rules. We generalize one of their rules, based on
-packing of induced paths of length four, by introducing t-modules, which are
-modules up to t edge modifications. The key fact is that large t-modules cannot
-be edited more than t times, and this allows to obtain a near quadratic kernel.
-The extra $\mathrm{log} k$ factor seems tricky to remove as it is necessary in
-the combinatorial lemma on trees which is central in our proof. Nevertheless,
-we think that a quadratic bound should be reachable.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Near-Tight Algorithms for the Chamberlin-Courant and Thiele Voting Rules</title>
-  <guid>http://arxiv.org/abs/2212.14173</guid>
-  <link>http://arxiv.org/abs/2212.14173</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sornat_K/0/1/0/all/0/1&quot;&gt;Krzysztof Sornat&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Williams_V/0/1/0/all/0/1&quot;&gt;Virginia Vassilevska Williams&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xu_Y/0/1/0/all/0/1&quot;&gt;Yinzhan Xu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present an almost optimal algorithm for the classic Chamberlin-Courant
-multiwinner voting rule (CC) on single-peaked preference profiles. Given $n$
-voters and $m$ candidates, it runs in almost linear time in the input size,
-improving the previous best $O(nm^2)$ time algorithm of Betzler et al. (2013).
-We also study multiwinner voting rules on nearly single-peaked preference
-profiles in terms of the candidate-deletion operation. We show a
-polynomial-time algorithm for CC where a given candidate-deletion set $D$ has
-logarithmic size. Actually, our algorithm runs in $2^{|D|} \cdot poly(n,m)$
-time and the base of the power cannot be improved under the Strong Exponential
-Time Hypothesis. We also adapt these results to all non-constant Thiele rules
-which generalize CC with approval ballots.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Lecture Notes on Quantum Algorithms</title>
-  <guid>http://arxiv.org/abs/2212.14205</guid>
-  <link>http://arxiv.org/abs/2212.14205</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Khadiev_K/0/1/0/all/0/1&quot;&gt;Kamil Khadiev&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The lecture notes contain three parts. The first part is Grover&#39;s Search
-Algorithm with modifications, generalizations, and applications. The second
-part is a discussion on the quantum fingerprinting technique. The third part is
-Quantum Walks (discrete time) algorithm with applications.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Graph Searching with Predictions</title>
-  <guid>http://arxiv.org/abs/2212.14220</guid>
-  <link>http://arxiv.org/abs/2212.14220</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Banerjee_S/0/1/0/all/0/1&quot;&gt;Siddhartha Banerjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cohen_Addad_V/0/1/0/all/0/1&quot;&gt;Vincent Cohen-Addad&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gupta_A/0/1/0/all/0/1&quot;&gt;Anupam Gupta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_Z/0/1/0/all/0/1&quot;&gt;Zhouzi Li&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Consider an agent exploring an unknown graph in search of some goal state. As
-it walks around the graph, it learns the nodes and their neighbors. The agent
-only knows where the goal state is when it reaches it. How do we reach this
-goal while moving only a small distance? This problem seems hopeless, even on
-trees of bounded degree, unless we give the agent some help. This setting with
-&#39;&#39;help&#39;&#39; often arises in exploring large search spaces (e.g., huge game trees)
-where we assume access to some score/quality function for each node, which we
-use to guide us towards the goal. In our case, we assume the help comes in the
-form of distance predictions: each node $v$ provides a prediction $f(v)$ of its
-distance to the goal vertex. Naturally if these predictions are correct, we can
-reach the goal along a shortest path. What if the predictions are unreliable
-and some of them are erroneous? Can we get an algorithm whose performance
-relates to the error of the predictions?
-&lt;/p&gt;
-&lt;p&gt;In this work, we consider the problem on trees and give deterministic
-algorithms whose total movement cost is only $O(OPT + \Delta \cdot ERR)$, where
-$OPT$ is the distance from the start to the goal vertex, $\Delta$ the maximum
-degree, and the $ERR$ is the total number of vertices whose predictions are
-erroneous. We show this guarantee is optimal. We then consider a &#39;&#39;planning&#39;&#39;
-version of the problem where the graph and predictions are known at the
-beginning, so the agent can use this global information to devise a search
-strategy of low cost. For this planning version, we go beyond trees and give an
-algorithms which gets good performance on (weighted) graphs with bounded
-doubling dimension.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Constant Approximation for Normalized Modularity and Associations Clustering</title>
-  <guid>http://arxiv.org/abs/2212.14334</guid>
-  <link>http://arxiv.org/abs/2212.14334</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lacki_J/0/1/0/all/0/1&quot;&gt;Jakub &amp;#x141;&amp;#x105;cki&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mirrokni_V/0/1/0/all/0/1&quot;&gt;Vahab Mirrokni&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sohler_C/0/1/0/all/0/1&quot;&gt;Christian Sohler&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of graph clustering under a broad class of objectives in
-which the quality of a cluster is defined based on the ratio between the number
-of edges in the cluster, and the total weight of vertices in the cluster. We
-show that our definition is closely related to popular clustering measures,
-namely normalized associations, which is a dual of the normalized cut
-objective, and normalized modularity. We give a linear time
-constant-approximate algorithm for our objective, which implies the first
-constant-factor approximation algorithms for normalized modularity and
-normalized associations.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On Learning the Structure of Clusters in Graphs</title>
-  <guid>http://arxiv.org/abs/2212.14345</guid>
-  <link>http://arxiv.org/abs/2212.14345</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Macgregor_P/0/1/0/all/0/1&quot;&gt;Peter Macgregor&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Graph clustering is a fundamental problem in unsupervised learning, with
-numerous applications in computer science and in analysing real-world data. In
-many real-world applications, we find that the clusters have a significant
-high-level structure. This is often overlooked in the design and analysis of
-graph clustering algorithms which make strong simplifying assumptions about the
-structure of the graph. This thesis addresses the natural question of whether
-the structure of clusters can be learned efficiently and describes four new
-algorithmic results for learning such structure in graphs and hypergraphs.
-&lt;/p&gt;
-&lt;p&gt;All of the presented theoretical results are extensively evaluated on both
-synthetic and real-word datasets of different domains, including image
-classification and segmentation, migration networks, co-authorship networks,
-and natural language processing. These experimental results demonstrate that
-the newly developed algorithms are practical, effective, and immediately
-applicable for learning the structure of clusters in real-world data.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
