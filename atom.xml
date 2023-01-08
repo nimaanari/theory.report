@@ -10,6 +10,36 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-002 |  Diagonalization Games | 
+
+	Noga Alon, 
+
+	Olivier Bousquet, 
+
+	Kasper Green Larsen, 
+
+	Shay Moran, 
+
+	Shlomo Moran</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/002"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/002</id>
+    <updated>2023-01-08T02:36:41+00:00</updated>
+    <content type="html" xml:lang="en">
+    We study several variants of a combinatorial game which is based on Cantor&amp;#39;s diagonal argument. The game is between two players called Kronecker and Cantor. The names of the players are motivated by the known fact  that Leopold Kronecker did not appreciate Georg Cantor&amp;#39;s arguments about the infinite, and even referred to him as a ``scientific charlatan&amp;#39;&amp;#39;. 
+
+In the game Kronecker maintains a list of m binary vectors, 
+each of length n, and Cantor&amp;#39;s goal is to produce a new binary vector which is different from each of Kronecker&amp;#39;s vectors, or prove that no such vector exists. Cantor does not see Kronecker&amp;#39;s vectors but he is allowed to ask queries of the form  ``What is bit number j of vector number i? What is the minimal number of queries with which Cantor can achieve his goal? How much better can Cantor do if he is allowed to pick his queries \emph{adaptively}, based on Kronecker&amp;#39;s previous replies?
+
+The case when m=n is solved by diagonalization using n (non-adaptive) queries. We study this game more generally, and prove an optimal bound in the adaptive case and nearly tight upper and lower bounds in the non-adaptive case.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Richard Lipton: Cargo Cult Redo</title>
     <link href="https://rjlipton.wpcomstaging.com/2023/01/06/cargo-cult-redo/"/>
     <id>https://rjlipton.wpcomstaging.com/?p=20776</id>
@@ -1839,56 +1869,6 @@ solutions to deal with massive data: (lossless) compressed data structures and
 (lossy) data sketches. These notes cover the latter topic: probabilistic
 filters, sketching under various metrics, Locality Sensitive Hashing, nearest
 neighbour search, algorithms on streams (pattern matching, counting).
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Parameterized Lower Bounds for Problems in P via Fine-Grained Cross-Compositions</title>
-    <link href="http://arxiv.org/abs/2301.00797"/>
-    <id>http://arxiv.org/abs/2301.00797</id>
-    <updated>2023-01-03T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Heeger_K/0/1/0/all/0/1&quot;&gt;Klaus Heeger&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nichterlein_A/0/1/0/all/0/1&quot;&gt;Andr&amp;#xe9; Nichterlein&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Niedermeier_R/0/1/0/all/0/1&quot;&gt;Rolf Niedermeier&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a general framework to exclude parameterized running times of the
-form $O(\ell^\beta+ n^\gamma)$ for problems that have polynomial running time
-lower bounds under hypotheses from fine-grained complexity. Our framework is
-based on cross-compositions from parameterized complexity. We (conditionally)
-exclude running times of the form $O(\ell^{{\gamma}/{(\gamma-1)} - \epsilon} +
-n^\gamma)$ for any $1&amp;lt;\gamma&amp;lt;2$ and $\epsilon&amp;gt;0$ for the following problems:
-&lt;/p&gt;
-&lt;p&gt;- Longest Common Subsequence: Given two length-$n$ strings and
-$\ell\in\mathbb{N}$, is there a common subsequence of length $\ell$?
-&lt;/p&gt;
-&lt;p&gt;- Discrete Fr\&#39;echet Distance: Given two lists of $n$ points each and $k\in
-\mathbb{N}$, is the Fr\&#39;echet distance of the lists at most $k$? Here $\ell$ is
-the maximum number of points which one list is ahead of the other list in an
-optimum traversal.
-&lt;/p&gt;
-&lt;p&gt;Moreover, we exclude running times $O(\ell^{{2\gamma}/{(\gamma -1)}-\epsilon}
-+ n^\gamma)$ for any $1&amp;lt;\gamma&amp;lt;3$ and $\epsilon&amp;gt;0$ for:
-&lt;/p&gt;
-&lt;p&gt;- Negative Triangle: Given an edge-weighted graph with $n$ vertices, is there
-a triangle whose sum of edge-weights is negative? Here $\ell$ is the order of a
-maximum connected component.
-&lt;/p&gt;
-&lt;p&gt;- Triangle Collection: Given a vertex-colored graph with $n$ vertices, is
-there for each triple of colors a triangle whose vertices have these three
-colors? Here $\ell$ is the order of a maximum connected component.
-&lt;/p&gt;
-&lt;p&gt;- 2nd Shortest Path: Given an $n$-vertex edge-weighted directed graph, two
-vertices $s$ and $t$, and $k \in \mathbb{N}$, has the second longest
-$s$-$t$-path length at most $k$? Here $\ell$ is the directed feedback vertex
-set.
-&lt;/p&gt;
-&lt;p&gt;Except for 2nd Shortest Path all these running time bounds are tight, that
-is, algorithms with running time $O(\ell^{{\gamma}/{(\gamma-1)}} + n^\gamma )$
-for any $1 &amp;lt; \gamma &amp;lt; 2$ and $O(\ell^{{2\gamma}/{(\gamma -1)}} + n^\gamma)$ for
-any $1 &amp;lt; \gamma &amp;lt; 3$, respectively, are known.
 &lt;/p&gt;
   </content>
     <author>
