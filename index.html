@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-01-08T17:30:30Z">Sunday, January 08 2023, 17:30</time>
+          <time class='timeago' datetime="2023-01-08T18:32:21Z">Sunday, January 08 2023, 18:32</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -444,7 +444,7 @@ The case when m=n is solved by diagonalization using n (non-adaptive) queries. W
       <div class='tr-article-body'>
         <div class='tr-article-snippet'>
         
-          Over the past two years or so, I have been thinking about a cute problem, which turned out to be much more useful to my research than I initially thought. Here it is: Tree Shortcutting Problem: Given an edge-weighted tree \(T\), add (weighted) edges to \(T\), called shortcuts, to get a graph \(K\) such that: \(d_K(u,v) = d_T(u,v)~\quad \forall u,v\in V(T)\). That is, \(K\) preserves distances in \(T\). For every \(u,v\in V(T)\), there exists a shortest path from \(u\) to \(v\) in \(K\) containing at most \(k\) edges for some \(k\geq 2\). The goal is to minimize the product \(k \cdot \mathrm{tw}(K)\), where \(\mathrm{tw}(K)\) is the treewidth of \(K\). ***
+          Over the past two years or so, I have been thinking about a cute problem, which turned out to be much more useful to my research than I initially thought. Here it is: Tree Shortcutting Problem: Given an edge-weighted tree \(T\), add (weighted) edges to \(T\), called shortcuts, to get a graph \(K\) such that: \(d_K(u,v) = d_T(u,v)~\quad \forall u,v\in V(T)\). That is, \(K\) preserves distances in \(T\). For every \(u,v\in V(T)\), there exists a shortest path from \(u\) to \(v\) in \(K\) containing at most \(k\) edges for some \(k\geq 2\). The goal is to minimize the product \(k \cdot \mathrm{tw}(K)\), where \(\mathrm{tw}(K)\) is the treewidth of \(K\).
         
         </div>
 
@@ -460,8 +460,9 @@ The case when m=n is solved by diagonalization using n (non-adaptive) queries. W
   <li>For every \(u,v\in V(T)\), there exists a shortest path from \(u\) to \(v\) in \(K\) containing at most \(k\) edges for some \(k\geq 2\).</li>
 </ol>
 
-<p>The goal is to minimize the product \(k \cdot \mathrm{tw}(K)\), where \(\mathrm{tw}(K)\) is the treewidth of \(K\).
-***</p>
+<p>The goal is to minimize the product \(k \cdot \mathrm{tw}(K)\), where \(\mathrm{tw}(K)\) is the treewidth of \(K\).</p>
+
+<hr />
 
 <p><img src="/assets/figs/shortcut.svg" alt="" /></p>
 
@@ -501,39 +502,31 @@ The case when m=n is solved by diagonalization using n (non-adaptive) queries. W
 
 <p><img src="/assets/figs/recursion.svg" alt="" /></p>
 
-<p><em>Figure 2: (a) The recursive construction applied to the path \(P_n\). (b) Gluing \(\mathcal{T}_B\) and all \({\mathcal{T}_i}\) to obtain a tree decomposition \(\mathcal{T}\) of \(K\).</em></p>
+<p><em>Figure 2: (a) The recursive construction applied to the path \(P_n\). (b) Gluing \(\mathcal T_B\) and all \(\{\mathcal T_i\}\) to obtain a tree decomposition \(\mathcal{T}\) of \(K\) via red edges.</em></p>
 
-<p>The subpath recursion is natural: recursively shortcut each subpath \(P[b_i,b_{i+1}]\) (line 6). The subpath recursion returns the shortcut graph \(K_i\) and its tree decomposition \(\mathcal{T}<em>i\).  Next, we add edges from each boundary vertex \(b_i\) and \(b</em>{i+1}\) of the subpath to all other vertices on the subpath (lines 7 and 8). This step guarantees that each vertex of the subpath can “jump” to the boundary vertices using only <strong>one edge</strong>. In terms of tree decomposition, it means that we add both \(b_i\) and \(b_{i+1}\) to every bag of \(\mathcal{T_i}\) (line 9).</p>
+<p>The subpath recursion is natural: recursively shortcut each subpath \(P[b_i,b_{i+1}]\) (line 6). The subpath recursion returns the shortcut graph \(K_i\) and its tree decomposition \(\mathcal T_i\).  Next, we add edges from each boundary vertex \(b_i, b_{i+1}\) of the subpath to all other vertices on the subpath (lines 7 and 8). This step guarantees that each vertex of the subpath can “jump” to the boundary vertices using only <strong>one edge</strong>. In terms of tree decomposition, it means that we add both \(b_i\) and \(b_{i+1}\) to every bag of \(\mathcal T_i\) (line 9).</p>
 
-<p>The top level recursion serves two purposes: (i) creating a low hop emulator  for boundary vertices (recall that each vertex can jump to a boundary vertex in the same subpath using one edge) and  (ii) gluing \({\mathcal{T}<em>i}\) together. More precisely, let \(P</em>{\sqrt{n}}\) be a path of boundary vertices, i.e., \(b_i\) is adjacent to \(b_{i+1}\) in  \(P_{\sqrt{n}}\). We shortcut \(P_{\sqrt{n}}\) recursively, getting the shortcut graph \(K_B\) and its tree decomposition \(\mathcal{T}<em>B\) (line 3). Since \((b_i,b</em>{i+1})\) is an edge in \(P_{\sqrt{n}}\), there must be a bag in \(\mathcal{T}<em>B\) containing both \(b_i,b</em>{i+1}\); that is, the bag \(X\) in line 11 exists. See Figure 2(b). Recall that in line 9, every bag in \(\mathcal{T}<em>i\) contains both \(b_i,b</em>{i+1}\), and that \(K_B\) and \(K_i\) only share two boundary vertices \(b_i,b_{i+1}\). Thus, we can connect \(X\) to an arbitrary bag of \(\mathcal{T}_i\) as done in line 12. This completes the shortcutting algorithm.</p>
+<p>The top level recursion serves two purposes: (i) creating a low hop emulator  for boundary vertices (recall that each vertex can jump to a boundary vertex in the same subpath using one edge) and  (ii) gluing \({\mathcal T_i}\) together. More precisely, let \(P_{\sqrt{n}}\) be a path of boundary vertices, i.e., \(b_i\) is adjacent to \(b_{i+1}\) in  \(P_{\sqrt{n}}\). We shortcut \(P_{\sqrt{n}}\) recursively, getting the shortcut graph \(K_B\) and its tree decomposition \(\mathcal T_B\) (line 3). Since \((b_i,b_{i+1})\) is an edge in \(P_{\sqrt{n}}\), there must be a bag in \(\mathcal T_B\) containing both \(b_i,b_{i+1}\); that is, the bag \(X\) in line 11 exists. See Figure 2(b). Recall that in line 9, every bag in \(\mathcal T_i\) contains both \(b_i,b_{i+1}\), and that \(K_B\) and \(K_i\) only share two boundary vertices \(b_i,b_{i+1}\). Thus, we can connect \(X\) to an arbitrary bag of \(\mathcal T_i\) as done in line 12. This completes the shortcutting algorithm.</p>
 
 <hr />
 <p><span style="font-variant: small-caps">PathShortcutting</span>\((P_n)\)</p>
 <blockquote>
-  <p>\(1.\) \(B \leftarrow {0,\sqrt{n}, 2\sqrt{n}, \ldots, n}\) and \(b_i \leftarrow i\sqrt{n}\) for every \(0\leq i \leq \sqrt{n}\).<br />
+  <p>\(1.\) \(B \leftarrow {0,\sqrt{n}, 2\sqrt{n}, \ldots, n}\) and \(b_i \leftarrow i\sqrt{n}\) for every \(0\leq i \leq \sqrt{n}\)<br />
 \(2.\) \(P_{\sqrt{n}} \leftarrow\) unweighted path graph with vertex set \(B\).<br />
-\(3.\) \((K_B,\mathcal{T}<em>B) \leftarrow\)<span style="font-variant: small-caps">PathShortcutting</span>\((P</em>{\sqrt{n}})\). <br />
-\(4.\) \(K\leftarrow K_B,\quad \mathcal{T}\leftarrow \mathcal{T}_B\)<br />
-\(5.\) for \(i\leftarrow 0\) to \(\sqrt{n}-1\)</p>
-  <blockquote>
-    <p>\(6.\) \((K_i,\mathcal{T}<em>i) \leftarrow\)<span style="font-variant: small-caps">PathShortcutting</span>\((P</em>{n}[b_i, b_{i+1}])\)<br />
-\(7.\)  for each \(v\in P_{n}[b_i, b_{i+1}]\)<br /></p>
-    <blockquote>
-      <p>\(8.\)  \(E(K_i)\leftarrow {(v,b_i), (v,b_{i+1})}\) <br />
-\(9.\) add both \({v_i,v_{i+1}}\) to every bag of \(\mathcal{T}_i\)<br /></p>
-    </blockquote>
-  </blockquote>
+\(3.\) \((K_B,\mathcal T_B) \leftarrow\)<span style="font-variant: small-caps">PathShortcutting</span>\((P_{\sqrt{n}})\)<br />
+\(4.\) \(K\leftarrow K_B,\quad \mathcal{T}\leftarrow \mathcal T_B\)<br />
+\(5.\) for \(i\leftarrow 0\) to \(\sqrt{n}-1\)<br />
+\(6.\)     \((K_i,\mathcal T_i) \leftarrow\)<span style="font-variant: small-caps">PathShortcutting</span>\((P_{n}[b_i, b_{i+1}])\)<br />
+\(7.\)      for each \(v\in P_{n}[b_i, b_{i+1}]\)<br />
+\(8.\)           \(E(K_i)\leftarrow {(v,b_i), (v,b_{i+1})}\) <br />
+\(9.\)            add both \({v_i,v_{i+1}}\) to every bag of \(\mathcal T_i\)<br />
+\(10.\)     \(K\leftarrow K \cup K_i\) <br />
+\(11.\)     Let \(X\) be a bag in \(\mathcal{T}\) containing both \(b_i,b_{i+1}\)<br />
+\(12.\)     Add \(\mathcal T_i\) to \(\mathcal{T}\) by connecting \(X\) to an arbitrary bag of \(\mathcal T_i\) <br />
+\(13.\) return \((K,\mathcal{T})\)</p>
 </blockquote>
 
-<blockquote>
-  <blockquote>
-    <p>\(10.\) \(K\leftarrow K \cup K_i\) <br />
-\(11.\) Let \(X\) be a bag in \(\mathcal{T}\) containing both \(b_i,b_{i+1}\)<br />
-\(12.\) Add \(\mathcal{T}_i\) to \(\mathcal{T}\) by connecting \(X\) to an arbitrary bag of \(\mathcal{T}_i\) 
-\(13.\) return \((K,\mathcal{T})\)
-***</p>
-  </blockquote>
-</blockquote>
+<hr />
 
 <p>It is not difficult to show that \(\mathcal{T}\) indeed is a tree decomposition of \(K\). Thus, we focus on analyzing the hop bound and the treewidth.</p>
 
@@ -551,7 +544,7 @@ The case when m=n is solved by diagonalization using n (non-adaptive) queries. W
 
 <p>which solves to \(h(n)= O(\log\log n)\).</p>
 
-<p><strong>Analyzing the treewidth \(\mathrm{tw}(K)\).</strong> Note that the treewidth of   \(\mathcal{T}_B\) and all \({\mathcal{T_i}}\) (before adding boundary vertices in line 9) is bounded by \(\mathrm{tw}(\sqrt{n})\). Line 9 increases the treewidth of  \({\mathcal{T_i}}\) by at most \(2\). Since the treewidth of \(K\) is the maximum treewidth \(\mathcal{T}_B\) and all \({\mathcal{T_i}}\), we have:</p>
+<p><strong>Analyzing the treewidth \(\mathrm{tw}(K)\).</strong> Note that the treewidth of   \(\mathcal T_B\) and all \({\mathcal{T_i}}\) (before adding boundary vertices in line 9) is bounded by \(\mathrm{tw}(\sqrt{n})\). Line 9 increases the treewidth of  \({\mathcal{T_i}}\) by at most \(2\). Since the treewidth of \(K\) is the maximum treewidth \(\mathcal T_B\) and all \({\mathcal{T_i}}\), we have:</p>
 
 \[\mathrm{tw}(n) \leq \mathrm{tw}(\sqrt{n}) + 2\]
 
@@ -572,7 +565,7 @@ The case when m=n is solved by diagonalization using n (non-adaptive) queries. W
 
 <p>It is well known that we can obtain a somewhat similar but weaker decomposition for trees: one can decompose a tree of \(n\) vertices to roughly \(\sqrt{n}\) connected subtrees such that the number of boundary vertices is \(\sqrt{n}\). (A vertex is a boundary vertex of a subtree if it is incident to an edge not in the subtree.) This decomposition is weaker in the sense that a subtree could have more than 2, and indeed up to \(\Omega(\sqrt{n})\), boundary vertices.  Is this enough?</p>
 
-<p>Not quite. To glue the tree decomposition \(\mathcal{T}_i\) to \(\mathcal{T}\) (and effectively to \(\mathcal{T}_B\)), we rely on the fact that there is a bag \(X\in \mathcal{T}_B\) containing both boundary vertices in line 11. The  analogy for trees would be: there exists a bag \(X\) containing all boundary vertices of each subtree. This is problematic if a subtree has \(\Omega(\sqrt{n})\) boundary vertices.</p>
+<p>Not quite. To glue the tree decomposition \(\mathcal T_i\) to \(\mathcal{T}\) (and effectively to \(\mathcal T_B\)), we rely on the fact that there is a bag \(X\in \mathcal T_B\) containing both boundary vertices in line 11. The  analogy for trees would be: there exists a bag \(X\) containing all boundary vertices of each subtree. This is problematic if a subtree has \(\Omega(\sqrt{n})\) boundary vertices.</p>
 
 <p>Then how abound guaranteeing that each subtree has \(O(1)\) vertices, say 3 vertices. Will this be enough? The answer is pathetically no. To guarantee 3 vertices in the same bag, one has to add a clique of size 3 between the boundary vertices in the top level recursion. What it means is that, the graph between boundary vertices on which we recursively call the shortcuting procedure is <em>no longer a tree</em>. Thus, we really need a decomposition where every subtree has <strong>at most 2 boundary vertices</strong>.</p>
 
