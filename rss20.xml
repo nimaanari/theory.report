@@ -9,6 +9,205 @@
 
 
 <item>
+  <title>Stream-K: Work-centric Parallel Decomposition for Dense Matrix-Matrix Multiplication on the GPU</title>
+  <guid>http://arxiv.org/abs/2301.03598</guid>
+  <link>http://arxiv.org/abs/2301.03598</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Osama_M/0/1/0/all/0/1&quot;&gt;Muhammad Osama&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Merrill_D/0/1/0/all/0/1&quot;&gt;Duane Merrill&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cecka_C/0/1/0/all/0/1&quot;&gt;Cris Cecka&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Garland_M/0/1/0/all/0/1&quot;&gt;Michael Garland&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Owens_J/0/1/0/all/0/1&quot;&gt;John D. Owens&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce Stream-K, a work-centric parallelization of matrix
+multiplication (GEMM) and related computations in dense linear algebra. Whereas
+contemporary decompositions are primarily tile-based, our method operates by
+partitioning an even share of the aggregate inner loop iterations among
+physical processing elements. This provides a near-perfect utilization of
+computing resources, regardless of how efficiently the output tiling for any
+given problem quantizes across the underlying processing elements.
+&lt;/p&gt;
+&lt;p&gt;On GPU processors, our Stream-K parallelization of GEMM produces a peak
+speedup of up to 14$\times$ and 6.7$\times$, and an average performance
+response that is both higher and more consistent across 32,824 GEMM problem
+geometries than state-of-the-art math libraries such as CUTLASS and cuBLAS.
+Furthermore, we achieve this performance from a single tile size configuration
+per floating-point precision, whereas today&#39;s math libraries employ complex
+kernel-selection heuristics to select from a large ensemble of kernel variants.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-11 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Improved Approximation Algorithms for the Expanding Search Problem</title>
+  <guid>http://arxiv.org/abs/2301.03638</guid>
+  <link>http://arxiv.org/abs/2301.03638</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Griesbach_S/0/1/0/all/0/1&quot;&gt;Svenja M. Griesbach&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hommelsheim_F/0/1/0/all/0/1&quot;&gt;Felix Hommelsheim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Klimm_M/0/1/0/all/0/1&quot;&gt;Max Klimm&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schewior_K/0/1/0/all/0/1&quot;&gt;Kevin Schewior&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A searcher faces a graph with edge lengths and vertex weights, initially
+having explored only a given starting vertex. In each step, the searcher adds
+an edge to the solution that connects an unexplored vertex to an explored
+vertex. This requires an amount of time equal to the edge length. The goal is
+to minimize the vertex-weighted sum of the exploration times over all vertices.
+We show that this problem is hard to approximate and provide algorithms with
+improved approximation guarantees. For the case that all vertices have unit
+weight, we provide a $2e$-approximation. For the general case, we give a
+$(5e/2+\varepsilon)$-approximation for any $\varepsilon &amp;gt; 0$. Previously, for
+both cases only an $8$-approximation was known. Finally, we provide a PTAS for
+the case of a Euclidean graph.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-11 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Quantum Speedups for Zero-Sum Games via Improved Dynamic Gibbs Sampling</title>
+  <guid>http://arxiv.org/abs/2301.03763</guid>
+  <link>http://arxiv.org/abs/2301.03763</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Bouland_A/0/1/0/all/0/1&quot;&gt;Adam Bouland&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Getachew_Y/0/1/0/all/0/1&quot;&gt;Yosheb Getachew&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Jin_Y/0/1/0/all/0/1&quot;&gt;Yujia Jin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Sidford_A/0/1/0/all/0/1&quot;&gt;Aaron Sidford&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Tian_K/0/1/0/all/0/1&quot;&gt;Kevin Tian&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give a quantum algorithm for computing an $\epsilon$-approximate Nash
+equilibrium of a zero-sum game in a $m \times n$ payoff matrix with bounded
+entries. Given a standard quantum oracle for accessing the payoff matrix our
+algorithm runs in time $\widetilde{O}(\sqrt{m + n}\cdot \epsilon^{-2.5} +
+\epsilon^{-3})$ and outputs a classical representation of the
+$\epsilon$-approximate Nash equilibrium. This improves upon the best prior
+quantum runtime of $\widetilde{O}(\sqrt{m + n} \cdot \epsilon^{-3})$ obtained
+by [vAG19] and the classic $\widetilde{O}((m + n) \cdot \epsilon^{-2})$ runtime
+due to [GK95] whenever $\epsilon = \Omega((m +n)^{-1})$. We obtain this result
+by designing new quantum data structures for efficiently sampling from a
+slowly-changing Gibbs distribution.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-11 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Proportionally Fair Matching with Multiple Groups</title>
+  <guid>http://arxiv.org/abs/2301.03862</guid>
+  <link>http://arxiv.org/abs/2301.03862</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bandyapadhyay_S/0/1/0/all/0/1&quot;&gt;Sayan Bandyapadhyay&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fomin_F/0/1/0/all/0/1&quot;&gt;Fedor V. Fomin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Inamdar_T/0/1/0/all/0/1&quot;&gt;Tanmay Inamdar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Simonov_K/0/1/0/all/0/1&quot;&gt;Kirill Simonov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The study of fair algorithms has become mainstream in machine learning and
+artificial intelligence due to its increasing demand in dealing with biases and
+discrimination. Along this line, researchers have considered fair versions of
+traditional optimization problems including clustering, regression, ranking and
+voting. However, most of the efforts have been channeled into designing
+heuristic algorithms, which often do not provide any guarantees on the quality
+of the solution. In this work, we study matching problems with the notion of
+proportional fairness. Proportional fairness is one of the most popular notions
+of group fairness where every group is represented up to an extent proportional
+to the final selection size. Matching with proportional fairness or more
+commonly, proportionally fair matching, was introduced in [Chierichetti et al.,
+AISTATS, 2019], where the problem was studied with only two groups. However, in
+many practical applications, the number of groups -- although often a small
+constant -- is larger than two. In this work, we make the first step towards
+understanding the computational complexity of proportionally fair matching with
+more than two groups. We design exact and approximation algorithms achieving
+reasonable guarantees on the quality of the matching as well as on the time
+complexity. Our algorithms are also supported by suitable hardness bounds.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-11 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Maintaining Triconnected Components under Node Expansion</title>
+  <guid>http://arxiv.org/abs/2301.03972</guid>
+  <link>http://arxiv.org/abs/2301.03972</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fink_S/0/1/0/all/0/1&quot;&gt;Simon D. Fink&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rutter_I/0/1/0/all/0/1&quot;&gt;Ignaz Rutter&lt;/a&gt;&lt;/p&gt;&lt;p&gt;SPQR-trees are a central component of graph drawing and are also important in
+many further areas of computer science. From their inception onwards, they have
+always had a strong relation to dynamic algorithms maintaining information,
+e.g., on planarity and triconnectivity, under edge insertion and, later on,
+also deletion. In this paper, we focus on a special kind of dynamic update, the
+expansion of vertices into arbitrary biconnected graphs, while maintaining the
+SPQR-tree and further information. This will also allow us to efficiently merge
+two SPQR-trees by identifying the edges incident to two vertices with each
+other. We do this working along an axiomatic definition lifting the SPQR-tree
+to a stand-alone data structure that can be modified independently from the
+graph it might have been derived from. Making changes to this structure, we can
+now observe how the graph represented by the SPQR-tree changes, instead of
+having to reason which updates to the SPQR-tree are necessary after a change to
+the represented graph.
+&lt;/p&gt;
+&lt;p&gt;Using efficient expansions and merges allows us to improve the runtime of the
+Synchronized Planarity algorithm by Bl\&quot;asius et al. [ESA 2021] from $O(m^2)$
+to $O(m\cdot \Delta)$, where $\Delta$ is the maximum pipe degree. This also
+reduces the time for solving several constrained planarity problems, e.g. for
+Clustered Planarity from $O((n+d)^2)$ to $O(n+d\cdot \Delta)$, where $d$ is the
+total number of crossings between cluster borders and edges and $\Delta$ is the
+maximum number of edge crossings on a single cluster border.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-11 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Change Propagation Without Joins</title>
+  <guid>http://arxiv.org/abs/2301.04003</guid>
+  <link>http://arxiv.org/abs/2301.04003</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_Q/0/1/0/all/0/1&quot;&gt;Qichen Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hu_X/0/1/0/all/0/1&quot;&gt;Xiao Hu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dai_B/0/1/0/all/0/1&quot;&gt;Binyang Dai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yi_K/0/1/0/all/0/1&quot;&gt;Ke Yi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We revisit the classical change propagation framework for query evaluation
+under updates. The standard framework takes a query plan and materializes the
+intermediate views, which incurs high polynomial costs in both space and time,
+with the join operator being the culprit. In this paper, we propose a new
+change propagation framework without joins, thus naturally avoiding this
+polynomial blowup. Meanwhile, we show that the new framework still supports
+constant-delay enumeration of both the deltas and the full query results, the
+same as in the standard framework. Furthermore, we provide a quantitative
+analysis of its update cost, which not only recovers many recent theoretical
+results on the problem, but also yields an effective approach to optimizing the
+query plan. The new framework is also easy to be integrated into an existing
+streaming database system. Experimental results show that our system prototype,
+implemented using Flink DataStream API, significantly outperforms other systems
+in terms of space, time, and latency.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-11 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>On the Complexity of the Two-Stage Majority Rule</title>
+  <guid>http://arxiv.org/abs/2301.04009</guid>
+  <link>http://arxiv.org/abs/2301.04009</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yang_Y/0/1/0/all/0/1&quot;&gt;Yongjie Yang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sequential voting rules have been extensively used in parliamentary and
+legislative decision making. After observing that the prevalent successive and
+the amendment rules fail several fundamental axioms, Horan and Sprumont [2021]
+proposed very recently a two-stage sequential rule which satisfies a variety of
+desirable properties. This paper examines this rule by investigating the
+complexity of Agenda Control, Coalition Manipulation, Possible Winner,
+Necessary Winner, and eight standard election control problems. Our study
+offers a comprehensive understanding of the complexity landscape of these
+problems.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-11 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>On Knuth&#39;s conjecture for back and forward arcs in Depth First Search in a random digraph with geometric outdegree distribution</title>
+  <guid>http://arxiv.org/abs/2301.04131</guid>
+  <link>http://arxiv.org/abs/2301.04131</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Janson_S/0/1/0/all/0/1&quot;&gt;Svante Janson&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Donald Knuth, in a draft of a coming volume of The Art of Computer
+Programming, has recently conjectured that in Depth-First Search of a random
+digraph with geometric outdegree distribution, the numbers of back and forward
+arcs have the same distribution.
+&lt;/p&gt;
+&lt;p&gt;We show that this conjecture is equivalent to an equality between two
+generating functions defined by different recursions.
+&lt;/p&gt;
+&lt;p&gt;Unfortunately, we have not been able so use this to prove the conjecture,
+which still is open, but we hope that this note will inspire others to succeed
+with the conjecture.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-01-11 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Representing Matroids over the Reals is $\exists \mathbb R$-complete</title>
   <guid>http://arxiv.org/abs/2301.03221</guid>
   <link>http://arxiv.org/abs/2301.03221</link>
@@ -1238,264 +1437,6 @@ since every such graph is the disjoint union of paths and cycles.
   </description>
   <pubDate>2023-01-06 01:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Quantum relaxation for quadratic programs over orthogonal matrices</title>
-  <guid>http://arxiv.org/abs/2301.01778</guid>
-  <link>http://arxiv.org/abs/2301.01778</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Zhao_A/0/1/0/all/0/1&quot;&gt;Andrew Zhao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Rubin_N/0/1/0/all/0/1&quot;&gt;Nicholas C. Rubin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Quadratic programming over the (special) orthogonal group encompasses a broad
-class of optimization problems such as group synchronization, point-set
-registration, and simultaneous localization and mapping. Such problems are
-instances of the little noncommutative Grothendieck problem (LNCG), a natural
-generalization of quadratic combinatorial optimization where, instead of binary
-decision variables, one optimizes over orthogonal matrices. In this work, we
-establish an embedding of this class of LNCG problems over the orthogonal group
-onto a quantum Hamiltonian. This embedding is accomplished by identifying
-orthogonal matrices with their double cover (Pin and Spin group) elements,
-which we represent as quantum states. We connect this construction to the
-theory of free fermions, which provides a physical interpretation of the
-derived LNCG Hamiltonian as a two-body interacting-fermion model due to the
-quadratic nature of the problem. Determining extremal states of this
-Hamiltonian provides an outer approximation to the original problem, analogous
-to classical relaxations of the problem via semidefinite programming. When
-optimizing over the special orthogonal group, our quantum relaxation naturally
-obeys additional, powerful constraints based on the convex hull of rotation
-matrices. The classical size of this convex-hull representation is exponential
-in matrix dimension, whereas the quantum representation requires only a linear
-number of qubits. Finally, to project the relaxed solution into the feasible
-space, we employ rounding procedures which return orthogonal matrices from
-appropriate measurements of the quantum state. Through numerical experiments we
-provide evidence that this quantum relaxation can produce high-quality
-approximations.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Exact and Heuristic Approaches to Speeding Up the MSM Time Series Distance Computation</title>
-  <guid>http://arxiv.org/abs/2301.01977</guid>
-  <link>http://arxiv.org/abs/2301.01977</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Holznigenkemper_J/0/1/0/all/0/1&quot;&gt;Jana Holznigenkemper&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Komusiewicz_C/0/1/0/all/0/1&quot;&gt;Christian Komusiewicz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Seeger_B/0/1/0/all/0/1&quot;&gt;Bernhard Seeger&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The computation of a distance of two time series is time-consuming for any
-elastic distance function that accounts for misalignments. Among those
-functions, DTW is the most prominent. However, a recent extensive evaluation
-has shown that the move-split merge (MSM) metric is superior to DTW regarding
-the analytical accuracy of 1-NN classifier. Unfortunately, the runtime of the
-standard dynamic programming algorithm for MSM distance computation is
-$\Omega(n^2)$, where $n$ is the length of the longest time series. In this
-paper, we provide approaches to reducing the cost of MSM distance computations
-by using lower and upper bounds for early pruning paths in the underlying
-dynamic programming table. For the case of one time series being a constant, we
-present a linear-time algorithm. In addition, we propose new linear-time
-heuristics and adapt heuristics known from DTW to computing the MSM distance.
-One heuristic employs the metric property of MSM and the previously introduced
-linear-time algorithm. Our experimental studies achieve substantial speed-ups
-in our approaches compared to previous MSM algorithms. In particular, the
-running time for MSM is faster for a majority of data sets than a
-state-of-the-art DTW distance computation.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Max-Min Diversification with Fairness Constraints: Exact and Approximation Algorithms</title>
-  <guid>http://arxiv.org/abs/2301.02053</guid>
-  <link>http://arxiv.org/abs/2301.02053</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_Y/0/1/0/all/0/1&quot;&gt;Yanhao Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mathioudakis_M/0/1/0/all/0/1&quot;&gt;Michael Mathioudakis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_J/0/1/0/all/0/1&quot;&gt;Jia Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fabbri_F/0/1/0/all/0/1&quot;&gt;Francesco Fabbri&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Diversity maximization aims to select a diverse and representative subset of
-items from a large dataset. It is a fundamental optimization task that finds
-applications in data summarization, feature selection, web search, recommender
-systems, and elsewhere. However, in a setting where data items are associated
-with different groups according to sensitive attributes like sex or race, it is
-possible that algorithmic solutions for this task, if left unchecked, will
-under- or over-represent some of the groups. Therefore, we are motivated to
-address the problem of \emph{max-min diversification with fairness
-constraints}, aiming to select $k$ items to maximize the minimum distance
-between any pair of selected items while ensuring that the number of items
-selected from each group falls within predefined lower and upper bounds. In
-this work, we propose an exact algorithm based on integer linear programming
-that is suitable for small datasets as well as a
-$\frac{1-\varepsilon}{5}$-approximation algorithm for any $\varepsilon \in (0,
-1)$ that scales to large datasets. Extensive experiments on real-world datasets
-demonstrate the superior performance of our proposed algorithms over existing
-ones.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-06 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>TR23-001 |  New Lower Bounds against Homogeneous Non-Commutative Circuits | 
-
-	Prerona Chatterjee, 
-
-	Pavel Hrubes</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/001</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/001</link>
-  <description>
-    We give several new lower bounds on size of homogeneous non-commutative circuits. We present an explicit homogeneous bivariate polynomial of degree $d$ which requires homogeneous non-commutative circuit of size $\Omega(d/\log d)$. For an $n$-variate polynomial with $n&amp;gt;1$, the result can be improved to $\Omega(nd)$, if $d\leq n$,  or $\Omega(nd \frac{\log n}{\log d})$, if $d\geq n$.
-  Under the same assumptions, we also give a quadratic lower bound for the ordered version of the central symmetric polynomial.
-  </description>
-  <pubDate>2023-01-05 12:43:37 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>Greatest Hits 2015-2022, Part II</title>
-  <guid>http://gilkalai.wordpress.com/?p=23715</guid>
-  <link>https://gilkalai.wordpress.com/2023/01/05/greatest-hits-2015-2022-part-ii/</link>
-  <description>
-    &lt;p&gt;This is the second part of &lt;a href=&quot;https://gilkalai.wordpress.com/2023/01/01/greatest-hits-2015-2022-part-i/&quot;&gt;Greatest Hits 2015-2022&lt;/a&gt;, Part I. Here are popular and favorite posts published in 2019-2022.&lt;/p&gt;
-&lt;h2&gt;2019 Supremacy and Sensitivity (and Sunflowers)&lt;/h2&gt;
-&lt;p&gt;Test your intuition 38 was contributed in March 2019 by my youngest son Lior. &lt;a href=&quot;https://gilkalai.wordpress.com/2019/03/18/tyi38-lior-kalai-monty-hall-meets-survivor/&quot; rel=&quot;bookmark&quot;&gt;TYI38 Lior Kalai: Monty Hall Meets Survivor&lt;/a&gt;. Aside from the problem itself, the post contained beautiful pictures of my family, and, two days after the post was published, I added the startling breaking news about Karen Uhlenbeck being awarded the Abel Prize.&lt;/p&gt;
-&lt;p&gt;Also in March 2019, the post &lt;a href=&quot;https://gilkalai.wordpress.com/2019/03/26/10-milestones-in-the-history-of-mathematics-according-to-nati-and-me/&quot; rel=&quot;bookmark&quot;&gt;10 Milestones in the History of Mathematics according to Nati and Me&lt;/a&gt; drew many views and many comments. And in April 2019 I made an unusual invitation:  &lt;a href=&quot;https://gilkalai.wordpress.com/2019/04/23/an-invitation-to-a-conference-visions-in-mathematics-towards-2000/&quot; rel=&quot;bookmark&quot;&gt;An Invitation to a Conference: Visions in Mathematics towards 2000,&lt;/a&gt; with links to videos and many pictures of us 20 years younger.  This followed by a post discussing a bold statement made at the conference by Misha Gromov &lt;a href=&quot;https://gilkalai.wordpress.com/2019/04/25/are-natural-mathematical-problems-bad-problems/&quot; rel=&quot;bookmark&quot;&gt;Are Natural Mathematical Problems Bad Problems?&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Quantum supremacy&lt;/h3&gt;
-&lt;p&gt;In August 2019 I presented a new paper and a CERN colloquium:  &lt;a href=&quot;https://gilkalai.wordpress.com/2019/08/21/the-argument-against-quantum-computers-a-cern-colloquium-and-a-new-paper/&quot; rel=&quot;bookmark&quot;&gt;The Argument against Quantum Computers – a CERN Colloquium and a New Paper&lt;/a&gt;, a month later on September 22, 2019, a paper by a team from Google was leaked with a demonstration of quantum supremacy, which, if true, would refute my argument. I found the leaked paper rather unconvincing and raised some concerns about it in this post: &lt;a href=&quot;https://gilkalai.wordpress.com/2019/09/23/quantum-computers-amazing-progress-google-ibm-and-extraordinary-but-probably-false-supremacy-claims-google/&quot; rel=&quot;bookmark&quot;&gt;Quantum computers: amazing progress (Google &amp;amp; IBM), and extraordinary but probably false supremacy claims (Google).&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Two weeks later I wrote &lt;a href=&quot;https://gilkalai.wordpress.com/2019/10/13/the-story-of-poincare-and-his-friend-the-baker/&quot; rel=&quot;bookmark&quot;&gt;The story of Poincaré and his friend the baker,&lt;/a&gt; where I raised another concern regarding the calibration process of the paper, and this concern was amply discussed in the comment section.  Following the appearance of the Google paper itself on October 21, 2019, and some responses from the Google team,  I wrote on November 11, 2019 a new post &lt;a href=&quot;https://gilkalai.wordpress.com/2019/11/13/gils-collegial-quantum-supremacy-skepticism-faq/&quot; rel=&quot;bookmark&quot;&gt;Gil’s Collegial Quantum Supremacy Skepticism FAQ.&lt;/a&gt; Some further updates and discussion can be found in the Dec. 27 post &lt;a href=&quot;https://gilkalai.wordpress.com/2019/12/27/the-google-quantum-supremacy-demo/&quot; rel=&quot;bookmark&quot;&gt;The Google Quantum Supremacy Demo and the Jerusalem HQCA debate&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;2019 mathematical news&lt;/h3&gt;
-&lt;p&gt;The mathematical news that was most exciting to me in 2019 was reported in August. &lt;a href=&quot;https://gilkalai.wordpress.com/2019/08/23/amazing-ryan-alweiss-shachar-lovett-kewen-wu-jiapeng-zhang-made-dramatic-progress-on-the-sunflower-conjecture/&quot; rel=&quot;bookmark&quot;&gt;Amazing: Ryan Alweiss, Shachar Lovett, Kewen Wu, Jiapeng Zhang made dramatic progress on the Sunflower Conjecture.&lt;/a&gt; This was a problem I had first heard about as an undergraduate, I thought about it over the years, and we ran polymath 10 for attacking it. I also was excited about other possible applications, but did not imagine it would be related to Jeff Kahn and mine expectation threshold conjecture. But indeed it was related: &lt;a href=&quot;https://gilkalai.wordpress.com/2019/10/30/amazing-keith-frankston-jeff-kahn-bhargav-narayanan-jinyoung-park-thresholds-versus-fractional-expectation-thresholds/&quot; rel=&quot;bookmark&quot;&gt;Amazing! Keith Frankston, Jeff Kahn, Bhargav Narayanan, Jinyoung Park: Thresholds versus fractional expectation-thresholds&lt;/a&gt;;&lt;/p&gt;
-&lt;p&gt;Other great results were: &lt;a href=&quot;https://gilkalai.wordpress.com/2019/07/02/amazing-hao-huang-proved-the-sensitivity-conjecture/&quot; rel=&quot;bookmark&quot;&gt;Amazing: Hao Huang Proved the Sensitivity Conjecture!&lt;/a&gt; (July);  &lt;a href=&quot;https://gilkalai.wordpress.com/2019/05/10/sansation-in-the-morning-news-yaroslav-shitov-counterexamples-to-hedetniemis-conjecture/&quot; rel=&quot;bookmark&quot;&gt;A sensation in the morning news – Yaroslav Shitov: Counterexamples to Hedetniemi’s conjecture&lt;/a&gt; (May); &lt;a href=&quot;https://gilkalai.wordpress.com/2019/06/28/another-sensation-annika-heckel-non-concentration-of-the-chromatic-number-of-a-random-graph/&quot; rel=&quot;bookmark&quot;&gt;Another sensation – Annika Heckel: Non-concentration of the chromatic number of a random graph&lt;/a&gt; (June); &lt;a href=&quot;https://gilkalai.wordpress.com/2019/02/02/konstantin-tikhomrov-the-probability-that-a-bernoulli-matrix-is-singular/&quot; rel=&quot;bookmark&quot;&gt;Konstantin Tikhomirov: The Probability that a Bernoulli Matrix is Singular&lt;/a&gt; (February); &lt;a href=&quot;https://gilkalai.wordpress.com/2019/09/22/jeff-kahn-and-jinyoung-park-maximal-independent-sets-and-a-new-isoperimetric-inequality-for-the-hamming-cube/&quot; rel=&quot;bookmark&quot;&gt;Jeff Kahn and Jinyoung Park: Maximal independent sets and a new isoperimetric inequality for the Hamming cube; &lt;/a&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2019/07/23/matan-harel-frank-mousset-and-wojciech-samotij-and-the-the-infamous-upper-tail-problem/&quot; rel=&quot;bookmark&quot;&gt;Matan Harel, Frank Mousset, and Wojciech Samotij and the “the infamous upper tail” problem; &lt;/a&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2019/02/16/attila-pors-universality-result-for-tverberg-partitions/&quot; rel=&quot;bookmark&quot;&gt;Attila Por’s Universality Result for Tverberg Partitions; &lt;/a&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2019/07/20/isabella-novik-and-hailun-zheng-neighborly-centrally-symmetric-spheres-exist-in-all-dimensions/&quot; rel=&quot;bookmark&quot;&gt;Isabella Novik and Hailun Zheng: Neighborly centrally symmetric spheres exist in all dimensions!&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2019/03/22/danny-nguyen-and-igor-pak-presburger-arithmetic-problem-solved/&quot; rel=&quot;bookmark&quot;&gt;Danny Nguyen and Igor Pak: Presburger Arithmetic Problem Solved!&lt;/a&gt; And in number theory &lt;a href=&quot;https://gilkalai.wordpress.com/2019/03/09/8866128975287528%c2%b3-8778405442862239%c2%b3-2736111468807040%c2%b3/&quot; rel=&quot;bookmark&quot;&gt;8866128975287528³+(-8778405442862239)³+(-2736111468807040)³&lt;/a&gt;;&lt;/p&gt;
-&lt;p&gt;We had two great guest posts: &lt;a href=&quot;https://gilkalai.wordpress.com/2019/07/17/dan-romik-on-the-riemann-zeta-function/&quot; rel=&quot;bookmark&quot;&gt;Dan Romik on the Riemann zeta function&lt;/a&gt;, and &lt;a href=&quot;https://gilkalai.wordpress.com/2019/07/09/imre-barany-limit-shape/&quot; rel=&quot;bookmark&quot;&gt;Imre Bárány: Limit shape.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In 2019 I also wrote about &lt;a href=&quot;https://gilkalai.wordpress.com/2019/01/02/jean/&quot;&gt;Jean Bourgain&lt;/a&gt; and about &lt;a href=&quot;https://gilkalai.wordpress.com/2019/05/01/the-last-paper-of-catherine-renyi-and-alfred-renyi-counting-k-trees/&quot; rel=&quot;bookmark&quot;&gt;The last paper of Catherine Rényi and Alfréd Rényi: Counting k-Trees.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://gilkalai.files.wordpress.com/2019/09/talab.png&quot;&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;16899&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2019/02/16/attila-pors-universality-result-for-tverberg-partitions/rainbow-2/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2019/02/rainbow-1.png&quot; data-orig-size=&quot;983,711&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;rainbow&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2019/02/rainbow-1.png?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2019/02/rainbow-1.png?w=640&quot; class=&quot;alignnone  wp-image-16899&quot; src=&quot;https://gilkalai.files.wordpress.com/2019/02/rainbow-1.png?w=274&amp;#038;h=198&quot; alt=&quot;rainbow&quot; width=&quot;274&quot; height=&quot;198&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2019/02/rainbow-1.png?w=274&amp;amp;h=198 274w, https://gilkalai.files.wordpress.com/2019/02/rainbow-1.png?w=548&amp;amp;h=396 548w, https://gilkalai.files.wordpress.com/2019/02/rainbow-1.png?w=150&amp;amp;h=108 150w, https://gilkalai.files.wordpress.com/2019/02/rainbow-1.png?w=300&amp;amp;h=217 300w&quot; sizes=&quot;(max-width: 274px) 100vw, 274px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: #ff0000&quot;&gt;A drawing explaining Attila Por&amp;#8217;s construction&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png&quot;&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;16725&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2019/01/02/jean/jean-joram/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png&quot; data-orig-size=&quot;1586,1238&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;Jean-Joram&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png?w=640&quot; class=&quot;alignnone  wp-image-16725&quot; src=&quot;https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png?w=217&amp;#038;h=169&quot; alt=&quot;Jean-Joram&quot; width=&quot;217&quot; height=&quot;169&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png?w=217&amp;amp;h=169 217w, https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png?w=434&amp;amp;h=338 434w, https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png?w=150&amp;amp;h=117 150w, https://gilkalai.files.wordpress.com/2018/12/Jean-Joram.png?w=300&amp;amp;h=234 300w&quot; sizes=&quot;(max-width: 217px) 100vw, 217px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: #ff0000&quot;&gt;Jean Bourgain and Joram Lindenstrauss&lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;2020 To cheer you up in difficult times&lt;/h2&gt;
-&lt;h3&gt;Mathematical news&lt;/h3&gt;
-&lt;p&gt;The post about mathematical news that excited both the readers and me the most appeared in January: &lt;a href=&quot;https://gilkalai.wordpress.com/2020/01/17/amazing-zhengfeng-ji-anand-natarajan-thomas-vidick-john-wright-and-henry-yuen-proved-that-mip-re-and-thus-disproved-connes-1976-embedding-conjecture-and-provided-a-negative-answer-to-tsirelso/&quot; rel=&quot;bookmark&quot;&gt;Amazing: Zhengfeng Ji, Anand Natarajan, Thomas Vidick, John Wright, and Henry Yuen proved that MIP* = RE and thus disproved Connes 1976 Embedding Conjecture, and provided a negative answer to Tsirelson’s problem. &lt;/a&gt;My final correspondence with Boris Tsirelson was about this breakthrough and I wrote about him in this post &lt;a href=&quot;https://gilkalai.wordpress.com/2020/04/03/trees-not-cubes-memories-of-boris-tsirelson/&quot; rel=&quot;bookmark&quot;&gt;Trees not Cubes! Memories of Boris Tsirelson&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Two other exciting and popular posts with 2020 major mathematical news came in July and December. The July post was &lt;a href=&quot;https://gilkalai.wordpress.com/2020/07/08/to-cheer-you-up-in-difficult-times-7-bloom-and-sisask-just-broke-the-logarithm-barrier-for-roths-theorem/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 7: Bloom and Sisask just broke the logarithm barrier for Roth’s theorem!;&lt;/a&gt; And in December &lt;a href=&quot;https://gilkalai.wordpress.com/2020/12/21/to-cheer-you-up-in-difficult-times-15-yuansi-chen-achieved-a-major-breakthrough-on-bourgains-slicing-problem-and-the-kannan-lovasz-and-simonovits-conjecture/&quot; rel=&quot;bookmark&quot;&gt;To Cheer You Up in Difficult Times 15: Yuansi Chen Achieved a Major Breakthrough on Bourgain’s Slicing Problem and the Kannan, Lovász and Simonovits Conjecture&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;To cheer you up in difficult times (Math news, and fun)&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2020/05/08/to-cheer-you-up-in-difficult-times-3-a-guest-post-by-noam-lifshitz-on-the-new-hypercontractivity-inequality-of-peter-keevash-noam-lifshitz-eoin-long-and-dor-minzer/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 3: A guest post by Noam Lifshitz on the new hypercontractivity inequality of Peter Keevash, Noam Lifshitz, Eoin Long and Dor Minzer&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2020/05/30/to-cheer-you-up-in-difficult-times-5-a-new-elementary-proof-of-the-prime-number-theorem-by-florian-k-richter/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 5: A New Elementary Proof of the Prime Number Theorem by Florian K. Richter;&lt;/a&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2020/06/26/to-cheer-you-up-in-difficult-times-6-play-rani-sharims-two-player-games-of-life-read-maya-bar-hillel-presentation-on-catching-lies-with-statistics-and-more/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 6: Play Rani Sharim’s two-player games of life, read Maya Bar-Hillel presentation on catching lies with statistics, and more.&lt;/a&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2020/08/01/to-cheer-you-up-in-difficult-times-8-nathan-keller-and-ohad-klein-proved-tomaszewskis-conjecture-on-randomly-signed-sums/&quot; rel=&quot;bookmark&quot;&gt;;To Cheer you up in Difficult Times 8: Nathan Keller and Ohad Klein Proved Tomaszewski’s Conjecture on Randomly Signed Sums&lt;/a&gt;;  &lt;a href=&quot;https://gilkalai.wordpress.com/2020/08/14/to-cheer-you-up-in-difficult-times-9-alexey-pokrovskiy-proved-that-rotas-basis-conjecture-holds-asymptotically/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 9: Alexey Pokrovskiy proved that Rota’s Basis Conjecture holds asymptotically&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2020/09/23/to-cheer-you-up-in-difficult-times-12-asaf-ferber-and-david-conlon-found-new-lower-bounds-for-diagonal-ramsey-numbers/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 12: Asaf Ferber and David Conlon found new lower bounds for diagonal Ramsey numbers&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2020/10/11/three-games-to-cheer-you-up/&quot; rel=&quot;bookmark&quot;&gt;Three games to cheer you up.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The first post which explicitly aimed cheering up our readers was from mid-March when it had become clear that the Corvid outbreak is going to overshadow our lives. &lt;a href=&quot;https://gilkalai.wordpress.com/2020/03/14/to-cheer-you-up-in-complicated-times-a-book-proof-by-rom-pinchasi-and-alexandr-polyanskii-for-a-1978-conjecture-by-erdos-and-purdy/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in complicated times – A book proof by Rom Pinchasi and Alexandr Polyanskii for a 1978 Conjecture by Erdős and Purdy!&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Other mathematical news from 2019 were &lt;a href=&quot;https://gilkalai.wordpress.com/2020/01/27/ringel-conjecture-solved-congratulations-to-richard-montgomery-alexey-pokrovskiy-and-benny-sudakov/&quot; rel=&quot;bookmark&quot;&gt;Ringel Conjecture, Solved! Congratulations to Richard Montgomery, Alexey Pokrovskiy, and Benny Sudakov;&lt;/a&gt; In February &lt;a href=&quot;https://gilkalai.wordpress.com/2020/02/28/remarkable-new-stochastic-methods-in-abf-ronen-eldan-and-renan-gross-found-a-new-proof-for-kkl-and-settled-a-conjecture-by-talagrand/&quot; rel=&quot;bookmark&quot;&gt;Remarkable New Stochastic Methods in ABF: Ronen Eldan and Renan Gross Found a New Proof for KKL and Settled a Conjecture by Talagrand;&lt;/a&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2020/03/22/kelman-kindler-lifshitz-minzer-and-safra-towards-the-entropy-influence-conjecture/&quot; rel=&quot;bookmark&quot;&gt;Kelman, Kindler, Lifshitz, Minzer, and Safra: Towards the Entropy-Influence Conjecture&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2020/07/24/noam-lifshitz-a-new-hypercontractivity-inequality-the-proof/&quot; rel=&quot;bookmark&quot;&gt;Noam Lifshitz: A new hypercontractivity inequality — The proof!&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Quantum news and matters&lt;/h3&gt;
-&lt;p&gt;In December 2020 I wrote about an attempt to establish quantum supremacy using a photonic device: &lt;a href=&quot;https://gilkalai.wordpress.com/2020/12/06/photonic-huge-quantum-advantage/&quot; rel=&quot;bookmark&quot;&gt;Photonic Huge Quantum Advantage ???&lt;/a&gt;, This time, an algorithm from a 2014 paper by Guy Kindler and me sufficed to refute the fantastic claims. A few days later I wrote &lt;a href=&quot;https://gilkalai.wordpress.com/2020/12/29/the-argument-against-quantum-computers-a-very-short-introduction/&quot; rel=&quot;bookmark&quot;&gt;The Argument Against Quantum Computers – A Very Short Introduction&lt;/a&gt;, which has become one of the blog&amp;#8217;s blockbusters.&lt;/p&gt;
-&lt;h2&gt;2021 Erdős-Faber-Lovász and Diverse Matters&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Discussion about Diversity:&lt;/strong&gt; the post &lt;a href=&quot;https://gilkalai.wordpress.com/2021/09/22/to-cheer-you-up-in-difficult-times-31-federico-ardilas-four-axioms-for-cultivating-diversity/&quot; rel=&quot;bookmark&quot;&gt;To Cheer You Up in Difficult Times 31: Federico Ardila’s Four Axioms for Cultivating Diversity&lt;/a&gt;, led to heated discussions mainly on Facebook.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Celebrations and discussions:&lt;/strong&gt; The post &lt;a href=&quot;https://gilkalai.wordpress.com/2021/03/17/cheerful-news-in-difficult-times-the-abel-prize-is-awarded-to-laszlo-lovasz-and-avi-wigderson/&quot; rel=&quot;bookmark&quot;&gt;Cheerful News in Difficult Times: The Abel Prize is Awarded to László Lovász and Avi Wigderson,&lt;/a&gt; contains a lot of pictures of Avi and Laci and their families (and in a few cases of my family), and it was followed by the most viewed 2021 post presenting a debate between Avi Wigderson and me, which goes deeply into the connection between (computer science) theory, practice, and mathematics: &lt;a href=&quot;https://gilkalai.wordpress.com/2021/04/22/the-probabilistic-proof-that-2400-593-is-a-prime-a-revolutionary-new-type-of-mathematical-proof-or-not-a-proof-at-all/&quot; rel=&quot;bookmark&quot;&gt;The probabilistic proof that 2^400-593 is a prime: a revolutionary new type of mathematical proof, or not a proof at all?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Mathematical news from 2021:&lt;/strong&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2021/01/14/to-cheer-you-up-in-difficult-times-17-amazing-the-erdos-faber-lovasz-conjecture-for-large-n-was-proved-by-dong-yeap-kang-tom-kelly-daniela-kuhn-abhishek-methuku-and-deryk-osthus/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 17: Amazing! The Erdős-Faber-Lovász conjecture (for large n) was proved by Dong Yeap Kang, Tom Kelly, Daniela Kühn, Abhishek Methuku, and Deryk Osthus!&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2021/02/08/to-cheer-you-up-in-difficult-times-20-ben-green-presents-super-polynomial-lower-bounds-for-off-diagonal-van-der-waerden-numbers-w3k/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 20: Ben Green presents super-polynomial lower bounds for off-diagonal van der Waerden numbers W(3,k)&lt;/a&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2021/02/25/to-cheer-you-up-in-difficult-times-21-giles-gardam-lecture-and-new-result-on-kaplanskys-conjectures/&quot; rel=&quot;bookmark&quot;&gt;;To cheer you up in difficult times 21: Giles Gardam lecture and new result on Kaplansky’s conjectures&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2021/09/17/to-cheer-you-up-in-difficult-times-30-irit-dinur-shai-evra-ron-livne-alex-lubotzky-and-shahar-mozes-constructed-locally-testable-codes-with-constant-rate-distance-and-locality/&quot; rel=&quot;bookmark&quot;&gt;To Cheer you up in difficult times 30: Irit Dinur, Shai Evra, Ron Livne, Alex Lubotzky, and Shahar Mozes Constructed Locally Testable Codes with Constant Rate, Distance, and Locality.&lt;/a&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2021/12/11/to-cheer-you-up-in-difficult-times-34-ringel-circle-problem-solved-by-james-davies-chaya-keller-linda-kleist-shakhar-smorodinsky-and-bartosz-walczak/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 34: Ringel Circle Problem solved by James Davies, Chaya Keller, Linda Kleist, Shakhar Smorodinsky, and Bartosz Walczak;&lt;/a&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2021/01/21/amazing-simpler-and-more-general-proofs-for-the-g-theorem-by-stavros-argyrios-papadakis-and-vasiliki-petrotou-and-by-karim-adiprasito-stavros-argyrios-papadakis-and-vasiliki-petrotou/&quot; rel=&quot;bookmark&quot;&gt;Amazing: Simpler and more general proofs for the g-theorem by Stavros Argyrios Papadakis and Vasiliki Petrotou, and by Karim Adiprasito, Stavros Argyrios Papadakis, and Vasiliki Petrotou.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Two collections of startling mathematical news:&lt;/strong&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2021/05/20/to-cheer-you-up-in-difficult-times-25-some-mathematical-news-part-2/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 25: some mathematical news! (Part 2)&lt;/a&gt; and &lt;a href=&quot;https://gilkalai.wordpress.com/2021/03/23/to-cheer-you-up-in-difficult-times-22-some-mathematical-news-part-1/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 22: some mathematical news! (Part 1)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Memorabilia&lt;/strong&gt;: &lt;a href=&quot;https://gilkalai.wordpress.com/2021/02/19/nostalgia-corner-john-riordans-referee-report-of-my-first-paper/&quot; rel=&quot;bookmark&quot;&gt;Nostalgia corner: John Riordan’s referee report of my first paper&lt;/a&gt;;  &lt;a href=&quot;https://gilkalai.wordpress.com/2021/05/14/to-cheer-you-up-in-difficult-times-23-the-original-hand-written-slides-of-terry-taos-2015-einstein-lecture-in-jerusalem/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 23: the original hand-written slides of Terry Tao’s 2015 Einstein Lecture in Jerusalem&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Quantum matters:  &lt;/strong&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2021/03/10/amazing-feng-pan-and-pan-zhang-announced-a-way-to-spoof-classically-simulate-the-googles-quantum-supremacy-circuit/&quot; rel=&quot;bookmark&quot;&gt;Amazing: Feng Pan and Pan Zhang Announced a Way to “Spoof” (Classically Simulate) the Google’s Quantum Supremacy Circuit!;&lt;/a&gt; This work and several related works largely (but not fully) refuted  Google&amp;#8217;s 2019 quantum supremacy claim.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Free will:&lt;/strong&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2021/08/18/to-cheer-you-up-in-difficult-times-29-free-will-predictability-and-quantum-computers/&quot; rel=&quot;bookmark&quot;&gt;To cheer you up in difficult times 29: Free will, predictability and quantum computers&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A post about my papers&lt;/strong&gt;:  &lt;a href=&quot;https://gilkalai.wordpress.com/2021/08/05/let-me-tell-you-about-three-of-my-recent-papers/&quot; rel=&quot;bookmark&quot;&gt;Let me tell you about three of my recent papers;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Open problems:&lt;/strong&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2021/01/10/open-problem-session-of-huji-combsem-problem-5-gil-kalai-the-3%e1%b5%88-problem/&quot; rel=&quot;bookmark&quot;&gt;The 3ᵈ problem&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2020/11/25/open-problem-session-of-huji-combsem-problem-1-nati-linial-turan-type-theorems-for-simplicial-complexes/&quot; rel=&quot;bookmark&quot;&gt;Turan type theorems for simplicial complexes.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Are we up for a new polymath project?&lt;/strong&gt;: &lt;a href=&quot;https://gilkalai.wordpress.com/2021/01/29/possible-future-polymath-projects-2009-2021/&quot; rel=&quot;bookmark&quot;&gt;Possible future Polymath projects (2009, 2021)&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;2022 The expectation threshold conjecture&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Blogging from ICM 2022:&lt;/strong&gt;  I &lt;a href=&quot;https://gilkalai.wordpress.com/category/icm2022/&quot;&gt;slowly blogged about various events&lt;/a&gt; and lectures from ICM 2022. The most popular post about ICM2022 was about verifying mathematical proofs using computers and especially LEAN: &lt;a href=&quot;https://gilkalai.wordpress.com/2022/07/17/icm-2022-kevin-buzzard-the-rise-of-formalism-in-mathematics/&quot; rel=&quot;bookmark&quot;&gt;ICM 2022. Kevin Buzzard: The Rise of Formalism in Mathematics.&lt;/a&gt; I attempted to report on &lt;a href=&quot;https://gilkalai.wordpress.com/2022/07/13/icm-2022-langlands-day/&quot; rel=&quot;bookmark&quot;&gt;ICM 2022: Langlands Day&lt;/a&gt; which I followed on Zoom, and I gave a live report from Helsinki on &lt;a href=&quot;https://gilkalai.wordpress.com/2022/07/06/icm-2022-awarding-ceremonies-1/&quot; rel=&quot;bookmark&quot;&gt;ICM 2022 awarding ceremonies (1)&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Because of Russia&amp;#8217;s invasion of Ukraine, the ICM originally planned for St. Petersburg turned into a virtual event, but the opening ceremonies and lectures of the medalists took place with live audience in Helsinki.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png&quot;&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;23796&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2023/01/05/greatest-hits-2015-2022-part-ii/israeli-del2/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png&quot; data-orig-size=&quot;1024,637&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;israeli-del2&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png?w=640&quot; class=&quot;alignnone  wp-image-23796&quot; src=&quot;https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png?w=389&amp;#038;h=242&quot; alt=&quot;israeli-del2&quot; width=&quot;389&quot; height=&quot;242&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png?w=389&amp;amp;h=242 389w, https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png?w=778&amp;amp;h=484 778w, https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png?w=150&amp;amp;h=93 150w, https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png?w=300&amp;amp;h=187 300w, https://gilkalai.files.wordpress.com/2022/12/israeli-del2.png?w=768&amp;amp;h=478 768w&quot; sizes=&quot;(max-width: 389px) 100vw, 389px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: #ff0000&quot;&gt;The Israeli delegation to the 2022 general assembly of the IMU. With Tammy Ziegler and Mina Teicher. &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The mathematical news that caught most attention:&lt;/strong&gt;  A conjecture of Jeff Kahn and me is now fully resolved: &lt;a href=&quot;https://gilkalai.wordpress.com/2022/04/02/amazing-jinyoung-park-and-huy-tuan-pham-settled-the-expectation-threshold-conjecture/&quot; rel=&quot;bookmark&quot;&gt;Amazing: Jinyoung Park and Huy Tuan Pham settled the expectation threshold conjecture!&lt;/a&gt;  &amp;#8230; and major progress on Frankl&amp;#8217;s conjecture: &lt;a href=&quot;https://gilkalai.wordpress.com/2022/11/17/amazing-justin-gilmer-gave-a-constant-lower-bound-for-the-union-closed-sets-conjecture/&quot; rel=&quot;bookmark&quot;&gt;Amazing: Justin Gilmer gave a constant lower bound for the union-closed sets conjecture&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Other news&lt;/strong&gt;:  &lt;a href=&quot;https://gilkalai.wordpress.com/2022/05/20/oliver-janzer-and-benny-sudakov-settled-the-erdos-sauer-problem/&quot; rel=&quot;bookmark&quot;&gt;Oliver Janzer and Benny Sudakov Settled the Erdős-Sauer Problem; &lt;/a&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2022/10/15/boaz-klartag-and-joseph-lehec-the-slice-conjecture-up-to-polylogarithmic-factor/&quot; rel=&quot;bookmark&quot;&gt;Bo’az Klartag and Joseph Lehec: The Slice Conjecture Up to Polylogarithmic Factor! &lt;/a&gt;;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;News about polytopes and combinatorial geometry:&lt;/strong&gt; &lt;a href=&quot;https://gilkalai.wordpress.com/2022/04/29/joshua-hinman-proved-baranys-conjecture-on-face-numbers-of-polytopes-and-lei-xue-proved-a-lower-bound-conjecture-by-grunbaum/&quot; rel=&quot;bookmark&quot;&gt;Joshua Hinman proved Bárány’s conjecture on face numbers of polytopes, and Lei Xue proved a lower bound conjecture by Grünbaum; &lt;/a&gt;&lt;a href=&quot;https://gilkalai.wordpress.com/2022/10/19/james-davies-every-finite-colouring-of-the-plane-contains-a-monochromatic-pair-of-points-at-an-odd-distance-from-each-other/&quot; rel=&quot;bookmark&quot;&gt;James Davies: Every finite colouring of the plane contains a monochromatic pair of points at an odd distance from each other.&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2022/03/05/chaim-even-zohar-tsviqa-lakrec-and-ran-tessler-present-the-amplituhedron-bcfw-triangulation/&quot; rel=&quot;bookmark&quot;&gt;Chaim Even-Zohar, Tsviqa Lakrec, and Ran Tessler present: The Amplituhedron BCFW Triangulation&lt;/a&gt;; &lt;a href=&quot;https://gilkalai.wordpress.com/2022/08/19/alexander-a-gaifullin-many-27-vertex-triangulations-of-manifolds-like-the-octonionic-projective-plane-not-even-one-was-known-before/&quot; rel=&quot;bookmark&quot;&gt;Alexander A. Gaifullin: Many 27-vertex Triangulations of Manifolds Like the Octonionic Projective Plane (Not Even One Was Known Before).&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Quantum matters:&lt;/strong&gt;  &lt;a href=&quot;https://gilkalai.wordpress.com/2022/11/05/inaugural-address-at-the-hungarian-academy-of-science-the-quantum-computer-a-miracle-or-mirage/&quot; rel=&quot;bookmark&quot;&gt;Inaugural address at the Hungarian Academy of Science: The Quantum Computer – A Miracle or Mirage&lt;/a&gt;;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-05 11:01:54 UTC</pubDate>
-  <author>Gil Kalai</author>
-</item>
-
-<item>
-  <title>Cargo Cult Quantum Factoring</title>
-  <guid>https://scottaaronson.blog/?p=6957</guid>
-  <link>https://scottaaronson.blog/?p=6957</link>
-  <description>
-    &lt;p&gt;Just days after we celebrated &lt;a href=&quot;https://scottaaronson.blog/?p=6946&quot;&gt;my wife&amp;#8217;s 40th birthday&lt;/a&gt;, she came down with COVID, meaning she&amp;#8217;s been isolating and I&amp;#8217;ve been spending almost all my time dealing with our kids.&lt;/p&gt;
-
-
-
-&lt;p&gt;But if experience has taught me anything, it&amp;#8217;s that the quantum hype train never slows down.  In the past 24 hours, at least four people have emailed to ask me about a &lt;a href=&quot;https://arxiv.org/abs/2212.12372&quot;&gt;new paper&lt;/a&gt; entitled &amp;#8220;Factoring integers with sublinear resources on a superconducting quantum processor.&amp;#8221;  Even the security expert Bruce Schneier, while skeptical, took the paper &lt;a href=&quot;https://www.schneier.com/blog/archives/2023/01/breaking-rsa-with-a-quantum-computer.html&quot;&gt;surprisingly seriously&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The paper claims &amp;#8230; well, it&amp;#8217;s hard to pin down what it claims, but it&amp;#8217;s certainly &lt;em&gt;given many people the impression&lt;/em&gt; that there&amp;#8217;s been a decisive advance on how to factor huge integers, and thereby break the RSA cryptosystem, using a near-term quantum computer.  &lt;em&gt;Not&lt;/em&gt; by using &lt;a href=&quot;https://en.wikipedia.org/wiki/Shor%27s_algorithm&quot;&gt;Shor&amp;#8217;s Algorithm&lt;/a&gt;, mind you, but by using the deceptively similarly named &lt;a href=&quot;https://link.springer.com/chapter/10.1007/3-540-46416-6_24&quot;&gt;Schnorr&amp;#8217;s Algorithm&lt;/a&gt;.  The latter is a classical algorithm based on lattices, which the authors then &amp;#8220;enhance&amp;#8221; using the heuristic quantum optimization method called &lt;a href=&quot;https://arxiv.org/abs/1411.4028&quot;&gt;QAOA&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;For those who don&amp;#8217;t care to read further, here is my 3-word review:&lt;/p&gt;
-
-
-
-&lt;h2&gt;No.  Just No.&lt;/h2&gt;
-
-
-
-&lt;p&gt;And here&amp;#8217;s my slightly longer review:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;Schnorr ≠ Shor&lt;/em&gt;.  Yes, even when Schnorr&amp;#8217;s algorithm is dubiously “enhanced” using QAOA&amp;#8212;a quantum algorithm that, incredibly, for all the hundreds of papers written about it, has not yet been convincingly argued to yield any speedup for any problem whatsoever (besides, as it were, the problem of &lt;a href=&quot;https://arxiv.org/abs/1602.07674&quot;&gt;reproducing its own pattern of errors&lt;/a&gt;) (&lt;a href=&quot;https://arxiv.org/abs/2208.06909&quot;&gt;one possible recent exception&lt;/a&gt; from Sami Boulebnane and Ashley Montanaro).&lt;/p&gt;
-
-
-
-&lt;p&gt;In the new paper, the authors spend page after page saying-without-saying that it &lt;em&gt;might&lt;/em&gt; soon become possible to break RSA-2048, using a NISQ (i.e., non-fault-tolerant) quantum computer.  They do so via two time-tested strategems:&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;the detailed exploration of irrelevancies (mostly, optimization of the number of &lt;em&gt;qubits&lt;/em&gt;, while ignoring the number of &lt;em&gt;gates&lt;/em&gt;), and&lt;/li&gt;
-
-
-
-&lt;li&gt;complete silence about the &lt;strong&gt;one crucial point&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;Then, finally, they come clean about the one crucial point in a single sentence of the Conclusion section:&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;It should be pointed out that the quantum speedup of the algorithm is unclear due to the ambiguous convergence of QAOA.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;“Unclear” is an understatement here.  It seems to me that a miracle would be required for the approach here to yield any benefit at all, compared to just running the classical Schnorr&amp;#8217;s algorithm on your laptop.  And if the latter were able to break RSA, it would&amp;#8217;ve already done so.&lt;/p&gt;
-
-
-
-&lt;p&gt;All told, this is one of the most actively misleading quantum computing papers I’ve seen in 25 years, and I’ve seen &amp;#8230; many.  Having said that, this actually &lt;em&gt;isn&amp;#8217;t&lt;/em&gt; the first time I&amp;#8217;ve encountered the strange idea that the exponential quantum speedup for factoring integers, which we know about from Shor’s algorithm, should somehow “rub off” onto quantum optimization heuristics that embody none of the actual insights of Shor&amp;#8217;s algorithm, as if by sympathetic magic.  Since this idea needs a name, I&amp;#8217;d hereby like to propose &lt;strong&gt;Cargo Cult Quantum Factoring&lt;/strong&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;And with that, I feel I&amp;#8217;ve adequately discharged my duties here to sanity and truth.  If I&amp;#8217;m slow to answer comments, it&amp;#8217;ll be because I&amp;#8217;m dealing with two screaming kids.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-05 05:06:20 UTC</pubDate>
-  <author>Scott Aaronson</author>
-</item>
-
-<item>
-  <title>Player Replaceability - Towards Adaptive Security and Sub-quadratic Communication Simultaneously (Part II)</title>
-  <guid>https://decentralizedthoughts.github.io/2023-01-05-player-replaceability-II/</guid>
-  <link>https://decentralizedthoughts.github.io/2023-01-05-player-replaceability-II/</link>
-  <description>
-    This is part II of a two-part post on player-replaceability. Part I can be found here. Towards Adaptive Security for a Committee-based Protocol The protocol described in the previous post achieved sub-quadratic communication. At a high-level, the key idea is to randomly sample an appropriate number parties in a committee,...
-  </description>
-  <pubDate>2023-01-05 05:00:00 UTC</pubDate>
-  <author>Decentralized Thoughts</author>
-</item>
-
-<item>
-  <title>Player Replaceability - Towards Adaptive Security and Sub-quadratic Communication Simultaneously (Part I)</title>
-  <guid>https://decentralizedthoughts.github.io/2023-01-05-player-replaceability-I/</guid>
-  <link>https://decentralizedthoughts.github.io/2023-01-05-player-replaceability-I/</link>
-  <description>
-    This is part I of a two-part post on the concept of player-replaceability. In Nakamoto consensus, proof-of-work (PoW) provides us with an interesting set of properties with respect to the adaptivity of the adversary: Unpredictability. Block winners are elected uniformly at random proportional to their computation power, thus, an adversary...
-  </description>
-  <pubDate>2023-01-05 05:00:00 UTC</pubDate>
-  <author>Decentralized Thoughts</author>
 </item>
 
 </channel>
