@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-01-12T14:41:26Z">Thursday, January 12 2023, 14:41</time>
+          <time class='timeago' datetime="2023-01-12T15:49:14Z">Thursday, January 12 2023, 15:49</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,45 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, January 12
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://blog.computationalcomplexity.org/2023/01/semantic-search-for-blog.html'>Semantic Search for the Blog</a></h3>
+        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>&nbsp;As Google started to limit academic storage, I started looking at Google Takeout and started wondering what I could do with all that data. I downloaded all the posts from the blog, since we use Google's blogger, and ran them through OpenAI's Ada Embedding. The Ada embedding maps text up to 8192 words into a point on the 1536-dimensional unit sphere. You can measure the similarity between two embeddings via a simple dot product, giving you the cosine of the angle between them.</p><p>So I created a semantic search for the blog. Go ahead and try it out.</p>
+
+    <p>Search for&nbsp;&nbsp;</p><p>You can enter a search term, phrase, or the full URL (including https) of a blog post. It will return a list of the 5 closest posts, with the percentage match, computed as the square of the cosine. I don't have a mechanism for automatically updating the files, so you'll only see posts from 2022 and earlier.</p><p>This was an Open AI-assisted affair, as I used ChatGPT and GitHub co-pilot to help with the python and pandas data frames. It took me longer to figure out how to create a web application so you can try the search. Similarity match doesn't work like normal searches, for example if you search for a city like "Detroit", you'll get posts that mention other cities. Some other oddities, like "mad" seems to match "Madhu". It probably says something about me that my most happy post is not about some great new theorem but about baseball.</p><p><br></p><p><br></p>
+
+<p>By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>&nbsp;As Google started to <a href="https://support.google.com/a/answer/10403871">limit academic storage</a>, I started looking at Google Takeout and started wondering what I could do with all that data. I downloaded all the posts from the blog, since we use Google's blogger, and ran them through <a href="https://openai.com/blog/new-and-improved-embedding-model/">OpenAI's Ada Embedding</a>. The Ada embedding maps text up to 8192 words into a point on the 1536-dimensional unit sphere. You can measure the similarity between two embeddings via a simple dot product, giving you the cosine of the angle between them.</p><p>So I created a semantic search for the blog. Go ahead and <a href="https://fortnow.pythonanywhere.com/">try it out</a>.</p>
+<form action="https://fortnow.pythonanywhere.com/" method="POST">
+    <p>Search for&nbsp;&nbsp;<input name="search" type="text" /></p><p>You can enter a search term, phrase, or the full URL (including https) of a blog post. It will return a list of the 5 closest posts, with the percentage match, computed as the square of the cosine. I don't have a mechanism for automatically updating the files, so you'll only see posts from 2022 and earlier.</p><p>This was an Open AI-assisted affair, as I used ChatGPT and GitHub co-pilot to help with the python and pandas data frames. It took me longer to figure out how to create a web application so you can try the search. Similarity match doesn't work like normal searches, for example if you search for a city like "Detroit", you'll get posts that mention other cities. Some other oddities, like "mad" seems to match "Madhu". It probably says something about me that my most happy post is not about some great new theorem but about <a href="https://blog.computationalcomplexity.org/2005/10/joy-on-south-side-of-chicago.html">baseball</a>.</p><p><br /></p><p><br /></p>
+</form>
+<p class="authors">By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-01-12T14:41:00Z">Thursday, January 12 2023, 14:41</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3254,71 +3293,6 @@ There it is&#8212;&#8220;Cargo Cult&#8221; in quantum algorithmic science&#8212;
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-01-06T16:39:51Z">Friday, January 06 2023, 16:39</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2301.01924'>Diagonalization Games</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Noga Alon, Olivier Bousquet, Kasper Green Larsen, Shay Moran, Shlomo Moran</p><p>We study several variants of a combinatorial game which is based on Cantor's
-diagonal argument.
-</p>
-<p>The game is between two players called Kronecker and Cantor. The names of the
-players are motivated by the known fact that Leopold Kronecker did not
-appreciate Georg Cantor's arguments about the infinite, and even referred to
-him as a "scientific charlatan". In the game Kronecker maintains a list of m
-binary vectors, each of length n, and Cantor's goal is to produce a new binary
-vector which is different from each of Kronecker's vectors, or prove that no
-such vector exists. Cantor does not see Kronecker's vectors but he is allowed
-to ask queries of the form"What is bit number j of vector number i?" What is
-the minimal number of queries with which Cantor can achieve his goal? How much
-better can Cantor do if he is allowed to pick his queries \emph{adaptively},
-based on Kronecker's previous replies? The case when m=n is solved by
-diagonalization using n (non-adaptive) queries. We study this game more
-generally, and prove an optimal bound in the adaptive case and nearly tight
-upper and lower bounds in the non-adaptive case.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Alon_N/0/1/0/all/0/1">Noga Alon</a>, <a href="http://arxiv.org/find/math/1/au:+Bousquet_O/0/1/0/all/0/1">Olivier Bousquet</a>, <a href="http://arxiv.org/find/math/1/au:+Larsen_K/0/1/0/all/0/1">Kasper Green Larsen</a>, <a href="http://arxiv.org/find/math/1/au:+Moran_S/0/1/0/all/0/1">Shay Moran</a>, <a href="http://arxiv.org/find/math/1/au:+Moran_S/0/1/0/all/0/1">Shlomo Moran</a></p><p>We study several variants of a combinatorial game which is based on Cantor's
-diagonal argument.
-</p>
-<p>The game is between two players called Kronecker and Cantor. The names of the
-players are motivated by the known fact that Leopold Kronecker did not
-appreciate Georg Cantor's arguments about the infinite, and even referred to
-him as a "scientific charlatan". In the game Kronecker maintains a list of m
-binary vectors, each of length n, and Cantor's goal is to produce a new binary
-vector which is different from each of Kronecker's vectors, or prove that no
-such vector exists. Cantor does not see Kronecker's vectors but he is allowed
-to ask queries of the form"What is bit number j of vector number i?" What is
-the minimal number of queries with which Cantor can achieve his goal? How much
-better can Cantor do if he is allowed to pick his queries \emph{adaptively},
-based on Kronecker's previous replies? The case when m=n is solved by
-diagonalization using n (non-adaptive) queries. We study this game more
-generally, and prove an optimal bound in the adaptive case and nearly tight
-upper and lower bounds in the non-adaptive case.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-01-06T01:30:00Z">Friday, January 06 2023, 01:30</time>
         </div>
       </div>
     </details>
