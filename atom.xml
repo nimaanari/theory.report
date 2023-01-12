@@ -63,6 +63,21 @@ Email: monaldo@idsia.ch&lt;/p&gt;
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Decentralized Thoughts: What are Blockchains Useful for, Really?</title>
+    <link href="https://decentralizedthoughts.github.io/2023-01-12-what-are-blockchains-useful-for-really/"/>
+    <id>https://decentralizedthoughts.github.io/2023-01-12-what-are-blockchains-useful-for-really/</id>
+    <updated>2023-01-12T05:00:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    Blockchains, or the decentralized ledger, are touted as the next big disruptive technology, as big as the Internet was in the 90s. What are these blockchains useful for really? In my experience, while there are relevant use cases, many examples people use that are either far too academic to be...
+  </content>
+    <author>
+      <name>Decentralized Thoughts</name>
+      <uri>https://decentralizedthoughts.github.io</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Geometry: Maximum Centre-Disjoint Mergeable Disks</title>
     <link href="http://arxiv.org/abs/2301.04350"/>
     <id>http://arxiv.org/abs/2301.04350</id>
@@ -1366,177 +1381,6 @@ The case when m=n is solved by diagonalization using n (non-adaptive) queries. W
     <author>
       <name>ECCC Papers</name>
       <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Hung Le: Shortcutting Trees</title>
-    <link href="https://minorfree.github.io/tree-shortcutting/"/>
-    <id>https://minorfree.github.io/tree-shortcutting</id>
-    <updated>2023-01-08T00:00:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Over the past two years or so, I have been thinking about a cute problem, which turned out to be much more useful to my research than I initially thought. Here it is:&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Tree Shortcutting Problem&lt;/strong&gt;: Given an edge-weighted tree \(T\), add (weighted) edges to \(T\), called &lt;em&gt;shortcuts&lt;/em&gt;, to get a graph \(K\) such that:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;\(d_K(u,v) = d_T(u,v)~\quad \forall u,v\in V(T)\). That is, \(K\) preserves distances in \(T\).&lt;/li&gt;
-  &lt;li&gt;For every \(u,v\in V(T)\), there exists a shortest path from \(u\) to \(v\) in \(K\) containing at most \(k\) edges for some \(k\geq 2\).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The goal is to minimize the product \(k \cdot \mathrm{tw}(K)\), where \(\mathrm{tw}(K)\) is the treewidth of \(K\).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/figs/shortcut.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Figure 1: An emulator \(K\) obtained by adding one edge to the tree \(T\) has hop bound \(3\) and treewidth \(2\). Compared to \(T\), the hop bound decreases by 1 while the treewidth increases by 1.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Such a graph \(K\) is called a &lt;em&gt;low-hop and low-treewidth emulator&lt;/em&gt; of the tree \(T\).  The parameter \(k\) is called the &lt;em&gt;hop bound&lt;/em&gt; of \(K\). It is expected that there will be some trade-off between the hop bound and the treewidth. We are interested in minimizing \(k \cdot \mathrm{tw}(K)\). This product directly affects parameters in our application; see the conclusion section for more details.&lt;/p&gt;
-
-&lt;p&gt;For readers who are not familar with treeewidth, see  &lt;a href=&quot;https://en.wikipedia.org/wiki/Treewidth&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.win.tue.nl/~nikhil/courses/2015/2WO08/treewidth-erickson.pdf&quot;&gt;here&lt;/a&gt; for an excellent introduction, and why treewidth is an interesting graph parameter.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Remark 1:&lt;/strong&gt; The tree shortcutting problem is already non-trivial for unweighted trees; the shortcuts must be weighted though. Furthermore, for each edge \((u,v)\) added to \(K\), the weight of the edge will be \(d_T(u,v)\). Thus, in the construction below, we do not explicitly assign weights to the added edges.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;A version of a tree shortcutting problem where one seeks to minimize &lt;em&gt;the number of edges of \(K\)&lt;/em&gt;, given a hop bound \(k\), was studied extensively (see &lt;a href=&quot;http://www.math.tau.ac.il/~haimk/adv-ds-2008/Alon-Schieber.ps&quot;&gt;1&lt;/a&gt;,&lt;a href=&quot;https://dl.acm.org/doi/abs/10.5555/640186.640193&quot;&gt;2&lt;/a&gt;,&lt;a href=&quot;https://arxiv.org/abs/1005.4155&quot;&gt;3&lt;/a&gt;,&lt;a href=&quot;https://dl.acm.org/doi/10.1145/800070.802185&quot;&gt;4&lt;/a&gt;, including my own work &lt;a href=&quot;https://arxiv.org/abs/2107.14221&quot;&gt;with&lt;/a&gt; &lt;a href=&quot;https://arxiv.org/abs/2112.09124&quot;&gt;others&lt;/a&gt;), arising in the context of spanners and minimum spanning tree problem. What is interesting there IMO is that we see all kinds of crazy slowly growing functions in computer science: for \(k = 2\), the number of edges of \(K\) is \(\Theta(n \log n)\);  for \(k = 3\), the number of edges of \(K\) is \(\Theta(n \log\log n)\); for \(k = 4\), the number of edges is \(\Theta(n \log^* n)\); \(\ldots\) [too difficult to describe]; and for \(k = \alpha(n)\), the number of edges is   \(\Theta(n)\). Here, as you might guess, \(\alpha(\cdot)\) is the notorious (one parameter) inverse Ackermann function. (The \(\Theta\) notation in the number of edges means there exist matching lower bounds.) I hope to cover this problem in a future blog post.&lt;/p&gt;
-
-&lt;p&gt;Now back to our tree shortcutting problem. Let \(n = \lvert V(T) \rvert\). There are two extreme regimes that I am aware of:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Hop bound \(k=2\) and treewidth \(\mathrm{tw}(K) = O(\log n)\). This is a relatively simple exercise.&lt;/li&gt;
-  &lt;li&gt;Hop bound \(k=O(\log n)\) and treewidth \(\mathrm{tw}(K) = O(1)\). This regime is harder to prove; trying to show this for a path graph will be an insightful exercise. It follows from a well-known fact [1] that any tree decomposition of width \(t\) can be turned into a tree decomposition of width \(O(t)\) and depth \(O(\log n)\).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The two regimes might suggest that a lower bound \(k\cdot \mathrm{tw}(K) = \Omega(\log n)\) for any \(k\). In our recent paper [2], we show that this is not the case:&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 1&lt;/strong&gt;: There exists an emulator \(K\) for any \(n\)-vertex tree \(T\) such that \(h(K) = O(\log  \log n)\) and \(\mathrm{tw}(K) = O(\log \log n)\).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Theorem 1 implies that one can get an emulator with \(k\cdot \mathrm{tw}(K) = O((\log \log n)^2)\), which is exponentially smaller than \(O(\log(n))\). The goal of this post is to discuss the proof of Theorem 1. See the conclusion section for a more thorough discussion on other aspects of Theorem 1, in particular, the construction time and application.&lt;/p&gt;
-
-&lt;p&gt;For the tree shortcutting problem, it is often insightful to look into the &lt;strong&gt;path graph with \(n\) vertices&lt;/strong&gt;, which is a special case. Once we solve the path graph, extending the ideas to trees is not that difficult.&lt;/p&gt;
-
-&lt;h1 id=&quot;1-the-path-graph&quot;&gt;1. The Path Graph&lt;/h1&gt;
-
-&lt;p&gt;The (unweighted )path graph \(P_n\) is a path of \(n\) vertices. To simplify the presentation, assume that \(\sqrt{n}\) is an integer. The construction is recursive and described in the pseudo-code below.  First we divide \(P_n\) into \(\sqrt{n}\) sub paths of size \(\sqrt{n}\) each. Denote the endpoints of these subpaths by \(b_i = i\sqrt{n}\) for \(1\leq i\leq\sqrt{n}\). We call \({b_i}_{i}\) boundary vertices.  We have two types of recursions: (1) top level recursion – lines 2 and 3 – and (2) subpath recursion – lines 5 to 9. The intuition of the top level recursion is a bit tricky and we will get to that later. See Figure 2.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/figs/recursion.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Figure 2: (a) The recursive construction applied to the path \(P_n\). (b) Gluing \(\mathcal T_B\) and all \(\{\mathcal T_i\}\) to obtain a tree decomposition \(\mathcal{T}\) of \(K\) via red edges.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The subpath recursion is natural: recursively shortcut each subpath \(P[b_i,b_{i+1}]\) (line 6). The subpath recursion returns the shortcut graph \(K_i\) and its tree decomposition \(\mathcal T_i\).  Next, we add edges from each boundary vertex \(b_i, b_{i+1}\) of the subpath to all other vertices on the subpath (lines 7 and 8). This step guarantees that each vertex of the subpath can “jump” to the boundary vertices using only &lt;strong&gt;one edge&lt;/strong&gt;. In terms of tree decomposition, it means that we add both \(b_i\) and \(b_{i+1}\) to every bag of \(\mathcal T_i\) (line 9).&lt;/p&gt;
-
-&lt;p&gt;The top level recursion serves two purposes: (i) creating a low hop emulator  for boundary vertices (recall that each vertex can jump to a boundary vertex in the same subpath using one edge) and  (ii) gluing \({\mathcal T_i}\) together. More precisely, let \(P_{\sqrt{n}}\) be a path of boundary vertices, i.e., \(b_i\) is adjacent to \(b_{i+1}\) in  \(P_{\sqrt{n}}\). We shortcut \(P_{\sqrt{n}}\) recursively, getting the shortcut graph \(K_B\) and its tree decomposition \(\mathcal T_B\) (line 3). Since \((b_i,b_{i+1})\) is an edge in \(P_{\sqrt{n}}\), there must be a bag in \(\mathcal T_B\) containing both \(b_i,b_{i+1}\); that is, the bag \(X\) in line 11 exists. See Figure 2(b). Recall that in line 9, every bag in \(\mathcal T_i\) contains both \(b_i,b_{i+1}\), and that \(K_B\) and \(K_i\) only share two boundary vertices \(b_i,b_{i+1}\). Thus, we can connect \(X\) to an arbitrary bag of \(\mathcal T_i\) as done in line 12. This completes the shortcutting algorithm.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;span style=&quot;font-variant: small-caps&quot;&gt;PathShortcutting&lt;/span&gt;\((P_n)\)&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;\(1.\) \(B \leftarrow {0,\sqrt{n}, 2\sqrt{n}, \ldots, n}\) and \(b_i \leftarrow i\sqrt{n}\) for every \(0\leq i \leq \sqrt{n}\)&lt;br /&gt;
-\(2.\) \(P_{\sqrt{n}} \leftarrow\) unweighted path graph with vertex set \(B\).&lt;br /&gt;
-\(3.\) \((K_B,\mathcal T_B) \leftarrow\)&lt;span style=&quot;font-variant: small-caps&quot;&gt;PathShortcutting&lt;/span&gt;\((P_{\sqrt{n}})\)&lt;br /&gt;
-\(4.\) \(K\leftarrow K_B,\quad \mathcal{T}\leftarrow \mathcal T_B\)&lt;br /&gt;
-\(5.\) for \(i\leftarrow 0\) to \(\sqrt{n}-1\)&lt;br /&gt;
-\(6.\)     \((K_i,\mathcal T_i) \leftarrow\)&lt;span style=&quot;font-variant: small-caps&quot;&gt;PathShortcutting&lt;/span&gt;\((P_{n}[b_i, b_{i+1}])\)&lt;br /&gt;
-\(7.\)      for each \(v\in P_{n}[b_i, b_{i+1}]\)&lt;br /&gt;
-\(8.\)           \(E(K_i)\leftarrow {(v,b_i), (v,b_{i+1})}\) &lt;br /&gt;
-\(9.\)            add both \({v_i,v_{i+1}}\) to every bag of \(\mathcal T_i\)&lt;br /&gt;
-\(10.\)     \(K\leftarrow K \cup K_i\) &lt;br /&gt;
-\(11.\)     Let \(X\) be a bag in \(\mathcal{T}\) containing both \(b_i,b_{i+1}\)&lt;br /&gt;
-\(12.\)     Add \(\mathcal T_i\) to \(\mathcal{T}\) by connecting \(X\) to an arbitrary bag of \(\mathcal T_i\) &lt;br /&gt;
-\(13.\) return \((K,\mathcal{T})\)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;It is not difficult to show that \(\mathcal{T}\) indeed is a tree decomposition of \(K\). Thus, we focus on analyzing the hop bound and the treewidth.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Remark 2:&lt;/strong&gt; For notational convenience, we include \(0\) in the set \(B\) though \(0\not\in P_n\). When calling the recursion, one could simply drop 0.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/figs/hopbound.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Figure 3: A low-hop path from \(u\) to \(v\).&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Analyzing the hop bound \(h(K)\).&lt;/strong&gt;   Let \(u\) and \(v\) be any two vertices of \(P_{n}\); w.l.o.g, assume that \(u \leq v\), and \(h(n)\) be the hop bound. Let \(b_{u}\) and \(b_v\) be two boundary vertices of the subpaths containing \(u\) and \(v\), respectively, such that \(b_u,b_v \in P[u,v]\). See Figure 3. As mentioned above, line 8 of the algorithms guarantees that there are two edges \((u,b_u)\) and \((b_v,v)\) in \(K\), and the top level recursion (line 3) guarantees that there is a shortest path of hop length  \(h(\sqrt{n})\) between \(b_u\) and \(b_v\) in \(K_B\). Thus we have:&lt;/p&gt;
-
-\[h(n) \leq h(\sqrt{n}) + 2\]
-
-&lt;p&gt;which solves to \(h(n)= O(\log\log n)\).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Analyzing the treewidth \(\mathrm{tw}(K)\).&lt;/strong&gt; Note that the treewidth of   \(\mathcal T_B\) and all \({\mathcal{T_i}}\) (before adding boundary vertices in line 9) is bounded by \(\mathrm{tw}(\sqrt{n})\). Line 9 increases the treewidth of  \({\mathcal{T_i}}\) by at most \(2\). Since the treewidth of \(K\) is the maximum treewidth \(\mathcal T_B\) and all \({\mathcal{T_i}}\), we have:&lt;/p&gt;
-
-\[\mathrm{tw}(n) \leq \mathrm{tw}(\sqrt{n}) + 2\]
-
-&lt;p&gt;which solves to \(\mathrm{tw}(n)= O(\log\log n)\).&lt;/p&gt;
-
-&lt;p&gt;This completes the proof of Theorem 1 for the path graph \(P_n\).&lt;/p&gt;
-
-&lt;h1 id=&quot;2-trees&quot;&gt;2. Trees&lt;/h1&gt;
-
-&lt;p&gt;What is needed to extend the construction of a path graph to a general tree? Two properties we exploited in the construction of \(P_n\):&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;\(P_n\) can be decomposed into \(\sqrt{n}\) (connected) subpaths.&lt;/li&gt;
-  &lt;li&gt;Each subpath in the decomposition has at most two boundary vertices.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Property 2 implies that the total number of boundary vertices is about \(\sqrt{n}\), which plays a key role in analyzing the top level recursion.&lt;/p&gt;
-
-&lt;p&gt;It is well known that we can obtain a somewhat similar but weaker decomposition for trees: one can decompose a tree of \(n\) vertices to roughly \(\sqrt{n}\) connected subtrees such that the number of boundary vertices is \(\sqrt{n}\). (A vertex is a boundary vertex of a subtree if it is incident to an edge not in the subtree.) This decomposition is weaker in the sense that a subtree could have more than 2, and indeed up to \(\Omega(\sqrt{n})\), boundary vertices.  Is this enough?&lt;/p&gt;
-
-&lt;p&gt;Not quite. To glue the tree decomposition \(\mathcal T_i\) to \(\mathcal{T}\) (and effectively to \(\mathcal T_B\)), we rely on the fact that there is a bag \(X\in \mathcal T_B\) containing both boundary vertices in line 11. The  analogy for trees would be: there exists a bag \(X\) containing all boundary vertices of each subtree. This is problematic if a subtree has \(\Omega(\sqrt{n})\) boundary vertices.&lt;/p&gt;
-
-&lt;p&gt;Then how abound guaranteeing that each subtree has \(O(1)\) vertices, say 3 vertices. Will this be enough? The answer is pathetically no. To guarantee 3 vertices in the same bag, one has to add a clique of size 3 between the boundary vertices in the top level recursion. What it means is that, the graph between boundary vertices on which we recursively call the shortcuting procedure is &lt;em&gt;no longer a tree&lt;/em&gt;. Thus, we really need a decomposition where every subtree has &lt;strong&gt;at most 2 boundary vertices&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 1:&lt;/strong&gt; Let \(T\) be any tree of \(n\) vertices, one can decompose \(T\) into a collection \(\mathcal{D}\) of \(O(\sqrt{n})\) subtrees such that every tree \(T’\in \mathcal{D}\) has \(\lvert V(T’)\rvert \leq \sqrt{n}\) and at most 2 boundary vertices.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Lemma 1 is all we need to prove Theorem 1, following exactly the same construction for the path graph \(P_n\); the details are left to readers.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Remark 3:&lt;/strong&gt; In developing our shortcutting tree result, we were unaware that Lemma 1 was already known in the literature. A reviewer later pointed out that one can get Lemma 1 from a weaker decomposition using &lt;em&gt;least common ancestor closure&lt;/em&gt; [3], which I reproduce below.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Proof of Lemma 1:&lt;/strong&gt; First, decompose \(T\) into a collection \(\mathcal{D}’\) of \(O(\sqrt{n})\) subtrees such that each tree in \(\mathcal{D}’\) has size at most \(\sqrt{n}\) and that the total number of boundary vertices is \(O(\sqrt{n})\). As mentioned above, this decomposition is well known; see Claim 1 in our paper [2] for a proof.&lt;/p&gt;
-
-&lt;p&gt;Let \(A_1\) be the set of boundary vertices; \(\lvert A_1\rvert = O(\sqrt{n})\). Root \(T\) at an arbitrary vertex. Let \(A_2\) be the set containing the ancestor of every pair of vertices in \(A_1\). Let \(B = A_1\cup A_2\).&lt;/p&gt;
-
-&lt;p&gt;It is not hard to see that \(\lvert A_2\rvert  \leq \lvert A_1\rvert - 1  = O(\sqrt{n})\). Thus, \(\lvert B\rvert = O(\sqrt{n})\). Furthermore, every connected component of \(T\setminus B\) has at most \(\sqrt{n}\) vertices and has edges to at most 2 vertices in \(B\). The set \(B\) induces a decomposition \(\mathcal{D}\) of \(T\) claimed in Lemma 1.&lt;/p&gt;
-
-&lt;h1 id=&quot;3-conclusion&quot;&gt;3. Conclusion&lt;/h1&gt;
-
-&lt;p&gt;The emulator in Theorem 1 can be constructed in time \(O(n \log \log n)\); see Theorem 10 our paper [2] for more details. The major open problem is:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Open problem:&lt;/strong&gt; Is \(O((\log \log n)^2)\) the best possible bound for the product \(\mathrm{tw}(K)\cdot h(K)\)?&lt;/p&gt;
-
-&lt;p&gt;This open problem is intimately connected to another problem: embedding  planar graphs of diameter \(D\) into low treewidth graphs with additive distortion at most \(+\epsilon D\) for any \(\epsilon \in (0,1)\). More precisely, though not explicitly stated [2], one of our main results is:&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 2:&lt;/strong&gt; If one can construct an emulator \(K\) of treewidth \(\mathrm{tw}(n)\) and hop bound \(h(n)\) for any tree of \(n\) vertices, then one can embed any planar graphs with \(n\) vertices and diameter \(D\) into  a graph of treewidth \(O(h(n)\cdot \mathrm{tw}(n)/\epsilon)\) and additive distortion \(+\epsilon D\) for any given \(\epsilon \in (0,1)\).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;That is, the product of treewdith and hop bound directly bounds the treewdith of the embedding. Theorem 1 give us an embedding with treewidth \(O((\log\log n)^2/\epsilon)\), which has various algorithmic applications [2]. My belief is that the bound \(O((\log \log n)^2)\) is the best possible.&lt;/p&gt;
-
-&lt;h1 id=&quot;4-references&quot;&gt;4. References&lt;/h1&gt;
-
-&lt;p&gt;[1] Bodlaender, H.L. and Hagerup, T. (1995). Parallel algorithms with optimal speedup for bounded treewidth. In ICALP ‘95, 268-279.&lt;/p&gt;
-
-&lt;p&gt;[2] Filtser, A. and Hung, L. (2022). Low Treewidth Embeddings of Planar and Minor-Free Metrics. ArXiv preprint &lt;a href=&quot;https://arxiv.org/abs/2203.15627&quot;&gt;arXiv:2203.15627&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;[3] Fomin, F.V., Lokshtanov, D., Saurabh, S. and Zehavi, M. (2019). Kernelization: theory of parameterized preprocessing. Cambridge University Press.&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Hung Le&lt;/p&gt;
-  </content>
-    <author>
-      <name>Hung Le</name>
-      <uri>https://minorfree.github.io</uri>
     </author>
   </entry>
 
