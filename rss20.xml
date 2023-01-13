@@ -9,6 +9,65 @@
 
 
 <item>
+  <title>TR23-005 |  Cumulative Memory Lower Bounds for Randomized and Quantum Computation | 
+
+	Paul Beame, 
+
+	Niels Kornerup</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/005</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/005</link>
+  <description>
+    Cumulative memory---the sum of space used over the steps of a computation---is a fine-grained measure of time-space complexity that is a more accurate measure of cost for algorithms with infrequent spikes in memory usage in the context of technologies such as cloud computing that allow dynamic allocation and de-allocation of resources during their execution. We give the first lower bounds on cumulative memory complexity that apply to general sequential classical algorithms.  We also prove the first such bounds for bounded-error quantum circuits.  Among many possible applications, we show that any classical sorting algorithm with success probability at least $1/\text{poly}(n)$ requires cumulative memory $\tilde \Omega(n^2)$, any classical matrix multiplication algorithm requires cumulative memory $\Omega(n^6/T)$, any quantum sorting circuit requires cumulative memory $\Omega(n^3/T)$, and any quantum circuit that finds $k$ disjoint collisions in a random function requires cumulative memory $\Omega(k^3n/T^2)$.  More generally, we present theorems that can be used to convert a wide class of existing time-space tradeoff lower bounds to matching lower bounds on cumulative memory complexity.
+  </description>
+  <pubDate>2023-01-13 07:30:49 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
+  <title>TR23-004 |  On linear-algebraic notions of expansion | 
+
+	Yinan Li, 
+
+	Youming Qiao, 
+
+	Avi Wigderson, 
+
+	Yuval Wigderson, 
+
+	Chuanqi Zhang</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/004</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/004</link>
+  <description>
+    A fundamental fact about bounded-degree graph expanders is that three notions of expansion---vertex expansion, edge expansion, and spectral expansion---are all equivalent. In this paper, we study to what extent such a statement is true for linear-algebraic notions of expansion.
+
+There are two well-studied notions of linear-algebraic expansion, namely dimension expansion (defined in analogy to graph vertex expansion) and quantum expansion (defined in analogy to graph spectral expansion). Lubotzky and Zelmanov proved that the latter implies the former. We prove that the converse is false: there are dimension expanders which are not quantum expanders.
+
+Moreover, this asymmetry is explained by the fact that there are two distinct linear-algebraic analogues of graph edge expansion. The first of these is quantum edge expansion, which was introduced by Hastings, and which he proved to be equivalent to quantum expansion. We introduce a new notion, termed dimension edge expansion, which we prove is equivalent to dimension expansion and which is implied by quantum edge expansion. Thus, the separation above is implied by a finer one: dimension edge expansion is strictly weaker than quantum edge expansion. This new notion also leads to a new, more modular proof of the Lubotzky--Zelmanov result that quantum expanders are dimension expanders.
+  </description>
+  <pubDate>2023-01-13 07:27:38 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
+  <title>TR23-003 |  Streaming Lower Bounds and Asymmetric Set-Disjointness | 
+
+	Jiapeng Zhang, 
+
+	Shachar Lovett</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/003</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/003</link>
+  <description>
+    Frequency estimation in data streams is one of the classical problems in streaming algorithms. Following much research, there are now almost matching upper and lower bounds for the trade-off needed between the number of samples and the space complexity of the algorithm, when the data streams are adversarial. However, in the case where the data stream is given in a random order, or is stochastic, only weaker lower bounds exist. In this work we close this gap, up to logarithmic factors. 
+
+In order to do so we consider the needle problem, which is a natural hard problem for frequency estimation studied in (Andoni et al. 2008, Crouch et al. 2016). Here, the goal is to distinguish between two distributions over data streams with $t$ samples. The first is uniform over a large enough domain. The second is a planted model; a secret &amp;#39;&amp;#39;needle&amp;#39;&amp;#39; is uniformly chosen, and then each element in the stream equals the needle with probability $p$, and otherwise is uniformly chosen from the domain. It is simple to design streaming algorithms that distinguish the distributions using space $s \approx 1/(p^2 t)$. It was unclear if this is tight, as the existing lower bounds are weaker. We close this gap and show that the trade-off is near optimal, up to a logarithmic factor. 
+
+Our proof builds and extends classical connections between streaming algorithms and communication complexity, concretely multi-party unique set-disjointness. We introduce two new ingredients that allow us to prove sharp bounds. The first is a lower bound for an asymmetric version of multi-party unique set-disjointness, where players receive input sets of different sizes, and where the communication of each player is normalized relative to their input length. The second is a combinatorial technique that allows to sample needles in the planted model by first sampling intervals, and then sampling a uniform needle in each interval.
+  </description>
+  <pubDate>2023-01-13 07:25:30 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>A Functorial Perspective on (Multi)computational Irreducibility</title>
   <guid>http://arxiv.org/abs/2301.04690</guid>
   <link>http://arxiv.org/abs/2301.04690</link>
@@ -1174,81 +1233,6 @@ where $\mathcal C$ is the set of channels characterizing the constraints.
   </description>
   <pubDate>2023-01-10 01:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Art as Math that Meets Crochet</title>
-  <guid>https://rjlipton.wpcomstaging.com/?p=20805</guid>
-  <link>https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/</link>
-  <description>
-    &lt;p&gt;
-Gabriele Meyer is a Senior Lecturer Emerita in the Department of Mathematics, at the University of Wisconsin. She creates beautiful art by crocheting mathematical shapes. &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/gabiwearingsurface/&quot; rel=&quot;attachment wp-att-20882&quot;&gt;&lt;img data-attachment-id=&quot;20882&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/gabiwearingsurface/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/GabiWearingSurface.jpg?fit=408%2C449&amp;amp;ssl=1&quot; data-orig-size=&quot;408,449&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;KWRegan&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1673206169&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;GabiWearingSurface&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/GabiWearingSurface.jpg?fit=273%2C300&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/GabiWearingSurface.jpg?fit=408%2C449&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/GabiWearingSurface.jpg?resize=273%2C300&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;273&quot; height=&quot;300&quot; class=&quot;aligncenter size-medium wp-image-20882&quot; srcset=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/GabiWearingSurface.jpg?resize=273%2C300&amp;amp;ssl=1 273w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/GabiWearingSurface.jpg?w=408&amp;amp;ssl=1 408w&quot; sizes=&quot;(max-width: 273px) 100vw, 273px&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;
-In a recent &lt;a href=&quot;https://www.crochetconcupiscence.com/hyperbolic-crochet-artist-gabriele-meyer/&quot;&gt;article&lt;/a&gt; on a crocheting website, quoting an earlier &lt;a href=&quot;https://theworld.org/stories/2012-02-03/beauty-truth-math-art&quot;&gt;statement&lt;/a&gt;, Gabi explained the connection this way:  &lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;
-&amp;#8220;In math, if you want to prove something really beautiful, you have to understand the structure. And the structure means you understand the beauty of an object and with that knowledge you oftentimes can make a very important and deep proof. That&amp;#8217;s why beauty matters tremendously in mathematics.&amp;#8221;
-&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;
-Today I want to share some of Gabi&amp;#8217;s work of crocheting shapes that follow hyperbolic geometry.  This includes crocheted algae, flowers, sea anemones, and other organic shapes. &lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;b&gt; Some of Her Art &lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;
-&lt;p align=center&gt; &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/attachment/4/&quot; rel=&quot;attachment wp-att-20824&quot;&gt;&lt;img data-attachment-id=&quot;20824&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/attachment/4/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/4.jpg?fit=397%2C1013&amp;amp;ssl=1&quot; data-orig-size=&quot;397,1013&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;4&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;Canon EOS REBEL T3i&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1488814602&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;28&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;640&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0.02&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;4&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/4.jpg?fit=118%2C300&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/4.jpg?fit=397%2C1013&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/4.jpg?resize=300%2C500&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;300&quot; height=&quot;500&quot; class=&quot;aligncenter size-full wp-image-20824&quot;&lt;/a data-recalc-dims=&quot;1&quot;&gt;&lt;/p&gt;
-&lt;p align=center&gt;&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/attachment/3/&quot; rel=&quot;attachment wp-att-20823&quot;&gt;&lt;img data-attachment-id=&quot;20823&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/attachment/3/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/3.jpg?fit=558%2C1494&amp;amp;ssl=1&quot; data-orig-size=&quot;558,1494&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;2.2&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;iPhone 6s&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1550871742&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;4.15&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;320&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0.066666666666667&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;3&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/3.jpg?fit=112%2C300&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/3.jpg?fit=382%2C1024&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/3.jpg?resize=300%2C500&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;300&quot; height=&quot;500&quot; class=&quot;aligncenter size-full wp-image-20823&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p align=center&gt;&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/attachment/2/&quot; rel=&quot;attachment wp-att-20822&quot;&gt;&lt;img data-attachment-id=&quot;20822&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/attachment/2/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/2.jpg?fit=1060%2C1588&amp;amp;ssl=1&quot; data-orig-size=&quot;1060,1588&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;2.2&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;iPhone 6s&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1587898278&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;4.15&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;32&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0.033333333333333&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;2&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/2.jpg?fit=200%2C300&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/2.jpg?fit=600%2C898&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/2.jpg?resize=300%2C500&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;300&quot; height=&quot;500&quot; class=&quot;aligncenter size-full wp-image-20822&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p align=center&gt;
-&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/attachment/1/&quot; rel=&quot;attachment wp-att-20821&quot;&gt;&lt;img data-attachment-id=&quot;20821&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/01/09/art-as-math-that-meets-crochet/attachment/1/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/1.jpg?fit=692%2C1037&amp;amp;ssl=1&quot; data-orig-size=&quot;692,1037&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;4&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;Canon EOS REBEL T3i&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1556141637&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;25&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;3200&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0.125&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;1&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/1.jpg?fit=200%2C300&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/1.jpg?fit=600%2C900&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/1.jpg?resize=300%2C500&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;300&quot; height=&quot;500&quot; class=&quot;aligncenter size-full wp-image-20821&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;
-The crocheting article relates that Gabi is &amp;#8220;happy to give a new spin to a traditional European women&amp;#8217;s craft while also connecting it to mathematics.&amp;#8221; Besides the sea anemones, flower blossoms, and algae, she draws inspiration from abstract forms in topology.  One could say she &lt;a href=&quot;https://www.bridgesmathart.org/about/&quot;&gt;bridges&lt;/a&gt; between what is structurally ideal and what is biologically real, as well as from mathematics to art and culture more generally.&lt;/p&gt;
-&lt;p&gt;
-Gabi’s work was featured in the Bridges 2013 &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2013-bridges-conference/gabriele_meyer&quot;&gt;conference&lt;/a&gt; on mathematical connections in art, music, architecture, and culture.  This began &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2013-bridges-conference/gabriele_meyer&quot;&gt;a&lt;/a&gt; &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2014-bridges-conference/gabriele_meyer&quot;&gt;streak&lt;/a&gt; &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2015-bridges-conference/gabriele_meyer&quot;&gt;of&lt;/a&gt; &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2016-bridges-conference/gabriele_meyer&quot;&gt;nine&lt;/a&gt; &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2017-bridges-conference/gabriele_meyer&quot;&gt;consecutive&lt;/a&gt; &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2018-bridges-conference/gabriele_meyer&quot;&gt;appearances&lt;/a&gt; &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2019-bridges-conference/gabriele_meyer&quot;&gt;at&lt;/a&gt; &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2020-bridges-conference/gabriele_meyer&quot;&gt;Bridges&lt;/a&gt; &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2021-bridges-conference/gabriele_meyer&quot;&gt;conferences&lt;/a&gt;, and in &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2022-joint-mathematics-meetings/gabriele_meyer&quot;&gt;2022&lt;/a&gt; at the Joint Mathematics Meetings.  Some more of her hyperbolic art is on her own &lt;a href=&quot;http://www.math.wisc.edu/~meyer/airsculpt/hyperbolic2.html&quot;&gt;site&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;
-Her pieces are made by creating hyperbolic crochet around an original shaping line, giving it structure in three dimensions.  One principle noted in her &lt;a href=&quot;https://drive.google.com/file/d/189l484eJrwe-9Liof-lxHRle1PJ2Cihp/view&quot;&gt;talk slides&lt;/a&gt; for Bridges 2019 is that neighborhoods of any point in hyperbolic geometry have more stuff than in flat Euclidean geometry or spherical geometry, forcing a local saddle structure having negative curvature. Crochet enables embodying this locality more robustly than weaving or knitting would.  The effect of increasing the local stitch count is explained in greater detail in a nice 2016 &lt;a href=&quot;https://chalkdustmagazine.com/blog/wonders-mathematical-crochet/&quot;&gt;article&lt;/a&gt; by Anna Lambert.  That crocheting is friendlier than William Thurston&amp;#8217;s paper models for hyperbolic surfaces was &lt;a href=&quot;https://www.theiff.org/oexhibits/oe1e.html&quot;&gt;discovered&lt;/a&gt; in 1997 by Cornell&amp;#8217;s &lt;a href=&quot;https://math.cornell.edu/daina-taimina&quot;&gt;Daina Taimina&lt;/a&gt;, who has also exhibited at &lt;a href=&quot;http://gallery.bridgesmathart.org/exhibitions/2022-bridges-conference/daina&quot;&gt;Bridges&lt;/a&gt; and &lt;a href=&quot;https://www.liepajniekiem.lv/zinas/sabiedriba/viesojas-matematike-un-maksliniece-daina-taimina/&quot;&gt;elsewhere&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;b&gt; Open Problems &lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;
-My dear wife, Kathryn Farley and I, have had one of her artworks in our house for years.  We knew her first through her husband, Jin-Yi Cai, and Ken has also known both as colleagues in Buffalo.  We have also just purchased some more of her art work for our new condo.  Gabi also has a separate line of &lt;a href=&quot;https://people.math.wisc.edu/~gemeyer/prints/prints11.html&quot;&gt;linoleum prints&lt;/a&gt;.   &lt;/p&gt;
-&lt;p&gt;
-John Conway famously kept myriad models of polyhedra and networks in his office for inspiration.  The polyhedra illustrate positive curvature.  What kind of mathematical creativity is best inspired by surfaces of negative curvature?&lt;/p&gt;
-&lt;p&gt;
-&lt;p class=&quot;authors&quot;&gt;By rjlipton&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-09 19:06:12 UTC</pubDate>
-  <author>Richard Lipton</author>
-</item>
-
-<item>
-  <title>News for December 2022</title>
-  <guid>https://ptreview.sublinear.info/?p=1818</guid>
-  <link>https://ptreview.sublinear.info/2023/01/news-for-december-2022/</link>
-  <description>
-    &lt;p&gt;Happy New Year! Apologies for the late post; I was stuck for far too long in holiday mode. We haven&amp;#8217;t missed much. There were only two papers in the month of December, since, I&amp;#8217;m assuming, many of us were entering holiday mode.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Testing in the bounded-degree graph model with degree bound two&lt;/strong&gt; by Oded Goldreich and Laliv Tauber (&lt;a href=&quot;https://eccc.weizmann.ac.il/report/2022/184/&quot;&gt;ECCC&lt;/a&gt;). One of great, central results in graph property testing is that all monotone properties are testable (with query complexity independent on graph size) on dense graphs. The sparse graph universe is far, far, more complicated and interesting. Even for graphs with degree bound 3, natural graph properties can have anywhere from constant to linear (in \(n\)) query complexity. This note shows that when considering graphs with degree bound at most 2, the landscape is quite plain. The paper shows that all properties are testable in \(poly(\varepsilon^{-1})\). Any graph with degree at most 2 is a collection of paths and cycles. In \(poly(\varepsilon^{-1})\) queries, one can approximately learn the graph. (After which the testing problem is trivial.) The paper gives a simple \(O(\varepsilon^{-4})\) query algorithm, which is improved to the nearly optimal \(\widetilde{O}(\varepsilon^{-2})\) bound.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;On the power of nonstandard quantum oracles&lt;/strong&gt; by Roozbeh Bassirian, Bill Fefferman, and Kunal Marwaha (&lt;a href=&quot;https://arxiv.org/pdf/2212.00098.pdf&quot;&gt;arXiv&lt;/a&gt;). This paper is on the power of oracles in quantum computation. An important question in quantum complexity theory is whether \(QCMA\) is a strict subset of \(QMA\). The former consists of languages decided by Merlin-Arthur quantum protocols with a classical witness (the string that Merlin provides). The latter class allows Merlin to be a quantum witness. This paper shows a property testing problem where such a separation is shown. The property is essentially graph non-expansion (does there exist a set of low conductance?). The input graph should be thought of as an even (bounded) degree with &amp;#8220;exponentially many&amp;#8221; vertices. So it has \(N = 2^n\) vertices. The graph is represented through a special &amp;#8220;graph-coded&amp;#8221; function. The paper shows that there is a \(poly(n)\)-sized quantum witness for non-expansion that can be verified in \(poly(n)\) time, which includes queries to the graph-coded function. On the other hand, there is no classic \(poly(n)\)-sized witness that can be verified in \(poly(n)\) queries to the graph-coded function. (Informally speaking, any \(QCMA\) protocol needs exponentially many queries to the graph.)&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Seshadhri&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-09 18:51:55 UTC</pubDate>
-  <author>Property Testing Review</author>
-</item>
-
-<item>
-  <title>Assistant or Associate Professor at New York University, Tandon School of Engineering (apply by March 1, 2023)</title>
-  <guid>http://cstheory-jobs.org/2023/01/09/assistant-or-associate-professor-at-new-york-university-tandon-school-of-engineering-apply-by-march-1-2023/</guid>
-  <link>https://cstheory-jobs.org/2023/01/09/assistant-or-associate-professor-at-new-york-university-tandon-school-of-engineering-apply-by-march-1-2023/</link>
-  <description>
-    &lt;p&gt;NYU&amp;#8217;s Computer Science and Engineering Dept. is hiring and &amp;#8220;Theory + X&amp;#8221; is a priority area (e.g. Theory + Responsible Computing, Theory + Data Management, Theory + Scientific Computing). This is a late search, so applications are accepted on a rolling basis. Reach out to Chris Musco (cmusco@nyu.edu) with any questions about the search, position, and dept.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://apply.interfolio.com/119179&quot;&gt;https://apply.interfolio.com/119179&lt;/a&gt;&lt;br /&gt;
-Email: cmusco@nyu.edu&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2023-01-09 16:42:47 UTC</pubDate>
-  <author>CCI: jobs</author>
 </item>
 
 </channel>
