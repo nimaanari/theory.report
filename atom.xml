@@ -10,6 +10,352 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Cumulative Memory Lower Bounds for Randomized and Quantum Computation</title>
+    <link href="http://arxiv.org/abs/2301.05680"/>
+    <id>http://arxiv.org/abs/2301.05680</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Beame_P/0/1/0/all/0/1&quot;&gt;Paul Beame&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kornerup_N/0/1/0/all/0/1&quot;&gt;Niels Kornerup&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Cumulative memory -- the sum of space used over the steps of a computation --
+is a fine-grained measure of time-space complexity that is a more accurate
+measure of cost for algorithms with infrequent spikes in memory usage in the
+context of technologies such as cloud computing that allow dynamic allocation
+and de-allocation of resources during their execution. We give the first lower
+bounds on cumulative memory complexity that apply to general sequential
+classical algorithms. We also prove the first such bounds for bounded-error
+quantum circuits. Among many possible applications, we show that any classical
+sorting algorithm with success probability at least $1/\text{poly}(n)$ requires
+cumulative memory $\tilde \Omega(n^2)$, any classical matrix multiplication
+algorithm requires cumulative memory $\Omega(n^6/T)$, any quantum sorting
+circuit requires cumulative memory $\Omega(n^3/T)$, and any quantum circuit
+that finds $k$ disjoint collisions in a random function requires cumulative
+memory $\Omega(k^3n/T^2)$. More generally, we present theorems that can be used
+to convert a wide class of existing time-space tradeoff lower bounds to
+matching lower bounds on cumulative memory complexity.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Recognizing Unit Disk Graphs in Hyperbolic Geometry is $\exists\mathbb{R}$-Complete</title>
+    <link href="http://arxiv.org/abs/2301.05550"/>
+    <id>http://arxiv.org/abs/2301.05550</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bieker_N/0/1/0/all/0/1&quot;&gt;Nicholas Bieker&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blasius_T/0/1/0/all/0/1&quot;&gt;Thomas Bl&amp;#xe4;sius&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dohse_E/0/1/0/all/0/1&quot;&gt;Emil Dohse&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jungeblut_P/0/1/0/all/0/1&quot;&gt;Paul Jungeblut&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A graph G is a (Euclidean) unit disk graph if it is the intersection graph of
+unit disks in the Euclidean plane $\mathbb{R}^2$. Recognizing them is known to
+be $\exists\mathbb{R}$-complete, i.e., as hard as solving a system of
+polynomial inequalities. In this note we describe a simple framework to
+translate $\exists\mathbb{R}$-hardness reductions from the Euclidean plane
+$\mathbb{R}^2$ to the hyperbolic plane $\mathbb{H}^2$. We apply our framework
+to prove that the recognition of unit disk graphs in the hyperbolic plane is
+also $\exists\mathbb{R}$-complete.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Streaming Lower Bounds and Asymmetric Set-Disjointness</title>
+    <link href="http://arxiv.org/abs/2301.05658"/>
+    <id>http://arxiv.org/abs/2301.05658</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lovett_S/0/1/0/all/0/1&quot;&gt;Shachar Lovett&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_J/0/1/0/all/0/1&quot;&gt;Jiapeng Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Frequency estimation in data streams is one of the classical problems in
+streaming algorithms. Following much research, there are now almost matching
+upper and lower bounds for the trade-off needed between the number of samples
+and the space complexity of the algorithm, when the data streams are
+adversarial. However, in the case where the data stream is given in a random
+order, or is stochastic, only weaker lower bounds exist. In this work we close
+this gap, up to logarithmic factors.
+&lt;/p&gt;
+&lt;p&gt;In order to do so we consider the needle problem, which is a natural hard
+problem for frequency estimation studied in (Andoni et al. 2008, Crouch et al.
+2016). Here, the goal is to distinguish between two distributions over data
+streams with $t$ samples. The first is uniform over a large enough domain. The
+second is a planted model; a secret &#39;&#39;needle&#39;&#39; is uniformly chosen, and then
+each element in the stream equals the needle with probability $p$, and
+otherwise is uniformly chosen from the domain. It is simple to design streaming
+algorithms that distinguish the distributions using space $s \approx 1/(p^2
+t)$. It was unclear if this is tight, as the existing lower bounds are weaker.
+We close this gap and show that the trade-off is near optimal, up to a
+logarithmic factor.
+&lt;/p&gt;
+&lt;p&gt;Our proof builds and extends classical connections between streaming
+algorithms and communication complexity, concretely multi-party unique
+set-disjointness. We introduce two new ingredients that allow us to prove sharp
+bounds. The first is a lower bound for an asymmetric version of multi-party
+unique set-disjointness, where players receive input sets of different sizes,
+and where the communication of each player is normalized relative to their
+input length. The second is a combinatorial technique that allows to sample
+needles in the planted model by first sampling intervals, and then sampling a
+uniform needle in each interval.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Incremental Dead State Detection in Logarithmic Time</title>
+    <link href="http://arxiv.org/abs/2301.05308"/>
+    <id>http://arxiv.org/abs/2301.05308</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Stanford_C/0/1/0/all/0/1&quot;&gt;Caleb Stanford&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Veanes_M/0/1/0/all/0/1&quot;&gt;Margus Veanes&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Identifying live and dead states in an abstract transition system is a
+recurring problem in formal verification. However, state-of-the-art graph
+algorithms for maintaining reachability information incrementally (that is, as
+states are visited and before the entire state space is explored) assume that
+new edges can be added from any state at any time, whereas in many
+applications, outgoing edges are added from each state as it is explored. To
+formalize the latter situation, we propose guided incremental digraphs (GIDs),
+incremental graphs which support labeling closed states (states which will not
+receive further outgoing edges). Our main result is that dead state detection
+in GIDs is solvable in $O(\log m)$ time per edge update for $m$ edges,
+improving upon $O(\sqrt{m})$ per edge due to Bender, Fineman, Gilbert, and
+Tarjan (BFGT) for general incremental directed graphs.
+&lt;/p&gt;
+&lt;p&gt;We introduce two algorithms for GIDs: one establishing the logarithmic time
+bound, and a second algorithm to explore a lazy heuristics-based approach. To
+demonstrate applicability, we show how GIDs can be used to lazily decide
+regular expression constraints in SMT applications. To enable an
+apples-to-apples experimental comparison, we implemented both algorithms, two
+naive baselines, and the state-of-the-art BFGT baseline using a common directed
+graph interface in Rust. Our evaluation shows $110$-$530$x speedups over BFGT
+for the largest input graphs over a range of graph classes, random graphs, and
+graphs arising from regular expression benchmarks.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Computing matching statistics on Wheeler DFAs</title>
+    <link href="http://arxiv.org/abs/2301.05338"/>
+    <id>http://arxiv.org/abs/2301.05338</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Conte_A/0/1/0/all/0/1&quot;&gt;Alessio Conte&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cotumaccio_N/0/1/0/all/0/1&quot;&gt;Nicola Cotumaccio&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gagie_T/0/1/0/all/0/1&quot;&gt;Travis Gagie&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Manzini_G/0/1/0/all/0/1&quot;&gt;Giovanni Manzini&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Prezza_N/0/1/0/all/0/1&quot;&gt;Nicola Prezza&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sciortino_M/0/1/0/all/0/1&quot;&gt;Marinella Sciortino&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Matching statistics were introduced to solve the approximate string matching
+problem, which is a recurrent subroutine in bioinformatics applications. In
+2010, Ohlebusch et al. [SPIRE 2010] proposed a time and space efficient
+algorithm for computing matching statistics which relies on some components of
+a compressed suffix tree - notably, the longest common prefix (LCP) array. In
+this paper, we show how their algorithm can be generalized from strings to
+Wheeler deterministic finite automata. Most importantly, we introduce a notion
+of LCP array for Wheeler automata, thus establishing a first clear step towards
+extending (compressed) suffix tree functionalities to labeled graphs.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Sublinear Algorithms for TSP via Path Covers</title>
+    <link href="http://arxiv.org/abs/2301.05350"/>
+    <id>http://arxiv.org/abs/2301.05350</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Behnezhad_S/0/1/0/all/0/1&quot;&gt;Soheil Behnezhad&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Roghani_M/0/1/0/all/0/1&quot;&gt;Mohammad Roghani&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rubinstein_A/0/1/0/all/0/1&quot;&gt;Aviad Rubinstein&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saberi_A/0/1/0/all/0/1&quot;&gt;Amin Saberi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study sublinear time algorithms for the traveling salesman problem (TSP).
+First, we focus on the closely related maximum path cover problem, which asks
+for a collection of vertex disjoint paths that include the maximum number of
+edges. We show that for any fixed $\epsilon &amp;gt; 0$, there is an algorithm that
+$(1/2 - \epsilon)$-approximates the maximum path cover size of an $n$-vertex
+graph in $\widetilde{O}(n)$ time. This improves upon a
+$(3/8-\epsilon)$-approximate $\widetilde{O}(n \sqrt{n})$-time algorithm of
+Chen, Kannan, and Khanna [ICALP&#39;20].
+&lt;/p&gt;
+&lt;p&gt;Equipped with our path cover algorithm, we give $\widetilde{O}(n)$ time
+algorithms that estimate the cost of graphic TSP and $(1, 2)$-TSP up to factors
+of $1.83$ and $(1.5+\epsilon)$, respectively. Our algorithm for graphic TSP
+improves over a $1.92$-approximate $\widetilde{O}(n)$ time algorithm due to
+[CHK ICALP&#39;20, Behnezhad FOCS&#39;21]. Our algorithm for $(1,2)$-TSP improves over
+a folklore $(1.75 + \epsilon)$-approximate $\widetilde{O}(n)$-time algorithm,
+as well as a $(1.625+\epsilon)$-approximate $\widetilde{O}(n\sqrt{n})$-time
+algorithm of [CHK ICALP&#39;20].
+&lt;/p&gt;
+&lt;p&gt;Our analysis of the running time uses connections to parallel algorithms and
+is information-theoretically optimal up to poly log $n$ factors. Additionally,
+we show that our approximation guarantees for path cover and $(1,2)$-TSP hit a
+natural barrier: We show better approximations require better sublinear time
+algorithms for the well-studied maximum matching problem.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Quick Minimization of Tardy Processing Time on a Single Machine</title>
+    <link href="http://arxiv.org/abs/2301.05460"/>
+    <id>http://arxiv.org/abs/2301.05460</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schieber_B/0/1/0/all/0/1&quot;&gt;Baruch Schieber&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sitaraman_P/0/1/0/all/0/1&quot;&gt;Pranav Sitaraman&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the problem of minimizing the total processing time of tardy jobs
+on a single machine. This is a classical scheduling problem, first considered
+by [Lawler and Moore 1969], that also generalizes the Subset Sum problem.
+Recently, it was shown that this problem can be solved efficiently by computing
+$(\max,\min)$-skewed-convolutions. The running time of the resulting algorithm
+is equivalent, up to logarithmic factors, to the time it takes to compute a
+$(\max,\min)$-skewed-convolution of two vectors of integers whose sum is
+$O(P)$, where $P$ is the sum of the jobs&#39; processing times. We further improve
+the running time of the minimum tardy processing time computation by
+introducing a job ``bundling&#39;&#39; technique and achieve a
+$\tilde{O}\left(P^{2-1/\alpha}\right)$ running time, where
+$\tilde{O}\left(P^\alpha\right)$ is the running time of a
+$(\max,\min)$-skewed-convolution of vectors of size $P$. This results in a
+$\tilde{O}\left(P^{7/5}\right)$ time algorithm for tardy processing time
+minimization, an improvement over the previously known
+$\tilde{O}\left(P^{5/3}\right)$ time algorithm.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Synergies Between Operations Research and Quantum Information Science</title>
+    <link href="http://arxiv.org/abs/2301.05554"/>
+    <id>http://arxiv.org/abs/2301.05554</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Parekh_O/0/1/0/all/0/1&quot;&gt;Ojas Parekh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This article highlights synergies between quantum information science (QIS)
+and operations research for QIS-curious operations researchers (and
+vice-versa).
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Differentially Private Continual Releases of Streaming Frequency Moment Estimations</title>
+    <link href="http://arxiv.org/abs/2301.05605"/>
+    <id>http://arxiv.org/abs/2301.05605</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Epasto_A/0/1/0/all/0/1&quot;&gt;Alessandro Epasto&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mao_J/0/1/0/all/0/1&quot;&gt;Jieming Mao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Medina_A/0/1/0/all/0/1&quot;&gt;Andres Munoz Medina&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mirrokni_V/0/1/0/all/0/1&quot;&gt;Vahab Mirrokni&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vassilvitskii_S/0/1/0/all/0/1&quot;&gt;Sergei Vassilvitskii&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhong_P/0/1/0/all/0/1&quot;&gt;Peilin Zhong&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The streaming model of computation is a popular approach for working with
+large-scale data. In this setting, there is a stream of items and the goal is
+to compute the desired quantities (usually data statistics) while making a
+single pass through the stream and using as little space as possible.
+&lt;/p&gt;
+&lt;p&gt;Motivated by the importance of data privacy, we develop differentially
+private streaming algorithms under the continual release setting, where the
+union of outputs of the algorithm at every timestamp must be differentially
+private. Specifically, we study the fundamental $\ell_p$ $(p\in [0,+\infty))$
+frequency moment estimation problem under this setting, and give an
+$\varepsilon$-DP algorithm that achieves $(1+\eta)$-relative approximation
+$(\forall \eta\in(0,1))$ with $\mathrm{poly}\log(Tn)$ additive error and uses
+$\mathrm{poly}\log(Tn)\cdot \max(1, n^{1-2/p})$ space, where $T$ is the length
+of the stream and $n$ is the size of the universe of elements. Our space is
+near optimal up to poly-logarithmic factors even in the non-private setting.
+&lt;/p&gt;
+&lt;p&gt;To obtain our results, we first reduce several primitives under the
+differentially private continual release model, such as counting distinct
+elements, heavy hitters and counting low frequency elements, to the simpler,
+counting/summing problems in the same setting. Based on these primitives, we
+develop a differentially private continual release level set estimation
+approach to address the $\ell_p$ frequency moment estimation problem.
+&lt;/p&gt;
+&lt;p&gt;We also provide a simple extension of our results to the harder sliding
+window model, where the statistics must be maintained over the past $W$ data
+items.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Non-Stochastic CDF Estimation Using Threshold Queries</title>
+    <link href="http://arxiv.org/abs/2301.05682"/>
+    <id>http://arxiv.org/abs/2301.05682</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Okoroafor_P/0/1/0/all/0/1&quot;&gt;Princewill Okoroafor&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gupta_V/0/1/0/all/0/1&quot;&gt;Vaishnavi Gupta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kleinberg_R/0/1/0/all/0/1&quot;&gt;Robert Kleinberg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Goh_E/0/1/0/all/0/1&quot;&gt;Eleanor Goh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Estimating the empirical distribution of a scalar-valued data set is a basic
+and fundamental task. In this paper, we tackle the problem of estimating an
+empirical distribution in a setting with two challenging features. First, the
+algorithm does not directly observe the data; instead, it only asks a limited
+number of threshold queries about each sample. Second, the data are not assumed
+to be independent and identically distributed; instead, we allow for an
+arbitrary process generating the samples, including an adaptive adversary.
+These considerations are relevant, for example, when modeling a seller
+experimenting with posted prices to estimate the distribution of consumers&#39;
+willingness to pay for a product: offering a price and observing a consumer&#39;s
+purchase decision is equivalent to asking a single threshold query about their
+value, and the distribution of consumers&#39; values may be non-stationary over
+time, as early adopters may differ markedly from late adopters.
+&lt;/p&gt;
+&lt;p&gt;Our main result quantifies, to within a constant factor, the sample
+complexity of estimating the empirical CDF of a sequence of elements of $[n]$,
+up to $\varepsilon$ additive error, using one threshold query per sample. The
+complexity depends only logarithmically on $n$, and our result can be
+interpreted as extending the existing logarithmic-complexity results for noisy
+binary search to the more challenging setting where noise is non-stochastic.
+Along the way to designing our algorithm, we consider a more general model in
+which the algorithm is allowed to make a limited number of simultaneous
+threshold queries on each sample. We solve this problem using Blackwell&#39;s
+Approachability Theorem and the exponential weights method. As a side result of
+independent interest, we characterize the minimum number of simultaneous
+threshold queries required by deterministic CDF estimation algorithms.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On a conjecture of Knuth about forward and back arcs</title>
+    <link href="http://arxiv.org/abs/2301.05704"/>
+    <id>http://arxiv.org/abs/2301.05704</id>
+    <updated>2023-01-16T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Nie_Z/0/1/0/all/0/1&quot;&gt;Zipei Nie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Following Janson&#39;s method, we prove a conjecture of Knuth: the numbers of
+forward and back arcs for the depth-first search (DFS) in a digraph with a
+geometric outdegree distribution have the same distribution.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Scott Aaronson: Movie Review: M3GAN</title>
     <link href="https://scottaaronson.blog/?p=6990"/>
     <id>https://scottaaronson.blog/?p=6990</id>
@@ -1126,359 +1472,6 @@ second one is the Random Fourier Features (RFF) map of Rahimi and Recht
     <author>
       <name>arXiv: Computational Geometry</name>
       <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Sparse Geometric Set Systems and the Beck-Fiala Conjecture</title>
-    <link href="http://arxiv.org/abs/2301.03329"/>
-    <id>http://arxiv.org/abs/2301.03329</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dutta_K/0/1/0/all/0/1&quot;&gt;Kunal Dutta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghosh_A/0/1/0/all/0/1&quot;&gt;Arijit Ghosh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate the combinatorial discrepancy of geometric set systems having
-bounded shallow cell complexity in the \emph{Beck-Fiala} setting, where each
-point belongs to at most $t$ ranges. For set systems with shallow cell
-complexity $\psi(m,k)=g(m)k^{c}$, where $(i)$ $g(m) = o(m^{\varepsilon})$ for
-any $\varepsilon\in (0,1],$ $(ii)$ $\psi$ is non-decreasing in $m$, and $(iii)$
-$c&amp;gt;0$ is independent of $m$ and $k$, we get a discrepancy bound of
-&lt;/p&gt;
-&lt;p&gt;\[ O\left(\sqrt{\left(\log
-n+\left(t^{c}g(n)\right)^{\frac{1}{1+c}}\right)\log n}\right).\]
-&lt;/p&gt;
-&lt;p&gt;For $t=\omega(\log^2 n)$, in several cases, such as for set systems of points
-and half-planes / disks / pseudo-disks in $\mathbb{R}^2$, points and orthants
-in $\mathbb{R}^3$ etc., these bounds are $o(\sqrt{t})$, which verifies (and
-improves upon) the conjectured bound of Beck and Fiala~\emph{(Disc. Appl.
-Math., 1981)}.
-&lt;/p&gt;
-&lt;p&gt;Our bounds are obtained by showing the existence of \emph{matchings with low
-crossing number}, using the multiplicative weights update method of Welzl
-\emph{(SoCG, 1988)}, together with the recent bound of Mustafa \emph{(Disc.
-Comp. Geom., 2015)} on \emph{shallow packings} of set systems in terms of their
-shallow cell complexity. For set systems of shallow cell complexity
-$\psi(m,k)=m^{c_1}g(m)k^{c}$, we obtain matchings with crossing number at most
-&lt;/p&gt;
-&lt;p&gt;\[ O\left(\left(n^{c_1}g(n)t^{c}\right)^{\frac{1}{1+c_1+c}}\right).\]
-&lt;/p&gt;
-&lt;p&gt;These are of independent interest.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Strong Collapse of Random Simplicial Complexes</title>
-    <link href="http://arxiv.org/abs/2301.03514"/>
-    <id>http://arxiv.org/abs/2301.03514</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Boissonnat_J/0/1/0/all/0/1&quot;&gt;Jean-Daniel Boissonnat&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dutta_K/0/1/0/all/0/1&quot;&gt;Kunal Dutta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dutta_S/0/1/0/all/0/1&quot;&gt;Soumik Dutta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pritam_S/0/1/0/all/0/1&quot;&gt;Siddharth Pritam&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The \emph{strong collapse} of a simplicial complex, proposed by Barmak and
-Minian (\emph{Disc. Comp. Geom. 2012}), is a combinatorial collapse of a
-complex onto its sub-complex. Recently, it has received attention from
-computational topology researchers, owing to its empirically observed
-usefulness in simplification and size-reduction
-&lt;/p&gt;
-&lt;p&gt;of the size of simplicial complexes while preserving the homotopy class. We
-consider the strong collapse process on random simplicial complexes. For the
-&lt;/p&gt;
-&lt;p&gt;Erd\H{o}s-R\&#39;enyi random clique complex $X(n,c/n)$ on $n$ vertices with edge
-probability $c/n$ with $c&amp;gt;1$, we show that after any maximal sequence of strong
-collapses
-&lt;/p&gt;
-&lt;p&gt;the remaining subcomplex, or \emph{core} must have $(1-\gamma)(1-c\gamma)
-n+o(n)$ vertices asymptotically almost surely (a.a.s.), where $\gamma$ is the
-least non-negative fixed
-&lt;/p&gt;
-&lt;p&gt;point of the function $f(x) = \exp\left(-c(1-x)\right)$ in the range $(0,1)$.
-&lt;/p&gt;
-&lt;p&gt;These are the first theoretical results proved for strong collapses on random
-(or non-random) simplicial complexes.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Sublinear Time Algorithms for Several Geometric Optimization (With Outliers) Problems In Machine Learning</title>
-    <link href="http://arxiv.org/abs/2301.02870"/>
-    <id>http://arxiv.org/abs/2301.02870</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ding_H/0/1/0/all/0/1&quot;&gt;Hu Ding&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we study several important geometric optimization problems
-arising in machine learning. First, we revisit the Minimum Enclosing Ball (MEB)
-problem in Euclidean space $\mathbb{R}^d$. The problem has been extensively
-studied before, but real-world machine learning tasks often need to handle
-large-scale datasets so that we cannot even afford linear time algorithms.
-Motivated by the recent studies on {\em beyond worst-case analysis}, we
-introduce the notion of stability for MEB, which is natural and easy to
-understand. Roughly speaking, an instance of MEB is stable, if the radius of
-the resulting ball cannot be significantly reduced by removing a small fraction
-of the input points. Under the stability assumption, we present two sampling
-algorithms for computing radius-approximate MEB with sample complexities
-independent of the number of input points $n$. In particular, the second
-algorithm has the sample complexity even independent of the dimensionality $d$.
-We also consider the general case without the stability assumption. We present
-a hybrid algorithm that can output either a radius-approximate MEB or a
-covering-approximate MEB. Our algorithm improves the running time and the
-number of passes for the previous sublinear MEB algorithms. Our method relies
-on two novel techniques, the Uniform-Adaptive Sampling method and Sandwich
-Lemma. Furthermore, we observe that these two techniques can be generalized to
-design sublinear time algorithms for a broader range of geometric optimization
-problems with outliers in high dimensions, including MEB with outliers,
-one-class and two-class linear SVMs with outliers, $k$-center clustering with
-outliers, and flat fitting with outliers. Our proposed algorithms also work
-fine for kernels.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Randomized Greedy Algorithms and Composable Coreset for k-Center Clustering with Outliers</title>
-    <link href="http://arxiv.org/abs/2301.02814"/>
-    <id>http://arxiv.org/abs/2301.02814</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ding_H/0/1/0/all/0/1&quot;&gt;Hu Ding&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Huang_R/0/1/0/all/0/1&quot;&gt;Ruomin Huang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_K/0/1/0/all/0/1&quot;&gt;Kai Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yu_H/0/1/0/all/0/1&quot;&gt;Haikuo Yu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_Z/0/1/0/all/0/1&quot;&gt;Zixiu Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we study the problem of {\em $k$-center clustering with
-outliers}. The problem has many important applications in real world, but the
-presence of outliers can significantly increase the computational complexity.
-Though a number of methods have been developed in the past decades, it is still
-quite challenging to design quality guaranteed algorithm with low complexity
-for this problem. Our idea is inspired by the greedy method, Gonzalez&#39;s
-algorithm, that was developed for solving the ordinary $k$-center clustering
-problem. Based on some novel observations, we show that a simple randomized
-version of this greedy strategy actually can handle outliers efficiently. We
-further show that this randomized greedy approach also yields small coreset for
-the problem in doubling metrics (even if the doubling dimension is not given),
-which can greatly reduce the computational complexity. Moreover, together with
-the partial clustering framework proposed in &lt;a href=&quot;/abs/1703.01539&quot;&gt;arXiv:1703.01539&lt;/a&gt; , we prove that
-our coreset method can be applied to distributed data with a low communication
-complexity. The experimental results suggest that our algorithms can achieve
-near optimal solutions and yield lower complexities comparing with the existing
-methods.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Assigning Agents to Increase Network-Based Neighborhood Diversity</title>
-    <link href="http://arxiv.org/abs/2301.02876"/>
-    <id>http://arxiv.org/abs/2301.02876</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Qiu_Z/0/1/0/all/0/1&quot;&gt;Zirou Qiu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yuan_A/0/1/0/all/0/1&quot;&gt;Andrew Yuan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_C/0/1/0/all/0/1&quot;&gt;Chen Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Marathe_M/0/1/0/all/0/1&quot;&gt;Madhav V. Marathe&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ravi_S/0/1/0/all/0/1&quot;&gt;S. S. Ravi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rosenkrantz_D/0/1/0/all/0/1&quot;&gt;Daniel J. Rosenkrantz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Stearns_R/0/1/0/all/0/1&quot;&gt;Richard E. Stearns&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vullikanti_A/0/1/0/all/0/1&quot;&gt;Anil Vullikanti&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Social segregation is a persistent problem in society. Despite of the
-existing strategic plans to advance diversity, we continue to witness spatial
-segregation of people by demographic features. Motivated by real-world
-applications, such as public-housing allocation for low-income individuals, we
-examine the problem of assigning a group of agents to vertices in a graph that
-represents spatial locations. Agents are of two types (subgroups) characterized
-by certain sensitive features. The goal is to construct an assignment that
-maximizes the level of diversity. Specifically, we quantify the diversity by
-the number of well-integrated agents, that is, the agents who have at least one
-neighbor of a different type in the network. Given the intractable nature of
-this maximization problem, we focus on developing approximation algorithms with
-provable performance guarantees. We first propose a local-improvement algorithm
-for general graphs with a constant factor 1/2 approximation. Further, for a
-special case where the sizes of two subgroups are similar, we present a
-semidefinite programming approach that yields an approximation factor better
-than 1/2. We also show that the problem can be solved efficiently when the
-underlying graph is treewidth-bounded, and then use this result to obtain a
-polynomial time approximation scheme (PTAS) for the problem on planar graphs.
-Lastly, we conduct experiments to evaluate the performance of the proposed
-algorithms on realistic networks.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Abstract Huffman Coding and PIFO Tree Embeddings</title>
-    <link href="http://arxiv.org/abs/2301.02878"/>
-    <id>http://arxiv.org/abs/2301.02878</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+DAngelo_K/0/1/0/all/0/1&quot;&gt;Keri D&amp;#x27;Angelo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kozen_D/0/1/0/all/0/1&quot;&gt;Dexter Kozen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Algorithms for deriving Huffman codes and the recently developed algorithm
-for compiling PIFO trees to trees of fixed shape (Mohan et al. 2022) are
-similar, but work with different underlying algebraic operations. In this
-paper, we exploit the monadic structure of prefix codes to create a generalized
-Huffman algorithm that has these two applications as special cases.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Quantum Honest Byzantine Agreement as a Distributed Quantum Algorithm</title>
-    <link href="http://arxiv.org/abs/2301.02944"/>
-    <id>http://arxiv.org/abs/2301.02944</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Edwards_M/0/1/0/all/0/1&quot;&gt;Marcus Edwards&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Blockchain technology has three main components: the network, consensus
-algorithm and distributed data structure. Each of these brings with it
-particular issues of scalability and efficiency. By recasting the network and
-consensus algorithm components of blockchain to a quantum algorithm, we show
-that the efficiency and scalability of blockchain technology can be improved in
-the near-term without requiring powerful quantum computers to be available.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: SeedTree: A Dynamically Optimal and Local Self-Adjusting Tree</title>
-    <link href="http://arxiv.org/abs/2301.03074"/>
-    <id>http://arxiv.org/abs/2301.03074</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pourdamghani_A/0/1/0/all/0/1&quot;&gt;Arash Pourdamghani&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Avin_C/0/1/0/all/0/1&quot;&gt;Chen Avin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sama_R/0/1/0/all/0/1&quot;&gt;Robert Sama&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schmid_S/0/1/0/all/0/1&quot;&gt;Stefan Schmid&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the fundamental problem of designing a self-adjusting tree, which
-efficiently and locally adapts itself towards the demand it serves (namely
-accesses to the items stored by the tree nodes), striking a balance between the
-benefits of such adjustments (enabling faster access) and their costs
-(reconfigurations). This problem finds applications, among others, in the
-context of emerging demand-aware and reconfigurable datacenter networks and
-features connections to self-adjusting data structures. Our main contribution
-is SeedTree, a dynamically optimal self-adjusting tree which supports local
-(i.e., greedy) routing, which is particularly attractive under highly dynamic
-demands. SeedTree relies on an innovative approach which defines a set of
-unique paths based on randomized item addresses, and uses a small constant
-number of items per node. We complement our analytical results by showing the
-benefits of SeedTree empirically, evaluating it on various synthetic and
-real-world communication traces.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Dynamic Binary Search Trees: Improved Lower Bounds for the Greedy-Future Algorithm</title>
-    <link href="http://arxiv.org/abs/2301.03084"/>
-    <id>http://arxiv.org/abs/2301.03084</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sadeh_Y/0/1/0/all/0/1&quot;&gt;Yaniv Sadeh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kaplan_H/0/1/0/all/0/1&quot;&gt;Haim Kaplan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Binary search trees (BSTs) are one of the most basic and widely used data
-structures. The best static tree for serving a sequence of queries (searches)
-can be computed by dynamic programming. In contrast, when the BSTs are allowed
-to be dynamic (i.e. change by rotations between searches), we still do not know
-how to compute the optimal algorithm (OPT) for a given sequence. One of the
-candidate algorithms whose serving cost is suspected to be optimal up-to a
-(multiplicative) constant factor is known by the name Greedy Future (GF). In an
-equivalent geometric way of representing queries on BSTs, GF is in fact
-equivalent to another algorithm called Geometric Greedy (GG). Most of the
-results on GF are obtained using the geometric model and the study of GG.
-Despite this intensive recent fruitful research, the best lower bound we have
-on the competitive ratio of GF is $\frac{4}{3}$. Furthermore, it has been
-conjectured that the additive gap between the cost of GF and OPT is only linear
-in the number of queries. In this paper we prove a lower bound of $2$ on the
-competitive ratio of GF, and we prove that the additive gap between the cost of
-GF and OPT can be $\Omega(m \cdot \log\log n)$ where $n$ is the number of items
-in the tree and $m$ is the number of queries.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Structural Equivalence in Subgraph Matching</title>
-    <link href="http://arxiv.org/abs/2301.03161"/>
-    <id>http://arxiv.org/abs/2301.03161</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yang_D/0/1/0/all/0/1&quot;&gt;Dominic Yang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ge_Y/0/1/0/all/0/1&quot;&gt;Yurun Ge&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_T/0/1/0/all/0/1&quot;&gt;Thien Nguyen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moorman_J/0/1/0/all/0/1&quot;&gt;Jacob Moorman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Molitor_D/0/1/0/all/0/1&quot;&gt;Denali Molitor&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bertozzi_A/0/1/0/all/0/1&quot;&gt;Andrea Bertozzi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Symmetry plays a major role in subgraph matching both in the description of
-the graphs in question and in how it confounds the search process. This work
-addresses how to quantify these effects and how to use symmetries to increase
-the efficiency of subgraph isomorphism algorithms. We introduce rigorous
-definitions of structural equivalence and establish conditions for when it can
-be safely used to generate more solutions. We illustrate how to adapt standard
-search routines to utilize these symmetries to accelerate search and compactly
-describe the solution space. We then adapt a state-of-the-art solver and
-perform a comprehensive series of tests to demonstrate these methods&#39; efficacy
-on a standard benchmark set. We extend these methods to multiplex graphs and
-present results on large multiplex networks drawn from transportation systems,
-social media, adversarial attacks, and knowledge graphs.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Subset verification and search algorithms for causal DAGs</title>
-    <link href="http://arxiv.org/abs/2301.03180"/>
-    <id>http://arxiv.org/abs/2301.03180</id>
-    <updated>2023-01-10T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Choo_D/0/1/0/all/0/1&quot;&gt;Davin Choo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shiragur_K/0/1/0/all/0/1&quot;&gt;Kirankumar Shiragur&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Learning causal relationships between variables is a fundamental task in
-causal inference and directed acyclic graphs (DAGs) are a popular choice to
-represent the causal relationships. As one can recover a causal graph only up
-to its Markov equivalence class from observations, interventions are often used
-for the recovery task. Interventions are costly in general and it is important
-to design algorithms that minimize the number of interventions performed.
-&lt;/p&gt;
-&lt;p&gt;In this work, we study the problem of learning the causal relationships of a
-subset of edges (target edges) in a graph with as few interventions as
-possible. Under the assumptions of faithfulness, causal sufficiency, and ideal
-interventions, we study this problem in two settings: when the underlying
-ground truth causal graph is known (subset verification) and when it is unknown
-(subset search).
-&lt;/p&gt;
-&lt;p&gt;For the subset verification problem, we provide an efficient algorithm to
-compute a minimum sized interventional set; we further extend these results to
-bounded size non-atomic interventions and node-dependent interventional costs.
-For the subset search problem, in the worst case, we show that no algorithm
-(even with adaptivity or randomization) can achieve an approximation ratio that
-is asymptotically better than the vertex cover of the target edges when
-compared with the subset verification number. This result is surprising as
-there exists a logarithmic approximation algorithm for the search problem when
-we wish to recover the whole causal graph. To obtain our results, we prove
-several interesting structural properties of interventional causal graphs that
-we believe have applications beyond the subset verification/search problems
-studied here.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
