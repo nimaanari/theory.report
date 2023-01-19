@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-01-19T18:36:17Z">Thursday, January 19 2023, 18:36</time>
+          <time class='timeago' datetime="2023-01-19T19:30:36Z">Thursday, January 19 2023, 19:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,358 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, January 19
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://emanueleviola.wordpress.com/2023/01/19/mathematics-of-the-impossible-computational-complexity/'>Mathematics of the impossible: Computational Complexity</a></h3>
+        <p class='tr-article-feed'>from <a href='https://emanueleviola.wordpress.com'>Emanuele Viola</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          I am teaching and writing some notes on complexity. I hope they will become a book, so they are organized as such. The notes will be serialized on this blog, and you can find the latest version of the book in pdf here, which has a better rendering of tables, pictures, comic strips, etc. 0.1 [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>I am teaching and writing some notes on complexity. I hope they will become a book, so they are organized as such. The notes will be serialized on this blog, and you can find <a href="https://www.ccs.neu.edu/home/viola/papers/moti.pdf">the latest version of the book in pdf here</a>, which has a better rendering of tables, pictures, comic strips, etc.</p>
+<hr />
+<h3 class="sectionHead"><span class="titlemark">0.1   </span> <a id="x1-20000.1"></a>Conventions, choices, and caveats</h3>
+<p style="text-align:justify">I write this section before the work is complete, so some of it may change.</p>
+<p style="text-align:justify">   This book covers basic results in complexity theory and can be used for a course on the subject. At the same time, it is perhaps <em>sui generis</em> in that it also tells a story of the quest for impossibility results, includes some personal reflections, and makes some non-standard choices about topics and technical details. Some of this is discussed next.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>To test your understanding of the material&#8230;</b></p>
+<p style="text-align:justify">   this book is interspersed with mistakes, some subtle, some blatant, some not even mistakes but worrying glimpses into the author’s mind. Please send all bug reports and comments to <em>(my five-letter last name)@ccs.neu.edu </em>to be included in the list of heroes.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>The <img src="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c" class="latex" /> notation.</b></p>
+<p style="text-align:justify">   The mathematical symbol <img src="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c" class="latex" /> has a special meaning in this text. Every <em>occurrence</em> of <img src="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c" class="latex" /> denotes a real number <img src="https://s0.wp.com/latex.php?latex=%3E0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%3E0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%3E0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&gt;0" class="latex" />. There exist choices for these numbers such that the claims in this book are (or are meant to be) correct. This replaces, is more compact than, and is less prone to abuse than the big-Oh notation (sloppiness hides inside brackets).</p>
+<div class="newtheorem">
+<p style="text-align:justify"><span class="head"> <a id="x1-2001r1"></a> <b>Example</b> 0.1.  </span>“For all sufficiently large <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />” can be written as <img src="https://s0.wp.com/latex.php?latex=n%5Cge+c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n%5Cge+c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n%5Cge+c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n&#92;ge c" class="latex" />.</p>
+<p style="text-align:justify">   “For every <img src="https://s0.wp.com/latex.php?latex=%5Cepsilon+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cepsilon+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cepsilon+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;epsilon " class="latex" /> and all sufficiently large <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />” can be written as <img src="https://s0.wp.com/latex.php?latex=n%5Cge+c_%7B%5Cepsilon+%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n%5Cge+c_%7B%5Cepsilon+%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n%5Cge+c_%7B%5Cepsilon+%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n&#92;ge c_{&#92;epsilon }" class="latex" />.</p>
+<p style="text-align:justify">   The following are correct statements:</p>
+<p style="text-align:justify">   “It is an open problem to show that some function in NP requires circuits of size <img src="https://s0.wp.com/latex.php?latex=cn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=cn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=cn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="cn" class="latex" />.” At the moment of this writing, one can replace this occurrence with <img src="https://s0.wp.com/latex.php?latex=5&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=5&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=5&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="5" class="latex" />. Note such a claim will remain true if someone proves a <img src="https://s0.wp.com/latex.php?latex=6n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=6n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=6n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="6n" class="latex" /> lower bounds. One just needs to “recompile” the constants in this book.</p>
+<p style="text-align:justify">   “<img src="https://s0.wp.com/latex.php?latex=c%3E1%2Bc&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c%3E1%2Bc&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c%3E1%2Bc&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c&gt;1+c" class="latex" />”, e.g.&nbsp;assign <img src="https://s0.wp.com/latex.php?latex=2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="2" class="latex" /> to the first occurrence, <img src="https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="1" class="latex" /> to the second.</p>
+<p style="text-align:justify">   “<img src="https://s0.wp.com/latex.php?latex=100n%5E%7B15%7D%3Cn%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=100n%5E%7B15%7D%3Cn%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=100n%5E%7B15%7D%3Cn%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="100n^{15}&lt;n^{c}" class="latex" />&#8221;, for=&quot;&quot; all=&quot;&quot; large=&quot;&quot; enough=&quot;&quot; <img src="https://s0.wp.com/latex.php?latex=%22%22+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%22%22+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%22%22+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&quot;&quot; n" class="latex" />.=&quot;&quot; assign=&quot;&quot; c=&quot;16$.&quot;
+</p>
+<p style="text-align:justify">   The following are not true:</p>
+<p style="text-align:justify">   “<img src="https://s0.wp.com/latex.php?latex=c%3C1%2Fn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c%3C1%2Fn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c%3C1%2Fn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c&lt;1/n" class="latex" /> for every <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />”. No matter what we assign <img src="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c" class="latex" /> to, we can pick a large enough <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />. Note the assignment to <img src="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c" class="latex" /> is absolute, independent of <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />.</p>
+<p style="text-align:justify">
+</div>
+<p style="text-align:justify">   More generally, when subscripted this notation indicates a function of the subscript. There exist choices for these functions such that the claims in this book are (or are meant to be) correct. Again, each occurrence can indicate a different function.</p>
+<p style="text-align:justify">   For the reader who prefers the big-Oh notation a quick an dirty fix is to replace every occurrence of <img src="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c" class="latex" /> in this book with <img src="https://s0.wp.com/latex.php?latex=O%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=O%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=O%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="O(1)" class="latex" />.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>The alphabet of TMs.</b></p>
+<p style="text-align:justify">   I define TMs with a fixed alphabet. This choice slightly simplifies the exposition (one parameter vs.&nbsp;two), while being more in line with common experience (it is more common experience to increase the length of a program than its alphabet). This choice affects the proof of Theorem ??. But it isn’t clear that the details are any worse.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Partial vs.&nbsp;total functions (a.k.a.&nbsp;on promise problems).</b></p>
+<div class="quote">
+<p style="text-align:justify">Recall that <em>promise problems offer the most direct way of formulating natural       computational problems. [&#8230;]  </em>In spite of the foregoing opinions, we adopt the       convention of focusing on standard decision and search problems. <em><span class="cite">[<a href="#XGoldreich08Complexity">2</a>]</span></em></p>
+</div>
+<p style="text-align:justify">I define complexity w.r.t.&nbsp;<em>partial </em>functions whereas most texts consider <em>total</em> functions, i.e.&nbsp;we consider computing functions with arbitrary domains rather than any possible string. This is sometimes called “promise problems.” This affects many things, for example the hierarchy for <img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BBPTime%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BBPTime%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BBPTime%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {BPTime}" class="latex" /> (Exercise ??).    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>References and names.</b></p>
+<p style="text-align:justify">   I decided to keep references in the main text to a minimum, just to avoid having a long list later with items “Result X is due to Y,” but relegate discussion to bibliographic notes. I have also decided to not spell out names of authors, which is increasingly awkward. Central results, such as the PCP theorem, are co-authored by five or more people.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Polynomial.</b></p>
+<p style="text-align:justify">   It is customary in complexity theory to bound quantities by a polynomial, as in polynomial time, when in fact the only terms that matters is the leading time. This also lends itself to confusion since polynomials with many terms are useful for many other things. I use <em>power</em> instead of polynomial, as in power time.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Random-access machines.</b></p>
+<p style="text-align:justify">   “Random access” also leads to strange expressions like “randomized random-access” <span class="cite">[<a href="journals/jcss/AngluinV79">1</a>]</span>.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Reductions.</b></p>
+<p style="text-align:justify">   Are presented as an implication.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Randomness and circuits.</b></p>
+<p style="text-align:justify">   While randomness and circuits are everywhere in current research, and seem to be on everyone’s mind, they are sometimes still relegated to later chapters, almost as an afterthought. This book starts with them right away, and attempts to weave them through the narrative.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Data structures</b></p>
+<p style="text-align:justify">   Their study, especially negative results, squarely belongs to complexity theory. Yet data structures are strangely omitted in common textbooks. Results on data structures even tend to miss main venues for complexity theory to land instead on more algorithmic venues! We hope this book helps to revert this trend.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Algorithms &amp; Complexity</b></p>
+<p style="text-align:justify">   &#8230;are of course two sides of the same coin. The rule of thumb I follow is to present algorithms that are <em>surprising</em> and <em>challenge our intuition of computation</em>, and ideally match lower bounds, even though they may not be immediately deployed.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Exercises and problems.</b></p>
+<p style="text-align:justify">   Exercises are interspersed within the narrative and serve as “concept check.” They are not meant to be difficult or new, though some are. Problems are collected at the end and tend to be harder and more original, though some are not.    <img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Summary of some terminological and not choices.</b></p>
+<p style="text-align:justify">   Here it is:</p>
+<div class="tabular">
+<table id="TBL-2" class="tabular" cellspacing="0" cellpadding="0">
+<colgroup id="TBL-2-1g">
+<col id="TBL-2-1"/></colgroup>
+<colgroup id="TBL-2-2g">
+<col id="TBL-2-2"/></colgroup>
+<colgroup id="TBL-2-3g">
+<col id="TBL-2-3"/></colgroup>
+<tbody>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-1-">
+<td style="text-align:center" id="TBL-2-1-1" class="td11">     Some other sources</td>
+<td style="text-align:center" id="TBL-2-1-2" class="td11">          this book</td>
+<td style="text-align:center" id="TBL-2-1-3" class="td11">acronym</td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-2-">
+<td style="text-align:center" id="TBL-2-2-1" class="td11">             <img src="https://s0.wp.com/latex.php?latex=O%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=O%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=O%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="O(1)" class="latex" />, <img src="https://s0.wp.com/latex.php?latex=%5COmega+%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5COmega+%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5COmega+%281%29&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;Omega (1)" class="latex" /></td>
+<td style="text-align:center" id="TBL-2-2-2" class="td11">             <img src="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=c&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="c" class="latex" /></td>
+<td style="text-align:center" id="TBL-2-2-3" class="td11"></td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-3-">
+<td style="text-align:center" id="TBL-2-3-1" class="td11">       Turing machine</td>
+<td style="text-align:center" id="TBL-2-3-2" class="td11">        tape machine</td>
+<td style="text-align:center" id="TBL-2-3-3" class="td11">  TM</td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-4-">
+<td style="text-align:center" id="TBL-2-4-1" class="td11">   random-access machine</td>
+<td style="text-align:center" id="TBL-2-4-2" class="td11">     rapid-access machine</td>
+<td style="text-align:center" id="TBL-2-4-3" class="td11"> RAM</td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-5-">
+<td style="text-align:center" id="TBL-2-5-1" class="td11">      polynomial time</td>
+<td style="text-align:center" id="TBL-2-5-2" class="td11">         power time</td>
+<td style="text-align:center" id="TBL-2-5-3" class="td11">   P</td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-6-">
+<td style="text-align:center" id="TBL-2-6-1" class="td11">mapping reduction (sometimes)</td>
+<td style="text-align:center" id="TBL-2-6-2" class="td11">    <img src="https://s0.wp.com/latex.php?latex=A&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=A&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=A&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="A" class="latex" /> reduces to <img src="https://s0.wp.com/latex.php?latex=B&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=B&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=B&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="B" class="latex" /> in <img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BP%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BP%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BP%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {P}" class="latex" /> means <img src="https://s0.wp.com/latex.php?latex=B%5Cin+%5Ctext+%7BP%7D%5CRightarrow+A%5Cin+%5Ctext+%7BP%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=B%5Cin+%5Ctext+%7BP%7D%5CRightarrow+A%5Cin+%5Ctext+%7BP%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=B%5Cin+%5Ctext+%7BP%7D%5CRightarrow+A%5Cin+%5Ctext+%7BP%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="B&#92;in &#92;text {P}&#92;Rightarrow A&#92;in &#92;text {P}" class="latex" /></td>
+<td style="text-align:center" id="TBL-2-6-3" class="td11"></td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-7-">
+<td style="text-align:center" id="TBL-2-7-1" class="td11">Extended Church-Turing thesis</td>
+<td style="text-align:center" id="TBL-2-7-2" class="td11">Power-time computability thesis</td>
+<td style="text-align:center" id="TBL-2-7-3" class="td11"></td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-8-">
+<td style="text-align:center" id="TBL-2-8-1" class="td11">    pairwise independent</td>
+<td style="text-align:center" id="TBL-2-8-2" class="td11">      pairwise uniform</td>
+<td style="text-align:center" id="TBL-2-8-3" class="td11"></td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-9-">
+<td style="text-align:center" id="TBL-2-9-1" class="td11">       FP, promise-P</td>
+<td style="text-align:center" id="TBL-2-9-2" class="td11">             P</td>
+<td style="text-align:center" id="TBL-2-9-3" class="td11"></td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-10-">
+<td style="text-align:center" id="TBL-2-10-1" class="td11">    TM with any alphabet</td>
+<td style="text-align:center" id="TBL-2-10-2" class="td11">   TM with fixed alphabet</td>
+<td style="text-align:center" id="TBL-2-10-3" class="td11"></td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-11-">
+<td style="text-align:center" id="TBL-2-11-1" class="td11">  classes have total functions</td>
+<td style="text-align:center" id="TBL-2-11-2" class="td11"> classes have partial functions</td>
+<td style="text-align:center" id="TBL-2-11-3" class="td11"></td>
+</tr>
+<tr class="hline">
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+<td>
+<hr />
+</td>
+</tr>
+<tr style="vertical-align:baseline" id="TBL-2-12-">
+<td style="text-align:center" id="TBL-2-12-1" class="td11"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmedskip+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;medskip " class="latex" /> <br class="newline"/></p>
+<p style="text-align:justify"><b>Copyright 2022-present by Emanuele Viola</b></p>
+<h2 class="chapterHead"><span class="titlemark">Chapter&nbsp;1</span><br />
+<a id="x1-30001"></a>A teaser</h2>
+<p style="text-align:justify">Consider a computer with <em>three</em> bits of memory. There’s also a clock, beating <img src="https://s0.wp.com/latex.php?latex=1%2C2%2C3%2C%5Cldots+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=1%2C2%2C3%2C%5Cldots+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=1%2C2%2C3%2C%5Cldots+&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="1,2,3,&#92;ldots " class="latex" /> In one clock cycle the computer can read one bit of the input and update its memory arbitrarily based on the value of the bit and the current memory, or stop and return a value.</p>
+<p style="text-align:justify">   Let’s give a few examples of what such computer can do.</p>
+<p style="text-align:justify">   First, it can compute the <img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BAnd%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BAnd%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BAnd%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {And}" class="latex" /> function on <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" /> bits:</p>
+<div style="text-align:center">
+<div class="fbox">
+<div class="minipage"><img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BComputing+And+of+%28%5Censuremath+%7Bx_%7B1%7D%7D%2C%5Censuremath+%7Bx_%7B2%7D%7D%2C%5Censuremath+%7B%5Cldots+%7D%2C%5Censuremath+%7Bx_%7Bn%7D%7D%29%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BComputing+And+of+%28%5Censuremath+%7Bx_%7B1%7D%7D%2C%5Censuremath+%7Bx_%7B2%7D%7D%2C%5Censuremath+%7B%5Cldots+%7D%2C%5Censuremath+%7Bx_%7Bn%7D%7D%29%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BComputing+And+of+%28%5Censuremath+%7Bx_%7B1%7D%7D%2C%5Censuremath+%7Bx_%7B2%7D%7D%2C%5Censuremath+%7B%5Cldots+%7D%2C%5Censuremath+%7Bx_%7Bn%7D%7D%29%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {Computing And of (&#92;ensuremath {x_{1}},&#92;ensuremath {x_{2}},&#92;ensuremath {&#92;ldots },&#92;ensuremath {x_{n}})}" class="latex" /></p>
+<p style="text-align:justify"><img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BFor+%7Di%3D1%2C2%2C%5Cldots+%5Ctext+%7B+until+%7Dn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BFor+%7Di%3D1%2C2%2C%5Cldots+%5Ctext+%7B+until+%7Dn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BFor+%7Di%3D1%2C2%2C%5Cldots+%5Ctext+%7B+until+%7Dn&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {For }i=1,2,&#92;ldots &#92;text { until }n" class="latex" /></p>
+<p style="text-align:justify">  <img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BRead+%7Dx_%7Bi%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BRead+%7Dx_%7Bi%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BRead+%7Dx_%7Bi%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {Read }x_{i}" class="latex" /></p>
+<p style="text-align:justify">  If <img src="https://s0.wp.com/latex.php?latex=x_%7Bi%7D%3D0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=x_%7Bi%7D%3D0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=x_%7Bi%7D%3D0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="x_{i}=0" class="latex" /> return 0</p>
+<p style="text-align:justify"><img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BReturn+%7D1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BReturn+%7D1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BReturn+%7D1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {Return }1" class="latex" /></p>
+</div>
+</div>
+</div>
+<p style="text-align:justify">   We didn’t really use the memory. Let’s consider a slightly more complicated example. A word is <em>palindrome</em> if it reads the same both ways, like <em>racecar</em>, <em>non</em>, <em>anna, </em>and so on. Similarly, example of palindrome bit strings are <img src="https://s0.wp.com/latex.php?latex=11%2C0110&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=11%2C0110&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=11%2C0110&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="11,0110" class="latex" />, and so on.</p>
+<p style="text-align:justify">   Let’s show that the computer can decide if a given string is palindrome quickly, in <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" /> steps</p>
+<div style="text-align:center">
+<div class="fbox">
+<div class="minipage"><img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BDeciding+if+%5Censuremath+%7B%28x_%7B1%7D%2Cx_%7B2%7D%2C%5Cldots+%2Cx_%7Bn%7D%29%7D+is+palindrome%3A%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BDeciding+if+%5Censuremath+%7B%28x_%7B1%7D%2Cx_%7B2%7D%2C%5Cldots+%2Cx_%7Bn%7D%29%7D+is+palindrome%3A%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BDeciding+if+%5Censuremath+%7B%28x_%7B1%7D%2Cx_%7B2%7D%2C%5Cldots+%2Cx_%7Bn%7D%29%7D+is+palindrome%3A%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {Deciding if &#92;ensuremath {(x_{1},x_{2},&#92;ldots ,x_{n})} is palindrome:}" class="latex" /></p>
+<p style="text-align:justify"><img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BFor+%7Di%3D1%2C2%2C%5Cldots+%5Ctext+%7B+until+%7Di%3En%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BFor+%7Di%3D1%2C2%2C%5Cldots+%5Ctext+%7B+until+%7Di%3En%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BFor+%7Di%3D1%2C2%2C%5Cldots+%5Ctext+%7B+until+%7Di%3En%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {For }i=1,2,&#92;ldots &#92;text { until }i&gt;n/2" class="latex" /></p>
+<p style="text-align:justify">  <img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BRead+%5Censuremath+%7Bx_%7Bi%7D%7D+%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BRead+%5Censuremath+%7Bx_%7Bi%7D%7D+%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BRead+%5Censuremath+%7Bx_%7Bi%7D%7D+%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {Read &#92;ensuremath {x_{i}} }" class="latex" />and write it in memory bit <img src="https://s0.wp.com/latex.php?latex=m&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=m&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=m&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="m" class="latex" /></p>
+<p style="text-align:justify">  If <img src="https://s0.wp.com/latex.php?latex=m%5Cne+x_%7Bn-i%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=m%5Cne+x_%7Bn-i%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=m%5Cne+x_%7Bn-i%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="m&#92;ne x_{n-i}" class="latex" /> return 0</p>
+<p style="text-align:justify"><img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BReturn+%7D1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BReturn+%7D1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BReturn+%7D1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {Return }1" class="latex" /></p>
+</div>
+</div>
+</div>
+<p style="text-align:justify">   That was easy. Now consider the <img src="https://s0.wp.com/latex.php?latex=%5Ctext+%7BMajority%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Ctext+%7BMajority%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Ctext+%7BMajority%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;text {Majority}" class="latex" /> function on <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" /> bits, which is <img src="https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="1" class="latex" /> iff the sum of the input bits is <img src="https://s0.wp.com/latex.php?latex=%3En%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%3En%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%3En%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&gt;n/2" class="latex" /> and <img src="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="0" class="latex" /> otherwise. Majority, like any other function on <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" /> bits, can be computed on such a computer in time <em>exponential</em> in <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />. To do that, you do a pass on the input and check if it’s all zero, using the program for And given above. If it is, return <img src="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="0" class="latex" />. If it is not, you do another pass now checking if it’s all zero except the last bit is <img src="https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="1" class="latex" />. If it is, return <img src="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="0" class="latex" />. You continue this way until you exhausted all the <img src="https://s0.wp.com/latex.php?latex=2%5E%7Bn%7D%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=2%5E%7Bn%7D%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=2%5E%7Bn%7D%2F2&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="2^{n}/2" class="latex" /> possible inputs with Majority equals to <img src="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="0" class="latex" />. If you never returned <img src="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=0&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="0" class="latex" /> you can now safely return <img src="https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=1&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="1" class="latex" />.</p>
+<p style="text-align:justify">   As we said, this works for any function, but it’s terribly inefficient. Can we do better for Majority? Can we compute it in time which is just a power of <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />?</p>
+<div class="newtheorem">
+<p style="text-align:justify"><span class="head"> <a id="x1-3001r1"></a> <b>Exercise</b> 1.1.  </span>Convince yourself that this is impossible. Hint: If you start counting bits, you’ll soon run out of memory.</p>
+<p style="text-align:justify">
+</div>
+<p style="text-align:justify">   If you solved the exercise, you are not alone.</p>
+<p style="text-align:justify">   And yet, we will see the following shocking result:</p>
+<div style="text-align:center">
+<p style="text-align:justify"><span class="doublebox"></span></p>
+<div class="minipage">
+<p style="text-align:justify"><b>Shocking theorem:</b></p>
+<p style="text-align:justify">Majority can be computed on such a computer in time <img src="https://s0.wp.com/latex.php?latex=n%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n^{c}" class="latex" />.</p>
+</div>
+</div>
+<p style="text-align:justify">   And this is not a trick tailored to majority. Many other problems, apparently much more complicated, can also be solved in the same time.</p>
+<p style="text-align:justify">   But, there’s something possibly even more shocking.</p>
+<div style="text-align:center">
+<p style="text-align:justify"><span class="doublebox"></span></p>
+<div class="minipage">
+<p style="text-align:justify"><b>Shocking situation:</b></p>
+<p style="text-align:justify">It is consistent with our state of knowledge that every “textbook algorithm” can be solved in time <img src="https://s0.wp.com/latex.php?latex=n%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n%5E%7Bc%7D&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n^{c}" class="latex" /> on such a computer! Nobody can disprove that. (Textbook algorithms include sorting, maxflow, dynamic programming algorithms like longest common subsequence etc., graph problems, numerical problems, etc.)</p>
+</div>
+</div>
+<p style="text-align:justify">   The <b>Shocking theorem </b>gives some explanation for the <b>Shocking situation</b>. It will be hard to rule out efficient programs on this model, since they are so powerful and counterintuitive. In fact, we will see later that this can be formalized. Basically, we will show that the model is so strong that it can compute functions that provably escape the reach of current mathematics&#8230; if you believe certain things, like that it’s hard to factor numbers. This now enters some of the <em>mysticism</em> that surrounds complexity theory, where different beliefs and conjectures are pitted against each other in a battle for ground truth.</p>
+<h3 class="likesectionHead"><a id="x1-40001"></a>References</h3>
+<p style="text-align:justify">
+<div class="thebibliography">
+<p class="bibitem"><span class="biblabel">  [1]<span class="bibsp">&nbsp;&nbsp;&nbsp;</span></span><a id="XDBLP:journals/jcss/AngluinV79"></a>Dana Angluin and Leslie&nbsp;G. Valiant.  Fast probabilistic algorithms for hamiltonian    circuits and matchings. J. Comput. Syst. Sci., 18(2):155–193, 1979.</p>
+<p class="bibitem"><span class="biblabel">  [2]<span class="bibsp">&nbsp;&nbsp;&nbsp;</span></span><a id="XGoldreich08Complexity"></a>Oded Goldreich.  Computational Complexity: A Conceptual Perspective.  Cambridge    University Press, 2008.</p>
+</div>
+<p class="authors">By Manu</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-01-19T19:02:11Z">Thursday, January 19 2023, 19:02</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3330,59 +3682,6 @@ geometries than state-of-the-art math libraries such as CUTLASS and cuBLAS.
 Furthermore, we achieve this performance from a single tile size configuration
 per floating-point precision, whereas today's math libraries employ complex
 kernel-selection heuristics to select from a large ensemble of kernel variants.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-01-11T01:30:00Z">Wednesday, January 11 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2301.03638'>Improved Approximation Algorithms for the Expanding Search Problem</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Svenja M. Griesbach, Felix Hommelsheim, Max Klimm, Kevin Schewior</p><p>A searcher faces a graph with edge lengths and vertex weights, initially
-having explored only a given starting vertex. In each step, the searcher adds
-an edge to the solution that connects an unexplored vertex to an explored
-vertex. This requires an amount of time equal to the edge length. The goal is
-to minimize the vertex-weighted sum of the exploration times over all vertices.
-We show that this problem is hard to approximate and provide algorithms with
-improved approximation guarantees. For the case that all vertices have unit
-weight, we provide a $2e$-approximation. For the general case, we give a
-$(5e/2+\varepsilon)$-approximation for any $\varepsilon &gt; 0$. Previously, for
-both cases only an $8$-approximation was known. Finally, we provide a PTAS for
-the case of a Euclidean graph.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Griesbach_S/0/1/0/all/0/1">Svenja M. Griesbach</a>, <a href="http://arxiv.org/find/cs/1/au:+Hommelsheim_F/0/1/0/all/0/1">Felix Hommelsheim</a>, <a href="http://arxiv.org/find/cs/1/au:+Klimm_M/0/1/0/all/0/1">Max Klimm</a>, <a href="http://arxiv.org/find/cs/1/au:+Schewior_K/0/1/0/all/0/1">Kevin Schewior</a></p><p>A searcher faces a graph with edge lengths and vertex weights, initially
-having explored only a given starting vertex. In each step, the searcher adds
-an edge to the solution that connects an unexplored vertex to an explored
-vertex. This requires an amount of time equal to the edge length. The goal is
-to minimize the vertex-weighted sum of the exploration times over all vertices.
-We show that this problem is hard to approximate and provide algorithms with
-improved approximation guarantees. For the case that all vertices have unit
-weight, we provide a $2e$-approximation. For the general case, we give a
-$(5e/2+\varepsilon)$-approximation for any $\varepsilon &gt; 0$. Previously, for
-both cases only an $8$-approximation was known. Finally, we provide a PTAS for
-the case of a Euclidean graph.
 </p>
         
         </div>
