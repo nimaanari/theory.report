@@ -10,6 +10,188 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Richard Lipton: Rabin-Scott Time</title>
+    <link href="https://rjlipton.wpcomstaging.com/2023/01/19/rabin-scott-time/"/>
+    <id>https://rjlipton.wpcomstaging.com/?p=20921</id>
+    <updated>2023-01-19T07:52:41+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;
+&lt;font color=&quot;#0044cc&quot;&gt;&lt;br /&gt;
+&lt;em&gt;Nondeterminism&amp;#8212;why did it take so long?&lt;/em&gt;&lt;br /&gt;
+&lt;font color=&quot;#000000&quot;&gt;&lt;/p&gt;
+&lt;table class=&quot;image alignright&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/19/rabin-scott-time/rabinscott/&quot; rel=&quot;attachment wp-att-20923&quot;&gt;&lt;img data-attachment-id=&quot;20923&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/01/19/rabin-scott-time/rabinscott/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/RabinScott.jpg?fit=332%2C195&amp;amp;ssl=1&quot; data-orig-size=&quot;332,195&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;RabinScott&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/RabinScott.jpg?fit=300%2C176&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/RabinScott.jpg?fit=332%2C195&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/RabinScott.jpg?resize=200%2C120&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;200&quot; height=&quot;120&quot; class=&quot;alignright wp-image-20923&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;caption alignright&quot;&gt;&lt;font size=&quot;-2&quot;&gt;2010 interview &lt;a href=&quot;https://cacm.acm.org/magazines/2010/2/69370-an-interview-with-michael-rabin/abstract&quot;&gt;src1&lt;/a&gt;, Society for Science &lt;a href=&quot;https://www.societyforscience.org/alumni/notable/dana-scott/&quot;&gt;src2&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+Michael Rabin and Dana Scott won the 1976 Turing Award. They obtained their PhD under Alonzo Church in 1957 and 1958, respectively. They are the only Turing-recognized students of Church&amp;#8212;unless you count Alan Turing himself (1938). &lt;/p&gt;
+&lt;p&gt;
+Today we talk about their 1959 &lt;a href=&quot;https://www.cse.chalmers.se/~coquand/AUTOMATA/rs.pdf&quot;&gt;paper&lt;/a&gt; &amp;#8220;Finite Automata and Their Decision Problems,&amp;#8221; which was &lt;a href=&quot;https://amturing.acm.org/award_winners/rabin_9681074.cfm&quot;&gt;specifically&lt;/a&gt; &lt;a href=&quot;https://amturing.acm.org/award_winners/scott_1193622.cfm&quot;&gt;cited&lt;/a&gt; in their award.&lt;/p&gt;
+&lt;p&gt;
+I believe I met each of these other famous students of Church at least once:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+Peter Andrews 1964 &lt;/p&gt;
+&lt;li&gt;
+Martin Davis 1950 &lt;/p&gt;
+&lt;li&gt;
+Stephen Kleene 1934 &lt;/p&gt;
+&lt;li&gt;
+Simon Kochen 1959 &lt;/p&gt;
+&lt;li&gt;
+Hartley Rogers 1952 &lt;/p&gt;
+&lt;li&gt;
+Barkley Rosser 1934 &lt;/p&gt;
+&lt;li&gt;
+Raymond Smullyan 1959
+&lt;/ul&gt;
+&lt;p&gt;
+Of these, &lt;a href=&quot;https://en.wikipedia.org/wiki/Peter_B._Andrews&quot;&gt;Peter&lt;/a&gt; was special to me first: I took a class from him when I was a graduate student at CMU. He was a great lecturer&amp;#8212;I will say more about him soon. &lt;/p&gt;
+&lt;p&gt;
+Ken and I have just noticed while writing that Martin Davis passed away at the beginning of this month&amp;#8212;see this &lt;a href=&quot;https://www.digitalfieldguide.com/blog/20341&quot;&gt;memorial&lt;/a&gt;. We saw him and Scott speak at the 2012 Turing &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2012/05/17/turings-tiger-birthday-party/&quot;&gt;centennial&lt;/a&gt; event in Princeton. &lt;/p&gt;
+&lt;p&gt;
+We have mentioned Rabin and Scott together several times on this blog at least in passing, and we said more about Dana&amp;#8217;s work in logic long ago &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2009/05/11/simulation-of-nondeterministic-machines/&quot;&gt;here&lt;/a&gt;. Michael&amp;#8212;I&amp;#8217;m more used to calling him Rabin in writing&amp;#8212;became absolutely central to computational complexity and more besides. He has won just about every award for theory, and we have discussed his work several times: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2009/03/01/rabin-flips-a-coin/&quot;&gt;Rabin Flips a Coin&lt;/a&gt; &lt;/p&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2011/07/21/rabins-80th-birthday/&quot;&gt;Rabin&amp;#8217;s 80th Birthday&lt;/a&gt; &lt;/p&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2011/09/05/happy-birthday-michael-rabin/&quot;&gt;Happy Birthday Michael Rabin&lt;/a&gt; &lt;/p&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2014/03/10/how-to-carry-fame/&quot;&gt;How To Carry Fame&lt;/a&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;H2&gt; Talking About Their Paper &lt;/H2&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;
+The Turing award citation says:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; &amp;#8230;for their joint paper &amp;#8220;Finite Automata and Their Decision Problem,&amp;#8221; which introduced the idea of nondeterministic machines, which has proved to be an enormously valuable concept. Their (Scott &amp;amp; Rabin) classic paper has been a continuous source of inspiration for subsequent work in this field. &lt;/em&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt;
+Whoops&amp;#8212;are we the first to notice the typo of the missing &amp;#8216;s&amp;#8217; from &amp;#8220;Problems&amp;#8221; in the paper title? It is &lt;a href=&quot;https://en.wikipedia.org/wiki/Turing_Award&quot;&gt;reproduced&lt;/a&gt; in Wikipedia&amp;#8217;s version. We have fingered (C)ACM editing &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/12/15/a-mutation-carol-2/&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2022/03/26/waiting-for-self-deriving-cars/&quot;&gt;times&lt;/a&gt; &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2021/08/26/great-go-glitchy-grammar/&quot;&gt;recently&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;
+Scott&amp;#8217;s Turing Award &lt;a href=&quot;https://amturing.acm.org/award_winners/scott_1193622.cfm&quot;&gt;description&lt;/a&gt; also says:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; Computational complexity theory is the study of what is possible to calculate given a specific set of resources &amp;#8230; Scott and Rabin’s concept of nondeterministic machines has proved extremely productive in this research area. &lt;/em&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt;
+Yet both Rabin and Scott avoided covering the paper in their Turing Award lectures. Scott &lt;a href=&quot;https://dl.acm.org/ft_gateway.cfm?id=1283932&amp;#038;type=pdf&quot;&gt;talked&lt;/a&gt; about his subsequent work on logics for programming. Rabin titled his &lt;a href=&quot;https://dl.acm.org/ft_gateway.cfm?id=1283931&amp;#038;type=pdf&quot;&gt;talk&lt;/a&gt; &amp;#8220;Complexity of Computations.&amp;#8221; This was in accord with what he relates starting from &lt;a href=&quot;https://youtu.be/L3FZzGU3n14?t=2761&quot;&gt;this point&lt;/a&gt; of a 2015 CACM &lt;a href=&quot;https://www.acm.org/turing-award-50/turing-laureate-interviews&quot;&gt;interview&lt;/a&gt; about his Turing Award implicitly also recognizing his 1960 &lt;a href=&quot;https://www.cs.toronto.edu/~sacook/homepage/rabin_thesis.pdf&quot;&gt;paper&lt;/a&gt;, &amp;#8220;Degree of Difficulty of Computing a Function and a Partial Ordering of Recursive Sets.&amp;#8221; However, even in the expanded version of Rabin&amp;#8217;s lecture which CACM published (&lt;a href=&quot;http://rkka21.ru/docs/turing-award/mr1976e.pdf&quot;&gt;searchable copy&lt;/a&gt;), the word &amp;#8220;nondeterministic&amp;#8221; is absent, and &amp;#8220;NP&amp;#8221; is mentioned only as part of &amp;#8220;P = NP&amp;#8221; twice in passing. What gives? &lt;/p&gt;
+&lt;p&gt;
+One look at the Rabin-Scott &lt;a href=&quot;https://www.cse.chalmers.se/~coquand/AUTOMATA/rs.pdf&quot;&gt;paper&lt;/a&gt; suffices to see that it lives up to the encomium of the CACM&amp;#8217;s preface:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;
+&lt;em&gt; [It] has become a classic paper in formal language theory that still forms one of the best introductions to the area. The paper is simultaneously a survey and a research article; it is technically simple and mathematically impeccable. &lt;/em&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt;
+The &amp;#8216;survey&amp;#8217; aspect is that the paper includes, organizes, and polishes equally famous work by Kleene, John Myhill, and Anil Nerode, plus building on papers by Edward Moore, Arthur Burks and Hao Wang, and (with mutual rounds of interchange) John Shepherdson. The final paper&amp;#8212;including the results original to Rabin and Scott&amp;#8212;reads like how we teach the automata section of an intro theory course today. The seminal original result to teach is their &lt;a href=&quot;https://en.wikipedia.org/wiki/Powerset_construction&quot;&gt;powerset construction&lt;/a&gt; converting an NFA into an equivalent DFA. Yet some elements are missing, and they may be key to why nondeterminism took so long to formulate.&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;H2&gt; Time Lapse and a Missing Link? &lt;/H2&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;
+The introduction of nondeterministic machines is often dated to Rabin-Scott in &lt;b&gt;1959&lt;/b&gt;. Yet Kleene&amp;#8217;s famous theorem converting deterministic finite automata (DFAs) into what he termed regular &amp;#8220;events&amp;#8221; dates to &lt;a href=&quot;https://www.rand.org/content/dam/rand/pubs/research_memoranda/2008/RM704.pdf&quot;&gt;1951&lt;/a&gt;. Their equivalence naturally goes through nondeterministic finite automata (NFAs). Were NFAs really unknown to Kleene? Moreover, notions of existentially quantified predicates equivalent to nodeterminism go back even before Turing, as noted in this StackExchange &lt;a href=&quot;https://cstheory.stackexchange.com/questions/32403/who-introduced-nondeterministic-computation&quot;&gt;query&lt;/a&gt; on &amp;#8220;Who introduced nondeterministic computation?&amp;#8221;&lt;/p&gt;
+&lt;p&gt;
+Some of this apparent 8-year gap is closed by a footnote on the first page of Rabin-Scott:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; &amp;#8220;The bulk of this work was done while the authors were associated with the IBM Research Center during the summer of 1957.&amp;#8221; &lt;/em&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt;
+That shaves off two years. Five more may owe to Kleene&amp;#8217;s report not appearing in final journal form until &lt;a href=&quot;https://www.dlsi.ua.es/~mlf/nnafmc/papers/kleene56representation.pdf&quot;&gt;1956&lt;/a&gt;, when the notation for what he now termed regular &lt;em&gt;expressions&lt;/em&gt; was more polished. But this version still gives nothing near the &amp;#8220;&lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BM+%3D+%28Q%2C%5CSigma%2C%5Cdelta%2Cs%2CF%29%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{M = (Q,&amp;#92;Sigma,&amp;#92;delta,s,F)}&quot; class=&quot;latex&quot; /&gt;&amp;#8221; style of notation which is inchoate in Rabin-Scott. Kleene&amp;#8217;s graphical diagrams are of &lt;em&gt;nerve nets&lt;/em&gt;, as defined in 1944 by Warren McCullogh and Walter Pitts, not state graphs as we represent them now. &lt;/p&gt;
+&lt;p&gt;
+I&amp;#8212;Ken writing these sections&amp;#8212;still wonder why NFAs were not defined earlier. Current renditions of Kleene&amp;#8217;s Theorem do not care whether a DFA or NFA is given. I speculate the reason is that the most elegant association of NFAs to regular expressions requires what was literally a missing link:&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/19/rabin-scott-time/epsilonarc/&quot; rel=&quot;attachment wp-att-20924&quot;&gt;&lt;img data-attachment-id=&quot;20924&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/01/19/rabin-scott-time/epsilonarc/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/EpsilonArc.png?fit=570%2C160&amp;amp;ssl=1&quot; data-orig-size=&quot;570,160&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;EpsilonArc&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/EpsilonArc.png?fit=300%2C84&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/EpsilonArc.png?fit=570%2C160&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/EpsilonArc.png?resize=200%2C56&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;200&quot; height=&quot;56&quot; class=&quot;aligncenter wp-image-20924&quot; srcset=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/EpsilonArc.png?resize=300%2C84&amp;amp;ssl=1 300w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/EpsilonArc.png?w=570&amp;amp;ssl=1 570w&quot; sizes=&quot;(max-width: 200px) 100vw, 200px&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+Here &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cepsilon%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;epsilon}&quot; class=&quot;latex&quot; /&gt; stands for the empty string. Thus the arc represents a change of state without stimulus, an idea that is antithetical to nerve nets. I still imagine an alternate history where someone like Charles Peirce, whose electrical diagrams of Boolean logic we noted &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/04/logicians-are-everywhere/&quot;&gt;here&lt;/a&gt;, conceived a century earlier of representing the laws of electric circuits symbolically like so:&lt;/p&gt;
+&lt;p&gt;&lt;P&gt;&lt;br /&gt;
+&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/01/19/rabin-scott-time/circuitexpressions/&quot; rel=&quot;attachment wp-att-20925&quot;&gt;&lt;img data-attachment-id=&quot;20925&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/01/19/rabin-scott-time/circuitexpressions/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/CircuitExpressions.png?fit=1684%2C416&amp;amp;ssl=1&quot; data-orig-size=&quot;1684,416&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;CircuitExpressions&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/CircuitExpressions.png?fit=300%2C74&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/CircuitExpressions.png?fit=600%2C148&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/CircuitExpressions.png?resize=600%2C150&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;150&quot; class=&quot;aligncenter wp-image-20925&quot; srcset=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/CircuitExpressions.png?resize=300%2C74&amp;amp;ssl=1 300w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/01/CircuitExpressions.png?zoom=2&amp;amp;resize=600%2C150&amp;amp;ssl=1 1200w&quot; sizes=&quot;(max-width: 600px) 100vw, 600px&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;P&gt;&lt;br /&gt;
+When the conversion from regular expressions to NFAs was published by Robert McNaughton and Hisao Yamada in &lt;a href=&quot;https://ieeexplore.ieee.org/document/5221603&quot;&gt;1960&lt;/a&gt;, they conditioned their regular expressions into a form that avoided occurrences of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cepsilon%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;epsilon}&quot; class=&quot;latex&quot; /&gt;. Using &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cepsilon%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;epsilon}&quot; class=&quot;latex&quot; /&gt; for this conversion has been &lt;a href=&quot;https://en.wikipedia.org/wiki/Thompson&#39;s_construction&quot;&gt;traced&lt;/a&gt; &lt;a href=&quot;https://alexandria.tue.nl/extra1/wskrap/publichtml/9313452.pdf&quot;&gt;back&lt;/a&gt; only to Ken Thompson in &lt;a href=&quot;https://dl.acm.org/doi/pdf/10.1145/363347.363387&quot;&gt;1968&lt;/a&gt;. That was only a few years before I met this future Turing laureate at the &lt;a href=&quot;https://www.westfieldchessclub.org/&quot;&gt;Westfield Chess Club&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;
+In my alternate history, nondeterminism would have seemed natural from forking electrical flow. Instead, as Rabin relates at &lt;a href=&quot;https://youtu.be/L3FZzGU3n14?t=2294&quot;&gt;this point&lt;/a&gt; in his 2015 interview, he and Scott felt they needed to start from a limited form of a Turing machine, the full model then seeming unapproachable. &lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; &amp;#8220;So we had the model of what are called finite automata and then we decided, as pure exercises for imagination, to consider all possible variations. One of those variations was nondeterministic automata.&amp;#8221; &lt;/em&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt;
+Their other variations allowed two-way heads or multiple tapes. In my telling, nondeterminism might have been regarded not as a &amp;#8220;variation&amp;#8221; but as &lt;em&gt;more&lt;/em&gt; fundamental than determinism. Going back to Rabin-Scott and forward again to Thompson and his co-workers at Bell Labs, this is what I argue next.&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;H2&gt; Nondeterminism is Fundamental &lt;/H2&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;
+A text by John Martin makes the joke that understanding tuple notation like &amp;#8220;&lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BM+%3D+%28Q%2C%5CSigma%2C%5Cdelta%2Cs%2CF%29%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{M = (Q,&amp;#92;Sigma,&amp;#92;delta,s,F)}&quot; class=&quot;latex&quot; /&gt;&amp;#8221; is a sign of being a mathematician. I turn it around and say it&amp;#8217;s really a sign of being an object-oriented programmer:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&lt;br /&gt;
+class FA {&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;set&amp;lt;State&amp;gt; Q;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;set&amp;lt;char&amp;gt; Sigma;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;State s;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;set&amp;lt;State&amp;gt; F;&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;...&lt;br /&gt;
+}&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+I continue by saying that if you were to define &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cdelta%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;delta}&quot; class=&quot;latex&quot; /&gt; as a method via &lt;tt&gt;State delta(State q, char c)&lt;/tt&gt; then you would be stuck with the same method body for each machine instance. This issue can be fixed by making &lt;tt&gt;delta&lt;/tt&gt; a function pointer (or &amp;#8220;delegate&amp;#8221; in terms of the programming language C#), but I hold it more natural to make &lt;tt&gt;delta&lt;/tt&gt; a &lt;tt&gt;set&lt;/tt&gt; of triples of type &lt;tt&gt;(State,char,State)&lt;/tt&gt; instead, which I call &lt;em&gt;instructions&lt;/em&gt;. This notation naturally defines an NFA. Then the machine is deterministic (i.e., a DFA) when for all states &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bp%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{p}&quot; class=&quot;latex&quot; /&gt; and characters &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bc%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{c}&quot; class=&quot;latex&quot; /&gt; there is exactly one &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bq%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{q}&quot; class=&quot;latex&quot; /&gt; such that &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%28p%2Cc%2Cq%29%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{(p,c,q)}&quot; class=&quot;latex&quot; /&gt; is an instruction. I then ask the students,&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; Which is the base class, &lt;b&gt;DFA&lt;/b&gt; or &lt;b&gt;NFA&lt;/b&gt;? &lt;/em&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt;
+Insofar as automata once created are immutable, the answer is &lt;b&gt;NFA&lt;/b&gt;: A DFA &amp;#8220;Is-A&amp;#8221; NFA that obeys the logical constraint on the set of instructions. In this rendition, NFA is the simpler and more fundamental concept.  It remains so after allowing triples of type &lt;tt&gt;(State,&amp;epsilon;,State)&lt;/tt&gt; too.&lt;/p&gt;
+&lt;p&gt;
+Later in the course I plump nondeterminism over determinism in other ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+The widest expanse of interesting computational problems are complete in NP, not in P. &lt;/p&gt;
+&lt;li&gt;
+Many of the problems we put into P&amp;#8212;including some decision problems in the Rabin-Scott paper&amp;#8212;are really complete for nondeterministic logspace. &lt;/p&gt;
+&lt;li&gt;
+The canonical simulation via breadth-first search goes from &lt;em&gt;nondeterministic&lt;/em&gt; space to deterministic time, and depth-first search takes one from &lt;em&gt;nondeterministic&lt;/em&gt; time to deterministic space. Nondeterministic machines are the necessary givens. &lt;/p&gt;
+&lt;li&gt;
+Nondeterministic/existential forms of classes often have more characterizations and closure properties. &lt;/p&gt;
+&lt;li&gt;
+Hadamard gates are nondeterministic; quantum circuits using only Pauli and permutation gates (CNOT, Toffoli, &amp;#8230;) can do classical logic only.
+&lt;/ul&gt;
+&lt;p&gt;
+But the main point I make right away is about &lt;b&gt;succinctness&lt;/b&gt;: NFAs are not only usually smaller and more readable than their equivalent DFAs, they are often &lt;em&gt;more workable&lt;/em&gt;. To exemplify this, I offer two ways of deciding whether a given string &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bx%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{x}&quot; class=&quot;latex&quot; /&gt; matches a given regular expression &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Br%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{r}&quot; class=&quot;latex&quot; /&gt;: After converting &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Br%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{r}&quot; class=&quot;latex&quot; /&gt; into an equivalent NFA &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BN%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{N}&quot; class=&quot;latex&quot; /&gt; via Thompson&amp;#8217;s algorithm diagrammed above, one can either&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Convert &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BN%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{N}&quot; class=&quot;latex&quot; /&gt; into an equivalent DFA &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BM%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{M}&quot; class=&quot;latex&quot; /&gt; and simply run &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BM%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{M}&quot; class=&quot;latex&quot; /&gt; on &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bx%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{x}&quot; class=&quot;latex&quot; /&gt;; or &lt;/p&gt;
+&lt;li&gt;
+Simulate &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BN%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{N}&quot; class=&quot;latex&quot; /&gt; on &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bx+%3D+x_1+x_2+%5Ccdots+x_n%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{x = x_1 x_2 &amp;#92;cdots x_n}&quot; class=&quot;latex&quot; /&gt; by updating the set &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BR_%7Bi-1%7D%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{R_{i-1}}&quot; class=&quot;latex&quot; /&gt; of possible states before &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bx_i%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{x_i}&quot; class=&quot;latex&quot; /&gt; is read to &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BR_i%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{R_i}&quot; class=&quot;latex&quot; /&gt; after &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bx_i%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{x_i}&quot; class=&quot;latex&quot; /&gt; is &amp;#8220;processed,&amp;#8221; as in the guts of the proof of the Rabin-Scott construction.
+&lt;/ol&gt;
+&lt;p&gt;
+I give the examples &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Br_k+%3D+%280+%5Ccup+1%29%5E%2A+1+%280+%5Ccup+1%29%5E%7Bk-1%7D%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{r_k = (0 &amp;#92;cup 1)^* 1 (0 &amp;#92;cup 1)^{k-1}}&quot; class=&quot;latex&quot; /&gt;, which denotes binary strings whose &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bk%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{k}&quot; class=&quot;latex&quot; /&gt;-th bit from the end is a &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B1%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{1}&quot; class=&quot;latex&quot; /&gt;. Ways I show of economizing on &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cepsilon%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;epsilon}&quot; class=&quot;latex&quot; /&gt;-arcs yield an NFA &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BN_k%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{N_k}&quot; class=&quot;latex&quot; /&gt; with just &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bk%2B1%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{k+1}&quot; class=&quot;latex&quot; /&gt; states. Whereas, the smallest DFA &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BM_k%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{M_k}&quot; class=&quot;latex&quot; /&gt; such that &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BL%28M%29+%3D+L%28r_k%29%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{L(M) = L(r_k)}&quot; class=&quot;latex&quot; /&gt; has &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B2%5Ek%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{2^k}&quot; class=&quot;latex&quot; /&gt; states&amp;#8212;as we prove via Myhill and Nerode&amp;#8217;s theorems (using the latter as given in the survey part of Rabin-Scott). &lt;/p&gt;
+&lt;p&gt;
+Thus, method 1 involves exponential time in worst case, while method 2 works in time polynomial in &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bn%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{n}&quot; class=&quot;latex&quot; /&gt; and &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bk%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{k}&quot; class=&quot;latex&quot; /&gt;. Method 2 is essentially the algorithm designed by Thompson and co-workers. This is the first example in the course of the contrast between exponential and polynomial times for the same problem. I show how the NFAs &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BN_k%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{N_k}&quot; class=&quot;latex&quot; /&gt; capture the logic of the problem, whereas the DFAs &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BM_k%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{M_k}&quot; class=&quot;latex&quot; /&gt; look like a twisty mess even for &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bk%3D3%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{k=3}&quot; class=&quot;latex&quot; /&gt;. Showing a diagram of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BM_3%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{M_3}&quot; class=&quot;latex&quot; /&gt; or a partial sketch of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7BM_4%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{M_4}&quot; class=&quot;latex&quot; /&gt;, I ask:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; Would nature ever do this? &lt;/em&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt;
+This aims to say: the NFA is often &lt;em&gt;more real&lt;/em&gt; than the equivalent DFA.&lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;H2&gt; Open Problems &lt;/H2&gt;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;
+Would Rabin or Scott go this far? We could ask them&amp;#8230; We note, however, that the word &amp;#8220;deterministic&amp;#8221;&amp;#8212;to say nothing of &amp;#8220;nondeterministic&amp;#8221; and their other word forms&amp;#8212;is absent from this wonderful list of &lt;a href=&quot;http://www.eecs.harvard.edu/~cat/rabinisms.html&quot;&gt;quotes&lt;/a&gt; from Rabin&amp;#8217;s classes, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+This is trivial, but not obvious. (Fall 1996) &lt;/p&gt;
+&lt;li&gt;
+If P = NP, then all of modern cryptography collapses. On this happy thought&amp;#8230; (Fall 1998) &lt;/p&gt;
+&lt;li&gt;
+Zero plus zero is still zero, even in this advanced class. (Spring 2002) &lt;/p&gt;
+&lt;li&gt;
+It is customary for a student and teacher to be on first name basis once the student gets his Ph.D. Personally I found it difficult to address Church as &amp;#8220;Alonzo&amp;#8221;, but I managed. So let us do it. (Spring 2008)
+&lt;/ul&gt;
+&lt;p&gt;
+We have been talking about people over age 90 and this is true of both Rabin and Scott&amp;#8212;and Nerode. We wish them &lt;a href=&quot;https://en.wikipedia.org/wiki/Sto_lat&quot;&gt;sto lat&lt;/a&gt;&amp;#8212;but at this point, could that traditional long-life wish be an underestimate? &lt;/p&gt;
+&lt;p&gt;
+&lt;p class=&quot;authors&quot;&gt;By RJLipton+KWRegan&lt;/p&gt;
+  </content>
+    <author>
+      <name>Richard Lipton</name>
+      <uri>https://rjlipton.wpcomstaging.com</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Polynomial-Time Axioms of Choice and Polynomial-Time Cardinality</title>
     <link href="http://arxiv.org/abs/2301.07123"/>
     <id>http://arxiv.org/abs/2301.07123</id>
@@ -1491,39 +1673,6 @@ by [vAG19] and the classic $\widetilde{O}((m + n) \cdot \epsilon^{-2})$ runtime
 due to [GK95] whenever $\epsilon = \Omega((m +n)^{-1})$. We obtain this result
 by designing new quantum data structures for efficiently sampling from a
 slowly-changing Gibbs distribution.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Proportionally Fair Matching with Multiple Groups</title>
-    <link href="http://arxiv.org/abs/2301.03862"/>
-    <id>http://arxiv.org/abs/2301.03862</id>
-    <updated>2023-01-11T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bandyapadhyay_S/0/1/0/all/0/1&quot;&gt;Sayan Bandyapadhyay&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fomin_F/0/1/0/all/0/1&quot;&gt;Fedor V. Fomin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Inamdar_T/0/1/0/all/0/1&quot;&gt;Tanmay Inamdar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Simonov_K/0/1/0/all/0/1&quot;&gt;Kirill Simonov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The study of fair algorithms has become mainstream in machine learning and
-artificial intelligence due to its increasing demand in dealing with biases and
-discrimination. Along this line, researchers have considered fair versions of
-traditional optimization problems including clustering, regression, ranking and
-voting. However, most of the efforts have been channeled into designing
-heuristic algorithms, which often do not provide any guarantees on the quality
-of the solution. In this work, we study matching problems with the notion of
-proportional fairness. Proportional fairness is one of the most popular notions
-of group fairness where every group is represented up to an extent proportional
-to the final selection size. Matching with proportional fairness or more
-commonly, proportionally fair matching, was introduced in [Chierichetti et al.,
-AISTATS, 2019], where the problem was studied with only two groups. However, in
-many practical applications, the number of groups -- although often a small
-constant -- is larger than two. In this work, we make the first step towards
-understanding the computational complexity of proportionally fair matching with
-more than two groups. We design exact and approximation algorithms achieving
-reasonable guarantees on the quality of the matching as well as on the time
-complexity. Our algorithms are also supported by suitable hardness bounds.
 &lt;/p&gt;
   </content>
     <author>
