@@ -10,6 +10,27 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-006 |  Superpolynomial Lower Bounds for Learning Monotone Classes | 
+
+	Nader Bshouty</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/006"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/006</id>
+    <updated>2023-01-22T08:29:45+00:00</updated>
+    <content type="html" xml:lang="en">
+    Koch, Strassle, and Tan [SODA 2023], show that, under the randomized exponential time hypothesis, there is no distribution-free PAC-learning algorithm that runs in time $n^{\tilde O(\log\log s)}$ for the classes of $n$-variable size-$s$ DNF, size-$s$ Decision Tree, and $\log s$-Junta by DNF (that returns a DNF hypothesis). Assuming a natural conjecture on the hardness of set cover, they give the lower bound $n^{\Omega(\log s)}$. This matches the best known upper bound for $n$-variable size-$s$ Decision Tree, and $\log s$-Junta.
+
+In this paper, we give the same lower bounds for PAC-learning of $n$-variable size-$s$ Monotone DNF, size-$s$ Monotone Decision Tree, and Monotone $\log s$-Junta by~DNF. This solves the open problem proposed by Koch, Strassle, and Tan and subsumes the above results. 
+
+The lower bound holds, even if the learner knows the distribution, can draw a sample according to the distribution in polynomial time, and can compute the target function on all the points of the support of the distribution in polynomial time.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: postdoc at ENS Lyon (apply by February 19, 2023)</title>
     <link href="https://cstheory-jobs.org/2023/01/21/postdoc-at-ens-lyon-apply-by-february-19-2023/"/>
     <id>http://cstheory-jobs.org/2023/01/21/postdoc-at-ens-lyon-apply-by-february-19-2023/</id>
@@ -1999,25 +2020,6 @@ Email: monaldo@idsia.ch&lt;/p&gt;
     <author>
       <name>CCI: jobs</name>
       <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Computational Complexity: Semantic Search for the Blog</title>
-    <link href="https://blog.computationalcomplexity.org/2023/01/semantic-search-for-blog.html"/>
-    <id>tag:blogger.com,1999:blog-3722233.post-8422659110181940895</id>
-    <updated>2023-01-12T14:41:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&amp;nbsp;As Google started to &lt;a href=&quot;https://support.google.com/a/answer/10403871&quot;&gt;limit academic storage&lt;/a&gt;, I started looking at Google Takeout and started wondering what I could do with all that data. I downloaded all the posts from the blog, since we use Google&#39;s blogger, and ran them through &lt;a href=&quot;https://openai.com/blog/new-and-improved-embedding-model/&quot;&gt;OpenAI&#39;s Ada Embedding&lt;/a&gt;. The Ada embedding maps text up to 8192 words into a point on the 1536-dimensional unit sphere. You can measure the similarity between two embeddings via a simple dot product, giving you the cosine of the angle between them.&lt;/p&gt;&lt;p&gt;So I created a semantic search for the blog. Go ahead and &lt;a href=&quot;https://fortnow.pythonanywhere.com/&quot;&gt;try it out&lt;/a&gt;.&lt;/p&gt;
-&lt;form action=&quot;https://fortnow.pythonanywhere.com/&quot; method=&quot;POST&quot;&gt;
-    &lt;p&gt;Search for&amp;nbsp;&amp;nbsp;&lt;input name=&quot;search&quot; type=&quot;text&quot; /&gt;&lt;/p&gt;&lt;p&gt;You can enter a search term, phrase, or the full URL (including https) of a blog post. It will return a list of the 5 closest posts, with the percentage match, computed as the square of the cosine. I don&#39;t have a mechanism for automatically updating the files, so you&#39;ll only see posts from 2022 and earlier.&lt;/p&gt;&lt;p&gt;This was an Open AI-assisted affair, as I used ChatGPT and GitHub co-pilot to help with the python and pandas data frames. It took me longer to figure out how to create a web application so you can try the search. Similarity match doesn&#39;t work like normal searches, for example if you search for a city like &quot;Detroit&quot;, you&#39;ll get posts that mention other cities. Some other oddities, like &quot;mad&quot; seems to match &quot;Madhu&quot;. It probably says something about me that my most happy post is not about some great new theorem but about &lt;a href=&quot;https://blog.computationalcomplexity.org/2005/10/joy-on-south-side-of-chicago.html&quot;&gt;baseball&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;/form&gt;
-&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </content>
-    <author>
-      <name>Computational Complexity</name>
-      <uri>http://blog.computationalcomplexity.org/</uri>
     </author>
   </entry>
 

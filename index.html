@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-01-22T08:33:53Z">Sunday, January 22 2023, 08:33</time>
+          <time class='timeago' datetime="2023-01-22T09:30:26Z">Sunday, January 22 2023, 09:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -341,6 +341,51 @@
 
   <div class="tr-articles tr-shrink">
     
+    
+    <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Sunday, January 22
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/006'>TR23-006 |  Superpolynomial Lower Bounds for Learning Monotone Classes | 
+
+	Nader Bshouty</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Koch, Strassle, and Tan [SODA 2023], show that, under the randomized exponential time hypothesis, there is no distribution-free PAC-learning algorithm that runs in time $n^{\tilde O(\log\log s)}$ for the classes of $n$-variable size-$s$ DNF, size-$s$ Decision Tree, and $\log s$-Junta by DNF (that returns a DNF hypothesis). Assuming a natural conjecture on the hardness of set cover, they give the lower bound $n^{\Omega(\log s)}$. This matches the best known upper bound for $n$-variable size-$s$ Decision Tree, and $\log s$-Junta.
+
+In this paper, we give the same lower bounds for PAC-learning of $n$-variable size-$s$ Monotone DNF, size-$s$ Monotone Decision Tree, and Monotone $\log s$-Junta by~DNF. This solves the open problem proposed by Koch, Strassle, and Tan and subsumes the above results. 
+
+The lower bound holds, even if the learner knows the distribution, can draw a sample according to the distribution in polynomial time, and can compute the target function on all the points of the support of the distribution in polynomial time.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          Koch, Strassle, and Tan [SODA 2023], show that, under the randomized exponential time hypothesis, there is no distribution-free PAC-learning algorithm that runs in time $n^{\tilde O(\log\log s)}$ for the classes of $n$-variable size-$s$ DNF, size-$s$ Decision Tree, and $\log s$-Junta by DNF (that returns a DNF hypothesis). Assuming a natural conjecture on the hardness of set cover, they give the lower bound $n^{\Omega(\log s)}$. This matches the best known upper bound for $n$-variable size-$s$ Decision Tree, and $\log s$-Junta.
+
+In this paper, we give the same lower bounds for PAC-learning of $n$-variable size-$s$ Monotone DNF, size-$s$ Monotone Decision Tree, and Monotone $\log s$-Junta by~DNF. This solves the open problem proposed by Koch, Strassle, and Tan and subsumes the above results. 
+
+The lower bound holds, even if the learner knows the distribution, can draw a sample according to the distribution in polynomial time, and can compute the target function on all the points of the support of the distribution in polynomial time.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-01-22T08:29:45Z">Sunday, January 22 2023, 08:29</time>
+        </div>
+      </div>
+    </details>
+  
     
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Saturday, January 21
@@ -3710,45 +3755,6 @@ Email: monaldo@idsia.ch</p>
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-01-12T16:08:46Z">Thursday, January 12 2023, 16:08</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/01/semantic-search-for-blog.html'>Semantic Search for the Blog</a></h3>
-        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>&nbsp;As Google started to limit academic storage, I started looking at Google Takeout and started wondering what I could do with all that data. I downloaded all the posts from the blog, since we use Google's blogger, and ran them through OpenAI's Ada Embedding. The Ada embedding maps text up to 8192 words into a point on the 1536-dimensional unit sphere. You can measure the similarity between two embeddings via a simple dot product, giving you the cosine of the angle between them.</p><p>So I created a semantic search for the blog. Go ahead and try it out.</p>
-
-    <p>Search for&nbsp;&nbsp;</p><p>You can enter a search term, phrase, or the full URL (including https) of a blog post. It will return a list of the 5 closest posts, with the percentage match, computed as the square of the cosine. I don't have a mechanism for automatically updating the files, so you'll only see posts from 2022 and earlier.</p><p>This was an Open AI-assisted affair, as I used ChatGPT and GitHub co-pilot to help with the python and pandas data frames. It took me longer to figure out how to create a web application so you can try the search. Similarity match doesn't work like normal searches, for example if you search for a city like "Detroit", you'll get posts that mention other cities. Some other oddities, like "mad" seems to match "Madhu". It probably says something about me that my most happy post is not about some great new theorem but about baseball.</p><p><br></p><p><br></p>
-
-<p>By Lance Fortnow</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>&nbsp;As Google started to <a href="https://support.google.com/a/answer/10403871">limit academic storage</a>, I started looking at Google Takeout and started wondering what I could do with all that data. I downloaded all the posts from the blog, since we use Google's blogger, and ran them through <a href="https://openai.com/blog/new-and-improved-embedding-model/">OpenAI's Ada Embedding</a>. The Ada embedding maps text up to 8192 words into a point on the 1536-dimensional unit sphere. You can measure the similarity between two embeddings via a simple dot product, giving you the cosine of the angle between them.</p><p>So I created a semantic search for the blog. Go ahead and <a href="https://fortnow.pythonanywhere.com/">try it out</a>.</p>
-<form action="https://fortnow.pythonanywhere.com/" method="POST">
-    <p>Search for&nbsp;&nbsp;<input name="search" type="text" /></p><p>You can enter a search term, phrase, or the full URL (including https) of a blog post. It will return a list of the 5 closest posts, with the percentage match, computed as the square of the cosine. I don't have a mechanism for automatically updating the files, so you'll only see posts from 2022 and earlier.</p><p>This was an Open AI-assisted affair, as I used ChatGPT and GitHub co-pilot to help with the python and pandas data frames. It took me longer to figure out how to create a web application so you can try the search. Similarity match doesn't work like normal searches, for example if you search for a city like "Detroit", you'll get posts that mention other cities. Some other oddities, like "mad" seems to match "Madhu". It probably says something about me that my most happy post is not about some great new theorem but about <a href="https://blog.computationalcomplexity.org/2005/10/joy-on-south-side-of-chicago.html">baseball</a>.</p><p><br /></p><p><br /></p>
-</form>
-<p class="authors">By Lance Fortnow</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-01-12T14:41:00Z">Thursday, January 12 2023, 14:41</time>
         </div>
       </div>
     </details>
