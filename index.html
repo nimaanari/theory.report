@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-01-24T04:35:20Z">Tuesday, January 24 2023, 04:35</time>
+          <time class='timeago' datetime="2023-01-24T05:30:29Z">Tuesday, January 24 2023, 05:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -1530,6 +1530,61 @@ controllability assumptions are violated.
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-01-23T22:20:42Z">Monday, January 23 2023, 22:20</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://11011110.github.io/blog/2023/01/23/doubled-planar-drawings.html'>Doubled planar drawings of doubled planar graphs</a></h3>
+        <p class='tr-article-feed'>from <a href='https://11011110.github.io/blog/'>David Eppstein</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          If you start with a planar graph, and make two copies of each vertex, you should be able to draw the result as two planar graphs, right? But it’s more complicated than just copying a drawing of your starting graph, because you get four copies of each edge, and you have to put them all somewhere.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>If you start with a planar graph, and make two copies of each vertex, you should be able to draw the result as two planar graphs, right? But it’s more complicated than just copying a drawing of your starting graph, because you get four copies of each edge, and you have to put them all somewhere.</p>
+
+<p>For instance, the graph \(K_{2,2,2}\) is planar (it’s the graph of an octahedron). Doubling it gives \(K_{4,4,4}\). And \(K_{4,4,4}\) can indeed be drawn as two planar graphs, but not as two octahedra. Here it is as two octagonal bipyramids:</p>
+
+<p style="text-align:center"><img src="/blog/assets/2023/bipyramidal-K444.svg" alt="The complete tripartite graph K_{4,4,4} drawn as  the union of two octagonal bipyramids" /></p>
+
+<p>And here it is drawn as two planar graphs in a different way:</p>
+
+<p style="text-align:center"><img src="/blog/assets/2023/nested-quad-K444.svg" alt="Another drawing of the complete tripartite graph K_{4,4,4} as the union of two planar graphs" /></p>
+
+<p>Drawings like this, where a nonplanar graph is presented as the union of two planar graphs, are called <em>biplanar</em>. Another word for the same idea is <em>thickness</em>: the thickness of a graph is the number of planar subgraphs needed to cover all of its edges, and a graph is biplanar if it has thickness two. A famous unsolved problem in graph theory, <a href="https://en.wikipedia.org/wiki/Earth%E2%80%93Moon_problem">Ringel’s Earth–Moon problem</a>, asks how many colors are necessary to color biplanar graphs. The name comes from the idea that you might want to color a pair of maps of countries that all have space colonies on the Moon, using the same color for each country and its colony. The map of their adjacencies on the Earth gives you one planar graph, and the map of adjacencies between their colonies on the Moon gives you the other.  \(K_{4,4,4}\) is not a very interesting example for this question, because it only needs three colors; some other biplanar graphs need as many as nine. On the other hand, we only know how to prove that twelve colors are always enough, so there’s a pretty big gap. Ellen Gethner published <a href="https://doi.org/10.1007%2F978-3-319-97686-0_11">a nice survey on the problem</a> in 2018, including also some other material on biplanar graphs.</p>
+
+<p>One of Gethner’s conjectures from that survey is that doubled planar graphs (or as she calls them, 2-blowups) are always biplanar. The conjecture is plausible, because the number of edges is within the right range to be biplanar. If the starting planar graph has \(n\) vertices, it has \(3n-6\) edges, and its blowup has \(2n\) vertices and \(12n-24\) edges. This is fewer than \(12n-12\), the limit on the number of edges for biplanar graphs with \(2n\) vertices. And for a wide class of planar graphs, even those with the maximum possible number of edges, I can prove that their blowups are indeed biplanar. This works whenever the dual graph can be partitioned into two induced paths. In the original graph, these paths form strips of faces connected end-to-end, and in the biplanar drawing of the blowup they become sequences of nested quadrilaterals. For instance, \(K_{4,4,4}\) is the blowup of the octahedral graph \(K_{2,2,2}\), whose dual graph is a cube, and the cube can be partitioned into two induced paths:</p>
+
+<p style="text-align:center"><img src="/blog/assets/2023/cube-path-partition.svg" alt="Partition of a cube into two induced paths" /></p>
+
+<p>The second of the biplanar drawings of \(K_{4,4,4}\) above comes from this dual induced path partition.</p>
+
+<p>Despite this positive evidence, the conjecture turns out to be false. My latest preprint, “On the biplanarity of blowups”, <a href="https://arxiv.org/abs/2301.09246">arXiv:2301.09246</a>, constructs counterexamples, planar graphs whose blowups are not biplanar. The general idea of the construction is very similar to one of my earlier papers, on <a href="/blog/2020/09/01/isosceles-polyhedra.html">polyhedral graphs that cannot be realized as convex polyhedra with isosceles-triangle faces</a>. Both papers are based on the construction of a <a href="https://en.wikipedia.org/wiki/Kleetope">Kleetope</a>, a polyhedron formed from another polyhedron by attaching a pyramid to each face.
+If you repeat the Kleetope construction, you get a polyhedron enclosed by multiple layers of pyramids, and any drawing or geometric realization of this layered polyhedron also gives you a drawing or realization of the simpler polyhedra underneath those layers.
+Each time you layer on more pyramids, any possible biplanar drawing of the result gets more and more constrained, until with enough layers it becomes completely impossible.</p>
+
+<p>Because not all planar blowups are biplanar, the question arises: which ones are, and which ones aren’t? Is there an efficient algorithm that takes as input a planar graph, produces a biplanar drawing of its blowup if such a drawing exists, and tells you when such a drawing doesn’t exist? I don’t know.</p>
+
+<p>(<a href="https://mathstodon.xyz/@11011110/109742463628336203">Discuss on Mastodon</a>)</p><p class="authors">By David Eppstein</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-01-23T18:17:00Z">Monday, January 23 2023, 18:17</time>
         </div>
       </div>
     </details>
@@ -3797,81 +3852,6 @@ and where the communication of each player is normalized relative to their
 input length. The second is a combinatorial technique that allows to sample
 needles in the planted model by first sampling intervals, and then sampling a
 uniform needle in each interval.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-01-16T01:30:00Z">Monday, January 16 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2301.05308'>Incremental Dead State Detection in Logarithmic Time</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Caleb Stanford, Margus Veanes</p><p>Identifying live and dead states in an abstract transition system is a
-recurring problem in formal verification. However, state-of-the-art graph
-algorithms for maintaining reachability information incrementally (that is, as
-states are visited and before the entire state space is explored) assume that
-new edges can be added from any state at any time, whereas in many
-applications, outgoing edges are added from each state as it is explored. To
-formalize the latter situation, we propose guided incremental digraphs (GIDs),
-incremental graphs which support labeling closed states (states which will not
-receive further outgoing edges). Our main result is that dead state detection
-in GIDs is solvable in $O(\log m)$ time per edge update for $m$ edges,
-improving upon $O(\sqrt{m})$ per edge due to Bender, Fineman, Gilbert, and
-Tarjan (BFGT) for general incremental directed graphs.
-</p>
-<p>We introduce two algorithms for GIDs: one establishing the logarithmic time
-bound, and a second algorithm to explore a lazy heuristics-based approach. To
-demonstrate applicability, we show how GIDs can be used to lazily decide
-regular expression constraints in SMT applications. To enable an
-apples-to-apples experimental comparison, we implemented both algorithms, two
-naive baselines, and the state-of-the-art BFGT baseline using a common directed
-graph interface in Rust. Our evaluation shows $110$-$530$x speedups over BFGT
-for the largest input graphs over a range of graph classes, random graphs, and
-graphs arising from regular expression benchmarks.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Stanford_C/0/1/0/all/0/1">Caleb Stanford</a>, <a href="http://arxiv.org/find/cs/1/au:+Veanes_M/0/1/0/all/0/1">Margus Veanes</a></p><p>Identifying live and dead states in an abstract transition system is a
-recurring problem in formal verification. However, state-of-the-art graph
-algorithms for maintaining reachability information incrementally (that is, as
-states are visited and before the entire state space is explored) assume that
-new edges can be added from any state at any time, whereas in many
-applications, outgoing edges are added from each state as it is explored. To
-formalize the latter situation, we propose guided incremental digraphs (GIDs),
-incremental graphs which support labeling closed states (states which will not
-receive further outgoing edges). Our main result is that dead state detection
-in GIDs is solvable in $O(\log m)$ time per edge update for $m$ edges,
-improving upon $O(\sqrt{m})$ per edge due to Bender, Fineman, Gilbert, and
-Tarjan (BFGT) for general incremental directed graphs.
-</p>
-<p>We introduce two algorithms for GIDs: one establishing the logarithmic time
-bound, and a second algorithm to explore a lazy heuristics-based approach. To
-demonstrate applicability, we show how GIDs can be used to lazily decide
-regular expression constraints in SMT applications. To enable an
-apples-to-apples experimental comparison, we implemented both algorithms, two
-naive baselines, and the state-of-the-art BFGT baseline using a common directed
-graph interface in Rust. Our evaluation shows $110$-$530$x speedups over BFGT
-for the largest input graphs over a range of graph classes, random graphs, and
-graphs arising from regular expression benchmarks.
 </p>
         
         </div>

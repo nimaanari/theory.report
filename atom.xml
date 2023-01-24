@@ -599,6 +599,45 @@ controllability assumptions are violated.
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">David Eppstein: Doubled planar drawings of doubled planar graphs</title>
+    <link href="https://11011110.github.io/blog/2023/01/23/doubled-planar-drawings.html"/>
+    <id>https://11011110.github.io/blog/2023/01/23/doubled-planar-drawings</id>
+    <updated>2023-01-23T18:17:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;If you start with a planar graph, and make two copies of each vertex, you should be able to draw the result as two planar graphs, right? But it’s more complicated than just copying a drawing of your starting graph, because you get four copies of each edge, and you have to put them all somewhere.&lt;/p&gt;
+
+&lt;p&gt;For instance, the graph \(K_{2,2,2}\) is planar (it’s the graph of an octahedron). Doubling it gives \(K_{4,4,4}\). And \(K_{4,4,4}\) can indeed be drawn as two planar graphs, but not as two octahedra. Here it is as two octagonal bipyramids:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/bipyramidal-K444.svg&quot; alt=&quot;The complete tripartite graph K_{4,4,4} drawn as  the union of two octagonal bipyramids&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And here it is drawn as two planar graphs in a different way:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/nested-quad-K444.svg&quot; alt=&quot;Another drawing of the complete tripartite graph K_{4,4,4} as the union of two planar graphs&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Drawings like this, where a nonplanar graph is presented as the union of two planar graphs, are called &lt;em&gt;biplanar&lt;/em&gt;. Another word for the same idea is &lt;em&gt;thickness&lt;/em&gt;: the thickness of a graph is the number of planar subgraphs needed to cover all of its edges, and a graph is biplanar if it has thickness two. A famous unsolved problem in graph theory, &lt;a href=&quot;https://en.wikipedia.org/wiki/Earth%E2%80%93Moon_problem&quot;&gt;Ringel’s Earth–Moon problem&lt;/a&gt;, asks how many colors are necessary to color biplanar graphs. The name comes from the idea that you might want to color a pair of maps of countries that all have space colonies on the Moon, using the same color for each country and its colony. The map of their adjacencies on the Earth gives you one planar graph, and the map of adjacencies between their colonies on the Moon gives you the other.  \(K_{4,4,4}\) is not a very interesting example for this question, because it only needs three colors; some other biplanar graphs need as many as nine. On the other hand, we only know how to prove that twelve colors are always enough, so there’s a pretty big gap. Ellen Gethner published &lt;a href=&quot;https://doi.org/10.1007%2F978-3-319-97686-0_11&quot;&gt;a nice survey on the problem&lt;/a&gt; in 2018, including also some other material on biplanar graphs.&lt;/p&gt;
+
+&lt;p&gt;One of Gethner’s conjectures from that survey is that doubled planar graphs (or as she calls them, 2-blowups) are always biplanar. The conjecture is plausible, because the number of edges is within the right range to be biplanar. If the starting planar graph has \(n\) vertices, it has \(3n-6\) edges, and its blowup has \(2n\) vertices and \(12n-24\) edges. This is fewer than \(12n-12\), the limit on the number of edges for biplanar graphs with \(2n\) vertices. And for a wide class of planar graphs, even those with the maximum possible number of edges, I can prove that their blowups are indeed biplanar. This works whenever the dual graph can be partitioned into two induced paths. In the original graph, these paths form strips of faces connected end-to-end, and in the biplanar drawing of the blowup they become sequences of nested quadrilaterals. For instance, \(K_{4,4,4}\) is the blowup of the octahedral graph \(K_{2,2,2}\), whose dual graph is a cube, and the cube can be partitioned into two induced paths:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/cube-path-partition.svg&quot; alt=&quot;Partition of a cube into two induced paths&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The second of the biplanar drawings of \(K_{4,4,4}\) above comes from this dual induced path partition.&lt;/p&gt;
+
+&lt;p&gt;Despite this positive evidence, the conjecture turns out to be false. My latest preprint, “On the biplanarity of blowups”, &lt;a href=&quot;https://arxiv.org/abs/2301.09246&quot;&gt;arXiv:2301.09246&lt;/a&gt;, constructs counterexamples, planar graphs whose blowups are not biplanar. The general idea of the construction is very similar to one of my earlier papers, on &lt;a href=&quot;/blog/2020/09/01/isosceles-polyhedra.html&quot;&gt;polyhedral graphs that cannot be realized as convex polyhedra with isosceles-triangle faces&lt;/a&gt;. Both papers are based on the construction of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Kleetope&quot;&gt;Kleetope&lt;/a&gt;, a polyhedron formed from another polyhedron by attaching a pyramid to each face.
+If you repeat the Kleetope construction, you get a polyhedron enclosed by multiple layers of pyramids, and any drawing or geometric realization of this layered polyhedron also gives you a drawing or realization of the simpler polyhedra underneath those layers.
+Each time you layer on more pyramids, any possible biplanar drawing of the result gets more and more constrained, until with enough layers it becomes completely impossible.&lt;/p&gt;
+
+&lt;p&gt;Because not all planar blowups are biplanar, the question arises: which ones are, and which ones aren’t? Is there an efficient algorithm that takes as input a planar graph, produces a biplanar drawing of its blowup if such a drawing exists, and tells you when such a drawing doesn’t exist? I don’t know.&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109742463628336203&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </content>
+    <author>
+      <name>David Eppstein</name>
+      <uri>https://11011110.github.io/blog/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Computational Complexity: The Betty White Award for 2022</title>
     <link href="https://blog.computationalcomplexity.org/2023/01/the-betty-white-award-for-2022.html"/>
     <id>tag:blogger.com,1999:blog-3722233.post-8096489251092585014</id>
@@ -1966,43 +2005,6 @@ and where the communication of each player is normalized relative to their
 input length. The second is a combinatorial technique that allows to sample
 needles in the planted model by first sampling intervals, and then sampling a
 uniform needle in each interval.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Incremental Dead State Detection in Logarithmic Time</title>
-    <link href="http://arxiv.org/abs/2301.05308"/>
-    <id>http://arxiv.org/abs/2301.05308</id>
-    <updated>2023-01-16T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Stanford_C/0/1/0/all/0/1&quot;&gt;Caleb Stanford&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Veanes_M/0/1/0/all/0/1&quot;&gt;Margus Veanes&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Identifying live and dead states in an abstract transition system is a
-recurring problem in formal verification. However, state-of-the-art graph
-algorithms for maintaining reachability information incrementally (that is, as
-states are visited and before the entire state space is explored) assume that
-new edges can be added from any state at any time, whereas in many
-applications, outgoing edges are added from each state as it is explored. To
-formalize the latter situation, we propose guided incremental digraphs (GIDs),
-incremental graphs which support labeling closed states (states which will not
-receive further outgoing edges). Our main result is that dead state detection
-in GIDs is solvable in $O(\log m)$ time per edge update for $m$ edges,
-improving upon $O(\sqrt{m})$ per edge due to Bender, Fineman, Gilbert, and
-Tarjan (BFGT) for general incremental directed graphs.
-&lt;/p&gt;
-&lt;p&gt;We introduce two algorithms for GIDs: one establishing the logarithmic time
-bound, and a second algorithm to explore a lazy heuristics-based approach. To
-demonstrate applicability, we show how GIDs can be used to lazily decide
-regular expression constraints in SMT applications. To enable an
-apples-to-apples experimental comparison, we implemented both algorithms, two
-naive baselines, and the state-of-the-art BFGT baseline using a common directed
-graph interface in Rust. Our evaluation shows $110$-$530$x speedups over BFGT
-for the largest input graphs over a range of graph classes, random graphs, and
-graphs arising from regular expression benchmarks.
 &lt;/p&gt;
   </content>
     <author>
