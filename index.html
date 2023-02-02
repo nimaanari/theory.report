@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-02-02T15:32:16Z">Thursday, February 02 2023, 15:32</time>
+          <time class='timeago' datetime="2023-02-02T16:42:42Z">Thursday, February 02 2023, 16:42</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,236 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, February 02
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://francisbach.com/non-convex-quadratic-problems/'>Non-convex quadratic optimization problems</a></h3>
+        <p class='tr-article-feed'>from <a href='https://francisbach.com'>Francis Bach</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Among continuous optimization problems, convex problems (with convex objectives and convex constraints) define a class that can be solved efficiently with a variety of algorithms and with arbitrary precision. This is not true more generally when the convexity assumption is removed (see this post). This of course does not mean that (1) nobody should attempt...
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="justify-text">Among continuous optimization problems, convex problems (with convex objectives and convex constraints) define a class that can be solved efficiently with a variety of algorithms and with arbitrary precision. This is not true more generally when the convexity assumption is removed (see <a href="https://francisbach.com/optimization-is-as-hard-as-approximation/">this post</a>). This of course does not mean that (1) nobody should attempt to solve high-dimensional non-convex problems (in fact, the spell checker run on this document was trained solving such a problem&#8230;), and that (2) no other problems have efficient solutions.</p>
+
+
+
+<p class="justify-text">In this post, we will look at a classical class of continuous optimization problems that can be solved efficiently, namely quadratic optimization problems on the Euclidean sphere or ball. That is, we look at solving $$\tag{1} \min_{ \| x\| \leqslant 1} \ \frac{1}{2} x^\top A x \ &#8211; b^\top x, $$ and $$\tag{2} \min_{ \| x\| = 1} \ \frac{1}{2} x^\top A x \ &#8211; b^\top x,  $$ for \(\|x\|^2 = x^\top x\) the standard squared Euclidean norm.</p>
+
+
+
+<p class="justify-text">The matrix \(A \in \mathbb{R}^{n \times n}\) is assumed only symmetric (no need to be positive semi-definite), and \(b \in \mathbb{R}^n\). Therefore, the objective may not be convex, and the constraint set (in the case of the sphere), is not convex either. We could replace the standard squared Euclidean norm \(x^\top x\) by any Mahanalobis squared norm \(x^\top B x\) for \(B\) positive-definite, but to keep it simple, let&#8217;s only consider \(B = I\).</p>
+
+
+
+<p class="justify-text">Note that there are other continuous non-convex optimization problems that can be solved efficiently through a convex reformulation, such as the minimization of one-dimensional (trigonometric) polynomials, and more generally sum-of-squares problems (see <a href="https://francisbach.com/sums-of-squares-for-dummies/">this post</a>). If you are aware of many more beyond combinatorial optimization problems, please let me know.</p>
+
+
+
+<p class="justify-text"><strong>Special case of eigenvalues.</strong> If \(b=0\) (no linear term), then the solution of Problem \((1)\) is the eigenvector associated with the largest eigenvalue of \(A\) in magnitude, while the solution of  Problem \((2)\) is the eigenvector associated with the smallest eigenvalue of \(A\). This has a large number of applications, and is the topic of tons of <a href="https://www.google.com/search?q=spectral+relaxation">&#8220;spectral relaxation&#8221; works</a>, and this is not the focus of this post.</p>
+
+
+
+<h2>Applications</h2>
+
+
+
+<p class="justify-text">Problems \((1)\) and \((2)\) appear in several areas and first appeared in [<a href="https://epubs.siam.org/doi/epdfplus/10.1137/0113073">2</a>] in 1965 (if you know of an earlier reference, please let me know). The three main occurrences that I am aware of are in <a href="https://en.wikipedia.org/wiki/Trust_region">trust-region methods</a>, constrained eigenvalue problems, and relaxation of binary optimization problems.</p>
+
+
+
+<p class="justify-text"><strong>Trust-region methods.</strong> When minimizing a differentiable function \(f\) on \(\mathbb{R}^n\), the classical gradient descent iteration $$x^+ = x \, &#8211; \gamma f(x)$$ can be seen as the solution of $$\min_{y \in \mathbb{R}^n} \ f(x) + f'(x)^\top ( y\,  &#8211; x ) \mbox{ such that } \| y\,  &#8211; x\| \leqslant \delta,$$ for \(\delta = \gamma  \| f'(x)\|_2\). This corresponds to minimizing the first-order Taylor expansion in a ball centered at \(x\), and leads to the minimization of an affine function on an Euclidean ball. When using the second order model, we get to solve $$\min_{y \in \mathbb{R}^n} \ f(x) + f'(x)^\top ( y \, &#8211; x ) + \frac{1}{2} ( y\,  -x )^\top f^{\prime \prime}(x) ( y \, -x ) \mbox{ such that } \| y \, &#8211; x\| \leqslant \delta, $$ which can be cast as Problem \((1)\).</p>
+
+
+
+<p class="justify-text">The intuitive idea is that the Taylor expansion is only local, so we optimize it locally, instead of globally, like the classical Newton method would do. Moreover, it is well-defined even for singular Hessians. See figure below and [4] for more details.</p>
+
+
+<div class="wp-block-image justify-text">
+<figure class="aligncenter size-full is-resized"><img src="https://francisbach.com/wp-content/uploads/2023/01/tr-2.png" alt="" class="wp-image-8723" width="779" height="280" srcset="https://francisbach.com/wp-content/uploads/2023/01/tr-2.png 2514w, https://francisbach.com/wp-content/uploads/2023/01/tr-2-300x108.png 300w, https://francisbach.com/wp-content/uploads/2023/01/tr-2-1024x369.png 1024w, https://francisbach.com/wp-content/uploads/2023/01/tr-2-768x277.png 768w, https://francisbach.com/wp-content/uploads/2023/01/tr-2-1536x554.png 1536w, https://francisbach.com/wp-content/uploads/2023/01/tr-2-2048x738.png 2048w, https://francisbach.com/wp-content/uploads/2023/01/tr-2-850x306.png 850w" sizes="(max-width: 779px) 100vw, 779px" /><figcaption>We consider two quadratic functions and we compare the minimization of their linear and quadratic Taylor expansions under a ball constraint with increasing radius. Left: convex function (hence the quadratic minimization ends up reaching the global minimum). Right: function with a saddle. Below, only the quadratic minimization path is shown for several starting points.</figcaption></figure></div>
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><img loading="lazy" src="https://francisbach.com/wp-content/uploads/2023/01/video_tr-1.gif" alt="" class="wp-image-8747" width="547" height="353"/></figure></div>
+
+
+<p class="justify-text"><strong>Constrained eigenvalue problems.</strong> If we aim to minimize \(x^\top A x\) subject to \(x^\top x = 1\) and an affine constraint [<a href="https://www.sciencedirect.com/science/article/pii/0024379589904941/pdf?md5=754201682cef36aa80a3ef681fce6d62&amp;pid=1-s2.0-0024379589904941-main.pdf">3</a>], then, by writing the affine constraint as \(x = Cz+d\), we obtain the minimization of a quadratic-linear function subject to a quadratic-linear constraint, which we can rewrite in a form similar to Problem \((2)\).</p>
+
+
+
+<p class="justify-text"><strong>Relaxation of binary optimization problems.</strong> When minimizing a linear-quadratic function on \(\{-1,1\}^n\), we can relax it by replacing the constraint \(x \in \{-1,1\}^n\) by \(x^\top x = n\).</p>
+
+
+
+<h2>From local to global optimality conditions</h2>
+
+
+
+<p class="justify-text">Let&#8217;s now look at optimality conditions from first principles (see [<a href="http://users.clas.ufl.edu/hager/papers/Regular/sphere.pdf">5</a>, <a href="https://epubs.siam.org/doi/epdf/10.1137/0719026">6</a>] for more details), before relating them to a broader discussion on tight semi-definite relaxations.</p>
+
+
+
+<p class="justify-text"><strong>Existence of minimizers.</strong> Minimizers always exists for \(f(x) = \frac{1}{2} x^\top A x \ &#8211; b^\top x\) since the two sets \(\mathbb{S} = \{ x \in \mathbb{R}^n, x^\top x = 1\}\) and \(\mathbb{B} = \{ x \in \mathbb{R}^n, x^\top x \leqslant 1\}\) are compact. Therefore, the problems are well-formulated.</p>
+
+
+
+<p class="justify-text"><strong>First-order necessary conditions on the sphere. </strong>We consider an optimal \(x \in \mathbb{S}\). For any \(y \in \mathbb{S}\) which is orthogonal to \(x\), and any \(\theta  \in \mathbb{R}\), we have: $$f( \cos \theta \cdot x + \sin \theta \cdot y) = f(x) + f'(x)^\top y \cdot \theta + o(\theta).$$ Thus, since \(\cos \theta \cdot x + \sin \theta \cdot y\) is always on \(\mathbb{S}\), we must have \(f'(x)^\top y=0\), and this holds for all \(y\) orthogonal to \(x\). Thus \(f'(x)\) has to be proportional to \(x\), that is, there exists \(\mu \in \mathbb{R}\) such that \(f'(x) + \mu x = 0\), that is, \((A + \mu I) x = b\).  </p>
+
+
+
+<p class="justify-text"><strong>First-order necessary conditions on the ball.</strong> If \(x \in \mathbb{B}\) is optimal and in the interior, that is, \(x^\top x &lt; 1\), then we directly have \(f'(x) = 0\). If \(x \in \mathbb{S}\), it has to be optimal for the sphere, and thus there exists \(\mu \in \mathbb{R}\) such that \(f'(x) + \mu x = 0\).  By considering that \(g: t \mapsto f(t x)\) has to be minimized on \([0,1]\), for \(t=1\), we must have \(g'(1) \leqslant 0\), i.e., \(\mu = \, &#8211; f'(x) ^\top x \geqslant 0\). </p>
+
+
+
+<p class="justify-text">In order to cover the interior case, we need to add the &#8220;complementary slackness&#8221; condition \(\mu ( 1 -x^\top x)=0\).</p>
+
+
+
+<p class="justify-text"><strong>Obtaining necessary conditions from Lagrange duality.</strong> We can obtain the same first-order optimality conditions using <a href="https://en.wikipedia.org/wiki/Duality_(optimization)">Lagrange duality</a>, by adding a Lagrange multiplier \(\mu \in \mathbb{R}\) for the equality constraint \(x^\top x = 1\), or \(\mu \in \mathbb{R}_+\) for the inequality constraint \(x^\top x \leqslant 1\), and forming the Lagrangian $$\tag{3} \mathcal{L}(x,\mu) = \frac{1}{2} x^\top A x\, &#8211; b^\top x + \frac{1}{2} \mu ( x^\top x\, &#8211; 1).$$ A necessary condition is thus that the partial derivative with respect to \(x\) is zero for a certain \(\mu\), which is exactly the condition \(f'(x) + \mu x = 0\) above.</p>
+
+
+
+<p class="justify-text"><strong>Second-order conditions on the sphere.</strong> Assuming that \(f'(x) + \mu x = 0\), with \(\mu\) potentially negative (i.e., the first-order optimality conditions are satisfied), we then have, for any \(y \in \mathbb{S}\), $$\begin{array}{rcl}f(y) &amp; = &amp; f(x) + f'(x)^\top(y-x) + \frac{1}{2}(x-y)^\top A ( x-y) \\ &amp; = &amp;  f(x) + \frac{1}{2}(x-y)^\top (  A + \mu I) ( x-y) + \frac{\mu}{2} ( x^\top x &#8211; y^\top y). \end{array}$$ Thus, if \(x\) is optimal, we must have \((x-y)^\top (  A + \mu I) ( x-y) \geqslant 0\) for all \(y \in \mathbb{S}\), which implies that \(A+ \mu I \succcurlyeq 0\). Note that our reasoning implies that the optimality condition, that is, existence of \(\mu \in \mathbb{R}\) such that $$\begin{array}{l} ( A+ \mu I) x = b \\ A+ \mu I \succcurlyeq 0 \\ x^\top x = 1 , \end{array} $$ is necessary and sufficient for the optimality of \(x\). The sufficiency can also be obtained through <a href="https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions#:~:text=In%20mathematical%20optimization%2C%20the%20Karush,some%20regularity%20conditions%20are%20satisfied.">Karush-Kuhn-Tucker (KKT) conditions</a>, which apply regardless of convexity. This is one of few problems where strong duality holds for a non-convex optimization problems.</p>
+
+
+
+<p class="justify-text"><strong>Second-order necessary condition on the ball.</strong> We also get the following necessary and sufficient condition, that is, the existence of \(\mu \in \mathbb{R}_+\) such that $$\begin{array}{l} ( A+ \mu I) x = b \\ A+ \mu I  \succcurlyeq 0 \\ x^\top x \leqslant 1 \\ \mu \, ( 1 \, &#8211; \, x^\top x) = 0.  \end{array}$$</p>
+
+
+
+<p class="justify-text">In both cases, once \(\mu\) is known, we can recover the optimizers \(x\). We now focus on the sphere for simplicity.</p>
+
+
+
+<h2>Equivalence to a one-dimensional problem</h2>
+
+
+
+<p class="justify-text">We can define the function \((M,u) \mapsto u^\top M^{-1} u\) as the minimal \(t \in \mathbb{R}\) such that the matrix \(\bigg( \begin{array}{cc} \!M\!\! &amp; \!u\! \\[-.1cm] \!u^\top \!\! &amp; \! t \! \end{array} \bigg) \succcurlyeq 0\). It is thus jointly convex in \((M,u)\), is infinite when \(M\) is not positive-semidefinite (PSD). When \(M\) is PSD but not invertible, the function is finite if and only if \(u\) is in the column space of \(M\). We can define similarly \(u^\top M^{-2} u\).</p>
+
+
+
+<p class="justify-text">We can now get the dual problem associated to the Lagrangian in \((3)\), by minimizing it with respect to \(x\), leading to $$\max_{\mu \in \mathbb{R}} \  &#8211; \frac{\mu}{2} \, &#8211; \frac{1}{2} b^\top ( A+\mu I)^{-1} b, $$ which is a concave maximization problem in one dimension (with the constraint that \(A + \mu I \succcurlyeq 0\)).</p>
+
+
+
+<p class="justify-text">Thus, a simple algorithm for solving the problem is to solve this one-dimensional concave maximization problem. Once an eigenvalue decomposition \(A = \sum_{i=1}^n \! \lambda_i u_i u_i^\top\) has been obtained, we need to minimize $$ \tag{4} &#8211; \frac{\mu}{2} \, &#8211; \frac{1}{2} \sum_{i=1}^n \frac{ (b^\top u_i)^2}{\lambda_i + \mu}. $$</p>
+
+
+
+<p class="justify-text">Assuming that \(\lambda_1 \geqslant \lambda_2 \geqslant \cdots \geqslant \lambda_n\), we have the constraint \(\lambda_n + \mu \geqslant 0\). We first need to check if \(\mu = \, &#8211; \lambda_n\) is the solution, which occurs when \(b^\top ( A+ \mu I)^{-2} b \leqslant 1\) (the problem is then called &#8220;degenerate&#8221;, and this can only happen if \(b\) in the eigensubspace of \(A\) associated with eigenvalue \(&#8211; \lambda_n\), which is rather uncommon). Otherwise, the minimum is attained at \(\mu > -\lambda_n\) (note that since we have assumed \(b \neq 0\), the problem is strictly concave and thus has a unique maximizer in \(\mu\)). Moreover, \(\mu\) is characterized by the equation $$ \tag{5}   b^\top ( A+ \mu I)^{-2} b = 1,$$ which can be obtained directly from the optimality conditions.</p>
+
+
+
+<p class="justify-text">This one-dimensional problem can be solved using Newton&#8217;s method [<a href="https://epubs.siam.org/doi/epdf/10.1137/0719026">6</a>, <a href="https://epubs.siam.org/doi/epdf/10.1137/S1052623494274374">7</a>] to estimate \(\mu\) given the eigendecomposition of \(A\). There are also cheaper less precise algorithms that do not require a full eigendecomposition. We will also see below a surprising reformulation as a simple eigenvalue problem.</p>
+
+
+
+<p class="justify-text"><strong>Other &#8220;secular&#8221; equations.</strong> Equation \((5)\) is often referred to a <a href="https://en.wikipedia.org/wiki/Characteristic_polynomial">secular equation</a>. There are other types of similar equations, in particular for rank-one perturbations of the symmetric eigenvalue problem [<a href="https://link.springer.com/content/pdf/10.1007/BF01396012.pdf?pdf=button">8</a>, <a href="https://epubs.siam.org/doi/epdf/10.1137/S089547989223924X">9</a>].</p>
+
+
+
+<h2>Semi-definite relaxations</h2>
+
+
+
+<p class="justify-text">We can now give a more modern take on the quadratic maximization problem on the sphere, using <a href="https://en.wikipedia.org/wiki/Semidefinite_programming">semi-definite programming</a>. We can first rewrite the objective function in Equation \((1)\) as $$f(x) = \frac{1}{2}x^\top A x \, &#8211; b^\top x = \frac{1}{2} {\rm tr}(AX) \, &#8211; b^\top x, $$ with \(X = xx^\top\). We now have a linear objective in \((X,x)\). Moreover, the matrix \(X\) satisfies the convex constraints $$ X \succcurlyeq xx^\top \Leftrightarrow \left( \begin{array}{cc} \!X\!\! &amp; \!x\! \\[-.1cm] \!x^\top \!\!&amp;\!  1\!  \end{array} \right) \succcurlyeq 0, $$ and \({\rm tr}(X) = x^\top x = 1\). However the rank-one constraint is not convex. </p>
+
+
+
+<p class="justify-text">A classical tool in optimization is to remove the rank-one constraint, and only obtain a lower bound (a so-called &#8220;relaxation&#8221;), with the following optimization problem: $$\tag{6} \min_{ X, x} \frac{1}{2} {\rm tr}(AX)-b^\top x \mbox{ such that } \left( \begin{array}{cc} \!X\!\! &amp; \!x\! \\[-.1cm] \!x^\top \!\!&amp;\!  1\!  \end{array} \right)  \succcurlyeq 0 \mbox{ and } {\rm tr}(X)=1. $$ One can check that the dual problem is exactly Equation \((4)\), and thus the relaxation is here tight. Moreover, the SDP formulation can be used to derive algorithms that do not need a full eigenvalue decomposition [<a href="https://link.springer.com/content/pdf/10.1007/BF02614438.pdf?pdf=button">12</a>].</p>
+
+
+
+<p class="justify-text"><strong>Semi-definite relaxation of QCQP&#8217;s.</strong> Problems \((1)\) and \((2)\) are in fact instances of <a href="https://en.wikipedia.org/wiki/Quadratically_constrained_quadratic_program">quadratically constrained quadratic programming</a> problems, and the problem \((6)\) is the usual semi-definite relaxation. It turns out that with a single constraint, such relaxations are always tight, owing to the <a href="https://en.wikipedia.org/wiki/S-procedure">S-lemma</a> [<a href="https://epubs.siam.org/doi/epdf/10.1137/S003614450444614X">10</a>] (see a nice derivation in Boyd and Vandenberghe&#8217;s book [<a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">11</a>, Appendix B.1]).</p>
+
+
+
+<p class="justify-text"><strong>Tight <span style="font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, sans-serif;">sum-of-squares relaxation.</span></strong> Yet another reformulation is through sum-of-squares (see an earlier <a href="https://francisbach.com/finding-global-minima-with-kernel-approximations/">post</a>), where we consider the feature vector \(\varphi(x) = {x \choose 1}\) and represent non-negative functions as quadratic forms \(x \mapsto \varphi(x)^\top B \varphi(x)\). The problem in \((2)\) can then be relaxed as $$\max_{c \in \mathbb{R}, \ B \succcurlyeq 0} c \ \mbox{ such that } \ f(x) \, &#8211; c = \varphi(x)^\top B \varphi(x),$$ which is exactly the tight SDP relaxation above.</p>
+
+
+
+<p class="justify-text"><strong>Having fun with adding affine constraints. </strong>Recently I had to look at Problem \((2)\) with an extra affine constraint, which I will take for simplicity of the form \(c^\top x = 1\) (for a vector \(c \in \mathbb{R}^n\) such that \(\|c\| > 1\) to avoid a trivial problem). By projecting on the subspace orthogonal to \(c \in \mathbb{R}^n\), we obtain again a quadratic minimization problem, this time on a Euclidean sphere embedded in a space of dimension \(n-1\). Therefore, we can apply the above techniques on the reduced problem. However, I did not want to do that and wanted keep the original formulation on \(\mathbb{R}^n\), and then tried to use duality to solve it. Two natural possibilities emerge here.</p>
+
+
+
+<p class="justify-text">In order to solve it, we could first imagine using Lagrange duality, with a Lagrange multiplier \(\mu\) for the constraint \(x^\top x = 1\) (this worked exactly without the extra affine constraint), and now an extra Lagrange multiplier \(\nu\) for the constraint \(c^\top x = 1\). This leads to the Lagrangian $$ \mathcal{L}(x,\mu,\nu) = \frac{1}{2} x^\top A x\, &#8211; b^\top x + \frac{1}{2} \mu ( x^\top x\, &#8211; 1) + \nu( c^\top x -1),$$ and thus, after a short calculation, the dual problem $$\max_{\mu,\nu \in \mathbb{R}} \ -\frac{\mu}{2} \, &#8211; \nu   \, &#8211; \frac{1}{2} (b \, &#8211; \nu c)^\top ( A + \mu I)^{-1} (b \, &#8211; \nu c).$$ Another Lagrangian can be obtained with the equivalent constraint \((c^\top x\, &#8211; 1)^2 = 0\), leading to a new Lagrangian $$ \mathcal{L}'(x,\mu,\nu&#8217;) = \frac{1}{2} x^\top A  x\, -b^\top x + \frac{1}{2} \mu ( x^\top x\, &#8211; 1) + \frac{1}{2} \nu&#8217;  (c^\top x \, &#8211; 1)^2,$$ and then the dual problem $$\max_{\mu,\nu&#8217; \in \mathbb{R}} \ -\frac{\mu}{2} \, -\frac{\nu&#8217;}{2} \, &#8211; \frac{1}{2} (b+\nu&#8217; c)^\top ( A +  \nu&#8217; cc^\top  +  \mu I)^{-1} (b+\nu&#8217; c).$$ Are they both tight? Make up your own mind and see the bottom of the post for the answer.</p>
+
+
+
+<h2>Amazing eigenvalue reformulations</h2>
+
+
+
+<p class="justify-text">The Newton method to solve the one-dimensional problem is efficient, but requires some safeguards to work properly, and a full eigenvalue decomposition. It turns out that one can obtain <em>exact</em> reformulations as eigenvalue problems <em>for a single eigenvalue</em>, for which efficient <a href="https://en.wikipedia.org/wiki/ARPACK">packages</a> exist.</p>
+
+
+
+<p class="justify-text">From [<a href="https://reader.elsevier.com/reader/sd/pii/0024379589904941?token=5ED11F6E1B740CDF399B40623394985F3CDDA6BEF749F490CA64773677A63CBDE4C213284E03445941BCF501D0C12336&amp;originRegion=eu-west-1&amp;originCreation=20230128095330">3</a>], for the optimization on the sphere, we can obtain the optimal \(\mu\) from the largest real eigenvalue of the following non symmetric matrix: $$\left( \begin{array}{cc} \!-A\!  &amp; \!\! I\!  \\[-.1cm]   \! bb^\top \!&amp; \!\! -A\!  \end{array} \right).$$ Indeed, one can check that, in the non-degenerate case, given the optimal \((x,\mu)\), then \(y = \left( \begin{array}{c} \!(A+\mu I)^{-1} x \!    \\[-.1cm]  x  \end{array} \right)\) is an eigenvector of the \(2n \times 2n\) matrix above, with eigenvalue \(\mu\).</p>
+
+
+
+<p class="justify-text">This leads to two lines of code to solve the problem, at least for the non-degenerate case! See more details in [<a href="https://reader.elsevier.com/reader/sd/pii/0024379589904941?token=5ED11F6E1B740CDF399B40623394985F3CDDA6BEF749F490CA64773677A63CBDE4C213284E03445941BCF501D0C12336&amp;originRegion=eu-west-1&amp;originCreation=20230128095330">3</a>, <a href="https://epubs.siam.org/doi/epdf/10.1137/16M1058200">14</a>], in particular, to deal with the degenerate case, often called the &#8220;hard case&#8221;. See the code snippets in Matlab, Julia, and Python.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Matlab</td><td><code>[y,mu] = eigs([-A, eye(n); b*b', -A],1,'largestreal');&nbsp;<br>x&nbsp;= y(n+1:2*n) / (b'*y(1:n));&nbsp;<br></code>or <code>x = sign(b'*y(1:n)) * y(n+1:2*n) / norm(y(n+1:2*n))</code>;</td></tr><tr><td>Julia</td><td><code>E = eigs([-A I(n) ; b*b' -A ], nev=1 , which=:LR )<br>y, μ = E[2][:, 1], E[1][1]<br>x = y[n+1:2n] ./ (b' * y[1:n])<br></code>or <code>x = sign.(b' * y[1:n]) .* y[n+1:2n] / norm(y[n+1:2*n])</code></td></tr><tr><td>Python</td><td><code>M = np.block([[-A, np.eye(n)], [np.outer(b,b), -A]])<br>mu, y = scipy.sparse.linalg.eigs(M, k=1, which='LR', return_eigenvectors=True)<br>x = y[n:2*n]/(np.dot(b,y[:n]))&nbsp;<br></code>or <code>x&nbsp;= np.sign(np.dot(b,y[:n]))*y[n:2*n]/np.linalg.norm(y[n:2*n])</code></td></tr></tbody></table></figure>
+
+
+
+<p class="justify-text"><strong>Symmetric generalized eigenproblems. </strong>If you prefer symmetric matrices, one can obtain a similar result with the generalized eigenvector of the two matrices $$\left( \begin{array}{cc} \!I\!\!  &amp; \!\!-A\! \\ \!-A\!\! &amp; \! bb^\top\! \end{array} \right) \ \mbox{ and }   \  \left( \begin{array}{cc} \! 0  \! &amp; \! \! I \\[-.1cm] I \!\! &amp; \!\! 0   \end{array} \right).$$ If you want to avoid forming a potentially dense matrix \(bb^\top\), you and use instead the matrices $$\left( \begin{array}{ccc}  \!-1\!  &amp; \! 0\! &amp; \! b^\top \! \\[-1.cm] \!0\! &amp;\!  I \!&amp;\! -A \! \\[-.1cm]\! b \!&amp;\! -A \!&amp; \!0\! \end{array} \right) \  \mbox{ and } \  \left( \begin{array}{ccc} \! 0\! &amp;\! 0 \!&amp; \! 0\! \\[-.1cm]\! 0 \! &amp; \! 0 \!&amp;\! I \! \\[-.1cm] \! 0 \! &amp;\! I \! &amp;\! 0 \!  \end{array} \right).$$ See all details in [<a href="https://epubs.siam.org/doi/epdf/10.1137/16M1058200">14</a>]. Note that beyond the two-line code above that lead to precise solutions, more efficient algorithms exist that lead to approximate solutions [<a href="https://link.springer.com/content/pdf/10.1007/s10107-015-0933-y.pdf?pdf=button">14</a>, <a href="https://epubs.siam.org/doi/epdf/10.1137/16M1150281">15</a>].</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p class="justify-text">In this blog post, I described one of the few non-convex problems where strong duality holds. There are many other instances within combinatorial optimization (that is, with variables in \(\{0,1\}^n\) or \(\{-1,1\}^n\)), in particular related to <a href="https://en.wikipedia.org/wiki/Submodular_set_function">submodularity</a>. I will hopefully cover these in future posts. </p>
+
+
+
+<p class="justify-text"><strong>Acknowledgements.</strong> I would like to thank Alessandro Rudi, Gaspard Beugnot, and ChatGPT for helping with the code snippets.</p>
+
+
+
+<h2>References</h2>
+
+
+
+<p class="justify-text">[2] George E. Forsythe, and Gene H. Golub. <a href="https://epubs.siam.org/doi/epdfplus/10.1137/0113073">On the stationary values of a second-degree polynomial on the unit sphere</a>.&nbsp;<em>Journal of the Society for Industrial and Applied Mathematics</em>,&nbsp;13(4): 1050-1068, 1965.[3] Walter Gander, Gene H. Golub, and Urs Von Matt. <a href="https://www.sciencedirect.com/science/article/pii/0024379589904941/pdf?md5=754201682cef36aa80a3ef681fce6d62&amp;pid=1-s2.0-0024379589904941-main.pdf">A constrained eigenvalue problem</a>.&nbsp;<em>Linear Algebra and its applications</em>&nbsp;114: 815-839, 1989.<br>[4] Andrew R. Conn, Nicholas I. M. Gould, and Philippe L. Toint.&nbsp;<em>Trust region methods</em>. Society for Industrial and Applied Mathematics, 2000.<br>[5] William W. Hager. <a href="http://users.clas.ufl.edu/hager/papers/Regular/sphere.pdf">Minimizing a quadratic over a sphere</a>.&nbsp;<em>SIAM Journal on Optimization</em>,&nbsp;12(1):188-208, 2001.<br>[6] Danny C. Sorensen. <a href="https://epubs.siam.org/doi/epdf/10.1137/0719026">Newton’s method with a model trust region modification</a>. <em>SIAM Journal on Numerical Analysis</em>,&nbsp;19(2):409-426, 1982.<br>[7] Danny C. Sorensen. <a href="https://epubs.siam.org/doi/epdf/10.1137/S1052623494274374">Minimization of a large-scale quadratic function subject to a spherical constraint</a>.&nbsp;<em>SIAM Journal on Optimization</em>,&nbsp;7(1):141-161, 1997.<br>[8] James R. Bunch, Christopher P. Nielsen, Danny C. Sorensen. <a href="https://link.springer.com/content/pdf/10.1007/BF01396012.pdf?pdf=button">Rank-one modification of the symmetric eigenproblem</a>.&nbsp;<em>Numerische Mathematik</em>,&nbsp;31(1):31-48, 1978.<br>[9] Ming Gu, Stanley C. Eisenstat. <a href="https://epubs.siam.org/doi/epdf/10.1137/S089547989223924X">A stable and efficient algorithm for the rank-one modification of the symmetric eigenproblem</a>.&nbsp;<em>SIAM Journal on Matrix Analysis and Applications</em>&nbsp;,15(4):1266-1276, 1994.<br>[10] Imre Pólik, Tamás Terlaky. <a href="https://epubs.siam.org/doi/epdf/10.1137/S003614450444614X">A survey of the S-lemma</a>.&nbsp;<em>SIAM Review</em>,&nbsp;49(3):371-418, 2007.<br>[11] Stephen P. Boyd, Lieven Vandenberghe.&nbsp;<em><a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">Convex Optimization</a></em>. Cambridge University Press, 2004.<br>[12] Franz Rendl, Henry Wolkowicz. <a href="https://link.springer.com/content/pdf/10.1007/BF02614438.pdf?pdf=button">A semidefinite framework for trust region subproblems with applications to large scale minimization</a>.&nbsp;<em>Mathematical Programming</em>,&nbsp;77(1):273-299, 1997.<br>[13] Satoru Adachi, Satoru Iwata, Yuji Nakatsukasa, Akiko Takeda. <a href="https://epubs.siam.org/doi/epdf/10.1137/16M1058200">Solving the trust-region subproblem by a generalized eigenvalue problem</a>.&nbsp;<em>SIAM Journal on Optimization</em>,&nbsp;<em>27</em>(1):269-291, 2017.<br>[14] Elad Hazan, Tomer Koren. <a href="https://link.springer.com/content/pdf/10.1007/s10107-015-0933-y.pdf?pdf=button">A linear-time algorithm for trust region problems</a>.&nbsp;<em>Mathematical Programming</em>,&nbsp;158(1-2):363-381, 2016.<br>[15] Amir Beck, Yakov Vaisbourd. <a href="https://epubs.siam.org/doi/epdf/10.1137/16M1150281">Globally solving the trust region subproblem using simple first-order methods</a>.&nbsp;<em>SIAM Journal on Optimization</em>,&nbsp;28(3):1951-1967, 2018.</p>
+
+
+
+<h2>Having fun with affine constraints</h2>
+
+
+
+<p class="justify-text">Let&#8217;s know look at the solution! The second relaxation is tight, while the first is not. To prove that we have a non-tight solution for the first relaxation, we can simply find a counter-example from random matrices in dimension \(n = 2\). For example, for $$A = \left( \begin{array}{cc} \!3\! &amp;\! 0\! \\[-.1cm] \! 0\! &amp; \!-2 \!  \end{array} \right) , \ \ b = \left( \begin{array}{c} \! 0\! \\[-.1cm] \!-1 \! \end{array} \right), \mbox{ and } \ c = \left( \begin{array}{c} \! 0\! \\[-.1cm] \!2 \! \end{array} \right),$$ a minimizer is \( x =  \left( \begin{array}{c}\! \sqrt{3}/2\! \\[-.1cm] \! 1/2 \! \end{array} \right)\), with optimal value \(11/8\), while the non-tight relaxation leads to a value of \(-1/2\). </p>
+
+
+
+<p class="justify-text">To show the tightness of the second relaxation, we first notice that the convex problem is equivalent to the following SDP relaxation:  $$\min_{ X, x} \frac{1}{2} {\rm tr}(AX)-b^\top x \mbox{ such that } \left( \begin{array}{cc} \!X\!\! &amp; \!x\! \\[-.1cm] \!x^\top \!\!&amp;\!  1\!  \end{array} \right) \succcurlyeq 0, {\rm tr}(X)=1, \mbox{ and } {\rm tr}(cc^\top X)\,  &#8211; 2 t c^\top x + t^2 = 0. $$ Given the PSD constraint and the fact that $${\rm tr}(cc^\top X)\,  &#8211; 2 t c^\top x + t^2 = {\rm tr} \left( \begin{array}{cc} \!X\!\! &amp; \!x\! \\[-.1cm] \!x^\top \!\!&amp;\!  1\!  \end{array} \right)\left( \begin{array}{cc} \! cc^\top \! &amp; \! -tc \! \\[-.1cm] \!-tc^\top \! &amp; \! t^2 \! \end{array} \right),$$ the new constraint implies that $$ \left( \begin{array}{cc} \!X\!\! &amp; \!x\! \\[-.1cm] \!x^\top \!\!&amp;\!  1\!  \end{array} \right) \left( \begin{array}{c} \!c\!  \\[-.1cm] \!-t \!  \end{array} \right)= 0, $$ that is, \(Xc = t x\) and \(c^\top x = t\). One can then check that these constraints are exactly equivalent to a projection of the problem in to a space of dimension \(n-1\). The incorrect relaxation only has \(c^\top x = t\), which is not enough. It took me a while to realize it&#8230;</p>
+<p class="authors">By Francis Bach</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-02T14:46:35Z">Thursday, February 02 2023, 14:46</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3484,61 +3714,6 @@ Email: Wan Fokkink</p>
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-01-30T09:54:41Z">Monday, January 30 2023, 09:54</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2301.11615'>Decompositions into two linear forests of bounded lengths</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Rutger Campbell, Florian H&#xf6;rsch, Benjamin Moore</p><p>For some $k \in \mathbb{Z}_{\geq 0}\cup \infty$, we call a linear forest
-$k$-bounded if each of its components has at most $k$ edges. We will say a
-$(k,\ell)$-bounded linear forest decomposition of a graph $G$ is a partition of
-$E(G)$ into the edge sets of two linear forests $F_k,F_\ell$ where $F_k$ is
-$k$-bounded and $F_\ell$ is $\ell$-bounded. We show that the problem of
-deciding whether a given graph has such a decomposition is NP-complete if both
-$k$ and $\ell$ are at least $2$, NP-complete if $k\geq 9$ and $\ell =1$, and is
-in P for $(k,\ell)=(2,1)$. Before this, the only known NP-complete cases were
-the $(2,2)$ and $(3,3)$ cases. Our hardness result answers a question of
-Bermond et al. from 1984. We also show that planar graphs of girth at least
-nine decompose into a linear forest and a matching, which in particular is
-stronger than $3$-edge-colouring such graphs.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Campbell_R/0/1/0/all/0/1">Rutger Campbell</a>, <a href="http://arxiv.org/find/math/1/au:+Horsch_F/0/1/0/all/0/1">Florian H&#xf6;rsch</a>, <a href="http://arxiv.org/find/math/1/au:+Moore_B/0/1/0/all/0/1">Benjamin Moore</a></p><p>For some $k \in \mathbb{Z}_{\geq 0}\cup \infty$, we call a linear forest
-$k$-bounded if each of its components has at most $k$ edges. We will say a
-$(k,\ell)$-bounded linear forest decomposition of a graph $G$ is a partition of
-$E(G)$ into the edge sets of two linear forests $F_k,F_\ell$ where $F_k$ is
-$k$-bounded and $F_\ell$ is $\ell$-bounded. We show that the problem of
-deciding whether a given graph has such a decomposition is NP-complete if both
-$k$ and $\ell$ are at least $2$, NP-complete if $k\geq 9$ and $\ell =1$, and is
-in P for $(k,\ell)=(2,1)$. Before this, the only known NP-complete cases were
-the $(2,2)$ and $(3,3)$ cases. Our hardness result answers a question of
-Bermond et al. from 1984. We also show that planar graphs of girth at least
-nine decompose into a linear forest and a matching, which in particular is
-stronger than $3$-edge-colouring such graphs.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-01-30T01:30:00Z">Monday, January 30 2023, 01:30</time>
         </div>
       </div>
     </details>
