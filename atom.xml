@@ -263,7 +263,7 @@ Email: andris.ambainis@lu.lv&lt;/p&gt;
 
 
 
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Special case of eigenvalues.&lt;/strong&gt; If \(b=0\) (no linear term), then the solution of Problem \((1)\) is the eigenvector associated with the largest eigenvalue of \(A\) in magnitude, while the solution of  Problem \((2)\) is the eigenvector associated with the smallest eigenvalue of \(A\). This has a large number of applications, and is the topic of tons of &lt;a href=&quot;https://www.google.com/search?q=spectral+relaxation&quot;&gt;&amp;#8220;spectral relaxation&amp;#8221; works&lt;/a&gt;, and this is not the focus of this post.&lt;/p&gt;
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Special case of eigenvalues.&lt;/strong&gt; If \(b=0\) (no linear term), then the solution of Problem \((2)\) is the eigenvector associated with the smallest eigenvalue of \(A\), while the solution of Problem \((1)\) is the same eigenvector if the smallest eigenvalue of \(A\) is negative, and zero otherwise. This has a large number of applications, is the topic of tons of &lt;a href=&quot;https://www.google.com/search?q=spectral+relaxation&quot;&gt;&amp;#8220;spectral relaxation&amp;#8221; works&lt;/a&gt;, and will not be the focus of this post.&lt;/p&gt;
 
 
 
@@ -353,7 +353,7 @@ Email: andris.ambainis@lu.lv&lt;/p&gt;
 
 
 
-&lt;p class=&quot;justify-text&quot;&gt;Assuming that \(\lambda_1 \geqslant \lambda_2 \geqslant \cdots \geqslant \lambda_n\), we have the constraint \(\lambda_n + \mu \geqslant 0\). We first need to check if \(\mu = \, &amp;#8211; \lambda_n\) is the solution, which occurs when \(b^\top ( A+ \mu I)^{-2} b \leqslant 1\) (the problem is then called &amp;#8220;degenerate&amp;#8221;, and this can only happen if \(b\) in the eigensubspace of \(A\) associated with eigenvalue \(&amp;#8211; \lambda_n\), which is rather uncommon). Otherwise, the minimum is attained at \(\mu &gt; -\lambda_n\) (note that since we have assumed \(b \neq 0\), the problem is strictly concave and thus has a unique maximizer in \(\mu\)). Moreover, \(\mu\) is characterized by the equation $$ \tag{5}   b^\top ( A+ \mu I)^{-2} b = 1,$$ which can be obtained directly from the optimality conditions.&lt;/p&gt;
+&lt;p class=&quot;justify-text&quot;&gt;Assuming that \(\lambda_1 \geqslant \lambda_2 \geqslant \cdots \geqslant \lambda_n\), we have the constraint \(\lambda_n + \mu \geqslant 0\). We first need to check if \(\mu = \, &amp;#8211; \lambda_n\) is the solution, which occurs when \(b^\top ( A+ \mu I)^{-2} b \leqslant 1\) (the problem is then called &amp;#8220;degenerate&amp;#8221;, and this can only happen if \(b\) in the eigensubspace of \(A\) associated with eigenvalue \(&amp;#8211; \lambda_n\), which is rather uncommon). Otherwise, the minimum is attained at \(\mu &amp;gt; -\lambda_n\) (note that since we have assumed \(b \neq 0\), the problem is strictly concave and thus has a unique maximizer in \(\mu\)). Moreover, \(\mu\) is characterized by the equation $$ \tag{5}   b^\top ( A+ \mu I)^{-2} b = 1,$$ which can be obtained directly from the optimality conditions.&lt;/p&gt;
 
 
 
@@ -385,7 +385,7 @@ Email: andris.ambainis@lu.lv&lt;/p&gt;
 
 
 
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Having fun with adding affine constraints. &lt;/strong&gt;Recently I had to look at Problem \((2)\) with an extra affine constraint, which I will take for simplicity of the form \(c^\top x = 1\) (for a vector \(c \in \mathbb{R}^n\) such that \(\|c\| &gt; 1\) to avoid a trivial problem). By projecting on the subspace orthogonal to \(c \in \mathbb{R}^n\), we obtain again a quadratic minimization problem, this time on a Euclidean sphere embedded in a space of dimension \(n-1\). Therefore, we can apply the above techniques on the reduced problem. However, I did not want to do that and wanted keep the original formulation on \(\mathbb{R}^n\), and then tried to use duality to solve it. Two natural possibilities emerge here.&lt;/p&gt;
+&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Having fun with adding affine constraints. &lt;/strong&gt;Recently I had to look at Problem \((2)\) with an extra affine constraint, which I will take for simplicity of the form \(c^\top x = 1\) (for a vector \(c \in \mathbb{R}^n\) such that \(\|c\| &amp;gt; 1\) to avoid a trivial problem). By projecting on the subspace orthogonal to \(c \in \mathbb{R}^n\), we obtain again a quadratic minimization problem, this time on a Euclidean sphere embedded in a space of dimension \(n-1\). Therefore, we can apply the above techniques on the reduced problem. However, I did not want to do that and wanted keep the original formulation on \(\mathbb{R}^n\), and then tried to use duality to solve it. Two natural possibilities emerge here.&lt;/p&gt;
 
 
 
