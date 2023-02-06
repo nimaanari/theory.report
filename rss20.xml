@@ -9,6 +9,202 @@
 
 
 <item>
+  <title>A Computational Separation Between Quantum No-cloning and No-teleportation</title>
+  <guid>http://arxiv.org/abs/2302.01858</guid>
+  <link>http://arxiv.org/abs/2302.01858</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nehoran_B/0/1/0/all/0/1&quot;&gt;Barak Nehoran&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Zhandry_M/0/1/0/all/0/1&quot;&gt;Mark Zhandry&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Two of the fundamental no-go theorems of quantum information are the
+no-cloning theorem (that it is impossible to make copies of general quantum
+states) and the no-teleportation theorem (the prohibition on sending quantum
+states over classical channels without pre-shared entanglement). They are known
+to be equivalent, in the sense that a collection of quantum states is clonable
+if and only if it is teleportable. Our main result suggests that this is not
+the case when computational efficiency is considered. We give a collection of
+quantum states and oracles relative to which these states are efficiently
+clonable but not efficiently teleportable. Given that the opposite scenario is
+impossible (states that can be teleported can always trivially be cloned), this
+gives the most complete oracle separation possible between these two important
+no-go properties. In doing so, we introduce a related quantum no-go property,
+reconstructibility, which refers to the ability to construct a quantum state
+from a uniquely identifying classical description. We show the stronger result
+of a collection of quantum states that are efficiently clonable but not
+efficiently reconstructible. This novel no-go property only exists in relation
+to computational efficiency, as it is trivial for unbounded computation. It
+thus opens up the possibility of further computational no-go properties that
+have not yet been studied because they do not exist outside the computational
+context.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Complexity of Solo Chess with Unlimited Moves</title>
+  <guid>http://arxiv.org/abs/2302.01405</guid>
+  <link>http://arxiv.org/abs/2302.01405</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Brunner_J/0/1/0/all/0/1&quot;&gt;Josh Brunner&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chung_L/0/1/0/all/0/1&quot;&gt;Lily Chung&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Coulombe_M/0/1/0/all/0/1&quot;&gt;Michael Coulombe&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Demaine_E/0/1/0/all/0/1&quot;&gt;Erik D. Demaine&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gomez_T/0/1/0/all/0/1&quot;&gt;Timothy Gomez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lynch_J/0/1/0/all/0/1&quot;&gt;Jayson Lynch&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We analyze Solo Chess puzzles, where the input is an $n \times n$ board
+containing some standard Chess pieces of the same color, and the goal is to
+make a sequence of capture moves to reduce down to a single piece. Prior work
+analyzes this puzzle for a single piece type when each piece is limited to make
+at most two capture moves (as in the Solo Chess puzzles on chess.com). By
+contrast, we study when each piece can make an unlimited number of capture
+moves. We show that any single piece type can be solved in polynomial time in a
+general model of piece types, while any two standard Chess piece types are
+NP-complete. We also analyze the restriction (as on chess.com) that one piece
+type is unique and must be the last surviving piece, showing that in this case
+some pairs of piece types become tractable while others remain hard.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Optimal Heaviest Induced Ancestors</title>
+  <guid>http://arxiv.org/abs/2302.01373</guid>
+  <link>http://arxiv.org/abs/2302.01373</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Charalampopoulos_P/0/1/0/all/0/1&quot;&gt;Panagiotis Charalampopoulos&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dudek_B/0/1/0/all/0/1&quot;&gt;Bart&amp;#x142;omiej Dudek&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gawrychowski_P/0/1/0/all/0/1&quot;&gt;Pawe&amp;#x142; Gawrychowski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pokorski_K/0/1/0/all/0/1&quot;&gt;Karol Pokorski&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We revisit the Heaviest Induced Ancestors (HIA) problem that was introduced
+by Gagie, Gawrychowski, and Nekrich [CCCG 2013] and has a number of
+applications in string algorithms. Let $T_1$ and $T_2$ be two rooted trees
+whose nodes have weights that are increasing in all root-to-leaf paths, and
+labels on the leaves, such that no two leaves of a tree have the same label. A
+pair of nodes $(u, v)\in T_1 \times T_2$ is \emph{induced} if and only if there
+is a label shared by leaf-descendants of $u$ and $v$. In an HIA query, given
+nodes $x \in T_1$ and $y \in T_2$, the goal is to find an induced pair of nodes
+$(u, v)$ of the maximum total weight such that $u$ is an ancestor of~$x$ and
+$v$ is an ancestor of $y$.
+&lt;/p&gt;
+&lt;p&gt;Let $n$ be the upper bound on the sizes of the two trees. It is known that no
+data structure of size $\tilde{\mathcal{O}}(n)$ can answer HIA queries in
+$o(\log n / \log \log n)$ time [Charalampopoulos, Gawrychowski, Pokorski; ICALP
+2020]. This (unconditional) lower bound is a $\operatorname{polyloglog} n$
+factor away from the query time of the fastest $\tilde{\mathcal{O}}(n)$-size
+data structure known to date for the HIA problem [Abedin, Hooshmand, Ganguly,
+Thankachan; Algorithmica 2022]. In this work, we resolve the query-time
+complexity of the HIA problem for the near-linear space regime by presenting a
+data structure that can be built in $\tilde{\mathcal{O}}(n)$ time and answers
+HIA queries in $\mathcal{O}(\log n/\log\log n)$ time. As a direct corollary, we
+obtain an $\tilde{\mathcal{O}}(n)$-size data structure that maintains the LCS
+of a static string and a dynamic string, both of length at most $n$, in time
+optimal for this space regime.
+&lt;/p&gt;
+&lt;p&gt;The main ingredients of our approach are fractional cascading and the
+utilization of an $\mathcal{O}(\log n/ \log\log n)$-depth tree decomposition.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Group Fairness in Non-monotone Submodular Maximization</title>
+  <guid>http://arxiv.org/abs/2302.01546</guid>
+  <link>http://arxiv.org/abs/2302.01546</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yuan_J/0/1/0/all/0/1&quot;&gt;Jing Yuan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tang_S/0/1/0/all/0/1&quot;&gt;Shaojie Tang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Maximizing a submodular function has a wide range of applications in machine
+learning and data mining. One such application is data summarization whose goal
+is to select a small set of representative and diverse data items from a large
+dataset. However, data items might have sensitive attributes such as race or
+gender, in this setting, it is important to design \emph{fairness-aware}
+algorithms to mitigate potential algorithmic bias that may cause over- or
+under- representation of particular groups. Motivated by that, we propose and
+study the classic non-monotone submodular maximization problem subject to novel
+group fairness constraints. Our goal is to select a set of items that maximizes
+a non-monotone submodular function, while ensuring that the number of selected
+items from each group is proportionate to its size, to the extent specified by
+the decision maker. We develop the first constant-factor approximation
+algorithms for this problem. We also extend the basic model to incorporate an
+additional global size constraint on the total number of selected items.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Chaining of Maximal Exact Matches in Graphs</title>
+  <guid>http://arxiv.org/abs/2302.01748</guid>
+  <link>http://arxiv.org/abs/2302.01748</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rizzo_N/0/1/0/all/0/1&quot;&gt;Nicola Rizzo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Caceres_M/0/1/0/all/0/1&quot;&gt;Manuel C&amp;#xe1;ceres&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Makinen_V/0/1/0/all/0/1&quot;&gt;Veli M&amp;#xe4;kinen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of finding maximal exact matches (MEMs) between a query
+string $Q$ and a labeled directed acyclic graph (DAG) $G=(V,E,\ell)$ and
+subsequently co-linearly chaining these matches. We show that it suffices to
+compute MEMs between node labels and $Q$ (node MEMs) to encode full MEMs. Node
+MEMs can be computed in linear time and we show how to co-linearly chain them
+to solve the Longest Common Subsequence (LCS) problem between $Q$ and $G$. Our
+chaining algorithm is the first to consider a symmetric formulation of the
+chaining problem in graphs and runs in $O(k^2|V| + |E| + kN\log N)$ time, where
+$k$ is the width (minimum number of paths covering the nodes) of $G$, and $N$
+is the number of node MEMs. We then consider the problem of finding MEMs when
+the input graph is an indexable elastic founder graph (subclass of labeled DAGs
+studied by Equi et al., Algorithmica 2022). For arbitrary input graphs, the
+problem cannot be solved in truly sub-quadratic time under SETH (Equi et al.,
+ICALP 2019). We show that we can report all MEMs between $Q$ and an indexable
+elastic founder graph in time $O(nH^2 + m + M_\kappa)$, where $n$ is the total
+length of node labels, $H$ is the maximum number of nodes in a block of the
+graph, $m = |Q|$, and $M_\kappa$ is the number of MEMs of length at least
+$\kappa$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Online Ad Allocation with Predictions</title>
+  <guid>http://arxiv.org/abs/2302.01827</guid>
+  <link>http://arxiv.org/abs/2302.01827</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Spaeh_F/0/1/0/all/0/1&quot;&gt;Fabian Spaeh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ene_A/0/1/0/all/0/1&quot;&gt;Alina Ene&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Display Ads and the generalized assignment problem are two well-studied
+online packing problems with important applications in ad allocation and other
+areas. In both problems, ad impressions arrive online and have to be allocated
+immediately to budget-constrained advertisers. Worst-case algorithms that
+achieve the ideal competitive ratio are known, but might act overly
+conservative given the predictable and usually tame nature of real-world input.
+Given this discrepancy, we develop an algorithm for both problems that
+incorporate machine-learned predictions and can thus improve the performance
+beyond the worst-case. Our algorithm is based on the work of Feldman et al.
+(2009) and similar in nature to Mahdian et al. (2007) who were the first to
+develop a learning-augmented algorithm for the related, but more structured Ad
+Words problem. We use a novel analysis to show that our algorithm is able to
+capitalize on a good prediction, while being robust against poor predictions.
+We experimentally evaluate our algorithm on synthetic and real-world data on a
+wide range of predictions. Our algorithm is consistently outperforming the
+worst-case algorithm without predictions.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Qubit-Efficient Randomized Quantum Algorithms for Linear Algebra</title>
+  <guid>http://arxiv.org/abs/2302.01873</guid>
+  <link>http://arxiv.org/abs/2302.01873</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Wang_S/0/1/0/all/0/1&quot;&gt;Samson Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+McArdle_S/0/1/0/all/0/1&quot;&gt;Sam McArdle&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Berta_M/0/1/0/all/0/1&quot;&gt;Mario Berta&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose a class of randomized quantum algorithms for the task of sampling
+from matrix functions, without the use of quantum block encodings or any other
+coherent oracle access to the matrix elements. As such, our use of qubits is
+purely algorithmic, and no additional qubits are required for quantum data
+structures. For $N\times N$ Hermitian matrices, the space cost is $\log(N)+1$
+qubits and depending on the structure of the matrices, the gate complexity can
+be comparable to state-of-the-art methods that use quantum data structures of
+up to size $O(N^2)$, when considering equivalent end-to-end problems. Within
+our framework, we present a quantum linear system solver that allows one to
+sample properties of the solution vector, as well as an algorithm for sampling
+properties of ground states of Hamiltonians. As a concrete application, we
+combine these two sub-routines to present a scheme for calculating Green&#39;s
+functions of quantum many-body systems.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-06 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Nathan Never strikes back</title>
   <guid>http://emanueleviola.wordpress.com/?p=1163</guid>
   <link>https://emanueleviola.wordpress.com/2023/02/05/nathan-never-strikes-back/</link>
@@ -1570,198 +1766,6 @@ corresponds to the quantifier rank of a sentence distinguishing them in the $(k
 quantifiers. Hence, our results also imply new upper and lower bounds on the
 quantifier rank required in the logic $C_{k+1}$, as well as tradeoffs between
 variable number and quantifier rank.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-01 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>A Framework for Adapting Offline Algorithms to Solve Combinatorial Multi-Armed Bandit Problems with Bandit Feedback</title>
-  <guid>http://arxiv.org/abs/2301.13326</guid>
-  <link>http://arxiv.org/abs/2301.13326</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nie_G/0/1/0/all/0/1&quot;&gt;Guanyu Nie&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nadew_Y/0/1/0/all/0/1&quot;&gt;Yididiya Y Nadew&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhu_Y/0/1/0/all/0/1&quot;&gt;Yanhui Zhu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Aggarwal_V/0/1/0/all/0/1&quot;&gt;Vaneet Aggarwal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Quinn_C/0/1/0/all/0/1&quot;&gt;Christopher John Quinn&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate the problem of stochastic, combinatorial multi-armed bandits
-where the learner only has access to bandit feedback and the reward function
-can be non-linear. We provide a general framework for adapting discrete offline
-approximation algorithms into sublinear $\alpha$-regret methods that only
-require bandit feedback, achieving
-$\mathcal{O}\left(T^\frac{2}{3}\log(T)^\frac{1}{3}\right)$ expected cumulative
-$\alpha$-regret dependence on the horizon $T$. The framework only requires the
-offline algorithms to be robust to small errors in function evaluation. The
-adaptation procedure does not even require explicit knowledge of the offline
-approximation algorithm -- the offline algorithm can be used as black box
-subroutine.
-&lt;/p&gt;
-&lt;p&gt;To demonstrate the utility of the proposed framework, the proposed framework
-is applied to multiple problems in submodular maximization, adapting
-approximation algorithms for cardinality and for knapsack constraints. The new
-CMAB algorithms for knapsack constraints outperform a full-bandit method
-developed for the adversarial setting in experiments with real-world data.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-01 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>A Bias-Variance-Privacy Trilemma for Statistical Estimation</title>
-  <guid>http://arxiv.org/abs/2301.13334</guid>
-  <link>http://arxiv.org/abs/2301.13334</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Kamath_G/0/1/0/all/0/1&quot;&gt;Gautam Kamath&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mouzakis_A/0/1/0/all/0/1&quot;&gt;Argyris Mouzakis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Regehr_M/0/1/0/all/0/1&quot;&gt;Matthew Regehr&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Singhal_V/0/1/0/all/0/1&quot;&gt;Vikrant Singhal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Steinke_T/0/1/0/all/0/1&quot;&gt;Thomas Steinke&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Ullman_J/0/1/0/all/0/1&quot;&gt;Jonathan Ullman&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The canonical algorithm for differentially private mean estimation is to
-first clip the samples to a bounded range and then add noise to their empirical
-mean. Clipping controls the sensitivity and, hence, the variance of the noise
-that we add for privacy. But clipping also introduces statistical bias. We
-prove that this tradeoff is inherent: no algorithm can simultaneously have low
-bias, low variance, and low privacy loss for arbitrary distributions.
-&lt;/p&gt;
-&lt;p&gt;On the positive side, we show that unbiased mean estimation is possible under
-approximate differential privacy if we assume that the distribution is
-symmetric. Furthermore, we show that, even if we assume that the data is
-sampled from a Gaussian, unbiased mean estimation is impossible under pure or
-concentrated differential privacy.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-01 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Weitzman&#39;s Rule for Pandora&#39;s Box with Correlations</title>
-  <guid>http://arxiv.org/abs/2301.13534</guid>
-  <link>http://arxiv.org/abs/2301.13534</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gergatsouli_E/0/1/0/all/0/1&quot;&gt;Evangelia Gergatsouli&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tzamos_C/0/1/0/all/0/1&quot;&gt;Christos Tzamos&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Pandora&#39;s Box is a central problem in decision making under uncertainty that
-can model various real life scenarios. In this problem we are given $n$ boxes,
-each with a fixed opening cost, and an unknown value drawn from a known
-distribution, only revealed if we pay the opening cost. Our goal is to find a
-strategy for opening boxes to minimize the sum of the value selected and the
-opening cost paid.
-&lt;/p&gt;
-&lt;p&gt;In this work we revisit Pandora&#39;s Box when the value distributions are
-correlated, first studied in Chawla et al. (&lt;a href=&quot;/abs/1911.01632&quot;&gt;arXiv:1911.01632&lt;/a&gt;). We show that the
-optimal algorithm for the independent case, given by Weitzman&#39;s rule, directly
-works for the correlated case. In fact, our algorithm results in significantly
-improved approximation guarantees compared to the previous work, while also
-being substantially simpler. We finally show how to implement the rule given
-only sample access to the correlated distribution of values. Specifically, we
-find that a number of samples that is polynomial in the number of boxes is
-sufficient for the algorithm to work.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-01 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>p-median location interdiction on trees</title>
-  <guid>http://arxiv.org/abs/2301.13723</guid>
-  <link>http://arxiv.org/abs/2301.13723</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Leiss_L/0/1/0/all/0/1&quot;&gt;Lena Lei&amp;#xdf;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Heller_T/0/1/0/all/0/1&quot;&gt;Till Heller&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schafer_L/0/1/0/all/0/1&quot;&gt;Luca E. Sch&amp;#xe4;fer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Streicher_M/0/1/0/all/0/1&quot;&gt;Manuel Streicher&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ruzika_S/0/1/0/all/0/1&quot;&gt;Stefan Ruzika&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In p-median location interdiction the aim is to find a subset of edges in a
-graph, such that the objective value of the p-median problem in the same graph
-without the selected edges is as large as possible.
-&lt;/p&gt;
-&lt;p&gt;We prove that this problem is NP-hard even on acyclic graphs. Restricting the
-problem to trees with unit lengths on the edges, unit interdiction costs, and a
-single edge interdiction, we provide an algorithm which solves the problem in
-polynomial time. Furthermore, we investigate path graphs with unit and
-arbitrary lengths. For the former case, we present an algorithm, where multiple
-edges can get interdicted. Furthermore, for the latter case, we present a
-method to compute an optimal solution for one interdiction step which can also
-be extended to multiple interdicted edges.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-01 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Flipper games for monadically stable graph classes</title>
-  <guid>http://arxiv.org/abs/2301.13735</guid>
-  <link>http://arxiv.org/abs/2301.13735</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gajarsky_J/0/1/0/all/0/1&quot;&gt;Jakub Gajarsk&amp;#xfd;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mahlmann_N/0/1/0/all/0/1&quot;&gt;Nikolas M&amp;#xe4;hlmann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+McCarty_R/0/1/0/all/0/1&quot;&gt;Rose McCarty&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ohlmann_P/0/1/0/all/0/1&quot;&gt;Pierre Ohlmann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pilipczuk_M/0/1/0/all/0/1&quot;&gt;Micha&amp;#x142; Pilipczuk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Przybyszewski_W/0/1/0/all/0/1&quot;&gt;Wojciech Przybyszewski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Siebertz_S/0/1/0/all/0/1&quot;&gt;Sebastian Siebertz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sokolowski_M/0/1/0/all/0/1&quot;&gt;Marek Soko&amp;#x142;owski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Torunczyk_S/0/1/0/all/0/1&quot;&gt;Szymon Toru&amp;#x144;czyk&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A class of graphs $\mathscr{C}$ is monadically stable if for any unary
-expansion $\widehat{\mathscr{C}}$ of $\mathscr{C}$, one cannot interpret, in
-first-order logic, arbitrarily long linear orders in graphs from
-$\widehat{\mathscr{C}}$. It is known that nowhere dense graph classes are
-monadically stable; these encompass most of the studied concepts of sparsity in
-graphs, including graph classes that exclude a fixed topological minor. On the
-other hand, monadic stability is a property expressed in purely model-theoretic
-terms and hence it is also suited for capturing structure in dense graphs.
-&lt;/p&gt;
-&lt;p&gt;For several years, it has been suspected that one can create a structure
-theory for monadically stable graph classes that mirrors the theory of nowhere
-dense graph classes in the dense setting. In this work we provide a step in
-this direction by giving a characterization of monadic stability through the
-Flipper game: a game on a graph played by Flipper, who in each round can
-complement the edge relation between any pair of vertex subsets, and Connector,
-who in each round localizes the game to a ball of bounded radius. This is an
-analog of the Splitter game, which characterizes nowhere dense classes of
-graphs (Grohe, Kreutzer, and Siebertz, J.ACM&#39;17).
-&lt;/p&gt;
-&lt;p&gt;We give two different proofs of our main result. The first proof uses tools
-from model theory, and it exposes an additional property of monadically stable
-graph classes that is close in spirit to definability of types. Also, as a
-byproduct, we give an alternative proof of the recent result of Braunfeld and
-Laskowski (arXiv &lt;a href=&quot;/abs/2209.05120&quot;&gt;2209.05120&lt;/a&gt;) that monadic stability for graph classes coincides
-with existential monadic stability. The second proof relies on the recently
-introduced notion of flip-wideness (Dreier, M\&quot;ahlmann, Siebertz, and
-Toru\&#39;nczyk, arXiv &lt;a href=&quot;/abs/2206.13765&quot;&gt;2206.13765&lt;/a&gt;) and provides an efficient algorithm to compute
-Flipper&#39;s moves in a winning strategy.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-01 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Multicalibration as Boosting for Regression</title>
-  <guid>http://arxiv.org/abs/2301.13767</guid>
-  <link>http://arxiv.org/abs/2301.13767</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Globus_Harris_I/0/1/0/all/0/1&quot;&gt;Ira Globus-Harris&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Harrison_D/0/1/0/all/0/1&quot;&gt;Declan Harrison&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kearns_M/0/1/0/all/0/1&quot;&gt;Michael Kearns&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Roth_A/0/1/0/all/0/1&quot;&gt;Aaron Roth&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sorrell_J/0/1/0/all/0/1&quot;&gt;Jessica Sorrell&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the connection between multicalibration and boosting for squared
-error regression. First we prove a useful characterization of multicalibration
-in terms of a ``swap regret&#39;&#39; like condition on squared error. Using this
-characterization, we give an exceedingly simple algorithm that can be analyzed
-both as a boosting algorithm for regression and as a multicalibration algorithm
-for a class H that makes use only of a standard squared error regression oracle
-for H. We give a weak learning assumption on H that ensures convergence to
-Bayes optimality without the need to make any realizability assumptions --
-giving us an agnostic boosting algorithm for regression. We then show that our
-weak learning assumption on H is both necessary and sufficient for
-multicalibration with respect to H to imply Bayes optimality. We also show that
-if H satisfies our weak learning condition relative to another class C then
-multicalibration with respect to H implies multicalibration with respect to C.
-Finally we investigate the empirical performance of our algorithm
-experimentally using an open source implementation that we make available. Our
-code repository can be found at
-https://github.com/Declancharrison/Level-Set-Boosting.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-01 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Bounds for c-Ideal Hashing</title>
-  <guid>http://arxiv.org/abs/2301.13832</guid>
-  <link>http://arxiv.org/abs/2301.13832</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Frei_F/0/1/0/all/0/1&quot;&gt;Fabian Frei&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wehner_D/0/1/0/all/0/1&quot;&gt;David Wehner&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we analyze hashing from a worst-case perspective. To this end,
-we study a new property of hash families that is strongly related to d-perfect
-hashing, namely c-ideality. On the one hand, this notion generalizes the
-definition of perfect hashing, which has been studied extensively; on the other
-hand, it provides a direct link to the notion of c-approximativity. We focus on
-the usually neglected case where the average load \alpha is at least 1 and
-prove upper and lower parametrized bounds on the minimal size of c-ideal hash
-families.
-&lt;/p&gt;
-&lt;p&gt;As an aside, we show how c-ideality helps to analyze the advice complexity of
-hashing. The concept of advice, introduced a decade ago, lets us measure the
-information content of an online problem. We prove hashing&#39;s advice complexity
-to be linear in the hash table size.
 &lt;/p&gt;
   </description>
   <pubDate>2023-02-01 01:30:00 UTC</pubDate>
