@@ -25,6 +25,195 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Reducing Nearest Neighbor Training Sets Optimally and Exactly</title>
+    <link href="http://arxiv.org/abs/2302.02132"/>
+    <id>http://arxiv.org/abs/2302.02132</id>
+    <updated>2023-02-07T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rohrer_J/0/1/0/all/0/1&quot;&gt;Josiah Rohrer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Weber_S/0/1/0/all/0/1&quot;&gt;Simon Weber&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In nearest-neighbor classification, a training set $P$ of points in
+$\mathbb{R}^d$ with given classification is used to classify every point in
+$\mathbb{R}^d$: Every point gets the same classification as its nearest
+neighbor in $P$. Recently, Eppstein [SOSA&#39;22] developed an algorithm to detect
+the relevant training points, those points $p\in P$, such that $P$ and
+$P\setminus\{p\}$ induce different classifications. We investigate the problem
+of finding the minimum cardinality reduced training set $P&#39;\subseteq P$ such
+that $P$ and $P&#39;$ induce the same classification. We show that the set of
+relevant points is such a minimum cardinality reduced training set if $P$ is in
+general position. Furthermore, we show that finding a minimum cardinality
+reduced training set for possibly degenerate $P$ is in P for $d=1$, and
+NP-complete for $d\geq 2$.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Robust Budget Pacing with a Single Sample</title>
+    <link href="http://arxiv.org/abs/2302.02006"/>
+    <id>http://arxiv.org/abs/2302.02006</id>
+    <updated>2023-02-07T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Balseiro_S/0/1/0/all/0/1&quot;&gt;Santiago Balseiro&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kumar_R/0/1/0/all/0/1&quot;&gt;Rachitesh Kumar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mirrokni_V/0/1/0/all/0/1&quot;&gt;Vahab Mirrokni&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sivan_B/0/1/0/all/0/1&quot;&gt;Balasubramanian Sivan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_D/0/1/0/all/0/1&quot;&gt;Di Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Major Internet advertising platforms offer budget pacing tools as a standard
+service for advertisers to manage their ad campaigns. Given the inherent
+non-stationarity in an advertiser&#39;s value and also competing advertisers&#39;
+values over time, a commonly used approach is to learn a target expenditure
+plan that specifies a target spend as a function of time, and then run a
+controller that tracks this plan. This raises the question: how many historical
+samples are required to learn a good expenditure plan? We study this question
+by considering an advertiser repeatedly participating in $T$ second-price
+auctions, where the tuple of her value and the highest competing bid is drawn
+from an unknown time-varying distribution. The advertiser seeks to maximize her
+total utility subject to her budget constraint. Prior work has shown the
+sufficiency of $T\log T$ samples per distribution to achieve the optimal
+$O(\sqrt{T})$-regret. We dramatically improve this state-of-the-art and show
+that just one sample per distribution is enough to achieve the near-optimal
+$\tilde O(\sqrt{T})$-regret, while still being robust to noise in the sampling
+distributions.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Sketch-Flip-Merge: Mergeable Sketches for Private Distinct Counting</title>
+    <link href="http://arxiv.org/abs/2302.02056"/>
+    <id>http://arxiv.org/abs/2302.02056</id>
+    <updated>2023-02-07T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hehir_J/0/1/0/all/0/1&quot;&gt;Jonathan Hehir&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ting_D/0/1/0/all/0/1&quot;&gt;Daniel Ting&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cormode_G/0/1/0/all/0/1&quot;&gt;Graham Cormode&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Data sketching is a critical tool for distinct counting, enabling multisets
+to be represented by compact summaries that admit fast cardinality estimates.
+Because sketches may be merged to summarize multiset unions, they are a basic
+building block in data warehouses. Although many practical sketches for
+cardinality estimation exist, none provide privacy when merging. We propose the
+first practical cardinality sketches that are simultaneously mergeable,
+differentially private (DP), and have low empirical errors. These introduce a
+novel randomized algorithm for performing logical operations on noisy bits, a
+tight privacy analysis, and provably optimal estimation. Our sketches
+dramatically outperform existing theoretical solutions in simulations and on
+real-world data.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: An Effective and Differentially Private Protocol for Secure Distributed Cardinality Estimation</title>
+    <link href="http://arxiv.org/abs/2302.02158"/>
+    <id>http://arxiv.org/abs/2302.02158</id>
+    <updated>2023-02-07T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_P/0/1/0/all/0/1&quot;&gt;Pinghui Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yang_C/0/1/0/all/0/1&quot;&gt;Chengjin Yang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xie_D/0/1/0/all/0/1&quot;&gt;Dongdong Xie&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhao_J/0/1/0/all/0/1&quot;&gt;Junzhou Zhao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_H/0/1/0/all/0/1&quot;&gt;Hui Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tao_J/0/1/0/all/0/1&quot;&gt;Jing Tao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Guan_X/0/1/0/all/0/1&quot;&gt;Xiaohong Guan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Counting the number of distinct elements distributed over multiple data
+holders is a fundamental problem with many real-world applications ranging from
+crowd counting to network monitoring. Although a number of space and
+computational efficient sketch methods (e.g., the Flajolet-Martin sketch and
+the HyperLogLog sketch) for cardinality estimation have been proposed to solve
+the above problem, these sketch methods are insecure when considering privacy
+concerns related to the use of each data holder&#39;s personal dataset. Despite a
+recently proposed protocol that successfully implements the well-known
+Flajolet-Martin (FM) sketch on a secret-sharing based multiparty computation
+(MPC) framework for solving the problem of private distributed cardinality
+estimation (PDCE), we observe that this MPC-FM protocol is not differentially
+private. In addition, the MPC-FM protocol is computationally expensive, which
+limits its applications to data holders with limited computation resources. To
+address the above issues, in this paper we propose a novel protocol DP-DICE,
+which is computationally efficient and differentially private for solving the
+problem of PDCE. Experimental results show that our DP-DICE achieves orders of
+magnitude speedup and reduces the estimation error by several times in
+comparison with state-of-the-arts under the same security requirements.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Linear-time 2-strong connectivity orientations of mixed graphs and related problems</title>
+    <link href="http://arxiv.org/abs/2302.02215"/>
+    <id>http://arxiv.org/abs/2302.02215</id>
+    <updated>2023-02-07T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Georgiadis_L/0/1/0/all/0/1&quot;&gt;Loukas Georgiadis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kefallinos_D/0/1/0/all/0/1&quot;&gt;Dionysios Kefallinos&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kosinas_E/0/1/0/all/0/1&quot;&gt;Evangelos Kosinas&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A mixed graph $G$ is a graph that consists of both undirected and directed
+edges. An orientation of $G$ is formed by orienting all the undirected edges of
+$G$, i.e., converting each undirected edge $\{u,v\}$ into a directed edge that
+is either $(u,v)$ or $(v,u)$. The problem of finding an orientation of a mixed
+graph that makes it strongly connected is well understood and can be solved in
+linear time. Here we introduce the following orientation problem in mixed
+graphs. Given a mixed graph $G$, we wish to compute its maximal sets of
+vertices $C_1,C_2,\ldots,C_k$ with the property that by removing any edge $e$
+from $G$ (directed or undirected), there is an orientation $R_i$ of
+$G\setminus{e}$ such that all vertices in $C_i$ are strongly connected in
+$R_i$. We discuss properties of those sets, and we show how to solve this
+problem in linear time by reducing it to the computation of the $2$-edge
+twinless strongly connected components of a directed graph. A directed graph
+$G=(V,E)$ is twinless strongly connected if it contains a strongly connected
+spanning subgraph without any pair of antiparallel (or twin) edges. The
+twinless strongly connected components (TSCCs) of a directed graph $G$ are its
+maximal twinless strongly connected subgraphs. A $2$-edge twinless strongly
+connected component (2eTSCC) of $G$ is a maximal subset of vertices $C$ such
+that any two vertices $u, v \in C$ are in the same twinless strongly connected
+component of $G \setminus e$, for any edge $e$. These concepts have several
+diverse applications, such as the design of road and telecommunication
+networks, and the structural stability of buildings.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Maximal $k$-Edge-Connected Subgraphs in Weighted Graphs via Local Random Contraction</title>
+    <link href="http://arxiv.org/abs/2302.02290"/>
+    <id>http://arxiv.org/abs/2302.02290</id>
+    <updated>2023-02-07T01:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nalam_C/0/1/0/all/0/1&quot;&gt;Chaitanya Nalam&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saranurak_T/0/1/0/all/0/1&quot;&gt;Thatchaphol Saranurak&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The \emph{maximal $k$-edge-connected subgraphs} problem is a classical graph
+clustering problem studied since the 70&#39;s. Surprisingly, no non-trivial
+technique for this problem in weighted graphs is known: a very straightforward
+recursive-mincut algorithm with $\Omega(mn)$ time has remained the fastest
+algorithm until now. All previous progress gives a speed-up only when the graph
+is unweighted, and $k$ is small enough (e.g.~Henzinger~et~al.~(ICALP&#39;15),
+Chechik~et~al.~(SODA&#39;17), and Forster~et~al.~(SODA&#39;20)).
+&lt;/p&gt;
+&lt;p&gt;We give the first algorithm that breaks through the long-standing
+$\tilde{O}(mn)$-time barrier in \emph{weighted undirected} graphs. More
+specifically, we show a maximal $k$-edge-connected subgraphs algorithm that
+takes only $\tilde{O}(m\cdot\min\{m^{3/4},n^{4/5}\})$ time. As an immediate
+application, we can $(1+\epsilon)$-approximate the \emph{strength} of all edges
+in undirected graphs in the same running time.
+&lt;/p&gt;
+&lt;p&gt;Our key technique is the first local cut algorithm with \emph{exact}
+cut-value guarantees whose running time depends only on the output size. All
+previous local cut algorithms either have running time depending on the cut
+value of the output, which can be arbitrarily slow in weighted graphs or have
+approximate cut guarantees.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Richard Lipton: Back From A Vacation</title>
     <link href="https://rjlipton.wpcomstaging.com/2023/02/06/back-from-a-vacation/"/>
     <id>https://rjlipton.wpcomstaging.com/?p=20989</id>
@@ -1721,219 +1910,6 @@ study this problem for the classes of split, quasi-threshold, threshold, and
 $P_4$-sparse graphs and we present linear-time algorithms by exploiting the
 structure of split graphs and the tree representation of quasi-threshold,
 threshold, and $P_4$-sparse graphs.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Near-perfect Reachability of Variational Quantum Search with Depth-1 Ansatz</title>
-    <link href="http://arxiv.org/abs/2301.13224"/>
-    <id>http://arxiv.org/abs/2301.13224</id>
-    <updated>2023-02-01T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Zhan_J/0/1/0/all/0/1&quot;&gt;Junpeng Zhan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Grover&#39;s search algorithm is renowned for its dramatic speedup in solving
-many important scientific problems. The recently proposed Variational Quantum
-Search (VQS) algorithm has shown an exponential advantage over Grover&#39;s
-algorithm for up to 26 qubits. However, its advantage for larger numbers of
-qubits has not yet been proven. Here we show that the exponentially deep
-circuit required by Grover&#39;s algorithm can be replaced by a multi-controlled
-NOT gate together with either a single layer of Ry gates or two layers of
-circuits consisting of Hadamard and NOT gates, which is valid for any number of
-qubits greater than five. We prove that the VQS, with a single layer of Ry
-gates as its Ansatz, has near-perfect reachability in finding the good element
-of an arbitrarily large unstructured data set, and its reachability
-exponentially improves with the number of qubits, where the reachability is
-defined to quantify the ability of a given Ansatz to generate an optimal
-quantum state. Numerical studies further validate the excellent reachability of
-the VQS. Proving the near-perfect reachability of the VQS, with a depth-1
-Ansatz, for any number of qubits completes an essential step in proving its
-exponential advantage over Grover&#39;s algorithm for any number of qubits, and the
-latter proving is significant as it means that the VQS can efficiently solve
-NP-complete problems.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: A Finer Analysis of Multi-Structural Games and Beyond</title>
-    <link href="http://arxiv.org/abs/2301.13329"/>
-    <id>http://arxiv.org/abs/2301.13329</id>
-    <updated>2023-02-01T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Carmosino_M/0/1/0/all/0/1&quot;&gt;Marco Carmosino&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fagin_R/0/1/0/all/0/1&quot;&gt;Ronald Fagin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Immerman_N/0/1/0/all/0/1&quot;&gt;Neil Immerman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kolaitis_P/0/1/0/all/0/1&quot;&gt;Phokion Kolaitis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lenchner_J/0/1/0/all/0/1&quot;&gt;Jonathan Lenchner&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sengupta_R/0/1/0/all/0/1&quot;&gt;Rik Sengupta&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Multi-structural (MS) games are combinatorial games that capture the number
-of quantifiers of first-order sentences. On the face of their definition, MS
-games differ from Ehrenfeucht-Fraisse (EF) games in two ways: first, MS games
-are played on two sets of structures, while EF games are played on a pair of
-structures; second, in MS games, Duplicator can make any number of copies of
-structures. In the first part of this paper, we perform a finer analysis of MS
-games and develop a closer comparison of MS games with EF games. In particular,
-we point out that the use of sets of structures is of the essence and that when
-MS games are played on pairs of structures, they capture Boolean combinations
-of first-order sentences with a fixed number of quantifiers. After this, we
-focus on another important difference between MS games and EF games, namely,
-the necessity for Spoiler to play on top of a previous move in order to win
-some MS games. Via an analysis of the types realized during MS games, we
-delineate the expressive power of the variant of MS games in which Spoiler
-never plays on top of a previous move. In the second part we focus on
-simultaneously capturing number of quantifiers and number of variables in
-first-order logic. We show that natural variants of the MS game do not achieve
-this. We then introduce a new game, the quantifier-variable tree game, and show
-that it simultaneously captures the number of quantifiers and number of
-variables.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Limits of structures and Total NP Search Problems</title>
-    <link href="http://arxiv.org/abs/2301.13603"/>
-    <id>http://arxiv.org/abs/2301.13603</id>
-    <updated>2023-02-01T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Jezil_O/0/1/0/all/0/1&quot;&gt;Ond&amp;#x159;ej Je&amp;#x17e;il&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For a class of finite graphs, we define a limit object relative to some
-computationally restricted class of functions. The properties of the limit
-object then reflect how a computationally restricted viewer &quot;sees&quot; a generic
-instance from the class. The construction uses Kraj\&#39;i\v{c}ek&#39;s forcing with
-random variables [7]. We prove sufficient conditions for universal and
-existential sentences to be valid in the limit, provide several examples, and
-prove that such a limit object can then be expanded to a model of weak
-arithmetic. We then take the limit of all finite pointed paths to obtain a
-model of arithmetic where the problem OntoWeakPigeon is total but Leaf (the
-complete problem for $\textbf{PPA}$) is not. This can be viewed as a logical
-separation of the oracle classes of total NP search problems, which in our
-setting implies standard nonreducibility of Leaf to OntoWeakPigeon.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: A Survey and Benchmark of Automatic Surface Reconstruction from Point Clouds</title>
-    <link href="http://arxiv.org/abs/2301.13656"/>
-    <id>http://arxiv.org/abs/2301.13656</id>
-    <updated>2023-02-01T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sulzer_R/0/1/0/all/0/1&quot;&gt;Raphael Sulzer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Landrieu_L/0/1/0/all/0/1&quot;&gt;Loic Landrieu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Marlet_R/0/1/0/all/0/1&quot;&gt;Renaud Marlet&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vallet_B/0/1/0/all/0/1&quot;&gt;Bruno Vallet&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We survey and benchmark traditional and novel learning-based algorithms that
-address the problem of surface reconstruction from point clouds. Surface
-reconstruction from point clouds is particularly challenging when applied to
-real-world acquisitions, due to noise, outliers, non-uniform sampling and
-missing data. Traditionally, different handcrafted priors of the input points
-or the output surface have been proposed to make the problem more tractable.
-However, hyperparameter tuning for adjusting priors to different acquisition
-defects can be a tedious task. To this end, the deep learning community has
-recently addressed the surface reconstruction problem. In contrast to
-traditional approaches, deep surface reconstruction methods can learn priors
-directly from a training set of point clouds and corresponding true surfaces.
-In our survey, we detail how different handcrafted and learned priors affect
-the robustness of methods to defect-laden input and their capability to
-generate geometric and topologically accurate reconstructions. In our
-benchmark, we evaluate the reconstructions of several traditional and
-learning-based methods on the same grounds. We show that learning-based methods
-can generalize to unseen shape categories, but their training and test sets
-must share the same point cloud characteristics. We also provide the code and
-data to compete in our benchmark and to further stimulate the development of
-learning-based surface reconstruction
-https://github.com/raphaelsulzer/dsr-benchmark.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Singular Value Approximation and Reducing Directed to Undirected Graph Sparsification</title>
-    <link href="http://arxiv.org/abs/2301.13541"/>
-    <id>http://arxiv.org/abs/2301.13541</id>
-    <updated>2023-02-01T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ahmadinejad_A/0/1/0/all/0/1&quot;&gt;AmirMahdi Ahmadinejad&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Peebles_J/0/1/0/all/0/1&quot;&gt;John Peebles&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pyne_E/0/1/0/all/0/1&quot;&gt;Edward Pyne&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sidford_A/0/1/0/all/0/1&quot;&gt;Aaron Sidford&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vadhan_S/0/1/0/all/0/1&quot;&gt;Salil Vadhan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we introduce a new, spectral notion of approximation between
-directed graphs, which we call Singular Value (SV) approximation.
-SV-approximation is stronger than previous notions of spectral approximation
-considered in the literature, including spectral approximation of Laplacians
-for undirected graphs (Spielman Teng STOC 2004), standard approximation for
-directed graphs (Cohen et. al. STOC 2007), and unit-circle approximation for
-directed graphs (Ahmadinejad et. al. FOCS 2020). Moreover, SV approximation
-enjoys several useful properties not known to be possessed by previous notions
-of approximation, such as being preserved under products of random-walk
-matrices and with matrices of bounded norm.
-&lt;/p&gt;
-&lt;p&gt;Notably, we show that there is a simple black-box reduction from
-SV-sparsifying Eulerian directed graphs to SV-sparsifying undirected graphs.
-With this reduction in hand, we provide a nearly linear-time algorithm for
-SV-sparsifying undirected and hence also Eulerian directed graphs. This also
-yields the first nearly linear-time algorithm for unit-circle-sparsifying
-Eulerian directed graphs. In addition, we give a nearly linear-time algorithm
-for SV-sparsifying (and UC-sparsifying) random-walk polynomials of Eulerian
-directed graphs with second normalized singular value bounded away from $1$ by
-$1/\text{poly}(n)$.
-&lt;/p&gt;
-&lt;p&gt;Finally, we show that a simple repeated-squaring and sparsification algorithm
-for solving Laplacian systems, introduced by (Peng Spielman STOC 2014) for
-undirected graphs, also works for Eulerian digraphs whose random-walk matrix is
-normal (i.e. unitarily diagonalizable), if we use SV-sparsification at each
-step. Prior Laplacian solvers for Eulerian digraphs are significantly more
-complicated.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Safety Framework for Flow Decomposition Problems via Integer Linear Programming</title>
-    <link href="http://arxiv.org/abs/2301.13245"/>
-    <id>http://arxiv.org/abs/2301.13245</id>
-    <updated>2023-02-01T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dias_F/0/1/0/all/0/1&quot;&gt;Fernando H. C. Dias&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Caceres_M/0/1/0/all/0/1&quot;&gt;Manuel Caceres&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Williams_L/0/1/0/all/0/1&quot;&gt;Lucia Williams&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mumey_B/0/1/0/all/0/1&quot;&gt;Brendan Mumey&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tomescu_A/0/1/0/all/0/1&quot;&gt;Alexandru I. Tomescu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Many important problems in Bioinformatics (e.g., assembly or multi-assembly)
-admit multiple solutions, while the final objective is to report only one. A
-common approach to deal with this uncertainty is finding safe partial solutions
-(e.g., contigs) which are common to all solutions. Previous research on safety
-has focused on polynomially-time solvable problems, whereas many successful and
-natural models are NP-hard to solve, leaving a lack of &quot;safety tools&quot; for such
-problems. We propose the first method for computing all safe solutions for an
-NP-hard problem, minimum flow decomposition. We obtain our results by
-developing a &quot;safety test&quot; for paths based on a general Integer Linear
-Programming (ILP) formulation. Moreover, we provide implementations with
-practical optimizations aimed to reduce the total ILP time, the most efficient
-of these being based on a recursive group-testing procedure.
-&lt;/p&gt;
-&lt;p&gt;Results: Experimental results on the transcriptome datasets of Shao and
-Kingsford (TCBB, 2017) show that all safe paths for minimum flow decompositions
-correctly recover up to 90% of the full RNA transcripts, which is at least 25%
-more than previously known safe paths, such as (Caceres et al. TCBB, 2021),
-(Zheng et al., RECOMB 2021), (Khan et al., RECOMB 2022, ESA 2022). Moreover,
-despite the NP-hardness of the problem, we can report all safe paths for 99.8%
-of the over 27,000 non-trivial graphs of this dataset in only 1.5 hours. Our
-results suggest that, on perfect data, there is less ambiguity than thought in
-the notoriously hard RNA assembly problem.
-&lt;/p&gt;
-&lt;p&gt;Availability: https://github.com/algbio/mfd-safety
 &lt;/p&gt;
   </content>
     <author>
