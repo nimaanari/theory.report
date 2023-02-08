@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-02-08T01:30:24Z">Wednesday, February 08 2023, 01:30</time>
+          <time class='timeago' datetime="2023-02-08T02:00:17Z">Wednesday, February 08 2023, 02:00</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -341,6 +341,737 @@
 
   <div class="tr-articles tr-shrink">
     
+    
+    <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Wednesday, February 08
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03569'>Label propagation on binomial random graphs</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Marcos Kiwi, Lyuben Lichev, Dieter Mitsche, Pawe&#x142; Pra&#x142;at</p><p>We study a variant of the widely popular, fast and often used ``family'' of
+community detection procedures referred to as label propagation algorithms.
+Initially, given a network, each vertex starts with a random label in the
+interval $[0,1]$. Then, in each round of the algorithm, every vertex switches
+its label to the majority label in its neighborhood (including its own label).
+At the first round, ties are broken towards smaller labels, while at each of
+the next rounds, ties are broken uniformly at random.
+</p>
+<p>We investigate the performance of this algorithm on the binomial random graph
+$\mathcal G(n,p)$. We show that for $np \ge n^{5/8+\varepsilon}$, the algorithm
+terminates with a single label a.a.s. (which was previously known only for
+$np\ge n^{3/4+\varepsilon}$). Moreover, we show that if $np\gg n^{2/3}$, a.a.s.
+this label is the smallest one, whereas if $n^{5/8+\varepsilon}\le np\ll
+n^{2/3}$, the surviving label is a.a.s. not the smallest one.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Kiwi_M/0/1/0/all/0/1">Marcos Kiwi</a>, <a href="http://arxiv.org/find/math/1/au:+Lichev_L/0/1/0/all/0/1">Lyuben Lichev</a>, <a href="http://arxiv.org/find/math/1/au:+Mitsche_D/0/1/0/all/0/1">Dieter Mitsche</a>, <a href="http://arxiv.org/find/math/1/au:+Pralat_P/0/1/0/all/0/1">Pawe&#x142; Pra&#x142;at</a></p><p>We study a variant of the widely popular, fast and often used ``family'' of
+community detection procedures referred to as label propagation algorithms.
+Initially, given a network, each vertex starts with a random label in the
+interval $[0,1]$. Then, in each round of the algorithm, every vertex switches
+its label to the majority label in its neighborhood (including its own label).
+At the first round, ties are broken towards smaller labels, while at each of
+the next rounds, ties are broken uniformly at random.
+</p>
+<p>We investigate the performance of this algorithm on the binomial random graph
+$\mathcal G(n,p)$. We show that for $np \ge n^{5/8+\varepsilon}$, the algorithm
+terminates with a single label a.a.s. (which was previously known only for
+$np\ge n^{3/4+\varepsilon}$). Moreover, we show that if $np\gg n^{2/3}$, a.a.s.
+this label is the smallest one, whereas if $n^{5/8+\varepsilon}\le np\ll
+n^{2/3}$, the surviving label is a.a.s. not the smallest one.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03451'>The Solidarity Cover Problem</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Eran Rosenbluth</p><p>Various real-world problems consist of partitioning a set of locations into
+disjoint subsets, each subset spread in a way that it covers the whole set with
+a certain radius. Given a finite set S, a metric d, and a radius r, define a
+subset (of S) S' to be an r-cover if and only if forall s in S there exists s'
+in S' such that d(s,s') is less or equal to r. We examine the problem of
+determining whether there exist m disjoint r-covers, naming it the Solidarity
+Cover Problem (SCP). We consider as well the related optimization problems of
+maximizing the number of r-covers, referred to as the partition size, and
+minimizing the radius. We analyze the relation between the SCP and a graph
+problem known as the Domatic Number Problem (DNP), both hard problems in the
+general case. We show that the SCP is hard already in the Euclidean 2D setting,
+implying hardness of the DNP already in the unit-disc-graph setting. As far as
+we know, the latter is a result yet to be shown. We use the tight approximation
+bound of (1-o(1))/ln(n) for the DNP's general case, shown by U.Feige,
+M.Halld'orsson, G.Kortsarz, and A.Srinivasan (SIAM Journal on computing, 2002),
+to deduce the same bound for partition-size approximation of the SCP in the
+Euclidean space setting. We show an upper bound of 3 and lower bounds of 2 and
+sqrt(2) for approximating the minimal radius in different settings of the SCP.
+Lastly, in the Euclidean 2D setting we provide a general
+bicriteria-approximation scheme which allows a range of possibilities for
+trading the optimality of the radius in return for better approximation of the
+partition size and vice versa. We demonstrate a usage of the scheme which
+achieves an approximation of (1/16,2) for the partition size and radius
+respectively.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Rosenbluth_E/0/1/0/all/0/1">Eran Rosenbluth</a></p><p>Various real-world problems consist of partitioning a set of locations into
+disjoint subsets, each subset spread in a way that it covers the whole set with
+a certain radius. Given a finite set S, a metric d, and a radius r, define a
+subset (of S) S' to be an r-cover if and only if forall s in S there exists s'
+in S' such that d(s,s') is less or equal to r. We examine the problem of
+determining whether there exist m disjoint r-covers, naming it the Solidarity
+Cover Problem (SCP). We consider as well the related optimization problems of
+maximizing the number of r-covers, referred to as the partition size, and
+minimizing the radius. We analyze the relation between the SCP and a graph
+problem known as the Domatic Number Problem (DNP), both hard problems in the
+general case. We show that the SCP is hard already in the Euclidean 2D setting,
+implying hardness of the DNP already in the unit-disc-graph setting. As far as
+we know, the latter is a result yet to be shown. We use the tight approximation
+bound of (1-o(1))/ln(n) for the DNP's general case, shown by U.Feige,
+M.Halld'orsson, G.Kortsarz, and A.Srinivasan (SIAM Journal on computing, 2002),
+to deduce the same bound for partition-size approximation of the SCP in the
+Euclidean space setting. We show an upper bound of 3 and lower bounds of 2 and
+sqrt(2) for approximating the minimal radius in different settings of the SCP.
+Lastly, in the Euclidean 2D setting we provide a general
+bicriteria-approximation scheme which allows a range of possibilities for
+trading the optimality of the radius in return for better approximation of the
+partition size and vice versa. We demonstrate a usage of the scheme which
+achieves an approximation of (1/16,2) for the partition size and radius
+respectively.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03456'>On the complexity of the approximate hypergraph homomorphism problem</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Lorenzo Ciardo, Marcin Kozik, Andrei Krokhin, Tamio-Vesa Nakajima, Stanislav &#x17d;ivn&#xfd;</p><p>Understanding the computational complexity of fragments of the Constraint
+Satisfaction Problem (CSP) has been instrumental in the formulation of
+Feder-Vardi's Dichotomy Conjecture and its positive resolution by Bulatov and
+Zhuk. An approximation version of the CSP - known as the promise CSP - has
+recently gained prominence as an exciting generalisation of the CSP that
+captures many fundamental computational problems. In this work, we establish a
+computational complexity dichotomy for a natural fragment of the promise CSP
+consisting of homomorphism problems involving a class of 3-uniform hypergraphs.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Ciardo_L/0/1/0/all/0/1">Lorenzo Ciardo</a>, <a href="http://arxiv.org/find/cs/1/au:+Kozik_M/0/1/0/all/0/1">Marcin Kozik</a>, <a href="http://arxiv.org/find/cs/1/au:+Krokhin_A/0/1/0/all/0/1">Andrei Krokhin</a>, <a href="http://arxiv.org/find/cs/1/au:+Nakajima_T/0/1/0/all/0/1">Tamio-Vesa Nakajima</a>, <a href="http://arxiv.org/find/cs/1/au:+Zivny_S/0/1/0/all/0/1">Stanislav &#x17d;ivn&#xfd;</a></p><p>Understanding the computational complexity of fragments of the Constraint
+Satisfaction Problem (CSP) has been instrumental in the formulation of
+Feder-Vardi's Dichotomy Conjecture and its positive resolution by Bulatov and
+Zhuk. An approximation version of the CSP - known as the promise CSP - has
+recently gained prominence as an exciting generalisation of the CSP that
+captures many fundamental computational problems. In this work, we establish a
+computational complexity dichotomy for a natural fragment of the promise CSP
+consisting of homomorphism problems involving a class of 3-uniform hypergraphs.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03071'>Optimally Interpolating between Ex-Ante Fairness and Welfare</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Mikael H&#xf8;gsgaard, Panagiotis Karras, Wenyue Ma, Nidhi Rathi, Chris Schwiegelshohn</p><p>For the fundamental problem of allocating a set of resources among
+individuals with varied preferences, the quality of an allocation relates to
+the degree of fairness and the collective welfare achieved. Unfortunately, in
+many resource-allocation settings, it is computationally hard to maximize
+welfare while achieving fairness goals.
+</p>
+<p>In this work, we consider ex-ante notions of fairness; popular examples
+include the \emph{randomized round-robin algorithm} and \emph{sortition
+mechanism}. We propose a general framework to systematically study the
+\emph{interpolation} between fairness and welfare goals in a multi-criteria
+setting. We develop two efficient algorithms ($\varepsilon-Mix$ and
+$Simple-Mix$) that achieve different trade-off guarantees with respect to
+fairness and welfare. $\varepsilon-Mix$ achieves an optimal multi-criteria
+approximation with respect to fairness and welfare, while $Simple-Mix$ achieves
+optimality up to a constant factor with zero computational overhead beyond the
+underlying \emph{welfare-maximizing mechanism} and the \emph{ex-ante fair
+mechanism}. Our framework makes no assumptions on either of the two underlying
+mechanisms, other than that the fair mechanism produces a distribution over the
+set of all allocations. Indeed, if these mechanisms are themselves
+approximation algorithms, our framework will retain the approximation factor,
+guaranteeing sensitivity to the quality of the underlying mechanisms, while
+being \emph{oblivious} to them. We also give an extensive experimental analysis
+for the aforementioned ex-ante fair mechanisms on real data sets, confirming
+our theoretical analysis.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Hogsgaard_M/0/1/0/all/0/1">Mikael H&#xf8;gsgaard</a>, <a href="http://arxiv.org/find/cs/1/au:+Karras_P/0/1/0/all/0/1">Panagiotis Karras</a>, <a href="http://arxiv.org/find/cs/1/au:+Ma_W/0/1/0/all/0/1">Wenyue Ma</a>, <a href="http://arxiv.org/find/cs/1/au:+Rathi_N/0/1/0/all/0/1">Nidhi Rathi</a>, <a href="http://arxiv.org/find/cs/1/au:+Schwiegelshohn_C/0/1/0/all/0/1">Chris Schwiegelshohn</a></p><p>For the fundamental problem of allocating a set of resources among
+individuals with varied preferences, the quality of an allocation relates to
+the degree of fairness and the collective welfare achieved. Unfortunately, in
+many resource-allocation settings, it is computationally hard to maximize
+welfare while achieving fairness goals.
+</p>
+<p>In this work, we consider ex-ante notions of fairness; popular examples
+include the \emph{randomized round-robin algorithm} and \emph{sortition
+mechanism}. We propose a general framework to systematically study the
+\emph{interpolation} between fairness and welfare goals in a multi-criteria
+setting. We develop two efficient algorithms ($\varepsilon-Mix$ and
+$Simple-Mix$) that achieve different trade-off guarantees with respect to
+fairness and welfare. $\varepsilon-Mix$ achieves an optimal multi-criteria
+approximation with respect to fairness and welfare, while $Simple-Mix$ achieves
+optimality up to a constant factor with zero computational overhead beyond the
+underlying \emph{welfare-maximizing mechanism} and the \emph{ex-ante fair
+mechanism}. Our framework makes no assumptions on either of the two underlying
+mechanisms, other than that the fair mechanism produces a distribution over the
+set of all allocations. Indeed, if these mechanisms are themselves
+approximation algorithms, our framework will retain the approximation factor,
+guaranteeing sensitivity to the quality of the underlying mechanisms, while
+being \emph{oblivious} to them. We also give an extensive experimental analysis
+for the aforementioned ex-ante fair mechanisms on real data sets, confirming
+our theoretical analysis.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03143'>Sparsification of Monotone $k$-Submodular Functions of Low Curvature</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Jannik Kudla, Stanislav &#x17d;ivn&#xfd;</p><p>Pioneered by Benczur and Karger for cuts in graphs [STOC'96], sparsification
+is a fundamental topic with wide-ranging applications that has been studied,
+e.g., for graphs and hypergraphs, in a combinatorial and a spectral setting,
+and with additive and multiplicate error bounds. Rafiey and Yoshida recently
+considered sparsification of decomposable submodular functions [AAAI'22]. We
+extend their work by presenting an efficient algorithm for a sparsifier for
+monotone $k$-submodular functions of low curvature.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Kudla_J/0/1/0/all/0/1">Jannik Kudla</a>, <a href="http://arxiv.org/find/cs/1/au:+Zivny_S/0/1/0/all/0/1">Stanislav &#x17d;ivn&#xfd;</a></p><p>Pioneered by Benczur and Karger for cuts in graphs [STOC'96], sparsification
+is a fundamental topic with wide-ranging applications that has been studied,
+e.g., for graphs and hypergraphs, in a combinatorial and a spectral setting,
+and with additive and multiplicate error bounds. Rafiey and Yoshida recently
+considered sparsification of decomposable submodular functions [AAAI'22]. We
+extend their work by presenting an efficient algorithm for a sparsifier for
+monotone $k$-submodular functions of low curvature.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03239'>Calibrated Recommendations for Users with Decaying Attention</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Jon Kleinberg, Emily Ryu, &#xc9;va Tardos</p><p>Recommendation systems capable of providing diverse sets of results are a
+focus of increasing importance, with motivations ranging from fairness to
+novelty and other aspects of optimizing user experience. One form of diversity
+of recent interest is calibration, the notion that personalized recommendations
+should reflect the full distribution of a user's interests, rather than a
+single predominant category -- for instance, a user who mainly reads
+entertainment news but also wants to keep up with news on the environment and
+the economy would prefer to see a mixture of these genres, not solely
+entertainment news. Existing work has formulated calibration as a subset
+selection problem; this line of work observes that the formulation requires the
+unrealistic assumption that all recommended items receive equal consideration
+from the user, but leaves as an open question the more realistic setting in
+which user attention decays as they move down the list of results.
+</p>
+<p>In this paper, we consider calibration with decaying user attention under two
+different models. In both models, there is a set of underlying genres that
+items can belong to. In the first setting, where items are represented by
+fine-grained mixtures of genre percentages, we provide a
+$(1-1/e)$-approximation algorithm by extending techniques for constrained
+submodular optimization. In the second setting, where items are coarsely binned
+into a single genre each, we surpass the $(1-1/e)$ barrier imposed by
+submodular maximization and give a $2/3$-approximate greedy algorithm. Our work
+thus addresses the problem of capturing ordering effects due to decaying
+attention, allowing for the extension of near-optimal calibration from
+recommendation sets to recommendation lists.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Kleinberg_J/0/1/0/all/0/1">Jon Kleinberg</a>, <a href="http://arxiv.org/find/cs/1/au:+Ryu_E/0/1/0/all/0/1">Emily Ryu</a>, <a href="http://arxiv.org/find/cs/1/au:+Tardos_E/0/1/0/all/0/1">&#xc9;va Tardos</a></p><p>Recommendation systems capable of providing diverse sets of results are a
+focus of increasing importance, with motivations ranging from fairness to
+novelty and other aspects of optimizing user experience. One form of diversity
+of recent interest is calibration, the notion that personalized recommendations
+should reflect the full distribution of a user's interests, rather than a
+single predominant category -- for instance, a user who mainly reads
+entertainment news but also wants to keep up with news on the environment and
+the economy would prefer to see a mixture of these genres, not solely
+entertainment news. Existing work has formulated calibration as a subset
+selection problem; this line of work observes that the formulation requires the
+unrealistic assumption that all recommended items receive equal consideration
+from the user, but leaves as an open question the more realistic setting in
+which user attention decays as they move down the list of results.
+</p>
+<p>In this paper, we consider calibration with decaying user attention under two
+different models. In both models, there is a set of underlying genres that
+items can belong to. In the first setting, where items are represented by
+fine-grained mixtures of genre percentages, we provide a
+$(1-1/e)$-approximation algorithm by extending techniques for constrained
+submodular optimization. In the second setting, where items are coarsely binned
+into a single genre each, we surpass the $(1-1/e)$ barrier imposed by
+submodular maximization and give a $2/3$-approximate greedy algorithm. Our work
+thus addresses the problem of capturing ordering effects due to decaying
+attention, allowing for the extension of near-optimal calibration from
+recommendation sets to recommendation lists.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03245'>Two Parallel PageRank Algorithms via Improving Forward Push</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Qi Zhang, Rongxia Tang, Zhengan Yao, Jun Liang</p><p>Initially used to rank web pages, PageRank has now been applied in many
+fields. With the growing scale of graph, accelerating PageRank computing is
+urged and designing parallel algorithm is a feasible solution. In this paper,
+two parallel PageRank algorithms IFP1 and IFP2 are proposed via improving the
+state-of-the-art Personalized PageRank algorithm, i.e., Forward Push.
+Theoretical analysis indicates that, IFP1 can take advantage of the DAG
+structure of the graph, where the dangling vertices improves the convergence
+rate and the unreferenced vertices decreases the computation amount. As an
+improvement of IFP1, IFP2 pushes mass to the dangling vertices only once but
+rather many times, and thus decreases the computation amount further.
+Experiments on six data sets illustrate that both IFP1 and IFP2 outperform
+Power method, where IFP2 with 38 parallelism can be at most 50 times as fast as
+the Power method.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Zhang_Q/0/1/0/all/0/1">Qi Zhang</a>, <a href="http://arxiv.org/find/cs/1/au:+Tang_R/0/1/0/all/0/1">Rongxia Tang</a>, <a href="http://arxiv.org/find/cs/1/au:+Yao_Z/0/1/0/all/0/1">Zhengan Yao</a>, <a href="http://arxiv.org/find/cs/1/au:+Liang_J/0/1/0/all/0/1">Jun Liang</a></p><p>Initially used to rank web pages, PageRank has now been applied in many
+fields. With the growing scale of graph, accelerating PageRank computing is
+urged and designing parallel algorithm is a feasible solution. In this paper,
+two parallel PageRank algorithms IFP1 and IFP2 are proposed via improving the
+state-of-the-art Personalized PageRank algorithm, i.e., Forward Push.
+Theoretical analysis indicates that, IFP1 can take advantage of the DAG
+structure of the graph, where the dangling vertices improves the convergence
+rate and the unreferenced vertices decreases the computation amount. As an
+improvement of IFP1, IFP2 pushes mass to the dangling vertices only once but
+rather many times, and thus decreases the computation amount further.
+Experiments on six data sets illustrate that both IFP1 and IFP2 outperform
+Power method, where IFP2 with 38 parallelism can be at most 50 times as fast as
+the Power method.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03317'>Engineering Shared-Memory Parallel Shuffling to Generate Random Permutations In-Place</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Manuel Penschuck</p><p>Shuffling is the process of rearranging a sequence of elements into a random
+order such that any permutation occurs with equal probability. It is an
+important building block in a plethora of techniques used in virtually all
+scientific areas. Consequently considerable work has been devoted to the design
+and implementation of shuffling algorithms.
+</p>
+<p>We engineer, -- to the best of our knowledge -- for the first time, a
+practically fast, parallel shuffling algorithm with $\Oh{\sqrt{n}\log n}$
+parallel depth that requires only poly-logarithmic auxiliary memory. Our
+reference implementations in Rust are freely available, easy to include in
+other projects, and can process large data sets approaching the size of the
+system's memory. In an empirical evaluation, we compare our implementations
+with a number of existing solutions on various computer architectures. Our
+algorithms consistently achieve the highest through-put on all machines.
+Further, we demonstrate that the runtime of our parallel algorithm is
+comparable to the time that other algorithms may take to acquire the memory
+from the operating system to copy the input.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Penschuck_M/0/1/0/all/0/1">Manuel Penschuck</a></p><p>Shuffling is the process of rearranging a sequence of elements into a random
+order such that any permutation occurs with equal probability. It is an
+important building block in a plethora of techniques used in virtually all
+scientific areas. Consequently considerable work has been devoted to the design
+and implementation of shuffling algorithms.
+</p>
+<p>We engineer, -- to the best of our knowledge -- for the first time, a
+practically fast, parallel shuffling algorithm with $\Oh{\sqrt{n}\log n}$
+parallel depth that requires only poly-logarithmic auxiliary memory. Our
+reference implementations in Rust are freely available, easy to include in
+other projects, and can process large data sets approaching the size of the
+system's memory. In an empirical evaluation, we compare our implementations
+with a number of existing solutions on various computer architectures. Our
+algorithms consistently achieve the highest through-put on all machines.
+Further, we demonstrate that the runtime of our parallel algorithm is
+comparable to the time that other algorithms may take to acquire the memory
+from the operating system to copy the input.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03527'>First-Order Model Checking on Structurally Sparse Graph Classes</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Jan Dreier, Nikolas M&#xe4;hlmann, Sebastian Siebertz</p><p>A class of graphs is structurally nowhere dense if it can be constructed from
+a nowhere dense class by a first-order transduction. Structurally nowhere dense
+classes vastly generalize nowhere dense classes and constitute important
+examples of monadically stable classes. We show that the first-order model
+checking problem is fixed-parameter tractable on every structurally nowhere
+dense class of graphs.
+</p>
+<p>Our result builds on a recently developed game-theoretic characterization of
+monadically stable graph classes. As a second key ingredient of independent
+interest, we provide a polynomial-time algorithm for approximating weak
+neighborhood covers (on general graphs). We combine the two tools into a
+recursive locality-based model checking algorithm. This algorithm is efficient
+on every monadically stable graph class admitting flip-closed sparse weak
+neighborhood covers, where flip-closure is a mild additional assumption.
+Thereby, establishing efficient first-order model checking on monadically
+stable classes is reduced to proving the existence of flip-closed sparse weak
+neighborhood covers on these classes - a purely combinatorial problem. We
+complete the picture by proving the existence of the desired covers for
+structurally nowhere dense classes: we show that every structurally nowhere
+dense class can be sparsified by contracting local sets of vertices, enabling
+us to lift the existence of covers from sparse classes.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Dreier_J/0/1/0/all/0/1">Jan Dreier</a>, <a href="http://arxiv.org/find/cs/1/au:+Mahlmann_N/0/1/0/all/0/1">Nikolas M&#xe4;hlmann</a>, <a href="http://arxiv.org/find/cs/1/au:+Siebertz_S/0/1/0/all/0/1">Sebastian Siebertz</a></p><p>A class of graphs is structurally nowhere dense if it can be constructed from
+a nowhere dense class by a first-order transduction. Structurally nowhere dense
+classes vastly generalize nowhere dense classes and constitute important
+examples of monadically stable classes. We show that the first-order model
+checking problem is fixed-parameter tractable on every structurally nowhere
+dense class of graphs.
+</p>
+<p>Our result builds on a recently developed game-theoretic characterization of
+monadically stable graph classes. As a second key ingredient of independent
+interest, we provide a polynomial-time algorithm for approximating weak
+neighborhood covers (on general graphs). We combine the two tools into a
+recursive locality-based model checking algorithm. This algorithm is efficient
+on every monadically stable graph class admitting flip-closed sparse weak
+neighborhood covers, where flip-closure is a mild additional assumption.
+Thereby, establishing efficient first-order model checking on monadically
+stable classes is reduced to proving the existence of flip-closed sparse weak
+neighborhood covers on these classes - a purely combinatorial problem. We
+complete the picture by proving the existence of the desired covers for
+structurally nowhere dense classes: we show that every structurally nowhere
+dense class can be sparsified by contracting local sets of vertices, enabling
+us to lift the existence of covers from sparse classes.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03627'>Tight algorithms for connectivity problems parameterized by clique-width</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Falko Hegerfeld, Stefan Kratsch</p><p>The complexity of problems involving global constraints is usually much more
+difficult to understand than the complexity of problems only involving local
+constraints. A natural form of global constraints are connectivity constraints.
+We study connectivity problems from a fine-grained parameterized perspective.
+In a breakthrough, Cygan et al. (TALG 2022) first obtained algorithms with
+single-exponential running time c^{tw} n^O(1) for connectivity problems
+parameterized by treewidth by introducing the cut-and-count-technique.
+Furthermore, the obtained bases c were shown to be optimal under the Strong
+Exponential-Time Hypothesis (SETH).
+</p>
+<p>However, since only sparse graphs may admit small treewidth, we lack
+knowledge of the fine-grained complexity of connectivity problems with respect
+to dense structure. The most popular graph parameter to measure dense structure
+is arguably clique-width, which intuitively measures how easily a graph can be
+constructed by repeatedly adding bicliques. Bergougnoux and Kant\'e (TCS 2019)
+have shown, using the rank-based approach, that also parameterized by
+clique-width many connectivity problems admit single-exponential algorithms.
+Unfortunately, the obtained running times are far from optimal under SETH.
+</p>
+<p>We show how to obtain optimal running times parameterized by clique-width for
+two benchmark connectivity problems, namely Connected Vertex Cover and
+Connected Dominating Set. These are the first tight results for connectivity
+problems with respect to clique-width and these results are obtained by
+developing new algorithms based on the cut-and-count-technique and novel lower
+bound constructions. Precisely, we show that there exist one-sided error
+Monte-Carlo algorithms that given a k-clique-expression solve Connected Vertex
+Cover in time 6^k n^O(1), and Connected Dominating Set in time 5^k n^O(1). Both
+results are shown to be tight under SETH.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Hegerfeld_F/0/1/0/all/0/1">Falko Hegerfeld</a>, <a href="http://arxiv.org/find/cs/1/au:+Kratsch_S/0/1/0/all/0/1">Stefan Kratsch</a></p><p>The complexity of problems involving global constraints is usually much more
+difficult to understand than the complexity of problems only involving local
+constraints. A natural form of global constraints are connectivity constraints.
+We study connectivity problems from a fine-grained parameterized perspective.
+In a breakthrough, Cygan et al. (TALG 2022) first obtained algorithms with
+single-exponential running time c^{tw} n^O(1) for connectivity problems
+parameterized by treewidth by introducing the cut-and-count-technique.
+Furthermore, the obtained bases c were shown to be optimal under the Strong
+Exponential-Time Hypothesis (SETH).
+</p>
+<p>However, since only sparse graphs may admit small treewidth, we lack
+knowledge of the fine-grained complexity of connectivity problems with respect
+to dense structure. The most popular graph parameter to measure dense structure
+is arguably clique-width, which intuitively measures how easily a graph can be
+constructed by repeatedly adding bicliques. Bergougnoux and Kant\'e (TCS 2019)
+have shown, using the rank-based approach, that also parameterized by
+clique-width many connectivity problems admit single-exponential algorithms.
+Unfortunately, the obtained running times are far from optimal under SETH.
+</p>
+<p>We show how to obtain optimal running times parameterized by clique-width for
+two benchmark connectivity problems, namely Connected Vertex Cover and
+Connected Dominating Set. These are the first tight results for connectivity
+problems with respect to clique-width and these results are obtained by
+developing new algorithms based on the cut-and-count-technique and novel lower
+bound constructions. Precisely, we show that there exist one-sided error
+Monte-Carlo algorithms that given a k-clique-expression solve Connected Vertex
+Cover in time 6^k n^O(1), and Connected Dominating Set in time 5^k n^O(1). Both
+results are shown to be tight under SETH.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.03658'>Planted Bipartite Graph Detection</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Asaf Rotenberg, Wasim Huleihel, Ofer Shayevitz</p><p>We consider the task of detecting a hidden bipartite subgraph in a given
+random graph. Specifically, under the null hypothesis, the graph is a
+realization of an Erd\H{o}s-R\'{e}nyi random graph over $n$ vertices with edge
+density $q$. Under the alternative, there exists a planted $k_{\mathsf{R}}
+\times k_{\mathsf{L}}$ bipartite subgraph with edge density $p&gt;q$. We derive
+asymptotically tight upper and lower bounds for this detection problem in both
+the dense regime, where $q,p = \Theta\left(1\right)$, and the sparse regime
+where $q,p = \Theta\left(n^{-\alpha}\right), \alpha \in \left(0,2\right]$.
+Moreover, we consider a variant of the above problem, where one can only
+observe a relatively small part of the graph, by using at most $\mathsf{Q}$
+edge queries. For this problem, we derive upper and lower bounds in both the
+dense and sparse regimes.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Rotenberg_A/0/1/0/all/0/1">Asaf Rotenberg</a>, <a href="http://arxiv.org/find/cs/1/au:+Huleihel_W/0/1/0/all/0/1">Wasim Huleihel</a>, <a href="http://arxiv.org/find/cs/1/au:+Shayevitz_O/0/1/0/all/0/1">Ofer Shayevitz</a></p><p>We consider the task of detecting a hidden bipartite subgraph in a given
+random graph. Specifically, under the null hypothesis, the graph is a
+realization of an Erd\H{o}s-R\'{e}nyi random graph over $n$ vertices with edge
+density $q$. Under the alternative, there exists a planted $k_{\mathsf{R}}
+\times k_{\mathsf{L}}$ bipartite subgraph with edge density $p&gt;q$. We derive
+asymptotically tight upper and lower bounds for this detection problem in both
+the dense regime, where $q,p = \Theta\left(1\right)$, and the sparse regime
+where $q,p = \Theta\left(n^{-\alpha}\right), \alpha \in \left(0,2\right]$.
+Moreover, we consider a variant of the above problem, where one can only
+observe a relatively small part of the graph, by using at most $\mathsf{Q}$
+edge queries. For this problem, we derive upper and lower bounds in both the
+dense and sparse regimes.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T01:30:00Z">Wednesday, February 08 2023, 01:30</time>
+        </div>
+      </div>
+    </details>
+  
     
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Tuesday, February 07
@@ -3124,707 +3855,6 @@ link streams used in the state of the art, and on massive link streams, up to
 100 million links. In all cases our algorithm is faster, mostly by a factor of
 at least 10 and up to a factor of $10^4$. Moreover, it scales to massive link
 streams for which the existing algorithms are not able to provide the solution.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00025'>On the Within-Group Discrimination of Screening Classifiers</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Nastaran Okati, Stratis Tsirtsis, Manuel Gomez Rodriguez</p><p>Screening classifiers are increasingly used to identify qualified candidates
-in a variety of selection processes. In this context, it has been recently
-shown that, if a classifier is calibrated, one can identify the smallest set of
-candidates which contains, in expectation, a desired number of qualified
-candidates using a threshold decision rule. This lends support to focusing on
-calibration as the only requirement for screening classifiers. In this paper,
-we argue that screening policies that use calibrated classifiers may suffer
-from an understudied type of within-group discrimination -- they may
-discriminate against qualified members within demographic groups of interest.
-Further, we argue that this type of discrimination can be avoided if
-classifiers satisfy within-group monotonicity, a natural monotonicity property
-within each of the groups. Then, we introduce an efficient post-processing
-algorithm based on dynamic programming to minimally modify a given calibrated
-classifier so that its probability estimates satisfy within-group monotonicity.
-We validate our algorithm using US Census survey data and show that
-within-group monotonicity can be often achieved at a small cost in terms of
-prediction granularity and shortlist size.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Okati_N/0/1/0/all/0/1">Nastaran Okati</a>, <a href="http://arxiv.org/find/cs/1/au:+Tsirtsis_S/0/1/0/all/0/1">Stratis Tsirtsis</a>, <a href="http://arxiv.org/find/cs/1/au:+Rodriguez_M/0/1/0/all/0/1">Manuel Gomez Rodriguez</a></p><p>Screening classifiers are increasingly used to identify qualified candidates
-in a variety of selection processes. In this context, it has been recently
-shown that, if a classifier is calibrated, one can identify the smallest set of
-candidates which contains, in expectation, a desired number of qualified
-candidates using a threshold decision rule. This lends support to focusing on
-calibration as the only requirement for screening classifiers. In this paper,
-we argue that screening policies that use calibrated classifiers may suffer
-from an understudied type of within-group discrimination -- they may
-discriminate against qualified members within demographic groups of interest.
-Further, we argue that this type of discrimination can be avoided if
-classifiers satisfy within-group monotonicity, a natural monotonicity property
-within each of the groups. Then, we introduce an efficient post-processing
-algorithm based on dynamic programming to minimally modify a given calibrated
-classifier so that its probability estimates satisfy within-group monotonicity.
-We validate our algorithm using US Census survey data and show that
-within-group monotonicity can be often achieved at a small cost in terms of
-prediction granularity and shortlist size.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00037'>Differentially-Private Hierarchical Clustering with Provable Approximation Guarantees</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Jacob Imola, Alessandro Epasto, Mohammad Mahdian, Vincent Cohen-Addad, Vahab Mirrokni</p><p>Hierarchical Clustering is a popular unsupervised machine learning method
-with decades of history and numerous applications. We initiate the study of
-differentially private approximation algorithms for hierarchical clustering
-under the rigorous framework introduced by (Dasgupta, 2016). We show strong
-lower bounds for the problem: that any $\epsilon$-DP algorithm must exhibit
-$O(|V|^2/ \epsilon)$-additive error for an input dataset $V$. Then, we exhibit
-a polynomial-time approximation algorithm with $O(|V|^{2.5}/
-\epsilon)$-additive error, and an exponential-time algorithm that meets the
-lower bound. To overcome the lower bound, we focus on the stochastic block
-model, a popular model of graphs, and, with a separation assumption on the
-blocks, propose a private $1+o(1)$ approximation algorithm which also recovers
-the blocks exactly. Finally, we perform an empirical study of our algorithms
-and validate their performance.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Imola_J/0/1/0/all/0/1">Jacob Imola</a>, <a href="http://arxiv.org/find/cs/1/au:+Epasto_A/0/1/0/all/0/1">Alessandro Epasto</a>, <a href="http://arxiv.org/find/cs/1/au:+Mahdian_M/0/1/0/all/0/1">Mohammad Mahdian</a>, <a href="http://arxiv.org/find/cs/1/au:+Cohen_Addad_V/0/1/0/all/0/1">Vincent Cohen-Addad</a>, <a href="http://arxiv.org/find/cs/1/au:+Mirrokni_V/0/1/0/all/0/1">Vahab Mirrokni</a></p><p>Hierarchical Clustering is a popular unsupervised machine learning method
-with decades of history and numerous applications. We initiate the study of
-differentially private approximation algorithms for hierarchical clustering
-under the rigorous framework introduced by (Dasgupta, 2016). We show strong
-lower bounds for the problem: that any $\epsilon$-DP algorithm must exhibit
-$O(|V|^2/ \epsilon)$-additive error for an input dataset $V$. Then, we exhibit
-a polynomial-time approximation algorithm with $O(|V|^{2.5}/
-\epsilon)$-additive error, and an exponential-time algorithm that meets the
-lower bound. To overcome the lower bound, we focus on the stochastic block
-model, a popular model of graphs, and, with a separation assumption on the
-blocks, propose a private $1+o(1)$ approximation algorithm which also recovers
-the blocks exactly. Finally, we perform an empirical study of our algorithms
-and validate their performance.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00052'>Exploring Wedges of an Oriented Grid by an Automaton with Pebbles</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Subhash Bhagat, Andrzej Pelc</p><p>A mobile agent, modeled as a deterministic finite automaton, navigates in the
-infinite anonymous oriented grid $\mathbb{Z} \times \mathbb{Z}$. It has to
-explore a given infinite subgraph of the grid by visiting all of its nodes. We
-focus on the simplest subgraphs, called {\em wedges}, spanned by all nodes of
-the grid located between two half-lines in the plane, with a common origin.
-Many wedges turn out to be impossible to explore by an automaton that cannot
-mark nodes of the grid. Hence, we study the following question: Given a wedge
-$W$, what is the smallest number $p$ of (movable) pebbles for which there
-exists an automaton that can explore $W$ using $p$ pebbles? Our main
-contribution is a complete solution of this problem. For each wedge $W$ we
-determine this minimum number $p$, show an automaton that explores it using $p$
-pebbles and show that fewer pebbles are not enough. We show that this smallest
-number of pebbles can vary from 0 to 3, depending on the angle between
-half-lines limiting the wedge and depending on whether the automaton can cross
-these half-lines or not.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bhagat_S/0/1/0/all/0/1">Subhash Bhagat</a>, <a href="http://arxiv.org/find/cs/1/au:+Pelc_A/0/1/0/all/0/1">Andrzej Pelc</a></p><p>A mobile agent, modeled as a deterministic finite automaton, navigates in the
-infinite anonymous oriented grid $\mathbb{Z} \times \mathbb{Z}$. It has to
-explore a given infinite subgraph of the grid by visiting all of its nodes. We
-focus on the simplest subgraphs, called {\em wedges}, spanned by all nodes of
-the grid located between two half-lines in the plane, with a common origin.
-Many wedges turn out to be impossible to explore by an automaton that cannot
-mark nodes of the grid. Hence, we study the following question: Given a wedge
-$W$, what is the smallest number $p$ of (movable) pebbles for which there
-exists an automaton that can explore $W$ using $p$ pebbles? Our main
-contribution is a complete solution of this problem. For each wedge $W$ we
-determine this minimum number $p$, show an automaton that explores it using $p$
-pebbles and show that fewer pebbles are not enough. We show that this smallest
-number of pebbles can vary from 0 to 3, depending on the angle between
-half-lines limiting the wedge and depending on whether the automaton can cross
-these half-lines or not.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00112'>Adding an Edge in a $P_4$-sparse Graph</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Anna Mpanti, Stavros D. Nikolopoulos, Leonidas Palios</p><p>The minimum completion (fill-in) problem is defined as follows: Given a graph
-family $\mathcal{F}$ (more generally, a property $\Pi$) and a graph $G$, the
-completion problem asks for the minimum number of non-edges needed to be added
-to $G$ so that the resulting graph belongs to the graph family $\mathcal{F}$
-(or has property $\Pi$). This problem is NP-complete for many subclasses of
-perfect graphs and polynomial solutions are available only for minimal
-completion sets. We study the minimum completion problem of a $P_4$-sparse
-graph $G$ with an added edge. For any optimal solution of the problem, we prove
-that there is an optimal solution whose form is of one of a small number of
-possibilities. This along with the solution of the problem when the added edge
-connects two non-adjacent vertices of a spider or connects two vertices in
-different connected components of the graph enables us to present a
-polynomial-time algorithm for the problem.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Mpanti_A/0/1/0/all/0/1">Anna Mpanti</a>, <a href="http://arxiv.org/find/cs/1/au:+Nikolopoulos_S/0/1/0/all/0/1">Stavros D. Nikolopoulos</a>, <a href="http://arxiv.org/find/cs/1/au:+Palios_L/0/1/0/all/0/1">Leonidas Palios</a></p><p>The minimum completion (fill-in) problem is defined as follows: Given a graph
-family $\mathcal{F}$ (more generally, a property $\Pi$) and a graph $G$, the
-completion problem asks for the minimum number of non-edges needed to be added
-to $G$ so that the resulting graph belongs to the graph family $\mathcal{F}$
-(or has property $\Pi$). This problem is NP-complete for many subclasses of
-perfect graphs and polynomial solutions are available only for minimal
-completion sets. We study the minimum completion problem of a $P_4$-sparse
-graph $G$ with an added edge. For any optimal solution of the problem, we prove
-that there is an optimal solution whose form is of one of a small number of
-possibilities. This along with the solution of the problem when the added edge
-connects two non-adjacent vertices of a spider or connects two vertices in
-different connected components of the graph enables us to present a
-polynomial-time algorithm for the problem.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00133'>Sublinear Approximation Schemes for Scheduling Precedence Graphs of Bounded Depth</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Bin Fu, Yumei Huo, Hairong Zhao</p><p>We study the classical scheduling problem on parallel machines %with
-precedence constraints where the precedence graph has the bounded depth $h$.
-Our goal is to minimize the maximum completion time. We focus on developing
-approximation algorithms that use only sublinear space or sublinear time. We
-develop the first one-pass streaming approximation schemes using sublinear
-space when all jobs' processing times differ no more than a constant factor $c$
-and the number of machines $m$ is at most $\tfrac {2n \epsilon}{3 h c }$. This
-is so far the best approximation we can have in terms of $m$, since no
-polynomial time approximation better than $\tfrac{4}{3}$ exists when $m =
-\tfrac{n}{3}$ unless P=NP. %the problem cannot be approximated within a factor
-of $\tfrac{4}{3}$ when $m = \tfrac{n}{3}$ even if all jobs have equal
-processing time. The algorithms are then extended to the more general problem
-where the largest $\alpha n$ jobs have no more than $c$ factor difference. %
-for some constant $0 &lt; \alpha \le 1$. We also develop the first sublinear time
-algorithms for both problems. For the more general problem, when $ m \le \tfrac
-{ \alpha n \epsilon}{20 c^2 \cdot h } $, our algorithm is a randomized
-$(1+\epsilon)$-approximation scheme that runs in sublinear time. This work not
-only provides an algorithmic solution to the studied problem under big data %
-and cloud computing environment, but also gives a methodological framework for
-designing sublinear approximation algorithms for other scheduling problems.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Fu_B/0/1/0/all/0/1">Bin Fu</a>, <a href="http://arxiv.org/find/cs/1/au:+Huo_Y/0/1/0/all/0/1">Yumei Huo</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhao_H/0/1/0/all/0/1">Hairong Zhao</a></p><p>We study the classical scheduling problem on parallel machines %with
-precedence constraints where the precedence graph has the bounded depth $h$.
-Our goal is to minimize the maximum completion time. We focus on developing
-approximation algorithms that use only sublinear space or sublinear time. We
-develop the first one-pass streaming approximation schemes using sublinear
-space when all jobs' processing times differ no more than a constant factor $c$
-and the number of machines $m$ is at most $\tfrac {2n \epsilon}{3 h c }$. This
-is so far the best approximation we can have in terms of $m$, since no
-polynomial time approximation better than $\tfrac{4}{3}$ exists when $m =
-\tfrac{n}{3}$ unless P=NP. %the problem cannot be approximated within a factor
-of $\tfrac{4}{3}$ when $m = \tfrac{n}{3}$ even if all jobs have equal
-processing time. The algorithms are then extended to the more general problem
-where the largest $\alpha n$ jobs have no more than $c$ factor difference. %
-for some constant $0 &lt; \alpha \le 1$. We also develop the first sublinear time
-algorithms for both problems. For the more general problem, when $ m \le \tfrac
-{ \alpha n \epsilon}{20 c^2 \cdot h } $, our algorithm is a randomized
-$(1+\epsilon)$-approximation scheme that runs in sublinear time. This work not
-only provides an algorithmic solution to the studied problem under big data %
-and cloud computing environment, but also gives a methodological framework for
-designing sublinear approximation algorithms for other scheduling problems.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00135'>Durable Algorithms for Writable LL/SC and CAS with Dynamic Joining</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Prasad Jayanti, Siddhartha Jayanti, Sucharita Jayanti</p><p>We present durable implementations for two well known universal primitives --
-CAS (compare-and-swap), and its ABA-free counter-part LLSC (load-linked,
-store-conditional). All our implementations are: writable, meaning they support
-a Write() operation; have constant time complexity per operation; allow for
-dynamic joining, meaning newly created processes (a.k.a. threads) of arbitrary
-names can join a protocol and access our implementations; and have adaptive
-space complexities, meaning the space use scales in the number of processes $n$
-that actually use the objects, as opposed to previous protocols which are
-designed for a maximum number of processes $N$. Our durable Writable-CAS
-implementation, DuraCAS, requires $O(m + n)$ space to support $m$ objects that
-get accessed by $n$ processes, improving on the state-of-the-art $O(m + N^2)$.
-By definition, LLSC objects must store "contexts" in addition to object values.
-Our Writable-LLSC implementation, DuraLL, requires $O(m + n + C)$ space, where
-$C$ is the number of "contexts" stored across all the objects. While LLSC has
-an advantage over CAS due to being ABA-free, the object definition seems to
-require additional space usage. To address this trade-off, we define an
-External Context (EC) variant of LLSC. Our EC Writable-LLSC implementation is
-ABA-free and has a space complexity of just $O(m + n)$.
-</p>
-<p>To our knowledge, we are the first to present durable CAS algorithms that
-allow for dynamic joining, and our algorithms are the first to exhibit adaptive
-space complexities. To our knowledge, we are the first to implement any type of
-durable LLSC objects.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Jayanti_P/0/1/0/all/0/1">Prasad Jayanti</a>, <a href="http://arxiv.org/find/cs/1/au:+Jayanti_S/0/1/0/all/0/1">Siddhartha Jayanti</a>, <a href="http://arxiv.org/find/cs/1/au:+Jayanti_S/0/1/0/all/0/1">Sucharita Jayanti</a></p><p>We present durable implementations for two well known universal primitives --
-CAS (compare-and-swap), and its ABA-free counter-part LLSC (load-linked,
-store-conditional). All our implementations are: writable, meaning they support
-a Write() operation; have constant time complexity per operation; allow for
-dynamic joining, meaning newly created processes (a.k.a. threads) of arbitrary
-names can join a protocol and access our implementations; and have adaptive
-space complexities, meaning the space use scales in the number of processes $n$
-that actually use the objects, as opposed to previous protocols which are
-designed for a maximum number of processes $N$. Our durable Writable-CAS
-implementation, DuraCAS, requires $O(m + n)$ space to support $m$ objects that
-get accessed by $n$ processes, improving on the state-of-the-art $O(m + N^2)$.
-By definition, LLSC objects must store "contexts" in addition to object values.
-Our Writable-LLSC implementation, DuraLL, requires $O(m + n + C)$ space, where
-$C$ is the number of "contexts" stored across all the objects. While LLSC has
-an advantage over CAS due to being ABA-free, the object definition seems to
-require additional space usage. To address this trade-off, we define an
-External Context (EC) variant of LLSC. Our EC Writable-LLSC implementation is
-ABA-free and has a space complexity of just $O(m + n)$.
-</p>
-<p>To our knowledge, we are the first to present durable CAS algorithms that
-allow for dynamic joining, and our algorithms are the first to exhibit adaptive
-space complexities. To our knowledge, we are the first to implement any type of
-durable LLSC objects.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00213'>Approximating Red-Blue Set Cover</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Eden Chlamt&#xe1;&#x10d;, Yury Makarychev, Ali Vakilian</p><p>We provide a new approximation algorithm for the Red-Blue Set Cover problem
-and give a new hardness result. Our approximation algorithm achieves $\tilde
-O(m^{1/3})$-approximation improving on the $\tilde O(m^{1/2})$-approximation
-due to Elkin and Peleg (where $m$ is the number of sets). Additionally, we
-provide a nearly approximation preserving reduction from Min $k$-Union to
-Red-Blue Set Cover that gives an $\tilde\Omega(m^{1/4 - \varepsilon})$ hardness
-under the Dense-vs-Random conjecture.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chlamtac_E/0/1/0/all/0/1">Eden Chlamt&#xe1;&#x10d;</a>, <a href="http://arxiv.org/find/cs/1/au:+Makarychev_Y/0/1/0/all/0/1">Yury Makarychev</a>, <a href="http://arxiv.org/find/cs/1/au:+Vakilian_A/0/1/0/all/0/1">Ali Vakilian</a></p><p>We provide a new approximation algorithm for the Red-Blue Set Cover problem
-and give a new hardness result. Our approximation algorithm achieves $\tilde
-O(m^{1/3})$-approximation improving on the $\tilde O(m^{1/2})$-approximation
-due to Elkin and Peleg (where $m$ is the number of sets). Additionally, we
-provide a nearly approximation preserving reduction from Min $k$-Union to
-Red-Blue Set Cover that gives an $\tilde\Omega(m^{1/4 - \varepsilon})$ hardness
-under the Dense-vs-Random conjecture.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00248'>A Nearly-Optimal Bound for Fast Regression with $\ell_\infty$ Guarantee</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Zhao Song, Mingquan Ye, Junze Yin, Lichen Zhang</p><p>Given a matrix $A\in \mathbb{R}^{n\times d}$ and a vector $b\in
-\mathbb{R}^n$, we consider the regression problem with $\ell_\infty$
-guarantees: finding a vector $x'\in \mathbb{R}^d$ such that $ \|x'-x^*\|_\infty
-\leq \frac{\epsilon}{\sqrt{d}}\cdot \|Ax^*-b\|_2\cdot \|A^\dagger\|$ where
-$x^*=\arg\min_{x\in \mathbb{R}^d}\|Ax-b\|_2$. One popular approach for solving
-such $\ell_2$ regression problem is via sketching: picking a structured random
-matrix $S\in \mathbb{R}^{m\times n}$ with $m\ll n$ and $SA$ can be quickly
-computed, solve the ``sketched'' regression problem $\arg\min_{x\in
-\mathbb{R}^d} \|SAx-Sb\|_2$. In this paper, we show that in order to obtain
-such $\ell_\infty$ guarantee for $\ell_2$ regression, one has to use sketching
-matrices that are dense. To the best of our knowledge, this is the first user
-case in which dense sketching matrices are necessary. On the algorithmic side,
-we prove that there exists a distribution of dense sketching matrices with
-$m=\epsilon^{-2}d\log^3(n/\delta)$ such that solving the sketched regression
-problem gives the $\ell_\infty$ guarantee, with probability at least
-$1-\delta$. Moreover, the matrix $SA$ can be computed in time $O(nd\log n)$.
-Our row count is nearly-optimal up to logarithmic factors, and significantly
-improves the result in [Price, Song and Woodruff, ICALP'17], in which a
-super-linear in $d$ rows, $m=\Omega(\epsilon^{-2}d^{1+\gamma})$ for
-$\gamma=\Theta(\sqrt{\frac{\log\log n}{\log d}})$ is required. We also develop
-a novel analytical framework for $\ell_\infty$ guarantee regression that
-utilizes the Oblivious Coordinate-wise Embedding (OCE) property introduced in
-[Song and Yu, ICML'21]. Our analysis is arguably much simpler and more general
-than [Price, Song and Woodruff, ICALP'17], and it extends to dense sketches for
-tensor product of vectors.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Song_Z/0/1/0/all/0/1">Zhao Song</a>, <a href="http://arxiv.org/find/cs/1/au:+Ye_M/0/1/0/all/0/1">Mingquan Ye</a>, <a href="http://arxiv.org/find/cs/1/au:+Yin_J/0/1/0/all/0/1">Junze Yin</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhang_L/0/1/0/all/0/1">Lichen Zhang</a></p><p>Given a matrix $A\in \mathbb{R}^{n\times d}$ and a vector $b\in
-\mathbb{R}^n$, we consider the regression problem with $\ell_\infty$
-guarantees: finding a vector $x'\in \mathbb{R}^d$ such that $ \|x'-x^*\|_\infty
-\leq \frac{\epsilon}{\sqrt{d}}\cdot \|Ax^*-b\|_2\cdot \|A^\dagger\|$ where
-$x^*=\arg\min_{x\in \mathbb{R}^d}\|Ax-b\|_2$. One popular approach for solving
-such $\ell_2$ regression problem is via sketching: picking a structured random
-matrix $S\in \mathbb{R}^{m\times n}$ with $m\ll n$ and $SA$ can be quickly
-computed, solve the ``sketched'' regression problem $\arg\min_{x\in
-\mathbb{R}^d} \|SAx-Sb\|_2$. In this paper, we show that in order to obtain
-such $\ell_\infty$ guarantee for $\ell_2$ regression, one has to use sketching
-matrices that are dense. To the best of our knowledge, this is the first user
-case in which dense sketching matrices are necessary. On the algorithmic side,
-we prove that there exists a distribution of dense sketching matrices with
-$m=\epsilon^{-2}d\log^3(n/\delta)$ such that solving the sketched regression
-problem gives the $\ell_\infty$ guarantee, with probability at least
-$1-\delta$. Moreover, the matrix $SA$ can be computed in time $O(nd\log n)$.
-Our row count is nearly-optimal up to logarithmic factors, and significantly
-improves the result in [Price, Song and Woodruff, ICALP'17], in which a
-super-linear in $d$ rows, $m=\Omega(\epsilon^{-2}d^{1+\gamma})$ for
-$\gamma=\Theta(\sqrt{\frac{\log\log n}{\log d}})$ is required. We also develop
-a novel analytical framework for $\ell_\infty$ guarantee regression that
-utilizes the Oblivious Coordinate-wise Embedding (OCE) property introduced in
-[Song and Yu, ICML'21]. Our analysis is arguably much simpler and more general
-than [Price, Song and Woodruff, ICALP'17], and it extends to dense sketches for
-tensor product of vectors.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00352'>Flip-width: Cops and Robber on dense graphs</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Symon Toru&#x144;czyk</p><p>We define new graph parameters that generalize tree-width, degeneracy, and
-generalized coloring numbers for sparse graphs, and clique-width and twin-width
-for dense graphs. Those parameters are defined using variants of the Cops and
-Robber game, in which the robber has speed bounded by a fixed constant
-$r\in\mathbb N\cup\{\infty\}$, and the cops perform flips (or perturbations) of
-the considered graph. We propose a new notion of tameness of a graph class,
-called bounded flip-width, which is a dense counterpart of classes of bounded
-expansion of Ne\v{s}et\v{r}il and Ossona de Mendez, and includes classes of
-bounded twin-width of Bonnet, Kim, Thomass\'e and Watrigant. We prove that
-boundedness of flip-width is preserved by first-order interpretations, or
-transductions, generalizing previous results concerning classes of bounded
-expansion and bounded twin-width. We provide an algorithm approximating the
-flip-width of a given graph, which runs in slicewise polynomial time (XP) in
-the size of the graph. We also propose a more general notion of tameness,
-called almost bounded flip-width, which is a dense counterpart of nowhere dense
-classes, and includes all structurally nowhere dense classes. We conjecture,
-and provide evidence, that classes with almost bounded flip-width coincide with
-monadically dependent classes, introduced by Shelah in model theory.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Torunczyk_S/0/1/0/all/0/1">Symon Toru&#x144;czyk</a></p><p>We define new graph parameters that generalize tree-width, degeneracy, and
-generalized coloring numbers for sparse graphs, and clique-width and twin-width
-for dense graphs. Those parameters are defined using variants of the Cops and
-Robber game, in which the robber has speed bounded by a fixed constant
-$r\in\mathbb N\cup\{\infty\}$, and the cops perform flips (or perturbations) of
-the considered graph. We propose a new notion of tameness of a graph class,
-called bounded flip-width, which is a dense counterpart of classes of bounded
-expansion of Ne\v{s}et\v{r}il and Ossona de Mendez, and includes classes of
-bounded twin-width of Bonnet, Kim, Thomass\'e and Watrigant. We prove that
-boundedness of flip-width is preserved by first-order interpretations, or
-transductions, generalizing previous results concerning classes of bounded
-expansion and bounded twin-width. We provide an algorithm approximating the
-flip-width of a given graph, which runs in slicewise polynomial time (XP) in
-the size of the graph. We also propose a more general notion of tameness,
-called almost bounded flip-width, which is a dense counterpart of nowhere dense
-classes, and includes all structurally nowhere dense classes. We conjecture,
-and provide evidence, that classes with almost bounded flip-width coincide with
-monadically dependent classes, introduced by Shelah in model theory.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00458'>Improved Exact and Heuristic Algorithms for Maximum Weight Clique</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Roman Erhardt, Kathrin Hanauer, Nils Kriege, Christian Schulz, Darren Strash</p><p>We propose improved exact and heuristic algorithms for solving the maximum
-weight clique problem, a well-known problem in graph theory with many
-applications. Our algorithms interleave successful techniques from related work
-with novel data reduction rules that use local graph structure to identify and
-remove vertices and edges while retaining the optimal solution. We evaluate our
-algorithms on a range of synthetic and real-world graphs, and find that they
-outperform the current state of the art on most inputs. Our data reductions
-always produce smaller reduced graphs than existing data reductions alone. As a
-result, our exact algorithm, MWCRedu, finds solutions orders of magnitude
-faster on naturally weighted, medium-sized map labeling graphs and random
-hyperbolic graphs. Our heuristic algorithm, MWCPeel, outperforms its
-competitors on these instances, but is slightly less effective on extremely
-dense or large instances.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Erhardt_R/0/1/0/all/0/1">Roman Erhardt</a>, <a href="http://arxiv.org/find/cs/1/au:+Hanauer_K/0/1/0/all/0/1">Kathrin Hanauer</a>, <a href="http://arxiv.org/find/cs/1/au:+Kriege_N/0/1/0/all/0/1">Nils Kriege</a>, <a href="http://arxiv.org/find/cs/1/au:+Schulz_C/0/1/0/all/0/1">Christian Schulz</a>, <a href="http://arxiv.org/find/cs/1/au:+Strash_D/0/1/0/all/0/1">Darren Strash</a></p><p>We propose improved exact and heuristic algorithms for solving the maximum
-weight clique problem, a well-known problem in graph theory with many
-applications. Our algorithms interleave successful techniques from related work
-with novel data reduction rules that use local graph structure to identify and
-remove vertices and edges while retaining the optimal solution. We evaluate our
-algorithms on a range of synthetic and real-world graphs, and find that they
-outperform the current state of the art on most inputs. Our data reductions
-always produce smaller reduced graphs than existing data reductions alone. As a
-result, our exact algorithm, MWCRedu, finds solutions orders of magnitude
-faster on naturally weighted, medium-sized map labeling graphs and random
-hyperbolic graphs. Our heuristic algorithm, MWCPeel, outperforms its
-competitors on these instances, but is slightly less effective on extremely
-dense or large instances.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00608'>The Investment Management Game: Extending the Scope of the Notion of Core</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Vijay V. Vazirani</p><p>The core is a dominant solution concept in economics and game theory. In this
-context, the following question arises, ``How versatile is this solution
-concept?'' We note that within game theory, this notion has been used for
-profit -- equivalently, cost or utility -- sharing only. In this paper, we show
-a completely different use for it: in an {\em investment management game},
-under which an agent needs to allocate her money among investment firms in such
-a way that {\em in each of exponentially many future scenarios}, sufficient
-money is available in the ``right'' firms so she can buy an ``optimal
-investment'' for that scenario.
-</p>
-<p>We study a restriction of this game to {\em perfect graphs} and characterize
-its core. Our characterization is analogous to Shapley and Shubik's
-characterization of the core of the assignment game. The difference is the
-following: whereas their characterization follows from {\em total
-unimodularity}, ours follows from {\em total dual integrality}. The latter is
-another novelty of our work.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/econ/1/au:+Vazirani_V/0/1/0/all/0/1">Vijay V. Vazirani</a></p><p>The core is a dominant solution concept in economics and game theory. In this
-context, the following question arises, ``How versatile is this solution
-concept?'' We note that within game theory, this notion has been used for
-profit -- equivalently, cost or utility -- sharing only. In this paper, we show
-a completely different use for it: in an {\em investment management game},
-under which an agent needs to allocate her money among investment firms in such
-a way that {\em in each of exponentially many future scenarios}, sufficient
-money is available in the ``right'' firms so she can buy an ``optimal
-investment'' for that scenario.
-</p>
-<p>We study a restriction of this game to {\em perfect graphs} and characterize
-its core. Our characterization is analogous to Shapley and Shubik's
-characterization of the core of the assignment game. The difference is the
-following: whereas their characterization follows from {\em total
-unimodularity}, ours follows from {\em total dual integrality}. The latter is
-another novelty of our work.
 </p>
         
         </div>
