@@ -9,6 +9,58 @@
 
 
 <item>
+  <title>News for January 2023</title>
+  <guid>https://ptreview.sublinear.info/?p=1824</guid>
+  <link>https://ptreview.sublinear.info/2023/02/news-for-january-2023/</link>
+  <description>
+    &lt;p&gt;Welcome to the first batch of 2023. Looks like it&amp;#8217;s going to be a good year, with 5 property testing or related papers (that I could find) already: &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;An efficient asymmetric removal lemma and its limitations&lt;/strong&gt;, by Lior Gishboliner, Asaf Shapira, and Yuval Wigderson (&lt;a href=&quot;https://arxiv.org/abs/2301.07693&quot;&gt;arXiv&lt;/a&gt;). One of the jewels of graph property testing is the triangle removel lemma (and its many generalizations and variants), which relates the number of triangles in a dense graph to its distance from being triangle-free: namely, any graph \(\varepsilon\)-far from being triangle-free must have \(\delta(\varepsilon)n^3\) triangles, where the density \(\delta(\varepsilon)\) only depends on the distance (and not the size of the graph!). This immediately leads to constant-query testers (and even &amp;#8220;proximity-oblivious&amp;#8221; testers) for triangle-freness (and, more generally, pattern-freeness). Unfortunately, the dependence on \(\varepsilon\) is quite bad, essentially a tower-type function (and it is known no polynomial bound is possible). This work attempts to bypass this impossibility result by proving an asymmetric removal lemma, or the form &amp;#8220;any graph \(\varepsilon\)-far from being triangle-free must have \(\mathrm{poly}(\varepsilon)n^5\) 5-cycles&amp;#8221; (and generalizations beyond triangles). This seems like a very interesting direction, with potential applications to property testing, and (who knows!) efficient testers for many properties hithertho only known to be (practically) testable for constant \(\varepsilon\).&lt;/p&gt;
+
+
+
+&lt;p&gt;Related (more removal lemmata!), a different work on this topic:&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;The Minimum Degree Removal Lemma Thresholds&lt;/strong&gt;, by Lior Gishboliner, Zhihan Jin, and Benny Sudakov (&lt;a href=&quot;https://arxiv.org/abs/2301.13789&quot;&gt;arXiv&lt;/a&gt;). As mentioned above, removal lemmata relate the distance \(\varepsilon\) from being \(H\)-free (for a given subgraph \(H\)) to the density \(\delta(\varepsilon)\) of occurrences of \(H\) in the graph. Sadly, it is known that this density will be superpolynomial (in the distance) unless \(H\) is bipartite… which, while technically still yielding testing algorithms (query complexity independent of the size of the graph!), yields very inefficient testers (very bad dependence on \(\varepsilon\)!). This paper studies one direction to bypass this sad state of affairs: under which additional assumption on the underlying graph (specifically, bounds on its minimum degree) can we obtain a polynomial bound on \(\delta(\varepsilon)\)? And a linear bound? The authors give a tight degree condition for \(\delta(\varepsilon)\) to be polynomial when \(H\) is an odd cycle, and their results for the linear-dependence case establishes a separation between the two. Put differently: obtaining polynomial-query testers via removal lemmas is possible for a strictly larger class of graphs than linear-query ones!&lt;/p&gt;
+
+
+
+&lt;p&gt;And now, for something completely different: testing binary matrices!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;A Note on Property Testing of the Binary Rank&lt;/strong&gt;, by Nader H. Bshouty (&lt;a href=&quot;https://arxiv.org/abs/2301.04406&quot;&gt;arXiv&lt;/a&gt;). The binary rank of a matrix \(M\in\{0,1\}^{n\times m}\) is the smallest \(d\) such that there exist \(A\in\{0,1\}^{n\times d}\) and \(B\in\{0,1\}^{d\times m}\) with \(M=AB\); this can also be seen as the minimal number of bipartite cliques needed to partition the edges of a bipartite graph represented by \(M\). One can also define the relaxed notion of \(s\)-binary rank, if one enforces that each edge of the bipartite graph is covered by at most \(s\) bipartite cliques. The property testing question is then to decide, given inputs \(s,d,\varepsilon\), if \(M\) has \(s\)-binary rank at most \(d\), or is \(\varepsilon\)-far from it. The main result of this note is to give one-sided testers (one adaptive, and one non-adaptive) for \(s\)-binary rank with query complexity \(\tilde{O}(2^d)\) (for constant \(s\)), improving on the previous algorithms by a factor \(2^d\).&lt;/p&gt;
+
+
+
+&lt;p&gt;Into the quantum realm!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Testing quantum satisfiability,&lt;/strong&gt; by Ashley Montanaro, Changpeng Shao, and Dominic Verdon (&lt;a href=&quot;https://arxiv.org/abs/2301.10699&quot;&gt;arXiv&lt;/a&gt;). Classically, one can study the property version of \(k\)-SAT, which asks to decide whether a given instance is satisfiable or far from being so. And people (namely, Alon and Shapira, in 2003) did! Quantumly, one can define an analogue of \(k\)-SAT, &amp;#8220;quantum \(k\)-SAT&amp;#8221;: and people (namely, Bravyi, in 2011) did! But what about property testing of quantum \(k\)-SAT? Well, now, people (namely, the authors of this paper) just did! Showing (Corollary 1.10) that one can efficiently distinguish between (1) the quantum \(k\)-SAT is satisfiable, and (2) it is far from satisfiable by a product state. This, effectively, extends the result of Alon–Shapira&amp;#8217;03 to the quantum realm.&lt;/p&gt;
+
+
+
+&lt;p&gt;And to conclude, a foray into reinforcement learning via distribution testing…&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Lower Bounds for Learning in Revealing POMDPs&lt;/strong&gt;, by Fan Chen, Huan Wang, Caiming Xiong, Song Mei, and Yu Bai (&lt;a href=&quot;https://arxiv.org/abs/2302.01333&quot;&gt;arXiv&lt;/a&gt;). Alright, I&amp;#8217;m even more out of my depth than usual here, so I&amp;#8217;ll just copy (part of) the abstract, for fear I don&amp;#8217;t do justice to the authors&amp;#8217; work: &amp;#8220;This paper studies the fundamental limits of reinforcement learning (RL) in the challenging &lt;em&gt;partially observable&lt;/em&gt; setting. While it is well-established that learning in Partially Observable Markov Decision Processes (POMDPs) requires exponentially many samples in the worst case, a surge of recent work shows that polynomial sample complexities are achievable under the &lt;em&gt;revealing condition&lt;/em&gt; &amp;#8212; A natural condition that requires the observables to reveal some information about the unobserved latent states. However, the fundamental limits for learning in revealing POMDPs are much less understood, with existing lower bounds being rather preliminary and having substantial gaps from the current best upper bounds. We establish strong PAC and regret lower bounds for learning in revealing POMDPs. […] &lt;strong&gt;Technically, our hard instance construction adapts techniques in distribution testing, which is new to the RL literature and may be of independent interest.&lt;/strong&gt;&amp;#8221; (Emphasis mine)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Clement Canonne&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-08 06:04:08 UTC</pubDate>
+  <author>Property Testing Review</author>
+</item>
+
+<item>
   <title>Label propagation on binomial random graphs</title>
   <guid>http://arxiv.org/abs/2302.03569</guid>
   <link>http://arxiv.org/abs/2302.03569</link>
@@ -1900,36 +1952,6 @@ studies without relying on image registration or requiring manual intervention.
   </description>
   <pubDate>2023-02-02 01:30:00 UTC</pubDate>
   <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Faster maximal clique enumeration in large real-world link streams</title>
-  <guid>http://arxiv.org/abs/2302.00360</guid>
-  <link>http://arxiv.org/abs/2302.00360</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Baudin_A/0/1/0/all/0/1&quot;&gt;Alexis Baudin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Magnien_C/0/1/0/all/0/1&quot;&gt;Cl&amp;#xe9;mence Magnien&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tabourier_L/0/1/0/all/0/1&quot;&gt;Lionel Tabourier&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Link streams offer a good model for representing interactions over time. They
-consist of links $(b,e,u,v)$, where $u$ and $v$ are vertices interacting during
-the whole time interval $[b,e]$. In this paper, we deal with the problem of
-enumerating maximal cliques in link streams. A clique is a pair
-$(C,[t_0,t_1])$, where $C$ is a set of vertices that all interact pairwise
-during the full interval $[t_0,t_1]$. It is maximal when neither its set of
-vertices nor its time interval can be increased. Some of the main works solving
-this problem are based on the famous Bron-Kerbosch algorithm for enumerating
-maximal cliques in graphs. We take this idea as a starting point to propose a
-new algorithm which matches the cliques of the instantaneous graphs formed by
-links existing at a given time $t$ to the maximal cliques of the link stream.
-We prove its validity and compute its complexity, which is better than the
-state-of-the art ones in many cases of interest. We also study the
-output-sensitive complexity, which is close to the output size, thereby showing
-that our algorithm is efficient. To confirm this, we perform experiments on
-link streams used in the state of the art, and on massive link streams, up to
-100 million links. In all cases our algorithm is faster, mostly by a factor of
-at least 10 and up to a factor of $10^4$. Moreover, it scales to massive link
-streams for which the existing algorithms are not able to provide the solution.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-02 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>

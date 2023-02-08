@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-02-08T05:30:35Z">Wednesday, February 08 2023, 05:30</time>
+          <time class='timeago' datetime="2023-02-08T06:36:30Z">Wednesday, February 08 2023, 06:36</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,78 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Wednesday, February 08
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://ptreview.sublinear.info/2023/02/news-for-january-2023/'>News for January 2023</a></h3>
+        <p class='tr-article-feed'>from <a href='https://ptreview.sublinear.info'>Property Testing Review</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Welcome to the first batch of 2023. Looks like it&#8217;s going to be a good year, with 5 property testing or related papers (that I could find) already: An efficient asymmetric removal lemma and its limitations, by Lior Gishboliner, Asaf Shapira, and Yuval Wigderson (arXiv). One of the jewels of graph property testing is the [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>Welcome to the first batch of 2023. Looks like it&#8217;s going to be a good year, with 5 property testing or related papers (that I could find) already: </p>
+
+
+
+<p><strong>An efficient asymmetric removal lemma and its limitations</strong>, by Lior Gishboliner, Asaf Shapira, and Yuval Wigderson (<a href="https://arxiv.org/abs/2301.07693">arXiv</a>). One of the jewels of graph property testing is the triangle removel lemma (and its many generalizations and variants), which relates the number of triangles in a dense graph to its distance from being triangle-free: namely, any graph \(\varepsilon\)-far from being triangle-free must have \(\delta(\varepsilon)n^3\) triangles, where the density \(\delta(\varepsilon)\) only depends on the distance (and not the size of the graph!). This immediately leads to constant-query testers (and even &#8220;proximity-oblivious&#8221; testers) for triangle-freness (and, more generally, pattern-freeness). Unfortunately, the dependence on \(\varepsilon\) is quite bad, essentially a tower-type function (and it is known no polynomial bound is possible). This work attempts to bypass this impossibility result by proving an asymmetric removal lemma, or the form &#8220;any graph \(\varepsilon\)-far from being triangle-free must have \(\mathrm{poly}(\varepsilon)n^5\) 5-cycles&#8221; (and generalizations beyond triangles). This seems like a very interesting direction, with potential applications to property testing, and (who knows!) efficient testers for many properties hithertho only known to be (practically) testable for constant \(\varepsilon\).</p>
+
+
+
+<p>Related (more removal lemmata!), a different work on this topic:</p>
+
+
+
+<p><strong>The Minimum Degree Removal Lemma Thresholds</strong>, by Lior Gishboliner, Zhihan Jin, and Benny Sudakov (<a href="https://arxiv.org/abs/2301.13789">arXiv</a>). As mentioned above, removal lemmata relate the distance \(\varepsilon\) from being \(H\)-free (for a given subgraph \(H\)) to the density \(\delta(\varepsilon)\) of occurrences of \(H\) in the graph. Sadly, it is known that this density will be superpolynomial (in the distance) unless \(H\) is bipartite… which, while technically still yielding testing algorithms (query complexity independent of the size of the graph!), yields very inefficient testers (very bad dependence on \(\varepsilon\)!). This paper studies one direction to bypass this sad state of affairs: under which additional assumption on the underlying graph (specifically, bounds on its minimum degree) can we obtain a polynomial bound on \(\delta(\varepsilon)\)? And a linear bound? The authors give a tight degree condition for \(\delta(\varepsilon)\) to be polynomial when \(H\) is an odd cycle, and their results for the linear-dependence case establishes a separation between the two. Put differently: obtaining polynomial-query testers via removal lemmas is possible for a strictly larger class of graphs than linear-query ones!</p>
+
+
+
+<p>And now, for something completely different: testing binary matrices!</p>
+
+
+
+<p><strong>A Note on Property Testing of the Binary Rank</strong>, by Nader H. Bshouty (<a href="https://arxiv.org/abs/2301.04406">arXiv</a>). The binary rank of a matrix \(M\in\{0,1\}^{n\times m}\) is the smallest \(d\) such that there exist \(A\in\{0,1\}^{n\times d}\) and \(B\in\{0,1\}^{d\times m}\) with \(M=AB\); this can also be seen as the minimal number of bipartite cliques needed to partition the edges of a bipartite graph represented by \(M\). One can also define the relaxed notion of \(s\)-binary rank, if one enforces that each edge of the bipartite graph is covered by at most \(s\) bipartite cliques. The property testing question is then to decide, given inputs \(s,d,\varepsilon\), if \(M\) has \(s\)-binary rank at most \(d\), or is \(\varepsilon\)-far from it. The main result of this note is to give one-sided testers (one adaptive, and one non-adaptive) for \(s\)-binary rank with query complexity \(\tilde{O}(2^d)\) (for constant \(s\)), improving on the previous algorithms by a factor \(2^d\).</p>
+
+
+
+<p>Into the quantum realm!</p>
+
+
+
+<p><strong>Testing quantum satisfiability,</strong> by Ashley Montanaro, Changpeng Shao, and Dominic Verdon (<a href="https://arxiv.org/abs/2301.10699">arXiv</a>). Classically, one can study the property version of \(k\)-SAT, which asks to decide whether a given instance is satisfiable or far from being so. And people (namely, Alon and Shapira, in 2003) did! Quantumly, one can define an analogue of \(k\)-SAT, &#8220;quantum \(k\)-SAT&#8221;: and people (namely, Bravyi, in 2011) did! But what about property testing of quantum \(k\)-SAT? Well, now, people (namely, the authors of this paper) just did! Showing (Corollary 1.10) that one can efficiently distinguish between (1) the quantum \(k\)-SAT is satisfiable, and (2) it is far from satisfiable by a product state. This, effectively, extends the result of Alon–Shapira&#8217;03 to the quantum realm.</p>
+
+
+
+<p>And to conclude, a foray into reinforcement learning via distribution testing…</p>
+
+
+
+<p><strong>Lower Bounds for Learning in Revealing POMDPs</strong>, by Fan Chen, Huan Wang, Caiming Xiong, Song Mei, and Yu Bai (<a href="https://arxiv.org/abs/2302.01333">arXiv</a>). Alright, I&#8217;m even more out of my depth than usual here, so I&#8217;ll just copy (part of) the abstract, for fear I don&#8217;t do justice to the authors&#8217; work: &#8220;This paper studies the fundamental limits of reinforcement learning (RL) in the challenging <em>partially observable</em> setting. While it is well-established that learning in Partially Observable Markov Decision Processes (POMDPs) requires exponentially many samples in the worst case, a surge of recent work shows that polynomial sample complexities are achievable under the <em>revealing condition</em> &#8212; A natural condition that requires the observables to reveal some information about the unobserved latent states. However, the fundamental limits for learning in revealing POMDPs are much less understood, with existing lower bounds being rather preliminary and having substantial gaps from the current best upper bounds. We establish strong PAC and regret lower bounds for learning in revealing POMDPs. […] <strong>Technically, our hard instance construction adapts techniques in distribution testing, which is new to the RL literature and may be of independent interest.</strong>&#8221; (Emphasis mine)</p>
+
+
+
+<p></p>
+<p class="authors">By Clement Canonne</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-08T06:04:08Z">Wednesday, February 08 2023, 06:04</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3786,75 +3858,6 @@ hippocampal sheet, and provide additional, complementary information beyond
 traditional measures. We provide a new set of sensitive processing and analysis
 tools for the analysis of hippocampal geometry that allows comparisons across
 studies without relying on image registration or requiring manual intervention.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-02T01:30:00Z">Thursday, February 02 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.00360'>Faster maximal clique enumeration in large real-world link streams</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Alexis Baudin, Cl&#xe9;mence Magnien, Lionel Tabourier</p><p>Link streams offer a good model for representing interactions over time. They
-consist of links $(b,e,u,v)$, where $u$ and $v$ are vertices interacting during
-the whole time interval $[b,e]$. In this paper, we deal with the problem of
-enumerating maximal cliques in link streams. A clique is a pair
-$(C,[t_0,t_1])$, where $C$ is a set of vertices that all interact pairwise
-during the full interval $[t_0,t_1]$. It is maximal when neither its set of
-vertices nor its time interval can be increased. Some of the main works solving
-this problem are based on the famous Bron-Kerbosch algorithm for enumerating
-maximal cliques in graphs. We take this idea as a starting point to propose a
-new algorithm which matches the cliques of the instantaneous graphs formed by
-links existing at a given time $t$ to the maximal cliques of the link stream.
-We prove its validity and compute its complexity, which is better than the
-state-of-the art ones in many cases of interest. We also study the
-output-sensitive complexity, which is close to the output size, thereby showing
-that our algorithm is efficient. To confirm this, we perform experiments on
-link streams used in the state of the art, and on massive link streams, up to
-100 million links. In all cases our algorithm is faster, mostly by a factor of
-at least 10 and up to a factor of $10^4$. Moreover, it scales to massive link
-streams for which the existing algorithms are not able to provide the solution.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Baudin_A/0/1/0/all/0/1">Alexis Baudin</a>, <a href="http://arxiv.org/find/cs/1/au:+Magnien_C/0/1/0/all/0/1">Cl&#xe9;mence Magnien</a>, <a href="http://arxiv.org/find/cs/1/au:+Tabourier_L/0/1/0/all/0/1">Lionel Tabourier</a></p><p>Link streams offer a good model for representing interactions over time. They
-consist of links $(b,e,u,v)$, where $u$ and $v$ are vertices interacting during
-the whole time interval $[b,e]$. In this paper, we deal with the problem of
-enumerating maximal cliques in link streams. A clique is a pair
-$(C,[t_0,t_1])$, where $C$ is a set of vertices that all interact pairwise
-during the full interval $[t_0,t_1]$. It is maximal when neither its set of
-vertices nor its time interval can be increased. Some of the main works solving
-this problem are based on the famous Bron-Kerbosch algorithm for enumerating
-maximal cliques in graphs. We take this idea as a starting point to propose a
-new algorithm which matches the cliques of the instantaneous graphs formed by
-links existing at a given time $t$ to the maximal cliques of the link stream.
-We prove its validity and compute its complexity, which is better than the
-state-of-the art ones in many cases of interest. We also study the
-output-sensitive complexity, which is close to the output size, thereby showing
-that our algorithm is efficient. To confirm this, we perform experiments on
-link streams used in the state of the art, and on massive link streams, up to
-100 million links. In all cases our algorithm is faster, mostly by a factor of
-at least 10 and up to a factor of $10^4$. Moreover, it scales to massive link
-streams for which the existing algorithms are not able to provide the solution.
 </p>
         
         </div>
