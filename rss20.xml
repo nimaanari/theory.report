@@ -9,6 +9,17 @@
 
 
 <item>
+  <title>Why Can&#39;t Little Chatty Do Math?</title>
+  <guid>tag:blogger.com,1999:blog-3722233.post-6944633050600856974</guid>
+  <link>https://blog.computationalcomplexity.org/2023/02/why-cant-little-chatty-do-math.html</link>
+  <description>
+    &lt;div&gt;Despite OpenAI&#39;s claim that ChatGPT has improved mathematical capabilities, we don&#39;t get far multiplying large numbers.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnHsNFxbQ6oNEW1qIr0bFD8Jw_ESAXGWVGYfpsQyeZVoVnhlOgUHS5lozsRweLvsHAe3MFc5GU4tWvOyU7IbcykpHEVL2fo5Pm7kMkz-WIb5khJqZhVyXv9mI9bvRhlI9n6Jl0T29uzy8nVlcCtrEki46W0We3IxOBaXYZZHB36dMopnKWPA/s887/mult.jpg&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img alt=&quot;L:What is 866739766 * 745762645?  C:647733560997969470&quot; border=&quot;0&quot; data-original-height=&quot;191&quot; data-original-width=&quot;887&quot; height=&quot;86&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnHsNFxbQ6oNEW1qIr0bFD8Jw_ESAXGWVGYfpsQyeZVoVnhlOgUHS5lozsRweLvsHAe3MFc5GU4tWvOyU7IbcykpHEVL2fo5Pm7kMkz-WIb5khJqZhVyXv9mI9bvRhlI9n6Jl0T29uzy8nVlcCtrEki46W0We3IxOBaXYZZHB36dMopnKWPA/w400-h86/mult.jpg&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;Typical for ChatGPT, the answer passes the smell test. It has the right number of digits and has correct first and last couple of digits. But the real answer is&amp;nbsp;646382140418841070,&amp;nbsp; quite different from the number given.&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;As far as I know, multiplication isn&#39;t known to be in&amp;nbsp;&lt;a href=&quot;https://complexityzoo.net/Complexity_Zoo:T#tc0&quot;&gt;TC&lt;sup&gt;0&lt;/sup&gt;&lt;/a&gt;, the complexity class that roughly corresponds to neural nets. Also functions learned by deep learning can often be inverted by deep learning. So if AI can learn how to multiply, it might also learn how to factor.&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;But what about addition? Addition is known to be in TC&lt;sup&gt;0&lt;/sup&gt; and ChatGPT performs better.&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVo4fuwVf4sege-8Wm41_dOSQZvTeHhUB7Wn5oe3_OQZna0J-y2EmiBka5yq8ftdHPrG4Lth6SJyEcerSExsJpQm6DbsiKN9Hf49Fkcgf3XReVRCzYylbGfGJqzHmsCj8BF46UCv4DLWcIFfSnFrG41RoTtUCMb6YwaaP2V7nAC6LntsM26A/s897/add.jpg&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;193&quot; data-original-width=&quot;897&quot; height=&quot;86&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVo4fuwVf4sege-8Wm41_dOSQZvTeHhUB7Wn5oe3_OQZna0J-y2EmiBka5yq8ftdHPrG4Lth6SJyEcerSExsJpQm6DbsiKN9Hf49Fkcgf3XReVRCzYylbGfGJqzHmsCj8BF46UCv4DLWcIFfSnFrG41RoTtUCMb6YwaaP2V7nAC6LntsM26A/w400-h86/add.jpg&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;The correct answer is&amp;nbsp;1612502411, only one digit off but still wrong. The TC&lt;sup&gt;0&lt;/sup&gt; algorithm needs to do some tricks for carry lookahead that is probably hard to learn. Addition is easier if you work from right to left, but ChatGPT has trouble reversing numbers. There&#39;s a limit to its self-attention.&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVaCr_CJXUTeQUVDWj38LkVnI37p0u5P8_ABoOqBG5T4ymxwEUxlzc60UU9-YSCXSccpH1ICpDlJJ8KGuK8h7Olf4JmYdwsW2nd3kdEhmnm4mQe0HikFlmkiZt1v6Zj3jddoVV-waokMYLixiFYQAR4pV58e9s6ULshXUql32JuR5nIzd7Lg/s892/backwards.jpg&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;201&quot; data-original-width=&quot;892&quot; height=&quot;90&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVaCr_CJXUTeQUVDWj38LkVnI37p0u5P8_ABoOqBG5T4ymxwEUxlzc60UU9-YSCXSccpH1ICpDlJJ8KGuK8h7Olf4JmYdwsW2nd3kdEhmnm4mQe0HikFlmkiZt1v6Zj3jddoVV-waokMYLixiFYQAR4pV58e9s6ULshXUql32JuR5nIzd7Lg/w400-h90/backwards.jpg&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: left;&quot;&gt;ChatGPT can&#39;t multiply but it does know how to write a program to multiply.&lt;/div&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAtKeY7oA8q4mgvad016knm2noD1Nd7-Pk2wSicc_6fs-4nAF0f2LWInnmeV0sBnHB7sw92eeFbEfsXDCD1kNoebURfH4zziLhSbVVv-GKL0g_EwnE8A2PH8Qr5J12uC1xkYk16I6HwMdmmodECNEijrrSV5FeArwyLA1qKZ-3QdCC8lxOiQ/s907/python.jpg&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;528&quot; data-original-width=&quot;907&quot; height=&quot;233&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAtKeY7oA8q4mgvad016knm2noD1Nd7-Pk2wSicc_6fs-4nAF0f2LWInnmeV0sBnHB7sw92eeFbEfsXDCD1kNoebURfH4zziLhSbVVv-GKL0g_EwnE8A2PH8Qr5J12uC1xkYk16I6HwMdmmodECNEijrrSV5FeArwyLA1qKZ-3QdCC8lxOiQ/w400-h233/python.jpg&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;div&gt;It still claims the result will be the same as before. Running the program gives the correct answer&amp;nbsp;646382140418841070.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;ChatGPT is run on a general purpose computer, so one could hope a later version that could determine when its given a math question, write a program and run it. That&#39;s probably too dangerous--we would want to avoid a code injection vulnerability. But still it could use an API to WolframAlpha or some other math engine. Or a chess engine to play chess. Etc.&amp;nbsp;&lt;/div&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-09 14:59:00 UTC</pubDate>
+  <author>Computational Complexity</author>
+</item>
+
+<item>
   <title>Mathematics of the impossible: Computational Complexity, chapter 4, reductions</title>
   <guid>http://emanueleviola.wordpress.com/?p=1192</guid>
   <link>https://emanueleviola.wordpress.com/2023/02/09/mathematics-of-the-impossible-computational-complexity-chapter-4-reductions/</link>
@@ -1901,32 +1912,6 @@ thus establishing that our upper bound is asymptotically tight. Finally, we
 design an $\mathcal{O}(\sigma n)$ time algorithm that outputs all
 order-preserving squares that occur in a given string and are distinct as
 words. By our lower bound, this is optimal in the worst case.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-03 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>A Universal Technique for Machine-Certified Proofs of Linearizable Algorithms</title>
-  <guid>http://arxiv.org/abs/2302.00737</guid>
-  <link>http://arxiv.org/abs/2302.00737</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jayanti_P/0/1/0/all/0/1&quot;&gt;Prasad Jayanti&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jayanti_S/0/1/0/all/0/1&quot;&gt;Siddhartha Jayanti&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yavuz_U/0/1/0/all/0/1&quot;&gt;Ugur Y. Yavuz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hernandez_L/0/1/0/all/0/1&quot;&gt;Lizzie Hernandez&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Linearizability has been the long standing gold standard for consistency in
-concurrent data structures. However, proofs of linearizability can be long and
-intricate, hard to produce, and extremely time consuming even to verify. In
-this work, we address this issue by introducing simple $universal$, $sound$,
-and $complete$ proof methods for producing machine-verifiable proofs of
-linearizability and its close cousin, strong linearizability. Universality
-means that our method works for any object type; soundness means that an
-algorithm can be proved correct by our method only if it is linearizable (resp.
-strong linearizable); and completeness means that any linearizable (resp.
-strong linearizable) implementation can be proved so using our method. We
-demonstrate the simplicity and power of our method by producing proofs of
-linearizability for the Herlihy-Wing queue and Jayanti&#39;s single-scanner
-snapshot, as well as a proof of strong linearizability of the Jayanti-Tarjan
-union-find object. All three of these proofs are machine-verified by TLAPS (the
-Temporal Logic of Actions Proof System).
 &lt;/p&gt;
   </description>
   <pubDate>2023-02-03 01:30:00 UTC</pubDate>
