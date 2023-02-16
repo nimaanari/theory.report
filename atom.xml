@@ -10,6 +10,21 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Computational Complexity: Blurry JPEG or Frozen Concentrate</title>
+    <link href="https://blog.computationalcomplexity.org/2023/02/blurry-jpeg-or-frozen-concentrate.html"/>
+    <id>tag:blogger.com,1999:blog-3722233.post-356088955696571347</id>
+    <updated>2023-02-16T15:19:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFWYEsU8iLa-qrh1JXkPsV0W4SvWaTRKsYl4N-8t3kLiJUjTRwoWKvNjYslR7cpPiXeMad1g5X-Vc-W9qNFUFpLkmsEsZkyM02kFcFxznkqvzrfp9oQCJQccOg0MwLL15ApWYl4txJrFsxSa_alw1jZA4qRcYIc0QMggk6O2wdPRdyHESCPw/s1327/s-l1600.jpg&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;742&quot; data-original-width=&quot;1327&quot; height=&quot;179&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFWYEsU8iLa-qrh1JXkPsV0W4SvWaTRKsYl4N-8t3kLiJUjTRwoWKvNjYslR7cpPiXeMad1g5X-Vc-W9qNFUFpLkmsEsZkyM02kFcFxznkqvzrfp9oQCJQccOg0MwLL15ApWYl4txJrFsxSa_alw1jZA4qRcYIc0QMggk6O2wdPRdyHESCPw/s320/s-l1600.jpg&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;/div&gt;Ted Chiang in a recent &lt;a href=&quot;https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web&quot;&gt;New Yorker article&lt;/a&gt;&amp;nbsp;likened ChatGPT to a blurry JPEG, i.e. a &quot;lossy compression&quot; of the web. It&#39;s a good article but the analogy isn&#39;t quite right, there&#39;s a different kind of compression happening. Think of all human written knowledge as a random example of what could have been generated and we remove the randomness, like water is removed to make concentrated orange juice. We then add water (or randomness) to get back some version of the original.&amp;nbsp;&lt;p&gt;Lossless compression, like gzip, gives a compressed version of some data with the ability to reconstruct it exactly. It corresponds nicely to Kolmogorov complexity where K(x) is the smallest program p that generates the string x. p is a lossless compression of x.&lt;/p&gt;&lt;p&gt;Lossy compression, like JPEG, often allows much higher compression but with some error. In Kolmogorov terms you are trading off the size of the program p and some error function between x and the output of p. Most compression programs for pictures, music and video use algorithms designed for the specific medium. You can also use machine learning to get lossy compression by training both the compression and decompression algorithms.&lt;/p&gt;&lt;p&gt;Lossy compression tries to recreate the original picture. Generative AI, like ChatGPT, takes a different approach. Let&#39;s consider Wikipedia as this is the example used by Chiang. For any specific topic, there are many different ways to write a Wikipedia article, as good as or better than the article that currently exists. ChatGPT doesn&#39;t need to recreate anything close to the original article, just one that explains topic well. What we want is a description of a program p that corresponds to a set of possible Wikipedia articles, of which the real article is a random example of this set. An ideal version of ChatGPT would choose a random article from this set. Dall-E, generative AI for art, works a similar way, creating art that is a random example of what art might have been.&amp;nbsp;&lt;/p&gt;&lt;p&gt;In terms of Kolmogorov complexity, this corresponds to the &lt;a href=&quot;https://doi-org.ezproxy.gl.iit.edu/10.1109/SFCS.2002.1182000&quot;&gt;Kolmogorov Structure Function&lt;/a&gt;, basically the smallest program p such that p describes a set S of size m that contains x. with |p| + log m ≈ K(x). The string x is just a random element of S, you can get a string like it by picking an element of S at random.&lt;/p&gt;&lt;p&gt;There is no recursive algorithm that will find p and we also need to limit ourselves to p that are computationally efficient, which means that generative AI algorithms may never be ideal and will sometimes make mistakes. That doesn&#39;t mean we shouldn&#39;t use them just that we need to be wary of their limitations. As the &lt;a href=&quot;https://en.wikipedia.org/wiki/All_models_are_wrong&quot;&gt;saying&lt;/a&gt; goes &quot;All models are wrong, but some are useful&quot;.&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
+  </content>
+    <author>
+      <name>Computational Complexity</name>
+      <uri>http://blog.computationalcomplexity.org/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Scott Aaronson: Statement of Jewish scientists opposing the &amp;#8220;judicial reform&amp;#8221; in Israel</title>
     <link href="https://scottaaronson.blog/?p=7032"/>
     <id>https://scottaaronson.blog/?p=7032</id>
@@ -1621,36 +1636,6 @@ an unexpected computational power. On the other hand, we attempt to propose a
 concept of ``algorithms with large advice&#39;&#39;. In the proposal, advice is
 precomputed data for a problem and a fixed instance size, and we expect
 efficient algorithms by large or huge advice.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Characterization of Simplicial Complexes by Counting Simplets Beyond Four Nodes</title>
-    <link href="http://arxiv.org/abs/2302.05505"/>
-    <id>http://arxiv.org/abs/2302.05505</id>
-    <updated>2023-02-14T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kim_H/0/1/0/all/0/1&quot;&gt;Hyunju Kim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ko_J/0/1/0/all/0/1&quot;&gt;Jihoon Ko&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bu_F/0/1/0/all/0/1&quot;&gt;Fanchen Bu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shin_K/0/1/0/all/0/1&quot;&gt;Kijung Shin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Simplicial complexes are higher-order combinatorial structures which have
-been used to represent real-world complex systems. In this paper, we
-concentrate on the local patterns in simplicial complexes called
-\textit{simplets}, a generalization of graphlets. We formulate the problem of
-counting simplets of a given size in a given simplicial complex. For this
-problem, we extend a sampling algorithm based on color coding from graphs to
-simplicial complexes, with essential technical novelty. We theoretically
-analyze our proposed algorithm named SC3, showing its correctness,
-unbiasedness, convergence, and time/space complexity. Through the extensive
-experiments on sixteen real-world datasets, we show the superiority of SC3 in
-terms of accuracy, speed, and scalability, compared to the baseline methods.
-Finally, we use the counts given by SC3 for simplicial complex analysis,
-especially for characterization, which is further used for simplicial complex
-clustering, where SC3 shows a strong ability of characterization with
-domain-based similarity.
 &lt;/p&gt;
   </content>
     <author>
