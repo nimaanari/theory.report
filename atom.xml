@@ -532,6 +532,167 @@ temperature.
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Gradient Science: Dataset Interfaces: Diagnosing Model Failures Using Controllable Counterfactual Generation</title>
+    <link href="https://gradientscience.org/dataset-interfaces/"/>
+    <id>https://gradientscience.org/dataset-interfaces/</id>
+    <updated>2023-02-16T00:00:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+
+&lt;!-- &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt; --&gt;
+&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt; --&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf&quot; crossorigin=&quot;anonymous&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://gradientscience.org/assets/css/style.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://gradientscience.org/assets/multilabel/style.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://gradientscience.org/assets/dataset-interfaces/style.css&quot; /&gt;
+
+&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css&quot;&gt; --&gt;
+&lt;!-- &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt; --&gt;
+&lt;!-- &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt; --&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot; integrity=&quot;sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.w3schools.com/w3css/4/w3.css&quot;&gt; --&gt;
+&lt;!-- chart.js --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a class=&quot;bbutton&quot; style=&quot;float: left; width: 45%;&quot; href=&quot;https://arxiv.org/abs/2302.07865&quot;&gt;
+&lt;i class=&quot;fas fa-file-pdf&quot;&gt;&lt;/i&gt;
+    Paper
+&lt;/a&gt;
+&lt;a class=&quot;bbutton&quot; style=&quot;float: left; width: 45%;&quot; href=&quot;https://github.com/MadryLab/dataset-interfaces&quot;&gt;
+&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt;
+   Code
+&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;
+Evaluating model reliability under a distribution shift that we do not have samples from is challenging. Our &lt;a href=&quot;https://arxiv.org/abs/2302.07865&quot;&gt;new work&lt;/a&gt; introduces dataset interfaces: a scalable framework that synthesizes counterfactual examples for a given dataset under user-specified shifts.
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;Suppose that we want to deploy an ImageNet-trained classifier to identify objects in image scenes (such as dogs, plates, chairs, etc). Ideally, we would like this model to perform reliably in a variety of contexts, including under &lt;i&gt;distribution shift&lt;/i&gt;: for example, changes in background, object pose, or data pipeline that are underrepresented in the training dataset. How can we ensure that our model will perform well in such cases?&lt;/p&gt;
+
+&lt;p&gt;As a concrete example, consider checking that our model reliably identifies plates captured in unexpected locations (such as “in the desert” or “in the grass”). A natural way to do that is to acquire &lt;i&gt;counterfactual examples&lt;/i&gt;: images that conform to the training distribution except for a specified change. In our example scenario, such counterfactual examples correspond to images of plates that are located in the grass but otherwise match the ImageNet distribution in terms of style, lighting, camera angle, etc.&lt;/p&gt;
+
+&lt;p&gt;How can we procure such images? One &lt;a href=&quot;https://github.com/HaohanWang/ImageNet-Sketch&quot;&gt;common&lt;/a&gt; &lt;a href=&quot;https://github.com/hendrycks/imagenet-r&quot;&gt;approach&lt;/a&gt; is to query an image search engine, such as Google or Bing:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;plates in the desert&quot; src=&quot;/assets/dataset-interfaces/plate_on_the_desert.png&quot; style=&quot;width:100%&quot; /&gt;
+&lt;img alt=&quot;plates in the grass&quot; src=&quot;/assets/dataset-interfaces/plate_in_the_grass_screenshot.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, while the search engine does yield images of plates, they don’t quite capture the desired distribution shift. Image search gives us images of  “plates in the desert” on white backgrounds, not the desert! And rather than plates on grass, we get grass on plates!&lt;/p&gt;
+
+&lt;p&gt;It appears such specific queries are simply too challenging for search engines. So, let’s take a different approach. What if, instead, we use a text-to-image generative model, such as &lt;a href=&quot;https://arxiv.org/abs/2112.10752&quot;&gt;Stable Diffusion&lt;/a&gt;, &lt;a href=&quot;https://openai.com/dall-e-2/&quot;&gt;DALL-E 2&lt;/a&gt;, or &lt;a href=&quot;https://imagen.research.google/&quot;&gt;Imagen&lt;/a&gt;? These models, which generate photorealistic images conditioned on text, can generate never-before-seen scenes , like &lt;a href=&quot;https://www.technologyreview.com/2021/01/05/1015754/avocado-armchair-future-ai-openai-deep-learning-nlp-gpt3-computer-vision-common-sense/&quot;&gt;avocado-shaped chairs&lt;/a&gt;. Would such generative models fare much better? Let’s query one of them—Stable Diffusion—with the name of the class (e.g., “A photo of a plate in the grass.”). Here is what we get:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;plates in the grass SD&quot; src=&quot;/assets/dataset-interfaces/plate_in_grass.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nice! The synthesized photos convincingly portray plates on grassy backgrounds, as desired.&lt;/p&gt;
+
+&lt;p&gt;However, something unexpected happens: when we evaluate our ImageNet-trained classifier on these images, it achieves a paltry accuracy of only 2%! Is the grassy background really such a catastrophic failure for our model?&lt;/p&gt;
+
+&lt;p&gt;Turns out: prompting Stable Diffusion with the class name “plate” introduces a &lt;i&gt;confounding&lt;/i&gt; shift. Specifically, while ImageNet plates usually contain food, the plates generated by Stable Diffusion are almost entirely empty. Thus, our ImageNet-trained classifier fails even when generating plates with no (specified) shift—we get 5% accuracy even when we evaluate our model on images generated with the prompt “a photo of a plate”!&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/bing_plates_comparison.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Can we then find a way to capture such rare shifts (e.g. “plate in the grass”) while still properly generating objects matching those found in the original distribution (e.g. the kinds of plates found in ImageNet)?&lt;/p&gt;
+
+&lt;h2 id=&quot;dataset-interfaces&quot;&gt;Dataset Interfaces&lt;/h2&gt;
+
+&lt;p&gt;This is where &lt;i&gt;dataset interfaces&lt;/i&gt;, our new framework that scalably synthesizes counterfactual examples for a given dataset under user-specified shifts, comes in.&lt;/p&gt;
+
+&lt;p&gt;Our framework still uses text-to-image generative models (we use Stable Diffusion) to synthesize such counterfactual examples. However, as seen above, we need a much more precise way to capture underlying concepts (classes) than just prompting such a model with the class name. To this end, we leverage &lt;i&gt;&lt;a href=&quot;https://arxiv.org/abs/2208.01618&quot;&gt;textual inversion&lt;/a&gt;&lt;/i&gt;, a technique that aids in generating objects that are difficult to express with standard, human-language prompts. In textual inversion, we use a set of images containing a desired visual concept to learn a new “word” (token) S&lt;sub&gt;*&lt;/sub&gt; meant to represent the concept whenever used in a prompt. Then, we can use this token in place of the class name in prompts to generate images more closely aligned to the objects as captured in the original dataset of interest (in our case, ImageNet).&lt;/p&gt;
+
+&lt;p&gt;Now, to construct our dataset interface, we run textual inversion on images of each class in the input dataset separately, learning a corresponding class token Sc for each. Then, by incorporating these tokens into our prompts, we can generate images that more closely match the corresponding class (as represented in the input dataset) under specified shifts. For example, to generate an image of a dog on the beach, we can use the prompt: “A photo of a S&lt;sub&gt;dog&lt;/sub&gt; on the beach.” Below is an overview of our approach.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/methods_figure.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;footnote&quot;&gt;
+     An overview of our framework. For each class in the input dataset, we use textual inversion to learn a custom token (in the text space of a text-to-image diffusion model) that captures the distribution of the corresponding class. We can scalably generate counterfactual examples by incorporating these tokens in natural language prompts.
+&lt;/div&gt;
+
+&lt;h2 id=&quot;imagenet&quot;&gt;ImageNet*&lt;/h2&gt;
+
+&lt;p&gt;To demonstrate our framework in action, we create ImageNet&lt;em&gt;, a dataset interface for the ImageNet dataset. As we see below, ImageNet&lt;/em&gt;-generated images match those of ImageNet much more closely than images generated by just prompting Stable Diffusion with the class name.
+&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/tweet_mismatch_figure.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;footnote&quot;&gt;
+     Examples of real images from ImageNet (top) and images generated either by prompting Stable Diffusion with the corresponding class name (middle) or by using our dataset interface. ImageNet* (bottom). For each class, there is a visual mismatch between the images from ImageNet and the images generated by the class name. ImageNet* avoids this discrepancy by more closely matching the original distribution. 
+&lt;/div&gt;
+&lt;p&gt;Now that we are able to match the original distribution, we can create proper counterfactual examples. Specifically, we use ImageNet* to generate a benchmark for distribution shift robustness of counterfactual examples for 23 shifts, including changes in background, weather, lighting, style, attributes, and co-occurrence. Here are some of the resulting images:&lt;/p&gt;
+
+&lt;div id=&quot;bias_examples_widget&quot; style=&quot;overflow:auto; text-align: center&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;You can find the corresponding benchmark &lt;a href=&quot;https://huggingface.co/datasets/madrylab/imagenet-star&quot;&gt;here&lt;/a&gt;. We also release the original ImageNet* tokens &lt;a href=&quot;https://huggingface.co/datasets/madrylab/imagenet-star-tokens&quot;&gt;here&lt;/a&gt;—we are excited to see what kind of shifts people can capture with them!&lt;/p&gt;
+
+&lt;h2 id=&quot;model-debugging&quot;&gt;Model Debugging&lt;/h2&gt;
+&lt;p&gt;Now, with a dataset interface (such as ImageNet*) in hand, how can we diagnose model failures? Let’s return to our example of evaluating an ImageNet-trained classifier’s performance on “plates in the grass.” Recall that when we prompted Stable Diffusion with the class name, we introduced a confounding shift of emptiness, and the classifier’s accuracy dropped to 2%.&lt;/p&gt;
+
+&lt;p&gt;Let’s apply now dataset interfaces to try and disentangle these two shifts. To this end, we use ImageNet* to generate counterfactual examples of “plates in the grass” and “empty plates” separately. We find that our classifier’s accuracy only slightly drops on plates in the grass, from 90% to 75%. However, on empty plates, our classifier’s performance severely degrades to 6%!
+&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/ImageNet*_plates.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, indeed, it was the emptiness—not the grassy background—that was the cause of the catastrophic performance drop that we observed. Since dataset interfaces generate images that closely match the input distribution, we can test these distribution shifts in isolation without worrying about such hidden confounding shifts.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-shift-centric-perspective-on-robustness&quot;&gt;A shift-centric perspective on robustness&lt;/h2&gt;
+&lt;p&gt;Beyond helping us surface individual model failures, dataset interfaces enable a new, broader perspective on model robustness.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/2007.00644&quot;&gt;Many&lt;/a&gt; &lt;a href=&quot;https://arxiv.org/abs/2107.04649&quot;&gt;previous&lt;/a&gt; &lt;a href=&quot;https://arxiv.org/pdf/1902.10811.pdf&quot;&gt;works&lt;/a&gt; have studied how different types of models are able to handle distribution shifts. However, these works are only able to study one, or a handful of distribution shifts at a time. By harnessing the capabilities of dataset interfaces, we can compare the behavior of a wide range of (23) shifts all at once, yielding a new view on robustness.&lt;/p&gt;
+
+&lt;p&gt;To understand how a given distribution shift impacts different models, we can first collect a set of ImageNet models and evaluate them on images that reflect that shift. We then can plot each model’s in-distribution accuracy against its performance on images under this shift (see below for two examples): each point represents one model. 
+&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/on_the_line_figure.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking at the plot above, we see that these two shifts, “in the water” and studio lighting”, exhibit different behavior! While both lead to the same average drop in performance,  “in-distribution” accuracy improvements generally correspond to larger accuracy increases on “in the water” images than “in studio lighting” images. We can quantify this difference by looking at the slope of the line fit to the model accuracies on the plot (the higher the slope, the more benefit we gain from improved models).&lt;/p&gt;
+
+&lt;p&gt;Motivated by this difference,  we can categorize the behavior of each shift in our benchmark based on two criteria:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Absolute impact&lt;/strong&gt;: the shift’s overall severity, measured as the average drop in accuracy due to the distribution shift.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ID/OOD slope&lt;/strong&gt;: the degree to which in-distribution accuracy translates to improvement on the images under the distribution shift, measured as the slope of the plot described above
+&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/evaluation_figure.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As our first plot suggested, different types of shifts manifest different behaviors. For example, even though “in the forest” and “at dusk” have similar absolute impacts, “in the water” has a higher ID/OOD slope. Thus, while improving in-distribution performance translates to better accuracy on “in the forest” images, the model’s behavior on “at dusk” images is much more static. In general, we find that shifts based on lighting have lower ID/OOD slope than those based on background. The above is just an example of how our framework enables one to study not only how a given distribution shift impacts different models but also how different distribution shifts vary in terms of their impact on such models.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this post, we introduce dataset interfaces: a framework which allows users to scalably synthesize counterfactual examples with fine-grained controls. Our framework generates images that match key aspects of the input dataset’s distribution, enabling us to test distribution shifts in isolation. Also, thanks to its scalability, dataset interfaces allow users to evaluate a wide array of shifts.&lt;/p&gt;
+
+&lt;script src=&quot;https://gradientscience.org/assets/scripts/onload.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/gh/nicolaspanel/numjs@0.15.1/dist/numjs.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mathjs@6.6.0/dist/math.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gradientscience.org/assets/dataset-interfaces/thumbnail_plot.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    var img_root = &quot;https://gradientscience.org/assets/dataset-interfaces/demo_images/&quot;
+    var shifts = [&quot;and_a_flower&quot;, &quot;in_the_grass&quot;,	&quot;in_the_snow&quot;,	&quot;pencil_sketch&quot;,	&quot;in_the_beach&quot;,	&quot;in_the_forest&quot;,	&quot;in_the_rain&quot;,		&quot;oil_painting&quot;,	&quot;studio_lighting&quot;, &quot;at_night&quot;, &quot;in_bright_sunlight&quot;,  &quot;in_the_fog&quot;,];
+    var classes = [&quot;goldfinch&quot;, &quot;snail&quot;, &#39;eagle&#39;, &#39;german shepherd&#39;, &quot;arctic fox&quot;, &quot;monarch butterfly&quot;, &#39;hamster&#39;, &#39;panda&#39;, &#39;backpack&#39;, &quot;broom&quot;, &quot;desk&quot;, &quot;scooter&quot;, &quot;teapot&quot;, &quot;street sign&quot;, &quot;pineapple&quot;, &quot;pizza&quot;]
+    var classes_map = {
+        &quot;goldfinch&quot;: 11, &quot;snail&quot;: 113, &#39;eagle&#39;: 22, &#39;german shepherd&#39;: 235,
+        &quot;arctic fox&quot;: 279, &quot;monarch butterfly&quot;: 323, &#39;hamster&#39;: 333,
+        &#39;panda&#39;: 388, &#39;backpack&#39;: 414, &quot;broom&quot;: 462, &quot;desk&quot;: 526,
+        &quot;scooter&quot;: 670, &quot;teapot&quot;: 849, &quot;street sign&quot;: 919,
+        &quot;pineapple&quot;: 953, &quot;pizza&quot;: 963,
+    };
+    make_thumbnail_plot(&#39;bias_examples_widget&#39;, img_root, shifts, classes, classes_map);
+&lt;/script&gt;
+  </content>
+    <author>
+      <name>Gradient Science</name>
+      <uri>https://gradientscience.org/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">David Eppstein: Linkage partly from Barbados</title>
     <link href="https://11011110.github.io/blog/2023/02/15/linkage-partly-from.html"/>
     <id>https://11011110.github.io/blog/2023/02/15/linkage-partly-from</id>
@@ -1605,33 +1766,6 @@ effectiveness of our algorithm is verified on a dual-material printing platform
 that consists of a robotic arm and a newly designed dual-material extruder.
 Experiments have been successfully conducted on our system to fabricate a
 variety of freeform models.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: The Two-Squirrel Problem and Its Relatives</title>
-    <link href="http://arxiv.org/abs/2302.05937"/>
-    <id>http://arxiv.org/abs/2302.05937</id>
-    <updated>2023-02-14T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bereg_S/0/1/0/all/0/1&quot;&gt;Sergey Bereg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Higashikawa_Y/0/1/0/all/0/1&quot;&gt;Yuya Higashikawa&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Katoh_N/0/1/0/all/0/1&quot;&gt;Naoki Katoh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lafond_M/0/1/0/all/0/1&quot;&gt;Manuel Lafond&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tokuni_Y/0/1/0/all/0/1&quot;&gt;Yuki Tokuni&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhu_B/0/1/0/all/0/1&quot;&gt;Binhai Zhu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we start with a variation of the star cover problem called the
-Two-Squirrel problem. Given a set $P$ of $2n$ points in the plane, and two
-sites $c_1$ and $c_2$, compute two $n$-stars $S_1$ and $S_2$ centered at $c_1$
-and $c_2$ respectively such that the maximum weight of $S_1$ and $S_2$ is
-minimized. This problem is strongly NP-hard by a reduction from Equal-size
-Set-Partition with Rationals. Then we consider two variations of the
-Two-Squirrel problem, namely the Two-MST and Two-TSP problem, which are both
-NP-hard. The NP-hardness for the latter is obvious while the former needs a
-non-trivial reduction from Equal-size Set-Partition with Rationals. In terms of
-approximation algorithms, for Two-MST and Two-TSP we give factor 3.6402 and
-$4+\varepsilon$ approximations respectively. Finally, we also show some
-interesting polynomial-time solvable cases for Two-MST.
 &lt;/p&gt;
   </content>
     <author>
