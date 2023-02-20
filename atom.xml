@@ -10,6 +10,27 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-014 |  Depth-3 Circuit Lower Bounds for k-OV | 
+
+	Tameem  Choudhury, 
+
+	Karteek Sreenivasaiah</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/014"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/014</id>
+    <updated>2023-02-20T06:52:41+00:00</updated>
+    <content type="html" xml:lang="en">
+    The 2-Orthogonal Vectors (2-OV) problem is the following: given two tuples $A$ and $B$ of $n$ vectors each of dimension $d$, decide if there exists a vector $u\in A$, and $v\in B$ such that $u$ and $v$ are orthogonal. This problem, and its generalization $k$-OV defined analogously for $k$ tuples, are central problems in the area of fine-grained complexity. Informally speaking, one of the major conjectures in fine-grained complexity is that deciding $k$-OV requires time $\Omega(n^k d)$. In this paper, we are interested in unconditional lower bounds against $k$-OV, but for weaker models of computation than the general Turing Machine. In particular, we are interested in circuit lower bounds to computing $k$-OV by Boolean circuit families of depth 3 of the form OR-AND-OR, or equivalently, a disjunction of CNFs. We show that for all $k\leq d$, any disjunction of $t$-CNFs computing $k$-OV requires size $\Omega((n/t)^k)$.  In particular, when $k$ is a constant, any disjunction of $k$-CNFs computing $k$-OV needs to use $\Omega(n^k)$ CNFs. This matches the brute-force construction. Thus for each fixed $k\ge 2$, the complexity of computing $k$-OV as a disjunction of $k$-CNFs is $\Theta(n^k)$. Our results partially resolve a conjecture by Kane and Williams [16] (page 12, conjecture 10) about depth-3 $AC^0$ circuits computing 2-OV. As a secondary result, we show an exponential lower bound on the size of AND-OR-AND circuits computing 2-OV when $d$ is very large. Since 2-OV reduces to $k$-OV by projections trivially, this lower bound works against $k$-OV as well.
+
+Kane and Williams[16]: The orthogonal vectors conjecture for branching programs and formulas (ITCS 2019)
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Computational Complexity: It is  more important than ever to teach your students probability (even non-stem students)</title>
     <link href="https://blog.computationalcomplexity.org/2023/02/it-is-more-important-than-ever-to-teach.html"/>
     <id>tag:blogger.com,1999:blog-3722233.post-8028354533462632396</id>
@@ -2439,42 +2460,6 @@ The Division Director, Computing and Communication Foundations (CCF) of NSF: NSF
     <author>
       <name>ECCC Papers</name>
       <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Foundation of Data Science - Virtual Talk Series: Thursday, Feb 9th, 2023 — Amit Chakrabarti from Dartmouth College</title>
-    <link href="https://dstheory.wordpress.com/2023/02/04/thursday-feb-9th-2023-amit-chakrabarti-from-dartmouth-college/"/>
-    <id>http://dstheory.wordpress.com/?p=147</id>
-    <updated>2023-02-04T19:49:34+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;has-text-align-justify&quot;&gt;The next &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://sites.google.com/view/dstheory/home&quot; target=&quot;_blank&quot;&gt;Foundations of Data Science&lt;/a&gt; virtual talk series on recent advances in &lt;em&gt;adversarially robust streaming&lt;/em&gt; will take place on &lt;strong&gt;Thursday, February 9th&lt;/strong&gt; at &lt;strong&gt;2:00 PM Pacific Time&lt;/strong&gt; (17:00 Eastern Time, 23:59 Central European Time, 22:00 UTC). &lt;a href=&quot;http://www.cs.dartmouth.edu/~ac&quot;&gt;Amit Chakrabarti&lt;/a&gt; from&lt;strong&gt; Dartmouth College&lt;/strong&gt; will talk about &lt;em&gt;“How to color your adversary&amp;#8217;s graph”&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href=&quot;https://sites.google.com/view/dstheory&quot;&gt;Details of the talk (Zoom link) are available here.&lt;/a&gt;&lt;/p&gt;
-
-
-
-&lt;p class=&quot;has-text-align-justify&quot;&gt;An n-vertex graph with maximum degree D is (D+1)-colorable: an almost trivial combinatorial result, with an equally simple greedy algorithm to produce a (D+1)-coloring. However, given a stream of edges of such a graph, can we maintain a valid (D+1)-coloring as the edges arrive, while using not much more than O(n) space? What if the edges are chosen by an adversary who can look at our current coloring and add additional edges to try to confound us? This is the newly-popular setting of adversarially robust streaming algorithms and this talk is about the coloring problem in this setting.&lt;/p&gt;
-
-
-
-&lt;p class=&quot;has-text-align-justify&quot;&gt;We obtain upper and lower bound results for this problem. In O(n polylog n) space, we can maintain an O(D^(5/2))-coloring of such an adversarial graph. On the other hand, every adversarially robust coloring algorithm under the same space limitation must spend Omega(D^2) colors. We in fact prove more general. results that trade off the space usage against the color budget.&amp;nbsp; One interesting by-product of our work is that in combination with the celebrated Assadi-Chen-Khanna algorithm (SODA 2019), it provides the first separation between randomized and deterministic algorithms for the (ordinary, non-robust) streaming graph coloring problem.&lt;/p&gt;
-
-
-
-&lt;p&gt;Based on joint works [C.-Ghosh-Stoeckl] and [Assadi-C.-Ghosh-Stoeckl].&lt;/p&gt;
-
-
-
-&lt;p&gt;&amp;nbsp;The series is supported by the &lt;a href=&quot;https://www.nsf.gov/awardsearch/showAward?AWD_ID=1934846&amp;amp;HistoricalAwards=false&quot;&gt;NSF HDR TRIPODS Grant 1934846&lt;/a&gt;.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By dstheory&lt;/p&gt;
-  </content>
-    <author>
-      <name>Foundation of Data Science - Virtual Talk Series</name>
-      <uri>https://dstheory.wordpress.com</uri>
     </author>
   </entry>
 
