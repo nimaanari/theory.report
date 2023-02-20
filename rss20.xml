@@ -9,6 +9,31 @@
 
 
 <item>
+  <title>TR23-015 |  A Qubit, a Coin, and an Advice String Walk Into a Relational Problem | 
+
+	Scott Aaronson, 
+
+	Harry Buhrman, 
+
+	William Kretschmer</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/015</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/015</link>
+  <description>
+    Relational problems (those with many possible valid outputs) are different from decision problems, but it is easy to forget just how different.  This paper initiates the study of FBQP/qpoly, the class of relational problems solvable in quantum polynomial-time with the help of polynomial-sized quantum advice, along with its analogues for deterministic and randomized computation (FP, FBPP) and advice (/poly, /rpoly).
+
+Our first result is that FBQP/qpoly != FBQP/poly, unconditionally, with no oracle---a striking contrast with what we know about the analogous decision classes.  The proof repurposes the separation between quantum and classical one-way communication complexities due to Bar-Yossef, Jayram, and Kerenidis.  We discuss how this separation raises the prospect of near-term experiments to demonstrate &amp;quot;quantum information supremacy,&amp;quot; a form of quantum supremacy that would not depend on unproved complexity assumptions.
+
+Our second result is that FBPP is not contained in FP/poly---that is, Adleman&amp;#39;s Theorem fails for relational problems---unless PSPACE is contained in NP/poly.  Our proof uses IP=PSPACE and time-bounded Kolmogorov complexity.  On the other hand, we show that proving FBPP not in FP/poly will be hard, as it implies a superpolynomial circuit lower bound for PromiseBPEXP.
+
+We prove the following further results:
+* Unconditionally, FP != FBPP and FP/poly != FBPP/poly (even when these classes are carefully defined).
+* FBPP/poly = FBPP/rpoly (and likewise for FBQP).  For sampling problems, by contrast, SampBPP/poly != SampBPP/rpoly (and likewise for SampBQP).
+  </description>
+  <pubDate>2023-02-20 21:25:19 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>PhD position at Chalmers University of Technology (apply by March 13, 2023)</title>
   <guid>http://cstheory-jobs.org/2023/02/20/phd-position-at-chalmers-university-of-technology-apply-by-march-13-2023/</guid>
   <link>https://cstheory-jobs.org/2023/02/20/phd-position-at-chalmers-university-of-technology-apply-by-march-13-2023/</link>
@@ -2188,62 +2213,6 @@ The state I was in on the laptop did not work; the state was not one that allowe
   </description>
   <pubDate>2023-02-06 13:22:30 UTC</pubDate>
   <author>Richard Lipton</author>
-</item>
-
-<item>
-  <title>Nathan Never strikes back</title>
-  <guid>http://emanueleviola.wordpress.com/?p=1163</guid>
-  <link>https://emanueleviola.wordpress.com/2023/02/05/nathan-never-strikes-back/</link>
-  <description>
-    &lt;p&gt;&lt;a href=&quot;http://amiga-germany-fanzine.de/produkt/amiga-germany-fanzine-5/&quot;&gt;Amiga Germany Fan’zine – #5&lt;/a&gt; features &lt;a href=&quot;https://www.ccs.neu.edu/home/viola/#Nineties&quot;&gt;Nathan Never&lt;/a&gt;, 30 years after the game came out (the article is from some months ago, but I just found out).  You can read the article &lt;a href=&quot;https://www.ccs.neu.edu/home/viola/pix/nathan-never-press&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;My first day of high school I was looking for a desk, and the one that was left was occupied by &lt;a href=&quot;http://www.marcogenovesi.com/&quot;&gt;Marco Genovesi&lt;/a&gt; (also see &lt;a href=&quot;https://emanueleviola.wordpress.com/2016/12/10/black-viper/&quot;&gt;previous post about Black Viper&lt;/a&gt;, our other game together, also featured in article). We had both programmed a little the mythical C64.  I had written in basic a fighting game inspired by &lt;a href=&quot;https://emanueleviola.wordpress.com/2016/08/05/hokuto-no-ken-and-growing-up-in-italy/&quot;&gt;Hokuto No Ken&lt;/a&gt;. It was hand-coded pixellated sprites doing flying martial arts kicks.  It was on a cassette &amp;#8212; I didn&amp;#8217;t have a floppy disk. I would love to see it again, but it seems lost forever. It was my first game, written sometime when I was between 10 and 12.&lt;/p&gt;
-
-
-
-&lt;p&gt;If I think back at my schools, from elementary to high, I scream in horror.  There was &lt;em&gt;nothing&lt;/em&gt;.  No play-yard, no props, nothing.  Even the walls! How much does it cost to hang a world map? Instead they were solid color. We were 8-1 or something, every day, including Saturdays, in a room with solid color walls, solid color desks, and a blackboard, and that&amp;#8217;s it. Perhaps no wonder that I exercised my art and craft on what I had. I dismembered floppy disks, cassettes, speakers etc. and stuck them on the wall.  I scribbled all over my desk.&lt;/p&gt;
-
-
-
-&lt;p&gt;At some point I got an Amiga 1000 (my trajectory was Spectrum 48K, Commodore 64, Amiga 1000). Naturally I wanted to program, but had &lt;em&gt;zero &lt;/em&gt;leads.  Unlike today, it was very hard to get started.  Interestingly, people more experienced than me had the same complaint, like &amp;#8220;when I was 13 myself good luck finding an assembler.&amp;#8221; Actually, I think things will continue to move in this direction. Even today, learning something isn&amp;#8217;t that easy, and one can imagine how in 20 years you&amp;#8217;ll have tutorials precisely tailored to &lt;em&gt;your&lt;/em&gt; background, instead of having to zap through youtube to find the small step you&amp;#8217;re missing.&lt;br /&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;So for a while I was stuck fiddling with startup sequences and shell commands. I remember my parents puzzled at why I wasn&amp;#8217;t doing anything fancy like on the C64.&lt;br /&gt;&amp;#8220;You&amp;#8217;re still at &lt;em&gt;popcli&lt;/em&gt;&amp;#8221; (a type of shell, known back then as CLI, command line interface) they told me once &amp;#8212;  I am cursed with good memory.&lt;br /&gt;My reply was &amp;#8220;You need a program to write a program.&amp;#8221; They looked puzzled. (And so was I, after all, I didn&amp;#8217;t need one on the C64.)&lt;/p&gt;
-
-
-
-&lt;p&gt;My turning point occurred when I did one of my stupid things. I was balancing myself on the top beam of a swing. Naturally, I fell, didn&amp;#8217;t land right, and injured my ankle. I was stuck in my room for a month, and one day Marco showed up and brought me the &lt;em&gt;Amiga hardware reference manual&lt;/em&gt;, a book we had overheard was critical.  I thanked him and I remember him saying: &amp;#8220;I am doing it for me.&amp;#8221;  This book became my bible. I thrashed the stupid C compilers, got an assembler, and started &amp;#8220;bashing metal&amp;#8221; and having &lt;em&gt;fun&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;Then there was the store. I don&amp;#8217;t remember how I ended up there. It sold games, so maybe I was just there to buy games.  But I never bought a new game &amp;#8212; only pirate &amp;#8212; so the explanation doesn&amp;#8217;t stand.  Anyway, we were there and the person there was a techno-musician who knew people who wanted to make a game on Nathan Never, a pretty high-profile graphic novel series in Italy.&lt;/p&gt;
-
-
-
-&lt;p&gt;To this day I am shocked they didn&amp;#8217;t find anyone else, since as I said it&amp;#8217;s pretty high-profile. Maybe the programmer wanted too much money, or ditched them last moment and they needed the game fast. Who knows. I had just barely started programming on Amiga, but&amp;#8230; I know blitter, I know copper; I am obviously ready for a major project.&lt;/p&gt;
-
-
-
-&lt;p&gt;So we signed the contract, and I insisted on some money upfront which I got. A few Ks. The development of the game was covered in &lt;a href=&quot;https://www.ccs.neu.edu/home/viola/pix/nathan-never-press/&quot;&gt;games magazines, &lt;/a&gt;which other people in our high school were devouring. They were shocked to find out the team was us! Waking around, we would pass by a store and find the box of the game on display.&lt;/p&gt;
-
-
-
-&lt;p&gt;As part of my deal I managed to get an Amiga 3000 tower, a one-of-a-kind machine, which for a kid like me was a dream. Before that, I didn&amp;#8217;t have enough memory to play the game from the assembler with the graphics loaded, so when I tested it I would see dots instead of sprites.  Marco, who did the graphics, at the beginning didn&amp;#8217;t have a color monitor, and would pick colors from the hex code, quite cool.  I brought the 3000T to our vacation that summer, and instead of going to the sea (which I hated) I stayed indoor to program.  Naturally, I spent 50% (easily) of that time programming a script that would compile an animation through a landscape of fractal mountains. The final animation was quite cool.&lt;/p&gt;
-
-
-
-&lt;p&gt;I wish the game was more fun to play.  It isn&amp;#8217;t really my fault: no experience, no time, and crucially the people who imposed the game design on us were not players but exclusively concerned with showing the main character, whose frames occupy most of the memory. More than the game they cared about the graphic novel that came with it in the box.  Of all the people buzzing around the game, I was the only one who actually played computer games (I still do).  Still, of course, I could have improved the gameplay.  Instead, on an ultra-tight deadline, I decided to embark on a 3D &amp;#8220;escape from the tunnel&amp;#8221; last level, something they didn&amp;#8217;t ask for (they were happy with an animation, which would have cost me zero effort) and that probably almost noone has seen, since to get there you need to beat two grueling platform levels a puzzle level, with one life and no save state.  (The 3D level starts at 20:09 in &lt;a href=&quot;https://www.ccs.neu.edu/home/viola/movies/NathanNever.mp4&quot;&gt;this long play&lt;/a&gt;.) And this is what it means to be 14.&lt;/p&gt;
-
-
-
-&lt;p&gt;On the bright side, however, perhaps the game has its unique charm, and today it can be played on a hard disk through the emulator, even though the game was not designed to be installed on a hard disk.  And this is great because playing the game from the disks is &lt;em&gt;really&lt;/em&gt; painful, despite or in part because of a crazy color hack to make a 3D &amp;#8220;change disk&amp;#8221; message (another uncalled-for feature). And it&amp;#8217;s a good feeling that after 30+ years some people are still watching and playing the game.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Manu&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-05 16:17:22 UTC</pubDate>
-  <author>Emanuele Viola</author>
 </item>
 
 </channel>
