@@ -125,6 +125,186 @@ We prove the following further results:
 </item>
 
 <item>
+  <title>Geometric graphs with unbounded flip-width</title>
+  <guid>https://11011110.github.io/blog/2023/02/20/geometric-graphs-unbounded</guid>
+  <link>https://11011110.github.io/blog/2023/02/20/geometric-graphs-unbounded.html</link>
+  <description>
+    &lt;p&gt;At the recent &lt;a href=&quot;https://wogag.org/&quot;&gt;Workshop on Geometry and Graphs&lt;/a&gt; in Barbados, most of the technical activity involved working in small groups on research problems, but there was also a nice survey talk by &lt;a href=&quot;https://web.math.princeton.edu/~rm1850/&quot;&gt;Rose McCarty&lt;/a&gt; on flip-width.&lt;sup id=&quot;fnref:r&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:r&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; This is a new and very general notion of width in graphs, introduced by &lt;a href=&quot;https://www.mimuw.edu.pl/~szymtor/&quot;&gt;Szymon Toruńczyk&lt;/a&gt;.&lt;sup id=&quot;fnref:t&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:t&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; It is defined in terms of a certain cops-and-robbers game on graphs, and intended to capture the structure inherent in many types of graphs and to unify &lt;a href=&quot;https://en.wikipedia.org/wiki/Bounded_expansion&quot;&gt;bounded expansion&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Twin-width&quot;&gt;twin-width&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For instance, many algorithmic graph problems, such as searching for small patterns in larger graphs (“&lt;a href=&quot;https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem&quot;&gt;subgraph isomorphism&lt;/a&gt;”) can be formulated more abstractly in terms of of checking whether a graph models a given formula in the first-order &lt;a href=&quot;https://en.wikipedia.org/wiki/Logic_of_graphs&quot;&gt;logic of graphs&lt;/a&gt;. Such problems are &lt;a href=&quot;https://en.wikipedia.org/wiki/Parameterized_complexity&quot;&gt;fixed-parameter tractable&lt;/a&gt; when parameterized either by expansion or twin-width, and it is hoped that the same thing will extend to flip-width. Very recent partial results in this direction extend model checking algorithms from bounded expansion to “structurally nowhere dense classes”,&lt;sup id=&quot;fnref:dms&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:dms&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; but these classes do not even include everything with bounded twin-width, let alone flip-width.&lt;/p&gt;
+
+&lt;p&gt;For the purposes of this post, the only thing we need to know about bounded expansion is that graph families with this property must be sparse: in their graphs, the number of edges must be at most linear in the number of vertices.&lt;sup id=&quot;fnref:no&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:no&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; On the other hand, although graph families with bounded twin-width can be dense, they are limited in a different way: the number of graphs in the family, on a set of \(n\) unlabeled vertices, can only be singly exponential &lt;span style=&quot;white-space:nowrap&quot;&gt;in \(n\).&lt;sup id=&quot;fnref:st&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:st&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt; One way to get a family of graphs that have bounded flip-width but not bounded expansion nor bounded twin-width is to take the union of two families, one dense with bounded twin-width and the other numerous with bounded expansion. For instance, take the graphs that are either &lt;a href=&quot;https://en.wikipedia.org/wiki/Cograph&quot;&gt;cographs&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Cubic_graph&quot;&gt;3-regular&lt;/a&gt;. But this is not a very natural family of graphs. Rose asked: is there a natural family of graphs with bounded flip-width but unbounded twin-width and expansion? For instance, there are many standard types of geometric graphs for which the twin-width and expansion are unbounded; could any of these have bounded flip-width?&lt;/p&gt;
+
+&lt;h1 id=&quot;cops-and-robbers&quot;&gt;Cops and robbers&lt;/h1&gt;
+
+&lt;p&gt;Like &lt;a href=&quot;https://en.wikipedia.org/wiki/Treewidth&quot;&gt;treewidth&lt;/a&gt; and bounded expansion, flip-width can be defined using a certain &lt;a href=&quot;https://en.wikipedia.org/wiki/Pursuit%E2%80%93evasion&quot;&gt;cops-and-robbers game&lt;/a&gt; on graphs.&lt;sup id=&quot;fnref:t:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:t&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;The games used for treewidth and expansion involve “cops with helicopters”, chasing a robber on a given graph. At each point in the game, the cops occupy a limited number of graph vertices. Then, at each move, the cops announce where they will move next, the robber moves to escape them along a path through the currently-unoccupied vertices, and then the cops fly directly to their new locations. The cops win if one of them lands on the robber’s current vertex, and the robber wins by evading the cops indefinitely. The treewidth of a graph is the maximum number of cops that a robber can evade, moving arbitrarily far on each move. A family of graphs has bounded expansion if and only if there is some function \(f\) such that only \(f(r)\) cops are needed to catch a robber who can move at most \(r\) steps per move.&lt;sup id=&quot;fnref:t2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:t2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;As Rose described, the same game can be described in a different way. Instead of occupying a vertex, the cops set up roadblocks on all the edges incident to it. On each move, the cops announce which vertices will be blockaded next. Then, the robber moves along un-blockaded edges. Finally, the cops remove their current blockades and put up new blockades at the vertices they announced. The cops win by leaving the robber at an isolated vertex, unable to move.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/roadblock.jpg&quot; alt=&quot;Police roadblock in Washington, DC, January 15, 2021&quot; title=&quot;CC-BY image by Mike Licht from Wikimedia commons, File:Inaugural preparation, January 15th Roadblock (50840138737).jpg&quot; style=&quot;width:100%;max-width:540px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flip-width is defined in the same way, but with more powerful cops. Instead of blockading a single vertex, they are allowed to perform a “flip” of a subset of vertices. This complements the subgraph within that subset: pairs of vertices that were connected become disconnected, and vice versa. So blockading a single vertex, for instance, can be accomplished by two flips: one flip of the vertex and its neighbors, and one flip of just the neighbors. The first flip disconnects the given vertex, and the second flip restores the original connectivity among the neighboring vertices. It doesn’t matter in which order these two flips (or any set of flips) is performed.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/flip-isolate.svg&quot; alt=&quot;Isolating a vertex by two flips&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the flipping game used to define flip-width, at any point in the game, the cops will have performed some limited number of flips. Then in each move, the cops announce which sets of vertices they will flip next. The robber moves along a path in the current flipped graph, to evade these flips. Then, the cops undo their current flips and perform the new flips that they announced. The cops win if they leave the robber at an isolated vertex, unable to move, and the robber wins by avoiding this fate indefinitely. A family of graphs has bounded flip-width if there is some function \(f\) such that only \(f(r)\) flips per move are needed to catch a robber who can move at most \(r\) steps per move.&lt;/p&gt;
+
+&lt;p&gt;For the purposes of having bounded flip-width, two graphs that differ from each other only by a finite number \(\varphi\) of flips are essentially the same. If the cops can win on one, they can win on the other with only \(\varphi\) more flips per move. They only need to start by performing those \(\varphi\) flips to convert the second graph into the first one, and then leave those flips in place while they perform the winning strategy on the converted graph. So, for instance, the graphs that differ by a single flip from a 3-regular graph have bounded flip-width, but are again not a very natural class of graphs.&lt;/p&gt;
+
+&lt;h1 id=&quot;interchanges&quot;&gt;Interchanges&lt;/h1&gt;
+
+&lt;p&gt;Continuing the road network metaphor, and in the spirit of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Haven_(graph_theory)&quot;&gt;havens&lt;/a&gt; used to model escape strategies in the treewidth game, let’s define a structure I call an &lt;em&gt;interchange&lt;/em&gt;, having pairwise connections between many points, which a robber can use to make a getaway from few enough cops.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2017/HighFive.jpg&quot; alt=&quot;High Five Interchange at the intersection of I-635 and U.S. Route 75 in Dallas, Texas, looking towards the southwest&quot; title=&quot;cropped from https://commons.wikimedia.org/wiki/File:High_Five.jpg by fatguyinalittlecoat on flickr, under a CC-BY 2.0 license&quot; style=&quot;width:100%;max-width:540px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;More precisely, define an interchange of order \(n\) to consist of the following components:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Certain designated vertices, which we call &lt;em&gt;lanes&lt;/em&gt;. The interchange should have \(n\) lanes, arranged into a sequence. These are colored blue in the following illustrations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;More designated vertices, called &lt;em&gt;ramps&lt;/em&gt;. Each ramp is associated with a pair of lanes. When two lanes are \(n-3\) or fewer steps apart in the sequence, they have an associated ramp. (We don’t require ramps for pairs of the outermost lanes because they would not be helpful to the robber in the game.) The ramps are colored red in the following illustrations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;An edge between each ramp and its two associated lanes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Optional edges between any two lanes or between any two ramps. These will be unused by the robber and do not affect the robber’s strategy. The optional edges mean that the class of all interchanges is huge, too large to have bounded twin-width. But more importantly for us, they allow us to construct geometric realizations of these graphs without worrying about whether or not the construction causes certain pairs of vertices to become adjacent.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For a ramp that connects lanes \(x\) and \(y\), optional edges to other lanes between \(x\) and \(y\) in the sequence (edges to lanes outside that range are not allowed).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The image below shows an example, with the lanes blue, ramps red, optional edges yellow, and required edges black. The blue lanes are ordered in a sequence from left to right, but otherwise the placement of vertices is not meaningful; it’s the graph structure that matters.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/5-interchange.svg&quot; alt=&quot;Interchange of order 5&quot; style=&quot;width:100%;max-width:540px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As we show next, large-enough interchanges can be used by the robber to escape any fixed number of cops.&lt;/p&gt;
+
+&lt;h1 id=&quot;escaping-through-junctions&quot;&gt;Escaping through junctions&lt;/h1&gt;
+
+&lt;p&gt;Call a set of lanes &lt;em&gt;equivalent&lt;/em&gt;, after certain flips have been made, if they are all treated the same by each flip: all included in the flipped set, or all excluded.
+Define a &lt;em&gt;junction&lt;/em&gt; to be a triple of equivalent lanes that are connected to each other by paths through one or two ramps, after the flips are made. Then:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Every four equivalent lanes have at least one junction. For, if the lanes are \(a,b,c,d\) (in sequence order) then the &lt;span style=&quot;white-space:nowrap&quot;&gt;\(a\)–\(b\)&lt;/span&gt; ramp either continues to connect \(a\) to \(b\), or it is flipped and instead connects &lt;span style=&quot;white-space:nowrap&quot;&gt;\(c\) to \(d\).&lt;/span&gt; A third connection is provided either by the &lt;span style=&quot;white-space:nowrap&quot;&gt;\(b\)–\(c\)&lt;/span&gt; ramp or its flip, which connects &lt;span style=&quot;white-space:nowrap&quot;&gt;\(a\) to \(d\).&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In every six equivalent lanes, at least three of the lanes belong to two otherwise-disjoint junctions. I’ll skip the messy case analysis showing this.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Every two junctions are connected by at least one ramp between two of their lanes. If the junctions are \(a,b,c\) and \(d,e,f\), listed in the sequence order of all the lanes, then they have either \(a,b,e,f\) or \(d,e,b,c\) as a subsequence (depending on the ordering between &lt;span style=&quot;white-space:nowrap&quot;&gt;\(b\) and \(e\)).&lt;/span&gt; In either case they are connected by the &lt;span style=&quot;white-space:nowrap&quot;&gt;\(b\)–\(e\)&lt;/span&gt; ramp or its flip.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;By the same argument, every two triples of equivalent lanes are connected by at least one ramp.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These connections imply that, in an interchange that is big enough to guarantee the existence of junctions, the robber can win by always moving to a lane that will become part of a junction after the announced flips happen.&lt;/p&gt;
+
+&lt;p&gt;In more detail, suppose that the cops and a robber play the flipping game, with \(t\) flips per move and \(r\ge 6\), and that the graph includes an interchange of &lt;span style=&quot;white-space:nowrap&quot;&gt;order \(3\cdot 2^{2t}+1\).&lt;/span&gt; This interchange is big enough to ensure that some four lanes are equivalent both in the current and announced set of flips. These four lanes include a junction under the announced flips. The robber can move to this new junction using at most two ramps within the current junction and then one more ramp to cross between the two triples of lanes. With an interchange that is a little larger, of &lt;span style=&quot;white-space:nowrap&quot;&gt;order \(5\cdot 2^{2t}+1\),&lt;/span&gt; the robber can win with \(r\ge 4\), by moving to a lane that will become part of two otherwise-disjoint junctions, so that two other equivalent lanes will be reachable by only one ramp.&lt;/p&gt;
+
+&lt;p&gt;This strategy shows that, if a graph class contains arbitrarily large interchanges, it does not have bounded flip-width. We will use this idea to show that many natural classes of geometric graphs do not have bounded flip-width.&lt;/p&gt;
+
+&lt;h1 id=&quot;geometric-graphs&quot;&gt;Geometric graphs&lt;/h1&gt;
+
+&lt;p&gt;In each of the following types of geometric graph, it is possible to form arbitrarily large interchanges, as illustrated.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Interval_graph&quot;&gt;Interval graphs&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Permutation_graph&quot;&gt;permutation graphs&lt;/a&gt;. Just make a left-to-right sequence of small disjoint blue intervals for the lanes, and connect them by longer red intervals for the ramps. Each red interval contains all of the blue intervals that it intersects, and permutation graphs are the same thing as &lt;a href=&quot;https://www.graphclasses.org/classes/gc_288.html&quot;&gt;interval containment graphs&lt;/a&gt;. In contrast, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Indifference_graph&quot;&gt;unit interval graphs&lt;/a&gt; are known to have bounded twin-width,&lt;sup id=&quot;fnref:tw3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:tw3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; from which it follows that they also have bounded flip-width.&lt;/p&gt;
+
+    &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/interval-interchange.svg&quot; alt=&quot;Interval graph forming an interchange of order 6&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Circle graphs. These have the permutation graphs as a special case, but there’s also a direct construction.&lt;/p&gt;
+
+    &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/circle-interchange.svg&quot; alt=&quot;Circle graph forming an interchange of order 6&quot; style=&quot;width:100%;max-width:540px&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Intersection graphs of axis-aligned line segments, no two collinear. Use long horizontal segments for the lanes, ordered vertically, and span them by vertical ramps.&lt;/p&gt;
+
+    &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/line-segment-interchange.svg&quot; alt=&quot;Axis-aligned line segments forming an interchange of order 6&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Intersection graphs of axis-parallel unit squares. Place the blue lane squares with their top right corners on a diagonal line, close enough together that any consecutive interval of them can be covered by a red ramp square.&lt;/p&gt;
+
+    &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/square-interchange.svg&quot; alt=&quot;Squares forming an interchange of order 6&quot; style=&quot;width:100%;max-width:540px&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unit disk graphs. This one is unfortunately difficult to see clearly because the details are tiny with respect to the overall form, even for the \(n=6\) example shown. Anyway, place \(n\) blue unit disks tangent to the outside of a circle of radius \(1+\varepsilon\) (yellow in the figure), so that their points of tangencies span an arc of diameter less than \(2\). Then place red unit disks with their centers inside the yellow circle, so that their intersections with the circle form arcs that look like the interval graph model above. Because their radius is smaller than the yellow circle, the red disks will bulge out of the yellow circle a little bit. They intersect the blue points of tangency in the pattern that we want, but the parts that bulge out may have some unwanted contacts with the other blue disks. To prevent this, make \(\varepsilon\) very small. As you decrease \(\varepsilon\), the red bulges will shrink towards the yellow circle, but the blue disks won’t change their positions or angles very much, so for sufficiently small values of \(\varepsilon\) there will be no unwanted contacts.&lt;/p&gt;
+
+    &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/disk-interchange.svg&quot; alt=&quot;Unit disks forming an interchange of order 6&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unit distance graphs. Place the blue vertices equally spaced along an interval of length less than two and the red vertices that connect them on the points where unit circles centered on the blue vertices cross each other.&lt;/p&gt;
+
+    &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/unit-distance-interchange.svg&quot; alt=&quot;Unit distance graph forming an interchange of order 6&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Visibility graphs of simple polygons. Place the blue vertices in sequence order on a horizontal line, the red vertices that connect pairs of consecutive blue vertices in order on a parallel line above them, and the remaining red vertices in an arbitrary order on a parallel line below them. Draw a triangle between each red vertex and the two blue vertices it should connect, and take the union of the triangles. Fill any holes that might have been formed in taking the union. The resulting polygon has additional vertices but that doesn’t affect the existence of an interchange. (This construction is simplified from an earlier construction by Rose, of visibility graphs that can be flipped to contain subdivisions of complete graphs.)&lt;/p&gt;
+
+    &lt;p&gt;Visibility graphs are &lt;a href=&quot;https://en.wikipedia.org/wiki/Cop-win_graph&quot;&gt;cop-win graphs&lt;/a&gt;, meaning that a single cop wins a different cop-and-robber game in which both players can either move along a graph edge or stand still.&lt;sup id=&quot;fnref:lsv&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:lsv&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; But this doesn’t say anything about the flipping game: any graph can be made into a cop-win graph by adding a single &lt;a href=&quot;https://en.wikipedia.org/wiki/Universal_vertex&quot;&gt;universal vertex&lt;/a&gt;, without changing whether it has bounded flip-width.&lt;/p&gt;
+
+    &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/visibility-interchange.svg&quot; alt=&quot;Polygon whose visibility graph forms an interchange of order 6&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Four-dimensional convex polytopes. I’m not even going to try to draw this one, but the construction is easy to describe in words. Just take the &lt;a href=&quot;https://en.wikipedia.org/wiki/Barycentric_subdivision&quot;&gt;barycentric subdivision&lt;/a&gt; of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Neighborly_polytope&quot;&gt;neighborly polytope&lt;/a&gt;. Neighborly polytopes have edges and vertices forming complete graphs; the barycentric subdivision of any polytope is another polytope.&lt;sup id=&quot;fnref:es&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:es&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; It has a vertex for each face of the original polytope, and an edge for each incidence between faces of different dimensions. Arrange the vertices of the neighborly polytope into an arbitrary sequence as lanes; use the subdivision vertices coming from its edges as ramps. In this way the ramps will be connected only to their two associated lanes and to other subdivision points, but not to any other lanes.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;where-now&quot;&gt;Where now?&lt;/h1&gt;
+
+&lt;p&gt;We’re still missing a natural class of graphs with bounded flip-width, unbounded twin-width, and unbounded expansion. The known classes of geometric graphs looked promising as a direction to look for such classes, but these constructions rule that out in surprisingly many cases.&lt;/p&gt;
+
+&lt;p&gt;It still might be possible that the number of cops needed to catch a robber on these graphs could be low. The interchange construction only proves that it is at least logarithmic. But I don’t know of any useful algorithmic consequences of having a low but unbounded number of cops needed to catch a bounded-speed robber.&lt;/p&gt;
+
+&lt;h1 id=&quot;notes-and-references&quot;&gt;Notes and references&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:r&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Rose also helped me edit a preliminary version of this post. Thanks, Rose! Any remaining errors are my fault. &lt;a href=&quot;#fnref:r&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:t&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Szymon Toruńczyk (2023), “Flip-width: cops and robber on dense graphs”, &lt;a href=&quot;https://arxiv.org/abs/2302.00352&quot;&gt;arXiv:2302.00352&lt;/a&gt; &lt;a href=&quot;#fnref:t&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:t:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:dms&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Jan Dreier, Nikolas Mählmann, and Sebastian Siebertz (2023), “First-order model checking on structurally sparse graph classes”, &lt;a href=&quot;https://arxiv.org/abs/2302.03527&quot;&gt;arXiv:2302.03527&lt;/a&gt; &lt;a href=&quot;#fnref:dms&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:no&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Jaroslav Nešetřil and Patrice Ossona de Mendez (2012), “5.5: Classes with bounded expansion”, &lt;em&gt;Sparsity: Graphs, Structures, and Algorithms&lt;/em&gt;, pp. 104–107, Springer, Algorithms and Combinatorics, vol. 28, &lt;a href=&quot;https://doi.org/10.1007/978-3-642-27875-4&quot;&gt;doi:10.1007/978-3-642-27875-4&lt;/a&gt; &lt;a href=&quot;#fnref:no&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:st&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Pierre Simon and Szymon Toruńczyk (2021), “Ordered graphs of bounded twin-width”, &lt;a href=&quot;https://arxiv.org/abs/2102.06881&quot;&gt;arXiv:2102.06881&lt;/a&gt; &lt;a href=&quot;#fnref:st&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:t2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;See Corollary 3.6 of Toruńczyk (2023)&lt;sup id=&quot;fnref:t:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:t&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;a href=&quot;#fnref:t2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:tw3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;See Lemma 13 of  Édouard Bonnet, Colin Geniet, Eun Jung Kim, Stéphan Thomassé, and Rémi Watrigant, “Twin-width III: Max Independent Set and Coloring”, &lt;a href=&quot;https://arxiv.org/abs/2007.14161v2&quot;&gt;arXiv:2007.14161v2&lt;/a&gt; (this lemma is not in the &lt;em&gt;ICALP&lt;/em&gt; 2021 version and numbered differently in other arXiv versions) &lt;a href=&quot;#fnref:tw3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:lsv&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Anna Lubiw, Jack Snoeyink, and Hamideh Vosoughpour (2017), “Visibility graphs, dismantlability, and the cops and robbers game”, &lt;em&gt;CGTA&lt;/em&gt; 66: 14–27, &lt;a href=&quot;https://arxiv.org/abs/1601.01298&quot;&gt;arXiv:1601.01298&lt;/a&gt; &lt;a href=&quot;#fnref:lsv&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:es&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Günter Ewald and Geoffrey C. Shephard (1974), “Stellar subdivisions of boundary complexes of convex polytopes”, &lt;em&gt;Math. Ann.&lt;/em&gt; 210: 7–16, &lt;a href=&quot;https://doi.org/10.1007/BF01344542&quot;&gt;doi:10.1007/BF01344542&lt;/a&gt;. &lt;a href=&quot;#fnref:es&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109901138706218444&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-20 21:20:00 UTC</pubDate>
+  <author>David Eppstein</author>
+</item>
+
+<item>
   <title>PhD position at Chalmers University of Technology (apply by March 13, 2023)</title>
   <guid>http://cstheory-jobs.org/2023/02/20/phd-position-at-chalmers-university-of-technology-apply-by-march-13-2023/</guid>
   <link>https://cstheory-jobs.org/2023/02/20/phd-position-at-chalmers-university-of-technology-apply-by-march-13-2023/</link>
@@ -1959,58 +2139,6 @@ A PDF version of this post will be published with a delay, but if you’d like t
   </description>
   <pubDate>2023-02-09 14:06:22 UTC</pubDate>
   <author>Emanuele Viola</author>
-</item>
-
-<item>
-  <title>News for January 2023</title>
-  <guid>https://ptreview.sublinear.info/?p=1824</guid>
-  <link>https://ptreview.sublinear.info/2023/02/news-for-january-2023/</link>
-  <description>
-    &lt;p&gt;Welcome to the first batch of 2023. Looks like it&amp;#8217;s going to be a good year, with 5 property testing or related papers (that I could find) already: &lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;An efficient asymmetric removal lemma and its limitations&lt;/strong&gt;, by Lior Gishboliner, Asaf Shapira, and Yuval Wigderson (&lt;a href=&quot;https://arxiv.org/abs/2301.07693&quot;&gt;arXiv&lt;/a&gt;). One of the jewels of graph property testing is the triangle removel lemma (and its many generalizations and variants), which relates the number of triangles in a dense graph to its distance from being triangle-free: namely, any graph \(\varepsilon\)-far from being triangle-free must have \(\delta(\varepsilon)n^3\) triangles, where the density \(\delta(\varepsilon)\) only depends on the distance (and not the size of the graph!). This immediately leads to constant-query testers (and even &amp;#8220;proximity-oblivious&amp;#8221; testers) for triangle-freness (and, more generally, pattern-freeness). Unfortunately, the dependence on \(\varepsilon\) is quite bad, essentially a tower-type function (and it is known no polynomial bound is possible). This work attempts to bypass this impossibility result by proving an asymmetric removal lemma, or the form &amp;#8220;any graph \(\varepsilon\)-far from being triangle-free must have \(\mathrm{poly}(\varepsilon)n^5\) 5-cycles&amp;#8221; (and generalizations beyond triangles). This seems like a very interesting direction, with potential applications to property testing, and (who knows!) efficient testers for many properties hithertho only known to be (practically) testable for constant \(\varepsilon\).&lt;/p&gt;
-
-
-
-&lt;p&gt;Related (more removal lemmata!), a different work on this topic:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;The Minimum Degree Removal Lemma Thresholds&lt;/strong&gt;, by Lior Gishboliner, Zhihan Jin, and Benny Sudakov (&lt;a href=&quot;https://arxiv.org/abs/2301.13789&quot;&gt;arXiv&lt;/a&gt;). As mentioned above, removal lemmata relate the distance \(\varepsilon\) from being \(H\)-free (for a given subgraph \(H\)) to the density \(\delta(\varepsilon)\) of occurrences of \(H\) in the graph. Sadly, it is known that this density will be superpolynomial (in the distance) unless \(H\) is bipartite… which, while technically still yielding testing algorithms (query complexity independent of the size of the graph!), yields very inefficient testers (very bad dependence on \(\varepsilon\)!). This paper studies one direction to bypass this sad state of affairs: under which additional assumption on the underlying graph (specifically, bounds on its minimum degree) can we obtain a polynomial bound on \(\delta(\varepsilon)\)? And a linear bound? The authors give a tight degree condition for \(\delta(\varepsilon)\) to be polynomial when \(H\) is an odd cycle, and their results for the linear-dependence case establishes a separation between the two. Put differently: obtaining polynomial-query testers via removal lemmas is possible for a strictly larger class of graphs than linear-query ones!&lt;/p&gt;
-
-
-
-&lt;p&gt;And now, for something completely different: testing binary matrices!&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;A Note on Property Testing of the Binary Rank&lt;/strong&gt;, by Nader H. Bshouty (&lt;a href=&quot;https://arxiv.org/abs/2301.04406&quot;&gt;arXiv&lt;/a&gt;). The binary rank of a matrix \(M\in\{0,1\}^{n\times m}\) is the smallest \(d\) such that there exist \(A\in\{0,1\}^{n\times d}\) and \(B\in\{0,1\}^{d\times m}\) with \(M=AB\); this can also be seen as the minimal number of bipartite cliques needed to partition the edges of a bipartite graph represented by \(M\). One can also define the relaxed notion of \(s\)-binary rank, if one enforces that each edge of the bipartite graph is covered by at most \(s\) bipartite cliques. The property testing question is then to decide, given inputs \(s,d,\varepsilon\), if \(M\) has \(s\)-binary rank at most \(d\), or is \(\varepsilon\)-far from it. The main result of this note is to give one-sided testers (one adaptive, and one non-adaptive) for \(s\)-binary rank with query complexity \(\tilde{O}(2^d)\) (for constant \(s\)), improving on the previous algorithms by a factor \(2^d\).&lt;/p&gt;
-
-
-
-&lt;p&gt;Into the quantum realm!&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Testing quantum satisfiability,&lt;/strong&gt; by Ashley Montanaro, Changpeng Shao, and Dominic Verdon (&lt;a href=&quot;https://arxiv.org/abs/2301.10699&quot;&gt;arXiv&lt;/a&gt;). Classically, one can study the property version of \(k\)-SAT, which asks to decide whether a given instance is satisfiable or far from being so. And people (namely, Alon and Shapira, in 2003) did! Quantumly, one can define an analogue of \(k\)-SAT, &amp;#8220;quantum \(k\)-SAT&amp;#8221;: and people (namely, Bravyi, in 2011) did! But what about property testing of quantum \(k\)-SAT? Well, now, people (namely, the authors of this paper) just did! Showing (Corollary 1.10) that one can efficiently distinguish between (1) the quantum \(k\)-SAT is satisfiable, and (2) it is far from satisfiable by a product state. This, effectively, extends the result of Alon–Shapira&amp;#8217;03 to the quantum realm.&lt;/p&gt;
-
-
-
-&lt;p&gt;And to conclude, a foray into reinforcement learning via distribution testing…&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Lower Bounds for Learning in Revealing POMDPs&lt;/strong&gt;, by Fan Chen, Huan Wang, Caiming Xiong, Song Mei, and Yu Bai (&lt;a href=&quot;https://arxiv.org/abs/2302.01333&quot;&gt;arXiv&lt;/a&gt;). Alright, I&amp;#8217;m even more out of my depth than usual here, so I&amp;#8217;ll just copy (part of) the abstract, for fear I don&amp;#8217;t do justice to the authors&amp;#8217; work: &amp;#8220;This paper studies the fundamental limits of reinforcement learning (RL) in the challenging &lt;em&gt;partially observable&lt;/em&gt; setting. While it is well-established that learning in Partially Observable Markov Decision Processes (POMDPs) requires exponentially many samples in the worst case, a surge of recent work shows that polynomial sample complexities are achievable under the &lt;em&gt;revealing condition&lt;/em&gt; &amp;#8212; A natural condition that requires the observables to reveal some information about the unobserved latent states. However, the fundamental limits for learning in revealing POMDPs are much less understood, with existing lower bounds being rather preliminary and having substantial gaps from the current best upper bounds. We establish strong PAC and regret lower bounds for learning in revealing POMDPs. […] &lt;strong&gt;Technically, our hard instance construction adapts techniques in distribution testing, which is new to the RL literature and may be of independent interest.&lt;/strong&gt;&amp;#8221; (Emphasis mine)&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Clement Canonne&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-08 06:04:08 UTC</pubDate>
-  <author>Property Testing Review</author>
 </item>
 
 </channel>
