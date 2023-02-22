@@ -9,6 +9,441 @@
 
 
 <item>
+  <title>A Qubit, a Coin, and an Advice String Walk Into a Relational Problem</title>
+  <guid>http://arxiv.org/abs/2302.10332</guid>
+  <link>http://arxiv.org/abs/2302.10332</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Aaronson_S/0/1/0/all/0/1&quot;&gt;Scott Aaronson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Buhrman_H/0/1/0/all/0/1&quot;&gt;Harry Buhrman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Kretschmer_W/0/1/0/all/0/1&quot;&gt;William Kretschmer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Relational problems (those with many possible valid outputs) are different
+from decision problems, but it is easy to forget just how different. This paper
+initiates the study of FBQP/qpoly, the class of relational problems solvable in
+quantum polynomial-time with the help of polynomial-sized quantum advice, along
+with its analogues for deterministic and randomized computation (FP, FBPP) and
+advice (/poly, /rpoly).
+&lt;/p&gt;
+&lt;p&gt;Our first result is that FBQP/qpoly != FBQP/poly, unconditionally, with no
+oracle -- a striking contrast with what we know about the analogous decision
+classes. The proof repurposes the separation between quantum and classical
+one-way communication complexities due to Bar-Yossef, Jayram, and Kerenidis. We
+discuss how this separation raises the prospect of near-term experiments to
+demonstrate &quot;quantum information supremacy,&quot; a form of quantum supremacy that
+would not depend on unproved complexity assumptions.
+&lt;/p&gt;
+&lt;p&gt;Our second result is that FBPP is not contained in FP/poly -- that is,
+Adleman&#39;s Theorem fails for relational problems -- unless PSPACE is contained
+in NP/poly. Our proof uses IP=PSPACE and time-bounded Kolmogorov complexity. On
+the other hand, we show that proving FBPP not in FP/poly will be hard, as it
+implies a superpolynomial circuit lower bound for PromiseBPEXP.
+&lt;/p&gt;
+&lt;p&gt;We prove the following further results: * Unconditionally, FP != FBPP and
+FP/poly != FBPP/poly (even when these classes are carefully defined). *
+FBPP/poly = FBPP/rpoly (and likewise for FBQP). For sampling problems, by
+contrast, SampBPP/poly != SampBPP/rpoly (and likewise for SampBQP).
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>A note on the partition bound for one-way classical communication complexity</title>
+  <guid>http://arxiv.org/abs/2302.10431</guid>
+  <link>http://arxiv.org/abs/2302.10431</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arunachalam_S/0/1/0/all/0/1&quot;&gt;Srinivasan Arunachalam&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doriguello_J/0/1/0/all/0/1&quot;&gt;Jo&amp;#xe3;o F. Doriguello&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jain_R/0/1/0/all/0/1&quot;&gt;Rahul Jain&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a linear program for the one-way version of the partition bound
+(denoted $\mathsf{prt}^1_\varepsilon(f)$). We show that it characterizes
+one-way randomized communication complexity $\mathsf{R}_\varepsilon^1(f)$ with
+shared randomness of every partial function
+$f:\mathcal{X}\times\mathcal{Y}\to\mathcal{Z}$, i.e., for
+$\delta,\varepsilon\in(0,1/2)$, $\mathsf{R}_\varepsilon^1(f) \geq
+\log\mathsf{prt}_\varepsilon^1(f)$ and $\mathsf{R}_{\varepsilon+\delta}^1(f)
+\leq \log\mathsf{prt}_\varepsilon^1(f) + \log\log(1/\delta)$. This improves
+upon the characterization of $\mathsf{R}_\varepsilon^1(f)$ in terms of the
+rectangle bound (due to Jain and Klauck, 2010) by reducing the additive
+$O(\log(1/\delta))$-term to $\log\log(1/\delta)$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Lasserre Hierarchy for Graph Isomorphism and Homomorphism Indistinguishability</title>
+  <guid>http://arxiv.org/abs/2302.10538</guid>
+  <link>http://arxiv.org/abs/2302.10538</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Roberson_D/0/1/0/all/0/1&quot;&gt;David E. Roberson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Seppelt_T/0/1/0/all/0/1&quot;&gt;Tim Seppelt&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We show that feasibility of the $t^\text{th}$ level of the Lasserre
+semidefinite programming hierarchy for graph isomorphism can be expressed as a
+homomorphism indistinguishability relation. In other words, we define a class
+$\mathcal{L}_t$ of graphs such that graphs $G$ and $H$ are not distinguished by
+the $t^\text{th}$ level of the Lasserre hierarchy if and only if they admit the
+same number of homomorphisms from any graph in $\mathcal{L}_t$. By analysing
+the treewidth of graphs in $\mathcal{L}_t$ we prove that the $3t^\text{th}$
+level of Sherali--Adams linear programming hierarchy is as strong as the
+$t^\text{th}$ level of Lasserre. Moreover, we show that this is best possible
+in the sense that $3t$ cannot be lowered to $3t-1$ for any $t$. The same result
+holds for the Lasserre hierarchy with non-negativity constraints, which we
+similarly characterise in terms of homomorphism indistinguishability over a
+family $\mathcal{L}_t^+$ of graphs. Additionally, we give characterisations of
+level-$t$ Lasserre with non-negativity constraints in terms of logical
+equivalence and via a graph colouring algorithm akin to the Weisfeiler--Leman
+algorithm. This provides a polynomial time algorithm for determining if two
+given graphs are distinguished by the $t^\text{th}$ level of the Lasserre
+hierarchy with non-negativity constraints.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>There Are No Post-Quantum Weakly Pseudo-Free Families in Any Nontrivial Variety of Expanded Groups</title>
+  <guid>http://arxiv.org/abs/2302.10847</guid>
+  <link>http://arxiv.org/abs/2302.10847</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Anokhin_M/0/1/0/all/0/1&quot;&gt;Mikhail Anokhin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Let $\Omega$ be a finite set of finitary operation symbols and let $\mathfrak
+V$ be a nontrivial variety of $\Omega$-algebras. Assume that for some set
+$\Gamma\subseteq\Omega$ of group operation symbols, all $\Omega$-algebras in
+$\mathfrak V$ are groups under the operations associated with the symbols in
+$\Gamma$. In other words, $\mathfrak V$ is assumed to be a nontrivial variety
+of expanded groups. In particular, $\mathfrak V$ can be a nontrivial variety of
+groups or rings. Our main result is that there are no post-quantum weakly
+pseudo-free families in $\mathfrak V$, even in the worst-case setting and/or
+the black-box model. In this paper, we restrict ourselves to families
+$(H_d\mathbin|d\in D)$ of computational and black-box $\Omega$-algebras (where
+$D\subseteq\{0,1\}^*$) such that for every $d\in D$, each element of $H_d$ is
+represented by a unique bit string of length polynomial in the length of $d$.
+We use straight-line programs to represent nontrivial relations between
+elements of $\Omega$-algebras in our main result. Note that under certain
+conditions, this result depends on the classification of finite simple groups.
+Also, we define and study some types of weak pseudo-freeness for families of
+computational and black-box $\Omega$-algebras.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Dynamic Euclidean Bottleneck Matching</title>
+  <guid>http://arxiv.org/abs/2302.10513</guid>
+  <link>http://arxiv.org/abs/2302.10513</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Abu_Affash_A/0/1/0/all/0/1&quot;&gt;A. Karim Abu-Affash&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhore_S/0/1/0/all/0/1&quot;&gt;Sujoy Bhore&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Carmi_P/0/1/0/all/0/1&quot;&gt;Paz Carmi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A fundamental question in computational geometry is for a set of input points
+in the Euclidean space, that is subject to discrete changes (insertion/deletion
+of points at each time step), whether it is possible to maintain an approximate
+bottleneck matching in sublinear update time. In this work, we answer this
+question in the affirmative for points on a real line and for points in the
+plane with a bounded geometric spread.
+&lt;/p&gt;
+&lt;p&gt;For a set $P$ of $n$ points on a line, we show that there exists a dynamic
+algorithm that maintains a bottleneck matching of $P$ and supports insertion
+and deletion in $O(\log n)$ time. Moreover, we show that a modified version of
+this algorithm maintains a minimum-weight matching with $O(\log n)$ update
+(insertion and deletion) time. Next, for a set $P$ of $n$ points in the plane,
+we show that a ($6\sqrt{2}$)-factor approximate bottleneck matching of $P_k$,
+at each time step $k$, can be maintained in $O(\log{\Delta})$ amortized time
+per insertion and $O(\log{\Delta} + |P_k|)$ amortized time per deletion, where
+$\Delta$ is the geometric spread of $P$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Lightweight-Yet-Efficient: Revitalizing Ball-Tree for Point-to-Hyperplane Nearest Neighbor Search</title>
+  <guid>http://arxiv.org/abs/2302.10626</guid>
+  <link>http://arxiv.org/abs/2302.10626</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Huang_Q/0/1/0/all/0/1&quot;&gt;Qiang Huang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tung_A/0/1/0/all/0/1&quot;&gt;Anthony K. H. Tung&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Finding the nearest neighbor to a hyperplane (or Point-to-Hyperplane Nearest
+Neighbor Search, simply P2HNNS) is a new and challenging problem with
+applications in many research domains. While existing state-of-the-art hashing
+schemes (e.g., NH and FH) are able to achieve sublinear time complexity without
+the assumption of the data being in a unit hypersphere, they require an
+asymmetric transformation, which increases the data dimension from $d$ to
+$\Omega(d^2)$. This leads to considerable overhead for indexing and incurs
+significant distortion errors.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we investigate a tree-based approach for solving P2HNNS using
+the classical Ball-Tree index. Compared to hashing-based methods, tree-based
+methods usually require roughly linear costs for construction, and they provide
+different kinds of approximations with excellent flexibility. A simple
+branch-and-bound algorithm with a novel lower bound is first developed on
+Ball-Tree for performing P2HNNS. Then, a new tree structure named BC-Tree,
+which maintains the Ball and Cone structures in the leaf nodes of Ball-Tree, is
+described together with two effective strategies, i.e., point-level pruning and
+collaborative inner product computing. BC-Tree inherits both the low
+construction cost and lightweight property of Ball-Tree while providing a
+similar or more efficient search. Experimental results over 16 real-world data
+sets show that Ball-Tree and BC-Tree are around 1.1$\sim$10$\times$ faster than
+NH and FH, and they can reduce the index size and indexing time by about
+1$\sim$3 orders of magnitudes on average. The code is available at
+\url{https://github.com/HuangQiang/BC-Tree}.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Basic quantum subroutines: finding multiple marked elements and summing numbers</title>
+  <guid>http://arxiv.org/abs/2302.10244</guid>
+  <link>http://arxiv.org/abs/2302.10244</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Apeldoorn_J/0/1/0/all/0/1&quot;&gt;Joran van Apeldoorn&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Gribling_S/0/1/0/all/0/1&quot;&gt;Sander Gribling&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nieuwboer_H/0/1/0/all/0/1&quot;&gt;Harold Nieuwboer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We show how to find all $k$ marked elements in a list of size $N$ using the
+optimal number $O(\sqrt{N k})$ of quantum queries and only a polylogarithmic
+overhead in the gate complexity, in the setting where one has a small quantum
+memory. Previous algorithms either incurred a factor $k$ overhead in the gate
+complexity, or had an extra factor $\log(k)$ in the query complexity.
+&lt;/p&gt;
+&lt;p&gt;We then consider the problem of finding a multiplicative
+$\delta$-approximation of $s = \sum_{i=1}^N v_i$ where $v=(v_i) \in [0,1]^N$,
+given quantum query access to a binary description of $v$. We give an algorithm
+that does so, with probability at least $1-\rho$, using $O(\sqrt{N \log(1/\rho)
+/ \delta})$ queries (under mild assumptions on $\rho$). This quadratically
+improves the dependence on $1/\delta$ and $\log(1/\rho)$ compared to a
+straightforward application of amplitude estimation. To obtain the improved
+$\log(1/\rho)$ dependence we use the first result.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Faster high-accuracy log-concave sampling via algorithmic warm starts</title>
+  <guid>http://arxiv.org/abs/2302.10249</guid>
+  <link>http://arxiv.org/abs/2302.10249</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Altschuler_J/0/1/0/all/0/1&quot;&gt;Jason M. Altschuler&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Chewi_S/0/1/0/all/0/1&quot;&gt;Sinho Chewi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Understanding the complexity of sampling from a strongly log-concave and
+log-smooth distribution $\pi$ on $\mathbb{R}^d$ to high accuracy is a
+fundamental problem, both from a practical and theoretical standpoint. In
+practice, high-accuracy samplers such as the classical Metropolis-adjusted
+Langevin algorithm (MALA) remain the de facto gold standard; and in theory, via
+the proximal sampler reduction, it is understood that such samplers are key for
+sampling even beyond log-concavity (in particular, for distributions satisfying
+isoperimetric assumptions).
+&lt;/p&gt;
+&lt;p&gt;In this work, we improve the dimension dependence of this sampling problem to
+$\tilde{O}(d^{1/2})$, whereas the previous best result for MALA was
+$\tilde{O}(d)$. This closes the long line of work on the complexity of MALA,
+and moreover leads to state-of-the-art guarantees for high-accuracy sampling
+under strong log-concavity and beyond (thanks to the aforementioned reduction).
+&lt;/p&gt;
+&lt;p&gt;Our starting point is that the complexity of MALA improves to
+$\tilde{O}(d^{1/2})$, but only under a warm start (an initialization with
+constant R\&#39;enyi divergence w.r.t. $\pi$). Previous algorithms took much longer
+to find a warm start than to use it, and closing this gap has remained an
+important open problem in the field. Our main technical contribution settles
+this problem by establishing the first $\tilde{O}(d^{1/2})$ R\&#39;enyi mixing
+rates for the discretized underdamped Langevin diffusion. For this, we develop
+new differential-privacy-inspired techniques based on R\&#39;enyi divergences with
+Orlicz--Wasserstein shifts, which allow us to sidestep longstanding challenges
+for proving fast convergence of hypocoercive differential equations.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Replicable Clustering</title>
+  <guid>http://arxiv.org/abs/2302.10359</guid>
+  <link>http://arxiv.org/abs/2302.10359</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Esfandiari_H/0/1/0/all/0/1&quot;&gt;Hossein Esfandiari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Karbasi_A/0/1/0/all/0/1&quot;&gt;Amin Karbasi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mirrokni_V/0/1/0/all/0/1&quot;&gt;Vahab Mirrokni&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Velegkas_G/0/1/0/all/0/1&quot;&gt;Grigoris Velegkas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_F/0/1/0/all/0/1&quot;&gt;Felix Zhou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we design replicable algorithms in the context of statistical
+clustering under the recently introduced notion of replicability. A clustering
+algorithm is replicable if, with high probability, it outputs the exact same
+clusters after two executions with datasets drawn from the same distribution
+when its internal randomness is shared across the executions. We propose such
+algorithms for the statistical $k$-medians, statistical $k$-means, and
+statistical $k$-centers problems by utilizing approximation routines for their
+combinatorial counterparts in a black-box manner. In particular, we demonstrate
+a replicable $O(1)$-approximation algorithm for statistical Euclidean
+$k$-medians ($k$-means) with $\operatorname{poly}(d)$ sample complexity. We
+also describe a $O(1)$-approximation algorithm with an additional
+$O(1)$-additive error for statistical Euclidean $k$-centers, albeit with
+$\exp(d)$ sample complexity.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Approximating Bin Packing with Conflict Graphs via Maximization Techniques</title>
+  <guid>http://arxiv.org/abs/2302.10613</guid>
+  <link>http://arxiv.org/abs/2302.10613</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doron_Arad_I/0/1/0/all/0/1&quot;&gt;Ilan Doron-Arad&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shachnai_H/0/1/0/all/0/1&quot;&gt;Hadas Shachnai&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give a comprehensive study of bin packing with conflicts (BPC). The input
+is a set $I$ of items, sizes $s:I \rightarrow [0,1]$, and a conflict graph $G =
+(I,E)$. The goal is to find a partition of $I$ into a minimum number of
+independent sets, each of total size at most $1$. Being a generalization of the
+notoriously hard graph coloring problem, BPC has been studied mostly on
+polynomially colorable conflict graphs. An intriguing open question is whether
+BPC on such graphs admits the same best known approximation guarantees as
+classic bin packing.
+&lt;/p&gt;
+&lt;p&gt;We answer this question negatively, by showing that (in contrast to bin
+packing) there is no asymptotic polynomial-time approximation scheme (APTAS)
+for BPC already on seemingly easy graph classes, such as bipartite and split
+graphs. We complement this result with improved approximation guarantees for
+BPC on several prominent graph classes. Most notably, we derive an asymptotic
+$1.391$-approximation for bipartite graphs, a $2.445$-approximation for perfect
+graphs, and a $\left(1+\frac{2}{e}\right)$-approximation for split graphs. To
+this end, we introduce a generic framework relying on a novel interpretation of
+BPC allowing us to solve the problem via maximization techniques.
+&lt;/p&gt;
+&lt;p&gt;Our framework may find use in tackling BPC on other graph classes arising in
+applications.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>New Width Parameters for Independent Set: One-sided-mim-width and Neighbor-depth</title>
+  <guid>http://arxiv.org/abs/2302.10643</guid>
+  <link>http://arxiv.org/abs/2302.10643</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bergougnoux_B/0/1/0/all/0/1&quot;&gt;Benjamin Bergougnoux&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Korhonen_T/0/1/0/all/0/1&quot;&gt;Tuukka Korhonen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Razgon_I/0/1/0/all/0/1&quot;&gt;Igor Razgon&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the tractability of the maximum independent set problem from the
+viewpoint of graph width parameters, with the goal of defining a width
+parameter that is as general as possible and allows to solve independent set in
+polynomial-time on graphs where the parameter is bounded. We introduce two new
+graph width parameters: one-sided maximum induced matching-width (o-mim-width)
+and neighbor-depth. O-mim-width is a graph parameter that is more general than
+the known parameters mim-width and tree-independence number, and we show that
+independent set and feedback vertex set can be solved in polynomial-time given
+a decomposition with bounded o-mim-width. O-mim-width is the first width
+parameter that gives a common generalization of chordal graphs and graphs of
+bounded clique-width in terms of tractability of these problems.
+&lt;/p&gt;
+&lt;p&gt;The parameter o-mim-width, as well as the related parameters mim-width and
+sim-width, have the limitation that no algorithms are known to compute
+bounded-width decompositions in polynomial-time. To partially resolve this
+limitation, we introduce the parameter neighbor-depth. We show that given a
+graph of neighbor-depth $k$, independent set can be solved in time $n^{O(k)}$
+even without knowing a corresponding decomposition. We also show that
+neighbor-depth is bounded by a polylogarithmic function on the number of
+vertices on large classes of graphs, including graphs of bounded o-mim-width,
+and more generally graphs of bounded sim-width, giving a quasipolynomial-time
+algorithm for independent set on these graph classes. This resolves an open
+problem asked by Kang, Kwon, Str{\o}mme, and Telle [TCS 2017].
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Snakes and Ladders: a Treewidth Story</title>
+  <guid>http://arxiv.org/abs/2302.10662</guid>
+  <link>http://arxiv.org/abs/2302.10662</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Chaplick_S/0/1/0/all/0/1&quot;&gt;Steven Chaplick&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Kelk_S/0/1/0/all/0/1&quot;&gt;Steven Kelk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Meuwese_R/0/1/0/all/0/1&quot;&gt;Ruben Meuwese&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mihalak_M/0/1/0/all/0/1&quot;&gt;Matus Mihalak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Stamoulis_G/0/1/0/all/0/1&quot;&gt;Georgios Stamoulis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Let $G$ be an undirected graph. We say that $G$ contains a ladder of length
+$k$ if the $2 \times (k+1)$ grid graph is an induced subgraph of $G$ that is
+only connected to the rest of $G$ via its four cornerpoints. We prove that if
+all the ladders contained in $G$ are reduced to length 4, the treewidth remains
+unchanged (and that this bound is tight). Our result indicates that, when
+computing the treewidth of a graph, long ladders can simply be reduced, and
+that minimal forbidden minors for bounded treewidth graphs cannot contain long
+ladders. Our result also settles an open problem from algorithmic
+phylogenetics: the common chain reduction rule, used to simplify the comparison
+of two evolutionary trees, is treewidth-preserving in the display graph of the
+two trees.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Repeated Bilateral Trade Against a Smoothed Adversary</title>
+  <guid>http://arxiv.org/abs/2302.10805</guid>
+  <link>http://arxiv.org/abs/2302.10805</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cesa_Bianchi_N/0/1/0/all/0/1&quot;&gt;Nicol&amp;#xf2; Cesa-Bianchi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cesari_T/0/1/0/all/0/1&quot;&gt;Tommaso Cesari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Colomboni_R/0/1/0/all/0/1&quot;&gt;Roberto Colomboni&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fusco_F/0/1/0/all/0/1&quot;&gt;Federico Fusco&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Leonardi_S/0/1/0/all/0/1&quot;&gt;Stefano Leonardi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study repeated bilateral trade where an adaptive $\sigma$-smooth adversary
+generates the valuations of sellers and buyers. We provide a complete
+characterization of the regret regimes for fixed-price mechanisms under
+different feedback models in the two cases where the learner can post either
+the same or different prices to buyers and sellers. We begin by showing that
+the minimax regret after $T$ rounds is of order $\sqrt{T}$ in the full-feedback
+scenario. Under partial feedback, any algorithm that has to post the same price
+to buyers and sellers suffers worst-case linear regret. However, when the
+learner can post two different prices at each round, we design an algorithm
+enjoying regret of order $T^{3/4}$ ignoring log factors. We prove that this
+rate is optimal by presenting a surprising $T^{3/4}$ lower bound, which is the
+main technical contribution of the paper.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>ITERATED INSIDE OUT: a new exact algorithm for the transportation problem</title>
+  <guid>http://arxiv.org/abs/2302.10826</guid>
+  <link>http://arxiv.org/abs/2302.10826</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Bargetto_R/0/1/0/all/0/1&quot;&gt;Roberto Bargetto&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Croce_F/0/1/0/all/0/1&quot;&gt;Federico Della Croce&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Scatamacchia_R/0/1/0/all/0/1&quot;&gt;Rosario Scatamacchia&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose a novel exact algorithm for the transportation problem, one of the
+paradigmatic network optimization problems. The algorithm, denoted Iterated
+Inside Out, requires in input a basic feasible solution and is composed by two
+main phases that are iteratively repeated until an optimal basic feasible
+solution is reached. In the first &quot;inside&quot; phase, the algorithm progressively
+improves upon a given basic solution by increasing the value of several
+non-basic variables with negative reduced cost. This phase typically outputs a
+non-basic feasible solution interior to the constraints set polytope. The
+second &quot;out&quot; phase moves in the opposite direction by iteratively setting to
+zero several variables until a new improved basic feasible solution is reached.
+Extensive computational tests show that the proposed approach strongly
+outperforms all versions of network and linear programming algorithms available
+in the commercial solvers Cplex and Gurobi and other exact algorithms available
+in the literature.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Robust Mean Estimation Without a Mean: Dimension-Independent Error in Polynomial Time for Symmetric Distributions</title>
+  <guid>http://arxiv.org/abs/2302.10844</guid>
+  <link>http://arxiv.org/abs/2302.10844</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Novikov_G/0/1/0/all/0/1&quot;&gt;Gleb Novikov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Steurer_D/0/1/0/all/0/1&quot;&gt;David Steurer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tiegel_S/0/1/0/all/0/1&quot;&gt;Stefan Tiegel&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work, we study the problem of robustly estimating the mean/location
+parameter of distributions without moment bounds. For a large class of
+distributions satisfying natural symmetry constraints we give a sequence of
+algorithms that can efficiently estimate its location without incurring
+dimension-dependent factors in the error. Concretely, suppose an adversary can
+arbitrarily corrupt an $\varepsilon$-fraction of the observed samples. For
+every $k \in \mathbb{N}$, we design an estimator using time and samples
+$\tilde{O}({d^k})$ such that the dependence of the error on the corruption
+level $\varepsilon$ is an additive factor of $O(\varepsilon^{1-\frac{1}{2k}})$.
+The dependence on other problem parameters is also nearly optimal. Our class
+contains products of arbitrary symmetric one-dimensional distributions as well
+as elliptical distributions, a vast generalization of the Gaussian
+distribution. Examples include product Cauchy distributions and multi-variate
+$t$-distributions. In particular, even the first moment might not exist.
+&lt;/p&gt;
+&lt;p&gt;We provide the first efficient algorithms for this class of distributions.
+Previously, such results where only known under boundedness assumptions on the
+moments of the distribution and in particular, are provably impossible in the
+absence of symmetry [KSS18, CTBJ22]. For the class of distributions we
+consider, all previous estimators either require exponential time or incur
+error depending on the dimension. Our algorithms are based on a generalization
+of the filtering technique [DK22]. We show how this machinery can be combined
+with Huber-loss-based approach to work with projections of the noise. Moreover,
+we show how sum-of-squares proofs can be used to obtain algorithmic guarantees
+even for distributions without first moment. We believe that this approach may
+find other application in future works.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>This year, for Lent, we gave up being renters in Milan</title>
   <guid>http://lucatrevisan.wordpress.com/?p=4663</guid>
   <link>https://lucatrevisan.wordpress.com/2023/02/21/this-year-for-lent-we-gave-up-being-renters-in-milan/</link>
@@ -1169,564 +1604,6 @@ result in the literature, to the best of our knowledge
   </description>
   <pubDate>2023-02-16 01:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Dual Graph Multitask Framework for Imbalanced Delivery Time Estimation</title>
-  <guid>http://arxiv.org/abs/2302.07429</guid>
-  <link>http://arxiv.org/abs/2302.07429</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_L/0/1/0/all/0/1&quot;&gt;Lei Zhang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_M/0/1/0/all/0/1&quot;&gt;Mingliang Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_X/0/1/0/all/0/1&quot;&gt;Xin Zhou&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wu_X/0/1/0/all/0/1&quot;&gt;Xingyu Wu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cao_Y/0/1/0/all/0/1&quot;&gt;Yiming Cao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xu_Y/0/1/0/all/0/1&quot;&gt;Yonghui Xu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cui_L/0/1/0/all/0/1&quot;&gt;Lizhen Cui&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shen_Z/0/1/0/all/0/1&quot;&gt;Zhiqi Shen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Delivery Time Estimation (DTE) is a crucial component of the e-commerce
-supply chain that predicts delivery time based on merchant information, sending
-address, receiving address, and payment time. Accurate DTE can boost platform
-revenue and reduce customer complaints and refunds. However, the imbalanced
-nature of industrial data impedes previous models from reaching satisfactory
-prediction performance. Although imbalanced regression methods can be applied
-to the DTE task, we experimentally find that they improve the prediction
-performance of low-shot data samples at the sacrifice of overall performance.
-To address the issue, we propose a novel Dual Graph Multitask framework for
-imbalanced Delivery Time Estimation (DGM-DTE). Our framework first classifies
-package delivery time as head and tail data. Then, a dual graph-based model is
-utilized to learn representations of the two categories of data. In particular,
-DGM-DTE re-weights the embedding of tail data by estimating its kernel density.
-We fuse two graph-based representations to capture both high- and low-shot data
-representations. Experiments on real-world Taobao logistics datasets
-demonstrate the superior performance of DGM-DTE compared to baselines.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-16 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>LP-Duality Theory and the Cores of Games</title>
-  <guid>http://arxiv.org/abs/2302.07627</guid>
-  <link>http://arxiv.org/abs/2302.07627</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vazirani_V/0/1/0/all/0/1&quot;&gt;Vijay V. Vazirani&lt;/a&gt;&lt;/p&gt;&lt;p&gt;LP-duality theory has played a central role in the study of the core, right
-from its early days to the present time. The 1971 paper of Shapley and Shubik,
-which gave a characterization of the core of the assignment game, has been a
-paradigm-setting work in this regard. However, despite extensive follow-up
-work, basic gaps still remain. We address these gaps using the following
-building blocks from LP-duality theory:
-&lt;/p&gt;
-&lt;p&gt;1). Total unimodularity (TUM).
-&lt;/p&gt;
-&lt;p&gt;2). Complementary slackness conditions and strict complementarity.
-&lt;/p&gt;
-&lt;p&gt;TUM plays a vital role in the Shapley-Shubik theorem. We define several
-generalizations of the assignment game whose LP-formulations admit TUM; using
-the latter, we characterize their cores. The Hoffman-Kruskal game is the most
-general of these. Its applications include matching students to schools and
-medical residents to hospitals, and its core imputations provide a way of
-enforcing constraints arising naturally in these applications: encouraging
-diversity and discouraging over-representation.
-&lt;/p&gt;
-&lt;p&gt;Complementarity enables us to prove new properties of core imputations of the
-assignment game and its generalizations.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-16 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Dynamic Flows with Time-Dependent Capacities</title>
-  <guid>http://arxiv.org/abs/2302.07657</guid>
-  <link>http://arxiv.org/abs/2302.07657</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blasius_T/0/1/0/all/0/1&quot;&gt;Thomas Bl&amp;#xe4;sius&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Feilhauer_A/0/1/0/all/0/1&quot;&gt;Adrian Feilhauer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Westenfelder_J/0/1/0/all/0/1&quot;&gt;Jannik Westenfelder&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Dynamic network flows, sometimes called flows over time, extend the notion of
-network flows to include a transit time for each edge. While Ford and Fulkerson
-showed that certain dynamic flow problems can be solved via a reduction to
-static flows, many advanced models considering congestion and time-dependent
-networks result in NP-hard problems. To increase understanding of these
-advanced dynamic flow settings we study the structural and computational
-complexity of the canonical extensions that have time-dependent capacities or
-time-dependent transit times.
-&lt;/p&gt;
-&lt;p&gt;If the considered time interval is finite, we show that already a single edge
-changing capacity or transit time once makes the dynamic flow problem weakly
-NP-hard. In case of infinite considered time, one change in transit time or two
-changes in capacity make the problem weakly NP-hard. For just one capacity
-change, we conjecture that the problem can be solved in polynomial time.
-Additionally, we show the structural property that dynamic cuts and flows can
-become exponentially complex in the above settings where the problem is
-NP-hard. We further show that, despite the duality between cuts and flows,
-their complexities can be exponentially far apart.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-16 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Forbidden Patterns in Temporal Graphs Resulting from Encounters in a Corridor</title>
-  <guid>http://arxiv.org/abs/2302.07666</guid>
-  <link>http://arxiv.org/abs/2302.07666</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Habib_M/0/1/0/all/0/1&quot;&gt;Michel Habib&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nguyen_M/0/1/0/all/0/1&quot;&gt;Minh-Hang Nguyen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rabie_M/0/1/0/all/0/1&quot;&gt;Mika&amp;#xeb;l Rabie&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Viennot_L/0/1/0/all/0/1&quot;&gt;Laurent Viennot&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we study temporal graphs arising from mobility models where
-some agents move in a space and where edges appear each time two agents meet.
-We propose a rather natural one-dimensional model. If each pair of agents meets
-exactly once, we get a temporal clique where each possible edge appears exactly
-once. By ordering the edges according to meeting times, we get a subset of the
-temporal cliques. We introduce the first notion of of forbidden patterns in
-temporal graphs, which leads to a characterization of this class of graphs. We
-provide, thanks to classical combinatorial results, the number of such cliques
-for a given number of agents. We consider specific cases where some of the
-nodes are frozen, and again provide a characterization by forbidden patterns.
-We give a forbidden pattern when we allow multiple crossings between agents,
-and leave open the question of a characterization in this situation.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-16 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Fully dynamic clustering and diversity maximization in doubling metrics</title>
-  <guid>http://arxiv.org/abs/2302.07771</guid>
-  <link>http://arxiv.org/abs/2302.07771</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pellizzoni_P/0/1/0/all/0/1&quot;&gt;Paolo Pellizzoni&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pietracaprina_A/0/1/0/all/0/1&quot;&gt;Andrea Pietracaprina&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pucci_G/0/1/0/all/0/1&quot;&gt;Geppino Pucci&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present approximation algorithms for some variants of center-based
-clustering and related problems in the fully dynamic setting, where the
-pointset evolves through an arbitrary sequence of insertions and deletions.
-Specifically, we target the following problems: $k$-center (with and without
-outliers), matroid-center, and diversity maximization. All algorithms employ a
-coreset-based strategy and rely on the use of the cover tree data structure,
-which we crucially augment to maintain, at any time, some additional
-information enabling the efficient extraction of the solution for the specific
-problem. For all of the aforementioned problems our algorithms yield
-$(\alpha+\varepsilon)$-approximations, where $\alpha$ is the best known
-approximation attainable in polynomial time in the standard off-line setting
-(except for $k$-center with $z$ outliers where $\alpha = 2$ but we get a
-$(3+\varepsilon)$-approximation) and $\varepsilon&amp;gt;0$ is a user-provided
-accuracy parameter. The analysis of the algorithms is performed in terms of the
-doubling dimension of the underlying metric. Remarkably, and unlike previous
-works, the data structure and the running times of the insertion and deletion
-procedures do not depend in any way on the accuracy parameter $\varepsilon$
-and, for the two $k$-center variants, on the parameter $k$. For spaces of
-bounded doubling dimension, the running times are dramatically smaller than
-those that would be required to compute solutions on the entire pointset from
-scratch. To the best of our knowledge, ours are the first solutions for the
-matroid-center and diversity maximization problems in the fully dynamic
-setting.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-16 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>An Efficient B-tree Implementation for Memory-Constrained Embedded Systems</title>
-  <guid>http://arxiv.org/abs/2302.07800</guid>
-  <link>http://arxiv.org/abs/2302.07800</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ould_Khessal_N/0/1/0/all/0/1&quot;&gt;Nadir Ould-Khessal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fazackerley_S/0/1/0/all/0/1&quot;&gt;Scott Fazackerley&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lawrence_R/0/1/0/all/0/1&quot;&gt;Ramon Lawrence&lt;/a&gt; (University of British Columbia)&lt;/p&gt;&lt;p&gt;Embedded devices collect and process significant amounts of data in a variety
-of applications including environmental monitoring, industrial automation and
-control, and other Internet of Things (IoT) applications. Storing data
-efficiently is critically important, especially when the device must perform
-local processing on the data. The most widely used data structure for high
-performance query and insert is the B-tree. However, existing implementations
-consume too much memory for small embedded devices and often rely on operating
-system support. This work presents an extremely memory efficient implementation
-of B-trees for embedded devices that functions on the smallest devices and does
-not require an operating system. Experimental results demonstrate that the
-B-tree implementation can run on devices with as little as 4 KB of RAM while
-efficiently processing thousands of records.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-16 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Perfect Sampling of $q$-Spin Systems on $\mathbb Z^2$ via Weak Spatial Mixing</title>
-  <guid>http://arxiv.org/abs/2302.07821</guid>
-  <link>http://arxiv.org/abs/2302.07821</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Anand_K/0/1/0/all/0/1&quot;&gt;Konrad Anand&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jerrum_M/0/1/0/all/0/1&quot;&gt;Mark Jerrum&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a perfect marginal sampler of the unique Gibbs measure of a spin
-system on $\mathbb Z^2$. The algorithm is an adaptation of a previous `lazy
-depth-first&#39; approach by the authors, but relaxes the requirement of strong
-spatial mixing to weak. It exploits a classical result in statistical physics
-relating weak spatial mixing on $\mathbb Z^2$ to strong spatial mixing on
-squares. When the spin system exhibits weak spatial mixing, the run-time of our
-sampler is linear in the size of sample. Applications of note are the
-ferromagnetic Potts model at supercritical temperatures, and the ferromagnetic
-Ising model with consistent non-zero external field at any non-zero
-temperature.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-16 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Dataset Interfaces: Diagnosing Model Failures Using Controllable Counterfactual Generation</title>
-  <guid>https://gradientscience.org/dataset-interfaces/</guid>
-  <link>https://gradientscience.org/dataset-interfaces/</link>
-  <description>
-    &lt;meta charset=&quot;utf-8&quot; /&gt;
-
-&lt;!-- &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt; --&gt;
-&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt; --&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf&quot; crossorigin=&quot;anonymous&quot; /&gt;
-
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://gradientscience.org/assets/css/style.css&quot; /&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://gradientscience.org/assets/multilabel/style.css&quot; /&gt;
-
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://gradientscience.org/assets/dataset-interfaces/style.css&quot; /&gt;
-
-&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css&quot;&gt; --&gt;
-&lt;!-- &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt; --&gt;
-&lt;!-- &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt; --&gt;
-&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot; integrity=&quot;sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-
-&lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.w3schools.com/w3css/4/w3.css&quot;&gt; --&gt;
-&lt;!-- chart.js --&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;a class=&quot;bbutton&quot; style=&quot;float: left; width: 45%;&quot; href=&quot;https://arxiv.org/abs/2302.07865&quot;&gt;
-&lt;i class=&quot;fas fa-file-pdf&quot;&gt;&lt;/i&gt;
-    Paper
-&lt;/a&gt;
-&lt;a class=&quot;bbutton&quot; style=&quot;float: left; width: 45%;&quot; href=&quot;https://github.com/MadryLab/dataset-interfaces&quot;&gt;
-&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt;
-   Code
-&lt;/a&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt;
-Evaluating model reliability under a distribution shift that we do not have samples from is challenging. Our &lt;a href=&quot;https://arxiv.org/abs/2302.07865&quot;&gt;new work&lt;/a&gt; introduces dataset interfaces: a scalable framework that synthesizes counterfactual examples for a given dataset under user-specified shifts.
-&lt;/i&gt;&lt;/p&gt;
-
-&lt;p&gt;Suppose that we want to deploy an ImageNet-trained classifier to identify objects in image scenes (such as dogs, plates, chairs, etc). Ideally, we would like this model to perform reliably in a variety of contexts, including under &lt;i&gt;distribution shift&lt;/i&gt;: for example, changes in background, object pose, or data pipeline that are underrepresented in the training dataset. How can we ensure that our model will perform well in such cases?&lt;/p&gt;
-
-&lt;p&gt;As a concrete example, consider checking that our model reliably identifies plates captured in unexpected locations (such as “in the desert” or “in the grass”). A natural way to do that is to acquire &lt;i&gt;counterfactual examples&lt;/i&gt;: images that conform to the training distribution except for a specified change. In our example scenario, such counterfactual examples correspond to images of plates that are located in the grass but otherwise match the ImageNet distribution in terms of style, lighting, camera angle, etc.&lt;/p&gt;
-
-&lt;p&gt;How can we procure such images? One &lt;a href=&quot;https://github.com/HaohanWang/ImageNet-Sketch&quot;&gt;common&lt;/a&gt; &lt;a href=&quot;https://github.com/hendrycks/imagenet-r&quot;&gt;approach&lt;/a&gt; is to query an image search engine, such as Google or Bing:&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;plates in the desert&quot; src=&quot;/assets/dataset-interfaces/plate_on_the_desert.png&quot; style=&quot;width:100%&quot; /&gt;
-&lt;img alt=&quot;plates in the grass&quot; src=&quot;/assets/dataset-interfaces/plate_in_the_grass_screenshot.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, while the search engine does yield images of plates, they don’t quite capture the desired distribution shift. Image search gives us images of  “plates in the desert” on white backgrounds, not the desert! And rather than plates on grass, we get grass on plates!&lt;/p&gt;
-
-&lt;p&gt;It appears such specific queries are simply too challenging for search engines. So, let’s take a different approach. What if, instead, we use a text-to-image generative model, such as &lt;a href=&quot;https://arxiv.org/abs/2112.10752&quot;&gt;Stable Diffusion&lt;/a&gt;, &lt;a href=&quot;https://openai.com/dall-e-2/&quot;&gt;DALL-E 2&lt;/a&gt;, or &lt;a href=&quot;https://imagen.research.google/&quot;&gt;Imagen&lt;/a&gt;? These models, which generate photorealistic images conditioned on text, can generate never-before-seen scenes , like &lt;a href=&quot;https://www.technologyreview.com/2021/01/05/1015754/avocado-armchair-future-ai-openai-deep-learning-nlp-gpt3-computer-vision-common-sense/&quot;&gt;avocado-shaped chairs&lt;/a&gt;. Would such generative models fare much better? Let’s query one of them—Stable Diffusion—with the name of the class (e.g., “A photo of a plate in the grass.”). Here is what we get:&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;plates in the grass SD&quot; src=&quot;/assets/dataset-interfaces/plate_in_grass.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nice! The synthesized photos convincingly portray plates on grassy backgrounds, as desired.&lt;/p&gt;
-
-&lt;p&gt;However, something unexpected happens: when we evaluate our ImageNet-trained classifier on these images, it achieves a paltry accuracy of only 2%! Is the grassy background really such a catastrophic failure for our model?&lt;/p&gt;
-
-&lt;p&gt;Turns out: prompting Stable Diffusion with the class name “plate” introduces a &lt;i&gt;confounding&lt;/i&gt; shift. Specifically, while ImageNet plates usually contain food, the plates generated by Stable Diffusion are almost entirely empty. Thus, our ImageNet-trained classifier fails even when generating plates with no (specified) shift—we get 5% accuracy even when we evaluate our model on images generated with the prompt “a photo of a plate”!&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/bing_plates_comparison.png&quot; style=&quot;width:80%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Can we then find a way to capture such rare shifts (e.g. “plate in the grass”) while still properly generating objects matching those found in the original distribution (e.g. the kinds of plates found in ImageNet)?&lt;/p&gt;
-
-&lt;h2 id=&quot;dataset-interfaces&quot;&gt;Dataset Interfaces&lt;/h2&gt;
-
-&lt;p&gt;This is where &lt;i&gt;dataset interfaces&lt;/i&gt;, our new framework that scalably synthesizes counterfactual examples for a given dataset under user-specified shifts, comes in.&lt;/p&gt;
-
-&lt;p&gt;Our framework still uses text-to-image generative models (we use Stable Diffusion) to synthesize such counterfactual examples. However, as seen above, we need a much more precise way to capture underlying concepts (classes) than just prompting such a model with the class name. To this end, we leverage &lt;i&gt;&lt;a href=&quot;https://arxiv.org/abs/2208.01618&quot;&gt;textual inversion&lt;/a&gt;&lt;/i&gt;, a technique that aids in generating objects that are difficult to express with standard, human-language prompts. In textual inversion, we use a set of images containing a desired visual concept to learn a new “word” (token) S&lt;sub&gt;*&lt;/sub&gt; meant to represent the concept whenever used in a prompt. Then, we can use this token in place of the class name in prompts to generate images more closely aligned to the objects as captured in the original dataset of interest (in our case, ImageNet).&lt;/p&gt;
-
-&lt;p&gt;Now, to construct our dataset interface, we run textual inversion on images of each class in the input dataset separately, learning a corresponding class token Sc for each. Then, by incorporating these tokens into our prompts, we can generate images that more closely match the corresponding class (as represented in the input dataset) under specified shifts. For example, to generate an image of a dog on the beach, we can use the prompt: “A photo of a S&lt;sub&gt;dog&lt;/sub&gt; on the beach.” Below is an overview of our approach.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/methods_figure.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
-&lt;div class=&quot;footnote&quot;&gt;
-     An overview of our framework. For each class in the input dataset, we use textual inversion to learn a custom token (in the text space of a text-to-image diffusion model) that captures the distribution of the corresponding class. We can scalably generate counterfactual examples by incorporating these tokens in natural language prompts.
-&lt;/div&gt;
-
-&lt;h2 id=&quot;imagenet&quot;&gt;ImageNet*&lt;/h2&gt;
-
-&lt;p&gt;To demonstrate our framework in action, we create ImageNet*, a dataset interface for the ImageNet dataset. As we see below, ImageNet*-generated images match those of ImageNet much more closely than images generated by just prompting Stable Diffusion with the class name.
-&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/tweet_mismatch_figure.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
-&lt;div class=&quot;footnote&quot;&gt;
-     Examples of real images from ImageNet (top) and images generated either by prompting Stable Diffusion with the corresponding class name (middle) or by using our dataset interface. ImageNet\* (bottom). For each class, there is a visual mismatch between the images from ImageNet and the images generated by the class name. ImageNet\* avoids this discrepancy by more closely matching the original distribution. 
-&lt;/div&gt;
-&lt;p&gt;Now that we are able to match the original distribution, we can create proper counterfactual examples. Specifically, we use ImageNet* to generate a benchmark for distribution shift robustness of counterfactual examples for 23 shifts, including changes in background, weather, lighting, style, attributes, and co-occurrence. Here are some of the resulting images:&lt;/p&gt;
-
-&lt;div id=&quot;bias_examples_widget&quot; style=&quot;overflow:auto; text-align: center&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;You can find the corresponding benchmark &lt;a href=&quot;https://huggingface.co/datasets/madrylab/imagenet-star&quot;&gt;here&lt;/a&gt;. We also release the original ImageNet* tokens &lt;a href=&quot;https://huggingface.co/datasets/madrylab/imagenet-star-tokens&quot;&gt;here&lt;/a&gt;—we are excited to see what kind of shifts people can capture with them!&lt;/p&gt;
-
-&lt;h2 id=&quot;model-debugging&quot;&gt;Model Debugging&lt;/h2&gt;
-&lt;p&gt;Now, with a dataset interface (such as ImageNet*) in hand, how can we diagnose model failures? Let’s return to our example of evaluating an ImageNet-trained classifier’s performance on “plates in the grass.” Recall that when we prompted Stable Diffusion with the class name, we introduced a confounding shift of emptiness, and the classifier’s accuracy dropped to 2%.&lt;/p&gt;
-
-&lt;p&gt;Let’s apply now dataset interfaces to try and disentangle these two shifts. To this end, we use ImageNet* to generate counterfactual examples of “plates in the grass” and “empty plates” separately. We find that our classifier’s accuracy only slightly drops on plates in the grass, from 90% to 75%. However, on empty plates, our classifier’s performance severely degrades to 6%!
-&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/ImageNet*_plates.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So, indeed, it was the emptiness—not the grassy background—that was the cause of the catastrophic performance drop that we observed. Since dataset interfaces generate images that closely match the input distribution, we can test these distribution shifts in isolation without worrying about such hidden confounding shifts.&lt;/p&gt;
-
-&lt;h2 id=&quot;a-shift-centric-perspective-on-robustness&quot;&gt;A shift-centric perspective on robustness&lt;/h2&gt;
-&lt;p&gt;Beyond helping us surface individual model failures, dataset interfaces enable a new, broader perspective on model robustness.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/2007.00644&quot;&gt;Many&lt;/a&gt; &lt;a href=&quot;https://arxiv.org/abs/2107.04649&quot;&gt;previous&lt;/a&gt; &lt;a href=&quot;https://arxiv.org/pdf/1902.10811.pdf&quot;&gt;works&lt;/a&gt; have studied how different types of models are able to handle distribution shifts. However, these works are only able to study one, or a handful of distribution shifts at a time. By harnessing the capabilities of dataset interfaces, we can compare the behavior of a wide range of (23) shifts all at once, yielding a new view on robustness.&lt;/p&gt;
-
-&lt;p&gt;To understand how a given distribution shift impacts different models, we can first collect a set of ImageNet models and evaluate them on images that reflect that shift. We then can plot each model’s in-distribution accuracy against its performance on images under this shift (see below for two examples): each point represents one model. 
-&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/on_the_line_figure.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Looking at the plot above, we see that these two shifts, “in the water” and studio lighting”, exhibit different behavior! While both lead to the same average drop in performance,  “in-distribution” accuracy improvements generally correspond to larger accuracy increases on “in the water” images than “in studio lighting” images. We can quantify this difference by looking at the slope of the line fit to the model accuracies on the plot (the higher the slope, the more benefit we gain from improved models).&lt;/p&gt;
-
-&lt;p&gt;Motivated by this difference,  we can categorize the behavior of each shift in our benchmark based on two criteria:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Absolute impact&lt;/strong&gt;: the shift’s overall severity, measured as the average drop in accuracy due to the distribution shift.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;ID/OOD slope&lt;/strong&gt;: the degree to which in-distribution accuracy translates to improvement on the images under the distribution shift, measured as the slope of the plot described above
-&lt;img alt=&quot;empty stable diffusion&quot; src=&quot;/assets/dataset-interfaces/evaluation_figure.png&quot; style=&quot;width:100%&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As our first plot suggested, different types of shifts manifest different behaviors. For example, even though “in the forest” and “at dusk” have similar absolute impacts, “in the water” has a higher ID/OOD slope. Thus, while improving in-distribution performance translates to better accuracy on “in the forest” images, the model’s behavior on “at dusk” images is much more static. In general, we find that shifts based on lighting have lower ID/OOD slope than those based on background. The above is just an example of how our framework enables one to study not only how a given distribution shift impacts different models but also how different distribution shifts vary in terms of their impact on such models.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;In this post, we introduce dataset interfaces: a framework which allows users to scalably synthesize counterfactual examples with fine-grained controls. Our framework generates images that match key aspects of the input dataset’s distribution, enabling us to test distribution shifts in isolation. Also, thanks to its scalability, dataset interfaces allow users to evaluate a wide array of shifts.&lt;/p&gt;
-
-&lt;script src=&quot;https://gradientscience.org/assets/scripts/onload.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/gh/nicolaspanel/numjs@0.15.1/dist/numjs.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mathjs@6.6.0/dist/math.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://gradientscience.org/assets/dataset-interfaces/thumbnail_plot.js&quot;&gt;&lt;/script&gt;
-
-&lt;script&gt;
-    var img_root = &quot;https://gradientscience.org/assets/dataset-interfaces/demo_images/&quot;
-    var shifts = [
-        &quot;and_a_flower&quot;, &quot;in_the_grass&quot;,	&quot;in_the_snow&quot;,	
-        &quot;pencil_sketch&quot;, &quot;in_the_beach&quot;, &quot;in_the_fog&quot;,		
-        &quot;in_the_rain&quot;,	&quot;oil_painting&quot;,	&quot;studio_lighting&quot;, 
-        &quot;at_night&quot;, &quot;in_bright_sunlight&quot;,  &quot;in_the_forest&quot;,
-        ];
-    var classes = [
-        &quot;goldfinch&quot;, &#39;german shepherd&#39;, &quot;snail&quot;, 
-        &#39;eagle&#39;, &quot;arctic fox&quot;, &quot;monarch butterfly&quot;, 
-        &#39;hamster&#39;, &#39;panda&#39;, &#39;backpack&#39;, 
-        &quot;broom&quot;, &quot;desk&quot;, &quot;scooter&quot;,
-         &quot;teapot&quot;, &quot;street sign&quot;, &quot;pineapple&quot;, &quot;pizza&quot;]
-    var classes_map = {
-        &quot;goldfinch&quot;: 11, &quot;snail&quot;: 113, &#39;eagle&#39;: 22, &#39;german shepherd&#39;: 235,
-        &quot;arctic fox&quot;: 279, &quot;monarch butterfly&quot;: 323, &#39;hamster&#39;: 333,
-        &#39;panda&#39;: 388, &#39;backpack&#39;: 414, &quot;broom&quot;: 462, &quot;desk&quot;: 526,
-        &quot;scooter&quot;: 670, &quot;teapot&quot;: 849, &quot;street sign&quot;: 919,
-        &quot;pineapple&quot;: 953, &quot;pizza&quot;: 963,
-    };
-    make_thumbnail_plot(&#39;bias_examples_widget&#39;, img_root, shifts, classes, classes_map);
-&lt;/script&gt;
-  </description>
-  <pubDate>2023-02-16 00:00:00 UTC</pubDate>
-  <author>Gradient Science</author>
-</item>
-
-<item>
-  <title>Linkage partly from Barbados</title>
-  <guid>https://11011110.github.io/blog/2023/02/15/linkage-partly-from</guid>
-  <link>https://11011110.github.io/blog/2023/02/15/linkage-partly-from.html</link>
-  <description>
-    &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://sforcey.github.io/sf34/hedra.htm&quot;&gt;Hedra Zoo&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109794057137669490&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; like the Online Encyclopedia of Integer Sequences, but for sequences of polyhedra rather than sequences of integers.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://mathstodon.xyz/@Danpiker/109773012543776299&quot;&gt;Mathematical 3d prints by Dan Piker&lt;/a&gt;: Morin’s surface, Boy’s surface, a Klein bottle, and a puzzle based on a 3d Pythagorean tiling.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/tactom/8471902275/&quot;&gt;Origami tessellation torus&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@monsoon0/109800312114130835&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; by Tomohiro Tachi.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://discrete-notes.github.io/crossing-number&quot;&gt;Low crossing numbers&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109810071945968761&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; blog post on &lt;a href=&quot;https://doi.org/10.4230/LIPIcs.SoCG.2021.28&quot;&gt;a SoCG 21 paper by Mónika Csikós and Nabil H. Mustafa&lt;/a&gt;. Given points and a family of shapes containing subsets of them, the goal is to connect the points by a matching, path, or spanning tree so that no shape has its boundary crossed by many edges. Many geometric set families have these structures and this paper shows how to find it faster than was previously known.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Quoridor&quot;&gt;Quoridor&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109815696566120005&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; a game with simple abstract rules that lead to an interesting mix of strategy and tactics, in which you often have to balance the future effects of a move on your own progress versus its effects on your opponent.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=lthHMDXbP30&quot;&gt;Knotty analog oscilloscope art&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@henryseg/109809898659918995&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; video by Henry Segerman with Matthias Goerner.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;It’s not every day that I (and many other Mathstodon users) &lt;a href=&quot;https://www.nytimes.com/2023/02/07/science/puzzles-rectangles-mathematics.html&quot;&gt;get mentioned in the &lt;em&gt;New York Times&lt;/em&gt;&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@phonner/109826175739500354&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;)!&lt;/span&gt; The context is an article by Siobhan Roberts on partitioning rectangles into similar rectangles.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://cs.utdallas.edu/SOCG23/socg.html&quot;&gt;The list of accepted papers at SoCG’23&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109830669758019190&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; the 39th International Symposium on Computational Geometry, next June in Dallas, is now online. I have one in the list; I’ll post in more detail on it once I have a preprint version ready. &lt;a href=&quot;/blog/2022/09/21/counting-paths-convex.html&quot;&gt;One of my earlier posts&lt;/a&gt; is related and &lt;a href=&quot;/blog/2022/08/22/permuted-points-interest.html&quot;&gt;another post&lt;/a&gt; was a lemma that I ended up not using.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=F_43oTnTXiw&quot;&gt;Beware the Runge spikes&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@standupmaths/109819371159314006&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;)!&lt;/span&gt; Matt Parker on the Runge phenomenon, in which interpolating through more data points can make the quality of interpolation worse. Sadly, no mention of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Witch_of_Agnesi&quot;&gt;Witch of Agnesi&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.quantamagazine.org/mathematicians-complete-quest-to-build-spherical-cubes-20230210/&quot;&gt;&lt;em&gt;Quanta&lt;/em&gt; on low-surface-area convex polytopes that tile high-dimensional space by integer translations&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@QuantaMagazine@mstdn.social/109841124938979652&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt; Based on “&lt;a href=&quot;https://arxiv.org/abs/2301.02862&quot;&gt;An integer parallelotope with small surface area&lt;/a&gt;” by Assaf Naor and Oded Regev.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I just returned from a week-long workshop at the Bellairs Research Institute in Barbados, my first since the pandemic started &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109849258853460072&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt; This time, Bellairs double-booked us with another workshop, so we met in Seabourne House and its ocean-view garden instead of the usual picnic table area. This worked surprisingly well, especially for the morning sessions. The photo below shows some of this area; &lt;a href=&quot;https://www.ics.uci.edu/~eppstein/pix/seabourne/&quot;&gt;the full gallery&lt;/a&gt; has a few other shots of architectural details.&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://www.ics.uci.edu/~eppstein/pix/seabourne/CommonRoom-m.jpg&quot; alt=&quot;Seabourne House, Bellairs Research Institute, Holetown, Barbados&quot; style=&quot;border-style:solid;border-color:black&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://i.stack.imgur.com/k61In.png&quot;&gt;Three unit regular tetrahedra pack neatly into a unit cube&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@uzulim/109742191472459313&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;).&lt;/span&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://3quarksdaily.com/3quarksdaily/2023/02/some-comments-on-writing-popular-mathematics.html&quot;&gt;John Allen Paulos on writing popular mathematics&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109858684384756666&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; and Bertrand Russell’s other paradox, on the impossibility of combining intelligibility and precision.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://mathstodon.xyz/@aperiodical/109800517387277782&quot;&gt;What can mathematicians do&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@aperiodical/109800517387277782&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;)?&lt;/span&gt; Recordings of ten talks by disabled mathematicians.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://scottaaronson.blog/?p=7028&quot;&gt;Scott Aaronson on the shortsightedness of xenophobia&lt;/a&gt; &lt;span style=&quot;white-space:nowrap&quot;&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/109872087293449471&quot;&gt;\(\mathbb{M}\)&lt;/a&gt;),&lt;/span&gt; triggered by the denial of a visa to a would-have-been-incoming doctoral student from China.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-15 18:37:00 UTC</pubDate>
-  <author>David Eppstein</author>
-</item>
-
-<item>
-  <title>TR23-011 |  Half-duplex communication complexity with adversary?  can be less than the classical communication complexity | 
-
-	Nikolay Vereshchagin, 
-
-	Mikhail Dektiarev</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/011</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/011</link>
-  <description>
-    Half-duplex communication complexity with adversary was defined in [Hoover, K., Impagliazzo, R., Mihajlin, I., Smal, A. V. Half-Duplex Communication Complexity, ISAAC 2018.] Half-duplex communication protocols generalize classical protocols defined by Andrew Yao in [Yao, A. C.-C. Some Complexity Questions Related to Distributive Computing (Preliminary Report), STOC 1979]. It has been  unknown so far whether the communication complexities defined by these models are different or not. In the present paper we answer this question: we exhibit a function whose half-duplex communication complexity with adversary is strictly less than the classical communication complexity.
-  </description>
-  <pubDate>2023-02-15 16:19:34 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>The Subgraph Isomorphism Problem for Port Graphs and Quantum Circuits</title>
-  <guid>http://arxiv.org/abs/2302.06717</guid>
-  <link>http://arxiv.org/abs/2302.06717</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Mondada_L/0/1/0/all/0/1&quot;&gt;Luca Mondada&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Andres_Martinez_P/0/1/0/all/0/1&quot;&gt;Pablo Andr&amp;#xe9;s-Mart&amp;#xed;nez&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study a variant of the subgraph isomorphism problem that is of high
-interest to the quantum computing community. Our results give an algorithm to
-perform pattern matching in quantum circuits for many patterns simultaneously,
-independently of the number of patterns. After a pre-computation step in which
-the patterns are compiled into a decision tree, the running time is linear in
-the size of the input quantum circuit.
-&lt;/p&gt;
-&lt;p&gt;More generally, we consider connected port graphs, in which every edge $e$
-incident to $v$ has a label $L_v(e)$ unique in $v$. Jiang and Bunke showed that
-the subgraph isomorphism problem $H \subseteq G$ for such graphs can be solved
-in time $O(|V(G)| \cdot |V(H)|)$. We show that if in addition the graphs are
-directed acyclic, then the subgraph isomorphism problem can be solved for an
-unbounded number of patterns simultaneously. We enumerate all $m$ pattern
-matches in time $O(P)^{P+3/2} \cdot |V(G)| + O(m)$, where $P$ is the number of
-vertices of the largest pattern. In the case of quantum circuits, we can
-express the bound obtained in terms of the maximum number of qubits $N$ and
-depth $\delta$ of the patterns : $O(N)^{N + 1/2} \cdot \delta \log \delta \cdot
-|V(G)| + O(m)$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-15 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Towards Optimal Depth-Reductions for Algebraic Formulas</title>
-  <guid>http://arxiv.org/abs/2302.06984</guid>
-  <link>http://arxiv.org/abs/2302.06984</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fournier_H/0/1/0/all/0/1&quot;&gt;Herv&amp;#xe9; Fournier&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Limaye_N/0/1/0/all/0/1&quot;&gt;Nutan Limaye&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Malod_G/0/1/0/all/0/1&quot;&gt;Guillaume Malod&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Srinivasan_S/0/1/0/all/0/1&quot;&gt;Srikanth Srinivasan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tavenas_S/0/1/0/all/0/1&quot;&gt;S&amp;#xe9;bastien Tavenas&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Classical results of Brent, Kuck and Maruyama (IEEE Trans. Computers 1973)
-and Brent (JACM 1974) show that any algebraic formula of size s can be
-converted to one of depth O(log s) with only a polynomial blow-up in size. In
-this paper, we consider a fine-grained version of this result depending on the
-degree of the polynomial computed by the algebraic formula. Given a homogeneous
-algebraic formula of size s computing a polynomial P of degree d, we show that
-P can also be computed by an (unbounded fan-in) algebraic formula of depth
-O(log d) and size poly(s). Our proof shows that this result also holds in the
-highly restricted setting of monotone, non-commutative algebraic formulas. This
-improves on previous results in the regime when d is small (i.e., d&amp;lt;&amp;lt;s). In
-particular, for the setting of d=O(log s), along with a result of Raz (STOC
-2010, JACM 2013), our result implies the same depth reduction even for
-inhomogeneous formulas. This is particularly interesting in light of recent
-algebraic formula lower bounds, which work precisely in this ``low-degree&quot; and
-``low-depth&quot; setting. We also show that these results cannot be improved in the
-monotone setting, even for commutative formulas.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-15 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Multilevel Objective-Function-Free Optimization with an Application to Neural Networks Training</title>
-  <guid>http://arxiv.org/abs/2302.07049</guid>
-  <link>http://arxiv.org/abs/2302.07049</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Gratton_S/0/1/0/all/0/1&quot;&gt;S. Gratton&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Kopanicakova_A/0/1/0/all/0/1&quot;&gt;A. Kopanicakova&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Toint_P/0/1/0/all/0/1&quot;&gt;Ph. L. Toint&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A class of multi-level algorithms for unconstrained nonlinear optimization is
-presented which does not require the evaluation of the objective function. The
-class contains the momentum-less AdaGrad method as a particular (single-level)
-instance. The choice of avoiding the evaluation of the objective function is
-intended to make the algorithms of the class less sensitive to noise, while the
-multi-level feature aims at reducing their computational cost. The evaluation
-complexity of these algorithms is analyzed and their behaviour in the presence
-of noise is then illustrated in the context of training deep neural networks
-for supervised learning applications.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-15 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Bounds on Depth of Decision Trees Derived from Decision Rule Systems</title>
-  <guid>http://arxiv.org/abs/2302.07063</guid>
-  <link>http://arxiv.org/abs/2302.07063</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Durdymyradov_K/0/1/0/all/0/1&quot;&gt;Kerven Durdymyradov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moshkov_M/0/1/0/all/0/1&quot;&gt;Mikhail Moshkov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Systems of decision rules and decision trees are widely used as a means for
-knowledge representation, as classifiers, and as algorithms. They are among the
-most interpretable models for classifying and representing knowledge. The study
-of relationships between these two models is an important task of computer
-science. It is easy to transform a decision tree into a decision rule system.
-The inverse transformation is a more difficult task. In this paper, we study
-unimprovable upper and lower bounds on the minimum depth of decision trees
-derived from decision rule systems depending on the various parameters of these
-systems.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-15 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>A Complete Expressiveness Hierarchy for Subgraph GNNs via Subgraph Weisfeiler-Lehman Tests</title>
-  <guid>http://arxiv.org/abs/2302.07090</guid>
-  <link>http://arxiv.org/abs/2302.07090</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_B/0/1/0/all/0/1&quot;&gt;Bohang Zhang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Feng_G/0/1/0/all/0/1&quot;&gt;Guhao Feng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Du_Y/0/1/0/all/0/1&quot;&gt;Yiheng Du&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+He_D/0/1/0/all/0/1&quot;&gt;Di He&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_L/0/1/0/all/0/1&quot;&gt;Liwei Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Recently, subgraph GNNs have emerged as an important direction for developing
-expressive graph neural networks (GNNs). While numerous architectures have been
-proposed, so far there is still a limited understanding of how various design
-paradigms differ in terms of expressive power, nor is it clear what design
-principle achieves maximal expressiveness with minimal architectural
-complexity. Targeting these fundamental questions, this paper conducts a
-systematic study of general node-based subgraph GNNs through the lens of
-Subgraph Weisfeiler-Lehman Tests (SWL). Our central result is to build a
-complete hierarchy of SWL with strictly growing expressivity. Concretely, we
-prove that any node-based subgraph GNN falls into one of the six SWL
-equivalence classes, among which $\mathsf{SSWL}$ achieves the maximal
-expressive power. We also study how these equivalence classes differ in terms
-of their practical expressiveness such as encoding graph distance and
-biconnectivity. In addition, we give a tight expressivity upper bound of all
-SWL algorithms by establishing a close relation with localized versions of
-Folklore WL tests (FWL). Overall, our results provide insights into the power
-of existing subgraph GNNs, guide the design of new architectures, and point out
-their limitations by revealing an inherent gap with the 2-FWL test. Finally,
-experiments on the ZINC benchmark demonstrate that $\mathsf{SSWL}$-inspired
-subgraph GNNs can significantly outperform prior architectures despite great
-simplicity.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-15 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
 </item>
 
 </channel>
