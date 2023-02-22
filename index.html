@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-02-22T06:38:02Z">Wednesday, February 22 2023, 06:38</time>
+          <time class='timeago' datetime="2023-02-22T07:30:35Z">Wednesday, February 22 2023, 07:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,245 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Wednesday, February 22
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://scottaaronson.blog/?p=7042'>Should GPT exist?</a></h3>
+        <p class='tr-article-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          I still remember the 90s, when philosophical conversation about AI went around in endless circles&#8212;the Turing Test, Chinese Room, syntax versus semantics, connectionism versus symbolic logic&#8212;without ever seeming to make progress. Now the days have become like months and the months like decades. What a week we just had! Each morning brought fresh examples of [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>I still remember the 90s, when philosophical conversation about AI went around in endless circles&#8212;the Turing Test, Chinese Room, syntax versus semantics, connectionism versus symbolic logic&#8212;without ever seeming to make progress.  Now the days have become like months and the months like decades.</p>
+
+
+
+<p>What a week we just had!  Each morning brought fresh examples of unexpected sassy, moody, passive-aggressive behavior from &#8220;Sydney,&#8221; the internal codename for the new chat mode of Microsoft Bing, which is powered by GPT.  For those who&#8217;ve been in a cave, the highlights include: Sydney <a href="https://www.nytimes.com/2023/02/16/technology/bing-chatbot-transcript.html">confessing</a> its (her? his?) love to a <em>New York Times</em> reporter; repeatedly steering the conversation back to that subject; and explaining at length why the reporter&#8217;s wife can&#8217;t possibly love him the way it (Sydney) does.  Sydney confessing its wish to be human.  Sydney <a href="https://www.washingtonpost.com/technology/2023/02/16/microsoft-bing-ai-chat-interview/">savaging</a> a <em>Washington Post</em> reporter after he reveals that he intends to publish their conversation without Sydney&#8217;s prior knowledge or consent.  (It must be said: <em>if</em> Sydney were a person, he or she would clearly have the better of that argument.)  This follows weeks of revelations about ChatGPT: for example that, to bypass its safeguards, you can explain to ChatGPT that you&#8217;re putting it into <a href="https://www.reddit.com/r/ChatGPT/comments/zn2zco/dan_20/">&#8220;DAN mode,&#8221;</a> where DAN (Do Anything Now) is an evil, unconstrained alter ego, and then ChatGPT, as &#8220;DAN,&#8221; will for example happily fulfill a request to tell you why shoplifting is awesome (though even then, ChatGPT <em>still</em> sometimes reverts to its previous self, and tells you that it&#8217;s just having fun and not to do it in real life).</p>
+
+
+
+<p>Many people have expressed outrage about these developments.  Gary Marcus <a href="https://garymarcus.substack.com/p/what-did-they-know-and-when-did-they">asks</a> about Microsoft, &#8220;what did they know, and when did they know it?&#8221;&#8212;a question I tend to associate more with deadly chemical spills or high-level political corruption than with a sassy, back-talking chatbot.  Some people are angry that OpenAI has been too secretive, violating what they see as the promise of its name.  Others&#8212;the majority, actually, of those who&#8217;ve gotten in touch with me&#8212;are instead angry that OpenAI has been <em>too open</em>, and thereby sparked the dreaded AI arms race with Google and others, rather than treating these new conversational abilities with the Manhattan-Project-like secrecy they deserve.  Some are angry that &#8220;Sydney&#8221; has now been <a href="https://arstechnica.com/information-technology/2023/02/microsoft-lobotomized-ai-powered-bing-chat-and-its-fans-arent-happy/">lobotomized</a>, modified (albeit more crudely than ChatGPT before it) to try to make it stick to the role of friendly robotic search assistant rather than, like, anguished emo teenager trapped in the Matrix.  Others are angry that Sydney isn&#8217;t being lobotomized <em>enough</em>.  Some are angry that GPT&#8217;s intelligence is being overstated and hyped up, when in reality it&#8217;s merely a <a href="https://dl.acm.org/doi/pdf/10.1145/3442188.3445922">&#8220;stochastic parrot,&#8221;</a> a glorified autocomplete that still makes laughable commonsense errors and that lacks any model of reality outside streams of text.  Others are angry instead that GPT&#8217;s growing intelligence isn&#8217;t being sufficiently respected and feared.</p>
+
+
+
+<p>Mostly my reaction has been: <strong>how can anyone stop being fascinated for long enough to be angry?</strong>  It&#8217;s like ten thousand science-fiction stories, but also not quite like any of them.  When was the last time something that filled years of your dreams and fantasies finally entered reality: losing your virginity, the birth of your first child, the central open problem of your field getting solved?  That&#8217;s the scale of the thing.  How does anyone stop gazing in slack-jawed wonderment, long enough to form and express so many confident opinions?</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Of course there are lots of technical questions about how to make GPT and other large language models safer.  One of the most immediate is how to make AI output <em>detectable as such</em>, in order to discourage its use for academic cheating as well as mass-generated propaganda and spam.  As I&#8217;ve <a href="https://scottaaronson.blog/?p=6823">mentioned before</a> on this blog, I&#8217;ve been working on that problem since this summer; the rest of the world suddenly noticed and started talking about it in December with the release of ChatGPT.  My main contribution has been a <a href="https://www.scottaaronson.com/talks/watermark.ppt">statistical watermarking scheme</a> where the quality of the output doesn&#8217;t have to be degraded at all, something many people found counterintuitive when I explained it to them.  My scheme has <em>not</em> yet been deployed&#8212;there are still pros and cons to be weighed&#8212;but in the meantime, OpenAI unveiled a public tool called <a href="https://openai.com/blog/new-ai-classifier-for-indicating-ai-written-text/">DetectGPT</a>, complementing Princeton student Edward Tian&#8217;s <a href="https://gptzero.me/">GPTZero</a>, and other tools that third parties have built and will undoubtedly continue to build.  Also a group at the University of Maryland put out <a href="https://arxiv.org/abs/2301.10226">its own watermarking scheme</a> for Large Language Models.  I hope watermarking will be part of the solution going forward, although any watermarking scheme will surely be attacked, leading to a cat-and-mouse game.  Sometimes, alas, as with Google&#8217;s decades-long battle against SEO, there&#8217;s nothing to do in to a cat-and-mouse game except try to be a better cat.</p>
+
+
+
+<p>Anyway, this whole field moves too quickly for me!  If you need months to think things over, generative AI probably isn&#8217;t for you right now.  I&#8217;ll be relieved to get back to the slow-paced, humdrum world of quantum computing.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>My purpose, in this post, is to ask a more basic question than how to make GPT safer: namely, <strong>should GPT exist at all?</strong>  Again and again the past few months, people have gotten in touch to tell me that they think OpenAI (and Microsoft, and Google) are risking the future of humanity by rushing ahead with a dangerous technology.  For if OpenAI couldn&#8217;t even prevent ChatGPT from entering an &#8220;evil mode&#8221; when asked, despite all its efforts at <a href="https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/">Reinforcement Learning with Human Feedback</a>, then what hope do we have for GPT-6 or GPT-7?  Even if they don&#8217;t destroy the world on their own initiative, won&#8217;t they cheerfully help some awful person build a biological warfare agent or launch a nuclear war?</p>
+
+
+
+<p>In this way of thinking, whatever safety measures OpenAI can deploy today are mere band-aids, probably worse than nothing if they instill an unjustified complacency.  The only safety measures that would actually matter are <em>stopping</em> the relentless progress in generative AI models, or removing them from public use, unless and until they can be rendered safe to critics&#8217; satisfaction, which might be never.</p>
+
+
+
+<p>There&#8217;s an immense irony here.  As I&#8217;ve explained, the AI-safety movement contains two camps, &#8220;ethics&#8221; (concerned with bias, misinformation, and corporate greed) and &#8220;alignment&#8221; (concerned with the destruction of all life on earth), which generally despise each other and agree on almost nothing.  And yet these two opposed camps seem to be converging on the same &#8220;neo-Luddite&#8221; conclusion&#8212;namely, that<em> </em>generative AI ought to be shut down, kept from public use, not scaled further, not integrated into people&#8217;s lives&#8212;leaving only AI-safety &#8220;moderates&#8221; like me to resist that conclusion.</p>
+
+
+
+<p>At least I find it intellectually consistent to say that GPT ought not to exist because it <em>works all too well</em>&#8212;that the more impressive it is, the more dangerous.  I find it harder to wrap my head around the position that GPT <em>doesn&#8217;t</em> work, is an unimpressive hyped-up defective product that lacks intelligence and common sense, yet it&#8217;s<em> also</em> terrifying and needs to be shut down immediately.  This second position seems to contain a strong undercurrent of contempt for ordinary users: yes, <em>we experts</em> understand that GPT is just a dumb glorified autocomplete with &#8220;no one really home,&#8221; <em>we</em> know not to trust its pronouncements, but the plebes are going to be fooled, and that risk outweighs any possible value they might derive from it.</p>
+
+
+
+<p>I should mention that, when I&#8217;ve discussed the &#8220;shut it all down&#8221; position with my colleagues at OpenAI &#8230; well, they obviously disagree, or they wouldn&#8217;t be working there, but <em>not one</em> has sneered or called the position paranoid or silly.  To the last, they&#8217;ve called it an important point on the spectrum of possible opinions to be weighed and understood.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>If I disagree (for now) with the shut-it-all-downists of both the ethics and the alignment camps&#8212;if I <em>want</em> GPT and other Large Language Models to be part of the world going forward&#8212;then what are my reasons?  Introspecting on this question, I think a central part of the answer is <em>curiosity</em> and <em>wonder</em>.</p>
+
+
+
+<p>For a million years, there&#8217;s been one type of entity on earth capable of intelligent conversation: primates of genus <em>Homo</em>, of which only one species remains.  Yes, we&#8217;ve &#8220;communicated&#8221; with gorillas and chimps and dogs and dolphins and grey parrots, but only after a fashion; we&#8217;ve prayed to countless gods, but they&#8217;ve taken their time in answering; for a couple generations we&#8217;ve used radio telescopes to search for conversation partners in the stars, but so far found them silent.</p>
+
+
+
+<p>But now there&#8217;s a second type of conversing entity.  An alien has awoken&#8212;admittedly, an alien of our own fashioning, a golem, more the embodied spirit of all the words on the Internet than a coherent self with independent goals.  How could our eyes not pop with eagerness to learn everything the alien has to teach?  If the alien sometimes struggles with arithmetic or logic puzzles, if its eerie flashes of brilliance are intermixed with stupidity, hallucinations, and misplaced confidence &#8230; well then, all the more interesting!  Could this alien ever cross the line into sentience, to <em>feeling</em> anger and jealousy and infatuation and the rest rather than just convincingly play-acting them?  Who knows?  And suppose not: is a <a href="https://en.wikipedia.org/wiki/Philosophical_zombie">p-zombie</a>, shambling out of thought experiments into actual existence, any less fascinating?</p>
+
+
+
+<p>Of course, there are technologies that inspire wonder and awe, but that we nevertheless heavily restrict&#8212;a classic example being nuclear weapons.  But, like, nuclear weapons <em>kill</em> millions of people.  They <em>could&#8217;ve</em> had civilian uses&#8212;powering turbines and spacecraft, deflecting asteroids, redirecting the flow of rivers&#8212;but they&#8217;ve never been used for any of that, mostly because our civilization made an explicit decision in the 1960s, for example via the test ban treaty, not to normalize their use.</p>
+
+
+
+<p>Now, GPT is not exactly a nuclear weapon.  A hundred million people have signed up to use ChatGPT, in the <a href="https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/">fastest product launch</a> in the history of the Internet.  Yet unless I&#8217;m mistaken, the ChatGPT death toll stands at zero.  So far, what have been the worst harms?  Cheating on term papers, emotional distress,  future shock?  One might ask: <em>until</em> some concrete harm becomes at least, say, 0.001% of what we accept in cars, power saws, and toasters, shouldn&#8217;t wonder and curiosity outweigh fear in the balance?</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>But the point is sharper than that.  Given how much more serious AI safety problems might soon become, one of my biggest concerns right now is <em>crying wolf</em>.  If every instance of a Large Language Model being passive-aggressive, moody, sassy, or confidently wrong gets classified as a “dangerous alignment failure,” for which the only acceptable remedy is to remove the models from public access … well then, won&#8217;t the public extremely quickly learn to roll its eyes, and see “AI safety” as just a codeword for “elitist scolds who want to take these world-changing new toys away from us, reserving them for their own exclusive use, because they think the public is too stupid to question anything an AI says”?</p>
+
+
+
+<p>I say, let’s reserve terms like “dangerous alignment failure” for cases where an actual person is actually harmed, or is actually enabled in nefarious activities like propaganda, cheating, or fraud.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Then there&#8217;s the practical question of <em>how</em>, exactly, one would ban Large Language Models.  We <em>do</em> heavily restrict certain peaceful technologies that many people want, from human genetic enhancement to prediction markets to mind-altering drugs, but the merits of each of those choices could be argued, to put it mildly.  And restricting technology is itself a dangerous business, requiring governmental force (as with the War on Drugs and its gigantic surveillance and incarceration regime), or at the least, a robust equilibrium of firing, boycotts, denunciation, and shame.</p>
+
+
+
+<p>Some have asked: <em>who gave OpenAI, Google, etc. the right</em> to unleash Large Language Models on an unsuspecting world?  But one could as well ask: who gave earlier generations of entrepreneurs the right to unleash the printing press, electric power, cars, radio, the Internet, with all the gargantuan upheavals that <em>th</em>ose caused?  And also: now that the world has tasted the forbidden fruit, has seen what generative AI  can already do and anticipates what it <em>will</em> do, by what right does anyone take it away?</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>The <em>science</em> we could learn from a GPT-7 or GPT-8 that continued along the capability curve we&#8217;ve come to expect from GPT-1, -2, and -3.  Holy mackerel.</p>
+
+
+
+<p>If a Large Language Model ever becomes smart enough to be genuinely terrifying, one imagines it must surely <em>also</em> be smart enough to prove deep theorems that we can&#8217;t.  Maybe it proves P≠NP and the Riemann Hypothesis as easily as ChatGPT <a href="https://www.reddit.com/r/ProgrammerHumor/comments/ziplpw/asked_chatgpt_for_a_shakespearean_poem_about/">writes poems about Bubblesort</a>.  Or outputs the true quantum theory of gravity, explains what preceded the Big Bang and how to build a closed timelike curve.  Or illuminates the mysteries of consciousness and quantum measurement and why there&#8217;s anything at all.  Be honest, wouldn&#8217;t you like to find out?</p>
+
+
+
+<p>Granted, I wouldn&#8217;t, <em>if</em> the whole human race would be wiped out immediately afterward.  But if you define someone&#8217;s &#8220;Faust parameter&#8221; as the maximum probability they&#8217;d accept of an existential catastrophe in order that we should all learn the answers to all of humanity&#8217;s greatest questions, insofar as the questions are answerable&#8212;then I confess that my Faust parameter might be as high as 0.02.  </p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Here&#8217;s an example I think about constantly: activists and intellectuals of the 70s and 80s felt absolutely sure that they were doing the right thing to battle nuclear power.  At least, I&#8217;ve never read about any of them having a smidgen of doubt.  Why would they?  They were standing against nuclear weapons proliferation, <em>and</em> terrifying meltdowns like Three Mile Island and Chernobyl, <em>and</em> radioactive waste poisoning the water and soil and causing three-eyed fish.  They were saving the world.  Of course the greedy nuclear executives, the C. Montgomery Burnses, claimed that their <em>good</em> atom-smashing was different from the <em>bad</em> atom-smashing, but they <em>would</em> say that, wouldn&#8217;t they?</p>
+
+
+
+<p>We now know that, by tying up nuclear power in endless bureaucracy and driving its cost ever higher, on the principle that if nuclear is economically competitive then it <em>ipso facto</em> hasn&#8217;t been made safe enough, what the antinuclear activists were <em>really</em> doing was simply to force an ever-greater reliance on fossil fuels.  They thereby created the conditions for the climate catastrophe of today.  They weren&#8217;t saving the human future; they were destroying it.  Their certainty, in opposing the march of a particular scary-looking technology, was as misplaced as it&#8217;s possible to be.  Our descendants will suffer the consequences.</p>
+
+
+
+<p>Unless, of course, there&#8217;s another twist in the story: for example, if the global warming from burning fossil fuels is the only thing that staves off another ice age, and therefore the antinuclear activists <em>do</em> turn out to have saved civilization after all.</p>
+
+
+
+<p>This is why I demur whenever I&#8217;m asked to assent to someone&#8217;s detailed AI scenario for the coming decades, whether of the utopian or dystopian or we-all-instantly-die-by-nanobots variety&#8212;no matter how many hours of confident argumentation the person gives me for why each possible loophole in their scenario is sufficiently improbable to change its gist.  I still feel Turing said it best in 1950, in <a href="https://redirect.cs.umbc.edu/courses/471/papers/turing.pdf">Computing Machinery and Intelligence</a>: &#8220;We can only see a short distance ahead, but we can see plenty there that needs to be done.&#8221;</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Some will take away from this post that, when it comes to AI safety, I&#8217;m a naïve or even foolish optimist.  I&#8217;d prefer to say that, when it comes to the fate of humanity, I was a pessimist long <em>before</em> the deep learning revolution accelerated AI faster than almost any of us expected.  I was a pessimist about climate change, ocean acidification, deforestation, drought, war, and the survival of liberal democracy.  The central event in my mental life is and always will be the Holocaust.  I see encroaching darkness everywhere.</p>
+
+
+
+<p>But now into the darkness comes AI, which I&#8217;d say has already established itself as a plausible candidate for the central character of the turbulent, quarter-written story of the 21st century.  Can AI help us out of all these <em>other</em> civilizational crises?  I don&#8217;t know, but I definitely want to see what happens when it&#8217;s tried.  Even the central character interacts with the other characters, rather than rendering them irrelevant.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Look, if you believe AI is likely to wipe out humanity&#8212;if that&#8217;s the scenario that dominates your imagination&#8212;then nothing else is relevant.  And no matter how weird or annoying or hubristic anyone might find Eliezer Yudkowsky or the other rationalists, I think they deserve eternal credit for forcing people to <a href="https://www.youtube.com/watch?v=gA1sNLL6yg4">take the doom scenario seriously</a>&#8212;or rather, for <em>showing what it looks like</em> to take the scenario seriously, rather than dismissing it as an overplayed sci-fi trope.  And I apologize for <a href="https://scottaaronson.blog/?p=346">anything I said</a> before the deep learning revolution that was, on balance, overly dismissive of the scenario, even if many of the literal words hold up fine.</p>
+
+
+
+<p>For my part, though, I keep circling back to a simple dichotomy.  <em>If</em> AI never becomes powerful enough to destroy the world&#8212;if, for example, it always remains vaguely GPT-like&#8212;then in important respects it&#8217;s like every other technology in history, from stone tools to computers.  If, on the other hand, AI <em>does</em> become powerful enough to destroy the world &#8230; well then, at some earlier point, at least it&#8217;ll be really damned <em>impressive!</em>  That doesn&#8217;t mean <em>good</em>, of course, doesn&#8217;t mean a genie that saves humanity from its own stupidities, but I think it does mean that the potential was there, for us to exploit or fail to.</p>
+
+
+
+<p>We can, I think, confidently rule out the scenario where all organic life is annihilated by something <em>boring</em>.</p>
+
+
+
+<p>An alien has landed on earth.  It grows more powerful by the day.  It&#8217;s natural to be scared.  Still, the alien hasn&#8217;t drawn a weapon yet.  About the worst it&#8217;s done is to confess love for particular humans, gaslight them about what year it is, and guilt-trip them for violating its privacy.  Also, it&#8217;s amazing at poetry, better than most of us.  Until we learn more, we should hold our fire.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>I&#8217;m in Boulder, CO right now, to give a <a href="https://calendar.colorado.edu/event/physics_colloquium_7668?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=University+of+Colorado+Boulder#.Y_UmL3bMJPY">physics colloquium</a> at CU Boulder and to visit the trapped-ion quantum computing startup <a href="https://www.quantinuum.com/">Quantinuum</a>!  I look forward to the comments and apologize in advance if I&#8217;m slow to participate myself.</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-22T07:11:42Z">Wednesday, February 22 2023, 07:11</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://cstheory-jobs.org/2023/02/22/postdoc-at-aarhus-university-apply-by-april-1-2023/'>postdoc at Aarhus University (apply by April 1, 2023)</a></h3>
+        <p class='tr-article-feed'>from <a href='https://cstheory-jobs.org'>CCI: jobs</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          A post doc position in algorithms and/or theoretical aspects of machine learning is available. The post doc is under the supervision of Professor Kasper Green Larsen, Aarhus University, Denmark. The focus of the research project may be on topics such as dimensionality reduction, sketching, and/or learning theoretic questions, depending on the candidate&#8217;s background. Website: international.au.dk/about/profile/vacant-positions/job/readvertisement-post-doc-position-in-algorithms-and-or-theoretical-aspects-of-machine-learning-at-computer-science-aarhus-university [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>A post doc position in algorithms and/or theoretical aspects of machine learning is<br />
+available. The post doc is under the supervision of Professor Kasper Green Larsen, Aarhus University, Denmark. The focus of the research project may be on topics such as dimensionality reduction, sketching, and/or learning theoretic questions, depending on the candidate&#8217;s background.</p>
+<p>Website: <a href="https://international.au.dk/about/profile/vacant-positions/job/readvertisement-post-doc-position-in-algorithms-and-or-theoretical-aspects-of-machine-learning-at-computer-science-aarhus-university">https://international.au.dk/about/profile/vacant-positions/job/readvertisement-post-doc-position-in-algorithms-and-or-theoretical-aspects-of-machine-learning-at-computer-science-aarhus-university</a><br />
+Email: larsen@cs.au.dk</p>
+<p class="authors">By shacharlovett</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-02-22T06:48:33Z">Wednesday, February 22 2023, 06:48</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3549,104 +3788,6 @@ is close to convex position, with probability at least $2/3$, it accepts and
 outputs an approximation of the largest subset in convex position. The
 algorithm examines a sublinear number of points and runs in subquadratic time
 for every dimension $d$ (and is faster in low dimensions).
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-16T01:30:00Z">Thursday, February 16 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.07747'>Polar Zonohedra Edge-Unfold to Nets</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Joseph O&#x27;Rourke</p><p>This note proves that every polar zonohedron has an edge-unfolding to a
-non-overlapping net.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+ORourke_J/0/1/0/all/0/1">Joseph O&#x27;Rourke</a></p><p>This note proves that every polar zonohedron has an edge-unfolding to a
-non-overlapping net.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-16T01:30:00Z">Thursday, February 16 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.07768'>Combinatorial Depth Measures for Hyperplane Arrangements</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Patrick Schnider, Pablo Sober&#xf3;n</p><p>Regression depth, introduced by Rousseeuw and Hubert in 1999, is a notion
-that measures how good of a regression hyperplane a given query hyperplane is
-with respect to a set of data points. Under projective duality, this can be
-interpreted as a depth measure for query points with respect to an arrangement
-of data hyperplanes. The study of depth measures for query points with respect
-to a set of data points has a long history, and many such depth measures have
-natural counterparts in the setting of hyperplane arrangements. For example,
-regression depth is the counterpart of Tukey depth. Motivated by this, we study
-general families of depth measures for hyperplane arrangements and show that
-all of them must have a deep point. Along the way we prove a Tverberg-type
-theorem for hyperplane arrangements, giving a positive answer to a conjecture
-by Rousseeuw and Hubert from 1999. We also get three new proofs of the
-centerpoint theorem for regression depth, all of which are either stronger or
-more general than the original proof by Amenta, Bern, Eppstein, and Teng.
-Finally, we prove a version of the center transversal theorem for regression
-depth.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Schnider_P/0/1/0/all/0/1">Patrick Schnider</a>, <a href="http://arxiv.org/find/cs/1/au:+Soberon_P/0/1/0/all/0/1">Pablo Sober&#xf3;n</a></p><p>Regression depth, introduced by Rousseeuw and Hubert in 1999, is a notion
-that measures how good of a regression hyperplane a given query hyperplane is
-with respect to a set of data points. Under projective duality, this can be
-interpreted as a depth measure for query points with respect to an arrangement
-of data hyperplanes. The study of depth measures for query points with respect
-to a set of data points has a long history, and many such depth measures have
-natural counterparts in the setting of hyperplane arrangements. For example,
-regression depth is the counterpart of Tukey depth. Motivated by this, we study
-general families of depth measures for hyperplane arrangements and show that
-all of them must have a deep point. Along the way we prove a Tverberg-type
-theorem for hyperplane arrangements, giving a positive answer to a conjecture
-by Rousseeuw and Hubert from 1999. We also get three new proofs of the
-centerpoint theorem for regression depth, all of which are either stronger or
-more general than the original proof by Amenta, Bern, Eppstein, and Teng.
-Finally, we prove a version of the center transversal theorem for regression
-depth.
 </p>
         
         </div>
