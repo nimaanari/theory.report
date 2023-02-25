@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-02-25T17:30:35Z">Saturday, February 25 2023, 17:30</time>
+          <time class='timeago' datetime="2023-02-25T18:34:59Z">Saturday, February 25 2023, 18:34</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -411,7 +411,9 @@ You can translate between Delaunay complexes on the plane and on a sphere by <a 
 
 <p>You can also take the convex hull of \(X\cup Y\cup Z\). This has two triangular-prism facets for each tetrahedron of \(X\cup Y\), meeting at one of the squares of \(Z\). The reason I’m interested in this example comes from <a href="/blog/2023/02/20/geometric-graphs-unbounded.html">my most recent post, on flip-width of geometric graphs</a>. If you take an induced subgraph of this polytope, consisting only of the points in \(X\cup Y\cup Z\) whose coefficients \(i\) and \(j\) are both even, the result is a subdivided complete bipartite graph \(K_{n,n}\), where by “subdivided” I mean that each edge of \(K_{n,n}\) has been replaced by a two-edge path. This isn’t an interchange, in the sense of the previous post, but it has unbounded flip-width, because it is a sparse graph that does not have bounded expansion.</p>
 
-<p>What I really want, though, is a 3d Euclidean Delaunay triangulation with unbounded flip-width, not a non-triangulation complex and not a 4-polytope (I already had one of those in my previous post). To get this, use a stereographic projection whose pole is on the central torus, in the middle of one of the squares (or really on the corresponding point of the unit sphere), and note that the Delaunay spheres of the polytope faces will intersect this torus in Delaunay circles of the squares. But for a square grid, the center of each square belongs only to the circumcircle of that square, not to any of the other circumcircles. So the pole of the projection will only belong to two of the Delaunay spheres, the two sharing the chosen square. The two prisms for these two spheres will be missing from the Delaunay complex (instead, their union, some sort of <a href="https://en.wikipedia.org/wiki/Gyrobifastigium">gyrobifastifium</a>, will form the convex hull of the points), but all the other prisms will still be present. They contain all the edges of the graph, so it still contains a large induced subdivided biclique. Perturbing the points slightly to get a triangulation rather than a complex doesn’t change this.</p><p class="authors">By David Eppstein</p>
+<p>What I really want, though, is a 3d Euclidean Delaunay triangulation with unbounded flip-width, not a non-triangulation complex and not a 4-polytope (I already had one of those in my previous post). To get this, use a stereographic projection whose pole is on the central torus, in the middle of one of the squares (or really on the corresponding point of the unit sphere), and note that the Delaunay spheres of the polytope faces will intersect this torus in Delaunay circles of the squares. But for a square grid, the center of each square belongs only to the circumcircle of that square, not to any of the other circumcircles. So the pole of the projection will only belong to two of the Delaunay spheres, the two sharing the chosen square. The two prisms for these two spheres will be missing from the Delaunay complex (instead, their union, some sort of <a href="https://en.wikipedia.org/wiki/Gyrobifastigium">gyrobifastifium</a>, will form the convex hull of the points), but all the other prisms will still be present. They contain all the edges of the graph, so it still contains a large induced subdivided biclique. Perturbing the points slightly to get a triangulation rather than a complex doesn’t change this.</p>
+
+<p>(<a href="https://mathstodon.xyz/@11011110/109926574982696332">Discuss on Mastodon</a>)</p><p class="authors">By David Eppstein</p>
         
         </div>
 
