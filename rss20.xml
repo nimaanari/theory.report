@@ -9,6 +9,62 @@
 
 
 <item>
+  <title>Isohedral Delaunay complexes</title>
+  <guid>https://11011110.github.io/blog/2023/02/25/isohedral-delaunay-complexes</guid>
+  <link>https://11011110.github.io/blog/2023/02/25/isohedral-delaunay-complexes.html</link>
+  <description>
+    &lt;p&gt;The Delaunay complex of a set of points in the Euclidean plane partitions the convex hull of the points into polygonal cells. Each cell is the convex hull of a co-circular subset of the points whose circle does not contain any more points. It’s often called a &lt;a href=&quot;https://en.wikipedia.org/wiki/Delaunay_triangulation&quot;&gt;Delaunay triangulation&lt;/a&gt;, because for points in &lt;a href=&quot;General position&quot;&gt;general position&lt;/a&gt; the cells are all triangles, but I do not want to assume general position here. It is &lt;a href=&quot;https://en.wikipedia.org/wiki/Isohedral_figure&quot;&gt;isohedral&lt;/a&gt; when all of the cells are symmetric to each other (maybe a little more strong than asking for them all to have the same shape). For example, the familiar tilings of the plane by squares or regular hexagons are both isohedral and Delaunay. Another example is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Deltoidal_trihexagonal_tiling&quot;&gt;tiling of the plane by 60°–90°–120° kites&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/tetrille-delaunay.svg&quot; alt=&quot;Tiling of the plane by 60°–90°–120° kites, with shading showing that the circumcircles of each site are empty of other tiling vertices&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some other tilings, even very symmetric ones, might not be Delaunay. For instance, it is impossible to make a Delaunay version of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Cairo_pentagonal_tiling&quot;&gt;Cairo pentagonal tiling&lt;/a&gt; because its tiles have two complementary angles or two right angles, impossible for a co-circular pentagon.&lt;/p&gt;
+
+&lt;p&gt;In these cases, the symmetries are of the familiar kind, translations and rotations of the plane. But translation symmetry forces us to use infinitely many points. Can finite Delaunay complexes be isohedral? Sort of, maybe, but with a different kind of symmetry.
+You can translate between Delaunay complexes on the plane and on a sphere by &lt;a href=&quot;https://en.wikipedia.org/wiki/Stereographic_projection&quot;&gt;stereographic projection&lt;/a&gt;, and translations, rotations, and scaling in the plane become Möbius transformations on the sphere. So the projection onto the sphere of a square grid becomes a spherical Delaunay complex that is symmetric under Möbius transformations.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/stereographic-square-tiling.svg&quot; alt=&quot;Stereographic projection of a square grid from the plane to a sphere&quot; title=&quot;CC-BY-SA 4.0 image https://commons.wikimedia.org/wiki/File:Stereogr-proj-netz.svg by Ag2gaeh from Wikimedia commons&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Rotations of the sphere are also a very special case of Möbius transformations, so we can look for Delaunay complexes with rotational symmetries. Suppose you have a polyhedron all of whose vertices lie on a sphere, and all of whose faces are symmetric to each other by rotations of the sphere. Then the intersection of the sphere with any face plane of the polyhedron is a circle through the vertices of a face that does not contain any other vertices, the defining property of a Delaunay cell. So these polyhedra are isohedral spherical Delaunay complexes. This is true, for instance, for the Platonic solids and for the two infinite families of &lt;a href=&quot;https://en.wikipedia.org/wiki/Bipyramid&quot;&gt;bipyramids&lt;/a&gt; and the &lt;a href=&quot;https://en.wikipedia.org/wiki/Trapezohedron&quot;&gt;trapezohedra&lt;/a&gt; but false for some other isohedral polyhedra like the &lt;a href=&quot;https://en.wikipedia.org/wiki/Rhombic_dodecahedron&quot;&gt;rhombic dodecahedron&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Triakis_tetrahedron&quot;&gt;triakis tetrahedron&lt;/a&gt; whose vertices cannot all be placed on a sphere.&lt;/p&gt;
+
+&lt;p&gt;You can map these spherical Delaunay complexes back onto the plane by stereographic projection again. You might think that the result is always a planar Delaunay complex in which all faces are symmetric to each other under Möbius transformation, but there’s a catch. The projection preserves circles, but it turns inside out the ones that contain the pole of the projection. If they were empty on the sphere, they instead turn into circles in the plane that contain every other point. These inside-out circles correspond to Delaunay cells on the sphere that do not map to Delaunay cells in the plane. For instance, projecting the cube vertices back down to the plane with the pole at the midpoint of a cube edge produces a Delaunay complex with only four quadrilaterals; the other two faces of the cube come from inside-out circles and do not become Delaunay cells.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/cube-edge-projection.svg&quot; alt=&quot;Delaunay complex of a cube, stereographically projected onto the plane with its pole at an edge midpoint&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All of this generalizes directly to 3d Delaunay triangulations, and to isohedral 4d polytopes with cospherical vertices, but less is known about what shapes are possible. The regular 4-polytopes, certainly, have symmetric facets and cospherical vertices, but there are other possibilities as well. The &lt;a href=&quot;http://www.polytope.net/hedrondude/dice4.htm&quot;&gt;isohedral 4-polytopes with up to 20 sides&lt;/a&gt; have been classified, but I don’t know which of these can have cospherical vertices.&lt;/p&gt;
+
+&lt;p&gt;There are, at least, three different infinite families of isohedral 4d polytopes with cospherical vertices, analogous to the bipyramids and trapezohedra. To describe this, it helps to think of four-dimensional Euclidean space as having two complex numbers \(\alpha\) and \(\beta\) as coordinates, and the unit sphere as the points for which \(\vert\alpha\vert^2+\vert\beta\vert^2=1\). These are the state vectors of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Qubit&quot;&gt;qubit&lt;/a&gt;, so we can write these points on the sphere using &lt;a href=&quot;https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation&quot;&gt;quantum notation&lt;/a&gt; as \(\alpha\,\vert0\rangle+\beta\,\vert1\rangle\), where \(\vert0\rangle\) and \(\vert1\rangle\) are just the two basis vectors for the two-complex-number coordinate system. In this notation, consider the following three sets of points, all on the unit sphere, for integer parameters \(n\) and \(m\):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Let \(X\) be the set of \(n\) points \(e^{2\pi i/n}\,\vert0\rangle\), for the integers \(i\) with \(0\le i\lt n\). These form a regular \(n\)-gon in the plane \(\beta=0\).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Let \(Y\) be the set of \(m\) points \(e^{2\pi j/m}\,\vert1\rangle\), for the integers \(j\) with \(0\le j\lt n\). These form a regular \(m\)-gon, in the perpendicular plane \(\alpha=0\).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Let \(Z\) be the set of \(mn\) points&lt;/p&gt;
+
+\[\frac{1}{\sqrt 2}e^{2\pi i/n}\,\vert0\rangle + \frac{1}{\sqrt 2}e^{2\pi j/m}\,\vert1\rangle,\]
+
+    &lt;p&gt;for the same ranges of \(i\) and \(j\). These lie on a &lt;a href=&quot;https://en.wikipedia.org/wiki/Flat_torus&quot;&gt;flat torus&lt;/a&gt;, the Cartesian product of two circles, and form the vertices of a tiling of the torus by rectangles.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then the convex hull of \(X\cup Y\) has as its facets \(mn\) congruent tetrahedra, each formed as the convex hull of an edge of the \(X\)-polygon and an edge of the \(Y\)-polygon. The convex hull of \(Z\) is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Duoprism&quot;&gt;duoprism&lt;/a&gt; whose facets are two kinds of prisms: the Cartesian product of an edge of the \(X\)-polygon with the whole \(Y\)-polygon, and vice versa. When \(n=m\) these two prisms are congruent and the resulting duoprism is isohedral, and dual to the convex hull of \(X\cup Y\). Here is a stereographic projection for \(n=m=18\), taken from the &lt;a href=&quot;https://www.math.cmu.edu/~fho/jenn/polytopes/index.html&quot;&gt;Jenn 3d website&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/18x18-torus.png&quot; alt=&quot;Stereographic projection into 3d of a 4-dimensional polytope, the (18,18)-duoprism, appearing as a torus tiled with squares&quot; title=&quot;Public domain image https://www.math.cmu.edu/~fho/jenn/polytopes/18x18-torus.png&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this image, the most prominent feature is the tiling by squares of the torus containing \(Z\). If you follow sequences of edges of this square grid, through opposite edges at each vertex, you will also see many 18-gons. Some of the 18-gons slice the “inside” of the torus radially into distorted prisms; these are Delaunay cells. Many of the perpendicular 18-gons slice across the “donut hole” of the torus, forming more Delaunay cells. But some of the remaining 18-gons lie on the convex hull of the shape, and cannot be used as slices for the projected set. The missing slices cause the Delaunay triangulation of the stereographic projection to miss some cells, and that can only happen because the spheres for these cells were inverted by the projection.&lt;/p&gt;
+
+&lt;p&gt;You can also take the convex hull of \(X\cup Y\cup Z\). This has two triangular-prism facets for each tetrahedron of \(X\cup Y\), meeting at one of the squares of \(Z\). The reason I’m interested in this example comes from &lt;a href=&quot;/blog/2023/02/20/geometric-graphs-unbounded.html&quot;&gt;my most recent post, on flip-width of geometric graphs&lt;/a&gt;. If you take an induced subgraph of this polytope, consisting only of the points in \(X\cup Y\cup Z\) whose coefficients \(i\) and \(j\) are both even, the result is a subdivided complete bipartite graph \(K_{n,n}\), where by “subdivided” I mean that each edge of \(K_{n,n}\) has been replaced by a two-edge path. This isn’t an interchange, in the sense of the previous post, but it has unbounded flip-width, because it is a sparse graph that does not have bounded expansion.&lt;/p&gt;
+
+&lt;p&gt;What I really want, though, is a 3d Euclidean Delaunay triangulation with unbounded flip-width, not a non-triangulation complex and not a 4-polytope (I already had one of those in my previous post). To get this, use a stereographic projection whose pole is on the central torus, in the middle of one of the squares (or really on the corresponding point of the unit sphere), and note that the Delaunay spheres of the polytope faces will intersect this torus in Delaunay circles of the squares. But for a square grid, the center of each square belongs only to the circumcircle of that square, not to any of the other circumcircles. So the pole of the projection will only belong to two of the Delaunay spheres, the two sharing the chosen square. The two prisms for these two spheres will be missing from the Delaunay complex (instead, their union, some sort of &lt;a href=&quot;https://en.wikipedia.org/wiki/Gyrobifastigium&quot;&gt;gyrobifastifium&lt;/a&gt;, will form the convex hull of the points), but all the other prisms will still be present. They contain all the edges of the graph, so it still contains a large induced subdivided biclique. Perturbing the points slightly to get a triangulation rather than a complex doesn’t change this.&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-25 09:19:00 UTC</pubDate>
+  <author>David Eppstein</author>
+</item>
+
+<item>
   <title>postdoc at TU Eindhoven, University of Amsterdam, Leiden University, CWI (apply by March 31, 2023)</title>
   <guid>http://cstheory-jobs.org/2023/02/24/postdoc-at-tu-eindhoven-university-of-amsterdam-leiden-university-cwi-apply-by-march-31-2023/</guid>
   <link>https://cstheory-jobs.org/2023/02/24/postdoc-at-tu-eindhoven-university-of-amsterdam-leiden-university-cwi-apply-by-march-31-2023/</link>
@@ -1985,33 +2041,6 @@ computational and black-box $\Omega$-algebras.
   </description>
   <pubDate>2023-02-22 01:30:00 UTC</pubDate>
   <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Dynamic Euclidean Bottleneck Matching</title>
-  <guid>http://arxiv.org/abs/2302.10513</guid>
-  <link>http://arxiv.org/abs/2302.10513</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Abu_Affash_A/0/1/0/all/0/1&quot;&gt;A. Karim Abu-Affash&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhore_S/0/1/0/all/0/1&quot;&gt;Sujoy Bhore&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Carmi_P/0/1/0/all/0/1&quot;&gt;Paz Carmi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A fundamental question in computational geometry is for a set of input points
-in the Euclidean space, that is subject to discrete changes (insertion/deletion
-of points at each time step), whether it is possible to maintain an approximate
-bottleneck matching in sublinear update time. In this work, we answer this
-question in the affirmative for points on a real line and for points in the
-plane with a bounded geometric spread.
-&lt;/p&gt;
-&lt;p&gt;For a set $P$ of $n$ points on a line, we show that there exists a dynamic
-algorithm that maintains a bottleneck matching of $P$ and supports insertion
-and deletion in $O(\log n)$ time. Moreover, we show that a modified version of
-this algorithm maintains a minimum-weight matching with $O(\log n)$ update
-(insertion and deletion) time. Next, for a set $P$ of $n$ points in the plane,
-we show that a ($6\sqrt{2}$)-factor approximate bottleneck matching of $P_k$,
-at each time step $k$, can be maintained in $O(\log{\Delta})$ amortized time
-per insertion and $O(\log{\Delta} + |P_k|)$ amortized time per deletion, where
-$\Delta$ is the geometric spread of $P$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
