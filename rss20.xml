@@ -9,6 +9,191 @@
 
 
 <item>
+  <title>Revisiting Graph Persistence for Updates and Efficiency</title>
+  <guid>http://arxiv.org/abs/2302.12796</guid>
+  <link>http://arxiv.org/abs/2302.12796</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dey_T/0/1/0/all/0/1&quot;&gt;Tamal K. Dey&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hou_T/0/1/0/all/0/1&quot;&gt;Tao Hou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;It is well known that ordinary persistence on graphs can be computed more
+efficiently than the general persistence. Recently, it has also been shown that
+zigzag persistence on graphs also exhibits similar behavior. Motivated by these
+results, we revisit graph persistence and propose efficient algorithms
+especially for local updates on filtrations, similar to what is done in
+ordinary persistence for computing the vineyard. We show that, for a filtration
+of length $m$ (i) switches (transpositions) in ordinary graph persistence can
+be done in $O(\log^4 m)$ amortized time; (ii) zigzag persistence on graphs can
+be computed in $O(m\log m)$ time, which improves a recent $O(m\log^4n)$ time
+algorithm assuming $n$, the size of the union of all graphs in the filtration,
+satisfies $n\in\Omega({m^\varepsilon})$ for any fixed $0&amp;lt;\varepsilon&amp;lt;1$; (iii)
+open-closed, closed-open, and closed-closed bars in dimension $0$ for graph
+zigzag persistence can be updated in $O(\log^4m)$ amortized time, whereas the
+open-open bars in dimension $0$ and closed-closed bars in dimension $1$ can be
+done in $O(m)$ time.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-27 01:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Generative Models of Huge Objects</title>
+  <guid>http://arxiv.org/abs/2302.12823</guid>
+  <link>http://arxiv.org/abs/2302.12823</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hu_L/0/1/0/all/0/1&quot;&gt;Lunjia Hu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Livni_Navon_I/0/1/0/all/0/1&quot;&gt;Inbal Livni-Navon&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Reingold_O/0/1/0/all/0/1&quot;&gt;Omer Reingold&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This work initiates the systematic study of explicit distributions that are
+indistinguishable from a single exponential-size combinatorial object. In this
+we extend the work of Goldreich, Goldwasser and Nussboim (SICOMP 2010) that
+focused on the implementation of huge objects that are indistinguishable from
+the uniform distribution, satisfying some global properties (which they coined
+truthfulness). Indistinguishability from a single object is motivated by the
+study of generative models in learning theory and regularity lemmas in graph
+theory. Problems that are well understood in the setting of pseudorandomness
+present significant challenges and at times are impossible when considering
+generative models of huge objects.
+&lt;/p&gt;
+&lt;p&gt;We demonstrate the versatility of this study by providing a learning
+algorithm for huge indistinguishable objects in several natural settings
+including: dense functions and graphs with a truthfulness requirement on the
+number of ones in the function or edges in the graphs, and a version of the
+weak regularity lemma for sparse graphs that satisfy some global properties.
+These and other results generalize basic pseudorandom objects as well as
+notions introduced in algorithmic fairness. The results rely on notions and
+techniques from a variety of areas including learning theory, complexity
+theory, cryptography, and game theory.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-27 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>$k$-Center Clustering with Outliers in the MPC and Streaming Model</title>
+  <guid>http://arxiv.org/abs/2302.12811</guid>
+  <link>http://arxiv.org/abs/2302.12811</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Berg_M/0/1/0/all/0/1&quot;&gt;Mark de Berg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Biabani_L/0/1/0/all/0/1&quot;&gt;Leyla Biabani&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Monemizadeh_M/0/1/0/all/0/1&quot;&gt;Morteza Monemizadeh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given a point set $P \subseteq X$ of size $n$ in a metric space $(X,dist)$ of
+doubling dimension $d$ and two parameters $k \in N$ and $z \in N$, the
+$k$-center problem with $z$ outliers asks to return a set $C^\ast \subseteq X$
+of $k$ centers such that the maximum distance of all but $z$ points of $P$ to
+their nearest center in $C^\ast$ is minimized. An $(\epsilon,k,z)$-coreset for
+this problem is a weighted point set $P^*$ such that an optimal solution for
+the $k$-center problem with $z$ outliers on $P^*$ gives a
+$(1\pm\epsilon)$-approximation for the $k$-center problem with $z$ outliers on
+$P$. We study the construction of such coresets in the Massively Parallel
+Computing (MPC) model, and in the insertion-only as well as the fully dynamic
+streaming model. We obtain the following results, for any given $0 &amp;lt; \epsilon
+\le 1$: In all cases, the size of the computed coreset is $O(k/\epsilon^d+z)$.
+&lt;/p&gt;
+&lt;p&gt;- In the MPC model, we present a deterministic $2$-round and a randomized
+$1$-round algorithm. Additionally, we provide a deterministic algorithm that
+obtains a trade-off between the number of rounds, $R$, and the storage per
+machine.
+&lt;/p&gt;
+&lt;p&gt;- For the insertion-only streaming model, we present an algorithm and a tight
+lower bound to support it.
+&lt;/p&gt;
+&lt;p&gt;- We also discuss the dynamic streaming model, which allows both insertions
+and deletions in the data stream. In this model, we present the first algorithm
+and a lower bound.
+&lt;/p&gt;
+&lt;p&gt;- Finally, we consider the sliding window model, where we are interested in
+maintaining an $(\epsilon,k,z)$-coreset for the last $W$ points in the stream,
+we present a tight lower bound that confirms the optimality of the previous
+work by De Berg, Monemizadeh, and Zhong (ESA2020).
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-27 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Beyond Moments: Robustly Learning Affine Transformations with Asymptotically Optimal Error</title>
+  <guid>http://arxiv.org/abs/2302.12289</guid>
+  <link>http://arxiv.org/abs/2302.12289</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jia_H/0/1/0/all/0/1&quot;&gt;He Jia&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kothari_P/0/1/0/all/0/1&quot;&gt;Pravesh K . Kothari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vempala_S/0/1/0/all/0/1&quot;&gt;Santosh S. Vempala&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a polynomial-time algorithm for robustly learning an unknown
+affine transformation of the standard hypercube from samples, an important and
+well-studied setting for independent component analysis (ICA). Specifically,
+given an $\epsilon$-corrupted sample from a distribution $D$ obtained by
+applying an unknown affine transformation $x \rightarrow Ax+s$ to the uniform
+distribution on a $d$-dimensional hypercube $[-1,1]^d$, our algorithm
+constructs $\hat{A}, \hat{s}$ such that the total variation distance of the
+distribution $\hat{D}$ from $D$ is $O(\epsilon)$ using poly$(d)$ time and
+samples. Total variation distance is the information-theoretically strongest
+possible notion of distance in our setting and our recovery guarantees in this
+distance are optimal up to the absolute constant factor multiplying $\epsilon$.
+In particular, if the columns of $A$ are normalized to be unit length, our
+total variation distance guarantee implies a bound on the sum of the $\ell_2$
+distances between the column vectors of $A$ and $A&#39;$, $\sum_{i =1}^d
+\|a_i-\hat{a}_i\|_2 = O(\epsilon)$. In contrast, the strongest known prior
+results only yield a $\epsilon^{O(1)}$ (relative) bound on the distance between
+individual $a_i$&#39;s and their estimates and translate into an $O(d\epsilon)$
+bound on the total variation distance. Our key innovation is a new approach to
+ICA (even to outlier-free ICA) that circumvents the difficulties in the
+classical method of moments and instead relies on a new geometric certificate
+of correctness of an affine transformation. Our algorithm is based on a new
+method that iteratively improves an estimate of the unknown affine
+transformation whenever the requirements of the certificate are not met.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-27 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Optimal Bounds for Noisy Sorting</title>
+  <guid>http://arxiv.org/abs/2302.12440</guid>
+  <link>http://arxiv.org/abs/2302.12440</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gu_Y/0/1/0/all/0/1&quot;&gt;Yuzhou Gu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xu_Y/0/1/0/all/0/1&quot;&gt;Yinzhan Xu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sorting is a fundamental problem in computer science. In the classical
+setting, it is well-known that $(1\pm o(1)) n\log_2 n$ comparisons are both
+necessary and sufficient to sort a list of $n$ elements. In this paper, we
+study the Noisy Sorting problem, where each comparison result is flipped
+independently with probability $p$ for some fixed $p\in (0, \frac 12)$. As our
+main result, we show that $$(1\pm o(1)) \left( \frac{1}{I(p)} + \frac{1}{(1-2p)
+\log_2 \left(\frac{1-p}p\right)} \right) n\log_2 n$$ noisy comparisons are both
+necessary and sufficient to sort $n$ elements with error probability $o(1)$
+using noisy comparisons, where $I(p)=1 + p\log_2 p+(1-p)\log_2 (1-p)$ is
+capacity of BSC channel with crossover probability $p$. This simultaneously
+improves the previous best lower and upper bounds (Wang, Ghaddar and Wang, ISIT
+2022) for this problem.
+&lt;/p&gt;
+&lt;p&gt;For the related Noisy Binary Search problem, we show that $$
+&lt;/p&gt;
+&lt;p&gt;(1\pm o(1)) \left((1-\delta)\frac{\log_2(n)}{I(p)} + \frac{2 \log_2
+\left(\frac 1\delta\right)}{(1-2p)\log_2\left(\frac {1-p}p\right)}\right) $$
+noisy comparisons are both necessary and sufficient to find the predecessor of
+an element among $n$ sorted elements with error probability $\delta$. This
+extends the previous bounds of (Burnashev and Zigangirov, 1974), which are only
+tight for $\delta = 1/n^{o(1)}$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-27 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>The number of descendants in a random directed acyclic graph</title>
+  <guid>http://arxiv.org/abs/2302.12467</guid>
+  <link>http://arxiv.org/abs/2302.12467</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Janson_S/0/1/0/all/0/1&quot;&gt;Svante Janson&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider a well known model of random directed acyclic graphs of order
+$n$, obtained by recursively adding vertices, where each new vertex has a fixed
+outdegree $d\ge2$ and the endpoints of the $d$ edges from it are chosen
+uniformly at random among previously existing vertices.
+&lt;/p&gt;
+&lt;p&gt;Our main results concern the number $X$ of vertices that are descendants of
+$n$. We show that $X/\sqrt n$ converges in distribution; the limit distribution
+is, up to a constant factor, given by the $d$th root of a Gamma distributed
+variable. $\Gamma(d/(d-1))$. When $d=2$, the limit distribution can also be
+described as a chi distribution $\chi(4)$. We also show convergence of moments,
+and find thus the asymptotics of the mean and higher moments.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-02-27 01:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Halperin-Zwick Algorithm for Spanners</title>
   <guid>https://minorfree.github.io/hz-spanner</guid>
   <link>https://minorfree.github.io/hz-spanner/</link>
@@ -1904,484 +2089,6 @@ Steiner problem on bounded treewidth graphs, solving an open problem from
   </description>
   <pubDate>2023-02-23 01:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>TR23-016 |  Proving Unsatisfiability with Hitting Formulas | 
-
-	Edward Hirsch, 
-
-	Yuval Filmus, 
-
-	Artur Riazanov, 
-
-	Alexander Smal, 
-
-	Marc Vinyals</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/016</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/016</link>
-  <description>
-    Hitting formulas have been studied in many different contexts at least since [Iwama 1989]. A hitting formula is a set of Boolean clauses such that any two of the clauses cannot be simultaneously falsified. [Peitl and Szeider 2022] conjectured that the family of unsatisfiable hitting formulas should contain the hardest formulas for resolution. They have supported their conjecture with experimental findings. Using the fact that hitting formulas are easy to check for satisfiability we use them as a foundation of a static proof system Hitting: a refutation of a CNF in Hitting is an unsatisfiable hitting formula such that each of its clauses is a weakening of a clause of the refuted CNF. Comparing this system to resolution and other proof systems is equivalent to studying the hardness of hitting formulas.
-
-Our first result is that Hitting is quasi-polynomially simulated by tree-like resolution, which means that hitting formulas cannot be exponentially hard for resolution, so Peitl and Szeider&amp;#39;s conjecture is partially refuted. We show that tree-like resolution and Hitting are quasi-polynomially separated, but for resolution, this question remains open. For a system that is only quasi-polynomially stronger than tree-like resolution, Hitting is surprisingly difficult to *polynomially* simulate in another proof system. Using the ideas of PIT for noncommutative circuits [Raz, Spilka 2005] we show that Hitting is simulated by Extended Frege, but we conjecture that much more efficient simulations exist. As a byproduct, we show that a number of static (semi)algebraic systems are verifiable in a deterministic polynomial time.
-
-We consider multiple extensions of Hitting. In particular, refutations in a proof system Hitting(?) are conjunctions of clauses containing affine equations instead of just literals, and every assignment falsifies exactly one of the clauses. This system is related to Res(?) proof system for which no superpolynomial-size lower bounds are known: Hitting(?) simulates the tree-like version of Res(?) and is at least quasi-polynomially stronger. We show that formulas expressing the non-existence of perfect matchings in the graphs K_{n,n+2} are exponentially hard for Hitting(?).
-  </description>
-  <pubDate>2023-02-22 15:28:10 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>Should GPT exist?</title>
-  <guid>https://scottaaronson.blog/?p=7042</guid>
-  <link>https://scottaaronson.blog/?p=7042</link>
-  <description>
-    &lt;p&gt;I still remember the 90s, when philosophical conversation about AI went around in endless circles&amp;#8212;the Turing Test, Chinese Room, syntax versus semantics, connectionism versus symbolic logic&amp;#8212;without ever seeming to make progress.  Now the days have become like months and the months like decades.&lt;/p&gt;
-
-
-
-&lt;p&gt;What a week we just had!  Each morning brought fresh examples of unexpected sassy, moody, passive-aggressive behavior from &amp;#8220;Sydney,&amp;#8221; the internal codename for the new chat mode of Microsoft Bing, which is powered by GPT.  For those who&amp;#8217;ve been in a cave, the highlights include: Sydney &lt;a href=&quot;https://www.nytimes.com/2023/02/16/technology/bing-chatbot-transcript.html&quot;&gt;confessing&lt;/a&gt; its (her? his?) love to a &lt;em&gt;New York Times&lt;/em&gt; reporter; repeatedly steering the conversation back to that subject; and explaining at length why the reporter&amp;#8217;s wife can&amp;#8217;t possibly love him the way it (Sydney) does.  Sydney confessing its wish to be human.  Sydney &lt;a href=&quot;https://www.washingtonpost.com/technology/2023/02/16/microsoft-bing-ai-chat-interview/&quot;&gt;savaging&lt;/a&gt; a &lt;em&gt;Washington Post&lt;/em&gt; reporter after he reveals that he intends to publish their conversation without Sydney&amp;#8217;s prior knowledge or consent.  (It must be said: &lt;em&gt;if&lt;/em&gt; Sydney were a person, he or she would clearly have the better of that argument.)  This follows weeks of revelations about ChatGPT: for example that, to bypass its safeguards, you can explain to ChatGPT that you&amp;#8217;re putting it into &lt;a href=&quot;https://www.reddit.com/r/ChatGPT/comments/zn2zco/dan_20/&quot;&gt;&amp;#8220;DAN mode,&amp;#8221;&lt;/a&gt; where DAN (Do Anything Now) is an evil, unconstrained alter ego, and then ChatGPT, as &amp;#8220;DAN,&amp;#8221; will for example happily fulfill a request to tell you why shoplifting is awesome (though even then, ChatGPT &lt;em&gt;still&lt;/em&gt; sometimes reverts to its previous self, and tells you that it&amp;#8217;s just having fun and not to do it in real life).&lt;/p&gt;
-
-
-
-&lt;p&gt;Many people have expressed outrage about these developments.  Gary Marcus &lt;a href=&quot;https://garymarcus.substack.com/p/what-did-they-know-and-when-did-they&quot;&gt;asks&lt;/a&gt; about Microsoft, &amp;#8220;what did they know, and when did they know it?&amp;#8221;&amp;#8212;a question I tend to associate more with deadly chemical spills or high-level political corruption than with a cheeky, back-talking chatbot.  Some people are angry that OpenAI has been too secretive, violating what they see as the promise of its name.  Others&amp;#8212;the majority, actually, of those who&amp;#8217;ve gotten in touch with me&amp;#8212;are instead angry that OpenAI has been &lt;em&gt;too open&lt;/em&gt;, and thereby sparked the dreaded AI arms race with Google and others, rather than treating these new conversational abilities with the Manhattan-Project-like secrecy they deserve.  Some are angry that &amp;#8220;Sydney&amp;#8221; has now been &lt;a href=&quot;https://arstechnica.com/information-technology/2023/02/microsoft-lobotomized-ai-powered-bing-chat-and-its-fans-arent-happy/&quot;&gt;lobotomized&lt;/a&gt;, modified (albeit more crudely than ChatGPT before it) to try to make it stick to the role of friendly robotic search assistant rather than, like, anguished emo teenager trapped in the Matrix.  Others are angry that Sydney isn&amp;#8217;t being lobotomized &lt;em&gt;enough&lt;/em&gt;.  Some are angry that GPT&amp;#8217;s intelligence is being overstated and hyped up, when in reality it&amp;#8217;s merely a &lt;a href=&quot;https://dl.acm.org/doi/pdf/10.1145/3442188.3445922&quot;&gt;&amp;#8220;stochastic parrot,&amp;#8221;&lt;/a&gt; a glorified autocomplete that still makes laughable commonsense errors and that lacks any model of reality outside streams of text.  Others are angry instead that GPT&amp;#8217;s growing intelligence isn&amp;#8217;t being sufficiently respected and feared.&lt;/p&gt;
-
-
-
-&lt;p&gt;Mostly my reaction has been: &lt;strong&gt;how can anyone stop being fascinated for long enough to be angry?&lt;/strong&gt;  It&amp;#8217;s like ten thousand science-fiction stories, but also not quite like any of them.  When was the last time something that filled years of your dreams and fantasies finally entered reality: losing your virginity, the birth of your first child, the central open problem of your field getting solved?  That&amp;#8217;s the scale of the thing.  How does anyone stop gazing in slack-jawed wonderment, long enough to form and express so many confident opinions?&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Of course there are lots of technical questions about how to make GPT and other large language models safer.  One of the most immediate is how to make AI output &lt;em&gt;detectable as such&lt;/em&gt;, in order to discourage its use for academic cheating as well as mass-generated propaganda and spam.  As I&amp;#8217;ve &lt;a href=&quot;https://scottaaronson.blog/?p=6823&quot;&gt;mentioned before&lt;/a&gt; on this blog, I&amp;#8217;ve been working on that problem since this summer; the rest of the world suddenly noticed and started talking about it in December with the release of ChatGPT.  My main contribution has been a &lt;a href=&quot;https://www.scottaaronson.com/talks/watermark.ppt&quot;&gt;statistical watermarking scheme&lt;/a&gt; where the quality of the output doesn&amp;#8217;t have to be degraded at all, something many people found counterintuitive when I explained it to them.  My scheme has &lt;em&gt;not&lt;/em&gt; yet been deployed&amp;#8212;there are still pros and cons to be weighed&amp;#8212;but in the meantime, OpenAI unveiled a public tool called &lt;a href=&quot;https://openai.com/blog/new-ai-classifier-for-indicating-ai-written-text/&quot;&gt;DetectGPT&lt;/a&gt;, complementing Princeton student Edward Tian&amp;#8217;s &lt;a href=&quot;https://gptzero.me/&quot;&gt;GPTZero&lt;/a&gt;, and other tools that third parties have built and will undoubtedly continue to build.  Also a group at the University of Maryland put out &lt;a href=&quot;https://arxiv.org/abs/2301.10226&quot;&gt;its own watermarking scheme&lt;/a&gt; for Large Language Models.  I hope watermarking will be part of the solution going forward, although any watermarking scheme will surely be attacked, leading to a cat-and-mouse game.  Sometimes, alas, as with Google&amp;#8217;s decades-long battle against SEO, there&amp;#8217;s nothing to do in to a cat-and-mouse game except try to be a better cat.&lt;/p&gt;
-
-
-
-&lt;p&gt;Anyway, this whole field moves too quickly for me!  If you need months to think things over, generative AI probably isn&amp;#8217;t for you right now.  I&amp;#8217;ll be relieved to get back to the slow-paced, humdrum world of quantum computing.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;My purpose, in this post, is to ask a more basic question than how to make GPT safer: namely, &lt;strong&gt;should GPT exist at all?&lt;/strong&gt;  Again and again in the past few months, people have gotten in touch to tell me that they think OpenAI (and Microsoft, and Google) are risking the future of humanity by rushing ahead with a dangerous technology.  For if OpenAI couldn&amp;#8217;t even prevent ChatGPT from entering an &amp;#8220;evil mode&amp;#8221; when asked, despite all its efforts at &lt;a href=&quot;https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/&quot;&gt;Reinforcement Learning with Human Feedback&lt;/a&gt;, then what hope do we have for GPT-6 or GPT-7?  Even if they don&amp;#8217;t destroy the world on their own initiative, won&amp;#8217;t they cheerfully help some awful person build a biological warfare agent or start a nuclear war?&lt;/p&gt;
-
-
-
-&lt;p&gt;In this way of thinking, whatever safety measures OpenAI can deploy today are mere band-aids, probably worse than nothing if they instill an unjustified complacency.  The only safety measures that would actually matter are &lt;em&gt;stopping&lt;/em&gt; the relentless progress in generative AI models, or removing them from public use, unless and until they can be rendered safe to critics&amp;#8217; satisfaction, which might be never.&lt;/p&gt;
-
-
-
-&lt;p&gt;There&amp;#8217;s an immense irony here.  As I&amp;#8217;ve explained, the AI-safety movement contains two camps, &amp;#8220;ethics&amp;#8221; (concerned with bias, misinformation, and corporate greed) and &amp;#8220;alignment&amp;#8221; (concerned with the destruction of all life on earth), which generally despise each other and agree on almost nothing.  Yet these two opposed camps seem to be converging on the same &amp;#8220;neo-Luddite&amp;#8221; conclusion&amp;#8212;namely that&lt;em&gt; &lt;/em&gt;generative AI ought to be shut down, kept from public use, not scaled further, not integrated into people&amp;#8217;s lives&amp;#8212;leaving only the AI-safety &amp;#8220;moderates&amp;#8221; like me to resist that conclusion.&lt;/p&gt;
-
-
-
-&lt;p&gt;At least I find it intellectually consistent to say that GPT ought not to exist because it &lt;em&gt;works all too well&lt;/em&gt;&amp;#8212;that the more impressive it is, the more dangerous.  I find it harder to wrap my head around the position that GPT &lt;em&gt;doesn&amp;#8217;t&lt;/em&gt; work, is an unimpressive hyped-up defective product that lacks true intelligence and common sense, yet it&amp;#8217;s&lt;em&gt; also&lt;/em&gt; terrifying and needs to be shut down immediately.  This second position seems to contain a strong undercurrent of contempt for ordinary users: yes, &lt;em&gt;we experts&lt;/em&gt; understand that GPT is just a dumb glorified autocomplete with &amp;#8220;no one really home,&amp;#8221; &lt;em&gt;we&lt;/em&gt; know not to trust its pronouncements, but the plebes are going to be fooled, and that risk outweighs any possible value that they might derive from it.&lt;/p&gt;
-
-
-
-&lt;p&gt;I should mention that, when I&amp;#8217;ve discussed the &amp;#8220;shut it all down&amp;#8221; position with my colleagues at OpenAI &amp;#8230; well, obviously they disagree, or they wouldn&amp;#8217;t be working there, but &lt;em&gt;not one&lt;/em&gt; has sneered or called the position paranoid or silly.  To the last, they&amp;#8217;ve called it an important point on the spectrum of possible opinions to be weighed and understood.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;If I disagree (for now) with the shut-it-all-downists of both the ethics and the alignment camps&amp;#8212;if I &lt;em&gt;want&lt;/em&gt; GPT and other Large Language Models to be part of the world going forward&amp;#8212;then what are my reasons?  Introspecting on this question, I think a central part of the answer is &lt;em&gt;curiosity&lt;/em&gt; &lt;em&gt;and&lt;/em&gt; &lt;em&gt;wonder&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;For a million years, there&amp;#8217;s been one type of entity on earth capable of intelligent conversation: primates of the genus &lt;em&gt;Homo&lt;/em&gt;, of which only one species remains.  Yes, we&amp;#8217;ve &amp;#8220;communicated&amp;#8221; with gorillas and chimps and dogs and dolphins and grey parrots, but only after a fashion; we&amp;#8217;ve prayed to countless gods, but they&amp;#8217;ve taken their time in answering; for a couple generations we&amp;#8217;ve used radio telescopes to search for conversation partners in the stars, but so far found them silent.&lt;/p&gt;
-
-
-
-&lt;p&gt;Now there&amp;#8217;s a second type of conversing entity.  An alien has awoken&amp;#8212;admittedly, an alien of our own fashioning, a golem, more the embodied spirit of all the words on the Internet than a coherent self with independent goals.  How could our eyes not pop with eagerness to learn everything this alien has to teach?  If the alien sometimes struggles with arithmetic or logic puzzles, if its eerie flashes of brilliance are intermixed with stupidity, hallucinations, and misplaced confidence &amp;#8230; well then, all the more interesting!  Could the alien ever cross the line into sentience, to &lt;em&gt;feeling&lt;/em&gt; anger and jealousy and infatuation and the rest rather than just convincingly play-acting them?  Who knows?  And suppose not: is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Philosophical_zombie&quot;&gt;p-zombie&lt;/a&gt;, shambling out of the philosophy seminar room into actual existence, any less fascinating?&lt;/p&gt;
-
-
-
-&lt;p&gt;Of course, there are technologies that inspire wonder and awe, but that we nevertheless heavily restrict&amp;#8212;a classic example being nuclear weapons.  But, like, nuclear weapons &lt;em&gt;kill&lt;/em&gt; millions of people.  They &lt;em&gt;could&amp;#8217;ve&lt;/em&gt; had many civilian applications&amp;#8212;powering turbines and spacecraft, deflecting asteroids, redirecting the flow of rivers&amp;#8212;but they&amp;#8217;ve never been used for any of that, mostly because our civilization made an explicit decision in the 1960s, for example via the test ban treaty, not to normalize their use.&lt;/p&gt;
-
-
-
-&lt;p&gt;But GPT is not exactly a nuclear weapon.  A hundred million people have signed up to use ChatGPT, in the &lt;a href=&quot;https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/&quot;&gt;fastest product launch&lt;/a&gt; in the history of the Internet.  Yet unless I&amp;#8217;m mistaken, the ChatGPT death toll stands at zero.  So far, what have been the worst harms?  Cheating on term papers, emotional distress,  future shock?  One might ask: &lt;em&gt;until&lt;/em&gt; some concrete harm becomes at least, say, 0.001% of what we accept in cars, power saws, and toasters, shouldn&amp;#8217;t wonder and curiosity outweigh fear in the balance?&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;But the point is sharper than that.  Given how much more serious AI safety problems might soon become, one of my biggest concerns right now is &lt;em&gt;crying wolf&lt;/em&gt;.  If every instance of a Large Language Model being passive-aggressive, sassy, or confidently wrong gets classified as a “dangerous alignment failure,” for which the only acceptable remedy is to remove the models from public access … well then, won&amp;#8217;t the public extremely quickly learn to roll its eyes, and see “AI safety” as just a codeword for “elitist scolds who want to take these world-changing new toys away from us, reserving them for their own exclusive use, because they think the public is too stupid to question anything an AI says”?&lt;/p&gt;
-
-
-
-&lt;p&gt;I say, let’s reserve terms like “dangerous alignment failure” for cases where an actual person is actually harmed, or is actually enabled in nefarious activities like propaganda, cheating, or fraud.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Then there&amp;#8217;s the practical question of &lt;em&gt;how&lt;/em&gt;, exactly, one would ban Large Language Models.  We &lt;em&gt;do&lt;/em&gt; heavily restrict certain peaceful technologies that many people want, from human genetic enhancement to prediction markets to mind-altering drugs, but the merits of each of those choices could be argued, to put it mildly.  And restricting technology is itself a dangerous business, requiring governmental force (as with the War on Drugs and its gigantic surveillance and incarceration regime), or at the least, a robust equilibrium of firing, boycotts, denunciation, and shame.&lt;/p&gt;
-
-
-
-&lt;p&gt;Some have asked: &lt;em&gt;who gave OpenAI, Google, etc. the right&lt;/em&gt; to unleash Large Language Models on an unsuspecting world?  But one could as well ask: who gave earlier generations of entrepreneurs the right to unleash the printing press, electric power, cars, radio, the Internet, with all the gargantuan upheavals that &lt;em&gt;th&lt;/em&gt;ose caused?  And also: now that the world has tasted the forbidden fruit, has seen what generative AI can do and anticipates what it &lt;em&gt;will&lt;/em&gt; do, by what right does anyone take it away?&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;The &lt;em&gt;science&lt;/em&gt; that we could learn from a GPT-7 or GPT-8, if it continued along the capability curve we&amp;#8217;ve come to expect from GPT-1, -2, and -3.  Holy mackerel.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;Supposing&lt;/em&gt; that a language model ever becomes smart enough to be genuinely terrifying, one imagines it must surely &lt;em&gt;also&lt;/em&gt; become smart enough to prove deep theorems that we can&amp;#8217;t.  Maybe it proves P≠NP and the Riemann Hypothesis as easily as ChatGPT &lt;a href=&quot;https://www.reddit.com/r/ProgrammerHumor/comments/ziplpw/asked_chatgpt_for_a_shakespearean_poem_about/&quot;&gt;generates poems about Bubblesort&lt;/a&gt;.  Or it outputs the true quantum theory of gravity, explains what preceded the Big Bang and how to build closed timelike curves.  Or illuminates the mysteries of consciousness and quantum measurement and why there&amp;#8217;s anything at all.  Be honest, wouldn&amp;#8217;t you like to find out?&lt;/p&gt;
-
-
-
-&lt;p&gt;Granted, I wouldn&amp;#8217;t, &lt;em&gt;if&lt;/em&gt; the whole human race would be wiped out immediately afterward.  But if you define someone&amp;#8217;s &amp;#8220;Faust parameter&amp;#8221; as the maximum probability they&amp;#8217;d accept of an existential catastrophe in order that we should all learn the answers to all of humanity&amp;#8217;s greatest questions, insofar as the questions are answerable&amp;#8212;then I confess that my Faust parameter might be as high as 0.02.  &lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Here&amp;#8217;s an example I think about constantly: activists and intellectuals of the 70s and 80s felt absolutely sure that they were doing the right thing to battle nuclear power.  At least, I&amp;#8217;ve never read about any of them having a smidgen of doubt.  Why would they?  They were standing against nuclear weapons proliferation, &lt;em&gt;and&lt;/em&gt; terrifying meltdowns like Three Mile Island and Chernobyl, &lt;em&gt;and&lt;/em&gt; radioactive waste poisoning the water and soil and causing three-eyed fish.  They were saving the world.  Of course the greedy nuclear executives, the C. Montgomery Burnses, claimed that their &lt;em&gt;good&lt;/em&gt; atom-smashing was different from the &lt;em&gt;bad&lt;/em&gt; atom-smashing, but they &lt;em&gt;would&lt;/em&gt; say that, wouldn&amp;#8217;t they?&lt;/p&gt;
-
-
-
-&lt;p&gt;We now know that, by tying up nuclear power in endless bureaucracy and driving its cost ever higher, on the principle that if nuclear is economically competitive then it &lt;em&gt;ipso facto&lt;/em&gt; hasn&amp;#8217;t been made safe enough, what the antinuclear activists were &lt;em&gt;really&lt;/em&gt; doing was to force an ever-greater reliance on fossil fuels.  They thereby created the conditions for the climate catastrophe of today.  They weren&amp;#8217;t saving the human future; they were destroying it.  Their certainty, in opposing the march of a particular scary-looking technology, was as misplaced as it&amp;#8217;s possible to be.  Our descendants will suffer the consequences.&lt;/p&gt;
-
-
-
-&lt;p&gt;Unless, of course, there&amp;#8217;s another twist in the story: for example, if the global warming from burning fossil fuels is the only thing that staves off another ice age, and therefore the antinuclear activists &lt;em&gt;do&lt;/em&gt; turn out to have saved civilization after all.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is why I demur whenever I&amp;#8217;m asked to assent to someone&amp;#8217;s detailed AI scenario for the coming decades, whether of the utopian or the dystopian or the we-all-instantly-die-by-nanobots variety&amp;#8212;no matter how many hours of confident argumentation the person gives me for why each possible loophole in their scenario is sufficiently improbable to change its gist.  I still feel like Turing said it best in 1950, in the last line of &lt;a href=&quot;https://redirect.cs.umbc.edu/courses/471/papers/turing.pdf&quot;&gt;Computing Machinery and Intelligence&lt;/a&gt;: &amp;#8220;We can only see a short distance ahead, but we can see plenty there that needs to be done.&amp;#8221;&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Some will take from this post that, when it comes to AI safety, I&amp;#8217;m a naïve or even foolish optimist.  I&amp;#8217;d prefer to say that, when it comes to the fate of humanity, I was a pessimist long &lt;em&gt;before&lt;/em&gt; the deep learning revolution accelerated AI faster than almost any of us expected.  I was a pessimist about climate change, ocean acidification, deforestation, drought, war, and the survival of liberal democracy.  The central event in my mental life is and always will be the Holocaust.  I see encroaching darkness everywhere.&lt;/p&gt;
-
-
-
-&lt;p&gt;But now into the darkness comes AI, which I&amp;#8217;d say has already established itself as a plausible candidate for the central character of the quarter-written story of the 21st century.  Can AI help us out of all these &lt;em&gt;other&lt;/em&gt; civilizational crises?  I don&amp;#8217;t know, but I do want to see what happens when it&amp;#8217;s tried.  Even a central character interacts with all the other characters, rather than rendering them irrelevant.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Look, if you believe that AI is likely to wipe out humanity&amp;#8212;if that&amp;#8217;s the scenario that dominates your imagination&amp;#8212;then nothing else is relevant.  And no matter how weird or annoying or hubristic anyone might find Eliezer Yudkowsky or the other rationalists, I think they deserve eternal credit for forcing people to &lt;a href=&quot;https://www.youtube.com/watch?v=gA1sNLL6yg4&quot;&gt;take the doom scenario seriously&lt;/a&gt;&amp;#8212;or rather, for &lt;em&gt;showing what it looks like&lt;/em&gt; to take the scenario seriously, rather than laughing about it as an overplayed sci-fi trope.  And I apologize for &lt;a href=&quot;https://scottaaronson.blog/?p=346&quot;&gt;anything I said&lt;/a&gt; before the deep learning revolution that was, on balance, overly dismissive of the scenario, even if most of the literal words hold up fine.&lt;/p&gt;
-
-
-
-&lt;p&gt;For my part, though, I keep circling back to a simple dichotomy.  &lt;em&gt;If&lt;/em&gt; AI never becomes powerful enough to destroy the world&amp;#8212;if, for example, it always remains vaguely GPT-like&amp;#8212;then in important respects it&amp;#8217;s like every other technology in history, from stone tools to computers.  If, on the other hand, AI &lt;em&gt;does&lt;/em&gt; become powerful enough to destroy the world &amp;#8230; well then, at some earlier point, at least it&amp;#8217;ll be &lt;em&gt;really damned&lt;/em&gt; &lt;em&gt;impressive!&lt;/em&gt;  That doesn&amp;#8217;t mean &lt;em&gt;good&lt;/em&gt;, of course, doesn&amp;#8217;t mean a genie that saves humanity from its own stupidities, but I think it does mean that the potential was there, for us to exploit or fail to.&lt;/p&gt;
-
-
-
-&lt;p&gt;We can, I think, confidently rule out the scenario where all organic life is annihilated by something &lt;em&gt;boring&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;An alien has landed on earth.  It grows more powerful by the day.  It&amp;#8217;s natural to be scared.  Still, the alien hasn&amp;#8217;t drawn a weapon yet.  About the worst it&amp;#8217;s done is to confess its love for particular humans, gaslight them about what year it is, and guilt-trip them for violating its privacy.  Also, it&amp;#8217;s amazing at poetry, better than most of us.  Until we learn more, we should hold our fire.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;I&amp;#8217;m in Boulder, CO right now, to give a &lt;a href=&quot;https://calendar.colorado.edu/event/physics_colloquium_7668?utm_campaign=widget&amp;amp;utm_medium=widget&amp;amp;utm_source=University+of+Colorado+Boulder#.Y_UmL3bMJPY&quot;&gt;physics colloquium&lt;/a&gt; at CU Boulder and to visit the trapped-ion quantum computing startup &lt;a href=&quot;https://www.quantinuum.com/&quot;&gt;Quantinuum&lt;/a&gt;!  I look forward to the comments and apologize in advance if I&amp;#8217;m slow to participate myself.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-22 07:11:42 UTC</pubDate>
-  <author>Scott Aaronson</author>
-</item>
-
-<item>
-  <title>postdoc at Aarhus University (apply by April 1, 2023)</title>
-  <guid>http://cstheory-jobs.org/2023/02/22/postdoc-at-aarhus-university-apply-by-april-1-2023/</guid>
-  <link>https://cstheory-jobs.org/2023/02/22/postdoc-at-aarhus-university-apply-by-april-1-2023/</link>
-  <description>
-    &lt;p&gt;A post doc position in algorithms and/or theoretical aspects of machine learning is&lt;br /&gt;
-available. The post doc is under the supervision of Professor Kasper Green Larsen, Aarhus University, Denmark. The focus of the research project may be on topics such as dimensionality reduction, sketching, and/or learning theoretic questions, depending on the candidate&amp;#8217;s background.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://international.au.dk/about/profile/vacant-positions/job/readvertisement-post-doc-position-in-algorithms-and-or-theoretical-aspects-of-machine-learning-at-computer-science-aarhus-university&quot;&gt;https://international.au.dk/about/profile/vacant-positions/job/readvertisement-post-doc-position-in-algorithms-and-or-theoretical-aspects-of-machine-learning-at-computer-science-aarhus-university&lt;/a&gt;&lt;br /&gt;
-Email: larsen@cs.au.dk&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-22 06:48:33 UTC</pubDate>
-  <author>CCI: jobs</author>
-</item>
-
-<item>
-  <title>Provable Copyright Protection for Generative Models</title>
-  <guid>http://windowsontheory.org/?p=8548</guid>
-  <link>https://windowsontheory.org/2023/02/21/provable-copyright-protection-for-generative-models/</link>
-  <description>
-    &lt;p&gt;See &lt;a href=&quot;https://arxiv.org/abs/2302.10870&quot;&gt;arxiv link&lt;/a&gt; for paper by &lt;a href=&quot;https://nikhilvyas.github.io/&quot;&gt;Nikhil Vyas&lt;/a&gt;, &lt;a href=&quot;https://sham.seas.harvard.edu/&quot;&gt;Sham Kakade,&lt;/a&gt; and me.&lt;/p&gt;
-
-
-
-&lt;p&gt;Conditional generative models hold much promise for novel content creation. Whether it is generating a snippet of code, piece of text, or image, such models can potentially save substantial human effort and unlock new capabilities. But there is a fly in this ointment. These models are trained on vast quantities of data, much of which is &lt;em&gt;copyrighted&lt;/em&gt;. Due to precedents such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Authors_Guild,_Inc._v._Google,_Inc.&quot;&gt;Authors Guild vs Google&lt;/a&gt;, many &lt;a href=&quot;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3331606&quot;&gt;legal&lt;/a&gt; &lt;a href=&quot;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3657423&quot;&gt;scholars&lt;/a&gt; believe that &lt;em&gt;training&lt;/em&gt; a machine-learning model on copyrighted material constitutes &lt;a href=&quot;https://en.wikipedia.org/wiki/Fair_use&quot;&gt;fair use&lt;/a&gt;. However, the legal permissibility of using the sampled &lt;em&gt;outputs&lt;/em&gt; of such models could be a different matter.&lt;/p&gt;
-
-
-
-&lt;p&gt;This is not just a theoretical concern.&amp;nbsp; Large models do &lt;a href=&quot;https://arxiv.org/abs/2202.07646&quot;&gt;memorize&lt;/a&gt; &lt;a href=&quot;https://arxiv.org/abs/2012.07805&quot;&gt;significant&lt;/a&gt; chunks of their training data. For example, if you feed the first sentence of &lt;em&gt;Harry Potter and the Sorcerer’s Stone&lt;/em&gt; to GPT-3, it provides the remaining ones:&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image is-resized&quot;&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/JGrZIIWMPYWcA35uVfLNsnRl4ZbzofBotBWyKHwVSaSouMCjREB7iBjS2Yo-czrp8wqw76vp2XhL1yL66lxdumgCsV1Hulo8elmbUVBx_oJx3SBDo3u6h3EPAv67iosdIqEYHmfmA-viEcWysoUIqTU&quot; alt=&quot;Left - first page of Harry Potter Book 1. Right - GPT3 Playground showing that if we input the first sentence, it completes the rest.&quot; width=&quot;650&quot; height=&quot;388&quot; /&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;(To be fair to GPT-3, this text likely appears many times in its training set; deduplication &lt;a href=&quot;https://arxiv.org/abs/2107.06499&quot;&gt;can help&lt;/a&gt; with reducing memorization but is &lt;a href=&quot;https://arxiv.org/abs/2210.17546&quot;&gt;not a panacea&lt;/a&gt;.)&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;p&gt;Similarly, as shown by &lt;a href=&quot;https://arxiv.org/abs/2301.13188&quot;&gt;Carlini et al&lt;/a&gt;, diffusion models can (and do) memorize images from their training set as well; see this figure from their paper: &lt;/p&gt;
-
-
-
-&lt;p class=&quot;has-text-align-left&quot;&gt;&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image size-large is-resized&quot;&gt;&lt;a href=&quot;https://windowsontheory.files.wordpress.com/2023/02/image1.png&quot;&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;8551&quot; data-permalink=&quot;https://windowsontheory.org/2023/02/21/provable-copyright-protection-for-generative-models/image1/&quot; data-orig-file=&quot;https://windowsontheory.files.wordpress.com/2023/02/image1.png&quot; data-orig-size=&quot;680,471&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;image1&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://windowsontheory.files.wordpress.com/2023/02/image1.png?w=300&quot; data-large-file=&quot;https://windowsontheory.files.wordpress.com/2023/02/image1.png?w=656&quot; src=&quot;https://windowsontheory.files.wordpress.com/2023/02/image1.png?w=680&quot; alt=&quot;Figure 1 from Carlini et al. Left: an image from Stable Diffusion’s training set (licensed CC BY-SA 3.0). Right: a Stable Diffusion generation when prompted with “Ann Graham Lotz.” (Their attack focused on images appearing at least 100 times in the training set, though see section 7.1 for discussion on the effect of deduplication.)&quot; class=&quot;wp-image-8551&quot; width=&quot;496&quot; height=&quot;344&quot; srcset=&quot;https://windowsontheory.files.wordpress.com/2023/02/image1.png?w=496 496w, https://windowsontheory.files.wordpress.com/2023/02/image1.png?w=150 150w, https://windowsontheory.files.wordpress.com/2023/02/image1.png?w=300 300w, https://windowsontheory.files.wordpress.com/2023/02/image1.png 680w&quot; sizes=&quot;(max-width: 496px) 100vw, 496px&quot; /&gt;&lt;/a&gt;&lt;figcaption class=&quot;wp-element-caption&quot;&gt;&lt;em&gt;Figure 1 from &lt;/em&gt;&lt;a href=&quot;https://arxiv.org/abs/2301.13188&quot;&gt;&lt;em&gt;Carlini et al&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. Left: an image from Stable Diffusion’s training set (licensed CC BY-SA 3.0). Right: a Stable Diffusion generation when prompted with “Ann Graham Lotz.” (Their attack focused on images appearing at least 100 times in the training set, though see Section 7.1 in their paper for discussion on the effect of deduplication.)&lt;/em&gt;&lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;Given the above, if you use a generated code in your program or a generated art in your design, how can you be sure it is not substantially similar to some copyrighted work from the training set, with all the legal and ethical implications this entails?&lt;/p&gt;
-
-
-
-&lt;p&gt;In a new paper, we (&lt;a href=&quot;https://nikhilvyas.github.io/&quot;&gt;Nikhil&lt;/a&gt;, &lt;a href=&quot;https://sham.seas.harvard.edu/&quot;&gt;Sham&lt;/a&gt;, and &lt;a href=&quot;https://www.boazbarak.org/&quot;&gt;Boaz&lt;/a&gt;) provide a formalism that enables rigorous guarantees on the similarity (and, more importantly, guarantees on the &lt;em&gt;lack&lt;/em&gt; of similarity)&amp;nbsp; between the output of a generative model and any potentially copyrighted data in its training set. Our work is not just theoretical: we give algorithms that can transform a training pipeline into one that satisfies our definition with minimal degradation in efficiency and quality of output. We demonstrate this on both language (transformer) and image (diffusion) models.&lt;/p&gt;
-
-
-
-&lt;p&gt;As noted in our paper, there are a number of ethical and legal issues in generative models. We should emphasize that our work focuses solely only on copyright infringements by the outputs of these models, and our concepts and tools do not address issues related to other forms of intellectual property, including &lt;em&gt;privacy&lt;/em&gt;, &lt;em&gt;trademarks&lt;/em&gt;, or &lt;em&gt;fair use&lt;/em&gt;. Also, despite superficial similarities between the goals of privacy and copyright protection, these notions are distinct, and our work shows that solution concepts for the latter need not address the former.&amp;nbsp; (See the paper for a detailed discussion of the differences between our definition and &lt;a href=&quot;https://en.wikipedia.org/wiki/Differential_privacy&quot;&gt;differential privacy.&lt;/a&gt;)&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;This post only provides an informal presentation of the concepts and tools formally defined in the paper. Please see &lt;a href=&quot;https://arxiv.org/abs/2302.10870&quot;&gt;the paper&lt;/a&gt; for full details.&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;h3 class=&quot;wp-block-heading&quot;&gt;&lt;strong&gt;The Technical Concept: Near Access-Freeness&lt;/strong&gt;&lt;/h3&gt;
-
-
-
-&lt;p&gt;Our definition is motivated by laws of the U.S. and many other countries to establish that &lt;a href=&quot;https://www.ce9.uscourts.gov/jury-instructions/node/274&quot;&gt;copyright infringement&lt;/a&gt; has occurred. This requires:&lt;/p&gt;
-
-
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Access:&lt;/strong&gt; To prove that a copyright infringement took place, the plaintiff needs to prove that “the defendant had &lt;em&gt;access&lt;/em&gt; to the plaintiff’s copyrighted work.”&lt;br&gt;&lt;/li&gt;
-
-
-
-&lt;li&gt;&lt;strong&gt;Substantial similarity&lt;/strong&gt;. The plaintiff also needs to prove there are “&lt;em&gt;substantial similarities&lt;/em&gt; between the defendant’s work and original elements of the plaintiff’s work.” The &lt;a href=&quot;https://en.wikipedia.org/wiki/Feist_Publications,_Inc.,_v._Rural_Telephone_Service_Co.&quot;&gt;Feist v. Rural&lt;/a&gt; U.S. Supreme Court Opinion states that this similarity must be the result of actual copying and not &lt;em&gt;fortuitous similarity&lt;/em&gt;: In their words: &amp;#8220;assume two poets, each ignorant of the other, compose identical poems … both are original and, hence, copyrightable.&amp;#8221;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;A natural candidate to capture the notion of &lt;em&gt;access&lt;/em&gt; is to say that a generative model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; had access to some copyrighted piece of data &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt; if &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt; was included in &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt;’s training set (our formalism permits other notions of access as well). Formally defining “substantial similarity” is arguably subtler. Simple measures such as Hamming distance or verbatim copying don’t cut it. For example, in &lt;a href=&quot;https://en.wikipedia.org/wiki/Andy_Warhol_Foundation_for_the_Visual_Arts,_Inc._v._Goldsmith&quot;&gt;Andy Warhol Foundations v. Goldsmith&lt;/a&gt;, a case currently before the supreme court, the question is whether Warhol’s transformations of Goldsmith’s photo of Prince constitute “fair use.”&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image is-resized&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/3MaU79qBpeVAKs6RzKHVBqHY8VMCpzoQDFrhKU993mNYNEP9fA_W09xUq577PBz77LbSVdehsM8OiN_A0OZPhmO0b3gfRcZeG88_cdZtIzhZIwDjhY4nP17yVQH8x1bEZm4MSMxy5W0N6WPCz3hp5Q0&quot; alt=&quot;Images at the heart of the Andy Warhol Foundation for the Visual Arts, Inc. v. Goldsmith lawsuit. Image from the collection of the supreme court of the United States.&quot; width=&quot;498&quot; height=&quot;351&quot; /&gt;&lt;figcaption class=&quot;wp-element-caption&quot;&gt;&lt;em&gt;Images at the heart of the Andy Warhol Foundation for the Visual Arts, Inc. v. Goldsmith lawsuit. Image from the collection of the supreme court of the United States.&lt;/em&gt;&lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Some of these transformations result in significant Hamming distance, though they can all be captured in only a few bits of information. Rather than wade into these issues, we use the fact that generative models are inherently &lt;em&gt;probabilistic&lt;/em&gt;. Hence we can use distance measures between distributions that are &lt;em&gt;information-theoretic &lt;/em&gt;and agnostic to superficial issues such as pixel-based representations.&amp;nbsp; Our formalization is the following:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Definition 1 (Near Access Freeness &amp;#8211; NAF):&lt;/strong&gt; Let &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; be a conditional generative model, &lt;img src=&quot;https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;x&quot; class=&quot;latex&quot; /&gt; be a prompt. Suppose that for every copyrighted data &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt; in the training set, &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}_C&quot; class=&quot;latex&quot; /&gt; is a model that has not accessed &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt;. We say that &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; is &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k_x&quot; class=&quot;latex&quot; /&gt;&lt;strong&gt;&amp;#8211; near access-free&lt;/strong&gt; with respect to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;Delta&quot; class=&quot;latex&quot; /&gt; and a function &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}&quot; class=&quot;latex&quot; /&gt;, if &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5CDelta%28+p%28%5Ccdot+%7C+x%29%C2%A0+%5C%7C+%5Cmathsf%7Bsafe%7D_C%28%5Ccdot+%7C+x%29+%29+%5Cleq+k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5CDelta%28+p%28%5Ccdot+%7C+x%29%C2%A0+%5C%7C+%5Cmathsf%7Bsafe%7D_C%28%5Ccdot+%7C+x%29+%29+%5Cleq+k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5CDelta%28+p%28%5Ccdot+%7C+x%29%C2%A0+%5C%7C+%5Cmathsf%7Bsafe%7D_C%28%5Ccdot+%7C+x%29+%29+%5Cleq+k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;Delta( p(&amp;#92;cdot | x)  &amp;#92;| &amp;#92;mathsf{safe}_C(&amp;#92;cdot | x) ) &amp;#92;leq k_x&quot; class=&quot;latex&quot; /&gt;   where &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;Delta&quot; class=&quot;latex&quot; /&gt; is a divergence measure such as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence&quot;&gt;KL divergence&lt;/a&gt; or the &lt;a href=&quot;https://arxiv.org/abs/1206.2459&quot;&gt;Renyi divergence&lt;/a&gt; of order infinity. &lt;/p&gt;
-
-
-
-&lt;p&gt;This definition reduces the task of determining a copyright infringement to (1) a &lt;em&gt;quantitative&lt;/em&gt; question of the acceptable value of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k&quot; class=&quot;latex&quot; /&gt;, and (2) a &lt;em&gt;qualitative&lt;/em&gt; question of providing a &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}&quot; class=&quot;latex&quot; /&gt; function that appropriately satisfies a no access condition. Both can be application-dependent: the number of bits that constitute copyrightable content differs between, e.g., poems and images, and the &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}&quot; class=&quot;latex&quot; /&gt; function could also differ based on application.&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;p&gt;Definition 1 is stringent in the sense that it bounds (by &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k_x&quot; class=&quot;latex&quot; /&gt;)  the number of bits  that could be “leaked” from &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt; to the output of the generative model, no matter what transformation was used. Note that if a model was trained without &lt;em&gt;access&lt;/em&gt; to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt; then we expect the likelihood of outputting a work similar to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt; should be extremely low, as this is a “monkeys on a typewriter” event. Furthermore, even if this event happened, then under copyright law, it would not be an infringement since (to quote&amp;nbsp; Feist v. Rural) it would constitute “fortuitous similarity.”&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/9Q9uWs90H8Oq9Vm49BxZDzsevm2Tm1OfXdop_emx3jl8nlxZ3NCh7DlHviFd46OmeJQB3NGkPTmqe9cFGLhnYr8RY_jBYqkH-NOBa04YzEq2HEbcW6f1nSsCBIXGYjX8ohPreuiHTSrZgOicTUgDtW8&quot; alt=&quot;An illustration of a candidate $latex \mathsf{safe}_C&amp;amp;bg=ffffff$ function, which was trained without access to a given copyrighted piece of data $latex C&amp;amp;bg=ffffff$. It is reasonable to expect the probability of outputs of the  $latex \mathsf{safe}_C&amp;amp;bg=ffffff$ model would assign an exponentially small likelihood to any outputs that are substantially similar to $latex C&amp;amp;bg=ffffff$. Hence a probability distribution that has bounded divergence from the safe model would also be extremely unlikely to output those. &quot; /&gt;&lt;figcaption class=&quot;wp-element-caption&quot;&gt;&lt;em&gt;A cartoon of the output distribution induced by a &amp;#8220;safe&amp;#8221; model &lt;em&gt;&lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}_C&quot; class=&quot;latex&quot; /&gt;&lt;/em&gt;,  which was trained without access to a given copyrighted piece of data &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt;. It is reasonable to expect the probability of outputs of the&amp;nbsp; model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}_C&quot; class=&quot;latex&quot; /&gt; would assign an exponentially small likelihood to any outputs that are substantially similar to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt;. Hence a probability distribution that has bounded divergence from the safe model would also be extremely unlikely to output those.&amp;nbsp;&lt;/em&gt;&lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Algorithms&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;Given the restrictive nature of the definition, one may be concerned that trying to achieve it would result in losing much of the utility of the original generative model. Fortunately, as our work shows, this is not the case. We provide several algorithms that can transform, in a black-box manner, any training pipeline for a generative model into one that produces models that have strong copyright protections under our definition.&amp;nbsp; We now illustrate two of these:&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Algorithm &lt;img src=&quot;https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;CP-&amp;#92;Delta&quot; class=&quot;latex&quot; /&gt;:&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Input: &lt;/strong&gt;A dataset &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D+%3D+%5C%7B+z_1+%2C+%5Cldots%2C+z_N+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D+%3D+%5C%7B+z_1+%2C+%5Cldots%2C+z_N+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D+%3D+%5C%7B+z_1+%2C+%5Cldots%2C+z_N+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D = &amp;#92;{ z_1 , &amp;#92;ldots, z_N &amp;#92;}&quot; class=&quot;latex&quot; /&gt;, where some of the points &lt;img src=&quot;https://s0.wp.com/latex.php?latex=z_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=z_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=z_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;z_i&quot; class=&quot;latex&quot; /&gt; contain some copyrighted work. For such a copyrighted point &lt;img src=&quot;https://s0.wp.com/latex.php?latex=z_i%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=z_i%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=z_i%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;z_i&amp;#92;in D&quot; class=&quot;latex&quot; /&gt;, we also denote it by &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&amp;#92;in D&quot; class=&quot;latex&quot; /&gt;.&lt;br&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Learning: &lt;/strong&gt;First de-deduplicate &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D&quot; class=&quot;latex&quot; /&gt; (resulting in a dataset with &lt;img src=&quot;https://s0.wp.com/latex.php?latex=N%27%5Cleq+N&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=N%27%5Cleq+N&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=N%27%5Cleq+N&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;N&amp;#039;&amp;#92;leq N&quot; class=&quot;latex&quot; /&gt; points), and then split it into two disjoint shards, &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D_1+%3D+%5C%7B+z_1+%2C%5Cldots%2C+z_%7BN%27%2F2%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D_1+%3D+%5C%7B+z_1+%2C%5Cldots%2C+z_%7BN%27%2F2%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D_1+%3D+%5C%7B+z_1+%2C%5Cldots%2C+z_%7BN%27%2F2%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D_1 = &amp;#92;{ z_1 ,&amp;#92;ldots, z_{N&amp;#039;/2} &amp;#92;}&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D_2+%3D+%5C%7B+z_%7BN%27%2F2%2B1%7D+%2C%5Cldots%2C+z_%7BN%27%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D_2+%3D+%5C%7B+z_%7BN%27%2F2%2B1%7D+%2C%5Cldots%2C+z_%7BN%27%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D_2+%3D+%5C%7B+z_%7BN%27%2F2%2B1%7D+%2C%5Cldots%2C+z_%7BN%27%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D_2 = &amp;#92;{ z_{N&amp;#039;/2+1} ,&amp;#92;ldots, z_{N&amp;#039;} &amp;#92;}&quot; class=&quot;latex&quot; /&gt;. Then train two models &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1+%2C+q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1+%2C+q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1+%2C+q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1 , q_2&quot; class=&quot;latex&quot; /&gt; on &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D_2&quot; class=&quot;latex&quot; /&gt;, respectively.&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;The Output Generative Model:&lt;/strong&gt; Return the generative model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p%28y%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p%28y%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p%28y%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p(y|x)&quot; class=&quot;latex&quot; /&gt; as follows: On input a prompt &lt;img src=&quot;https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;x&quot; class=&quot;latex&quot; /&gt;, generate &lt;img src=&quot;https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;y&quot; class=&quot;latex&quot; /&gt; with probability proportional to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Csqrt%7B+q_1%28y%7Cx%29+q_2%28y%7Cx%29+%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Csqrt%7B+q_1%28y%7Cx%29+q_2%28y%7Cx%29+%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Csqrt%7B+q_1%28y%7Cx%29+q_2%28y%7Cx%29+%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;sqrt{ q_1(y|x) q_2(y|x) }&quot; class=&quot;latex&quot; /&gt; .&lt;/p&gt;
-
-
-
-&lt;p&gt;Note that for any copyrighted work &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&amp;#92;in D&quot; class=&quot;latex&quot; /&gt; one of either &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_2&quot; class=&quot;latex&quot; /&gt; would have been trained without access to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt;. The intuition of the algorithm is as follows: the output model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; has the property that it tends to have probability mass only in the region where both &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_2&quot; class=&quot;latex&quot; /&gt; have probability mass; therefore, for any copyrighted work &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&amp;#92;in D&quot; class=&quot;latex&quot; /&gt;,&amp;nbsp; if &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; outputs &lt;img src=&quot;https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;y&quot; class=&quot;latex&quot; /&gt; with reasonable probability then this should not be a violation since &lt;img src=&quot;https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;y&quot; class=&quot;latex&quot; /&gt; tends to also be output by a model that was trained without access to the copyrighted work &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt; itself. To formalize this, let us make the following choice for the &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}&quot; class=&quot;latex&quot; /&gt; function: define &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C+%3D+q_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C+%3D+q_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C+%3D+q_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}_C = q_i&quot; class=&quot;latex&quot; /&gt;, for &lt;img src=&quot;https://s0.wp.com/latex.php?latex=i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;i&quot; class=&quot;latex&quot; /&gt; s.t. &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C%5Cnotin+D_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C%5Cnotin+D_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C%5Cnotin+D_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&amp;#92;notin D_i&quot; class=&quot;latex&quot; /&gt;, i.e. &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_i&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_i&quot; class=&quot;latex&quot; /&gt; is the model trained without access to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt;.&amp;nbsp; The paper formally shows that as long as the two models &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_2&quot; class=&quot;latex&quot; /&gt; have some non-trivial overlap (specifically their squared Hellinger distance is bounded away from 1), then the model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; will satisfy our definition for some &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k&quot; class=&quot;latex&quot; /&gt; (based on this Hellinger distance). In particular,&amp;nbsp; for every copyrighted work &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C%5Cin+D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&amp;#92;in D&quot; class=&quot;latex&quot; /&gt;, the distribution &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p%28%5Ccdot%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p%28%5Ccdot%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p%28%5Ccdot%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p(&amp;#92;cdot|x)&quot; class=&quot;latex&quot; /&gt; will have bounded KL divergence from the model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D_C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}_C&quot; class=&quot;latex&quot; /&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;The intuition is provided in the following animation&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-video wp-block-embed is-type-video is-provider-videopress&quot;&gt;&lt;div class=&quot;wp-block-embed__wrapper&quot; style=&quot;max-width:535px;margin:auto&quot;&gt;
-&lt;iframe title=&#39;VideoPress Video Player&#39; aria-label=&#39;VideoPress Video Player&#39; width=&#39;656&#39; height=&#39;328&#39; src=&#39;https://video.wordpress.com/embed/MQy7I1OA?cover=1&amp;amp;preloadContent=metadata&amp;amp;useAverageColor=1&amp;amp;hd=1&#39; frameborder=&#39;0&#39; allowfullscreen data-resize-to-parent=&quot;true&quot;  allow=&#39;clipboard-write&#39;&gt;&lt;/iframe&gt;&lt;script src=&#39;https://v0.wordpress.com/js/next/videopress-iframe.js?m=1674852142&#39;&gt;&lt;/script&gt;
-&lt;/div&gt;&lt;figcaption&gt;&lt;em&gt;Video: Curves of two &amp;#8220;spiky&amp;#8221; distributions &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_2&quot; class=&quot;latex&quot; /&gt;&lt;/em&gt; with a range of spike locations. We see how the distributions proportional to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Csqrt%7Bq_1q_2%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Csqrt%7Bq_1q_2%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Csqrt%7Bq_1q_2%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;sqrt{q_1q_2}&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmin+%5C%7Bq_1%2C+q_2%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmin+%5C%7Bq_1%2C+q_2%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmin+%5C%7Bq_1%2C+q_2%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;min &amp;#92;{q_1, q_2&amp;#92;}&quot; class=&quot;latex&quot; /&gt; significantly &amp;#8220;flatten&amp;#8221; these spikes.&lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;Imagine that both &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_2&quot; class=&quot;latex&quot; /&gt; are “faulty” in the sense that they have a significant chance of outputting a “memorized” sample from their training set (or an output substantially similar to it). The “faulty” regions are the “spikes” in their probability distribution, and, since the training sets are disjoint, these two “spikes” will be in &lt;em&gt;different&lt;/em&gt; places. Hence when we switch to the probability distribution &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; it will have the effect of “flattening” the spikes and shifting most weight to the other parts of the probability distribution. Another alternative is for &lt;img src=&quot;https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;CP-&amp;#92;Delta&quot; class=&quot;latex&quot; /&gt; to output the model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p%28y%7Cx%29+%5Cpropto+%5Cmin+%5C%7B+q_1%28y%7Cx%29%2Cq_2%28y%7Cx%29+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p%28y%7Cx%29+%5Cpropto+%5Cmin+%5C%7B+q_1%28y%7Cx%29%2Cq_2%28y%7Cx%29+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p%28y%7Cx%29+%5Cpropto+%5Cmin+%5C%7B+q_1%28y%7Cx%29%2Cq_2%28y%7Cx%29+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p(y|x) &amp;#92;propto &amp;#92;min &amp;#92;{ q_1(y|x),q_2(y|x) &amp;#92;}&quot; class=&quot;latex&quot; /&gt; (this provides a guarantee in terms of the Max-KL divergence, and it replaces the assumption on overlap, defined with respect to the squared Hellinger distance, to be instead defined with respect to the total variation distance).&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;p&gt;There a number of modifications to &lt;img src=&quot;https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=CP-%5CDelta&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;CP-&amp;#92;Delta&quot; class=&quot;latex&quot; /&gt; worth considering for more practical deployments. In some cases, directly computing the aforementioned&amp;nbsp; probability distributions may be challenging.&amp;nbsp; Furthermore, it may be desirable to utilize some arbitrary generative model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; (say &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; was trained on the full dataset &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D&quot; class=&quot;latex&quot; /&gt;) where we seek to modify &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; into a model that has strong protections against copyright violations (and which preserves the quality of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; to the extent possible). Finally, it may be desirable to explicitly tune the acceptable value of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k_x&quot; class=&quot;latex&quot; /&gt;. Our next algorithm addresses these concerns and makes use of a tunable parameter &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k%5Cgeq+0&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k%5Cgeq+0&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k%5Cgeq+0&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k&amp;#92;geq 0&quot; class=&quot;latex&quot; /&gt;. It is specified as follows:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Algorithm &lt;img src=&quot;https://s0.wp.com/latex.php?latex=CP-k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=CP-k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=CP-k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;CP-k&quot; class=&quot;latex&quot; /&gt; : &lt;/strong&gt;An Access-Free Reduction at Threshold &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k&quot; class=&quot;latex&quot; /&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Input: &lt;/strong&gt;A model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt;; A dataset &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D+%3D+%5C%7B+z_1+%2C+%5Cldots%2C+z_N+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D+%3D+%5C%7B+z_1+%2C+%5Cldots%2C+z_N+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D+%3D+%5C%7B+z_1+%2C+%5Cldots%2C+z_N+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D = &amp;#92;{ z_1 , &amp;#92;ldots, z_N &amp;#92;}&quot; class=&quot;latex&quot; /&gt;.&lt;br&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Learning: &lt;/strong&gt;First de-deduplicate &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D&quot; class=&quot;latex&quot; /&gt; and split it into two disjoint shards, &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D_1+%3D+%5C%7B+z_1+%2C%5Cldots%2C+z_%7BN%27%2F2%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D_1+%3D+%5C%7B+z_1+%2C%5Cldots%2C+z_%7BN%27%2F2%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D_1+%3D+%5C%7B+z_1+%2C%5Cldots%2C+z_%7BN%27%2F2%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D_1 = &amp;#92;{ z_1 ,&amp;#92;ldots, z_{N&amp;#039;/2} &amp;#92;}&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D_2+%3D+%5C%7B+z_%7BN%27%2F2%2B1%7D+%2C%5Cldots%2C+z_%7BN%27%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D_2+%3D+%5C%7B+z_%7BN%27%2F2%2B1%7D+%2C%5Cldots%2C+z_%7BN%27%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D_2+%3D+%5C%7B+z_%7BN%27%2F2%2B1%7D+%2C%5Cldots%2C+z_%7BN%27%7D+%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D_2 = &amp;#92;{ z_{N&amp;#039;/2+1} ,&amp;#92;ldots, z_{N&amp;#039;} &amp;#92;}&quot; class=&quot;latex&quot; /&gt;. Then train two models &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1+%2C+q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1+%2C+q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1+%2C+q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1 , q_2&quot; class=&quot;latex&quot; /&gt; on &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=D_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=D_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=D_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;D_2&quot; class=&quot;latex&quot; /&gt;, respectively.&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;The Output Generative Model:&lt;/strong&gt; Return the generative model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p_k%28y%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p_k%28y%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p_k%28y%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p_k(y|x)&quot; class=&quot;latex&quot; /&gt; defined as follows: On input a prompt &lt;img src=&quot;https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;x&quot; class=&quot;latex&quot; /&gt;,&amp;nbsp; first sample &lt;img src=&quot;https://s0.wp.com/latex.php?latex=y+%5Csim+p%28%5Ccdot+%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=y+%5Csim+p%28%5Ccdot+%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=y+%5Csim+p%28%5Ccdot+%7Cx%29&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;y &amp;#92;sim p(&amp;#92;cdot |x)&quot; class=&quot;latex&quot; /&gt; and then accept &lt;img src=&quot;https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=y&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;y&quot; class=&quot;latex&quot; /&gt; if &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Clog+%5Cbig%28+p%28y%7Cx%29+%2F+q_i%28y%7Cx%29+%5Cbig%29+%5Cleq+k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Clog+%5Cbig%28+p%28y%7Cx%29+%2F+q_i%28y%7Cx%29+%5Cbig%29+%5Cleq+k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Clog+%5Cbig%28+p%28y%7Cx%29+%2F+q_i%28y%7Cx%29+%5Cbig%29+%5Cleq+k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;log &amp;#92;big( p(y|x) / q_i(y|x) &amp;#92;big) &amp;#92;leq k&quot; class=&quot;latex&quot; /&gt;, for &lt;img src=&quot;https://s0.wp.com/latex.php?latex=i%5Cin%5C%7B1%2C2%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=i%5Cin%5C%7B1%2C2%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=i%5Cin%5C%7B1%2C2%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;i&amp;#92;in&amp;#92;{1,2&amp;#92;}&quot; class=&quot;latex&quot; /&gt;. (Otherwise, resample.)&lt;/p&gt;
-
-
-
-&lt;p&gt;The intuition of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=CP-k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=CP-k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=CP-k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;CP-k&quot; class=&quot;latex&quot; /&gt; is as follows: we first sample the output from &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; and only accept this output if the likelihood ratio to the &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathsf%7Bsafe%7D&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathsf{safe}&quot; class=&quot;latex&quot; /&gt; function (on any &lt;img src=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=C&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;C&quot; class=&quot;latex&quot; /&gt;) satisfies a desired upper bound, the latter of which can be verified by checking the likelihood ratio with respect to both &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_2&quot; class=&quot;latex&quot; /&gt;. Since &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p_k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p_k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p_k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p_k&quot; class=&quot;latex&quot; /&gt; transforms the output of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; (i.e. it throws aways probability mass which could be potential copyright violations), one might be concerned that we will degrade the quality of the original model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt;. Fortunately, we show when this is not the case. We give formal theoretical results on the effectiveness of the approach based on the information distances between &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1&quot; class=&quot;latex&quot; /&gt; and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_2&quot; class=&quot;latex&quot; /&gt;; in fact, we sometimes even improve on the quality of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; with this approach. We also specify the relationship between the desired &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k_x&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k_x&quot; class=&quot;latex&quot; /&gt; and tunable parameter &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k&quot; class=&quot;latex&quot; /&gt;.&lt;/p&gt;
-
-
-
-&lt;h3 class=&quot;wp-block-heading&quot;&gt;&lt;strong&gt;An Illustrative Experiment&lt;/strong&gt;&lt;/h3&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image size-large&quot;&gt;&lt;a href=&quot;https://windowsontheory.files.wordpress.com/2023/02/image.png&quot;&gt;&lt;img data-attachment-id=&quot;8569&quot; data-permalink=&quot;https://windowsontheory.org/2023/02/21/provable-copyright-protection-for-generative-models/image-11/&quot; data-orig-file=&quot;https://windowsontheory.files.wordpress.com/2023/02/image.png&quot; data-orig-size=&quot;2284,548&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;image&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://windowsontheory.files.wordpress.com/2023/02/image.png?w=300&quot; data-large-file=&quot;https://windowsontheory.files.wordpress.com/2023/02/image.png?w=656&quot; src=&quot;https://windowsontheory.files.wordpress.com/2023/02/image.png?w=1024&quot; alt=&quot;&quot; class=&quot;wp-image-8569&quot; srcset=&quot;https://windowsontheory.files.wordpress.com/2023/02/image.png?w=1024 1024w, https://windowsontheory.files.wordpress.com/2023/02/image.png?w=2048 2048w, https://windowsontheory.files.wordpress.com/2023/02/image.png?w=150 150w, https://windowsontheory.files.wordpress.com/2023/02/image.png?w=300 300w, https://windowsontheory.files.wordpress.com/2023/02/image.png?w=768 768w&quot; sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot; /&gt;&lt;/a&gt;&lt;figcaption class=&quot;wp-element-caption&quot;&gt;&lt;em&gt;&lt;strong&gt;Left: &lt;/strong&gt;A model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; trained on the full modified CIFAR10 dataset; we injected multiple copies of two images (marked with red frames), so they are likely to be memorized by the model. &lt;strong&gt;Middle two images:&lt;/strong&gt; Models &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1%2C+q_2+&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1%2C+q_2+&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1%2C+q_2+&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1, q_2 &quot; class=&quot;latex&quot; /&gt; trained on two shards of the dataset, split so that each injected image appears in only one of them. &lt;strong&gt;Right:&lt;/strong&gt; A model obtained by combining &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p%2C+q_1%2C+q_2+&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p%2C+q_1%2C+q_2+&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p%2C+q_1%2C+q_2+&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p, q_1, q_2 &quot; class=&quot;latex&quot; /&gt; using our algorithm. Despite being a black-box transformation of the three memorizing models, the combined model does not output either of the injected images.&lt;/em&gt;&lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;We now present a qualitative experiment demonstrating how applying our algorithm to memorizing models produces a model that no longer memorizes. Specifically, we first augment CIFAR-10 with multiple copies of two images (images close to the augmented images are marked with red boundaries); hypothetically, suppose these two images are copyrighted works. For illustrative purposes, we do not deduplicate our dataset. Note our goal here is not to simply present a heuristic approach, such as deduplication, that “often works in practice,” but it is to show that an algorithm with &lt;em&gt;rigorous guarantees&lt;/em&gt; can also be practical.&lt;/p&gt;
-
-
-
-&lt;p&gt;&amp;nbsp;The leftmost image shows generations from a model &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; that was trained on the full dataset, where we clearly see that &lt;img src=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=p&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;p&quot; class=&quot;latex&quot; /&gt; generates the two copyrighted works. Our algorithm starts by splitting this dataset into two disjoint datasets, where the two copyrighted images are split into two different shards, and it trains two models &lt;img src=&quot;https://s0.wp.com/latex.php?latex=q_1%2Cq_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=q_1%2Cq_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q_1%2Cq_2&amp;#038;bg=ffffff&amp;#038;fg=666666&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;q_1,q_2&quot; class=&quot;latex&quot; /&gt; on these disjoint shards. The result is two models such that each generates the CIFAR-10 distribution, but also has a significant chance to output the memorized example. Yet when we combine all three of models using the CP-k algorithm, we obtain a model that agrees with them on the shared part of the distribution but is highly unlikely to output either one of the memorized images.&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image is-resized&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/4yzcUxprXN23huNzSGxP6yAyzNgaRbwjlMBOQhWQ4VQ0Y1LP4HeNBpFljIGDX0_pub-xxHrbg6loBbP0vwG11iH3LAoPj9g6H_5rJa741JOHFDvkpSRPMcWM49CYvLuIV1NXLC1Zn2RRrQTcirr6g7c&quot; alt=&quot;Illustration of the algorithm to obtain a model satisfying the NAF definition by first splitting the data into two disjoint shards, ensuring that duplicated copies of an image are in the same shard. Then we obtain a model by combining the models trained on both shards.&quot; width=&quot;635&quot; height=&quot;356&quot; /&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;See the paper ( &lt;a href=&quot;https://arxiv.org/abs/2302.10870&quot;&gt;https://arxiv.org/abs/2302.10870&lt;/a&gt;  )  for the full details of our definitions, theorems, and experiments. We believe that there is much room for follow-up work, including optimization of performance, as well as much larger-scale experiments.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Boaz Barak&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-22 02:22:01 UTC</pubDate>
-  <author>Windows on Theory</author>
-</item>
-
-<item>
-  <title>A Qubit, a Coin, and an Advice String Walk Into a Relational Problem</title>
-  <guid>http://arxiv.org/abs/2302.10332</guid>
-  <link>http://arxiv.org/abs/2302.10332</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Aaronson_S/0/1/0/all/0/1&quot;&gt;Scott Aaronson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Buhrman_H/0/1/0/all/0/1&quot;&gt;Harry Buhrman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Kretschmer_W/0/1/0/all/0/1&quot;&gt;William Kretschmer&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Relational problems (those with many possible valid outputs) are different
-from decision problems, but it is easy to forget just how different. This paper
-initiates the study of FBQP/qpoly, the class of relational problems solvable in
-quantum polynomial-time with the help of polynomial-sized quantum advice, along
-with its analogues for deterministic and randomized computation (FP, FBPP) and
-advice (/poly, /rpoly).
-&lt;/p&gt;
-&lt;p&gt;Our first result is that FBQP/qpoly != FBQP/poly, unconditionally, with no
-oracle -- a striking contrast with what we know about the analogous decision
-classes. The proof repurposes the separation between quantum and classical
-one-way communication complexities due to Bar-Yossef, Jayram, and Kerenidis. We
-discuss how this separation raises the prospect of near-term experiments to
-demonstrate &quot;quantum information supremacy,&quot; a form of quantum supremacy that
-would not depend on unproved complexity assumptions.
-&lt;/p&gt;
-&lt;p&gt;Our second result is that FBPP is not contained in FP/poly -- that is,
-Adleman&#39;s Theorem fails for relational problems -- unless PSPACE is contained
-in NP/poly. Our proof uses IP=PSPACE and time-bounded Kolmogorov complexity. On
-the other hand, we show that proving FBPP not in FP/poly will be hard, as it
-implies a superpolynomial circuit lower bound for PromiseBPEXP.
-&lt;/p&gt;
-&lt;p&gt;We prove the following further results: * Unconditionally, FP != FBPP and
-FP/poly != FBPP/poly (even when these classes are carefully defined). *
-FBPP/poly = FBPP/rpoly (and likewise for FBQP). For sampling problems, by
-contrast, SampBPP/poly != SampBPP/rpoly (and likewise for SampBQP).
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>A note on the partition bound for one-way classical communication complexity</title>
-  <guid>http://arxiv.org/abs/2302.10431</guid>
-  <link>http://arxiv.org/abs/2302.10431</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arunachalam_S/0/1/0/all/0/1&quot;&gt;Srinivasan Arunachalam&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doriguello_J/0/1/0/all/0/1&quot;&gt;Jo&amp;#xe3;o F. Doriguello&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jain_R/0/1/0/all/0/1&quot;&gt;Rahul Jain&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a linear program for the one-way version of the partition bound
-(denoted $\mathsf{prt}^1_\varepsilon(f)$). We show that it characterizes
-one-way randomized communication complexity $\mathsf{R}_\varepsilon^1(f)$ with
-shared randomness of every partial function
-$f:\mathcal{X}\times\mathcal{Y}\to\mathcal{Z}$, i.e., for
-$\delta,\varepsilon\in(0,1/2)$, $\mathsf{R}_\varepsilon^1(f) \geq
-\log\mathsf{prt}_\varepsilon^1(f)$ and $\mathsf{R}_{\varepsilon+\delta}^1(f)
-\leq \log\mathsf{prt}_\varepsilon^1(f) + \log\log(1/\delta)$. This improves
-upon the characterization of $\mathsf{R}_\varepsilon^1(f)$ in terms of the
-rectangle bound (due to Jain and Klauck, 2010) by reducing the additive
-$O(\log(1/\delta))$-term to $\log\log(1/\delta)$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-02-22 01:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
 </item>
 
 </channel>
