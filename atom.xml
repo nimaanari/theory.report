@@ -224,9 +224,9 @@ and find thus the asymptotics of the mean and higher moments.
     <id>https://minorfree.github.io/hz-spanner</id>
     <updated>2023-02-26T00:00:00+00:00</updated>
     <content type="html" xml:lang="en">
-    &lt;p&gt;This post describes a simple linear time algorithm by Halperin-Zwick [6] for constructing a \((2k+1)\)-spanner of unweighted graphs for any given integer \(k\geq 1\). The spanner  has \(O(n^{1+1/k})\) edges and hence is sparse. When \(k = \log n\), it only has \(O(n)\) edges.  This sparsity makes spanners an important object in many applications.&lt;/p&gt;
+    &lt;p&gt;This post describes a simple linear time algorithm by Halperin-Zwick [6] for constructing a \((2k-1)\)-spanner of unweighted graphs for any given integer \(k\geq 1\). The spanner  has \(O(n^{1+1/k})\) edges and hence is sparse. When \(k = \log n\), it only has \(O(n)\) edges.  This sparsity makes spanners an important object in many applications.&lt;/p&gt;
 
-&lt;p&gt;This post was inspired by my past attempt to track down the detail of the Halperin-Zwick algorithm. Halperin and Zwick never published their algorithm, and all papers I am aware of cite their unpublished manuscript [6]. The algorithm by Halperin-Zwick is a simple modification of an earlier algorithm by Pelege and Schäffer [8], which, according to Uri Zwick, is the reason why they did not publish their result. The spanner by Pelege and Schäffer [8] has stretch \(4k+1\) for the same sparsity. The idea of Halperin-Zwick algorithm was given as Exercise 3 in Chapter 16 of  the book by Peleg [7].&lt;/p&gt;
+&lt;p&gt;This post was inspired by my past attempt to track down the detail of the Halperin-Zwick algorithm. Halperin and Zwick never published their algorithm, and all papers I am aware of cite their unpublished manuscript [6]. The algorithm by Halperin-Zwick is a simple modification of an earlier algorithm by Pelege and Schäffer [8], which, according to Uri Zwick, is the reason why they did not publish their result. The spanner by Pelege and Schäffer [8] has stretch \(4k-3\) for the same sparsity. The idea of Halperin-Zwick algorithm was given as Exercise 3 in Chapter 16 of  the book by Peleg [7].&lt;/p&gt;
 
 &lt;p&gt;First, let’s define spanners. Graphs in this post are connected.&lt;/p&gt;
 
@@ -239,14 +239,14 @@ and find thus the asymptotics of the mean and higher moments.
 
 &lt;p&gt;Here \(d_H\) and \(d_G\) denote the graph distances in \(H\) and in \(G\), respectively. Graph \(G\) could be weighted or unweighted; we only consider unweighted graphs in this post. The distance constraint on \(H\) implies that \(H\) is connected and spanning.&lt;/p&gt;
 
-&lt;p&gt;Parameter \(t\) is called the &lt;em&gt;stretch&lt;/em&gt; of the spanner. We often construct a spanner with an odd stretch: \(t = 2k+1\) for some integer \(k\geq 1\). Why not even stretches? Short answer: there is no gain in terms of the worst case bounds for even stretch [1].&lt;/p&gt;
+&lt;p&gt;Parameter \(t\) is called the &lt;em&gt;stretch&lt;/em&gt; of the spanner. We often construct a spanner with an odd stretch: \(t = 2k-1\) for some integer \(k\geq 1\). Why not even stretches? Short answer: there is no gain in terms of the worst case bounds for even stretch [1].&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt; (Halperin-Zwick): Let \(G\) be an unweighted graph with \(n\) vertices and \(m\) edges. Let \(k\geq 1\) be any given integer. There is an algorithm that runs in time \(O(m)\) and constructs a \((2k+1)\)-spanner of \(G\) with \(O(n^{1+1/k})\) edges.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt; (Halperin-Zwick): Let \(G\) be an unweighted graph with \(n\) vertices and \(m\) edges. Let \(k\geq 1\) be any given integer. There is an algorithm that runs in time \(O(m)\) and constructs a \((2k-1)\)-spanner of \(G\) with \(O(n^{1+1/k})\) edges.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;It is often instructive to think about \(k=1\), i.e, constructing a \(3\)-spanner. And this is where we start.&lt;/p&gt;
+&lt;p&gt;It is often instructive to think about \(k=2\), i.e, constructing a \(3\)-spanner. And this is where we start.&lt;/p&gt;
 
 &lt;h1 id=&quot;stretch-3&quot;&gt;Stretch 3&lt;/h1&gt;
 
@@ -305,15 +305,15 @@ and find thus the asymptotics of the mean and higher moments.
 
 &lt;p&gt;&lt;img src=&quot;/assets/figs/clusters.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Figure 1: (a) stretch-3 path for edge \((u,v)\) and (b) stretch-\((2k+1)\) path for edge \((u,v)\)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Figure 1: (a) stretch-3 path for edge \((u,v)\) and (b) stretch-\((2k-1)\) path for edge \((u,v)\)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;If \(u\) and \(v\) are in the same heavy cluster \(C\), then \(d_H(u,v)\leq 2\) and the stretch guarantee holds. Otherwise, let \(C_x\) be the heavy cluster centered at \(x\) containing \(v\), say. As \((u,v)\not\in H\), there must be another vertex \(w\in C_x\) such that \((u,w)\in H\) by the construction in line 6. Thus, the path \(u\rightarrow w\rightarrow x\rightarrow v\) is a path of length 3 in \(H\) between \(u\) and \(v\), as desired. See Figure 1(a).&lt;/p&gt;
 
 &lt;h1 id=&quot;larger-stretches&quot;&gt;Larger Stretches&lt;/h1&gt;
 
-&lt;p&gt;The algorithm for constructing a \((2k+1)\)-spanner with \(O(n^{1+1/k})\) edges is somewhat similar to the stretch-3 case, but we will need a finer analysis. A key observation, which we also use in the 3-spanner construction, is that if we have a cluster, say \(C\), of radius \(k\), and a vertex \(v\in N_G(C)\), it suffices to keep only one edge from \(v\) to \(C\). Thus, as long as \(N_G(C)\) has at most \(n^{1/k}\lvert C \rvert\) vertices, we can add an edge from \(v\) to \(C\) for each \(v\in N_G(C)\); the &lt;em&gt;average number of edges added per vertex&lt;/em&gt; of \(C\) is \(n^{1/k}\).&lt;/p&gt;
+&lt;p&gt;The algorithm for constructing a \((2k-1)\)-spanner with \(O(n^{1+1/k})\) edges is somewhat similar to the stretch-3 case, but we will need a finer analysis. A key observation, which we also use in the 3-spanner construction, is that if we have a cluster, say \(C\), of radius \(k\), and a vertex \(v\in N_G(C)\), it suffices to keep only one edge from \(v\) to \(C\). Thus, as long as \(N_G(C)\) has at most \(n^{1/k}\lvert C \rvert\) vertices, we can add an edge from \(v\) to \(C\) for each \(v\in N_G(C)\); the &lt;em&gt;average number of edges added per vertex&lt;/em&gt; of \(C\) is \(n^{1/k}\).&lt;/p&gt;
 
-&lt;p&gt;What if \(\lvert N_G(C) \rvert \geq n^{1/k}\lvert C \rvert\)? In this case, we simply grow \(C\) by adding all of its neighbors. How many times will it grow? At most \(k\) times, as every time \(C\) grows, its size increases by a factor of \(n^{1/k}\), and there are only \(n\) vertices in the graph.&lt;/p&gt;
+&lt;p&gt;What if \(\lvert N_G(C) \rvert \geq n^{1/k}\lvert C \rvert\)? In this case, we simply grow \(C\) by adding all of its neighbors. How many times will it grow? At most \(k-1\) times, as every time \(C\) grows, its size increases by a factor of strictly larger than \(n^{1/k}\), and there are only \(n\) vertices in the graph.&lt;/p&gt;
 
 &lt;p&gt;The pseudocode of the algorithm is given below. The set \(A\) holds the edges between \(C\) and its neighbors described above. The rest is essentially the same as the clustering for stretch 3.&lt;/p&gt;
 
@@ -353,48 +353,50 @@ and find thus the asymptotics of the mean and higher moments.
 
 &lt;p&gt;&lt;strong&gt;Sparsity analysis.&lt;/strong&gt; The number of edges added in the loop in line 4 is at most \(n-1\). Observe that for each cluster \(C_x\) added to \({\mathcal C}\) in line 6 of &lt;span style=&quot;font-variant: small-caps&quot;&gt;Clustering&lt;/span&gt;, the number of edges added to \(A\) in the loop in line 7 is at most \(n^{1/k}\lvert C_{x} \rvert\). Thus, \(\lvert A \rvert\leq n^{1/k}\sum_{C}\lvert C \rvert \leq n^{1+1/k}\). This implies that \(\lvert E(H) \rvert = O(n^{1+1/k})\).&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Stretch analysis.&lt;/strong&gt; Let \((u,v)\) be any edge of \(G\) such that \((u,v)\not\in H\). We need to show that \(d_H(u,v)\leq 2k+1\). Observe that:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stretch analysis.&lt;/strong&gt; Let \((u,v)\) be any edge of \(G\) such that \((u,v)\not\in H\). We need to show that \(d_H(u,v)\leq 2k-1\). Observe that:&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Observation 2&lt;/strong&gt;: Every cluster \(C_x\in {\mathcal C}\) has radius at most \(k\).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observation 2&lt;/strong&gt;: Every cluster \(C_x\in {\mathcal C}\) has radius at most \(k-1\).&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;Proof: Every time the radius of \(C_x\) increases by \(1\), the size of \(C_x\) increases by a factor of \(n^{1/k}\) by the construction. Thus, after \(t\) rounds, \(n\geq \lvert C_{x} \rvert\geq n^{t/k}\), which gives \(t\leq k\).&lt;/p&gt;
+&lt;p&gt;Proof: Every time the radius of \(C_x\) increases by \(1\), the size of \(C_x\) increases by a factor of strictly larger than \(n^{1/k}\) by the construction. Thus, after \(t\) rounds, \(n\geq \lvert C_{x} \rvert &amp;gt; n^{t/k}\), which gives \(t\leq k-1\).&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Let \(C_x\) be the cluster containing \(v\). If \(u\in C_x\), then \(d_G(u,v)\leq 2\cdot k\). Otherwise, suppose w.l.o.g, that \(v\) is clustered before \(u\). Observe that \(u\in N_{G_{i}}(C_x)\) and hence an edge \((u,w)\) is added to \(A\), which is eventually added to \(H\). See Figure 1(b). Thus, the path consisting of an edge \((u,w)\), the shortest path from \(w\) to \(x\), and the shortest path from \(x\) to \(v\), is a path of length at most \(2k+1\) between \(u\) and \(v\) in \(H\), as desired.&lt;/p&gt;
+&lt;p&gt;Let \(C_x\) be the cluster containing \(v\). If \(u\in C_x\), then \(d_G(u,v)\leq 2\cdot (k-1)\). Otherwise, suppose w.l.o.g, that \(v\) is clustered before \(u\). Observe that \(u\in N_{G_{i}}(C_x)\) and hence an edge \((u,w)\) is added to \(A\), which is eventually added to \(H\). See Figure 1(b). Thus, the path consisting of an edge \((u,w)\), the shortest path from \(w\) to \(x\), and the shortest path from \(x\) to \(v\), is a path of length at most \(2(k-1)+1 = 2k-1\) between \(u\) and \(v\) in \(H\), as desired.&lt;/p&gt;
 
 &lt;h1 id=&quot;optimality-the-girth-conjecture&quot;&gt;Optimality: The Girth Conjecture&lt;/h1&gt;
 
-&lt;p&gt;It is not hard to construct a class of graphs such that for any graph \(G\) of size \(n\) in the class, the Halperin-Zwick algorithm produces a \((2k+1)\)-spanner for \(G\) that has \(\Omega(n^{1+1/k})\) edges. Could we go below the bound \(\Theta(n^{1+1/k})\) on the number of edges (by a different algorithm, say)? The consensus seems to be no, though currently we do not have a definite answer.&lt;/p&gt;
+&lt;p&gt;It is not hard to construct a class of graphs such that for any graph \(G\) of size \(n\) in the class, the Halperin-Zwick algorithm produces a \((2k-1)\)-spanner for \(G\) that has \(\Omega(n^{1+1/k})\) edges. Could we go below the bound \(\Theta(n^{1+1/k})\) on the number of edges (by a different algorithm, say)? The consensus seems to be no, though currently we do not have a definite answer.&lt;/p&gt;
 
 &lt;p&gt;Spanners have a tight connection to the girth of graphs; a graph has girth \(g\) if the shortest simple cycle in the graph has length \(g\).&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Observation 3&lt;/strong&gt;: Let \(H\) be a graph of girth \(2k+3\). Then any \((2k+1)\)-spanner of \(H\) must contain every edge of \(H\).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observation 3&lt;/strong&gt;: Let \(H\) be a graph of girth \(2k+1\). Then any \((2k-1)\)-spanner of \(H\) must contain every edge of \(H\).&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Observation 3 essentially says that any \((2k+1)\)-spanner of \(H\) must be itself. Thus, the question of the optimality of spanners reduces to: is there any graph with \(o(n^{1+1/k})\) edges and girth \((2k+3)\)? The Erdős’ Girth Conjecture implies that the answer is no.&lt;/p&gt;
+&lt;p&gt;Observation 3 essentially says that any \((2k-1)\)-spanner of \(H\) must be itself. Thus, the question of the optimality of spanners reduces to: is there any graph with \(o(n^{1+1/k})\) edges and girth \((2k+1)\)? The Erdős’ Girth Conjecture implies that the answer is no.&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Erdős’ Girth Conjecture [5]&lt;/strong&gt;: For any \(n \geq 1\) and \(k\geq 1\), there exists a graph with \(n\) vertices of girth \((2k+3)\) that has \(\Omega(n^{1+1/k})\) edges.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Erdős’ Girth Conjecture [5]&lt;/strong&gt;: For any \(n \geq 1\) and \(k\geq 1\), there exists a graph with \(n\) vertices of girth \((2k+1)\) that has \(\Omega(n^{1+1/k})\) edges.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;Erdős stated a lower bound \(c_k\cdot n^{1+1/k}\) on the number of edges in the conjecture [5]; that is, the constant is allowed to degrade as \(k\) increases.  The spanner literature often cites the stronger version above, where the constant remains the same for every \(k\). The Erdős’ Girth Conjecture is known to hold for a few small values of \(k\).&lt;/p&gt;
 
-&lt;p&gt;While Erdős’ Girth Conjecture remains wide open, we could ask: is it possible to construct a \((2k+1)\)-spanner that has girth at least \(2k+3\)? If yes, then the output spanner is (existentially) optimal regardless of the truth of Erdős’ Girth Conjecture.&lt;/p&gt;
+&lt;p&gt;While Erdős’ Girth Conjecture remains wide open, we could ask: is it possible to construct a \((2k-1)\)-spanner that has girth at least \(2k+1\)? If yes, then the output spanner is (existentially) optimal regardless of the truth of Erdős’ Girth Conjecture.&lt;/p&gt;
 
-&lt;p&gt;It turns out that the following simple greedy algorithm, formally described in [2] and attributed to Marshall Bern, does the job: consider edges in increasing weight order and add an edge \(e\) to the current spanner if the distance between its endpoints in the spanner is larger than \((2k+1)w(e)\). The algorithm works for weighted graphs as well. It is an instructive exercise to show that the output graph is a \((2k+1)\)-spanner and has girth at least \(2k+3\).&lt;/p&gt;
+&lt;p&gt;It turns out that the following simple greedy algorithm, formally described in [2] and attributed to Marshall Bern, does the job: consider edges in increasing weight order and add an edge \(e\) to the current spanner if the distance between its endpoints in the spanner is larger than \((2k-1)w(e)\). The algorithm works for weighted graphs as well. It is an instructive exercise to show that the output graph is a \((2k-1)\)-spanner and has girth at least \(2k+1\).&lt;/p&gt;
 
 &lt;p&gt;The major downsize of the greedy algorithm is its running time: the current best known implemtation takes \(O(mn^{1+1/k})\) time. Even in unweighted graphs, to the best of my knowledge, the following problem remains open:&lt;/p&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Open Problem&lt;/strong&gt;: Construct a \((2k+1)\)-spanner of girth at least \((2k+3)\) in nearly linear time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Open Problem&lt;/strong&gt;: Construct a maximal subgraph of girth at least \((2k+1)\) in nearly linear time.&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;p&gt;For an unweighted graph, a maximal subgraph of girth at least \((2k+1)\) is a \((2k-1)\)-spanner.&lt;/p&gt;
 
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 
@@ -402,7 +404,7 @@ and find thus the asymptotics of the mean and higher moments.
 
 &lt;h1 id=&quot;bibliographical-notes&quot;&gt;Bibliographical Notes&lt;/h1&gt;
 
-&lt;p&gt;The concept of a spanner was formally introduced by Peleg and Schaffer [8], though its conception was much earlier. Peleg and Schaffer constructed a \((4k-1)\)-spanner with \(O(n^{1+1/k})\) edges by connecting every pair of clusters in the output of &lt;span style=&quot;font-variant: small-caps&quot;&gt;Clustering&lt;/span&gt;\((G,k)\) by an edge. This clustering procedure was due to Awerbuch [2].&lt;/p&gt;
+&lt;p&gt;The concept of a spanner was formally introduced by Peleg and Schaffer [8], though its conception was much earlier. Peleg and Schaffer constructed a \((4k-3)\)-spanner with \(O(n^{1+1/k})\) edges by connecting every pair of clusters in the output of &lt;span style=&quot;font-variant: small-caps&quot;&gt;Clustering&lt;/span&gt;\((G,k)\) by an edge. This clustering procedure was due to Awerbuch [2].&lt;/p&gt;
 
 &lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
 
