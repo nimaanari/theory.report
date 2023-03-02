@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-03-02T03:38:55Z">Thursday, March 02 2023, 03:38</time>
+          <time class='timeago' datetime="2023-03-02T04:38:05Z">Thursday, March 02 2023, 04:38</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,59 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, March 02
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/018'>TR23-018 |  Memory-Sample Lower Bounds for Learning with Classical-Quantum Hybrid Memory | 
+
+	Qipeng Liu, 
+
+	Ran Raz, 
+
+	Wei Zhan</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          In a work by Raz (J. ACM and FOCS 16), it was proved that any algorithm for parity learning on $n$ bits requires either $\Omega(n^2)$ bits of classical memory or an exponential number (in~$n$) of random samples. A line of recent works continued that research direction and showed that for a large collection of classical learning tasks, either super-linear classical memory size or super-polynomially many samples are needed. All these works consider learning algorithms as classical branching programs, which perform classical computation within bounded memory.
+
+However, these results do not capture all physical computational models, remarkably, quantum computers and the use of quantum memory. It leaves the possibility that a small piece of quantum memory could significantly reduce the need for classical memory or samples and thus completely change the nature of the classical learning task. Despite the recent research on the necessity of quantum memory for intrinsic quantum learning problems like shadow tomography and purity testing, the role of quantum memory in classical learning tasks remains obscure. 
+
+In this work, we study classical learning tasks in the presence of quantum memory. We prove that any quantum algorithm with both, classical memory and quantum memory, for parity learning on $n$ bits, requires either $\Omega(n^2)$ bits of classical memory or $\Omega(n)$ bits of quantum  memory or an exponential number of samples. In other words, the memory-sample lower bound for parity learning remains qualitatively the same, even if the learning algorithm can use, in addition to the classical memory, a quantum memory of size $c n$ (for some constant $c&gt;0$).
+
+Our result is more general and applies to many other classical learning tasks. Following previous works, we represent by the matrix $M: A \times X \to \{-1,1\}$ the following learning task. An unknown $x$ is sampled uniformly at random from a concept class $X$, and a learning algorithm tries to uncover $x$ by seeing streaming of random samples $(a_i, b_i = M(a_i, x))$ where for every $i$, $a_i\in A$ is chosen uniformly at random. Assume that $k,\ell,r$ are integers such that any submatrix of $M$ of at least $2^{-k}\cdot|A|$ rows and at least $2^{-\ell}\cdot|X|$ columns, has a bias of at most $2^{-r}$. We prove that any algorithm with classical and quantum hybrid memory for the learning problem corresponding to $M$ needs either (1) $\Omega(k \cdot \ell)$ bits of classical memory, or (2) $\Omega(r)$ qubits of quantum memory, or (3) $2^{\Omega(r)}$ random samples, to achieve a success probability at least $2^{-O(r)}$. 
+
+Our results refute the possibility that a small amount of quantum memory significantly reduces the size of classical memory needed for efficient learning on these problems. Our results also imply improved security of several existing cryptographical protocols in the bounded-storage model (protocols that are based on parity learning on $n$ bits), proving that security holds even in the presence of a quantum adversary with at most $c n^2$ bits of classical memory and $c n$ bits of quantum memory (for some constant $c&gt;0$).
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          In a work by Raz (J. ACM and FOCS 16), it was proved that any algorithm for parity learning on $n$ bits requires either $\Omega(n^2)$ bits of classical memory or an exponential number (in~$n$) of random samples. A line of recent works continued that research direction and showed that for a large collection of classical learning tasks, either super-linear classical memory size or super-polynomially many samples are needed. All these works consider learning algorithms as classical branching programs, which perform classical computation within bounded memory.
+
+However, these results do not capture all physical computational models, remarkably, quantum computers and the use of quantum memory. It leaves the possibility that a small piece of quantum memory could significantly reduce the need for classical memory or samples and thus completely change the nature of the classical learning task. Despite the recent research on the necessity of quantum memory for intrinsic quantum learning problems like shadow tomography and purity testing, the role of quantum memory in classical learning tasks remains obscure. 
+
+In this work, we study classical learning tasks in the presence of quantum memory. We prove that any quantum algorithm with both, classical memory and quantum memory, for parity learning on $n$ bits, requires either $\Omega(n^2)$ bits of classical memory or $\Omega(n)$ bits of quantum  memory or an exponential number of samples. In other words, the memory-sample lower bound for parity learning remains qualitatively the same, even if the learning algorithm can use, in addition to the classical memory, a quantum memory of size $c n$ (for some constant $c&gt;0$).
+
+Our result is more general and applies to many other classical learning tasks. Following previous works, we represent by the matrix $M: A \times X \to \{-1,1\}$ the following learning task. An unknown $x$ is sampled uniformly at random from a concept class $X$, and a learning algorithm tries to uncover $x$ by seeing streaming of random samples $(a_i, b_i = M(a_i, x))$ where for every $i$, $a_i\in A$ is chosen uniformly at random. Assume that $k,\ell,r$ are integers such that any submatrix of $M$ of at least $2^{-k}\cdot|A|$ rows and at least $2^{-\ell}\cdot|X|$ columns, has a bias of at most $2^{-r}$. We prove that any algorithm with classical and quantum hybrid memory for the learning problem corresponding to $M$ needs either (1) $\Omega(k \cdot \ell)$ bits of classical memory, or (2) $\Omega(r)$ qubits of quantum memory, or (3) $2^{\Omega(r)}$ random samples, to achieve a success probability at least $2^{-O(r)}$. 
+
+Our results refute the possibility that a small amount of quantum memory significantly reduces the size of classical memory needed for efficient learning on these problems. Our results also imply improved security of several existing cryptographical protocols in the bounded-storage model (protocols that are based on parity learning on $n$ bits), proving that security holds even in the presence of a quantum adversary with at most $c n^2$ bits of classical memory and $c n$ bits of quantum memory (for some constant $c&gt;0$).
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-03-02T04:17:11Z">Thursday, March 02 2023, 04:17</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3842,67 +3895,6 @@ Any asymptotic improvement in the lower bound (for a hard polynomial, say, in VN
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-02-27T15:04:14Z">Monday, February 27 2023, 15:04</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2302.12796'>Revisiting Graph Persistence for Updates and Efficiency</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Tamal K. Dey, Tao Hou</p><p>It is well known that ordinary persistence on graphs can be computed more
-efficiently than the general persistence. Recently, it has also been shown that
-zigzag persistence on graphs also exhibits similar behavior. Motivated by these
-results, we revisit graph persistence and propose efficient algorithms
-especially for local updates on filtrations, similar to what is done in
-ordinary persistence for computing the vineyard. We show that, for a filtration
-of length $m$ (i) switches (transpositions) in ordinary graph persistence can
-be done in $O(\log^4 m)$ amortized time; (ii) zigzag persistence on graphs can
-be computed in $O(m\log m)$ time, which improves a recent $O(m\log^4n)$ time
-algorithm assuming $n$, the size of the union of all graphs in the filtration,
-satisfies $n\in\Omega({m^\varepsilon})$ for any fixed $0&lt;\varepsilon&lt;1$; (iii)
-open-closed, closed-open, and closed-closed bars in dimension $0$ for graph
-zigzag persistence can be updated in $O(\log^4m)$ amortized time, whereas the
-open-open bars in dimension $0$ and closed-closed bars in dimension $1$ can be
-done in $O(m)$ time.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Dey_T/0/1/0/all/0/1">Tamal K. Dey</a>, <a href="http://arxiv.org/find/cs/1/au:+Hou_T/0/1/0/all/0/1">Tao Hou</a></p><p>It is well known that ordinary persistence on graphs can be computed more
-efficiently than the general persistence. Recently, it has also been shown that
-zigzag persistence on graphs also exhibits similar behavior. Motivated by these
-results, we revisit graph persistence and propose efficient algorithms
-especially for local updates on filtrations, similar to what is done in
-ordinary persistence for computing the vineyard. We show that, for a filtration
-of length $m$ (i) switches (transpositions) in ordinary graph persistence can
-be done in $O(\log^4 m)$ amortized time; (ii) zigzag persistence on graphs can
-be computed in $O(m\log m)$ time, which improves a recent $O(m\log^4n)$ time
-algorithm assuming $n$, the size of the union of all graphs in the filtration,
-satisfies $n\in\Omega({m^\varepsilon})$ for any fixed $0&lt;\varepsilon&lt;1$; (iii)
-open-closed, closed-open, and closed-closed bars in dimension $0$ for graph
-zigzag persistence can be updated in $O(\log^4m)$ amortized time, whereas the
-open-open bars in dimension $0$ and closed-closed bars in dimension $1$ can be
-done in $O(m)$ time.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-02-27T01:30:00Z">Monday, February 27 2023, 01:30</time>
         </div>
       </div>
     </details>
