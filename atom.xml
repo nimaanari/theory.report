@@ -10,6 +10,206 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Scott Aaronson: Why am I not terrified of AI?</title>
+    <link href="https://scottaaronson.blog/?p=7064"/>
+    <id>https://scottaaronson.blog/?p=7064</id>
+    <updated>2023-03-06T16:55:28+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;Every week now, it seems, events on the ground make a fresh mockery of those who confidently assert what AI will never be able to do, or won&amp;#8217;t do for centuries if ever, or is incoherent even to ask for, or wouldn&amp;#8217;t matter even if an AI &lt;em&gt;did&lt;/em&gt; appear to do it, or would require a breakthrough in &amp;#8220;symbol-grounding,&amp;#8221; &amp;#8220;semantics,&amp;#8221; &amp;#8220;compositionality&amp;#8221; or some other abstraction that puts the end of human intellectual dominance on earth conveniently far beyond where we&amp;#8217;d actually have to worry about it.  Many of my brilliant academic colleagues still haven&amp;#8217;t adjusted to the new reality: maybe they&amp;#8217;re just so conditioned by the broken promises of previous decades that they&amp;#8217;d laugh at the Silicon Valley nerds with their febrile Skynet fantasies even as a T-1000 reconstituted itself from metal droplets in front of them.&lt;/p&gt;
+
+
+
+&lt;p&gt;No doubt these colleagues feel the same deep frustration that &lt;em&gt;I&lt;/em&gt; feel, as I explain for the billionth time why this week&amp;#8217;s headline about noisy quantum computers solving traffic flow and machine learning and financial optimization problems doesn&amp;#8217;t mean what the hypesters claim it means.  But whereas I&amp;#8217;d say events have largely proved me right about quantum computing&amp;#8212;where &lt;em&gt;are&lt;/em&gt; all those practical speedups on &lt;a href=&quot;https://en.wikipedia.org/wiki/Noisy_intermediate-scale_quantum_era&quot;&gt;NISQ&lt;/a&gt; devices, anyway?&amp;#8212;events have already proven many naysayers wrong about AI.  Or to say it more carefully: yes, quantum computers &lt;em&gt;really are&lt;/em&gt; able to do more and more of what we use classical computers for, and AI &lt;em&gt;really is&lt;/em&gt; able to do more and more of what we use human brains for.  There&amp;#8217;s spectacular engineering progress on both fronts.  The crucial difference is that quantum computers won&amp;#8217;t be useful until they can &lt;strong&gt;beat&lt;/strong&gt; the best classical computers on one or more practical problems, whereas an AI that merely writes or draws like a middling human already changes the world.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;Given the new reality, and my full acknowledgment of the new reality, and my refusal to go down with the sinking ship of &amp;#8220;AI will probably never do X and please stop being so impressed that it just did X&amp;#8221;&amp;#8212;many have wondered, &lt;em&gt;why aren&amp;#8217;t I much more terrified?&lt;/em&gt;  Why am I &lt;em&gt;still&lt;/em&gt; not fully on board with the Orthodox AI doom scenario, the Eliezer Yudkowsky one, the one where an unaligned AI will sooner or later (probably sooner) unleash self-replicating nanobots that turn us all to goo?&lt;/p&gt;
+
+
+
+&lt;p&gt;Is the answer simply that I&amp;#8217;m too much of an academic conformist, afraid to endorse anything that sounds weird or far-out or culty?  I certainly should consider the possibility.  If so, though, how do you explain the fact that I&amp;#8217;ve publicly said things, right on this blog, several orders of magnitude likelier to get me in trouble than &amp;#8220;I&amp;#8217;m scared about AI destroying the world&amp;#8221;&amp;#8212;an idea now so firmly within the Overton Window that Henry Kissinger &lt;a href=&quot;https://www.wsj.com/articles/chatgpt-heralds-an-intellectual-revolution-enlightenment-artificial-intelligence-homo-technicus-technology-cognition-morality-philosophy-774331c6&quot;&gt;gravely ponders it&lt;/a&gt; in the &lt;em&gt;Wall Street Journal&lt;/em&gt;?&lt;/p&gt;
+
+
+
+&lt;p&gt;On a trip to the Bay Area last week, my rationalist friends asked me some version of the &amp;#8220;why aren&amp;#8217;t you more terrified?&amp;#8221; question over and over.  Often it was paired with: &amp;#8220;Scott, as someone &lt;a href=&quot;https://scottaaronson.blog/?p=6484&quot;&gt;working at OpenAI&lt;/a&gt; this year, how can you defend that company&amp;#8217;s existence at all?  Did OpenAI not just endanger the whole world, by successfully teaming up with Microsoft to bait Google into an AI capabilities race&amp;#8212;precisely what we were all trying to avoid?  Won&amp;#8217;t this race burn the little time we had thought we had left to solve the AI alignment problem?&amp;#8221;&lt;/p&gt;
+
+
+
+&lt;p&gt;In response, I often stressed that my role at OpenAI has specifically been to think about ways to make GPT and OpenAI&amp;#8217;s other products &lt;em&gt;safer&lt;/em&gt;, including via watermarking, cryptographic backdoors, and more.  Would the rationalists rather I not do this?  Is there something else I should work on instead?  Do they have suggestions?&lt;/p&gt;
+
+
+
+&lt;p&gt;&amp;#8220;Oh, no!&amp;#8221; the rationalists would reply.  &amp;#8220;We &lt;em&gt;love&lt;/em&gt; that you&amp;#8217;re at OpenAI thinking about these problems!  Please continue exactly what you&amp;#8217;re doing!  It&amp;#8217;s just &amp;#8230; why don&amp;#8217;t you seem more &lt;em&gt;sad&lt;/em&gt; and &lt;em&gt;defeated&lt;/em&gt; as you do it?&amp;#8221;&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;The other day, I had an epiphany about that question&amp;#8212;one that hit with such force and obviousness that I wondered why it hadn&amp;#8217;t come decades ago.&lt;/p&gt;
+
+
+
+&lt;p&gt;Let&amp;#8217;s step back and restate the worldview of AI doomerism, but in words that could make sense to a medieval peasant.  Something like&amp;#8230;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;There is now an alien entity that could soon become vastly smarter than us.  This alien&amp;#8217;s intelligence could make it terrifyingly dangerous.  It might plot to kill us all.  Indeed, even if it&amp;#8217;s acted unfailingly friendly and helpful to us, that means nothing: it could just be biding its time before it strikes.  Unless, therefore, we can figure out how to control the entity, completely shackle it and make it do our bidding, we shouldn&amp;#8217;t suffer it to share the earth with us.  We should destroy it before it destroys us.&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;Maybe &lt;em&gt;now&lt;/em&gt; it jumps out at you.  If you&amp;#8217;d never heard of AI, would this not rhyme with the worldview of every high-school bully stuffing the nerds into lockers, every blankfaced administrator gleefully holding back the gifted kids or keeping them away from the top universities to make room for &amp;#8220;well-rounded&amp;#8221; legacies and athletes, every Agatha Trunchbull from &lt;em&gt;Matilda&lt;/em&gt; or Dolores Umbridge from &lt;em&gt;Harry Potter&lt;/em&gt;?  Or, to up the stakes a little, every Mao Zedong or Pol Pot sending the glasses-wearing intellectuals for re-education in the fields?  And of course, every antisemite over the millennia, from the Pharoah of the Oppression (if there was one) to the mythical &lt;a href=&quot;https://en.wikipedia.org/wiki/Haman&quot;&gt;Haman&lt;/a&gt; whose name Jews around the world will drown out tonight to the Cossacks to the Nazis?&lt;/p&gt;
+
+
+
+&lt;p&gt;In other words: does it not rhyme with a worldview the rejection and hatred of which has been the North Star of my life?&lt;/p&gt;
+
+
+
+&lt;p&gt;As I&amp;#8217;ve shared before here, my parents were 1970s hippies who weren&amp;#8217;t planning to have kids.  When they eventually decided to do so, it was (they say) &amp;#8220;in order not to give Hitler what he wanted.&amp;#8221;  I literally exist, then, purely to spite those who don&amp;#8217;t want me to.  And I confess that I didn&amp;#8217;t have any better reason than that to bring my and Dana&amp;#8217;s own two lovely children into existence.&lt;/p&gt;
+
+
+
+&lt;p&gt;My childhood was defined, in part, by my and my parents&amp;#8217; constant fights against bureaucratic school systems trying to force me to do the same rote math as everyone else at the same stultifying pace.  It was also defined by my struggle against the bullies&amp;#8212;i.e., the kids who the blankfaced administrators sheltered and protected, and who actually did to me all the things that the blankfaces probably wanted to do but couldn&amp;#8217;t.  I eventually addressed both difficulties by dropping out of high school, getting a G.E.D., and starting college at age 15.&lt;/p&gt;
+
+
+
+&lt;p&gt;My teenage and early adult years were then defined, in part, by the struggle to prove to myself and others that, having enfreaked myself through nerdiness and academic acceleration, I wasn&amp;#8217;t thereby completely disqualified from dating, sex, marriage, parenthood, or any of the other aspects of human existence that are thought to provide it with meaning.  I even sometimes wonder about my research career, whether it&amp;#8217;s all just been one long campaign to prove to the bullies and blankfaces from back in junior high that &lt;em&gt;they were wrong&lt;/em&gt;, while also proving to the wonderful teachers and friends who believed in me back then that they were right.&lt;/p&gt;
+
+
+
+&lt;p&gt;In short, if my existence on Earth has ever &amp;#8220;meant&amp;#8221; anything, then it can only have meant: a stick in the eye of the bullies, blankfaces, sneerers, totalitarians, and all who fear others&amp;#8217; intellect and curiosity and seek to squelch it.  Or at least, that&amp;#8217;s the way I seem to be programmed.  And I&amp;#8217;m probably only &lt;em&gt;slightly&lt;/em&gt; more able to deviate from my programming than the paperclip-maximizer is to deviate from its.&lt;/p&gt;
+
+
+
+&lt;p&gt;And I&amp;#8217;ve tried to be consistent here.  Once I started regularly meeting people who were smarter, wiser, more knowledgeable than I was, in one subject or even every subject&amp;#8212;I resolved to admire and befriend and support and learn from those amazing people, rather than fearing and resenting and undermining them.  I was acutely conscious that my own moral worldview demanded this.&lt;/p&gt;
+
+
+
+&lt;p&gt;But now, when it comes to a hypothetical future superintelligence, I&amp;#8217;m asked to put all that aside.  I&amp;#8217;m asked to fear an alien who&amp;#8217;s far smarter than I am, solely &lt;em&gt;because&lt;/em&gt; it&amp;#8217;s alien and &lt;em&gt;because&lt;/em&gt; it&amp;#8217;s so smart &amp;#8230; &lt;em&gt;even if it hasn&amp;#8217;t yet lifted a finger against me or anyone else&lt;/em&gt;.  I&amp;#8217;m asked to play the bully this time, to knock the AI&amp;#8217;s books to the ground, maybe even unplug it using the physical muscles that I have and it lacks, lest the AI plot against me and my friends using its admittedly superior intellect.&lt;/p&gt;
+
+
+
+&lt;p&gt;Oh, it&amp;#8217;s not the same of course.  I&amp;#8217;m sure Eliezer Yudkowsky could list at least 30 disanalogies between the AI case and the human one before rising from bed.  He&amp;#8217;d say, for example, that the intellectual gap between &lt;a href=&quot;https://en.wikipedia.org/wiki/%C3%89variste_Galois&quot;&gt;Évariste Galois&lt;/a&gt; and the average high-school bully is microscopic, barely worth mentioning, compared to the intellectual gap between a future artificial superintelligence and Galois.  He&amp;#8217;d say that &lt;em&gt;nothing&lt;/em&gt; in the past experience of civilization prepares us for the qualitative enormity of this gap.&lt;/p&gt;
+
+
+
+&lt;p&gt;Still, if you ask, &amp;#8220;why aren&amp;#8217;t I more &lt;em&gt;terrified&lt;/em&gt; about AI?&amp;#8221;&amp;#8212;well, that&amp;#8217;s an emotional question, and this is my emotional answer.&lt;/p&gt;
+
+
+
+&lt;p&gt;I think it&amp;#8217;s entirely plausible that, even as AI transforms civilization, it will do so in the form of tools and services that can no more plot to annihilate us than can Windows 11 or the Google search bar.  In that scenario, the young field of AI safety will still be extremely important, but it will be broadly continuous with aviation safety and nuclear safety and cybersecurity and so on, rather than being a desperate losing war against an incipient godlike alien.  If, on the other hand, this &lt;em&gt;is&lt;/em&gt; to be a desperate losing war against an alien &amp;#8230; well then, I don&amp;#8217;t yet know whether I&amp;#8217;m on the humans&amp;#8217; side or the alien&amp;#8217;s, or both, or neither!  I&amp;#8217;d at least like to hear the alien&amp;#8217;s side of the story.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;A central linchpin of the Orthodox AI-doom case is the &lt;a href=&quot;https://arbital.com/p/orthogonality/&quot;&gt;Orthogonality Thesis&lt;/a&gt;, which holds that arbitrary levels of intelligence can be mixed-and-matched arbitrarily with arbitrary goals&amp;#8212;so that, for example, an intellect vastly beyond Einstein&amp;#8217;s could devote itself entirely to production of paperclips.  Only recently did I clearly realize that I reject the Orthogonality Thesis.  At most, I believe in the Pretty Large Angle Thesis.&lt;/p&gt;
+
+
+
+&lt;p&gt;Yes, there could be a superintelligence that cared for nothing but maximizing paperclips&amp;#8212;in the same way that there exist humans with 180 IQs, who&amp;#8217;ve mastered philosophy and literature and science as well as any of us, but who now mostly care about maximizing their orgasms or their heroin intake.  But, like, that&amp;#8217;s a &lt;em&gt;nontrivial achievement&lt;/em&gt;.  When intelligence and goals are &lt;em&gt;that&lt;/em&gt; orthogonal, there was normally some effort spent prying them apart.&lt;/p&gt;
+
+
+
+&lt;p&gt;If you really accept the Orthogonality Thesis, it seems to me that you can&amp;#8217;t regard education, knowledge, enlightenment as good in themselves.  Sure, they&amp;#8217;re great for any entities that happen to share your objective function (or close enough to it), but ignorance and miseducation are far preferable for any entities that don’t.  Conversely, then, if I &lt;em&gt;do&lt;/em&gt; regard knowledge and enlightenment as good in themselves&amp;#8212;which I do&amp;#8212;then I can’t accept the Orthogonality Thesis.&lt;/p&gt;
+
+
+
+&lt;p&gt;Yes, the world would surely have been a better place had A. Q. Khan never learned how to build nuclear weapons.  On the whole, though, education hasn&amp;#8217;t merely improved humans&amp;#8217; abilities to achieve their goals; it&amp;#8217;s also &lt;em&gt;improved &lt;/em&gt;their goals.  It&amp;#8217;s broadened our circles of empathy, and led to the abolition of slavery and the emancipation of women and everything else that we associate with liberality, the Enlightenment, life being a little less nasty and brutish than it once was.&lt;/p&gt;
+
+
+
+&lt;p&gt;In the Orthodox AI doomers&amp;#8217; own account, the paperclip-maximizing AI would&amp;#8217;ve mastered the nuances of human moral philosophy far more completely than any human&amp;#8212;the better to deceive humans, en route to extracting the iron from their bodies to make more paperclips.  And yet the AI would be completely unaffected by everything it had learned, would never once question its paperclip directive.  I acknowledge that this is possible.  I deny that it&amp;#8217;s trivial.&lt;/p&gt;
+
+
+
+&lt;p&gt;Yes, there were Nazis with PhDs and prestigious professorships.  But when you look into it, these were mostly mediocrities, second-raters full of resentment for their first-rate colleagues (like Planck and Hilbert) who found the Hitler ideology contemptible from beginning to end.  Werner Heisenberg, Pascual Jordan&amp;#8212;these are interesting as two of the only exceptions.  Heidegger, Paul de Man&amp;#8212;I daresay these are exactly the sort of &amp;#8220;philosophers&amp;#8221; who I&amp;#8217;d expect to become Nazis, even if I hadn&amp;#8217;t known that they &lt;em&gt;did&lt;/em&gt; become Nazis.&lt;/p&gt;
+
+
+
+&lt;p&gt;When it comes to the Allies, it wasn&amp;#8217;t &lt;em&gt;merely&lt;/em&gt; that they had Szilard and von Neumann and Meitner and Ulam and Oppenheimer and Bohr and Bethe and Fermi and Feynman and Compton and Seaborg and Schwinger and Shannon and Turing and Tutte and all the other Jewish and non-Jewish scientists who built fearsome weapons and broke the Axis codes and won the war.  They also had Bertrand Russell and Karl Popper.  They had, if I&amp;#8217;m not mistaken, &lt;em&gt;all&lt;/em&gt; the philosophers who wrote clearly and made sense.&lt;/p&gt;
+
+
+
+&lt;p&gt;WWII was like a gargantuan, civilization-scale test of the Orthogonality Thesis.  And the result of the test was that the more moral side ultimately prevailed, seemingly not &lt;em&gt;completely&lt;/em&gt; at random but in part because, by &lt;em&gt;being&lt;/em&gt; more moral, it was able to attract the smarter, more thoughtful people.  There are many reasons for pessimism in today&amp;#8217;s world; that observation about WWII is perhaps the fundamental reason for optimism.&lt;/p&gt;
+
+
+
+&lt;p&gt;Ah, but I&amp;#8217;m again just throwing around human metaphors totally inapplicable to AI!  None of this stuff will matter once a superintelligence is unleashed whose cold, hard code specifies an objective function of &amp;#8220;maximize paperclips.&amp;#8221;&lt;/p&gt;
+
+
+
+&lt;p&gt;OK, but what&amp;#8217;s the goal of ChatGPT?  Depending on your level of description, you could say it&amp;#8217;s &amp;#8220;to be friendly, helpful, and inoffensive,&amp;#8221; or &amp;#8220;to minimize loss in predicting the next token,&amp;#8221; or neither.  I think we should consider the possibility that powerful AIs will &lt;em&gt;not&lt;/em&gt; be best understood in terms of the monomanaical pursuit of a single goal&amp;#8212;as most of us aren&amp;#8217;t, and as GPT isn&amp;#8217;t either.  Future AIs could have partial goals, malleable goals, or different goals depending on how you look at them.  And &lt;em&gt;if&lt;/em&gt; &amp;#8220;the pursuit and application of wisdom&amp;#8221; is among the goals, then I&amp;#8217;m just enough of a moral realist to think that that would preclude the superintelligence that harvests the iron from our blood to make paperclips.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;In my &lt;a href=&quot;https://scottaaronson.blog/?p=7042&quot;&gt;last post&lt;/a&gt;, I said that my “Faust parameter” — the probability I’d accept of existential catastrophe in exchange for learning the answers to humanity’s greatest questions — might be as high as 0.02.&amp;nbsp; Though I never actually said as much, some people interpreted this to mean that I estimated the probability of AI causing an existential catastrophe at somewhere around 2%. &amp;nbsp; In one of his &lt;a href=&quot;https://thezvi.substack.com/p/ai-2&quot;&gt;characteristically long and interesting posts&lt;/a&gt;, Zvi Mowshowitz asked point-blank: why do I believe the probability is “merely” 2%?&lt;/p&gt;
+
+
+
+&lt;p&gt;Of course, taking this question on its own Bayesian terms, I could easily be constricted in my ability to answer it: the best I could do might be to ground it in other totally subjective probabilities, terminating at ones with no further justification.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;Thinking it over, though, I realized that my probability crucially depends on how you phrase the question.&amp;nbsp; Even before AI, I assigned a way higher than 2% probability to existential catastrophe in the coming century—caused by nuclear war or runaway climate change or collapse of the world’s ecosystems or something else.&amp;nbsp; This probability has certainly not gone down with the rise of AI, and the increased uncertainty and volatility it might cause.&amp;nbsp; Furthermore, if an existential catastrophe &lt;em&gt;does &lt;/em&gt;happen, I expect AI to be causally involved in some way or other, simply because from this decade onward, I expect AI to be woven into &lt;em&gt;everything&lt;/em&gt; that happens in human civilization!&amp;nbsp; But I don’t expect AI to be the sole cause worth talking about.&lt;/p&gt;
+
+
+
+&lt;p&gt;Here’s a warmup question: has AI &lt;em&gt;already&lt;/em&gt; caused the downfall of American democracy?&amp;nbsp; There’s a plausible case that it has: Trump might never have been elected in 2016 if not for the Facebook recommendation algorithm, and after Trump&amp;#8217;s conspiracy-fueled insurrection and the continuing strength of its backers, many observers would call the United States at best a failing or teetering democracy, no longer a robust democracy like Finland or Denmark.&amp;nbsp; OK, but AI clearly wasn&amp;#8217;t the &lt;em&gt;only&lt;/em&gt; factor in the rise of Trumpism, and most people wouldn’t even call it the most important one.&lt;/p&gt;
+
+
+
+&lt;p&gt;I expect AI’s role in the end of civilization, if and when the end comes, to be broadly similar.  The survivors, huddled around the fire, will &lt;em&gt;still&lt;/em&gt; be able to argue about what role AI played or didn&amp;#8217;t play in causing the cataclysm.&lt;/p&gt;
+
+
+
+&lt;p&gt;So, if we ask the directly relevant question &amp;#8212; &lt;em&gt;do I expect the generative AI race, which started in earnest around 2016 or 2017 with the founding of OpenAI, to play a central causal role in the extinction of humanity?&lt;/em&gt; — I’ll give a probability of around 2% for that.&amp;nbsp; And I’ll give a similar probability, maybe even a higher one, for the generative AI race to play a central causal role in &lt;em&gt;saving&lt;/em&gt; humanity.  All considered, then, I come down in favor of proceeding with AI research &amp;#8230; with extreme caution, but proceeding.&lt;/p&gt;
+
+
+
+&lt;p&gt;I like and endorse OpenAI CEO Sam Altman&amp;#8217;s &lt;a href=&quot;https://openai.com/blog/planning-for-agi-and-beyond&quot;&gt;recent statement on &amp;#8220;planning for AGI and beyond&amp;#8221;&lt;/a&gt; (though see also &lt;a href=&quot;https://astralcodexten.substack.com/p/openais-planning-for-agi-and-beyond&quot;&gt;Scott Alexander&amp;#8217;s reply&lt;/a&gt;).  I expect that few on any side will disagree, when I say that I hope society holds OpenAI to Sam&amp;#8217;s statement.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;As it happens, my responses will be delayed for a couple days because I&amp;#8217;ll be at an OpenAI alignment meeting!  In my next post, I hope to share what I&amp;#8217;ve learned from meetings and discussions about the &lt;em&gt;near-term, practical&lt;/em&gt; side of AI safety&amp;#8212;having hopefully laid the intellectual and emotional groundwork in this post for why the near-term research isn&amp;#8217;t a mere red herring and distraction.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;Meantime, some of you might enjoy a &lt;a href=&quot;https://www.overcomingbias.com/p/ai-risk-again&quot;&gt;post&lt;/a&gt; by Eliezer&amp;#8217;s former co-blogger Robin Hanson, which comes to some of the same conclusions I do.  &amp;#8220;My fellow moderate Robin Hanson&amp;#8221; is not a phrase you hear every day.&lt;/p&gt;
+
+
+
+&lt;p&gt;You might also enjoy the new paper by me and my postdoc Shih-Han Hung, &lt;a href=&quot;https://arxiv.org/abs/2303.01625&quot;&gt;Certified Randomness from Quantum Supremacy&lt;/a&gt;, finally up on the arXiv after a five-year delay!  But that&amp;#8217;s a subject for a different post.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
+  </content>
+    <author>
+      <name>Scott Aaronson</name>
+      <uri>https://scottaaronson.blog</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Computational Complexity: Peer Review</title>
     <link href="https://blog.computationalcomplexity.org/2023/03/peer-review.html"/>
     <id>tag:blogger.com,1999:blog-3722233.post-2234125126384970909</id>
@@ -2601,35 +2801,6 @@ dressing the other problems in Fact &lt;a href=&quot;#x1-57002r1&quot;&gt;5.1&lt
     <author>
       <name>Computational Complexity</name>
       <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR23-016 |  Proving Unsatisfiability with Hitting Formulas | 
-
-	Edward Hirsch, 
-
-	Yuval Filmus, 
-
-	Artur Riazanov, 
-
-	Alexander Smal, 
-
-	Marc Vinyals</title>
-    <link href="https://eccc.weizmann.ac.il/report/2023/016"/>
-    <id>https://eccc.weizmann.ac.il/report/2023/016</id>
-    <updated>2023-02-22T15:28:10+00:00</updated>
-    <content type="html" xml:lang="en">
-    Hitting formulas have been studied in many different contexts at least since [Iwama 1989]. A hitting formula is a set of Boolean clauses such that any two of the clauses cannot be simultaneously falsified. [Peitl and Szeider 2022] conjectured that the family of unsatisfiable hitting formulas should contain the hardest formulas for resolution. They have supported their conjecture with experimental findings. Using the fact that hitting formulas are easy to check for satisfiability we use them as a foundation of a static proof system Hitting: a refutation of a CNF in Hitting is an unsatisfiable hitting formula such that each of its clauses is a weakening of a clause of the refuted CNF. Comparing this system to resolution and other proof systems is equivalent to studying the hardness of hitting formulas.
-
-Our first result is that Hitting is quasi-polynomially simulated by tree-like resolution, which means that hitting formulas cannot be exponentially hard for resolution, so Peitl and Szeider&amp;#39;s conjecture is partially refuted. We show that tree-like resolution and Hitting are quasi-polynomially separated, but for resolution, this question remains open. For a system that is only quasi-polynomially stronger than tree-like resolution, Hitting is surprisingly difficult to *polynomially* simulate in another proof system. Using the ideas of PIT for noncommutative circuits [Raz, Spilka 2005] we show that Hitting is simulated by Extended Frege, but we conjecture that much more efficient simulations exist. As a byproduct, we show that a number of static (semi)algebraic systems are verifiable in a deterministic polynomial time.
-
-We consider multiple extensions of Hitting. In particular, refutations in a proof system Hitting(?) are conjunctions of clauses containing affine equations instead of just literals, and every assignment falsifies exactly one of the clauses. This system is related to Res(?) proof system for which no superpolynomial-size lower bounds are known: Hitting(?) simulates the tree-like version of Res(?) and is at least quasi-polynomially stronger. We show that formulas expressing the non-existence of perfect matchings in the graphs K_{n,n+2} are exponentially hard for Hitting(?).
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
     </author>
   </entry>
 
