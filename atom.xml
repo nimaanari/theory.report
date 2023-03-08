@@ -10,6 +10,38 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Property Testing Review: News for February 2023</title>
+    <link href="https://ptreview.sublinear.info/2023/03/news-for-february-2023/"/>
+    <id>https://ptreview.sublinear.info/?p=1830</id>
+    <updated>2023-03-08T06:59:54+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;Despite being a short month, February 2023 has witnessed a significant amount of activity under the sublinear &amp;#8220;regime&amp;#8221;. Let us know if we have missed anything!&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Dynamic \((1 + \epsilon)\)-Approximate Matching Size in Truly Sublinear Update Time&lt;/strong&gt; by Sayan Bhattacharya, Peter Kiss, and Thatchaphol Saranurak (&lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://arxiv.org/abs/2302.05030&quot; target=&quot;_blank&quot;&gt;arXiv&lt;/a&gt;). This work throws light on connections between the dynamic and query models of computation and uses them for making advances on approximating the size of a maximum cardinality matching (MCM) in a general graph. In particular, as the main technical ingredient in obtaining an improved dynamic algorithm for maintaining an approximation to the size of MCM, the authors provide a \(\pm \epsilon n\) approximation algorithm for estimating the size of MCM in a general \(n\)-vertex graph by making \(n^{2 &amp;#8211; \Omega_{\epsilon}(1)}\) adjacency queries. Prior to this result, the state of the art (Behnezhad, Roghani &amp;amp; Rubinstein; STOC&amp;#8217;23) was a \(n^{2 &amp;#8211; \Omega(1)}\)-query algorithm for the same problem with a multiplicative approximation guarantee of \(1.5\) and an additive guarantee of \(o(n)\). &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Uniformity Testing over Hypergrids with Subcube Conditioning&lt;/strong&gt; by Xi Chen and Cassandra Marcussen (&lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://arxiv.org/abs/2302.09013&quot; target=&quot;_blank&quot;&gt;arXiv&lt;/a&gt;). As the name indicates, the paper studies the fundamental problem of testing uniformity of distributions supported over hypergrids \([m]^n\). The tester that they present make \(O(\text{poly}(m)\sqrt{n}/\epsilon^2)\) queries to a conditional subcube sampling oracle, which, when given a subcube of \([m]^n\), returns a point sampled from the distribution conditioned on the point belonging to the subcube. The result is a generalization of the uniformity tester for distributions supported over the \(n\)-dimensional hypercube (Canonne, Chen, Kamath, Levi and Waingarten; SODA &amp;#8217;21). &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Easy Testability for Posets&lt;/strong&gt; by Panna Timea Fekete and Gabor Kun (&lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://arxiv.org/abs/2302.11390&quot; target=&quot;_blank&quot;&gt;arXiv&lt;/a&gt;). This paper deals with testing properties of directed graphs in the adjacency matrix model. The main characters of the story are posets, or directed acyclic graphs (DAGs) that are transitively closed. Given a family \(\mathcal{F}\) of finite posets, let \(\mathcal{P}_\mathcal{F}\) denote the set of all finite posets that do not contain any element of \(\mathcal{F}\) as a subposet. The main result of the paper is an \(\epsilon\)-tester with query complexity \(\text{poly}(1/\epsilon)\) for \(\mathcal{P}_\mathcal{F}\). The authors obtain this result by proving a removal lemma for posets. The result is placed in the larger context of understanding what properties of graphs can be tested with query complexity that has a polynomial dependence on \(1/\epsilon\) in the adjacency matrix model. &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Compressibility-Aware Quantum Algorithms&lt;/strong&gt; on Strings by Daniel Gibney and Sharma V. Thankachan (&lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://arxiv.org/abs/2302.07235&quot; target=&quot;_blank&quot;&gt;arXiv&lt;/a&gt;). Lastly, we have a paper on quantum string algorithms that run in sublinear time. In short, the authors present quantum algorithms with optimal running times for computing the Lempel-Ziv (LZ) encoding and Burrows Wheeler Transform (BWT) of highly compressible strings. A main consequence of these results is a faster quantum algorithm for computing the longest common subsequence (LCS) of two strings when the concatenation of the strings is highly compressible. It is to be noted that sublinear-time algorithms do not exist for these problems in the classical model of computation. More details follow. &lt;br&gt;&lt;br&gt;Factoring a string into disjoint substrings (factors) in an specific manner is the main step in the LZ compression algorithm. The smaller the number of factors, the more compressible the string is.  This paper gives a quantum algorithm for the problem of computing the LZ factorization of a string in time \(\tilde{O}(\sqrt{nz})\), where \(z\) is the number of factors in the string. They also show that their algorithm is optimal. Using this algorithm, they obtain a fast algorithm for computing the BWT of an input string, as well as an algorithm running in time \(\tilde{O}(\sqrt{nz})\) to compute the LCS of two strings, where \(n\) is the length and \(z\) is the number of factors in the concatenation of the two strings. When \(z\) is \(o(n^{1/3})\), this algorithm gives an improvement over the previous best quantum algorithm running in time \(\tilde{O}(n^{2/3})\).&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Nithin Varma&lt;/p&gt;
+  </content>
+    <author>
+      <name>Property Testing Review</name>
+      <uri>https://ptreview.sublinear.info</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: Filter Pruning based on Information Capacity and Independence</title>
     <link href="http://arxiv.org/abs/2303.03645"/>
     <id>http://arxiv.org/abs/2303.03645</id>
@@ -355,7 +387,7 @@ approaches and extensions for interactive exploration.
 &lt;p&gt;&lt;span id=&quot;more-23935&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;1.44042 stands for &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Clog+_%5Cphi+2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Clog+_%5Cphi+2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Clog+_%5Cphi+2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;log _&amp;#92;phi 2&quot; class=&quot;latex&quot; /&gt; where golden &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cphi%3D%5Cfrac+%7B1%2B%5Csqrt+5%7D%7B2%7D.&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cphi%3D%5Cfrac+%7B1%2B%5Csqrt+5%7D%7B2%7D.&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cphi%3D%5Cfrac+%7B1%2B%5Csqrt+5%7D%7B2%7D.&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;phi=&amp;#92;frac {1+&amp;#92;sqrt 5}{2}.&quot; class=&quot;latex&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Solovay-Kitaev&amp;#8217;s theorem and its extensions are related to questions regarding expansion and other properties of Cayley graphs of Lie groups, questions in additive number theory, and questions in group theory. One of the techniques that Greg had developed is referred to as zigzag Golf (see the picture above) and another technique that Greg applies is related to higher commutators and Elkasapy-Thom theory.&lt;/p&gt;
-&lt;p&gt;After the lecture, a few of us had a very nice chat with Greg over lunch on various things. Just before I left Greg told me about three experimental advances regarding quantum error correcting that he found exciting (and thought are potentially relevant to a decade-and-more long and intensive email discussion/debate that Greg and I had on the topic since 2005.) I will mention these examples and some related information in a comment to this post (&lt;a href=&quot;https://gilkalai.wordpress.com/2022/05/26/waging-war-on-quantum/&quot;&gt;https://gilkalai.wordpress.com/2022/05/26/waging-war-on-quantum/&lt;/a&gt;). After a decade of a continuous intensive debate and few later bursts of further debates (also on blogs and FB) Greg and I decided on a truce with friendly exchange of ideas from time to time.&lt;/p&gt;
+&lt;p&gt;After the lecture, a few of us had a very nice chat with Greg over lunch on various things. Just before I left Greg told me about three experimental advances regarding quantum error correcting that he found exciting (and thought are potentially relevant to a decade-and-more long and intensive email discussion/debate that Greg and I had on the topic since 2005.) I will mention these examples and some related information in &lt;a href=&quot;https://gilkalai.wordpress.com/2022/05/26/waging-war-on-quantum/#comment-94128&quot;&gt;a comment&lt;/a&gt; to &lt;a href=&quot;http://(https://gilkalai.wordpress.com/2022/05/26/waging-war-on-quantum/&quot;&gt;this post&lt;/a&gt;. After a decade of a continuous intensive debate and few later bursts of further debates (also on blogs and FB) Greg and I decided on a truce with friendly exchange of ideas from time to time.&lt;/p&gt;
 &lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
   </content>
     <author>
@@ -1694,48 +1726,6 @@ various high-performance heuristics for TSP, such as Concordo and LKH, to solve
 our problem. On the theoretical side, we can see that the problem for any p
 under this framework is 1.5-approximable, and it can be solved by the Held-Karp
 algorithm in O(2^n n^2) time, where n is the number of vertices, and so on.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Improved Algorithms for Monotone Moldable Job Scheduling using Compression and Convolution</title>
-    <link href="http://arxiv.org/abs/2303.01414"/>
-    <id>http://arxiv.org/abs/2303.01414</id>
-    <updated>2023-03-03T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grage_K/0/1/0/all/0/1&quot;&gt;Kilian Grage&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jansen_K/0/1/0/all/0/1&quot;&gt;Klaus Jansen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ohnesorge_F/0/1/0/all/0/1&quot;&gt;Felix Ohnesorge&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the moldable job scheduling problem one has to assign a set of $n$ jobs to
-$m$ machines, in order to minimize the time it takes to process all jobs. Each
-job is moldable, so it can be assigned not only to one but any number of the
-equal machines. We assume that the work of each job is monotone and that jobs
-can be placed non-contiguously. In this work we present a $(\frac 3 2 +
-\epsilon)$-approximation algorithm with a worst-case runtime of ${O(n
-\log^2(\frac 1 \epsilon + \frac {\log (\epsilon m)} \epsilon) +
-\frac{n}{\epsilon} \log(\frac 1 \epsilon) {\log (\epsilon m)})}$ when $m\le
-16n$. This is an improvement over the best known algorithm of the same quality
-by a factor of $\frac 1 \epsilon$ and several logarithmic dependencies. We
-complement this result with an improved FPTAS with running time $O(n
-\log^2(\frac 1 \epsilon + \frac {\log (\epsilon m)} \epsilon))$ for instances
-with many machines $m&amp;gt; 8\frac n \epsilon$. This yields a $\frac 3
-2$-approximation with runtime $O(n \log^2(\log m))$ when $m&amp;gt;16n$.
-&lt;/p&gt;
-&lt;p&gt;We achieve these results through one new core observation: In an
-approximation setting one does not need to consider all $m$ possible allotments
-for each job. We will show that we can reduce the number of relevant allotments
-for each job from $m$ to $O(\frac 1 \epsilon + \frac {\log (\epsilon
-m)}{\epsilon})$. Using this observation immediately yields the improved FPTAS.
-For the other result we use a reduction to the knapsack problem first
-introduced by Mouni\&#39;e, Rapine and Trystram. We use the reduced number of
-machines to give a new elaborate rounding scheme and define a modified version
-of this this knapsack instance. This in turn allows for the application of a
-convolution based algorithm by Axiotis and Tzamos. We further back our
-theoretical results through a practical implementation and compare our
-algorithm to the previously known best result.
 &lt;/p&gt;
   </content>
     <author>
