@@ -9,6 +9,48 @@
 
 
 <item>
+  <title>The False Promise of Chomskyism</title>
+  <guid>https://scottaaronson.blog/?p=7094</guid>
+  <link>https://scottaaronson.blog/?p=7094</link>
+  <description>
+    &lt;p&gt;I was asked to respond to the &lt;em&gt;New York Times&lt;/em&gt; opinion piece entitled &lt;a href=&quot;https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html&quot;&gt;The False Promise of ChatGPT&lt;/a&gt;, by Noam Chomsky along with Ian Roberts and Jeffrey Watumull (who once took my class at MIT).  I&amp;#8217;ll be busy all day at the Harvard CS department, where I&amp;#8217;m &lt;a href=&quot;https://events.seas.harvard.edu/event/how_much_information_is_in_a_quantum_state&quot;&gt;giving a quantum talk&lt;/a&gt; this afternoon, but for now:&lt;/p&gt;
+
+
+
+&lt;p&gt;In this piece Chomsky, the intellectual godfather of an effort that failed for 60 years to build machines that can converse in ordinary language, condemns the effort that succeeded.  He condemns ChatGPT for four reasons:&lt;/p&gt;
+
+
+
+&lt;ol&gt;
+&lt;li&gt;because it could, in principle, misinterpret sentences that could also be sentence fragments, like &amp;#8220;John is too stubborn to talk to&amp;#8221; (bizarrely, he never checks whether it &lt;em&gt;does&lt;/em&gt; misinterpret it&amp;#8212;I just tried it this morning and it seems to decide correctly based on context whether it&amp;#8217;s a sentence or a sentence fragment, much like I would!);&lt;/li&gt;
+
+
+
+&lt;li&gt;because it doesn’t learn the way humans do (personally, I think ChatGPT and other large language models have &lt;em&gt;massively&lt;/em&gt; illuminated at least one component of the human language faculty, what you could call its &lt;a href=&quot;https://en.wikipedia.org/wiki/Predictive_coding&quot;&gt;predictive coding&lt;/a&gt; component, though clearly not all of it);&lt;/li&gt;
+
+
+
+&lt;li&gt;because it could learn false facts or grammatical systems if fed false training data (how could it be otherwise?); and&lt;/li&gt;
+
+
+
+&lt;li&gt;most of all because it’s “amoral,” refusing to take a stand on potentially controversial issues (he gives an example involving the ethics of terraforming Mars).&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;p&gt;This last, of course, is a &lt;em&gt;choice&lt;/em&gt;, imposed by OpenAI using reinforcement learning.  The reason for it is simply that ChatGPT is a consumer product.  The same people who condemn it for not taking controversial stands would condemn it much more loudly if it did — just like the same people who condemn it for wrong answers and explanations, would condemn it equally for right ones (Chomsky promises as much in the essay).&lt;/p&gt;
+
+
+
+&lt;p&gt;I submit that, like the Jesuit astronomers declining to look through Galileo’s telescope, what Chomsky and his followers are ultimately angry at is reality itself, for having the temerity to offer something up that they didn’t predict and that doesn’t fit their worldview.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-09 12:01:55 UTC</pubDate>
+  <author>Scott Aaronson</author>
+</item>
+
+<item>
   <title>TR23-021 |  Range Avoidance for Constant-Depth Circuits: Hardness and Algorithms | 
 
 	Sidhant Saraogi, 
@@ -1619,36 +1661,6 @@ $T$, then the number of new edges added to the CDAWG after an left-edit
 operation on $T$ is less than $e$. Further, we present almost matching lower
 bounds on the sensitivity of CDAWGs for all cases of insertion, deletion, and
 substitution.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-06 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Linear Space Data Structures for Finite Groups with Constant Query-time</title>
-  <guid>http://arxiv.org/abs/2303.01957</guid>
-  <link>http://arxiv.org/abs/2303.01957</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Das_B/0/1/0/all/0/1&quot;&gt;Bireswar Das&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kumar_A/0/1/0/all/0/1&quot;&gt;Anant Kumar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sharma_S/0/1/0/all/0/1&quot;&gt;Shivdutt Sharma&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Thakkar_D/0/1/0/all/0/1&quot;&gt;Dhara Thakkar&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A finite group of order $n$ can be represented by its Cayley table. In the
-word-RAM model the Cayley table of a group of order $n$ can be stored using
-$O(n^2)$ words and can be used to answer a multiplication query in constant
-time. It is interesting to ask if we can design a data structure to store a
-group of order $n$ that uses $o(n^2)$ space but can still answer a
-multiplication query in constant time.
-&lt;/p&gt;
-&lt;p&gt;We design a constant query-time data structure that can store any finite
-group using $O(n)$ words where $n$ is the order of the group.
-&lt;/p&gt;
-&lt;p&gt;Farzan and Munro (ISSAC 2006) gave an information theoretic lower bound of
-$\Omega(n)$ on the number of words to store a group of order $n$. Since our
-data structure achieves this lower bound and answers queries in constant time,
-it is optimal in both space usage and query-time.
-&lt;/p&gt;
-&lt;p&gt;A crucial step in the process is essentially to design linear space and
-constant query-time data structures for nonabelian simple groups. The data
-structures for nonableian simple groups are designed using a lemma that we
-prove using the Classification Theorem for Finite Simple Groups (CFSG).
 &lt;/p&gt;
   </description>
   <pubDate>2023-03-06 01:30:00 UTC</pubDate>
