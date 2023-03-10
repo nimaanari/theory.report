@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-03-10T10:36:43Z">Friday, March 10 2023, 10:36</time>
+          <time class='timeago' datetime="2023-03-10T11:30:23Z">Friday, March 10 2023, 11:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,57 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Friday, March 10
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://gilkalai.wordpress.com/2023/03/10/subspace-designs-unit-and-distinct-distances-and-piercing-standard-boxes/'>Subspace Designs, Unit and Distinct Distances, and Piercing Standard Boxes.</a></h3>
+        <p class='tr-article-feed'>from <a href='https://gilkalai.wordpress.com'>Gil Kalai</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          A lot of things are happening and let me briefly report on three major advancements in combinatorics. Peter Keevash, Ashwin Sah and Mehtaab Sawhney proved the existence of subspace designs with any given parameters, provided that the dimension of the &#8230; Continue reading &#8594;
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>A lot of things are happening and let me briefly report on three major advancements in combinatorics.</p>
+<ol>
+<li>Peter Keevash, Ashwin Sah and Mehtaab Sawhney proved the existence of subspace designs with any given parameters, provided that the dimension of the underlying space is sufficiently large in terms of the other parameters of the design and satisfies the obvious necessary divisibility conditions.  Here is the link to the paper: <a href="https://arxiv.org/abs/2212.00870">The existence of subspace designs</a>.</li>
+<li>Noga Alon, Matija Bucić, and Lisa Sauermann made an important advance on the study of unit distances and distinct distances in arbitrary normed space. Here is a link to the paper: <a href="https://arxiv.org/abs/2302.09058">Unit and distinct distances in typical norms.</a> The unit distance and distinct distances problems for Euclidean geometry are old and famous and there was also a lot of attention for the question of what happens for these problems if one considers normed spaces other than the Euclidean plane. Alon, Bucić, and Sauermann give an essentially tight answer to both questions for almost all norms on <img src="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;mathbb R^d" class="latex" /> , in a certain Baire categoric sense.</li>
+<li>István Tomon&#8217;s paper: <a href="https://arxiv.org/abs/2209.09887">Lower bounds for piercing and coloring boxes</a>. Here is Tomon&#8217;s abstract from his recent Copenhagen-Jerusalem seminar: Configurations of axis-parallel boxes in <img src="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;mathbb R^d" class="latex" /> are extensively studied in combinatorial and computational geometry. Despite their innocent appearance, there are many old problems involving their structure that are still not well understood. I will talk about a construction, which addresses several of these problems, and shows that configurations of boxes may be more complex than people conjectured.</li>
+</ol>
+<h3>Subspace designs and q-analogs</h3>
+<p>We talked about subspace designs in <a href="https://gilkalai.wordpress.com/2016/11/23/amazing-stefan-glock-daniela-kuhn-allan-lo-deryk-osthus-give-a-new-proof-for-keevashs-theorem-and-more-news-on-designs/">this post</a>  and in particular about the 2016 paper of Michael  Braun, Tuvi Etzion , Patric R. J. Östergard , Alexander Vardy,  and Alferd Wasserman. While preparing this post I learned the sad news that Alexander Vardy, a prominent coding theorist,  passed away a year ago at the early age of 58.</p>
+<p>The theme of finding <img src="https://s0.wp.com/latex.php?latex=q&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=q&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="q" class="latex" />-analogs to combinatorial results and problems is important both in enumerative and algebraic combinatorics and in extremal combinatorics and it will be interesting to discuss it in some future post and while preparing for that I recalled the famous <img src="https://s0.wp.com/latex.php?latex=q&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=q&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=q&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="q" class="latex" />&#8211;<a href="https://en.wikipedia.org/wiki/Dyson_conjecture">Dyson conjecture</a> that was settled by Zeilberger and Bressoud in 1995. I learned that by now there are simpler proofs:  &#8220;A shorter proof, using formal Laurent series, was given in 2004 by Ira Gessel and Guoce Xin, and an even shorter proof, using a quantitative form, due to Karasev and Petrov, and independently to Lason, of Noga Alon&#8217;s Combinatorial Nullstellensatz, was given in 2012 by Gyula Karolyi and Zoltan Lorant Nagy. The latter method was extended, in 2013, by <a href="http://www.math.rutgers.edu/~zeilberg/mamarim/mamarimhtml/qdyson.html">Shalosh B. Ekhad and Doron Zeilberger</a> to derive explicit expressions of any specific coefficient.&#8221; (Wikipedia.)</p>
+<h3>Unit and distinct distances</h3>
+<p>Here is the abstract of the paper by Alon, Bucić, and Sauermann:</p>
+<blockquote><p><em>Erdős&#8217; unit distance problem and Erdős&#8217; distinct distances problem are among the most classical and well-known open problems in all of discrete mathematics. They ask for the maximum number of unit distances, or the minimum number of distinct distances, respectively, determined by $latex <span id="MathJax-Element-1-Frame" class="MathJax"><span id="MathJax-Span-1" class="math"><span id="MathJax-Span-2" class="mrow"><span id="MathJax-Span-3" class="mi">n$</span></span></span></span> points in the Euclidean plane. The question of what happens in these problems if one considers normed spaces other than the Euclidean plane has been raised in the 1980s by Ulam and Erdős and attracted a lot of attention over the years. We give an essentially tight answer to both questions for almost all norms on <img src="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;mathbb R^d" class="latex" />, in a certain Baire categoric sense.</em></p>
+<p><em>For the unit distance problem we prove that for almost all norms ||.|| on <span id="MathJax-Element-3-Frame" class="MathJax"><span id="MathJax-Span-11" class="math"><span id="MathJax-Span-12" class="mrow"><span id="MathJax-Span-13" class="msubsup"><span id="MathJax-Span-14" class="texatom"><span id="MathJax-Span-15" class="mrow"><span id="MathJax-Span-16" class="mi"><img src="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;mathbb R^d" class="latex" /></span></span></span></span></span></span></span>, any set of <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" /> points defines at most <img src="https://s0.wp.com/latex.php?latex=%5Cfrac%7B1%7D%7B2%7D+d+%5Ccdot+n+%5Clog_2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cfrac%7B1%7D%7B2%7D+d+%5Ccdot+n+%5Clog_2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cfrac%7B1%7D%7B2%7D+d+%5Ccdot+n+%5Clog_2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;frac{1}{2} d &#92;cdot n &#92;log_2 n" class="latex" /> unit distances according to ||.||. We also show that this is essentially tight, by proving that for every norm ||.|| on <img src="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;mathbb R^d" class="latex" />, for any large <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" />, we can find $latex <span id="MathJax-Element-8-Frame" class="MathJax"><span id="MathJax-Span-44" class="math"><span id="MathJax-Span-45" class="mrow"><span id="MathJax-Span-46" class="mi">n$</span></span></span></span> points defining at least <img src="https://s0.wp.com/latex.php?latex=%5Cfrac%7B1%7D%7B2%7D%28d-1-o%281%29%29%5Ccdot+n+%5Clog_2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cfrac%7B1%7D%7B2%7D%28d-1-o%281%29%29%5Ccdot+n+%5Clog_2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cfrac%7B1%7D%7B2%7D%28d-1-o%281%29%29%5Ccdot+n+%5Clog_2+n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;frac{1}{2}(d-1-o(1))&#92;cdot n &#92;log_2 n" class="latex" /> unit distances according to ||.||.</em></p>
+<p><em>For the distinct distances problem, we prove that for almost all norms ||.|| on <img src="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+R%5Ed&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="&#92;mathbb R^d" class="latex" /> any set of <img src="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="n" class="latex" /> <span id="MathJax-Element-11-Frame" class="MathJax"><span id="MathJax-Span-76" class="math"><span id="MathJax-Span-77" class="mrow"><span id="MathJax-Span-78" class="mi"></span></span></span></span> points defines at least $latex <span id="MathJax-Element-12-Frame" class="MathJax"><span id="MathJax-Span-79" class="math"><span id="MathJax-Span-80" class="mrow"><span id="MathJax-Span-81" class="mo">(</span><span id="MathJax-Span-82" class="mn">1</span><span id="MathJax-Span-83" class="mo">−</span><span id="MathJax-Span-84" class="mi">o</span><span id="MathJax-Span-85" class="mo">(</span><span id="MathJax-Span-86" class="mn">1</span><span id="MathJax-Span-87" class="mo">)</span><span id="MathJax-Span-88" class="mo">)</span><span id="MathJax-Span-89" class="mi">n$</span></span></span></span> distinct distances according to ||.||. This is clearly tight up to the $latex <span id="MathJax-Element-13-Frame" class="MathJax"><span id="MathJax-Span-90" class="math"><span id="MathJax-Span-91" class="mrow"><span id="MathJax-Span-92" class="mi">o</span><span id="MathJax-Span-93" class="mo">(</span><span id="MathJax-Span-94" class="mn">1</span><span id="MathJax-Span-95" class="mo">)$</span></span></span></span> term.</em></p>
+<p><em>Our results settle, in a strong and somewhat surprising form, problems and conjectures of Brass, of Matoušek, and of Brass-Moser-Pach. The proofs combine combinatorial and geometric ideas with tools from Linear Algebra, Topology and Algebraic Geometry.</em></p></blockquote>
+<p>We discussed the unit distances and distinct distances in many posts over here, and they are also related to problems around Borsuk&#8217;s problem (see also my survey paper <a href="https://arxiv.org/abs/1505.04952">Some old and new problems in combinatorial geometry I: Around <span class="search-hit mathjax">Borsuk&#8217;s</span> problem</a>).</p>
+<h3>Standard boxes</h3>
+<p>Here is the abstract of Tomon&#8217;s paper.<br />
+<img data-attachment-id="23978" data-permalink="https://gilkalai.wordpress.com/2023/03/10/subspace-designs-unit-and-distinct-distances-and-piercing-standard-boxes/tomon/" data-orig-file="https://gilkalai.files.wordpress.com/2023/03/tomon.png" data-orig-size="663,481" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Tomon" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2023/03/tomon.png?w=300" data-large-file="https://gilkalai.files.wordpress.com/2023/03/tomon.png?w=640" class="alignnone size-full wp-image-23978" src="https://gilkalai.files.wordpress.com/2023/03/tomon.png?w=640" alt="Tomon" srcset="https://gilkalai.files.wordpress.com/2023/03/tomon.png?w=640 640w, https://gilkalai.files.wordpress.com/2023/03/tomon.png?w=150 150w, https://gilkalai.files.wordpress.com/2023/03/tomon.png?w=300 300w, https://gilkalai.files.wordpress.com/2023/03/tomon.png 663w" sizes="(max-width: 640px) 100vw, 640px"   /></p>
+<p>We discussed the intersection pattern of (standard) boxes on several occasions such as <a href="https://gilkalai.wordpress.com/2014/07/03/my-mathematical-dialogue-with-jurgen-eckhoff/">this post</a> about Jurgen Eckhoff.</p>
+<p class="authors">By Gil Kalai</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-03-10T11:28:42Z">Friday, March 10 2023, 11:28</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3390,81 +3441,6 @@ prescribed $\epsilon$ error bounds with polynomial dependence on state
 dimension $d$. Classical numerical methods scale exponentially with dimension,
 thus, our approach provides an \emph{exponential speed-up} over traditional
 approaches.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-03-07T01:30:00Z">Tuesday, March 07 2023, 01:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2303.02474'>Optimizing Low Dimensional Functions over the Integers</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Daniel Dadush, Arthur L&#xe9;onard, Lars Rohwedder, Jos&#xe9; Verschae</p><p>We consider box-constrained integer programs with objective $g(Wx) + c^T x$,
-where $g$ is a "complicated" function with an $m$ dimensional domain. Here we
-assume we have $n \gg m$ variables and that $W \in \mathbb Z^{m \times n}$ is
-an integer matrix with coefficients of absolute value at most $\Delta$. We
-design an algorithm for this problem using only the mild assumption that the
-objective can be optimized efficiently when all but $m$ variables are fixed,
-yielding a running time of $n^m(m \Delta)^{O(m^2)}$. Moreover, we can avoid the
-term $n^m$ in several special cases, in particular when $c = 0$.
-</p>
-<p>Our approach can be applied in a variety of settings, generalizing several
-recent results. An important application are convex objectives of low domain
-dimension, where we imply a recent result by Hunkenschr\"oder et al. [SIOPT'22]
-for the 0-1-hypercube and sharp or separable convex $g$, assuming $W$ is given
-explicitly. By avoiding the direct use of proximity results, which only holds
-when $g$ is separable or sharp, we match their running time and generalize it
-for arbitrary convex functions. In the case where the objective is only
-accessible by an oracle and $W$ is unknown, we further show that their
-proximity framework can be implemented in $n (m \Delta)^{O(m^2)}$-time instead
-of $n (m \Delta)^{O(m^3)}$. Lastly, we extend the result by Eisenbrand and
-Weismantel [SODA'17, TALG'20] for integer programs with few constraints to a
-mixed-integer linear program setting where integer variables appear in only a
-small number of different constraints.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Dadush_D/0/1/0/all/0/1">Daniel Dadush</a>, <a href="http://arxiv.org/find/cs/1/au:+Leonard_A/0/1/0/all/0/1">Arthur L&#xe9;onard</a>, <a href="http://arxiv.org/find/cs/1/au:+Rohwedder_L/0/1/0/all/0/1">Lars Rohwedder</a>, <a href="http://arxiv.org/find/cs/1/au:+Verschae_J/0/1/0/all/0/1">Jos&#xe9; Verschae</a></p><p>We consider box-constrained integer programs with objective $g(Wx) + c^T x$,
-where $g$ is a "complicated" function with an $m$ dimensional domain. Here we
-assume we have $n \gg m$ variables and that $W \in \mathbb Z^{m \times n}$ is
-an integer matrix with coefficients of absolute value at most $\Delta$. We
-design an algorithm for this problem using only the mild assumption that the
-objective can be optimized efficiently when all but $m$ variables are fixed,
-yielding a running time of $n^m(m \Delta)^{O(m^2)}$. Moreover, we can avoid the
-term $n^m$ in several special cases, in particular when $c = 0$.
-</p>
-<p>Our approach can be applied in a variety of settings, generalizing several
-recent results. An important application are convex objectives of low domain
-dimension, where we imply a recent result by Hunkenschr\"oder et al. [SIOPT'22]
-for the 0-1-hypercube and sharp or separable convex $g$, assuming $W$ is given
-explicitly. By avoiding the direct use of proximity results, which only holds
-when $g$ is separable or sharp, we match their running time and generalize it
-for arbitrary convex functions. In the case where the objective is only
-accessible by an oracle and $W$ is unknown, we further show that their
-proximity framework can be implemented in $n (m \Delta)^{O(m^2)}$-time instead
-of $n (m \Delta)^{O(m^3)}$. Lastly, we extend the result by Eisenbrand and
-Weismantel [SODA'17, TALG'20] for integer programs with few constraints to a
-mixed-integer linear program setting where integer variables appear in only a
-small number of different constraints.
 </p>
         
         </div>
