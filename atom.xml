@@ -10,6 +10,38 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Foundation of Data Science - Virtual Talk Series: Thursday, Mar 16th, 2023 — Vladimir Braverman from Rice University</title>
+    <link href="https://dstheory.wordpress.com/2023/03/10/thursday-mar-16th-2023-vladimir-braverman-from-rice-university/"/>
+    <id>http://dstheory.wordpress.com/?p=151</id>
+    <updated>2023-03-10T22:17:33+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;has-text-align-justify&quot;&gt;The next &lt;a rel=&quot;noreferrer noopener&quot; href=&quot;https://sites.google.com/view/dstheory/home&quot; target=&quot;_blank&quot;&gt;Foundations of Data Science&lt;/a&gt; virtual talk series on recent advances in &lt;em&gt;adversarially robust streaming&lt;/em&gt; will take place on &lt;strong&gt;Thursday, March 16th&lt;/strong&gt; at&lt;strong&gt; 1:00 PM Pacific Time&lt;/strong&gt; (16:00 Eastern Time, 22:00 Central European Time, 21:00 UTC). &lt;a href=&quot;https://profiles.rice.edu/faculty/vladimir-braverman&quot;&gt;Vladimir Braverman&lt;/a&gt; from&lt;strong&gt; Rice University&lt;/strong&gt; will talk about &lt;em&gt;“Adversarial Robustness of Streaming Algorithms through Importance Sampling”&lt;/em&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;a href=&quot;https://sites.google.com/view/dstheory&quot;&gt;Details of the talk (Zoom link) are available here.&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p class=&quot;has-text-align-justify&quot;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;: Robustness against adversarial attacks has recently been at the forefront of algorithmic design for machine learning tasks. In the adversarial streaming model, an adversary gives an algorithm a sequence of adaptively chosen updates u1, &amp;#8230; ,un as a data stream. The goal of the algorithm is to compute or approximate some predetermined function for every prefix of the adversarial stream, but the adversary may generate future updates based on previous outputs of the algorithm. In particular, the adversary may gradually learn the random bits internally used by an algorithm to manipulate dependencies in the input. This is especially problematic as many important problems in the streaming model require randomized algorithms, as they are known to not admit any deterministic algorithms that use sublinear space. In this paper, we introduce adversarially robust streaming algorithms for central machine learning and algorithmic tasks, such as regression and clustering, as well as their more general counterparts, subspace embedding, low-rank approximation, and coreset construction. For regression and other numerical linear algebra related tasks, we consider the row arrival streaming model. Our results are based on a simple, but powerful, observation that many importance sampling-based algorithms give rise to adversarial robustness which is in contrast to sketching based algorithms, which are very prevalent in the streaming literature but suffer from adversarial attacks. In addition, we show that the well-known merge and reduce paradigm in streaming is adversarially robust. Since the merge and reduce paradigm allows coreset constructions in the streaming setting, we thus obtain robust algorithms for k-means, k-median, k-center, Bregman clustering, projective clustering, principal component analysis (PCA) and non-negative matrix factorization. To the best of our knowledge, these are the first adversarially robust results for these problems yet require no new algorithmic implementations. Finally, we empirically confirm the robustness of our algorithms on various adversarial attacks and demonstrate that by contrast, some common existing algorithms are not robust.&lt;/p&gt;
+
+
+
+&lt;p&gt;This is a joint work with Avinatan Hassidim, Yossi Matias, Mariano Schain, Sandeep Silwal, Samson Zhou. This result has appeared in NeurIPS 2021.&lt;/p&gt;
+
+
+
+&lt;p&gt;&amp;nbsp;The series is supported by the &lt;a href=&quot;https://www.nsf.gov/awardsearch/showAward?AWD_ID=1934846&amp;amp;HistoricalAwards=false&quot;&gt;NSF HDR TRIPODS Grant 1934846&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By dstheory&lt;/p&gt;
+  </content>
+    <author>
+      <name>Foundation of Data Science - Virtual Talk Series</name>
+      <uri>https://dstheory.wordpress.com</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Gil Kalai: Subspace Designs, Unit and Distinct Distances, and Piercing Standard Boxes.</title>
     <link href="https://gilkalai.wordpress.com/2023/03/10/subspace-designs-unit-and-distinct-distances-and-piercing-standard-boxes/"/>
     <id>http://gilkalai.wordpress.com/?p=23968</id>
@@ -1669,34 +1701,6 @@ be modified to have enumeration time complexity $\alpha\mathcal{O} (npoly(c))$.
 Here parameter $c$ is the weakly closure of the graph and $\alpha$ its number
 of maximal cliques. This result improves on their complexity which was not
 output sensitive and exponential in the closure of the graph.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Efficient Quantum Algorithms for Nonlinear Stochastic Dynamical Systems</title>
-    <link href="http://arxiv.org/abs/2303.02463"/>
-    <id>http://arxiv.org/abs/2303.02463</id>
-    <updated>2023-03-07T01:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Gnanasekaran_A/0/1/0/all/0/1&quot;&gt;Abeynaya Gnanasekaran&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Surana_A/0/1/0/all/0/1&quot;&gt;Amit Surana&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Sahai_T/0/1/0/all/0/1&quot;&gt;Tuhin Sahai&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we propose an efficient quantum algorithm for solving
-nonlinear stochastic differential equations (SDE) via the associated
-Fokker-Planck equation (FPE). We discretize FPE in space and time using the
-Chang-Cooper scheme, and compute the solution of the resulting system of linear
-equations using the quantum linear systems algorithm. The Chang-Cooper scheme
-is second order accurate and satisfies conservativeness and positivity of the
-solution. We present detailed error and complexity analyses that demonstrate
-that our proposed quantum scheme, which we call the Quantum Linear Systems
-Chang-Cooper Algorithm (QLSCCA), computes the solution to the FPE within
-prescribed $\epsilon$ error bounds with polynomial dependence on state
-dimension $d$. Classical numerical methods scale exponentially with dimension,
-thus, our approach provides an \emph{exponential speed-up} over traditional
-approaches.
 &lt;/p&gt;
   </content>
     <author>
