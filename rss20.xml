@@ -9,6 +9,27 @@
 
 
 <item>
+  <title>TR23-022 |  Unprovability of strong complexity lower bounds in bounded arithmetic | 
+
+	Jiatu Li, 
+
+	Igor Carboni Oliveira</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/022</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/022</link>
+  <description>
+    While there has been progress in establishing the unprovability of complexity statements in lower fragments of bounded arithmetic, understanding the limits of Jerabek&amp;#39;s theory $\textbf{APC}_1$ (2007) and of higher levels of Buss&amp;#39;s hierarchy $\textbf{S}^i_2$ (1986) has been a more elusive task. Even in the more restricted setting of Cook&amp;#39;s theory $\textbf{PV}$ (1975), known results often rely on a less natural formalization that encodes a complexity statement using a collection of sentences instead of a single sentence. This is done to reduce the quantifier complexity of the resulting sentences so that standard witnessing results can be invoked. 
+
+In this work, we establish unprovability results for stronger theories and for sentences of higher quantifier complexity. In particular, we unconditionally show that $\textbf{APC}_1$ cannot prove strong complexity lower bounds separating the third level of the polynomial hierarchy. In more detail, we consider non-uniform average-case separations, and establish that $\textbf{APC}_1$ cannot prove a sentence stating that
+* $\forall n \geq n_0\;\exists\,f_n \in \Pi_3\text{-}\textbf{SIZE}[n^d]$ that is $(1/n)$-far from every $\Sigma_3\text{-}\textbf{SIZE}[2^{n^{\delta}}]$ circuit. 
+This is a consequence of a much more general result showing that, for every $i \geq 1$, strong separations for $\Pi_{i}\text{-}\textbf{SIZE}[\textrm{poly}(n)]$ versus $\Sigma_{i}\text{-}\textbf{SIZE}[2^{n^{\Omega(1)}}]$ cannot be proved in the theory $\textbf{T}_\textbf{PV}^i$ consisting of all true $\forall \Sigma^b_{i-1}$-sentences in the language of Cook&amp;#39;s theory $\textbf{PV}$. 
+
+Our argument employs a convenient game-theoretic witnessing result that can be applied to sentences of arbitrary quantifier complexity. We combine it with extensions of a technique introduced by Krajicek (2011) that was recently employed by Pich and Santhanam (2021) to establish the unprovability of lower bounds in $\textbf{PV}$ (i.e., the case $i =1$ above, but under a weaker formalization) and in a fragment of $\textbf{APC}_1$.
+  </description>
+  <pubDate>2023-03-11 23:55:20 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Thursday, Mar 16th, 2023 — Vladimir Braverman from Rice University</title>
   <guid>http://dstheory.wordpress.com/?p=151</guid>
   <link>https://dstheory.wordpress.com/2023/03/10/thursday-mar-16th-2023-vladimir-braverman-from-rice-university/</link>
@@ -1489,24 +1510,6 @@ solve them. Second, using our new FFT-based nonlinear stencil algorithms, we
 improve the work and span asymptotically for the option pricing problems we
 consider. In particular, we perform $O(T\log^2 T)$ work for both American call
 and put option pricing, where $T$ is the number of time steps.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-07 01:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Efficient maximal cliques enumeration in weakly closed graphs</title>
-  <guid>http://arxiv.org/abs/2303.02390</guid>
-  <link>http://arxiv.org/abs/2303.02390</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Manoussakis_G/0/1/0/all/0/1&quot;&gt;George Manoussakis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We show that the algorithm presented in [J. Fox, T. Roughgarden, C.
-Seshadhri, F. Wei, and N. Wein. Finding cliques in social networks: A new
-distribution-free model. SIAM journal on computing, 49(2):448-464, 2020.] can
-be modified to have enumeration time complexity $\alpha\mathcal{O} (npoly(c))$.
-Here parameter $c$ is the weakly closure of the graph and $\alpha$ its number
-of maximal cliques. This result improves on their complexity which was not
-output sensitive and exponential in the closure of the graph.
 &lt;/p&gt;
   </description>
   <pubDate>2023-03-07 01:30:00 UTC</pubDate>
