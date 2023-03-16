@@ -9,6 +9,184 @@
 
 
 <item>
+  <title>Identities in Computational Complexity</title>
+  <guid>tag:blogger.com,1999:blog-3722233.post-2275048041517285399</guid>
+  <link>https://blog.computationalcomplexity.org/2023/03/identities-in-computational-complexity.html</link>
+  <description>
+    &lt;p&gt;&lt;i&gt;Guest post by Josh Grochow&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;On the birdsite, Jay Cummings &lt;a href=&quot;https://twitter.com/LongFormMath/status/1623389627880194048&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;tweeted&lt;/a&gt;:&lt;/p&gt;
+&lt;center&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;TOP 5 IDENTITIES OF ALL TIME&lt;br /&gt;5. You&lt;br /&gt;4. Can&#39;t &lt;br /&gt;3. Rank&lt;br /&gt;2. Identities &lt;br /&gt;1. e&lt;sup&gt;iπ&lt;/sup&gt; + 1 = 0&lt;/p&gt;— Jay Cummings (@LongFormMath) &lt;a href=&quot;https://twitter.com/LongFormMath/status/1623389627880194048?ref&amp;lt;sub&amp;gt;s&amp;lt;/sub&amp;gt;rc=twsrc%5Etfw&quot;&gt;February 8, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; charset=&quot;utf-8&quot; src=&quot;https://platform.twitter.com/widgets.js&quot;&gt;&lt;/script&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;br /&gt;
+And it got me thinking about identities in computational complexity. At first I
+thought: how many could there be? 10? After some thought and with some help,
+there turn out to be quite a few more than that, and I think they make a pretty
+good list!&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;Rules/comments on the list:&lt;/p&gt;&lt;p&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;ul style=&quot;text-align: left;&quot;&gt;&lt;li&gt;Some are relatively simple alternative
+characterizations, such as the various definitions of PH; most are pretty
+nontrivial theorems.&lt;/li&gt;&lt;li&gt;I  didn&#39;t include existentially quantified oracle
+results (such as &quot;there exists A such that P&lt;sup&gt;A&lt;/sup&gt;=NP&lt;sup&gt;A&lt;/sup&gt;&quot;), despite them
+being some of my favorite results, because there&#39;d be waaaay too many of those.
+Probably thousands? Ask Lance. In some circles he&#39;s known as the &quot;oracle
+oracle&quot; - as in, he&#39;s who you go ask if you want to know if a certain
+oracle exists. I &lt;i&gt;did&lt;/i&gt; include identities involving oracles
+where one side of the identity didn&#39;t have an oracle, such
+as EXP=NP&lt;sup&gt;R&lt;sub&gt;Kt&lt;/sub&gt;&lt;/sup&gt; or AlmostP=BPP (AlmostP is the class of languages
+L such that {A : L is in P&lt;sup&gt;A&lt;/sup&gt;} has measure 1).&lt;/li&gt;&lt;li&gt;I also didn&#39;t include some important conditional
+equalities, such as &quot;&lt;a href=&quot;http://doi.org/10.1007/BF01200056&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;EXP in P/poly iff EXP=MA&lt;/a&gt;&quot; or &quot;&lt;a href=&quot;https://doi.org/10.1016/0022-0000(88)90037-2&quot;&gt;NP in BPP iff NP=RP&lt;/a&gt;&quot;. I guess it&#39;s not really an &quot;identity&quot; if it&#39;s
+conditional. Games are only fun if the rules are at least a little constraining!&lt;/li&gt;&lt;li&gt;There are some surprising containments that either
+aren&#39;t equalities, or aren&#39;t known to be equalities, and I didn&#39;t include those
+either, despite some of them being very important. For example, &lt;a href=&quot;https://doi.org/10.1016/0020-0190(83)90044-3&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;BPP in Σ&lt;sub&gt;2&lt;/sub&gt;P&lt;/a&gt;,
+other depth reduction results (such as the &lt;a href=&quot;https://doi.org/10.1109/FOCS.2008.32&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;chasms at depth 4&lt;/a&gt; and &lt;a href=&quot;https://doi.org/10.1137/140957123&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;3&lt;/a&gt;), and &lt;a href=&quot;https://doi.org/10.1007/BF01263423&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;Beigel-Tarui&lt;/a&gt;/&lt;a href=&quot;https://doi.ieeecomputersociety.org/10.1109/FSCS.1990.89583&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;Yao&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;One could teach a class based on a list like this and cover
+a lot of good ground, but I think it&#39;d be sad to leave out any lower bounds.
+Actually, by my estimate, if you were teaching from &quot;scratch&quot; (say,
+starting after an undergrad algorithms class), this list, and all its
+implied prerequisite material, is already probably the equivalent of about 3-4
+semester-long classes!&lt;/p&gt;&lt;p&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;What other complexity identities did I miss?&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, without further ado, a list of (some) identities in
+computational complexity:&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1145/800119.803889&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;RP∩coRP=ZPP&lt;/a&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.acm.org/doi/10.1145/3568163&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;CLS=PPAD∩PLS&lt;/a&gt;  [from Paul Goldberg @paulwgoldberg]&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1137/16M1107632&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;quasi-poly
+Frege =quasi-poly noncommutative formula IPS&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Space classes&lt;/b&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016%2FS0022-0000%2870%2980006-X&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;PSPACE=NPSPACE&lt;/a&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Immerman%E2%80%93Szelepcs%C3%A9nyi_theorem&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;NL=coNL&lt;/a&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1145%2F1391289.1391291&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;L=SL&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://complexityzoo.net/Complexity_Zoo:G#gapl&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;DET=L&lt;sup&gt;GapL&lt;/sup&gt;&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Interactive Proofs&lt;/b&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/PCP_theorem#History&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;NP=PCP(O(log n), 3)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/IP_(complexity)&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;IP=PSPACE&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/0022-0000(88)90028-1&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;AM = MAM = AMAM =&lt;/a&gt; ... [From Albert Atserias @atserias]&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1007/BF01200056&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;MIP=NEXP=PCP(poly,poly)&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Alternating Turing machines&lt;/b&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/0304-3975(76)90061-X&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;Σ&lt;sub&gt;k&lt;/sub&gt; P = ∃ Pi&lt;sub&gt;k-1&lt;/sub&gt; P = NP&lt;sup&gt;Σ&lt;sub&gt;k-1&lt;/sub&gt; P&lt;/sup&gt; =
+Σ&lt;sub&gt;k&lt;/sub&gt;TIME(poly(n)&lt;/a&gt;) [from Lance]&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.acm.org/doi/10.1145/322234.322243&quot;&gt;AP=PSPACE&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.acm.org/doi/10.1145/322234.322243&quot;&gt;APSPACE=EXP&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Circuit classes within P&lt;/b&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016%2F0022-0000%2889%2990037-8&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;NC&lt;sup&gt;1&lt;/sup&gt;=5-PBP&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1145/48014.63138&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;ACC&lt;sup&gt;0&lt;/sup&gt;=branching
+programs over solvable monoids&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1145/321623.321625&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;P=AuxPDA&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/0022-0000(91)90020-6&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;SAC&lt;sup&gt;1&lt;/sup&gt; = LogCFL&lt;/a&gt; [from Michael Levet
+@Michael_Levet] &lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;REG = DSPACE(O(1)) = NSPACE(O(1)) [from Levet]&lt;/p&gt;&lt;p&gt;
+REG=DTIME&lt;sub&gt;1tape&lt;/sub&gt;(o(n log n))&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1137/0213027&quot;&gt;NC&lt;sup&gt;k&lt;/sup&gt; = log&lt;sup&gt;k&lt;/sup&gt; time on a CRCW PRAM&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Quantum&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1145/2049697.2049704&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;QIP=PSPACE&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cacm.acm.org/magazines/2021/11/256404-mip-re/fulltext&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;MIP*=CE&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1007/s00037-005-0194-x&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;QMA&lt;sub&gt;log&lt;/sub&gt; (1)=BQP&lt;/a&gt; [from Martin Schwarz @martin_schwarz]&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1108.0617&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;QMA&lt;sub&gt;log&lt;/sub&gt;
+(poly)=QCMA&lt;/a&gt; [ditto]&amp;nbsp;&lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;https://doi.org/10.1007/s00037-016-0140-0&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;QAC&lt;sup&gt;0&lt;/sup&gt;&lt;sub&gt;f&lt;/sub&gt; =
+QNC&lt;sup&gt;0&lt;/sup&gt;&lt;sub&gt;f&lt;/sub&gt;&lt;/a&gt; [from Ale `Scinawa&#39; Luongo @scinawa]&lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;https://doi.org/10.1145/2432622.2432625&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;QMA(k) =
+QMA(2)&lt;/a&gt; for any k ≥ 2 [from Sarvagya Upadhyay @sarvagya82]&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Algebraic complexity&lt;/b&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://doi.org/10.1137/0212043&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;VP=VNC&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.jco.2006.09.006&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;VDET=VABP=VP&lt;sub&gt;s&lt;/sub&gt;=VP&lt;sub&gt;ws&lt;/sub&gt;&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1137/0221006&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;VP&lt;sub&gt;e&lt;/sub&gt;=VABP&lt;sub&gt;3&lt;/sub&gt;&lt;/a&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1145/3209663&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;border-VP&lt;sub&gt;e&lt;/sub&gt;=border-VABP&lt;sub&gt;2&lt;/sub&gt;&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;For bilinear maps, tensor rank=Theta(algebraic circuit size)&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Logical characterizations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1007/978-1-4612-0539-5&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;FO=AC&lt;sup&gt;0&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1007/978-1-4612-0539-5&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;AC=NC=FO[poly(log)]&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Fagin%27s_theorem&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Cambria Math&amp;quot;,serif; mso-bidi-font-family: &amp;quot;Cambria Math&amp;quot;;&quot;&gt;∃&lt;/span&gt;SO=NP&lt;/a&gt;&lt;/p&gt;&lt;p&gt;
+&lt;a href=&quot;https://en.m.wikipedia.org/wiki/Fixed-point_logic#Least&amp;lt;sub&amp;gt;f&amp;lt;/sub&amp;gt;ixed-point&amp;lt;sub&amp;gt;l&amp;lt;/sub&amp;gt;ogic&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;P = FO + LFP on ordered structures&lt;/a&gt; [thanks to Lance,
+and Michael Levet]&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Kolmogorov-random strings as oracles&lt;/b&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1137/050628994&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;EXP=NP&lt;sup&gt;R&lt;sub&gt;Kt&lt;/sub&gt;&lt;/sup&gt;&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1137/050628994&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;PSPACE=ZPP&lt;sup&gt;R&lt;sub&gt;KS&lt;/sub&gt;&lt;/sup&gt;&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.apal.2005.06.003&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;P=COMP∩{dtt reducible to R&lt;sub&gt;K&lt;/sub&gt;U}&lt;/a&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Almost-classes&lt;/b&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dx.doi.org/10.1137/0210008&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;AlmostP=BPP&lt;/a&gt; &lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/S0022-0000(05)80043-1&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;AlmostNP=AM&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1007/s000370050012&quot; target=&quot;&amp;lt;sub&amp;gt;b&amp;lt;/sub&amp;gt;lank&quot;&gt;AlmostPSPACE=BP&lt;sup&gt;exp&lt;/sup&gt;.PSPACE&lt;/a&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;o:p&gt; &lt;/o:p&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-16 20:31:00 UTC</pubDate>
+  <author>Computational Complexity</author>
+</item>
+
+<item>
   <title>Some News from a Seminar in Cambridge</title>
   <guid>http://gilkalai.wordpress.com/?p=24009</guid>
   <link>https://gilkalai.wordpress.com/2023/03/16/some-news-from-a-seminar-in-cambridge/</link>
@@ -1788,38 +1966,6 @@ algorithms based on hashing $q$-grams. The improvement consists of considering
 minimal values $q$ such that each $q$-grams of the pattern has a unique hash
 value. The new algorithms are fastest than algorithm of the HASH family for
 short patterns on large size alphabets.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-13 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Faster Matroid Partition Algorithms</title>
-  <guid>http://arxiv.org/abs/2303.05920</guid>
-  <link>http://arxiv.org/abs/2303.05920</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Terao_T/0/1/0/all/0/1&quot;&gt;Tatsuya Terao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1
-= (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over
-a common ground set $V$ of $n$ elements, and we need to find a partitionable
-set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a
-set $S \subseteq V$ is called partitionable if there exists a partition $(S_1,
-\dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In
-1986, Cunningham presented a matroid partition algorithm that uses $O(n p^{3/2}
-+ k n)$ independence oracle queries, which was the previously known best
-algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$.
-&lt;/p&gt;
-&lt;p&gt;Our main result is to present a matroid partition algorithm that uses
-$\tilde{O}(k^{1/3} n p + k n)$ independence oracle queries, which is
-$\tilde{O}(n^{7/3})$ when $k \leq n$. This improves upon previous Cunningham&#39;s
-algorithm. To obtain this, we present a new approach \emph{edge recycling
-augmentation}, which can be attained through new ideas: an efficient
-utilization of the binary search technique by Nguyen and
-Chakrabarty-Lee-Sidford-Singla-Wong and a careful analysis of the number of
-independence oracle queries. Our analysis differs significantly from the one
-for matroid intersection algorithms, because of the parameter $k$. We also
-present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$
-rank oracle queries.
 &lt;/p&gt;
   </description>
   <pubDate>2023-03-13 00:30:00 UTC</pubDate>
