@@ -10,6 +10,31 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-029 |  Instance-Wise Hardness versus Randomness Tradeoffs for Arthur-Merlin Protocols | 
+
+	Dieter van Melkebeek, 
+
+	Nicollas Sdroievski</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/029"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/029</id>
+    <updated>2023-03-18T02:34:40+00:00</updated>
+    <content type="html" xml:lang="en">
+    A fundamental question in computational complexity asks whether probabilistic polynomial-time algorithms can be simulated deterministically with a small overhead in time (the BPP vs. P problem). A corresponding question in the realm of interactive proofs asks whether Arthur-Merlin protocols can be simulated nondeterministically with a small overhead in time (the AM vs. NP problem). Both questions are intricately tied to lower bounds. Prominently, in both settings  blackbox derandomization, i.e., derandomization through pseudo-random generators, has been shown equivalent to lower bounds for decision problems against circuits.
+
+Recently, Chen and Tell (FOCS&amp;#39;21) established near-equivalences in the BPP setting between whitebox derandomization and lower bounds for multi-bit functions against algorithms on almost-all inputs. The key ingredient is a technique to translate hardness into targeted hitting-sets in an instance-wise fashion based on a layered arithmetization of the evaluation of a uniform circuit computing the hard function $f$ on the given instance.
+
+In this paper we develop a corresponding technique for Arthur-Merlin protocols and establish similar near-equivalences in the AM setting. As an example of our results in the hardness to derandomization direction, consider a length-preserving function $f$ computable by a nondeterministic algorithm that runs in time $n^a$. We show that if every Arthur-Merlin protocol that runs in time $n^c$ for $c=O(\log^2 a)$ can only compute $f$ correctly on finitely many inputs, then AM is in NP. Our main technical contribution is the construction of suitable targeted hitting-set generators based on probabilistically checkable proofs for nondeterministic computations. 
+
+As a byproduct of our constructions, we obtain the first result indicating that whitebox derandomization of AM may be equivalent to the existence of targeted hitting-set generators for AM, an issue raised by Goldreich (LNCS, 2011). Byproducts in the average-case setting include the first uniform hardness vs. randomness tradeoffs for AM, as well as an unconditional mild derandomization result for AM.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Scott Aaronson: On overexcitable children</title>
     <link href="https://scottaaronson.blog/?p=7134"/>
     <id>https://scottaaronson.blog/?p=7134</id>
@@ -2125,132 +2150,6 @@ Email: clement.aubert@math.cnrs.fr&lt;/p&gt;
     <author>
       <name>Computational Complexity</name>
       <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Francis Bach: Revisiting the classics: Jensen’s inequality</title>
-    <link href="https://francisbach.com/jensen-inequality/"/>
-    <id>https://francisbach.com/?p=8823</id>
-    <updated>2023-03-13T13:47:14+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;justify-text&quot;&gt;There are a few mathematical results that any researcher in applied mathematics uses on a daily basis. One of them is Jensen&amp;#8217;s inequality, which allows bounding expectations of functions of random variables. This really happens a lot in any probabilistic arguments but also as a tool to generate inequalities and optimization algorithms. In this blog post, I will present a collection of fun facts about the inequality, from very classical to more obscure. If you know other cool ones, please add them as comments.&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;But before, &lt;em&gt;&lt;strong&gt;let me be very clear&lt;/strong&gt;&lt;/em&gt;: Jensen&amp;#8217;s inequality is often not in the direction that you would hope it to be. So, to avoid embarrassing mistakes, I always draw at least in my mind the figure below before using it.  &lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-full is-resized&quot;&gt;&lt;img src=&quot;https://francisbach.com/wp-content/uploads/2023/03/jensen-3.png&quot; alt=&quot;&quot; class=&quot;wp-image-8873&quot; width=&quot;546&quot; height=&quot;243&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2023/03/jensen-3.png 1616w, https://francisbach.com/wp-content/uploads/2023/03/jensen-3-300x134.png 300w, https://francisbach.com/wp-content/uploads/2023/03/jensen-3-1024x456.png 1024w, https://francisbach.com/wp-content/uploads/2023/03/jensen-3-768x342.png 768w, https://francisbach.com/wp-content/uploads/2023/03/jensen-3-1536x684.png 1536w, https://francisbach.com/wp-content/uploads/2023/03/jensen-3-850x379.png 850w&quot; sizes=&quot;(max-width: 546px) 100vw, 546px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Simplest formulation and proof&lt;/h2&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;Given a convex function defined on a convex subset \(C\) of \(\mathbb{R}^d\), and a random vector \(X\) with values in \(C\), then $$ f\big( \mathbb{E}[X] \big) \leqslant \mathbb{E} \big[ f(X) \big],$$ as soon as the expectations exist. For a strictly convex function, there is equality if and only if \(X\) is almost surely constant. This is often stated with \(\mu\) taking finitely many values, like in the plot below.&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Proof.&lt;/strong&gt; Starting with the standard definition of convexity that corresponds to random variables that take only two values in \(C\), this can be extended by recursion to all random variables taking finitely many values, and then by a density argument, to all random variables. See the &lt;a href=&quot;https://en.wikipedia.org/wiki/Jensen%27s_inequality&quot;&gt;Wikipedia&lt;/a&gt; page.&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Proof without words.&lt;/strong&gt; As nicely explained in this &lt;a href=&quot;https://mark.reid.name/blog/behold-jensens-inequality.html&quot;&gt;blog post&lt;/a&gt; by Mark Reid, a simple argument based on epigraphs leads to the inequality for discrete measures supported on \(x_1,\dots,x_n\), with non-negative weights \(\lambda_1, \dots,\lambda_n\) that sum to one, with an illustration below for \(n=4\): any convex combination of points \((x_i,f(x_i))\) has to be in the red convex polygon, which is above the function.&lt;/p&gt;
-
-
-&lt;div class=&quot;wp-block-image&quot;&gt;
-&lt;figure class=&quot;aligncenter size-large is-resized&quot;&gt;&lt;img loading=&quot;lazy&quot; src=&quot;https://francisbach.com/wp-content/uploads/2023/03/jensen_multi-3-1024x474.png&quot; alt=&quot;&quot; class=&quot;wp-image-8889&quot; width=&quot;542&quot; height=&quot;250&quot; srcset=&quot;https://francisbach.com/wp-content/uploads/2023/03/jensen_multi-3-1024x474.png 1024w, https://francisbach.com/wp-content/uploads/2023/03/jensen_multi-3-300x139.png 300w, https://francisbach.com/wp-content/uploads/2023/03/jensen_multi-3-768x355.png 768w, https://francisbach.com/wp-content/uploads/2023/03/jensen_multi-3-1536x711.png 1536w, https://francisbach.com/wp-content/uploads/2023/03/jensen_multi-3-850x393.png 850w, https://francisbach.com/wp-content/uploads/2023/03/jensen_multi-3.png 1549w&quot; sizes=&quot;(max-width: 542px) 100vw, 542px&quot; /&gt;&lt;/figure&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;A bit of history&lt;/h2&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;The result is typically attributed to the Danish mathematician &lt;a href=&quot;https://fr.wikipedia.org/wiki/Johan_Jensen&quot;&gt;Johan Jensen&lt;/a&gt; [&lt;a href=&quot;https://zenodo.org/record/2371297/files/article.pdf&quot;&gt;1&lt;/a&gt;, in French] who proved in 1906 the result for convex functions on the real line (in fact all continuous &lt;a href=&quot;https://en.wikipedia.org/wiki/Convex_function&quot;&gt;mid-point convex&lt;/a&gt; functions), but &lt;a href=&quot;https://en.wikipedia.org/wiki/Otto_H%C3%B6lder&quot;&gt;Otto Hölder&lt;/a&gt; had shown it earlier for twice differentiable functions [&lt;a href=&quot;http://gdz.sub.uni-goettingen.de/dms/resolveppn/?PPN=GDZPPN00252421X&quot;&gt;2&lt;/a&gt;, in German]. It turns out this was known thirty years earlier for uniform measures on finite sets, as shown by Jules Grolous [&lt;a href=&quot;https://books.google.fr/books?id=z_BFnsBAx18C&amp;amp;hl=fr&amp;amp;pg=PA401#v=onepage&amp;amp;q&amp;amp;f=true&quot;&gt;3&lt;/a&gt;], a relatively unknown former student from Ecole Polytechnique. See also [&lt;a href=&quot;https://www.jstor.org/stable/pdf/43667702.pdf?refreqid=excelsior%3A29d60497a1ddcba74004c27f25c39cd1&amp;amp;ab_segments=&amp;amp;origin=&amp;amp;initiator=&quot;&gt;4&lt;/a&gt;] for more details on the history of Jensen&amp;#8217;s inequality.&lt;/p&gt;
-
-
-
-&lt;h2&gt;Classical applications&lt;/h2&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;Jensen&amp;#8217;s inequality can be used to derive many other classical inequalities, typically applied to the exponential, logarithm or powers.&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Arithmetic, harmonic, and geometric means.&lt;/strong&gt; For \(X\) with positive real values, we have: $$ \mathbb{E}[X]\geqslant \exp \Big( \mathbb{E}\big[ \log(X)\big]\Big)  \ \mbox{ and } \  \mathbb{E}[X]  \geqslant \frac{1}{\mathbb{E}\big[\frac{1}{X}\big]},$$ which corresponds for empirical measures to classical &lt;a href=&quot;https://en.wikipedia.org/wiki/HM-GM-AM-QM_inequalities&quot;&gt;inequalities between means&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Young&amp;#8217;s inequality.&lt;/strong&gt; For \(p,q&amp;gt;1\) such that \(\frac{1}{p}+\frac{1}{q}=1\), and two non-negative real numbers \(x,y\), we get by Jensen&amp;#8217;s inequality, $$ \log\big(\frac{1}{p} x^p + \frac{1}{q} y^q \big) \geqslant \frac{1}{p} \log(x^p) + \frac{1}{q} \log(y^q) = \log(xy),$$ leading to &lt;a href=&quot;https://en.wikipedia.org/wiki/Young%27s_inequality_for_products&quot;&gt;Young&amp;#8217;s inequality&lt;/a&gt; \(\displaystyle xy \leqslant \frac{1}{p} x^p + \frac{1}{q} y^q.\)&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Hölder&amp;#8217;s inequality.&lt;/strong&gt; For any positive \(x_1,\dots,x_n,y_1,\dots,y_n\), we can write $$\sum_{i=1}^n x_i y_i = \sum_{j=1}^n y_j^q \cdot \sum_{i=1}^n x_i y_i^{1-q} \frac{y_i^q}{\sum_{j=1}^n y_j^q} \leqslant \sum_{j=1}^n y_j^q \cdot \Big( \sum_{i=1}^n (x_i y_i^{1-q})^p \frac{y_i^q}{\sum_{j=1}^n y_j^q} \Big)^{1/p},$$ leading to &lt;a href=&quot;https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality&quot;&gt;Hölder&amp;#8217;s inequality&lt;/a&gt; (with the same relationship between \(p\) and \(q\) as above): $$\sum_{i=1}^n x_i y_i \leqslant \Big( \sum_{j=1}^n y_j^q \Big)^{1/q} \Big( \sum_{j=1}^n x_j^p \Big)^{1/p}.$$ This includes also &lt;a href=&quot;https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality&quot;&gt;Cauchy-Schwarz inequality&lt;/a&gt; if \(p=q=2\), and also multiple versions of the &amp;#8220;&lt;a href=&quot;https://francisbach.com/the-%ce%b7-trick-or-the-effectiveness-of-reweighted-least-squares/&quot;&gt;eta-trick&lt;/a&gt;&amp;#8220;.&lt;/p&gt;
-
-
-
-&lt;h2&gt;Majorization-minimization&lt;/h2&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;Within data science, Jensen&amp;#8217;s inequality is often used to derive auxiliary functions used in &lt;a href=&quot;https://en.wikipedia.org/wiki/MM_algorithm&quot;&gt;majorization-minimization&lt;/a&gt; algorithms, with two classical examples below.&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Non-negative matrix factorization (NMF).&lt;/strong&gt; Given a non-negative matrix \(V \in \mathbb{R}_+^{n \times d}\), the goal of NMF is to decompose it as \(V = WH\) with \(W \in \mathbb{R}_+^{n \times m}\) and \(H \in \mathbb{R}_+^{m \times d}\). This has many applications, in particular in source separation [&lt;a href=&quot;https://papers.nips.cc/paper/2000/file/f9d1152547c0bde01830b7e8bd60024c-Paper.pdf&quot;&gt;5&lt;/a&gt;, &lt;a href=&quot;http://perso.ens-lyon.fr/patrice.abry/ENSEIGNEMENTS/14M2SCExam/Bertin.pdf&quot;&gt;6&lt;/a&gt;].&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt; A classical cost function which is used to estimate \(W\) and \(H\) is the Kullback-Leibler divergence [&lt;a href=&quot;https://papers.nips.cc/paper/2000/file/f9d1152547c0bde01830b7e8bd60024c-Paper.pdf&quot;&gt;5&lt;/a&gt;] $$ D(V \| WH) = \sum_{i=1}^n \sum_{j=1}^d \Big\{ V_{ij} \log \frac{ V_{ij} }{ ( WH)_{ij} }\  &amp;#8211; V_{ij} + (WH)_{ij} \Big\}.$$ To minimize the cost function above with respect to \(H\) only, the problematic term is \(\log  ( WH)_{ij} = \log \big( \sum_{k=1}^m W_{ik} H_{kj} \big)\), which is a &amp;#8220;log of a sum&amp;#8221;. To turn it into a &amp;#8220;sum of logs&amp;#8221;, we use Jensen&amp;#8217;s inequality for the logarithm, by introducing a probability vector \(q^{ij} \in \mathbb{R}_+^m\) (with non-negative values that sum to one), and lower-bounding $$ \log  ( WH)_{ij} = \log \Big( \sum_{k=1}^m q^{ij}_k \frac{W_{ik} H_{kj} }{q^{ij}_k} \Big) \geqslant \sum_{k=1}^n q^{ij}_{k} \log \frac{W_{ik} H_{kj}}{q^{ij}_k}.$$ For a fixed \(H\), the bound is tight for \(\displaystyle q^{ij}_k = \frac{W_{ik} H_{kj}}{(WH)_{ij}},\) and given all \(q\)&amp;#8217;s, we can minimize with respect to \(H_{ki}\) in closed form to get the update $$H_{kj} \leftarrow H_{kj}    \frac{\sum_{i=1}^n \! V_{ij} W_{ik}  \, /\,  (WH)_{ij} }{\sum_{i&amp;#8217;=1}^n \! W_{i&amp;#8217;k}}.$$ Because we had a tight upper bound at the current \(H\) (before the update), this is a descent algorithm. We can derive a similar update for \(W\). As shown in [&lt;a href=&quot;https://papers.nips.cc/paper/2000/file/f9d1152547c0bde01830b7e8bd60024c-Paper.pdf&quot;&gt;5&lt;/a&gt;], this is a simple parameter-free descent algorithm that converges to a stationary point, often referred to as a multiplicative update algorithm. See a convergence analysis in [&lt;a href=&quot;https://perso.telecom-paristech.fr/rbadeau/assets/ieee-tnn-10.pdf&quot;&gt;7&lt;/a&gt;] and alternatives based on relative smoothness [&lt;a href=&quot;https://publications.ut-capitole.fr/id/eprint/25852/1/25852.pdf&quot;&gt;8&lt;/a&gt;] or on primal-dual formulations [&lt;a href=&quot;https://arxiv.org/pdf/1608.01264&quot;&gt;9&lt;/a&gt;, &lt;a href=&quot;https://hal.science/hal-01079229/document&quot;&gt;10&lt;/a&gt;].&lt;/p&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;&lt;strong&gt;Expectation-maximization (EM).&lt;/strong&gt; The exact same technique of introducing a probability vector within the log and using Jensen&amp;#8217;s inequality is at the core of &lt;a href=&quot;https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm&quot;&gt;EM for latent variable models&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Evidence_lower_bound&quot;&gt;variational inference&lt;/a&gt; (in fact NMF is simply a particular instance for a Poisson likelihood), which are two good topics for future posts (see &lt;a href=&quot;https://lips.cs.princeton.edu/the-elbo-without-jensen-or-kl/&quot;&gt;here&lt;/a&gt; for a simple derivation of the &amp;#8220;&lt;a href=&quot;https://en.wikipedia.org/wiki/Evidence_lower_bound&quot;&gt;evidence lower bound&lt;/a&gt;&amp;#8220;).&lt;/p&gt;
-
-
-
-&lt;h2&gt;Information theory&lt;/h2&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;Within &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_theory&quot;&gt;information theory&lt;/a&gt;, the concavity of the logarithm and the use of Jensen&amp;#8217;s inequality play a major role in most classical results, e.g., positivity of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence&quot;&gt;Kullback-Leilbler divergence&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Data_processing_inequality&quot;&gt;data processing inequality&lt;/a&gt;. This also extends to all &lt;a href=&quot;https://en.wikipedia.org/wiki/F-divergence&quot;&gt;f-divergences&lt;/a&gt;.&lt;/p&gt;
-
-
-
-&lt;h2&gt;Operator convexity&lt;/h2&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;When considering convexity with respect to a generalized inequaility (such as based on the Löwner order), we can extend many of the classical formulas above (relationship between means, Young&amp;#8217;s and Hölder&amp;#8217;s inequality) to matrices. See &lt;a href=&quot;https://francisbach.com/matrix-monotony-and-convexity/&quot;&gt;earlier post&lt;/a&gt; for an introduction. For a certain set of functions (such as the square or the negative logarithm) \(f: \mathbb{R} \to \mathbb{R}\), then for a random symmetric matrix \(X\), we have (for the &lt;a href=&quot;https://en.wikipedia.org/wiki/Loewner_order&quot;&gt;Löwner order&lt;/a&gt;): $$ f\big( \mathbb{E}[X] \big) \preccurlyeq  \mathbb{E} \big[ f(X) \big].$$ An intriguing extension is the operator version of Jensen&amp;#8217;s inequality [&lt;a href=&quot;https://arxiv.org/pdf/math/0204049&quot;&gt;10&lt;/a&gt;], for potentially dependent random variables \((X,Y)\), where \(X\) is symmetric, and the sizes of \(X\) and \(Y\) are compatible: $$ f \Big( \mathbb{E} \big[ Y^\top X Y \big] \Big) \preccurlyeq \mathbb{E} \big[ Y^\top f(X) Y \big]  \ \mbox{ as soon as } \ \mathbb{E}[  Y^\top Y ] = I.$$&lt;/p&gt;
-
-
-
-&lt;h2&gt;Exact expression of the remainder&lt;/h2&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;There is a large literature on extensions, refinements on Jensen&amp;#8217;s inequality. I have a cute one of my own, which has probably been derived before. For twice differentiable functions \(f\), we can use &lt;a href=&quot;https://en.wikipedia.org/wiki/Taylor%27s_theorem&quot;&gt;Taylor formula with integral remainder&lt;/a&gt; on the segment between \(X\) and \(\mathbb{E}[X]\), leading to, with \(g(t) =  f\big( t X + (1-t) \mathbb{E}[X]\big)\), $$g(1) = g(0) + g&#39;(0) + \int_0^1 \! g^{\prime \prime}(t)(1-t)dt.$$ Taking expectations, this leads to $$\mathbb{E} \big[f(X)\big] &amp;#8211; f\big( \mathbb{E}[X]\big) = \mathbb{E} \bigg[ \int_0^1 \! ( X &amp;#8211; \mathbb{E}[X])^\top f^{\prime\prime}\big( t X + (1-t) \mathbb{E}[X]\big) ( X &amp;#8211; \mathbb{E}[X]) (1-t) dt \bigg].$$ From this expression, we recover traditional refinements or reversing of the order if \(f^{\prime\prime}\) has bounded eigenvalues. This can for example be used also for characterizing the equality cases in non-strictly convex situations [&lt;a href=&quot;https://arxiv.org/pdf/2202.08545.pdf&quot;&gt;11&lt;/a&gt;, page 31].&lt;/p&gt;
-
-
-
-&lt;h2&gt;References&lt;/h2&gt;
-
-
-
-&lt;p class=&quot;justify-text&quot;&gt;[1] &lt;a href=&quot;https://en.wikipedia.org/wiki/Johan_Jensen_(mathematician)&quot;&gt;&lt;/a&gt;Johan L. Jensen.&amp;nbsp;&lt;a href=&quot;https://zenodo.org/record/2371297/files/article.pdf&quot;&gt;Sur les fonctions convexes et les inégalités entre les valeurs moyennes.&lt;/a&gt;&amp;nbsp;&lt;em&gt;Acta Mathematica&lt;/em&gt;,&amp;nbsp;30(1): 175–193, 1906.&lt;br&gt;&lt;span style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;[2] Otto Hölder, &lt;/span&gt;&lt;a style=&quot;font-size: revert; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot; href=&quot;http://gdz.sub.uni-goettingen.de/dms/resolveppn/?PPN=GDZPPN00252421X&quot;&gt;Ueber einen Mittelwerthssatz&lt;/a&gt;&lt;span style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;.&amp;nbsp;&lt;/span&gt;Nachrichten von der Königl. Gesellschaft der Wissenschaften und der Georg-Augusts-Universität zu&amp;nbsp;Göttingen&lt;span style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;, (1):38-47&lt;/span&gt;, 1889.&lt;br&gt;&lt;span style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;[3] Jules Grolous. &lt;/span&gt;&lt;a style=&quot;font-size: revert; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot; href=&quot;https://books.google.fr/books?id=z_BFnsBAx18C&amp;amp;hl=fr&amp;amp;pg=PA401#v=onepage&amp;amp;q&amp;amp;f=true&quot;&gt;Un théorème sur les fonctions&lt;/a&gt;&lt;em style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;. L’Institut, Journal Universel des Sciences et des Sociétés Savantes en France et à l’Etranger&lt;/em&gt;&lt;span style=&quot;font-size: revert; color: initial; font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, sans-serif;&quot;&gt;, 3(153):401, 1875.&lt;/span&gt;&lt;br&gt;[4] D. S. Mitrinović and P. M. Vasić. &lt;a href=&quot;https://www.jstor.org/stable/pdf/43667702.pdf?refreqid=excelsior%3A29d60497a1ddcba74004c27f25c39cd1&amp;amp;ab_segments=&amp;amp;origin=&amp;amp;initiator=&quot;&gt;The centroid method in inequalities&lt;/a&gt;.&amp;nbsp;&lt;em&gt;Publikacije Elektrotehničkog fakulteta. Serija Matematika i fizika&lt;/em&gt;&amp;nbsp;498/541:3-16, 1975.&lt;br&gt;[5] Daniel D. Lee and H. Sebastian Seung. &lt;a href=&quot;https://papers.nips.cc/paper/2000/file/f9d1152547c0bde01830b7e8bd60024c-Paper.pdf&quot;&gt;Algorithms for non-negative matrix factorization&lt;/a&gt;.&amp;nbsp;&lt;em&gt;Advances in Neural Information Processing Systems&lt;/em&gt;, 13, 2000.&lt;br&gt;[6] Cédric Févotte, Nancy Bertin, and Jean-Louis Durrieu. &lt;a href=&quot;http://perso.ens-lyon.fr/patrice.abry/ENSEIGNEMENTS/14M2SCExam/Bertin.pdf&quot;&gt;Nonnegative matrix factorization with the Itakura-Saito divergence: With application to music analysis&lt;/a&gt;.&amp;nbsp;&lt;em&gt;Neural computation&lt;/em&gt;&amp;nbsp;21(3):793-830, 2009.&lt;br&gt;[6] Roland Badeau, Nancy Bertin, and Emmanuel Vincent. &lt;a href=&quot;https://perso.telecom-paristech.fr/rbadeau/assets/ieee-tnn-10.pdf&quot;&gt;Stability analysis of multiplicative update algorithms and application to nonnegative matrix factorization&lt;/a&gt;.&amp;nbsp;&lt;em&gt;IEEE Transactions on Neural Networks&lt;/em&gt;,&amp;nbsp;21(12):1869-1881, 2010.&lt;br&gt;[7] Heinz H. Bauschke, Jérôme Bolte, and Marc Teboulle. &lt;a href=&quot;https://publications.ut-capitole.fr/id/eprint/25852/1/25852.pdf&quot;&gt;A descent lemma beyond Lipschitz gradient continuity: first-order methods revisited and applications&lt;/a&gt;. &lt;em&gt;Mathematics of Operations Research&lt;/em&gt;&amp;nbsp;42(2):330-348, 2017.&lt;br&gt;[8] Niao He, Zaid Harchaoui, Yichen Wang, and Le Song. &lt;a href=&quot;https://arxiv.org/pdf/1608.01264&quot;&gt;Fast and simple optimization for Poisson likelihood models&lt;/a&gt;.&amp;nbsp;Technical report,&lt;em&gt; arXiv:1608.01264&lt;/em&gt;, 2016.&lt;br&gt;[9] Felipe Yanez and Francis Bach. &lt;a href=&quot;https://hal.science/hal-01079229/document&quot;&gt;Primal-dual algorithms for non-negative matrix factorization with the Kullback-Leibler divergence&lt;/a&gt;.&amp;nbsp;&lt;em&gt;International Conference on Acoustics, Speech and Signal Processing (ICASSP)&lt;/em&gt;, 2017.&lt;br&gt;[10] Frank Hansen, Gert K. Pedersen. &lt;a href=&quot;https://arxiv.org/pdf/math/0204049&quot;&gt;Jensen&amp;#8217;s Operator Inequality&lt;/a&gt;. Technical report,&lt;em&gt; arXiv:0204049&lt;/em&gt;, 2002.&lt;br&gt;[11] Francis Bach. &lt;a href=&quot;https://arxiv.org/pdf/2202.08545.pdf&quot;&gt;Information theory with kernel methods&lt;/a&gt;. &lt;em&gt;IEEE Transactions in Information Theor&lt;/em&gt;y, 69(2):752-775, 2022.&lt;br&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Francis Bach&lt;/p&gt;
-  </content>
-    <author>
-      <name>Francis Bach</name>
-      <uri>https://francisbach.com</uri>
     </author>
   </entry>
 
