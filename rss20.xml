@@ -9,6 +9,196 @@
 
 
 <item>
+  <title>New Upper Bound on R(k).  WOW!</title>
+  <guid>tag:blogger.com,1999:blog-3722233.post-8933765861878524476</guid>
+  <link>https://blog.computationalcomplexity.org/2023/03/new-upper-bound-on-rk-wow.html</link>
+  <description>
+    &lt;p&gt;&amp;nbsp;R(k) is the least n such that for all 2-colorings of the edges of \(K_n\) there is a monochromatic \(K_k\)&lt;/p&gt;&lt;p&gt;(so there are k vertices such that the coloring restricted to the edges between those k vertices is constant)&lt;/p&gt;&lt;p&gt;&lt;br /&gt;Here is some history. If I miss a reference or a result, let me know in the comments&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;\(R(k) \le 2^{2k} = 4^k \) seems to be folklore and is a very old result. Proof could be shown to HS students. I have. Or 9 year old&#39;s who are good at math. I have.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;\(R(k)\le {2k-2 \choose k-1}\) which is approx \(\frac{4^k}{\sqrt k}\) was shown by Erdos and Szekeres in 1935. Proof could be shown to HS students. I have. Or 9 year old&#39;s who are good at math. I have.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Thomson in 1988 got&lt;/p&gt;&lt;p&gt;$$R(k) \le \frac{4^k}{k^A\sqrt{\log k}}$$&lt;/p&gt;&lt;p&gt;for some A. This paper is behind paywalls so will be lost to history and I cannot comment on if the proof is easy or hard. (If you know of a link it, let me know and I will provide it).&amp;nbsp;&lt;/p&gt;&lt;p&gt;Conlon in 2006 got the denom to be super-poly. We omit the result but the paper is&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/math/0607788&quot;&gt;here&lt;/a&gt;. Proof used the next method of quasi-randomness.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Sah&amp;nbsp; (his paper is&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2005.09251&quot;&gt;here&lt;/a&gt;) optimized Conlon&#39;s technique to get&amp;nbsp;&lt;/p&gt;&lt;p&gt;$$R(k) \le 4^{k-c(\log k)^2}.$$&lt;/p&gt;&lt;p&gt;(According to the paper I will point to soon that has the major result, Sah&#39;s result is the best one can do with the Thomason-Conlon technique. In Complexity theory we may have formalized that and called it a barrier result.)&lt;/p&gt;&lt;p&gt;These results were interesting and used interesting techniques. However, the best known lower bound is&amp;nbsp; \(R(k) \ge 2^{k/2}\) (I&#39;ve left out constants) so the REAL questions are&lt;/p&gt;&lt;p&gt;a) Can the 4 be replaced with a smaller number in the upper bound?&lt;/p&gt;&lt;p&gt;b) Is there a number a so that R(k) is essentially \(2^{ak}\)?&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;We note in passing that the lower bound was proven by the Prob Method. That last statement obscures the history--- the Prob Method was invented by Erdos TO PROVE the lower bound. I&#39;ve seen the prob method called &lt;i&gt;an application of Ramsey Theory&lt;/i&gt;&amp;nbsp;which is not quite right. Its more like Ramsey INSPIRED a technique that is used A LOT, including things that are actually practical.&amp;nbsp;&lt;/p&gt;&lt;p&gt;But&amp;nbsp; back to our story. SO, while all of the above results were interesting, were they making progress towards the REAL question? We can now say YES as progress HAS been made and DID use some of the techniques.&lt;/p&gt;&lt;p&gt;On March 16, 2023 Campos, Griffthis, Morris, Sahasrabudhe posted a paper on arxiv,&amp;nbsp;&lt;a href=&quot;https://arxiv.org/pdf/2303.09521.pdf&quot;&gt;here&lt;/a&gt;, that showed&lt;/p&gt;&lt;p&gt;$$R(k) \le (4-\epsilon)^k$$&lt;/p&gt;&lt;p&gt;&amp;nbsp;for some (quite small) epsilon.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Here are some thoughts which are influenced by my email correspondence with Jacob Fox (an imminent combinatorist) on this topic.&lt;/p&gt;&lt;p&gt;1) I am NOT surprised that the result is true.&amp;nbsp;&lt;/p&gt;&lt;p&gt;2) I AM surprised that its been proven. Lots of brilliant people have worked on this problem for many years so... .why now? Since its been open for around 70 years, I thought it would take another 70 years to crack.&lt;/p&gt;&lt;p&gt;3) Will this result lead to better results? I hope so!&lt;/p&gt;&lt;p&gt;4) Does R(k) have a nice upper bound? Not clear. The following is unlikely though something like it may be possible:&lt;/p&gt;&lt;p&gt;R(k) roughly\( (3.5)^k\) for k a power of a Fibonacci prime&lt;/p&gt;&lt;p&gt;R(k) roughly\( (3.8)^k \)othewise&lt;/p&gt;&lt;p&gt;5) (Jacob pointed me to this) There is a paper on Book-Ramsey Numbers that also (on page 2) notes a connection to Ramsey Numbers. The paper is&amp;nbsp;&lt;a href=&quot;https://arxiv.org/pdf/2001.00407.pdf&quot;&gt;here&lt;/a&gt;. A conjecture on Book-Ramsey will lead to a big improvement on Ramsey. Those kinds of results are odd since I can&#39;t tell if the upshot is&lt;/p&gt;&lt;p&gt;Lets work hard on Book-Ramsey so we can get better bounds on Ramsey!&lt;/p&gt;&lt;p&gt;or&lt;/p&gt;&lt;p&gt;Book-Ramsey is HARD so lets give up. (Who first said &lt;i&gt;if at first you don&#39;t succeed, quit. Why make a damn fool of yourself? ?)&amp;nbsp;&lt;/i&gt;&lt;/p&gt;&lt;p&gt;6) The paper with the new result is 57 pages. It looks dense. I will wait for the movie.&amp;nbsp; I may have to wait a long time.&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-20 00:47:00 UTC</pubDate>
+  <author>Computational Complexity</author>
+</item>
+
+<item>
+  <title>Optimal Volume-Sensitive Bounds for Polytope Approximation</title>
+  <guid>http://arxiv.org/abs/2303.09586</guid>
+  <link>http://arxiv.org/abs/2303.09586</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arya_S/0/1/0/all/0/1&quot;&gt;Sunil Arya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mount_D/0/1/0/all/0/1&quot;&gt;David M. Mount&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Approximating convex bodies is a fundamental question in geometry and has a
+wide variety of applications. Consider a convex body $K$ of diameter $\Delta$
+in $\textbf{R}^d$ for fixed $d$. The objective is to minimize the number of
+vertices (alternatively, the number of facets) of an approximating polytope for
+a given Hausdorff error $\varepsilon$. It is known from classical results of
+Dudley (1974) and Bronshteyn and Ivanov (1976) that
+$\Theta((\Delta/\varepsilon)^{(d-1)/2})$ vertices (alternatively, facets) are
+both necessary and sufficient. While this bound is tight in the worst case,
+that of Euclidean balls, it is far from optimal for skinny convex bodies.
+&lt;/p&gt;
+&lt;p&gt;A natural way to characterize a convex object&#39;s skinniness is in terms of its
+relationship to the Euclidean ball. Given a convex body $K$, define its
+\emph{volume diameter} $\Delta_d$ to be the diameter of a Euclidean ball of the
+same volume as $K$, and define its \emph{surface diameter} $\Delta_{d-1}$
+analogously for surface area. It follows from generalizations of the
+isoperimetric inequality that $\Delta \geq \Delta_{d-1} \geq \Delta_d$.
+&lt;/p&gt;
+&lt;p&gt;Arya, da Fonseca, and Mount (SoCG 2012) demonstrated that the diameter-based
+bound could be made surface-area sensitive, improving the above bound to
+$O((\Delta_{d-1}/\varepsilon)^{(d-1)/2})$. In this paper, we strengthen this by
+proving the existence of an approximation with
+$O((\Delta_d/\varepsilon)^{(d-1)/2})$ facets.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-20 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>The geodesic edge center of a simple polygon</title>
+  <guid>http://arxiv.org/abs/2303.09702</guid>
+  <link>http://arxiv.org/abs/2303.09702</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lubiw_A/0/1/0/all/0/1&quot;&gt;Anna Lubiw&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Naredla_A/0/1/0/all/0/1&quot;&gt;Anurag Murty Naredla&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The geodesic edge center of a polygon is a point c inside the polygon that
+minimizes the maximum geodesic distance from c to any edge of the polygon,
+where geodesic distance is the shortest path distance inside the polygon. We
+give a linear-time algorithm to find a geodesic edge center of a simple
+polygon. This improves on the previous O(n log n) time algorithm by Lubiw and
+Naredla [European Symposium on Algorithms, 2021]. The algorithm builds on an
+algorithm to find the geodesic vertex center of a simple polygon due to
+Pollack, Sharir, and Rote [Discrete &amp;amp; Computational Geometry, 1989] and an
+improvement to linear time by Ahn, Barba, Bose, De Carufel, Korman, and Oh
+[Discrete &amp;amp; Computational Geometry, 2016]. The geodesic edge center can easily
+be found from the geodesic farthest-edge Voronoi diagram of the polygon.
+Finding that Voronoi diagram in linear time is an open question, although the
+geodesic nearest edge Voronoi diagram (the medial axis) can be found in linear
+time. As a first step of our geodesic edge center algorithm, we give a
+linear-time algorithm to find the geodesic farthest-edge Voronoi diagram
+restricted to the polygon boundary.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-20 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Conflict Optimization for Binary CSP Applied to Minimum Partition into Plane Subgraphs and Graph Coloring</title>
+  <guid>http://arxiv.org/abs/2303.09632</guid>
+  <link>http://arxiv.org/abs/2303.09632</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Crombez_L/0/1/0/all/0/1&quot;&gt;Lo&amp;#xef;c Crombez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fonseca_G/0/1/0/all/0/1&quot;&gt;Guilherme D. da Fonseca&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fontan_F/0/1/0/all/0/1&quot;&gt;Florian Fontan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gerard_Y/0/1/0/all/0/1&quot;&gt;Yan Gerard&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gonzalez_Lorenzo_A/0/1/0/all/0/1&quot;&gt;Aldo Gonzalez-Lorenzo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lafourcade_P/0/1/0/all/0/1&quot;&gt;Pascal Lafourcade&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Libralesso_L/0/1/0/all/0/1&quot;&gt;Luc Libralesso&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Momege_B/0/1/0/all/0/1&quot;&gt;Benjamin Mom&amp;#xe8;ge&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Spalding_Jamieso_J/0/1/0/all/0/1&quot;&gt;Jack Spalding-Jamieso&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_B/0/1/0/all/0/1&quot;&gt;Brandon Zhang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zheng_D/0/1/0/all/0/1&quot;&gt;Da Wei Zheng&lt;/a&gt;&lt;/p&gt;&lt;p&gt;CG:SHOP is an annual geometric optimization challenge and the 2022 edition
+proposed the problem of coloring a certain geometric graph defined by line
+segments. Surprisingly, the top three teams used the same technique, called
+conflict optimization. This technique has been introduced in the 2021 edition
+of the challenge, to solve a coordinated motion planning problem. In this
+paper, we present the technique in the more general framework of binary
+constraint satisfaction problems (binary CSP). Then, the top three teams
+describe their different implementations of the same underlying strategy. We
+evaluate the performance of those implementations to vertex color not only
+geometric graphs, but also other types of graphs.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-20 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Connectivity with uncertainty regions given as line segments</title>
+  <guid>http://arxiv.org/abs/2303.10028</guid>
+  <link>http://arxiv.org/abs/2303.10028</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cabello_S/0/1/0/all/0/1&quot;&gt;Sergio Cabello&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gajser_D/0/1/0/all/0/1&quot;&gt;David Gajser&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For a set $Q$ of points in the plane and a real number $\delta \ge 0$, let
+$\mathbb{G}_\delta(Q)$ be the graph defined on $Q$ by connecting each pair of
+points at distance at most $\delta$.
+&lt;/p&gt;
+&lt;p&gt;We consider the connectivity of $\mathbb{G}_\delta(Q)$ in the best scenario
+when the location of a few of the points is uncertain, but we know for each
+uncertain point a line segment that contains it. More precisely, we consider
+the following optimization problem: given a set $P$ of $n-k$ points in the
+plane and a set $S$ of $k$ line segments in the plane, find the minimum
+$\delta\ge 0$ with the property that we can select one point $p_s\in s$ for
+each segment $s\in S$ and the corresponding graph $\mathbb{G}_\delta ( P\cup \{
+p_s\mid s\in S\})$ is connected. It is known that the problem is NP-hard. We
+provide an algorithm to compute exactly an optimal solution in $O(f(k) n \log
+n)$ time, for a computable function $f(\cdot)$. This implies that the problem
+is FPT when parameterized by $k$. The best previous algorithm is using
+$O((k!)^k k^{k+1}\cdot n^{2k})$ time and computes the solution up to fixed
+precision.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-20 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>High-Dimensional Approximate Nearest Neighbor Search: with Reliable and Efficient Distance Comparison Operations</title>
+  <guid>http://arxiv.org/abs/2303.09855</guid>
+  <link>http://arxiv.org/abs/2303.09855</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gao_J/0/1/0/all/0/1&quot;&gt;Jianyang Gao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Long_C/0/1/0/all/0/1&quot;&gt;Cheng Long&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Approximate K nearest neighbor (AKNN) search is a fundamental and challenging
+problem. We observe that in high-dimensional space, the time consumption of
+nearly all AKNN algorithms is dominated by that of the distance comparison
+operations (DCOs). For each operation, it scans full dimensions of an object
+and thus, runs in linear time wrt the dimensionality. To speed it up, we
+propose a randomized algorithm named ADSampling which runs in logarithmic time
+wrt to the dimensionality for the majority of DCOs and succeeds with high
+probability. In addition, based on ADSampling we develop one general and two
+algorithm-specific techniques as plugins to enhance existing AKNN algorithms.
+Both theoretical and empirical studies confirm that: (1) our techniques
+introduce nearly no accuracy loss and (2) they consistently improve the
+efficiency.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-20 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Neighborhood Averaging for Improving Outlier Detectors</title>
+  <guid>http://arxiv.org/abs/2303.09972</guid>
+  <link>http://arxiv.org/abs/2303.09972</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yang_J/0/1/0/all/0/1&quot;&gt;Jiawei Yang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rahardja_S/0/1/0/all/0/1&quot;&gt;Susanto Rahardja&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Franti_P/0/1/0/all/0/1&quot;&gt;Pasi Franti&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We hypothesize that similar objects should have similar outlier scores. To
+our knowledge, all existing outlier detectors calculate the outlier score for
+each object independently regardless of the outlier scores of the other
+objects. Therefore, they do not guarantee that similar objects have similar
+outlier scores. To verify our proposed hypothesis, we propose an outlier score
+post-processing technique for outlier detectors, called neighborhood
+averaging(NA), which pays attention to objects and their neighbors and
+guarantees them to have more similar outlier scores than their original scores.
+Given an object and its outlier score from any outlier detector, NA modifies
+its outlier score by combining it with its k nearest neighbors&#39; scores. We
+demonstrate the effectivity of NA by using the well-known k-nearest neighbors
+(k-NN). Experimental results show that NA improves all 10 tested baseline
+detectors by 13% (from 0.70 to 0.79 AUC) on average evaluated on nine
+real-world datasets. Moreover, even outlier detectors that are already based on
+k-NN are also improved. The experiments also show that in some applications,
+the choice of detector is no more significant when detectors are jointly used
+with NA, which may pose a challenge to the generally considered idea that the
+data model is the most important factor. We open our code on www.outlierNet.com
+for reproducibility.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-20 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>A Comparison of Dijkstra&#39;s Algorithm Using Fibonacci Heaps, Binary Heaps, and Self-Balancing Binary Trees</title>
+  <guid>http://arxiv.org/abs/2303.10034</guid>
+  <link>http://arxiv.org/abs/2303.10034</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lewis_R/0/1/0/all/0/1&quot;&gt;Rhyd Lewis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper describes the shortest path problem in weighted graphs and
+examines the differences in efficiency that occur when using Dijkstra&#39;s
+algorithm with a Fibonacci heap, binary heap, and self-balancing binary tree.
+Using C++ implementations of these algorithm variants, we find that the fastest
+method is not always the one that has the lowest asymptotic complexity. Reasons
+for this are discussed and backed with empirical evidence.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-20 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Céad Míle GPT</title>
   <guid>https://rjlipton.wpcomstaging.com/?p=21265</guid>
   <link>https://rjlipton.wpcomstaging.com/2023/03/17/cead-mile-gpt/</link>
@@ -1777,279 +1967,6 @@ $1\leq i\leq r$.
   </description>
   <pubDate>2023-03-15 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Parameterised Approximation of the Fixation Probability of the Dominant Mutation in the Multi-Type Moran Process</title>
-  <guid>http://arxiv.org/abs/2303.08118</guid>
-  <link>http://arxiv.org/abs/2303.08118</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Goldberg_L/0/1/0/all/0/1&quot;&gt;Leslie Ann Goldberg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Roth_M/0/1/0/all/0/1&quot;&gt;Marc Roth&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schwarz_T/0/1/0/all/0/1&quot;&gt;Tassilo Constantin Schwarz&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The multi-type Moran process is an evolutionary process on a connected graph
-$G$ in which each vertex has one of $k$ types and, in each step, a vertex $v$
-is chosen to reproduce its type to one of its neighbours. The probability of a
-vertex $v$ being chosen for reproduction is proportional to the fitness of the
-type of $v$. So far, the literature was almost solely concerned with the
-$2$-type Moran process in which each vertex is either healthy (type $0$) or a
-mutant (type $1$), and the main problem of interest has been the (approximate)
-computation of the so-called fixation probability, i.e., the probability that
-eventually all vertices are mutants.
-&lt;/p&gt;
-&lt;p&gt;In this work we initiate the study of approximating fixation probabilities in
-the multi-type Moran process on general graphs. Our main result is an FPTRAS
-(fixed-parameter tractable randomised approximation scheme) for computing the
-fixation probability of the dominant mutation; the parameter is the number of
-types and their fitnesses. In the course of our studies we also provide novel
-upper bounds on the expected absorption time, i.e., the time that it takes the
-multi-type Moran process to reach a state in which each vertex has the same
-type.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-15 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Is Pi Informative?</title>
-  <guid>https://rjlipton.wpcomstaging.com/?p=21239</guid>
-  <link>https://rjlipton.wpcomstaging.com/2023/03/14/is-pi-informative/</link>
-  <description>
-    &lt;p&gt;
-&lt;font color=&quot;#0044cc&quot;&gt;&lt;br /&gt;
-&lt;em&gt;Some musings on the meanings of information content&lt;/em&gt;&lt;br /&gt;
-&lt;font color=&quot;#000000&quot;&gt;&lt;/p&gt;
-&lt;table class=&quot;image alignright&quot;&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;
-&lt;a href=&quot;https://rjlipton.wpcomstaging.com/2023/03/14/is-pi-informative/frank-longbio/&quot; rel=&quot;attachment wp-att-21241&quot;&gt;&lt;img data-attachment-id=&quot;21241&quot; data-permalink=&quot;https://rjlipton.wpcomstaging.com/2023/03/14/is-pi-informative/frank-longbio/&quot; data-orig-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/03/frank-longbio.jpg?fit=200%2C222&amp;amp;ssl=1&quot; data-orig-size=&quot;200,222&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;frank-longbio&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/03/frank-longbio.jpg?fit=200%2C222&amp;amp;ssl=1&quot; data-large-file=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/03/frank-longbio.jpg?fit=200%2C222&amp;amp;ssl=1&quot; decoding=&quot;async&quot; loading=&quot;lazy&quot; src=&quot;https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/03/frank-longbio.jpg?resize=134%2C148&amp;#038;ssl=1&quot; alt=&quot;&quot; width=&quot;134&quot; height=&quot;148&quot; class=&quot;alignright wp-image-21241&quot; data-recalc-dims=&quot;1&quot; /&gt;&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&quot;caption alignright&quot;&gt;&lt;font size=&quot;-2&quot;&gt;SF Exploratorium &lt;a href=&quot;https://www.exploratorium.edu/files/frank/bio/bio-long.html&quot;&gt;tribute&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;
-Frank Oppenheimer was a physicist who made pioneering studies of cosmic rays via high-altitude balloons in the late 1940s. He was later the founding directorof the San Francicso Exploratorium. There he hired the physicist &lt;a href=&quot;https://en.wikipedia.org/wiki/Larry_Shaw_(physicist)&quot;&gt;Larry Shaw&lt;/a&gt;, who became the creator of Pi Day.&lt;/p&gt;
-&lt;p&gt;
-Today we discuss what information&amp;#8212;if any&amp;#8212;is conveyed by the digits of pi.&lt;br /&gt;
-&lt;span id=&quot;more-21239&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;
-Oppenheimer&amp;#8217;s older brother Julius is better known as J. Robert Oppenheimer. He is the title subject of a major Hollywood &lt;a href=&quot;https://en.wikipedia.org/wiki/Oppenheimer_(film)&quot;&gt;biopic&lt;/a&gt; directed by Christopher Nolan, to be released in July. The film will cover not only his work on the atomic bomb but also the revocation of his security clearance over ties to the Communist Party, of which Frank had been a card-carrying member. Frank lost his faculty position at the University of Minnesota and was blackballed from teaching physics anywhere until gaining a high school position in 1957 and joining the University of Colorado in 1959.&lt;/p&gt;
-&lt;p&gt;
-We are thinking of another movie, &lt;em&gt;Everything, Everywhere, All at Once&lt;/em&gt;, which just won the Best Picture Oscar. It involves the &lt;a href=&quot;https://en.wikipedia.org/wiki/Multiverse&quot;&gt;multiverse&lt;/a&gt; as a &lt;a href=&quot;https://en.wikipedia.org/wiki/MacGuffin&quot;&gt;macguffin&lt;/a&gt;. Could pi have a different value in another universe? As card-carrying Platonists, our instinct is to just say &lt;em&gt;no&lt;/em&gt;. But a related question lends some subtlety.&lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Does Pi Equal 0/(2i)? &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-I considered titling this post, &amp;#8220;Does Pi Equal Zero?&amp;#8221; I realized that, if anything, it is &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B2%5Cpi+i%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{2&amp;#92;pi i}&quot; class=&quot;latex&quot; /&gt; that equals zero&amp;#8212;if you are raising &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Be%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{e}&quot; class=&quot;latex&quot; /&gt; to that number. Then &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi+%3D+%5Cfrac%7B0%7D%7B2i%7D%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi = &amp;#92;frac{0}{2i}}&quot; class=&quot;latex&quot; /&gt;.&lt;/p&gt;
-&lt;p&gt;
-What I really mean is to ask:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; Does &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=e8e8e8&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; have zero information content? &lt;/em&gt;
-&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;p&gt;
-Here is a sense in which the answer is basically yes: Pi comes from a short program. Perhaps the simplest one is &lt;/p&gt;
-&lt;p align=center&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%5Cdisplaystyle++%5Cpi+%3D+4%5Cleft%281+-+%5Cfrac%7B1%7D%7B3%7D+%2B+%5Cfrac%7B1%7D%7B5%7D+-+%5Cfrac%7B1%7D%7B7%7D+%2B+%5Cfrac%7B1%7D%7B9%7D+-+%5Cfrac%7B1%7D%7B11%7D+%2B+%5Ccdots%5Cright%29+&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;&amp;#92;displaystyle  &amp;#92;pi = 4&amp;#92;left(1 - &amp;#92;frac{1}{3} + &amp;#92;frac{1}{5} - &amp;#92;frac{1}{7} + &amp;#92;frac{1}{9} - &amp;#92;frac{1}{11} + &amp;#92;cdots&amp;#92;right) &quot; class=&quot;latex&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;via the &lt;a href=&quot;https://en.wikipedia.org/wiki/Madhava_series&quot;&gt;Madhava series&lt;/a&gt;. There are less-simple programs that converge more quickly&amp;#8212;plus we long ago covered &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2009/03/15/cooks-class-contains-pi/&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2010/07/14/making-an-algorithm-an-algorithm-bbp/&quot;&gt;this&lt;/a&gt;&amp;#8212;but speed of approximation does not matter for the information content of the specification.&lt;/p&gt;
-&lt;p&gt;
-We can also say that the specification is just &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cbigcirc%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;bigcirc}&quot; class=&quot;latex&quot; /&gt;. Or more clearly, a circle with a diameter: &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cominus%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;ominus}&quot; class=&quot;latex&quot; /&gt;. That is literally minuscule. By Claude Shannon&amp;#8217;s information theory, this little speck of spec is the information content of pi.&lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Making Contact With Our Question &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-Our question is joined by Carl Sagan&amp;#8217;s novel &lt;a href=&quot;https://en.wikipedia.org/wiki/Contact_(novel)&quot;&gt;Contact&lt;/a&gt;, especially the last two pages. Having been tipped by the aliens to look for evidence of super-intelligence in fundamental constants, Ellie Arroway sets a super-computer onto &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; and receives a statistically significant pattern in its expansion. It gives a raster image using only the digits &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B0%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{0}&quot; class=&quot;latex&quot; /&gt; and &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B1%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{1}&quot; class=&quot;latex&quot; /&gt; of a nearly perfect circle. Arroway regards this also as a personal message symbolizing her full-circle journey. &lt;/p&gt;
-&lt;p&gt;
-To quote the last page:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; In whatever galaxy you happen to find yourself, you take the circumference of a circle, divide it by a diameter, measure closely enough, and uncover a miracle&amp;#8212;another circle, drawn kilometers downstream of the decimal point. There would be richer messages further in. &lt;/em&gt;
-&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;p&gt;
-This causes a &amp;#8220;wait-a-sec&amp;#8230;&amp;#8221; reaction. If &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; has minuscule information content, then how can any meaningful block of information be contained in it? By &lt;em&gt;meaningful&lt;/em&gt; we mean that the block has more information than the effort needed to specify the block.&lt;/p&gt;
-&lt;p&gt;
-Hereby hangs a tale. It is almost universally believed that every finite sequence of digits appears somewhere in the base-10 expansion of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt;. It is believed further that &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; is &lt;a href=&quot;https://en.wikipedia.org/wiki/Normal_number&quot;&gt;normal&lt;/a&gt;, meaning that for every &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bk%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{k}&quot; class=&quot;latex&quot; /&gt; and &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bn%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{n}&quot; class=&quot;latex&quot; /&gt;, every word in &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Bk%5D%5En%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{[k]^n}&quot; class=&quot;latex&quot; /&gt; appears with frequency converging to &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bk%5E%7B-n%7D%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{k^{-n}}&quot; class=&quot;latex&quot; /&gt; in the base-&lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bk%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{k}&quot; class=&quot;latex&quot; /&gt; expansion of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt;. Thus, &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; almost certainly contains &lt;a href=&quot;https://en.wikipedia.org/wiki/Waiting_for_Godot&quot;&gt;Waiting for Godot&lt;/a&gt; in the original French in base 16, taking every two hex digits as an ASCII character. &lt;/p&gt;
-&lt;p&gt;
-But you have to wait a long time to find it&amp;#8212;and specifying an offset &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Br%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{r}&quot; class=&quot;latex&quot; /&gt; where it begins expends as much information as is gained by reading it. There is no net gain of information from the tumbling hexadecimals. This reality is consistent with the zero-information picture, in the same sense that the vacuum of space teems with dancing particles and antiparticles that ultimately cancel.&lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Baking a Base Into Pi &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-&lt;em&gt;Contact&lt;/em&gt;, however, includes a twist different from having strings in base 10 or base 16. The raster message appears when &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; is written in base &lt;i&gt;eleven&lt;/i&gt;.  We could quibble that Sagan should have written, &amp;#8220;&amp;#8230;kilometers downstream of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Undecimal&quot;&gt;undecimal&lt;/a&gt; point.&amp;#8221; &lt;/p&gt;
-&lt;p&gt;
-Base eleven must count as an &amp;#8220;unusual&amp;#8221; base. Maybe a choice like base 57&amp;#8212;the first Grothendieck &lt;a href=&quot;https://hsm.stackexchange.com/questions/6358/story-of-grothendiecks-prime-number&quot;&gt;prime&lt;/a&gt;&amp;#8212;would be more unusual. Choosing a base is a sneaky way to inflate the resulting expansion of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; with more information&amp;#8212;the information from specifying the base.&lt;/p&gt;
-&lt;p&gt;
-Taking this idea further, we could consider bases that are fractional, or algebraic irrational, or even transcendental. We can do expansions in base &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; itself. In that base, &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; has a simple representation: &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi+%3D+10_%7B%5Cpi%7D%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi = 10_{&amp;#92;pi}}&quot; class=&quot;latex&quot; /&gt;.&lt;/p&gt;
-&lt;p&gt;
-We may, however, have to regard cherry-picking the base &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Bk%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{k}&quot; class=&quot;latex&quot; /&gt; as a similar statistical fools&amp;#8217; errand to picking the offset &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Br%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{r}&quot; class=&quot;latex&quot; /&gt; (in whatever base). Base eleven is simple enough to allow that the &lt;em&gt;elective bias&lt;/em&gt; of choosing it is minimal, so that the raster-circle message would retain its significance. But that is in a novel, anway. In reality, the ability to select the base raises the bar of how much information is needed to glean in order to infer structure rather than chance. &lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; E Replies &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-The transcendental partner of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; in the unifying equation &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Be%5E%7B%5Cpi+i%7D+%2B+1+%3D+0%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{e^{&amp;#92;pi i} + 1 = 0}&quot; class=&quot;latex&quot; /&gt; replies to this statistical nullification with thunder:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; e = 2.7&lt;b&gt;18281828&lt;/b&gt;&amp;#8230;, you fools. &lt;/em&gt;
-&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;p&gt;
-This is in our native base-ten representation. Perhaps this is the true message from the cosmos, ordaining that we have ten fingers and ten toes, so that no artifice of choosing the base is needed to reveal it.&lt;/p&gt;
-&lt;p&gt;
-There is a real-life claim of a significant find in the base-ten expansion of pi. It is by Arne Bergstrom in a 2014 &lt;a href=&quot;https://www.semanticscholar.org/paper/Carl-Sagan&#39;s-Conjecture-of-a-Message-in-Pi-Bergstrom/05e8ec7f5875a65ef854a235ffaac8a4b73329b0&quot;&gt;paper&lt;/a&gt; titled, &amp;#8220;Carl Sagan&amp;#8217;s Conjecture of a Message in &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt;.&amp;#8221; It is in the number &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Ctau+%3D+2%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;tau = 2&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt;, whose primacy over &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; we &lt;a href=&quot;https://rjlipton.wpcomstaging.com/2021/03/14/the-value-of-pi/&quot;&gt;argued&lt;/a&gt; two years ago today. From its abstract:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;b&gt; &lt;/b&gt; &lt;em&gt; The present article looks for markers that might possibly support such a hypothesis, and surprisingly finds a sequence of seven successive zeros (actually seven successive nines rounded off) at a depth of 3,256 digits into the representation of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B2%5Cpi%7D&amp;#038;bg=e8e8e8&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{2&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; in the special case of base ten. Finding such a sequence of zeros within the first 1,000 digits has a probability of 1 in 10,000. No such occurrences happen even remotely for &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B2%5Cpi%7D&amp;#038;bg=e8e8e8&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{2&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt; at any base other than ten, nor even remotely in corresponding representations of other common transcendental numbers, such as &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7Be%7D&amp;#038;bg=e8e8e8&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{e}&quot; class=&quot;latex&quot; /&gt;, which appear in physical applications. &lt;/em&gt;
-&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;p&gt;
-The abstract goes on to concede, however, that &amp;#8220;these effects are most probably just numerical coincidences without physical relevance.&amp;#8221; &lt;/p&gt;
-&lt;p&gt;
-The reference to physics brings us full-circle. Non-Euclidean spaces can have notions of &amp;#8220;circle&amp;#8221; defined by equidistance and of &amp;#8220;diameter&amp;#8221; whose ratio is not &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt;. If we ever find that we live in a space that in large scales is curved, however slightly, might this dislodge our conviction that Euclidean space is salient? If so, then we might regard the value &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B3.14159265358...%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{3.14159265358...}&quot; class=&quot;latex&quot; /&gt; as having elective bias after all. This change in attitude would be accompanied, so I conjecture, by the pre-actuated infusion of a huge amount of genuine information in the digits of&amp;#8212;the Euclidean value of&amp;#8212;&lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt;.&lt;/p&gt;
-&lt;p&gt;
-&lt;p&gt;&lt;H2&gt; Open Problems &lt;/H2&gt;&lt;/p&gt;
-&lt;p&gt;&lt;p&gt;
-Where does this leave us in regard to the information content of &lt;img decoding=&quot;async&quot; src=&quot;https://s0.wp.com/latex.php?latex=%7B%5Cpi%7D&amp;#038;bg=ffffff&amp;#038;fg=000000&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;{&amp;#92;pi}&quot; class=&quot;latex&quot; /&gt;? How does it differ in this regard from the measure-one set of real numbers in the unit interval that are both algorithmically and statistically random?&lt;/p&gt;
-&lt;p&gt;&lt;P&gt;&lt;br /&gt;
-[fixed pi in base pi = 10, not 1]&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By KWRegan&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-14 06:39:38 UTC</pubDate>
-  <author>Richard Lipton</author>
-</item>
-
-<item>
-  <title>A Quantum Outlier Theorem</title>
-  <guid>http://arxiv.org/abs/2303.06256</guid>
-  <link>http://arxiv.org/abs/2303.06256</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Epstein_S/0/1/0/all/0/1&quot;&gt;Samuel Epstein&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In recent results, it has been proven that all sampling methods produce
-outliers. In this paper, we extend these results to quantum information theory.
-Projectors of large rank must contain pure quantum states in their images that
-are outlying states. Otherwise, the projectors are exotic, in that they have
-high mutual information with the halting sequence. Thus quantum coding schemes
-that use projections, such as Schumacher compression, must communicate using
-outlier quantum states.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-14 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Finding large counterexamples by selectively exploring the Pachner graph</title>
-  <guid>http://arxiv.org/abs/2303.06321</guid>
-  <link>http://arxiv.org/abs/2303.06321</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Burton_B/0/1/0/all/0/1&quot;&gt;Benjamin A. Burton&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+He_A/0/1/0/all/0/1&quot;&gt;Alexander He&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We often rely on censuses of triangulations to guide our intuition in
-$3$-manifold topology. However, this can lead to misplaced faith in conjectures
-if the smallest counterexamples are too large to appear in our census. Since
-the number of triangulations increases super-exponentially with size, there is
-no way to expand a census beyond relatively small triangulations; the current
-census only goes up to $10$ tetrahedra. Here, we show that it is feasible to
-search for large and hard-to-find counterexamples by using heuristics to
-selectively (rather than exhaustively) enumerate triangulations. We use this
-idea to find counterexamples to three conjectures which ask, for certain
-$3$-manifolds, whether one-vertex triangulations always have a &quot;distinctive&quot;
-edge that would allow us to recognise the $3$-manifold.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-14 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Betti Number for Point Sets</title>
-  <guid>http://arxiv.org/abs/2303.06354</guid>
-  <link>http://arxiv.org/abs/2303.06354</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_H/0/1/0/all/0/1&quot;&gt;Hao Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Topology is the foundation for many industrial applications ranging from CAD
-to simulation analysis. Computational topology mostly focuses on structured
-data such as mesh, however unstructured dataset such as point set remains a
-virgin land for topology scientists. The significance of point-based topology
-can never be overemphasized, especially in the area of reverse engineering,
-geometric modeling and algorithmic analysis. In this paper, we propose a novel
-approach to compute the Betti number for point set data and illustrate its
-usefulness in real world examples. To the best of our knowledge, our work is
-pioneering and first of its kind in the fields of computational topology.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-14 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Generalizing Greenwald-Khanna Streaming Quantile Summaries for Weighted Inputs</title>
-  <guid>http://arxiv.org/abs/2303.06288</guid>
-  <link>http://arxiv.org/abs/2303.06288</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Assadi_S/0/1/0/all/0/1&quot;&gt;Sepehr Assadi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Joshi_N/0/1/0/all/0/1&quot;&gt;Nirmit Joshi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Prabhu_M/0/1/0/all/0/1&quot;&gt;Milind Prabhu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shah_V/0/1/0/all/0/1&quot;&gt;Vihan Shah&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Estimating quantiles, like the median or percentiles, is a fundamental task
-in data mining and data science. A (streaming) quantile summary is a data
-structure that can process a set S of n elements in a streaming fashion and at
-the end, for any phi in (0,1], return a phi-quantile of S up to an eps error,
-i.e., return a phi&#39;-quantile with phi&#39;=phi +- eps. We are particularly
-interested in comparison-based summaries that only compare elements of the
-universe under a total ordering and are otherwise completely oblivious of the
-universe. The best known deterministic quantile summary is the 20-year old
-Greenwald-Khanna (GK) summary that uses O((1/eps) log(eps n)) space
-[SIGMOD&#39;01]. This bound was recently proved to be optimal for all deterministic
-comparison-based summaries by Cormode and Vesle\&#39;y [PODS&#39;20].
-&lt;/p&gt;
-&lt;p&gt;In this paper, we study weighted quantiles, a generalization of the quantiles
-problem, where each element arrives with a positive integer weight which
-denotes the number of copies of that element being inserted. The only known
-method of handling weighted inputs via GK summaries is the naive approach of
-breaking each weighted element into multiple unweighted items and feeding them
-one by one to the summary, which results in a prohibitively large update time
-(proportional to the maximum weight of input elements).
-&lt;/p&gt;
-&lt;p&gt;We give the first non-trivial extension of GK summaries for weighted inputs
-and show that it takes O((1/eps) log(eps n)) space and O(log(1/eps)+ log
-log(eps n)) update time per element to process a stream of length n (under some
-quite mild assumptions on the range of weights and eps). En route to this, we
-also simplify the original GK summaries for unweighted quantiles.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-14 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Binary Search with Distance-Dependent Costs</title>
-  <guid>http://arxiv.org/abs/2303.06488</guid>
-  <link>http://arxiv.org/abs/2303.06488</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Leng_C/0/1/0/all/0/1&quot;&gt;Calvin Leng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kempe_D/0/1/0/all/0/1&quot;&gt;David Kempe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce a search problem generalizing the typical setting of Binary
-Search on the line. Similar to the setting for Binary Search, a target is
-chosen adversarially on the line, and in response to a query, the algorithm
-learns whether the query was correct, too high, or too low. Different from the
-Binary Search setting, the cost of a query is a monotone non-decreasing
-function of the distance between the query and the correct answer; different
-functions can be used for queries that are too high vs. those that are too low.
-The algorithm&#39;s goal is to identify an adversarially chosen target with minimum
-total cost. Note that the algorithm does not even know the cost it incurred
-until the end, when the target is revealed. This abstraction captures many
-natural settings in which a principal experiments by setting a quantity (such
-as an item price, bandwidth, tax rate, medicine dosage, etc.) where the cost or
-regret increases the further the chosen setting is from the optimal one.
-&lt;/p&gt;
-&lt;p&gt;First, we show that for arbitrary symmetric cost functions (i.e.,
-overshooting vs. undershooting by the same amount leads to the same cost), the
-standard Binary Search algorithm is a 4-approximation.
-&lt;/p&gt;
-&lt;p&gt;We then show that when the cost functions are bounded-degree polynomials of
-the distance, the problem can be solved optimally using Dynamic Programming;
-this relies on a careful encoding of the combined cost of past queries (which,
-recall, will only be revealed in the future). We then generalize the setting to
-finding a node on a tree; here, the response to a query is the direction on the
-tree in which the target is located, and the cost is increasing in the distance
-on the tree from the query to the target. Using the k-cut search tree framework
-of Berendsohn and Kozma and the ideas we developed for the case of the line, we
-give a PTAS when the cost function is a bounded-degree polynomial.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-14 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>PhD and Post-doctoral Positions  at Augusta University (apply by June 1, 2023)</title>
-  <guid>http://cstheory-jobs.org/2023/03/13/phd-and-post-doctoral-positions-at-augusta-university-apply-by-june-1-2023/</guid>
-  <link>https://cstheory-jobs.org/2023/03/13/phd-and-post-doctoral-positions-at-augusta-university-apply-by-june-1-2023/</link>
-  <description>
-    &lt;p&gt;The Concurrency In Reversible Computations (&lt;a href=&quot;https://github.com/CinRC&quot;&gt;https://github.com/CinRC&lt;/a&gt;) project is actively seeking a PhD student to fund starting Spring 2024. The funding for an admitted PhD student includes tuition waiver, stipend, health benefits, (international) conference travel and possibly equipment. Funding is currently available for the first three years of the appointment through a new NSF funded project.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://spots.augusta.edu/caubert/research/cinrc/phd_ad.html&quot;&gt;https://spots.augusta.edu/caubert/research/cinrc/phd_ad.html&lt;/a&gt;&lt;br /&gt;
-Email: clement.aubert@math.cnrs.fr&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-13 18:13:12 UTC</pubDate>
-  <author>CCI: jobs</author>
 </item>
 
 </channel>
