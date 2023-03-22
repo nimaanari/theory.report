@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-03-22T14:30:43Z">Wednesday, March 22 2023, 14:30</time>
+          <time class='timeago' datetime="2023-03-22T15:32:25Z">Wednesday, March 22 2023, 15:32</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,92 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Wednesday, March 22
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://scottaaronson.blog/?p=7143'>Of course Grover&#8217;s algorithm offers a quantum advantage!</a></h3>
+        <p class='tr-article-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          I was really, really hoping that I&#8217;d be able to avoid blogging about this new arXiv preprint, by E. M. Stoudenmire and Xavier Waintal: Grover&#8217;s Algorithm Offers No Quantum Advantage Grover&#8217;s algorithm is one of the primary algorithms offered as evidence that quantum computers can provide an advantage over classical computers. It involves an &#8220;oracle&#8221; [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>I was really, <em>really</em> hoping that I&#8217;d be able to avoid blogging about <a href="https://arxiv.org/abs/2303.11317">this new arXiv preprint</a>, by E. M. Stoudenmire and Xavier Waintal:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p><strong>Grover&#8217;s Algorithm Offers No Quantum Advantage</strong></p>
+
+
+
+<p>Grover&#8217;s algorithm is one of the primary algorithms offered as evidence that quantum computers can provide an advantage over classical computers. It involves an &#8220;oracle&#8221; (external quantum subroutine) which must be specified for a given application and whose internal structure is not part of the formal scaling of the quantum speedup guaranteed by the algorithm. Grover&#8217;s algorithm also requires exponentially many steps to succeed, raising the question of its implementation on near-term, non-error-corrected hardware and indeed even on error-corrected quantum computers. In this work, we construct a quantum inspired algorithm, executable on a classical computer, that performs Grover&#8217;s task in a linear number of call to the oracle &#8211; an exponentially smaller number than Grover&#8217;s algorithm &#8211; and demonstrate this algorithm explicitly for boolean satisfiability problems (3-SAT). Our finding implies that there is no a priori theoretical quantum speedup associated with Grover&#8217;s algorithm. We critically examine the possibility of a practical speedup, a possibility that depends on the nature of the quantum circuit associated with the oracle. We argue that the unfavorable scaling of the success probability of Grover&#8217;s algorithm, which in the presence of noise decays as the exponential of the exponential of the number of qubits, makes a practical speedup unrealistic even under extremely optimistic assumptions on both hardware quality and availability.</p>
+</blockquote>
+
+
+
+<p>Alas, inquiries from journalists soon made it clear that silence on my part wasn&#8217;t an option.</p>
+
+
+
+<p>So, desperately seeking an escape, this morning I asked GPT-4 to read the preprint and comment on it just like I would.  Alas, it turns out the technology isn&#8217;t quite ready to replace me at this blogging task.  I suppose I should feel good: in every such instance, <em>either</em> I&#8217;m vindicated in all my recent screaming here about generative AI&#8212;what the naysayers call &#8220;glorified autocomplete&#8221;&#8212;being on the brink of remaking civilization, <em>or else</em> I still, for another few months at least, have a role to play on the Internet.</p>
+
+
+
+<p>So, on to the preprint, as reviewed by the human Scott Aaronson.  Yeah, it&#8217;s basically a tissue of confusions, a mishmash of the well-known and the mistaken.  As they say, both novel and correct, but not in the same places.</p>
+
+
+
+<p>The paper&#8217;s most eye-popping claim is that the <a href="https://en.wikipedia.org/wiki/Grover%27s_algorithm">Grover search problem</a>&#8212;namely, finding an n-bit string x such that f(x)=1, given oracle access to a Boolean function f:{0,1}<sup>n</sup>→{0,1}&#8212;is solvable <em>classically</em>, using a number of calls that&#8217;s only linear in n, or in many cases only constant (!!).  Since this claim contradicts a well-known, easily <em>provable</em> lower bound&#8212;namely, that Ω(2<sup>n</sup>) oracle calls are needed for classical brute-force searching&#8212;the authors <em>must</em> be using words in nonstandard ways, leaving only the question of how.</p>
+
+
+
+<p>It turns out that, for their &#8220;quantum-inspired classical algorithm,&#8221; the authors assume you&#8217;re given, not merely an oracle for f, but the <em>actual circuit</em> to compute f.  They then use that circuit in a non-oracular way to extract the marked item.  In which case, I&#8217;d prefer to say that they&#8217;ve actually solved the Grover problem with <strong>zero</strong> queries&#8212;simply because they&#8217;ve entirely left the black-box setting where Grover&#8217;s algorithm is normally formulated!</p>
+
+
+
+<p>What could possibly justify such a move?  Well, the authors argue that <em>sometimes</em> one can use the actual circuit to do better classically than Grover&#8217;s algorithm would do quantumly, and therefore, they&#8217;ve shown that the Grover speedup is not &#8220;generic,&#8221; as the quantum algorithms people always say it is.</p>
+
+
+
+<p>But this is pure wordplay around the meaning of &#8220;generic.&#8221;  When we say that Grover&#8217;s algorithm achieves a &#8220;generic&#8221; square-root speedup, what we mean is that it solves the generic black-box search problem in O(2<sup>n/2</sup>) queries, whereas any classical algorithm for that generic problem requires Ω(2<sup>n</sup>) queries.  We don&#8217;t mean that for <em>every</em> f, Grover achieves a quadratic speedup for searching <em>that</em> f, compared to the best classical algorithm that could be tailored to that f.  Of course we don&#8217;t; that would be trivially false!</p>
+
+
+
+<p>Remarkably, later in the paper, the authors seem to realize that they haven&#8217;t delivered the knockout blow against Grover&#8217;s algorithm that they&#8217;d hoped for, because they then turn around and argue that, well, even for those f&#8217;s where Grover <em>does</em> provide a quadratic speedup over the best (or best-known) classical algorithm, noise and decoherence could negate the advantage in practice, and solving that problem would require a fault-tolerant quantum computer, but fault-tolerance could require an enormous overhead, pushing a practical Grover speedup far into the future.</p>
+
+
+
+<p>The response here boils down to &#8220;no duh.&#8221;  Yes, if Grover&#8217;s algorithm can yield any practical advantage in the medium term, it will <em>either</em> be because we&#8217;ve discovered much cheaper ways to do quantum fault-tolerance, or <em>else</em> because we&#8217;ve discovered &#8220;<a href="https://en.wikipedia.org/wiki/Noisy_intermediate-scale_quantum_era#:~:text=The%20current%20state%20of%20quantum,enough%20to%20achieve%20quantum%20supremacy.">NISQy</a>&#8221; ways to exploit the Grover speedup, which avoid the need for full fault-tolerance&#8212;for example, via quantum annealing.  Because of its exponential speedup, the prospects are actually better for a medium-term advantage from Shor&#8217;s factoring algorithm.  Hopefully everyone in quantum computing theory has realized this for a long time.</p>
+
+
+
+<p>Anyway, as you can see, by this point we&#8217;ve already conceded the principle of Grover&#8217;s algorithm, and are just haggling over the practicalities!  Which brings us back to the authors&#8217; original claim to have a <em>principled</em> argument against the Grover speedup, which (as I said) rests on a confusion over words.</p>
+
+
+
+<p>Some people dread the day when GPT will replace them.  In my case, for this task, I can&#8217;t wait.</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-03-22T14:56:42Z">Wednesday, March 22 2023, 14:56</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -4241,51 +4327,6 @@ be used to make progress in the case when disk radii are in
 $[1,(1+\varepsilon)]$. For example, if the minimum lens width is at least
 $0.265$ and $ \varepsilon\le 0.0001$, which still allows for non-Helly triples
 in the arrangement, then one can find a maximum clique in polynomial time.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-03-15T00:30:00Z">Wednesday, March 15 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2303.07696'>Shadoks Approach to Convex Covering</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Guilherme D. da Fonseca</p><p>We describe the heuristics used by the Shadoks team in the CG:SHOP 2023
-Challenge. The Challenge consists of 206 instances, each being a polygon with
-holes. The goal is to cover each instance polygon with a small number of convex
-polygons. Our general strategy is the following. We find a big collection of
-large (often maximal) convex polygons inside the instance polygon and then
-solve several set cover problems to find a small subset of the collection that
-covers the whole polygon.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Fonseca_G/0/1/0/all/0/1">Guilherme D. da Fonseca</a></p><p>We describe the heuristics used by the Shadoks team in the CG:SHOP 2023
-Challenge. The Challenge consists of 206 instances, each being a polygon with
-holes. The goal is to cover each instance polygon with a small number of convex
-polygons. Our general strategy is the following. We find a big collection of
-large (often maximal) convex polygons inside the instance polygon and then
-solve several set cover problems to find a small subset of the collection that
-covers the whole polygon.
 </p>
         
         </div>
