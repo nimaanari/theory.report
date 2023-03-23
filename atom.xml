@@ -10,6 +10,33 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-031 |  The Round Complexity of Statistical MPC with Optimal Resiliency | 
+
+	Benny Applebaum, 
+
+	Eliran Kachlon, 
+
+	Arpita Patra</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/031"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/031</id>
+    <updated>2023-03-23T17:02:13+00:00</updated>
+    <content type="html" xml:lang="en">
+    In STOC 1989, Rabin and Ben-Or (RB) established an important milestone in the fields of cryptography and distributed computing by showing that every functionality can be computed with statistical (information-theoretic) security in the presence of an active (aka Byzantine) rushing adversary that controls up to half of the parties. We study the round complexity of general secure multiparty computation and several related tasks in the RB model. 
+
+Our main result shows that every functionality can be realized in only four rounds of interaction which is known to be optimal. This completely settles the round complexity of statistical actively-secure optimally-resilient MPC, resolving a long line of research.
+
+Along the way, we construct the first round-optimal statistically-secure verifiable secret sharing protocol (Chor, Goldwasser, Micali, and Awerbuch; STOC 1985), show that every single-input functionality (e.g., multi-verifier zero-knowledge) can be realized in 3 rounds, and prove that the latter bound is optimal. The complexity of all our protocols is exponential in the number of parties, and the question of deriving polynomially-efficient protocols is left for future research.
+
+Our main technical contribution is a construction of a new type of statistically-secure signature scheme whose existence was open even for smaller resiliency thresholds. We also describe a new statistical compiler that lifts up passively-secure protocols to actively-secure protocols in a round-efficient way via the aid of protocols for single-input functionalities. This compiler can be viewed as a statistical variant of the GMW compiler (Goldreich, Micali, Wigderson; STOC, 1987) that originally employed zero-knowledge proofs and public-key encryption.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Computational Complexity: A Strange Hiring Season</title>
     <link href="https://blog.computationalcomplexity.org/2023/03/a-strange-hiring-season.html"/>
     <id>tag:blogger.com,1999:blog-3722233.post-1843365612377959262</id>
@@ -2353,32 +2380,6 @@ computer-aided search using problem-specific insights as well as SAT solvers,
 and (2) showing how to transform combinatorial covering designs known in the
 literature to strong prefix covering designs. In contrast, we show that our
 lower bounds are close to best possible using this proof technique.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A 2-opt Algorithm for Locally Optimal Set Partition Optimization</title>
-    <link href="http://arxiv.org/abs/2303.08219"/>
-    <id>http://arxiv.org/abs/2303.08219</id>
-    <updated>2023-03-16T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gokcesu_K/0/1/0/all/0/1&quot;&gt;Kaan Gokcesu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gokcesu_H/0/1/0/all/0/1&quot;&gt;Hakan Gokcesu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Our research deals with the optimization version of the set partition
-problem, where the objective is to minimize the absolute difference between the
-sums of the two disjoint partitions. Although this problem is known to be
-NP-hard and requires exponential time to solve, we propose a less demanding
-version of this problem where the goal is to find a locally optimal solution.
-In our approach, we consider the local optimality in respect to any movement of
-at most two elements. To accomplish this, we developed an algorithm that can
-generate a locally optimal solution in at most $O(N^2)$ time and $O(N)$ space.
-Our algorithm can handle arbitrary input precisions and does not require
-positive or integer inputs. Hence, it can be applied in various problem
-scenarios with ease.
 &lt;/p&gt;
   </content>
     <author>
