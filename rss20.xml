@@ -9,6 +9,35 @@
 
 
 <item>
+  <title>TR23-033 |  Fast Numerical Multivariate Multipoint Evaluation | 
+
+	Sumanta Ghosh, 
+
+	Prahladh Harsha, 
+
+	Simao Herdade, 
+
+	Mrinal Kumar, 
+
+	Ramprasad Saptharishi</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/033</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/033</link>
+  <description>
+    We design nearly-linear time numerical algorithms for the problem of multivariate multipoint evaluation over the fields of rational, real and complex numbers. We consider both \emph{exact} and \emph{approximate} versions of the algorithm. The input to the algorithms are (1) coefficients of an $m$-variate polynomial $f$ with degree $d$ in each variable, and (2) points $\mathbf{a}_1,\ldots, \mathbf{a}_N$ each of whose coordinate has value bounded by one and bit-complexity $s$. 
+
+* Approximate Version: Given additionally an accuracy parameter $t$, the algorithm computes rational numbers $\beta_1,\ldots, \beta_N$ such that $|{f(\mathbf{a}_i) - \beta_i} \leq \sfrac{1}{2^t}$ for all $i$, and has a running time of $\left((Nm + d^m)(s + t)\right)^{1 + o(1)}$ for all $m$ and all sufficiently large $d$. 
+
+* Exact version (when over rationals): Given additionally a bound $c$ on the bit-complexity of all evaluations, the algorithm computes the rational numbers $f(\mathbf{a}_1), \ldots, f(\mathbf{a}_N)$, in time $\left((Nm + d^m)(s + c)\right)^{1 + o(1)}$ for all $m$ and all sufficiently large $d$.  
+
+Our results also naturally extend to the case when the input is over the field of real or complex numbers under an appropriate standard model of representation of field elements in such fields. 
+
+Prior to this work, a nearly-linear time algorithm for multivariate multipoint evaluation (exact or approximate) over any infinite field appears to be known only for the case of univariate polynomials, and was discovered in a recent work of Moroz [Proc. 62nd FOCS, 2021]. In this work, we extend this result from the univariate to the multivariate setting. However, our algorithm is based on ideas that seem to be conceptually different from those of Moroz and crucially relies on a recent algorithm of Bhargava, Ghosh, Guo, Kumar &amp;amp; Umans [Proc. 63rd FOCS, 2022] for multivariate multipoint evaluation over finite fields, and known efficient algorithms for the problems of rational number reconstruction and fast Chinese remaindering in computational number theory.
+  </description>
+  <pubDate>2023-03-24 14:06:13 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Xavier Waintal responds (tl;dr Grover is still quadratically faster)</title>
   <guid>https://scottaaronson.blog/?p=7157</guid>
   <link>https://scottaaronson.blog/?p=7157</link>
@@ -1665,20 +1694,6 @@ unidentifiable biases.
   </description>
   <pubDate>2023-03-17 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>TCS+ talk: Wednesday, March 22 — Christian Coester, University of Oxford</title>
-  <guid>http://tcsplus.wordpress.com/?p=674</guid>
-  <link>https://tcsplus.wordpress.com/2023/03/16/tcs-talk-wednesday-march-22-christian-coester-university-of-oxford/</link>
-  <description>
-    &lt;p&gt;The next TCS+ talk will take place this coming March 22nd at 1:00 PM Eastern Time (10:00 AM Pacific Time, 18:00 Central European Time, 17:00 UTC: &lt;a href=&quot;_wp_link_placeholder&quot;&gt;check your timezone!&lt;/a&gt;). &lt;strong&gt;Christian Coester&lt;/strong&gt; from University of Oxford will speak about &amp;#8220;&lt;em&gt;The Randomized k-Server Conjecture is False!&lt;/em&gt;&amp;#8221; (abstract below).&lt;/p&gt;
-&lt;p&gt;You can reserve a spot as an individual or a group to join us live by signing up on &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/next-tcs-talk&quot;&gt;the online form&lt;/a&gt;. Registration is &lt;em&gt;not&lt;/em&gt; required to attend the interactive talk, and the link will be posted on the website the day prior to the talk; however, by registering in the form, you will receive a reminder, along with the link. (The recorded talk will also be posted &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/past-talks&quot;&gt;on our website&lt;/a&gt; afterwards) As usual, for more information about the TCS+ online seminar series and the upcoming talks, or to &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/suggest-a-talk&quot;&gt;suggest&lt;/a&gt; a possible topic or speaker, please see &lt;a href=&quot;https://sites.google.com/view/tcsplus/&quot;&gt;the website&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;&lt;p&gt;Abstract: The randomized &lt;img src=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=k&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=k&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;k&quot; class=&quot;latex&quot; /&gt;-server conjecture, which had been open for over three decades, states that there exists an &lt;img src=&quot;https://s0.wp.com/latex.php?latex=O%28%5Clog+k%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=O%28%5Clog+k%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=O%28%5Clog+k%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;O(&amp;#92;log k)&quot; class=&quot;latex&quot; /&gt;-competitive randomized algorithm for the k-server problem. In this talk, I will present our recent joint work with Sébastien Bubeck and Yuval Rabani, where we refute this conjecture by giving a lower bound of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5COmega%28%28%5Clog+k%29%5E2%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5COmega%28%28%5Clog+k%29%5E2%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5COmega%28%28%5Clog+k%29%5E2%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;Omega((&amp;#92;log k)^2)&quot; class=&quot;latex&quot; /&gt;. Our work also settles the competitive ratio of metrical task systems to be &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5CTheta%28%28%5Clog+n%29%5E2%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5CTheta%28%28%5Clog+n%29%5E2%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5CTheta%28%28%5Clog+n%29%5E2%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;Theta((&amp;#92;log n)^2)&quot; class=&quot;latex&quot; /&gt; on the hardest metric spaces and &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5CTheta%28%5Clog+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5CTheta%28%5Clog+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5CTheta%28%5Clog+n%29&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;Theta(&amp;#92;log n)&quot; class=&quot;latex&quot; /&gt; on the easiest metric spaces of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=n&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=n&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&amp;#038;bg=fff&amp;#038;fg=444444&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;n&quot; class=&quot;latex&quot; /&gt; points. In particular, this yields the first improvement over the previous “coupon collector” lower bound since the introduction of the model in 1987.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p class=&quot;authors&quot;&gt;By plustcs&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-17 00:27:25 UTC</pubDate>
-  <author>TCS+ Seminar Series</author>
 </item>
 
 </channel>
