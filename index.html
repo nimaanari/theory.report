@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-03-24T03:30:41Z">Friday, March 24 2023, 03:30</time>
+          <time class='timeago' datetime="2023-03-24T04:34:06Z">Friday, March 24 2023, 04:34</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,98 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Friday, March 24
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://scottaaronson.blog/?p=7157'>Xavier Waintal responds (tl;dr Grover is still quadratically faster)</a></h3>
+        <p class='tr-article-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          This morning Xavier Waintal, coauthor of the new arXiv preprint &#8220;&#8221;&#8221;refuting&#8221;&#8221;&#8221; Grover&#8217;s algorithm, which I dismantled here yesterday, emailed me a two-paragraph response. He remarked that the &#8220;classy&#8221; thing for me to do would be to post the response on my blog, but: &#8220;I would totally understand if you did not want to be contradicted [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>This morning Xavier Waintal, coauthor of the <a href="https://arxiv.org/abs/2303.11317">new arXiv preprint &#8220;&#8221;&#8221;refuting&#8221;&#8221;&#8221; Grover&#8217;s algorithm</a>, which I <a href="https://scottaaronson.blog/?p=7143">dismantled here yesterday</a>, emailed me a two-paragraph response.  He remarked that the &#8220;classy&#8221; thing for me to do would be to post the response on my blog, but: &#8220;I would totally understand if you did not want to be contradicted in your own zone of influence.&#8221;</p>
+
+
+
+<p>Here is Waintal&#8217;s response, exactly as sent to me:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>The elephant in the (quantum computing) room: opening the Pandora box of the quantum oracle</p>
+
+
+
+<p>One of the problem we face in the field of quantum computing is a vast diversity of cultures between, say, complexity theorists on one hand and physicists on the other hand. The former define mathematical objects and consider any mathematical problem as legitimate. The hypothesis are never questioned, by definition. Physicists on the other hand spend their life questioning the hypothesis, wondering if they do apply to the real world. This dichotomy is particularly acute in the context of the emblematic Grover search algorithm, one of the cornerstone of quantum computing. Grover&#8217;s algorithm uses the concept of &#8220;oracle&#8221;, a black box function that one can call, but of which one is forbidden to see the source code. There are well known complexity theorems that show that in this context a quantum computer can solve the &#8220;search problem&#8221; faster than a classical computer.</p>
+
+
+
+<p>But because we closed our eyes and decided not to look at the source code does not mean it does not exist. In <a rel="noreferrer noopener" href="https://arxiv.org/pdf/2303.11317.pdf" target="_blank">https://arxiv.org/pdf/2303.11317.pdf</a>, Miles Stoudenmire and I deconstruct the concept of oracle and show that as soon as we give the same input to both quantum and classical computers (the quantum circuit used to program the oracle on the actual quantum hardware) then the *generic* quantum advantage disappears. The charge of the proof is reversed: one must prove certain properties of the quantum circuit in order to possibly have a theoretical quantum advantage. More importantly &#8211; for the physicist that I am &#8211; our classical algorithm is very fast and we show that we can solve large instances of any search problem. This means that even for problems where *asymptotically* quantum computers are faster than classical ones, the crossing point where they become so is for astronomically large computing time, in the tens of millions of years. Who is willing to wait that long for the answer to a single question, even if the answer is 42?</p>
+</blockquote>
+
+
+
+<p>The above explicitly confirms something that I realized immediately on reading the preprint, and that fully explains the acerbic tone of my response.  Namely, Stoudenmire and Waintal&#8217;s beef isn&#8217;t merely with Grover&#8217;s algorithm, or even with the black-box model; it&#8217;s with the entire field of complexity theory.  If they were right that complexity theorists never &#8220;questioned hypotheses&#8221; or wondered what did or didn&#8217;t apply to the real world, then complexity theory shouldn&#8217;t exist in CS departments at all&#8212;at most it should exist in pure math departments.</p>
+
+
+
+<p>But a converse claim is also true.  Namely, suppose it turned out that complexity theorists had already fully understood, for decades, all the elementary points Stoudenmire and Waintal were making about oracles versus explicit circuits.  Suppose complexity theorists <em>hadn&#8217;t</em> actually been confused, at all, about under what sorts of circumstances the square-root speedup of Grover&#8217;s algorithm was (1) provable, (2) plausible but unproven, or (3) nonexistent.  Suppose they&#8217;d also been intimately familiar with the phenomenon of asymptotically faster algorithms that get swamped in practice by unfavorable constants, and with the overhead of quantum error-correction.  Suppose, indeed, that complexity theorists hadn&#8217;t merely understood all this stuff, but expressed it clearly and accurately where Stoudenmire and Waintal&#8217;s presentation was garbled and mixed with absurdities (e.g., the Grover problem &#8220;being classically solvable with a linear number of queries,&#8221; the Grover speedup not being &#8220;generic&#8221;).</p>
+
+
+
+<p>We don&#8217;t have to suppose!  In the <a href="https://scirate.com/arxiv/2303.11317">SciRate discussion of the preprint</a>, a commenter named Bibek Pokharel helpfully digs up some undergraduate lecture notes from 2017 that are perfectly clear about what Stoudenmire and Waintal treat as revelations (though one could even go 20 years earlier).  The notes are focused here on Simon&#8217;s algorithm, but the discussion generalizes to <em>any</em> quantum black-box algorithm, including Grover&#8217;s:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>The difficulty in claiming that we&#8217;re getting a quantum speedup [via Simon&#8217;s algorithm] is that, once we pin down the details of how we&#8217;re computing [the oracle function] <em>f</em>&#8212;so, for example, the actual matrix <em>A</em> [such that <em>f</em>(<em>x</em>)=<em>Ax</em>]&#8212;we then need to compare against classical algorithms that know those details as well. And as soon as we reveal the innards of the black box, the odds of an efficient classical solution become much higher! So for example, if we knew the matrix <em>A</em>, then we could solve Simon&#8217;s problem in classical polynomial time just by calculating <em>A</em>&#8216;s nullspace. More generally, it&#8217;s not clear whether anyone to this day has found a straightforward &#8220;application&#8221; of Simon&#8217;s algorithm, in the sense of a class of efficiently computable functions <em>f</em> that satisfy the Simon promise, and for which any classical algorithm plausibly needs exponential time to solve Simon&#8217;s problem, even if the algorithm is given the code for <em>f</em>.</p>
+</blockquote>
+
+
+
+<p>In the same lecture notes, one can find the following discussion of Grover&#8217;s algorithm, and how its unconditional square-root speedup becomes conditional as soon as the black box is instantiated by an explicit circuit:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>For an NP-complete problem like CircuitSAT, we can be pretty confident that the Grover speedup is real, because no one has found any classical algorithm that’s even slightly better than brute force. On the other hand, for more “structured” NP-complete problems, we do know exponential-time algorithms that are faster than brute force. For example, 3SAT is solvable classically in about O(1.3<sup>n</sup>) time. So then, the question becomes a subtle one of whether Grover’s algorithm can be combined with the best classical tricks that we know to achieve a polynomial speedup even compared to a classical algorithm that uses the same tricks. For many NP-complete problems the answer seems to be yes, but it need not be yes for all of them.</p>
+</blockquote>
+
+
+
+<p>The <a href="https://www.scottaaronson.com/qclec.pdf">notes</a> in question were written by some random complexity theorist named Scot Aronsen (sp?).  But if you don&#8217;t want it from that guy, then take it from (for example) the Google quantum chemist Ryan Babbush, again on the SciRate page:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>It is well understood that applying Grover&#8217;s algorithm to 3-SAT in the standard way would not give a quadratic speedup over the best classical algorithm for 3-SAT in the worst case (and especially not on average). But there are problems for which Grover is expected to give a quadratic speedup over any classical algorithm in the worst case. For example, the problem &#8220;Circuit SAT&#8221; starts by me handing you a specification of a poly-size classical circuit with AND/OR/NOT gates, so it&#8217;s all explicit. Then you need to solve SAT on this circuit. Classically we strongly believe it will take time 2^n (this is even the basis of many conjectures in complexity theory, like the exponential time hypothesis), and quantumly we know it can be done with 2^{n/2}*poly(n) quantum gates using Grover and the explicitly given classical circuit. So while I think there are some very nice insights in this paper, the statement in the title &#8220;Grover&#8217;s Algorithm Offers No Quantum Advantage&#8221; seems untrue in a general theoretical sense. Of course, this is putting aside issues with the overheads of error-correction for quadratic speedups (a well understood practical matter that is resolved by going to large problem sizes that wouldn&#8217;t be available to the first fault-tolerant quantum computers). What am I missing?</p>
+</blockquote>
+
+
+
+<p>More generally, over the past few days, as far as I can tell, <em>every</em> actual expert in quantum algorithms who&#8217;s looked at Stoudenmire and Waintal&#8217;s preprint&#8212;every one, whether complexity theorist or physicist or chemist&#8212;has reached essentially the same conclusions about it that I did.  The one big difference is that many of the experts, who are undoubtedly better people than I am, extended a level of charity to Stoudenmire and Waintal (&#8220;well, this of course seems untrue, but here&#8217;s what it <em>could have</em> meant&#8221;) that Stoudenmire and Waintal themselves very conspicuously failed to extend to complexity theory.</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-03-24T04:06:26Z">Friday, March 24 2023, 04:06</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -1488,7 +1580,7 @@ Email: direction.imt@math.univ-toulouse.fr</p>
       <div class='tr-article-body'>
         <div class='tr-article-snippet'>
         
-          Unrelated Update: Huge congratulations to Ethernet inventor Bob Metcalfe, for winning UT Austin&#8217;s third Turing Award after Dijkstra and Emerson! I was really, really hoping that I&#8217;d be able to avoid blogging about this new arXiv preprint, by E. M. Stoudenmire and Xavier Waintal: Grover&#8217;s Algorithm Offers No Quantum Advantage Grover&#8217;s algorithm is one of [&#8230;]
+          Unrelated Update: Huge congratulations to Ethernet inventor Bob Metcalfe, for winning UT Austin&#8217;s third Turing Award after Dijkstra and Emerson! And also to mathematician Luis Caffarelli, for winning UT Austin&#8217;s third Abel Prize! I was really, really hoping that I&#8217;d be able to avoid blogging about this new arXiv preprint, by E. M. Stoudenmire and [&#8230;]
         
         </div>
 
@@ -1496,6 +1588,10 @@ Email: direction.imt@math.univ-toulouse.fr</p>
         
           
           <p><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">Unrelated Update:</mark></strong> Huge congratulations to Ethernet inventor Bob Metcalfe, for <a href="https://www.nytimes.com/2023/03/22/technology/turing-award-bob-metcalfe-ethernet.html">winning UT Austin&#8217;s third Turing Award</a> after Dijkstra and Emerson!</p>
+
+
+
+<p>And also to mathematician Luis Caffarelli, for <a href="https://www.nytimes.com/2023/03/22/science/abel-prize-math-luis-caffarelli.html">winning UT Austin&#8217;s third Abel Prize</a>!</p>
 
 
 
@@ -3643,389 +3739,6 @@ unidentifiable biases.
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-03-17T00:27:25Z">Friday, March 17 2023, 00:27</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Thursday, March 16
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/03/identities-in-computational-complexity.html'>Identities in Computational Complexity</a></h3>
-        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Guest post by Josh Grochow</p>
-
-<p>On the birdsite, Jay Cummings tweeted:</p>
-<blockquote><p>TOP 5 IDENTITIES OF ALL TIME<br>5. You<br>4. Can't <br>3. Rank<br>2. Identities <br>1. eiπ + 1 = 0</p>— Jay Cummings (@LongFormMath) February 8, 2023</blockquote> 
-
-<p><br>
-And it got me thinking about identities in computational complexity. At first I
-thought: how many could there be? 10? After some thought and with some help,
-there turn out to be quite a few more than that, and I think they make a pretty
-good list!</p>
-
-<p>Rules/comments on the list:</p><p></p>
-
-<p></p><ul><li>Some are relatively simple alternative
-characterizations, such as the various definitions of PH; most are pretty
-nontrivial theorems.</li><li>I  didn't include existentially quantified oracle
-results (such as "there exists A such that PA=NPA"), despite them
-being some of my favorite results, because there'd be waaaay too many of those.
-Probably thousands? Ask Lance. In some circles he's known as the "oracle
-oracle" - as in, he's who you go ask if you want to know if a certain
-oracle exists. I did include identities involving oracles
-where one side of the identity didn't have an oracle, such
-as EXP=NPRKt or AlmostP=BPP (AlmostP is the class of languages
-L such that {A : L is in PA} has measure 1).</li><li>I also didn't include some important conditional
-equalities, such as "EXP in P/poly iff EXP=MA" or "NP in BPP iff NP=RP". I guess it's not really an "identity" if it's
-conditional. Games are only fun if the rules are at least a little constraining!</li><li>There are some surprising containments that either
-aren't equalities, or aren't known to be equalities, and I didn't include those
-either, despite some of them being very important. For example, BPP in Σ2P,
-other depth reduction results (such as the chasms at depth 4 and 3), and Beigel-Tarui/Yao.</li></ul><p></p>
-
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<p>One could teach a class based on a list like this and cover
-a lot of good ground, but I think it'd be sad to leave out any lower bounds.
-Actually, by my estimate, if you were teaching from "scratch" (say,
-starting after an undergrad algorithms class), this list, and all its
-implied prerequisite material, is already probably the equivalent of about 3-4
-semester-long classes!</p><p></p>
-
-<p> </p>
-
-<p>What other complexity identities did I miss?</p>
-
-<p> </p>
-
-<p>Finally, without further ado, a list of (some) identities in
-computational complexity:</p>
-
-<p> </p>
-
-<p>RP∩coRP=ZPP </p>
-
-<p>CLS=PPAD∩PLS  [from Paul Goldberg @paulwgoldberg]</p>
-
-<p>quasi-poly
-Frege =quasi-poly noncommutative formula IPS</p>
-
-<p> </p>
-
-<p>Space classes</p>
-
-<p>PSPACE=NPSPACE </p>
-
-<p>NL=coNL </p>
-
-<p>L=SL</p>
-
-<p>DET=LGapL&nbsp;(see  Update 1)</p>
-
-<p> </p>
-
-<p>Interactive Proofs</p>
-
-<p>NP=PCP(O(log n), 3)</p><p>IP=PSPACE</p><p></p>
-
-<p>AM = MAM = AMAM = ... [From Albert Atserias @atserias]</p>
-
-<p>MIP=NEXP=PCP(poly,poly)</p>
-
-<p> </p>
-
-<p>Alternating Turing machines</p>
-
-<p>Σk P = ∃ Pik-1 P = NPΣk-1 P =
-ΣkTIME(poly(n)) [from Lance]</p>
-
-<p>AP=PSPACE</p>
-
-<p>APSPACE=EXP</p>
-
-<p> </p>
-
-<p>Circuit classes within P</p>
-
-<p>NC1=5-PBP</p>
-
-<p>ACC0=branching
-programs over solvable monoids</p>
-
-<p>P=AuxPDA</p>
-
-<p>SAC1 = LogCFL [from Michael Levet
-@Michael_Levet] </p>
-
-<p>REG = DSPACE(O(1)) = NSPACE(O(1)) [from Levet]</p><p>
-REG=DTIME1tape(o(n log n))</p>
-
-<p>ACk = logk time on a CRCW PRAM</p>
-
-<p>Quantum</p><p>QIP=PSPACE</p>
-
-<p>MIP*=CE</p>
-
-<p>QMAlog (1)=BQP [from Martin Schwarz @martin_schwarz]</p>
-
-<p>QMAlog
-(poly)=QCMA [ditto]&nbsp;</p><p>
-QAC0f =
-QNC0f [from Ale `Scinawa' Luongo @scinawa]</p><p>
-QMA(k) =
-QMA(2) for any k ≥ 2 [from Sarvagya Upadhyay @sarvagya82]</p>
-
-<p> </p>
-
-<p>Algebraic complexity</p>
-
-<p>VP=VNC2 </p>
-
-<p>VDET=VABP=VPs=VPws</p>
-
-<p>VPe=VABP3 </p>
-
-<p>border-VPe=border-VABP2</p>
-
-<p>For bilinear maps, tensor rank=Theta(algebraic circuit size)</p>
-
-<p> </p>
-
-<p>Logical characterizations</p><p>FO=AC0</p><p></p>
-
-<p>AC=NC=FO[poly(log)]</p><p>
-∃SO=NP</p><p>
-P = FO + LFP on ordered structures [thanks to Lance,
-and Michael Levet]</p>
-
-<p> </p>
-
-<p>Kolmogorov-random strings as oracles</p>
-
-<p>EXP=NPRKt</p>
-
-<p>PSPACE=ZPPRKS</p>
-
-<p>P=COMP∩{dtt reducible to RKU} </p>
-
-<p>Almost-classes</p>
-
-<p>AlmostP=BPP </p>
-
-<p>AlmostNP=AM</p>
-
-<p>AlmostPSPACE=BPexp.PSPACE</p>
-
-<p> </p>
-
-
-Updates
-<ol>
-    <li>March 17th update, h/t Eric Allender: Using Cook's original definition of DET as problems NC1-reducible to the integer determinant, apparently this equality is not known! See Eric's recent guest column in SIGACT News for details and a $1000-prize related to this question, along with many other interesting open questions.</li>
-  
-</ol><p>By Lance Fortnow</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p><i>Guest post by Josh Grochow</i></p>
-
-<p>On the birdsite, Jay Cummings <a href="https://twitter.com/LongFormMath/status/1623389627880194048" target="&lt;sub&gt;b&lt;/sub&gt;lank">tweeted</a>:</p>
-<center><blockquote class="twitter-tweet"><p dir="ltr" lang="en">TOP 5 IDENTITIES OF ALL TIME<br />5. You<br />4. Can't <br />3. Rank<br />2. Identities <br />1. e<sup>iπ</sup> + 1 = 0</p>— Jay Cummings (@LongFormMath) <a href="https://twitter.com/LongFormMath/status/1623389627880194048?ref&lt;sub&gt;s&lt;/sub&gt;rc=twsrc%5Etfw">February 8, 2023</a></blockquote> <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script></center>
-
-<p><br />
-And it got me thinking about identities in computational complexity. At first I
-thought: how many could there be? 10? After some thought and with some help,
-there turn out to be quite a few more than that, and I think they make a pretty
-good list!<o:p></o:p></p>
-
-<p>Rules/comments on the list:</p><p><o:p></o:p></p>
-
-<p></p><ul style="text-align: left;"><li>Some are relatively simple alternative
-characterizations, such as the various definitions of PH; most are pretty
-nontrivial theorems.</li><li>I  didn't include existentially quantified oracle
-results (such as "there exists A such that P<sup>A</sup>=NP<sup>A</sup>"), despite them
-being some of my favorite results, because there'd be waaaay too many of those.
-Probably thousands? Ask Lance. In some circles he's known as the "oracle
-oracle" - as in, he's who you go ask if you want to know if a certain
-oracle exists. I <i>did</i> include identities involving oracles
-where one side of the identity didn't have an oracle, such
-as EXP=NP<sup>R<sub>Kt</sub></sup> or AlmostP=BPP (AlmostP is the class of languages
-L such that {A : L is in P<sup>A</sup>} has measure 1).</li><li>I also didn't include some important conditional
-equalities, such as "<a href="http://doi.org/10.1007/BF01200056" target="&lt;sub&gt;b&lt;/sub&gt;lank">EXP in P/poly iff EXP=MA</a>" or "<a href="https://doi.org/10.1016/0022-0000(88)90037-2">NP in BPP iff NP=RP</a>". I guess it's not really an "identity" if it's
-conditional. Games are only fun if the rules are at least a little constraining!</li><li>There are some surprising containments that either
-aren't equalities, or aren't known to be equalities, and I didn't include those
-either, despite some of them being very important. For example, <a href="https://doi.org/10.1016/0020-0190(83)90044-3" target="&lt;sub&gt;b&lt;/sub&gt;lank">BPP in Σ<sub>2</sub>P</a>,
-other depth reduction results (such as the <a href="https://doi.org/10.1109/FOCS.2008.32" target="&lt;sub&gt;b&lt;/sub&gt;lank">chasms at depth 4</a> and <a href="https://doi.org/10.1137/140957123" target="&lt;sub&gt;b&lt;/sub&gt;lank">3</a>), and <a href="https://doi.org/10.1007/BF01263423" target="&lt;sub&gt;b&lt;/sub&gt;lank">Beigel-Tarui</a>/<a href="https://doi.ieeecomputersociety.org/10.1109/FSCS.1990.89583" target="&lt;sub&gt;b&lt;/sub&gt;lank">Yao</a>.</li></ul><o:p></o:p><p></p>
-
-<p><o:p></o:p></p>
-
-<p><o:p></o:p></p>
-
-<p><o:p></o:p></p>
-
-<p>One could teach a class based on a list like this and cover
-a lot of good ground, but I think it'd be sad to leave out any lower bounds.
-Actually, by my estimate, if you were teaching from "scratch" (say,
-starting after an undergrad algorithms class), this list, and all its
-implied prerequisite material, is already probably the equivalent of about 3-4
-semester-long classes!</p><p><o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p>What other complexity identities did I miss?<o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p>Finally, without further ado, a list of (some) identities in
-computational complexity:<o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p><a href="https://doi.org/10.1145/800119.803889" target="&lt;sub&gt;b&lt;/sub&gt;lank">RP∩coRP=ZPP</a> <o:p></o:p></p>
-
-<p><a href="https://dl.acm.org/doi/10.1145/3568163" target="&lt;sub&gt;b&lt;/sub&gt;lank">CLS=PPAD∩PLS</a>  [from Paul Goldberg @paulwgoldberg]<o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1137/16M1107632" target="&lt;sub&gt;b&lt;/sub&gt;lank">quasi-poly
-Frege =quasi-poly noncommutative formula IPS</a><o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p><b>Space classes</b><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1016%2FS0022-0000%2870%2980006-X" target="&lt;sub&gt;b&lt;/sub&gt;lank">PSPACE=NPSPACE</a> <o:p></o:p></p>
-
-<p><a href="https://en.wikipedia.org/wiki/Immerman%E2%80%93Szelepcs%C3%A9nyi_theorem" target="&lt;sub&gt;b&lt;/sub&gt;lank">NL=coNL</a> <o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1145%2F1391289.1391291" target="&lt;sub&gt;b&lt;/sub&gt;lank">L=SL</a><o:p></o:p></p>
-
-<p><a href="https://complexityzoo.net/Complexity_Zoo:G#gapl" target="&lt;sub&gt;b&lt;/sub&gt;lank">DET=L<sup>GapL</sup></a>&nbsp;(see  <a href="#update1">Update 1</a>)<o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p><b>Interactive Proofs</b><o:p></o:p></p>
-
-<p><a href="https://en.wikipedia.org/wiki/PCP_theorem#History" target="&lt;sub&gt;b&lt;/sub&gt;lank">NP=PCP(O(log n), 3)</a></p><p><a href="https://en.wikipedia.org/wiki/IP_(complexity)" target="&lt;sub&gt;b&lt;/sub&gt;lank">IP=PSPACE</a></p><p><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1016/0022-0000(88)90028-1" target="&lt;sub&gt;b&lt;/sub&gt;lank">AM = MAM = AMAM =</a> ... [From Albert Atserias @atserias]<o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1007/BF01200056" target="&lt;sub&gt;b&lt;/sub&gt;lank">MIP=NEXP=PCP(poly,poly)</a><o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p><b>Alternating Turing machines</b><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1016/0304-3975(76)90061-X" target="&lt;sub&gt;b&lt;/sub&gt;lank">Σ<sub>k</sub> P = ∃ Pi<sub>k-1</sub> P = NP<sup>Σ<sub>k-1</sub> P</sup> =
-Σ<sub>k</sub>TIME(poly(n)</a>) [from Lance]<o:p></o:p></p>
-
-<p><a href="https://dl.acm.org/doi/10.1145/322234.322243">AP=PSPACE</a><o:p></o:p></p>
-
-<p><a href="https://dl.acm.org/doi/10.1145/322234.322243">APSPACE=EXP</a><o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p><b>Circuit classes within P</b><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1016%2F0022-0000%2889%2990037-8" target="&lt;sub&gt;b&lt;/sub&gt;lank">NC<sup>1</sup>=5-PBP</a><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1145/48014.63138" target="&lt;sub&gt;b&lt;/sub&gt;lank">ACC<sup>0</sup>=branching
-programs over solvable monoids</a><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1145/321623.321625" target="&lt;sub&gt;b&lt;/sub&gt;lank">P=AuxPDA</a><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1016/0022-0000(91)90020-6" target="&lt;sub&gt;b&lt;/sub&gt;lank">SAC<sup>1</sup> = LogCFL</a> [from Michael Levet
-@Michael_Levet] <o:p></o:p></p>
-
-<p>REG = DSPACE(O(1)) = NSPACE(O(1)) [from Levet]</p><p>
-REG=DTIME<sub>1tape</sub>(o(n log n))<o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1137/0213027">AC<sup>k</sup> = log<sup>k</sup> time on a CRCW PRAM</a><o:p></o:p></p>
-
-<p><b>Quantum</b></p><p><a href="https://doi.org/10.1145/2049697.2049704" target="&lt;sub&gt;b&lt;/sub&gt;lank">QIP=PSPACE</a><o:p></o:p></p>
-
-<p><a href="https://cacm.acm.org/magazines/2021/11/256404-mip-re/fulltext" target="&lt;sub&gt;b&lt;/sub&gt;lank">MIP*=CE</a><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1007/s00037-005-0194-x" target="&lt;sub&gt;b&lt;/sub&gt;lank">QMA<sub>log</sub> (1)=BQP</a> [from Martin Schwarz @martin_schwarz]<o:p></o:p></p>
-
-<p><a href="https://arxiv.org/abs/1108.0617" target="&lt;sub&gt;b&lt;/sub&gt;lank">QMA<sub>log</sub>
-(poly)=QCMA</a> [ditto]&nbsp;</p><p>
-<a href="https://doi.org/10.1007/s00037-016-0140-0" target="&lt;sub&gt;b&lt;/sub&gt;lank">QAC<sup>0</sup><sub>f</sub> =
-QNC<sup>0</sup><sub>f</sub></a> [from Ale `Scinawa' Luongo @scinawa]</p><p>
-<a href="https://doi.org/10.1145/2432622.2432625" target="&lt;sub&gt;b&lt;/sub&gt;lank">QMA(k) =
-QMA(2)</a> for any k ≥ 2 [from Sarvagya Upadhyay @sarvagya82]<o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p><b>Algebraic complexity</b><o:p></o:p></p>
-
-<p><a href="http://doi.org/10.1137/0212043" target="&lt;sub&gt;b&lt;/sub&gt;lank">VP=VNC<sup>2</sup></a> <o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1016/j.jco.2006.09.006" target="&lt;sub&gt;b&lt;/sub&gt;lank">VDET=VABP=VP<sub>s</sub>=VP<sub>ws</sub></a><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1137/0221006" target="&lt;sub&gt;b&lt;/sub&gt;lank">VP<sub>e</sub>=VABP<sub>3</sub></a> <o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1145/3209663" target="&lt;sub&gt;b&lt;/sub&gt;lank">border-VP<sub>e</sub>=border-VABP<sub>2</sub></a><o:p></o:p></p>
-
-<p>For bilinear maps, tensor rank=Theta(algebraic circuit size)<o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p><b>Logical characterizations</b></p><p><a href="https://doi.org/10.1007/978-1-4612-0539-5" target="&lt;sub&gt;b&lt;/sub&gt;lank">FO=AC<sup>0</sup></a></p><p><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1007/978-1-4612-0539-5" target="&lt;sub&gt;b&lt;/sub&gt;lank">AC=NC=FO[poly(log)]</a></p><p>
-<a href="https://en.wikipedia.org/wiki/Fagin%27s_theorem" target="&lt;sub&gt;b&lt;/sub&gt;lank"><span style="font-family: &quot;Cambria Math&quot;,serif; mso-bidi-font-family: &quot;Cambria Math&quot;;">∃</span>SO=NP</a></p><p>
-<a href="https://en.m.wikipedia.org/wiki/Fixed-point_logic#Least&lt;sub&gt;f&lt;/sub&gt;ixed-point&lt;sub&gt;l&lt;/sub&gt;ogic" target="&lt;sub&gt;b&lt;/sub&gt;lank">P = FO + LFP on ordered structures</a> [thanks to Lance,
-and Michael Levet]<o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<p><b>Kolmogorov-random strings as oracles</b><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1137/050628994" target="&lt;sub&gt;b&lt;/sub&gt;lank">EXP=NP<sup>R<sub>Kt</sub></sup></a><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1137/050628994" target="&lt;sub&gt;b&lt;/sub&gt;lank">PSPACE=ZPP<sup>R<sub>KS</sub></sup></a><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1016/j.apal.2005.06.003" target="&lt;sub&gt;b&lt;/sub&gt;lank">P=COMP∩{dtt reducible to R<sub>K</sub>U}</a> <o:p></o:p></p>
-
-<p><b>Almost-classes</b><o:p></o:p></p>
-
-<p><a href="http://dx.doi.org/10.1137/0210008" target="&lt;sub&gt;b&lt;/sub&gt;lank">AlmostP=BPP</a> <o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1016/S0022-0000(05)80043-1" target="&lt;sub&gt;b&lt;/sub&gt;lank">AlmostNP=AM</a><o:p></o:p></p>
-
-<p><a href="https://doi.org/10.1007/s000370050012" target="&lt;sub&gt;b&lt;/sub&gt;lank">AlmostPSPACE=BP<sup>exp</sup>.PSPACE</a><o:p></o:p></p>
-
-<p><o:p> </o:p></p>
-
-<hr />
-Updates
-<ol>
-    <li id="update1">March 17th update, h/t Eric Allender: Using Cook's original definition of DET as problems NC<sup>1</sup>-reducible to the integer determinant, apparently this equality is not known! See Eric's recent <a href="https://dl.acm.org/doi/10.1145/3586165.3586175">guest column in SIGACT News</a> for details and a $1000-prize related to this question, along with many other interesting open questions.</li>
-  
-</ol><p class="authors">By Lance Fortnow</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-03-16T20:31:00Z">Thursday, March 16 2023, 20:31</time>
         </div>
       </div>
     </details>
