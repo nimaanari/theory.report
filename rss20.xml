@@ -9,6 +9,38 @@
 
 
 <item>
+  <title>TR23-032 |  Linear Independence, Alternants and Applications | 
+
+	Vishwas Bhargava, 
+
+	Shubhangi Saraf, 
+
+	Ilya Volkovich</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/032</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/032</link>
+  <description>
+    We develop a new technique for analyzing linear independence of multivariate polynomials. One of our main technical contributions is a \emph{Small Witness for Linear Independence} (SWLI) lemma which states the following.
+If the polynomials $f_1,f_2, \ldots, f_k \in \F[X]$ over $X=\{x_1, \ldots, x_n\}$  are $\F$-linearly independent then there exists a subset $S \subseteq X$ of size at most $k-1$ such that $f_1,f_2, \ldots, f_k$ are also   $\F(X\setminus S)$-linearly independent.  
+
+We show how to effectively combine this lemma with the use of the \emph{alternant} matrix to analyze  linear independence of polynomials. We also give applications of our technique to the questions of polynomial identity testing and arithmetic circuit reconstruction. 
+
+\begin{enumerate}
+    \item We give a general technique for lifting efficient polynomial identity testing algorithms from basic classes of
+circuits, satisfying some closure properties, to more general classes of circuits. As one of the corollaries of this result, 
+we obtain the first algorithm for polynomial identity testing for depth-$4$, constant-occur circuits that works over \textbf{all} fields. 
+This strengthens a result by \cite{ASSS16} (\emph{STOC &amp;#39;12}) that works in the case when the characteristic is $0$ or sufficiently large. 
+Another corollary is an identity testing algorithm for a special case of depth-$5$ circuits. To the best of our knowledge, this is the first algorithm for this class of circuits.
+
+\item We give new and efficient black-box reconstruction algorithms for the class of set-multilinear depth-3 circuits of constant top fan-in, 
+where the set-multilinear variable partition is \emph{unknown}. This generalizes the results of \cite{BSV21} (\emph{STOC &amp;#39;21}) and \cite{PSV22} (\emph{ECCC &amp;#39;22})  which work in the case of known
+variable partition, and correspond to tensor decomposition of constant-rank tensors. 
+\end{enumerate}
+  </description>
+  <pubDate>2023-03-24 02:19:16 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Analyzing Innermost Runtime Complexity Through Tuple Interpretations</title>
   <guid>http://arxiv.org/abs/2303.13256</guid>
   <link>http://arxiv.org/abs/2303.13256</link>
@@ -1756,34 +1788,6 @@ Updates
   </description>
   <pubDate>2023-03-16 20:31:00 UTC</pubDate>
   <author>Computational Complexity</author>
-</item>
-
-<item>
-  <title>Some News from a Seminar in Cambridge</title>
-  <guid>http://gilkalai.wordpress.com/?p=24009</guid>
-  <link>https://gilkalai.wordpress.com/2023/03/16/some-news-from-a-seminar-in-cambridge/</link>
-  <description>
-    &lt;h3&gt;On an old problems of Erd&lt;strong&gt;ő&lt;/strong&gt;s&lt;/h3&gt;
-&lt;p&gt;(h/t Michael Simkin and Nati Linial)&lt;/p&gt;
-&lt;p&gt;Here is a somewhat mysterious announcement for a combinatorics seminar lecture at Cambridge.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;24010&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2023/03/16/some-news-from-a-seminar-in-cambridge/camb1/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2023/03/camb1.png&quot; data-orig-size=&quot;562,258&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;Camb1&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2023/03/camb1.png?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2023/03/camb1.png?w=562&quot; class=&quot;alignnone size-full wp-image-24010&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/03/camb1.png&quot; alt=&quot;Camb1&quot; width=&quot;562&quot; height=&quot;258&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/03/camb1.png 562w, https://gilkalai.files.wordpress.com/2023/03/camb1.png?w=150&amp;amp;h=69 150w, https://gilkalai.files.wordpress.com/2023/03/camb1.png?w=300&amp;amp;h=138 300w&quot; sizes=&quot;(max-width: 562px) 100vw, 562px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Which old problems of Erd&lt;strong&gt;ő&lt;/strong&gt;s are we talking about? Here is a picture from the seminar itself.&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;24013&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2023/03/16/some-news-from-a-seminar-in-cambridge/img_1718/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg&quot; data-orig-size=&quot;4032,3024&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;IMG_1718&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg?w=640&quot; class=&quot;alignnone  wp-image-24013&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg&quot; alt=&quot;IMG_1718&quot; width=&quot;422&quot; height=&quot;317&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg?w=422&amp;amp;h=317 422w, https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg?w=844&amp;amp;h=634 844w, https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg?w=150&amp;amp;h=113 150w, https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg?w=300&amp;amp;h=225 300w, https://gilkalai.files.wordpress.com/2023/03/img_1718.jpg?w=768&amp;amp;h=576 768w&quot; sizes=&quot;(max-width: 422px) 100vw, 422px&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Stay tuned (or try to test your intuition or guess in the comment section.)&lt;span id=&quot;more-24009&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: #ff0000&quot;&gt;&lt;del&gt;Nothing yet here.&lt;/del&gt;&lt;br /&gt;The paper is now on the arXiv.&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2 class=&quot;title mathjax&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/2303.09521&quot;&gt;An exponential improvement for diagonal Ramsey&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Marcelo Campos, Simon Griffiths, Robert Morris, and Julian Sahasrabudhe&lt;/p&gt;
-&lt;p&gt;The Ramsey number &lt;img src=&quot;https://s0.wp.com/latex.php?latex=R%28k%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=R%28k%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=R%28k%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;R(k)&quot; class=&quot;latex&quot; /&gt; is the minimum &lt;img src=&quot;https://s0.wp.com/latex.php?latex=n+%5Cin+%5Cmathbb+N&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=n+%5Cin+%5Cmathbb+N&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n+%5Cin+%5Cmathbb+N&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;n &amp;#92;in &amp;#92;mathbb N&quot; class=&quot;latex&quot; /&gt; such that every red-blue colouring of the edges of the complete graph &lt;img src=&quot;https://s0.wp.com/latex.php?latex=K_n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=K_n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=K_n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;K_n&quot; class=&quot;latex&quot; /&gt; on &lt;img src=&quot;https://s0.wp.com/latex.php?latex=n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;n&quot; class=&quot;latex&quot; /&gt; vertices contains a monochromatic copy of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=K_k&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=K_k&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=K_k&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;K_k&quot; class=&quot;latex&quot; /&gt;. We prove that&lt;/p&gt;
-&lt;p style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://s0.wp.com/latex.php?latex=R%28k%29%5Cle+%284-%5Cepsilon%29%5Ek&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=R%28k%29%5Cle+%284-%5Cepsilon%29%5Ek&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=R%28k%29%5Cle+%284-%5Cepsilon%29%5Ek&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;R(k)&amp;#92;le (4-&amp;#92;epsilon)^k&quot; class=&quot;latex&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;for some constant &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cepsilon&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cepsilon&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cepsilon&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;epsilon&quot; class=&quot;latex&quot; /&gt;. This is the first exponential improvement over the upper bound of Erdős and Szekeres, proved in 1935.&lt;/p&gt;
-
-
-&lt;p&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-16 19:02:01 UTC</pubDate>
-  <author>Gil Kalai</author>
 </item>
 
 </channel>
