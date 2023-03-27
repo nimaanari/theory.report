@@ -10,6 +10,30 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-036 |  Derandomization with Minimal Memory Footprint | 
+
+	Dean Doron, 
+
+	Roei Tell</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/036"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/036</id>
+    <updated>2023-03-27T16:29:15+00:00</updated>
+    <content type="html" xml:lang="en">
+    Existing proofs that deduce BPL=L from circuit lower bounds convert randomized algorithms into deterministic algorithms with large constant overhead in space. We study space-bounded derandomization with minimal footprint, and ask what is the minimal possible space overhead for derandomization.
+We show that $BPSPACE[S] \subseteq DSPACE[c \cdot S]$ for $c \approx 2$, assuming space-efficient cryptographic PRGs, and, either: (1) lower bounds against bounded-space algorithms with advice, or: (2) lower bounds against certain uniform compression algorithms.
+Under additional assumptions regarding the power of catalytic computation, in a new setting of parameters that was not studied before, we are even able to get $c \approx 1$.
+
+Our results are constructive: Given a candidate hard function (and a candidate cryptographic PRG) we show how to transform the randomized algorithm into an efficient deterministic one.
+This follows from new PRGs and targeted PRGs for space-bounded algorithms, which we combine with novel space-efficient evaluation methods. A central ingredient in all our constructions is hardness amplification reductions in logspace-uniform $TC^0$, that were not known before.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: PhD student at Jönköping university (apply by April 17, 2023)</title>
     <link href="https://cstheory-jobs.org/2023/03/27/phd-student-at-jonkoping-university-apply-by-april-17-2023/"/>
     <id>http://cstheory-jobs.org/2023/03/27/phd-student-at-jonkoping-university-apply-by-april-17-2023/</id>
@@ -204,6 +228,327 @@ freely available in the Apache Spark ML library.
     <author>
       <name>arXiv: Data Structures and Algorithms</name>
       <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">Gradient Science: TRAK-ing Model Behavior with Data</title>
+    <link href="https://gradientscience.org/trak/"/>
+    <id>https://gradientscience.org/trak/</id>
+    <updated>2023-03-27T00:00:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf&quot; crossorigin=&quot;anonymous&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/assets/css/style.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/multilabel/style.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/assets/data-transfer/style.css&quot; /&gt;
+
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot; integrity=&quot;sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a class=&quot;bbutton&quot; href=&quot;https://trak.csail.mit.edu&quot;&gt;
+&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;    Homepage
+&lt;/a&gt;
+&lt;a class=&quot;bbutton&quot; href=&quot;https://github.com/MadryLab/trak&quot;&gt;
+&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt;
+   Code
+&lt;/a&gt;
+&lt;a class=&quot;bbutton&quot; href=&quot;https://arxiv.org/abs/2303.14186&quot;&gt;
+&lt;i class=&quot;fas fa-file&quot;&gt;&lt;/i&gt;
+   Paper
+&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In our latest paper, we &lt;a href=&quot;/datamodels-1&quot;&gt;revisit&lt;/a&gt; the problem of data attribution and introduce
+&lt;a href=&quot;https://arxiv.org/abs/2303.14186&quot;&gt;TRAK&lt;/a&gt;—a scalable and effective method for attributing machine learning
+predictions to training data. TRAK achieves dramatically better speed-efficacy 
+tradeoffs than prior methods, allowing us to apply it across
+a variety of settings, from image classifiers to language models.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;As machine learning models become more capable (and simultaneously, more complex and opaque), the question of “why did my model make this prediction?” is becoming increasingly important. And the key to answering this question often lies within the data that the model was trained on.&lt;/p&gt;
+
+&lt;p&gt;Consequently, there’s been a lot of interest in (and work on) data attribution: how do you attribute a given prediction back to the individual data points in the training set?&lt;/p&gt;
+
+&lt;p&gt;Data attribution methods help us understand how the composition of the training data impacts model predictions. In particular, these methods have been shown to be useful for variety of downstream applications, such as &lt;a href=&quot;/datamodels-2&quot;&gt;identifying brittle model predictions&lt;/a&gt;, 
+&lt;a href=&quot;paper&quot;&gt;assigning data valuations&lt;/a&gt;, &lt;a href=&quot;&quot;&gt;detecting mislabeled data&lt;/a&gt;, and &lt;a href=&quot;/modeldiff&quot;&gt;comparing learning algorithms&lt;/a&gt;, among many others.&lt;/p&gt;
+
+&lt;p&gt;What &lt;em&gt;is&lt;/em&gt; a data attribution method, exactly?
+One way to define a data attribution method is as a function that takes in a
+specific example $z$ and outputs a set of &lt;em&gt;scores&lt;/em&gt; (one per training example) that
+denote the “importance” of each training example to a model’s prediction on $z$.
+In the context of image classification model, an example output of a data
+attribution method could look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/trak/data_attribution.png&quot; alt=&quot;An example of a data attribution method&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Prior works on data attribution, such as &lt;a href=&quot;https://arxiv.org/pdf/1703.04730.pdf&quot;&gt;influence&lt;/a&gt; 
+&lt;a href=&quot;https://arxiv.org/abs/2112.03052&quot;&gt;functions&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/abs/1904.02868&quot;&gt;Shapley values&lt;/a&gt;,
+&lt;a href=&quot;https://arxiv.org/abs/2008.03703&quot;&gt;empirical influences&lt;/a&gt;, and &lt;a href=&quot;/datamodels-1&quot;&gt;datamodels&lt;/a&gt;, 
+all fit naturally into this definition.&lt;/p&gt;
+
+&lt;p&gt;Now, given all these data attribution methods and their various uses, what’s the
+need for yet another one?&lt;/p&gt;
+
+&lt;h2 id=&quot;two-desiderata-for-data-attribution&quot;&gt;Two desiderata for data attribution&lt;/h2&gt;
+
+&lt;p&gt;There are two natural dimensions along which we’d want to evaluate data attribution methods: &lt;strong&gt;efficacy&lt;/strong&gt; and &lt;strong&gt;speed&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Efficacy&lt;/strong&gt;: We want methods that provide data attributions that are reliable and
+faithful to the model’s decision process. (We’ll make this more precise soon.)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Speed&lt;/strong&gt;: At the same time, we’d like methods that are going to scale.
+Indeed, the ever-increasing scale of models and datasets makes only data
+attribution methods with a (very) modest dependence on model and dataset size
+practical.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Evaluating &lt;em&gt;speed&lt;/em&gt; is pretty straightforward: we can just use &lt;gsci-fn&gt;wall-clock
+time &lt;tooltip&gt;In &lt;a href=&quot;https://arxiv.org/abs/2303.14186&quot;&gt;our paper&lt;/a&gt;, we also consider an
+implementation-agnostic metric that still leads to the same
+conclusions.&lt;/tooltip&gt;&lt;/gsci-fn&gt; on a single A100 as a measure of speed.&lt;/p&gt;
+
+&lt;p&gt;Evaluating &lt;em&gt;efficacy&lt;/em&gt;, on the other hand, turns out to be somewhat tricky.
+Indeed, when we look at prior works, there is no unifying metric, and many works
+rely on qualitative heuristics such as visual inspection or proxies such as the
+recall rate for identifying mislabelled examples.&lt;/p&gt;
+
+&lt;p&gt;So how should one evaluate the efficacy of data attribution methods? 
+Well, Inspired by our &lt;a href=&quot;/datamodels-1&quot;&gt;earlier work&lt;/a&gt; on this topic, we adopt the perspective that
+the overarching goal of data attribution is to make accurate counterfactual
+predictions: e.g., answers to questions of the form “what would happen to this
+prediction if a given set images were removed from the training set”?&lt;/p&gt;
+
+&lt;p&gt;To capture this intuition, in &lt;a href=&quot;https://arxiv.org/abs/2303.14186&quot;&gt;our paper&lt;/a&gt;, we propose measuring efficacy with a
+new metric that we call linear datamodeling score (or LDS), which measures this
+predictiveness as a &lt;gsci-fn&gt;single value between zero and one&lt;tooltip&gt;
+Intuitively, when LDS=1, it means that the corresponding method can perfectly
+predict model behavior given only the examples are included in the training set.
+&lt;/tooltip&gt;&lt;/gsci-fn&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;efficacy-vs-speed-tradeoffs&quot;&gt;Efficacy vs. Speed tradeoffs&lt;/h2&gt;
+
+&lt;p&gt;With the above metrics in hand, let’s take a look at existing data
+attribution methods:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/trak/scatterplot_notrak.png&quot; alt=&quot;A scatterplot of existing data attribution methods. On the x axis is the the 
+speed of the data attribution method, measured in A100-minutes. On the y axis 
+is the efficacy, measured in LDS. There are no data attribution methods with 
+high LDS but low time taken&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As we can see, attaining both efficacy and speed is a challenge for all data
+attribution methods that we evaluated—there’s nothing in the top left corner!&lt;/p&gt;
+
+&lt;p&gt;Indeed, on one hand, resampling-based methods (the green and purple points in
+the top right) are very effective, but also very costly. After all, these method
+requires re-training the model many times—and while this might be feasible when
+we’re studying ResNets on CIFAR-10 or ImageNet, it’s unclear what to do when
+studying models like CLIP or GPT-N on datasets like Open Images or Common Crawl.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, there are methods like influence functions or TracIn that are
+fast but &lt;a href=&quot;https://arxiv.org/abs/2006.14651&quot;&gt;not very effective&lt;/a&gt; (they fall into the bottom left part of the above
+plot). Fundamentally, this is because the approximations made by these methods
+don’t &lt;a href=&quot;https://arxiv.org/abs/2209.05364&quot;&gt;quite capture&lt;/a&gt; the structure of complex models such as deep neural networks.&lt;/p&gt;
+
+&lt;p&gt;The above results raise the question:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Do we really have to pay such a heavy price for accurate data attribution?&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;trak-effective-efficient-data-attribution&quot;&gt;TRAK: Effective, efficient data attribution&lt;/h2&gt;
+&lt;p&gt;In our &lt;a href=&quot;https://arxiv.org/abs/2303.14186&quot;&gt;new paper&lt;/a&gt;, we introduce TRAK (Tracing with the Randomly-Projected After
+Kernel), a new data attribution that significantly improves upon existing
+tradeoffs between efficacy and speed in data attribution.&lt;/p&gt;
+
+&lt;p&gt;We’ll leave the math to the paper, but the principle behind TRAK is quite
+simple: we approximate the model of interest with an instance of kernel
+regression (using the so-called “after kernel”); we randomly project the
+corresponding features to a lower-dimensional space; and then we apply (known)
+heuristics for data attributions in the kernel regression regime to perform data
+attribution on the original model.&lt;/p&gt;
+
+&lt;p&gt;Here is our previous plot with TRAK added to it (note the x axis scale!):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/trak/scatterplot_trak.png&quot; alt=&quot;The same scatterplot shown earlier, this time with 3 points showing the performance of
+TRAK, which strongly Pareto-dominates existing methods&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As we can see, TRAK fares pretty well here: it is 100x faster than models of
+comparable efficacy, and (at least) 10x more effective than models of comparable
+speed. As an example: for BERT models finetuned on the QNLI dataset, TRAK scores
+computed in just 17 hours on a single A100 GPU are more effective than
+re-training based datamodels computed in 125 GPU-days. TRAK is also
+significantly more effective than comparably fast methods, such as influence
+function-based methods or TracIn.&lt;/p&gt;
+
+&lt;h2 id=&quot;applying-trak-across-models-and-modalities&quot;&gt;Applying TRAK across models and modalities&lt;/h2&gt;
+
+&lt;p&gt;TRAK applies out-of-the-box to a wide variety of machine learning
+problems—including across modalities (e.g. language &amp;amp; vision among others),
+architectures (e.g. CNNs, Transformers, etc) and tasks (classification,
+contrastive learning, question answering, etc).&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;https://arxiv.org/abs/2303.14186&quot;&gt;our paper&lt;/a&gt;, we apply TRAK to ResNets trained on CIFAR and ImageNet, BERT-base
+models trained on QNLI, CLIP models trained on MS COCO, and mT5 models
+fine-tuned on a fact tracing benchmark. In each of these applications, we show
+that TRAK is significantly more effective at counterfactual prediction than
+existing baselines.&lt;/p&gt;
+
+&lt;p&gt;Next, we’ll take a closer look at two of such applications: CLIP, and
+(transformer-based) language models—two families of models that have become very
+popular and useful in the last few years.&lt;/p&gt;
+
+&lt;h2 id=&quot;application-1-attributing-clip&quot;&gt;Application #1: Attributing CLIP&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://openai.com/research/clip&quot;&gt;CLIP&lt;/a&gt; 
+(Contrastive Langauge-Image Pre-training) representations are a powerful
+tool for translating between vision and language domains.  State-of-the-art CLIP
+models are trained on gigantic datasets of image-caption pairs (link: LAION-7B),
+and properties of the training datasets seem to play a big role in the quality
+of the resulting representations.&lt;/p&gt;
+
+&lt;p&gt;But which training examples actually play the key roles in learning a given
+image-caption pair association? We can use TRAK to study this question.
+Below, for a few different image-caption pairs, we show the top training
+examples identified by TRAK:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/trak/CLIP_top.png&quot; alt=&quot;Example of CLIP nearest neighbors&quot; /&gt;
+&lt;img src=&quot;/assets/trak/CLIP_top2.png&quot; alt=&quot;Example of CLIP nearest neighbors&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see that nearest neighbors identified both by TRAK and by the CLIP
+representations themselves are semantically similar to the target images. But
+good attribution is more than just finding similar examples—they must actually
+be important to how the model makes decisions.&lt;/p&gt;
+
+&lt;p&gt;To evaluate this, we first, for each image-caption pair we remove the k=400
+examples with the most positive TRAK scores; train a new CLIP model on the rest
+of the training set; and measure the model’s alignment (in terms of cosine
+similarity) on the image-caption pair being studied. The resulting models are on
+average &lt;strong&gt;36% less aligned&lt;/strong&gt; on the corresponding image-caption pairs.  Even with
+removing just k=50 examples, you can see that the cosine similarity degrades
+quite a bit (a &lt;strong&gt;16% drop&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;Now, if we do the same but instead remove the most similar examples according to
+CLIP (or remove similar examples according to TracIn, an existing data
+attribution method), the resulting drop in cosine similarity is much less
+profound: compare 36% from TRAK to 11% for CLIP representations and 4% for TracIn
+scores, respectively.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/trak/CLIP_cfx.png&quot; alt=&quot;CLIP counterfactual results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;TRAK thus identifies training examples that are &lt;gsci-fn&gt;counterfactually
+important&lt;tooltip&gt;While we only studied the above counterfactual
+question in our paper, we think that our results open the door to many
+interesting questions---e.g., Can we find a much smaller subset of LAION-7B that
+will get us similar embeddings?&lt;/tooltip&gt;&lt;/gsci-fn&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;application-2-trak-for-model-faithful-fact-tracing&quot;&gt;Application #2: TRAK for Model-Faithful Fact Tracing&lt;/h2&gt;
+
+&lt;p&gt;Next, we look at another application of TRAK that we found to be particularly
+interesting: the problem of &lt;a href=&quot;https://arxiv.org/abs/2205.11482&quot;&gt;fact tracing&lt;/a&gt;. 
+That is, tracing factual
+assertions made by a language model back to corresponding data sources in the
+training set expressing those facts.&lt;/p&gt;
+
+&lt;p&gt;Specifically, we applied TRAK to a fact-tracing benchmark called 
+&lt;a href=&quot;https://huggingface.co/datasets/ekinakyurek/ftrace&quot;&gt;FTRACE-TRex&lt;/a&gt;,
+proposed by &lt;a href=&quot;https://arxiv.org/abs/2205.11482&quot;&gt;Akyurek et al&lt;/a&gt;.
+Briefly, the goal of this benchmark is to  identify the data sources responsible
+for a given fact expressed by a large language model.&lt;/p&gt;
+
+&lt;p&gt;The test set of FTRACE-TRex is a set of “queries”. Each query pertains to a
+particular fact, and is annotated with a set of “ground-truth proponent”
+training examples that express the same fact. So if “Paris is the capital of
+France” was a test set query, its ground-truth proponents in the training set
+might include, say,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;“The capital of France is Paris,”&lt;/li&gt;
+  &lt;li&gt;“The beautiful capital city of Paris, France, comes alive at night,”&lt;/li&gt;
+  &lt;li&gt;“Paris, France is one of the busiest capital cities in Europe”&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The FTRACE-TRex benchmark captures a data attribution method’s ability to
+surface these ground-truth proponents as the “most important” training examples
+for their corresponding queries. (That is, a good data attribution method should
+assign high scores to a query’s ground-truth proponents, relative to the
+rest of the training set.)&lt;/p&gt;
+
+&lt;p&gt;To our surprise, TRAK, while outperforming the previous best data attribution
+method (TracIn) on this task, did worse on this benchmark than a simple
+information-retrieval baseline (BM25)—this baseline is based only on the
+lexical overlap between the query and the possible data sources, and doesn’t
+even look at the model at all!&lt;/p&gt;
+
+&lt;p&gt;To understand the possible roots of TRAK’s underperformance here, we carried out
+a &lt;em&gt;counterfactual analysis&lt;/em&gt;. What we found was that when we removed the training
+examples that TRAK identified as the most important (despite these being the
+“wrong” ones according to the FTRACE-TRex benchmark), the model was indeed less
+likely to express the corresponding facts. More crucially, though, this effect
+was actually stronger when we removed TRAK-identified examples than when we
+removed BM25-identified examples, and even stronger than when we removed the
+&lt;strong&gt;ground-truth primary sources&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/trak/fact_tracing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll leave the details of our experiment to the paper, but our result
+highlights a difference between “fact tracing” and data attribution (which might
+be more appropriately called “behavior tracing”). That is, finding a data source
+that factually supports a language model’s output is a different task than
+identifying the actual data sources that caused the model to generate that
+output. One might try to solve the former task with techniques such as
+information retrieval or web search (to “cite” sources). But the latter task is
+fundamentally one that cannot be decoupled from the model—and TRAK seems to be a
+promising approach here.&lt;/p&gt;
+
+&lt;p&gt;More broadly, we think that TRAK can be a useful tool in getting a more
+data-driven understanding of learning mechanisms underlying LLMs.&lt;/p&gt;
+
+&lt;h2 id=&quot;attributing-with-trak-the-pytorch-api&quot;&gt;Attributing with TRAK: The PyTorch API&lt;/h2&gt;
+
+&lt;p&gt;With the evaluation and examples above, hopefully we made a case that TRAK can
+be an effective and efficient data attribution method.  But what does it take to
+apply it to your task?&lt;/p&gt;
+
+&lt;p&gt;We made sure that using TRAK is as easy as possible. To this end, we’re
+releasing &lt;a href=&quot;https://github.com/MadryLab/trak&quot;&gt;trak&lt;/a&gt; as a &lt;gsci-fn&gt;fast&lt;tooltip&gt;For our engineering-oriented reader:
+this involved writing a custom CUDA kernel 
+for fast random projections, to avoid materializing a random matrix with
+billions of entries&lt;/tooltip&gt;&lt;/gsci-fn&gt;, minimal PyTorch-based API that allows
+users to compute TRAK scores with just a few lines of code. We provide built-in
+TRAK functions for popular applications such as analyzing image classifiers,
+CLIP models, and text classifiers. The API also makes it easy to adapt TRAK for
+new, custom tasks.&lt;/p&gt;
+
+&lt;p&gt;You can get started with installation &lt;a href=&quot;link to install faq&quot;&gt;here&lt;/a&gt;. See our
+&lt;a href=&quot;https://github.com/MadryLab/trak&quot;&gt;code&lt;/a&gt; and &lt;a href=&quot;http://trak.csail.mit.edu/html&quot;&gt;documentation&lt;/a&gt;, as well as &lt;a href=&quot;https://trak.csail.mit.edu/html/quickstart.html&quot;&gt;tutorials&lt;/a&gt; and 
+&lt;a href=&quot;https://github.com/MadryLab/trak/tree/main/examples&quot;&gt;examples&lt;/a&gt;
+for more details.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;In this post, we considered the problem of data attribution—i.e., tracing the
+behavior of machine learning models back to their training data. Our new method,
+TRAK, can provide attributions that are accurate and orders of magnitude more
+efficient than comparably effective methods.&lt;/p&gt;
+
+&lt;p&gt;Prior works have already shown the wide utility and potential of data
+attribution methods, including explaining predictions, debugging model behavior,
+assigning data valuations, and filtering or optimizing data. But, the main
+bottleneck in deploying these methods was their lack of scalability or
+predictiveness in modern settings. We believe that TRAK significantly reduces
+that bottleneck and that using TRAK in these downstream applications will
+accelerate and unlock many new capabilities, particularly in settings where
+training is very expensive, such as large language models.&lt;/p&gt;
+
+&lt;p&gt;We are excited about the possibilities enabled by TRAK. See &lt;a href=&quot;https://arxiv.org/abs/2303.14186&quot;&gt;the paper&lt;/a&gt;
+for more details, or get started right away applying TRAK to your problem with
+our &lt;a href=&quot;https://github.com/MadryLab/trak&quot;&gt;library&lt;/a&gt;!&lt;/p&gt;
+  </content>
+    <author>
+      <name>Gradient Science</name>
+      <uri>https://gradientscience.org/</uri>
     </author>
   </entry>
 
@@ -2152,76 +2497,6 @@ simultaneously from multiple distinct meshes of the same underlying manifold.
     <author>
       <name>arXiv: Computational Geometry</name>
       <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: An Evaluation of GPU Filters for Accelerating the 2D Convex Hull</title>
-    <link href="http://arxiv.org/abs/2303.10581"/>
-    <id>http://arxiv.org/abs/2303.10581</id>
-    <updated>2023-03-21T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Carrasco_R/0/1/0/all/0/1&quot;&gt;Roberto Carrasco&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ferrada_H/0/1/0/all/0/1&quot;&gt;H&amp;#xe9;ctor Ferrada&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Navarro_C/0/1/0/all/0/1&quot;&gt;Crist&amp;#xf3;bal A. Navarro&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hitschfeld_N/0/1/0/all/0/1&quot;&gt;Nancy Hitschfeld&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Convex Hull algorithm is one of the most important algorithms in
-computational geometry, with many applications such as in computer graphics,
-robotics, and data mining. Despite the advances in the new algorithms in this
-area, it is often needed to improve the performance to solve more significant
-problems quickly or in real-time processing. This work presents an experimental
-evaluation of GPU filters to reduce the cost of computing the 2D convex hull.
-The technique first performs a preprocessing of the input set, filtering all
-points within an eight-vertex polygon in logarithmic time, to obtain a reduced
-set of candidate points. We use parallel computation and the use of the
-Manhattan distance as a metric to find the vertices of the polygon and perform
-the point filtering. For the filtering stage we study different approaches;
-from custom CUDA kernels to libraries such as Thrust and CUB. Three types of
-point distributions are tested: a normal distribution (favorable case),
-circumference (the worst case), and a case where points are shifted randomly
-from the circumference (intermediate case). Experimental evaluation shows that
-the GPU filtering algorithm can be up to 23x faster than a sequential CPU
-implementation, and the whole convex hull computation can be up to 30x faster
-than the fastest implementation provided by the CGAL library.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Explorable families of graphs</title>
-    <link href="http://arxiv.org/abs/2303.10394"/>
-    <id>http://arxiv.org/abs/2303.10394</id>
-    <updated>2023-03-21T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pelc_A/0/1/0/all/0/1&quot;&gt;Andrzej Pelc&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Graph exploration is one of the fundamental tasks performed by a mobile agent
-in a graph. An $n$-node graph has unlabeled nodes, and all ports at any node of
-degree $d$ are arbitrarily numbered $0,\dots, d-1$. A mobile agent, initially
-situated at some starting node $v$, has to visit all nodes of the graph and
-stop. In the absence of any initial knowledge of the graph the task of
-deterministic exploration is often impossible. On the other hand, for some
-families of graphs it is possible to design deterministic exploration
-algorithms working for any graph of the family. We call such families of graphs
-{\em explorable}. Examples of explorable families are all finite families of
-graphs, as well as the family of all trees.
-&lt;/p&gt;
-&lt;p&gt;In this paper we study the problem of which families of graphs are
-explorable. We characterize all such families, and then ask the question
-whether there exists a universal deterministic algorithm that, given an
-explorable family of graphs, explores any graph of this family, without knowing
-which graph of the family is being explored. The answer to this question turns
-out to depend on how the explorable family is given to the hypothetical
-universal algorithm. If the algorithm can get the answer to any yes/no question
-about the family, then such a universal algorithm can be constructed. If, on
-the other hand, the algorithm can be only given an algorithmic description of
-the input explorable family, then such a universal deterministic algorithm does
-not exist.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
     </author>
   </entry>
 
