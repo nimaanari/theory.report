@@ -10,6 +10,38 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Luca Trevisan: Introducing Bocconi’s new M.Sc. in Artificial Intelligence</title>
+    <link href="https://lucatrevisan.wordpress.com/2023/03/27/introducing-bocconis-new-m-sc-in-artificial-intelligence/"/>
+    <id>http://lucatrevisan.wordpress.com/?p=4670</id>
+    <updated>2023-03-27T18:30:52+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;This September, Bocconi will start a new M.Sc. in Artificial Intelligence. It will be a two-year computer science degree meant for students with Bachelor degrees in computer science, engineering, math, statistics, physics and related quantitative fields. &lt;/p&gt;
+
+
+
+&lt;p&gt;In the first year, courses on algorithms, mathematical methods, optimization, information theory, and software engineering will build a foundation in math and CS, then courses on deep learning, reinforcement learning, natural language processing and computer vision and image processing will go in depth on machine learning and some of its applications.  In the second year there are various options and elective courses, with the possibility to study, for example, cryptography and blockchains, or bio-medical applications. As common for the second year of Bocconi&amp;#8217;s M.Sc. degrees, there will be options for exchange programs to spend a semester abroad. Students also take a seminar on ethics in AI, a project-oriented AI lab, and a foreign language (not English and not the student&amp;#8217;s native language) course. The language of instruction is English.&lt;/p&gt;
+
+
+
+&lt;p&gt;Tomorrow at 5pm CET there will be an online information session: those interested can &lt;a href=&quot;https://info.unibocconi.it/info/session.php?tipo=B&amp;amp;lingua=eng&amp;amp;key=AI&quot;&gt;sign up here&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;More information about the degree are at &lt;strong&gt;&lt;a href=&quot;https://www.unibocconi.eu/ai-msc&quot;&gt;www.unibocconi.eu/ai-msc&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;Applications open today and are due by May 25th.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By luca&lt;/p&gt;
+  </content>
+    <author>
+      <name>Luca Trevisan</name>
+      <uri>https://lucatrevisan.wordpress.com</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR23-036 |  Derandomization with Minimal Memory Footprint | 
 
 	Dean Doron, 
@@ -421,13 +453,13 @@ representations themselves are semantically similar to the target images. But
 good attribution is more than just finding similar examples—they must actually
 be important to how the model makes decisions.&lt;/p&gt;
 
-&lt;p&gt;To evaluate this, we first, for each image-caption pair we remove the k=400
+&lt;p&gt;To evaluate this, we first, for each image-caption pair we remove the $k=400$
 examples with the most positive TRAK scores; train a new CLIP model on the rest
 of the training set; and measure the model’s alignment (in terms of cosine
 similarity) on the image-caption pair being studied. The resulting models are on
-average &lt;strong&gt;36% less aligned&lt;/strong&gt; on the corresponding image-caption pairs.  Even with
-removing just k=50 examples, you can see that the cosine similarity degrades
-quite a bit (a &lt;strong&gt;16% drop&lt;/strong&gt;).&lt;/p&gt;
+average &lt;em&gt;36% less aligned&lt;/em&gt; on the corresponding image-caption pairs.  Even with
+removing just $k=50$ examples, you can see that the cosine similarity degrades
+quite a bit (a &lt;em&gt;16% drop&lt;/em&gt;).&lt;/p&gt;
 
 &lt;p&gt;Now, if we do the same but instead remove the most similar examples according to
 CLIP (or remove similar examples according to TracIn, an existing data
@@ -452,8 +484,7 @@ assertions made by a language model back to corresponding data sources in the
 training set expressing those facts.&lt;/p&gt;
 
 &lt;p&gt;Specifically, we applied TRAK to a fact-tracing benchmark called 
-&lt;a href=&quot;https://huggingface.co/datasets/ekinakyurek/ftrace&quot;&gt;FTRACE-TRex&lt;/a&gt;,
-proposed by &lt;a href=&quot;https://arxiv.org/abs/2205.11482&quot;&gt;Akyurek et al&lt;/a&gt;.
+&lt;a href=&quot;https://huggingface.co/datasets/ekinakyurek/ftrace&quot;&gt;FTRACE-TRex&lt;/a&gt;.
 Briefly, the goal of this benchmark is to  identify the data sources responsible
 for a given fact expressed by a large language model.&lt;/p&gt;
 
@@ -482,13 +513,13 @@ lexical overlap between the query and the possible data sources, and doesn’t
 even look at the model at all!&lt;/p&gt;
 
 &lt;p&gt;To understand the possible roots of TRAK’s underperformance here, we carried out
-a &lt;em&gt;counterfactual analysis&lt;/em&gt;. What we found was that when we removed the training
+a &lt;em&gt;counterfactual&lt;/em&gt; analysis. What we found was that when we removed the training
 examples that TRAK identified as the most important (despite these being the
 “wrong” ones according to the FTRACE-TRex benchmark), the model was indeed less
 likely to express the corresponding facts. More crucially, though, this effect
 was actually stronger when we removed TRAK-identified examples than when we
 removed BM25-identified examples, and even stronger than when we removed the
-&lt;strong&gt;ground-truth primary sources&lt;/strong&gt;!&lt;/p&gt;
+&lt;em&gt;ground-truth primary sources&lt;/em&gt;!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/trak/fact_tracing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -515,13 +546,18 @@ apply it to your task?&lt;/p&gt;
 releasing &lt;a href=&quot;https://github.com/MadryLab/trak&quot;&gt;trak&lt;/a&gt; as a &lt;gsci-fn&gt;fast&lt;tooltip&gt;For our engineering-oriented reader:
 this involved writing a custom CUDA kernel 
 for fast random projections, to avoid materializing a random matrix with
-billions of entries&lt;/tooltip&gt;&lt;/gsci-fn&gt;, minimal PyTorch-based API that allows
-users to compute TRAK scores with just a few lines of code. We provide built-in
+billions of entries.&lt;/tooltip&gt;&lt;/gsci-fn&gt;, minimal PyTorch-based API that allows
+users to compute TRAK scores with just a few lines of code:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/trak/pretty_code.png&quot; alt=&quot;TRAK API Example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We provide built-in
 TRAK functions for popular applications such as analyzing image classifiers,
 CLIP models, and text classifiers. The API also makes it easy to adapt TRAK for
 new, custom tasks.&lt;/p&gt;
 
-&lt;p&gt;You can get started with installation &lt;a href=&quot;link to install faq&quot;&gt;here&lt;/a&gt;. See our
+&lt;p&gt;You can get started with installation 
+&lt;a href=&quot;https://trak.csail.mit.edu/html/install.html&quot;&gt;here&lt;/a&gt;. See our
 &lt;a href=&quot;https://github.com/MadryLab/trak&quot;&gt;code&lt;/a&gt; and &lt;a href=&quot;http://trak.csail.mit.edu/html&quot;&gt;documentation&lt;/a&gt;, as well as &lt;a href=&quot;https://trak.csail.mit.edu/html/quickstart.html&quot;&gt;tutorials&lt;/a&gt; and 
 &lt;a href=&quot;https://github.com/MadryLab/trak/tree/main/examples&quot;&gt;examples&lt;/a&gt;
 for more details.&lt;/p&gt;
@@ -2472,31 +2508,6 @@ $\gamma$-complete subgraph.
     <author>
       <name>arXiv: Computational Complexity</name>
       <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Conformal Generative Modeling on Triangulated Surfaces</title>
-    <link href="http://arxiv.org/abs/2303.10251"/>
-    <id>http://arxiv.org/abs/2303.10251</id>
-    <updated>2023-03-21T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dorobantu_V/0/1/0/all/0/1&quot;&gt;Victor Dorobantu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Borcherds_C/0/1/0/all/0/1&quot;&gt;Charlotte Borcherds&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yue_Y/0/1/0/all/0/1&quot;&gt;Yisong Yue&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose conformal generative modeling, a framework for generative modeling
-on 2D surfaces approximated by discrete triangle meshes. Our approach leverages
-advances in discrete conformal geometry to develop a map from a source triangle
-mesh to a target triangle mesh of a simple manifold such as a sphere. After
-accounting for errors due to the mesh discretization, we can use any generative
-modeling approach developed for simple manifolds as a plug-and-play subroutine.
-We demonstrate our framework on multiple complicated manifolds and multiple
-generative modeling subroutines, where we show that our approach can learn good
-estimates of distributions on meshes from samples, and can also learn
-simultaneously from multiple distinct meshes of the same underlying manifold.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
     </author>
   </entry>
 

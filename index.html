@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-03-27T17:30:26Z">Monday, March 27 2023, 17:30</time>
+          <time class='timeago' datetime="2023-03-27T18:36:09Z">Monday, March 27 2023, 18:36</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,54 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Monday, March 27
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://lucatrevisan.wordpress.com/2023/03/27/introducing-bocconis-new-m-sc-in-artificial-intelligence/'>Introducing Bocconi’s new M.Sc. in Artificial Intelligence</a></h3>
+        <p class='tr-article-feed'>from <a href='https://lucatrevisan.wordpress.com'>Luca Trevisan</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          This September, Bocconi will start a new M.Sc. in Artificial Intelligence. It will be a two-year computer science degree meant for students with Bachelor degrees in computer science, engineering, math, statistics, physics and related quantitative fields. In the first year, &#8230; Continue reading &#8594;
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>This September, Bocconi will start a new M.Sc. in Artificial Intelligence. It will be a two-year computer science degree meant for students with Bachelor degrees in computer science, engineering, math, statistics, physics and related quantitative fields. </p>
+
+
+
+<p>In the first year, courses on algorithms, mathematical methods, optimization, information theory, and software engineering will build a foundation in math and CS, then courses on deep learning, reinforcement learning, natural language processing and computer vision and image processing will go in depth on machine learning and some of its applications.  In the second year there are various options and elective courses, with the possibility to study, for example, cryptography and blockchains, or bio-medical applications. As common for the second year of Bocconi&#8217;s M.Sc. degrees, there will be options for exchange programs to spend a semester abroad. Students also take a seminar on ethics in AI, a project-oriented AI lab, and a foreign language (not English and not the student&#8217;s native language) course. The language of instruction is English.</p>
+
+
+
+<p>Tomorrow at 5pm CET there will be an online information session: those interested can <a href="https://info.unibocconi.it/info/session.php?tipo=B&amp;lingua=eng&amp;key=AI">sign up here</a>.</p>
+
+
+
+<p>More information about the degree are at <strong><a href="https://www.unibocconi.eu/ai-msc">www.unibocconi.eu/ai-msc</a></strong>.</p>
+
+
+
+<p>Applications open today and are due by May 25th.</p>
+<p class="authors">By luca</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-03-27T18:30:52Z">Monday, March 27 2023, 18:30</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -984,12 +1032,12 @@ representations themselves are semantically similar to the target images. But
 good attribution is more than just finding similar examples—they must actually
 be important to how the model makes decisions.</p>
 
-<p>To evaluate this, we first, for each image-caption pair we remove the k=400
+<p>To evaluate this, we first, for each image-caption pair we remove the $k=400$
 examples with the most positive TRAK scores; train a new CLIP model on the rest
 of the training set; and measure the model’s alignment (in terms of cosine
 similarity) on the image-caption pair being studied. The resulting models are on
 average 36% less aligned on the corresponding image-caption pairs.  Even with
-removing just k=50 examples, you can see that the cosine similarity degrades
+removing just $k=50$ examples, you can see that the cosine similarity degrades
 quite a bit (a 16% drop).</p>
 
 <p>Now, if we do the same but instead remove the most similar examples according to
@@ -1015,8 +1063,7 @@ assertions made by a language model back to corresponding data sources in the
 training set expressing those facts.</p>
 
 <p>Specifically, we applied TRAK to a fact-tracing benchmark called 
-FTRACE-TRex,
-proposed by Akyurek et al.
+FTRACE-TRex.
 Briefly, the goal of this benchmark is to  identify the data sources responsible
 for a given fact expressed by a large language model.</p>
 
@@ -1078,13 +1125,18 @@ apply it to your task?</p>
 releasing trak as a fastFor our engineering-oriented reader:
 this involved writing a custom CUDA kernel 
 for fast random projections, to avoid materializing a random matrix with
-billions of entries, minimal PyTorch-based API that allows
-users to compute TRAK scores with just a few lines of code. We provide built-in
+billions of entries., minimal PyTorch-based API that allows
+users to compute TRAK scores with just a few lines of code:</p>
+
+<p>♦</p>
+
+<p>We provide built-in
 TRAK functions for popular applications such as analyzing image classifiers,
 CLIP models, and text classifiers. The API also makes it easy to adapt TRAK for
 new, custom tasks.</p>
 
-<p>You can get started with installation here. See our
+<p>You can get started with installation 
+here. See our
 code and documentation, as well as tutorials and 
 examples
 for more details.</p>
@@ -1297,13 +1349,13 @@ representations themselves are semantically similar to the target images. But
 good attribution is more than just finding similar examples—they must actually
 be important to how the model makes decisions.</p>
 
-<p>To evaluate this, we first, for each image-caption pair we remove the k=400
+<p>To evaluate this, we first, for each image-caption pair we remove the $k=400$
 examples with the most positive TRAK scores; train a new CLIP model on the rest
 of the training set; and measure the model’s alignment (in terms of cosine
 similarity) on the image-caption pair being studied. The resulting models are on
-average <strong>36% less aligned</strong> on the corresponding image-caption pairs.  Even with
-removing just k=50 examples, you can see that the cosine similarity degrades
-quite a bit (a <strong>16% drop</strong>).</p>
+average <em>36% less aligned</em> on the corresponding image-caption pairs.  Even with
+removing just $k=50$ examples, you can see that the cosine similarity degrades
+quite a bit (a <em>16% drop</em>).</p>
 
 <p>Now, if we do the same but instead remove the most similar examples according to
 CLIP (or remove similar examples according to TracIn, an existing data
@@ -1328,8 +1380,7 @@ assertions made by a language model back to corresponding data sources in the
 training set expressing those facts.</p>
 
 <p>Specifically, we applied TRAK to a fact-tracing benchmark called 
-<a href="https://huggingface.co/datasets/ekinakyurek/ftrace">FTRACE-TRex</a>,
-proposed by <a href="https://arxiv.org/abs/2205.11482">Akyurek et al</a>.
+<a href="https://huggingface.co/datasets/ekinakyurek/ftrace">FTRACE-TRex</a>.
 Briefly, the goal of this benchmark is to  identify the data sources responsible
 for a given fact expressed by a large language model.</p>
 
@@ -1358,13 +1409,13 @@ lexical overlap between the query and the possible data sources, and doesn’t
 even look at the model at all!</p>
 
 <p>To understand the possible roots of TRAK’s underperformance here, we carried out
-a <em>counterfactual analysis</em>. What we found was that when we removed the training
+a <em>counterfactual</em> analysis. What we found was that when we removed the training
 examples that TRAK identified as the most important (despite these being the
 “wrong” ones according to the FTRACE-TRex benchmark), the model was indeed less
 likely to express the corresponding facts. More crucially, though, this effect
 was actually stronger when we removed TRAK-identified examples than when we
 removed BM25-identified examples, and even stronger than when we removed the
-<strong>ground-truth primary sources</strong>!</p>
+<em>ground-truth primary sources</em>!</p>
 
 <p><img src="/assets/trak/fact_tracing.png" alt="" /></p>
 
@@ -1391,13 +1442,18 @@ apply it to your task?</p>
 releasing <a href="https://github.com/MadryLab/trak">trak</a> as a <gsci-fn>fast<tooltip>For our engineering-oriented reader:
 this involved writing a custom CUDA kernel 
 for fast random projections, to avoid materializing a random matrix with
-billions of entries</tooltip></gsci-fn>, minimal PyTorch-based API that allows
-users to compute TRAK scores with just a few lines of code. We provide built-in
+billions of entries.</tooltip></gsci-fn>, minimal PyTorch-based API that allows
+users to compute TRAK scores with just a few lines of code:</p>
+
+<p><img src="/assets/trak/pretty_code.png" alt="TRAK API Example" /></p>
+
+<p>We provide built-in
 TRAK functions for popular applications such as analyzing image classifiers,
 CLIP models, and text classifiers. The API also makes it easy to adapt TRAK for
 new, custom tasks.</p>
 
-<p>You can get started with installation <a href="link to install faq">here</a>. See our
+<p>You can get started with installation 
+<a href="https://trak.csail.mit.edu/html/install.html">here</a>. See our
 <a href="https://github.com/MadryLab/trak">code</a> and <a href="http://trak.csail.mit.edu/html">documentation</a>, as well as <a href="https://trak.csail.mit.edu/html/quickstart.html">tutorials</a> and 
 <a href="https://github.com/MadryLab/trak/tree/main/examples">examples</a>
 for more details.</p>
@@ -4410,57 +4466,6 @@ that it is W[1]-hard parameterized by both the degeneracy, which implies the
 W[1]-hardness parameterized by the number of vertices in the
 $\gamma$-complete-subgraph, and the number of elements outside the
 $\gamma$-complete subgraph.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-03-21T00:30:00Z">Tuesday, March 21 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2303.10251'>Conformal Generative Modeling on Triangulated Surfaces</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Victor Dorobantu, Charlotte Borcherds, Yisong Yue</p><p>We propose conformal generative modeling, a framework for generative modeling
-on 2D surfaces approximated by discrete triangle meshes. Our approach leverages
-advances in discrete conformal geometry to develop a map from a source triangle
-mesh to a target triangle mesh of a simple manifold such as a sphere. After
-accounting for errors due to the mesh discretization, we can use any generative
-modeling approach developed for simple manifolds as a plug-and-play subroutine.
-We demonstrate our framework on multiple complicated manifolds and multiple
-generative modeling subroutines, where we show that our approach can learn good
-estimates of distributions on meshes from samples, and can also learn
-simultaneously from multiple distinct meshes of the same underlying manifold.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Dorobantu_V/0/1/0/all/0/1">Victor Dorobantu</a>, <a href="http://arxiv.org/find/cs/1/au:+Borcherds_C/0/1/0/all/0/1">Charlotte Borcherds</a>, <a href="http://arxiv.org/find/cs/1/au:+Yue_Y/0/1/0/all/0/1">Yisong Yue</a></p><p>We propose conformal generative modeling, a framework for generative modeling
-on 2D surfaces approximated by discrete triangle meshes. Our approach leverages
-advances in discrete conformal geometry to develop a map from a source triangle
-mesh to a target triangle mesh of a simple manifold such as a sphere. After
-accounting for errors due to the mesh discretization, we can use any generative
-modeling approach developed for simple manifolds as a plug-and-play subroutine.
-We demonstrate our framework on multiple complicated manifolds and multiple
-generative modeling subroutines, where we show that our approach can learn good
-estimates of distributions on meshes from samples, and can also learn
-simultaneously from multiple distinct meshes of the same underlying manifold.
 </p>
         
         </div>
