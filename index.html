@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-03-27T18:36:09Z">Monday, March 27 2023, 18:36</time>
+          <time class='timeago' datetime="2023-03-27T19:30:40Z">Monday, March 27 2023, 19:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -888,8 +888,11 @@ a variety of settings, from image classifiers to language models.</p>
 
 <p>Consequently, there’s been a lot of interest in (and work on) data attribution: how do you attribute a given prediction back to the individual data points in the training set?</p>
 
-<p>Data attribution methods help us understand how the composition of the training data impacts model predictions. In particular, these methods have been shown to be useful for variety of downstream applications, such as identifying brittle model predictions, 
-assigning data valuations, detecting mislabeled data, and comparing learning algorithms, among many others.</p>
+<p>Data attribution methods help us understand how the composition of the training data impacts model predictions. In particular, these methods have been shown to be useful for variety of downstream applications, such as 
+identifying brittle model predictions, 
+assigning data valuations, 
+detecting mislabeled data, and 
+comparing learning algorithms, among many others.</p>
 
 <p>What is a data attribution method, exactly?
 One way to define a data attribution method is as a function that takes in a
@@ -976,7 +979,8 @@ tradeoffs between efficacy and speed in data attribution.</p>
 
 <p>We’ll leave the math to the paper, but the principle behind TRAK is quite
 simple: we approximate the model of interest with an instance of kernel
-regression (using the so-called “after kernel”); we randomly project the
+regression (using the so-called “after kernel”); 
+we randomly project the
 corresponding features to a lower-dimensional space; and then we apply (known)
 heuristics for data attributions in the kernel regression regime to perform data
 attribution on the original model.</p>
@@ -1015,7 +1019,7 @@ Application #1: Attributing CLIP
 <p>CLIP 
 (Contrastive Langauge-Image Pre-training) representations are a powerful
 tool for translating between vision and language domains.  State-of-the-art CLIP
-models are trained on gigantic datasets of image-caption pairs (link: LAION-7B),
+models are trained on gigantic datasets of image-caption pairs,
 and properties of the training datasets seem to play a big role in the quality
 of the resulting representations.</p>
 
@@ -1201,8 +1205,11 @@ a variety of settings, from image classifiers to language models.</em></p>
 
 <p>Consequently, there’s been a lot of interest in (and work on) data attribution: how do you attribute a given prediction back to the individual data points in the training set?</p>
 
-<p>Data attribution methods help us understand how the composition of the training data impacts model predictions. In particular, these methods have been shown to be useful for variety of downstream applications, such as <a href="/datamodels-2">identifying brittle model predictions</a>, 
-<a href="paper">assigning data valuations</a>, <a href="">detecting mislabeled data</a>, and <a href="/modeldiff">comparing learning algorithms</a>, among many others.</p>
+<p>Data attribution methods help us understand how the composition of the training data impacts model predictions. In particular, these methods have been shown to be useful for variety of downstream applications, such as 
+<a href="/datamodels-2">identifying brittle model predictions</a>, 
+<a href="https://arxiv.org/abs/1904.02868">assigning data valuations</a>, 
+<a href="https://arxiv.org/abs/2206.10013">detecting mislabeled data</a>, and 
+<a href="/modeldiff">comparing learning algorithms</a>, among many others.</p>
 
 <p>What <em>is</em> a data attribution method, exactly?
 One way to define a data attribution method is as a function that takes in a
@@ -1251,7 +1258,7 @@ predictions: e.g., answers to questions of the form “what would happen to this
 prediction if a given set images were removed from the training set”?</p>
 
 <p>To capture this intuition, in <a href="https://arxiv.org/abs/2303.14186">our paper</a>, we propose measuring efficacy with a
-new metric that we call linear datamodeling score (or LDS), which measures this
+new metric that we call <em>linear datamodeling score</em> (or LDS), which measures this
 predictiveness as a <gsci-fn>single value between zero and one<tooltip>
 Intuitively, when LDS=1, it means that the corresponding method can perfectly
 predict model behavior given only the examples are included in the training set.
@@ -1292,7 +1299,8 @@ tradeoffs between efficacy and speed in data attribution.</p>
 
 <p>We’ll leave the math to the paper, but the principle behind TRAK is quite
 simple: we approximate the model of interest with an instance of kernel
-regression (using the so-called “after kernel”); we randomly project the
+regression (using the so-called “<a href="https://arxiv.org/abs/2105.10585">after kernel</a>”); 
+we randomly project the
 corresponding features to a lower-dimensional space; and then we apply (known)
 heuristics for data attributions in the kernel regression regime to perform data
 attribution on the original model.</p>
@@ -1332,7 +1340,7 @@ popular and useful in the last few years.</p>
 <p><a href="https://openai.com/research/clip">CLIP</a> 
 (Contrastive Langauge-Image Pre-training) representations are a powerful
 tool for translating between vision and language domains.  State-of-the-art CLIP
-models are trained on gigantic datasets of image-caption pairs (link: LAION-7B),
+models are trained on gigantic datasets of image-caption pairs,
 and properties of the training datasets seem to play a big role in the quality
 of the resulting representations.</p>
 

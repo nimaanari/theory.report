@@ -263,8 +263,11 @@ a variety of settings, from image classifiers to language models.&lt;/em&gt;&lt;
 
 &lt;p&gt;Consequently, there’s been a lot of interest in (and work on) data attribution: how do you attribute a given prediction back to the individual data points in the training set?&lt;/p&gt;
 
-&lt;p&gt;Data attribution methods help us understand how the composition of the training data impacts model predictions. In particular, these methods have been shown to be useful for variety of downstream applications, such as &lt;a href=&quot;/datamodels-2&quot;&gt;identifying brittle model predictions&lt;/a&gt;, 
-&lt;a href=&quot;paper&quot;&gt;assigning data valuations&lt;/a&gt;, &lt;a href=&quot;&quot;&gt;detecting mislabeled data&lt;/a&gt;, and &lt;a href=&quot;/modeldiff&quot;&gt;comparing learning algorithms&lt;/a&gt;, among many others.&lt;/p&gt;
+&lt;p&gt;Data attribution methods help us understand how the composition of the training data impacts model predictions. In particular, these methods have been shown to be useful for variety of downstream applications, such as 
+&lt;a href=&quot;/datamodels-2&quot;&gt;identifying brittle model predictions&lt;/a&gt;, 
+&lt;a href=&quot;https://arxiv.org/abs/1904.02868&quot;&gt;assigning data valuations&lt;/a&gt;, 
+&lt;a href=&quot;https://arxiv.org/abs/2206.10013&quot;&gt;detecting mislabeled data&lt;/a&gt;, and 
+&lt;a href=&quot;/modeldiff&quot;&gt;comparing learning algorithms&lt;/a&gt;, among many others.&lt;/p&gt;
 
 &lt;p&gt;What &lt;em&gt;is&lt;/em&gt; a data attribution method, exactly?
 One way to define a data attribution method is as a function that takes in a
@@ -313,7 +316,7 @@ predictions: e.g., answers to questions of the form “what would happen to this
 prediction if a given set images were removed from the training set”?&lt;/p&gt;
 
 &lt;p&gt;To capture this intuition, in &lt;a href=&quot;https://arxiv.org/abs/2303.14186&quot;&gt;our paper&lt;/a&gt;, we propose measuring efficacy with a
-new metric that we call linear datamodeling score (or LDS), which measures this
+new metric that we call &lt;em&gt;linear datamodeling score&lt;/em&gt; (or LDS), which measures this
 predictiveness as a &lt;gsci-fn&gt;single value between zero and one&lt;tooltip&gt;
 Intuitively, when LDS=1, it means that the corresponding method can perfectly
 predict model behavior given only the examples are included in the training set.
@@ -354,7 +357,8 @@ tradeoffs between efficacy and speed in data attribution.&lt;/p&gt;
 
 &lt;p&gt;We’ll leave the math to the paper, but the principle behind TRAK is quite
 simple: we approximate the model of interest with an instance of kernel
-regression (using the so-called “after kernel”); we randomly project the
+regression (using the so-called “&lt;a href=&quot;https://arxiv.org/abs/2105.10585&quot;&gt;after kernel&lt;/a&gt;”); 
+we randomly project the
 corresponding features to a lower-dimensional space; and then we apply (known)
 heuristics for data attributions in the kernel regression regime to perform data
 attribution on the original model.&lt;/p&gt;
@@ -394,7 +398,7 @@ popular and useful in the last few years.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://openai.com/research/clip&quot;&gt;CLIP&lt;/a&gt; 
 (Contrastive Langauge-Image Pre-training) representations are a powerful
 tool for translating between vision and language domains.  State-of-the-art CLIP
-models are trained on gigantic datasets of image-caption pairs (link: LAION-7B),
+models are trained on gigantic datasets of image-caption pairs,
 and properties of the training datasets seem to play a big role in the quality
 of the resulting representations.&lt;/p&gt;
 
