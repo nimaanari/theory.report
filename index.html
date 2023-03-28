@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-03-28T18:34:36Z">Tuesday, March 28 2023, 18:34</time>
+          <time class='timeago' datetime="2023-03-28T19:30:36Z">Tuesday, March 28 2023, 19:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,69 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Tuesday, March 28
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/040'>TR23-040 |  Certified Hardness vs. Randomness for Log-Space | 
+
+	Edward Pyne, 
+
+	Wei Zhan, 
+
+	Ran Raz</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Let $\mathcal{L}$ be a language that can be decided in linear space and let $\epsilon &gt;0$ be any constant. Let $\mathcal{A}$ be the exponential hardness assumption that for every $n$, membership in $\mathcal{L}$ for inputs of length~$n$ cannot be decided by circuits of size smaller than $2^{\epsilon n}$. 
+We prove that for every function $f :\{0,1\}^* \rightarrow \{0,1\}$, computable by a randomized logspace algorithm $R$, there exists a deterministic logspace algorithm $D$ (attempting to compute $f$), such that on every input $x$ of length $n$, the algorithm $D$ outputs one of the following:
+
+1: The correct value $f(x)$.
+
+2: The string: ``I am unable to compute $f(x)$ because the hardness assumption $\mathcal{A}$ is false&#39;&#39;, followed by a (provenly correct) circuit of size smaller than $2^{\epsilon n&#39;}$ for membership in $\mathcal{L}$ for inputs of length~$n&#39;$, for some $n&#39; = \Theta (\log n)$; that is, a circuit that refutes $\mathcal{A}$.
+
+Moreover, $D$ is explicitly constructed, given $R$.
+
+We note that previous works on the hardness-versus-randomness paradigm give derandomized algorithms that rely blindly on the hardness assumption. If the hardness assumption is false, the algorithms may output incorrect values, and thus a user cannot trust that an output given by the algorithm is correct. Instead, our algorithm $D$ verifies the computation so that it never outputs an incorrect value. Thus, if $D$ outputs a value for $f(x)$, that value is certified to be correct. Moreover, if $D$ does not output a value for $f(x)$, it alerts that the hardness assumption was found to be false, and refutes the assumption.
+
+Our next result is a universal derandomizer for $BPL$ (the class of problems solvable by bounded-error randomized logspace algorithms): We give a deterministic algorithm $U$ that takes as an input a randomized logspace algorithm $R$ and an input $x$ and simulates the computation of $R$ on $x$, deteriministically. Under the widely believed assumption $BPL=L$, the space used by $U$ is at most $C_R \cdot \log n$ (where $C_R$ is a constant depending on~$R$). Moreover, for every constant $c \geq 1$, if $BPL\subseteq SPACE[(\log(n))^{c}]$ then the space used by $U$ is at most $C_R  \cdot (\log(n))^{c}$.
+
+Finally, we prove that if optimal hitting sets for ordered branching programs exist then there is a deterministic logspace algorithm that, given a black-box access to an ordered branching program $B$ of size $n$, estimates the probability that $B$ accepts on a uniformly random input. This extends the result of (Cheng and Hoza CCC 2020), who proved that an optimal hitting set implies a white-box two-sided derandomization.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          Let $\mathcal{L}$ be a language that can be decided in linear space and let $\epsilon &gt;0$ be any constant. Let $\mathcal{A}$ be the exponential hardness assumption that for every $n$, membership in $\mathcal{L}$ for inputs of length~$n$ cannot be decided by circuits of size smaller than $2^{\epsilon n}$. 
+We prove that for every function $f :\{0,1\}^* \rightarrow \{0,1\}$, computable by a randomized logspace algorithm $R$, there exists a deterministic logspace algorithm $D$ (attempting to compute $f$), such that on every input $x$ of length $n$, the algorithm $D$ outputs one of the following:
+
+1: The correct value $f(x)$.
+
+2: The string: ``I am unable to compute $f(x)$ because the hardness assumption $\mathcal{A}$ is false&#39;&#39;, followed by a (provenly correct) circuit of size smaller than $2^{\epsilon n&#39;}$ for membership in $\mathcal{L}$ for inputs of length~$n&#39;$, for some $n&#39; = \Theta (\log n)$; that is, a circuit that refutes $\mathcal{A}$.
+
+Moreover, $D$ is explicitly constructed, given $R$.
+
+We note that previous works on the hardness-versus-randomness paradigm give derandomized algorithms that rely blindly on the hardness assumption. If the hardness assumption is false, the algorithms may output incorrect values, and thus a user cannot trust that an output given by the algorithm is correct. Instead, our algorithm $D$ verifies the computation so that it never outputs an incorrect value. Thus, if $D$ outputs a value for $f(x)$, that value is certified to be correct. Moreover, if $D$ does not output a value for $f(x)$, it alerts that the hardness assumption was found to be false, and refutes the assumption.
+
+Our next result is a universal derandomizer for $BPL$ (the class of problems solvable by bounded-error randomized logspace algorithms): We give a deterministic algorithm $U$ that takes as an input a randomized logspace algorithm $R$ and an input $x$ and simulates the computation of $R$ on $x$, deteriministically. Under the widely believed assumption $BPL=L$, the space used by $U$ is at most $C_R \cdot \log n$ (where $C_R$ is a constant depending on~$R$). Moreover, for every constant $c \geq 1$, if $BPL\subseteq SPACE[(\log(n))^{c}]$ then the space used by $U$ is at most $C_R  \cdot (\log(n))^{c}$.
+
+Finally, we prove that if optimal hitting sets for ordered branching programs exist then there is a deterministic logspace algorithm that, given a black-box access to an ordered branching program $B$ of size $n$, estimates the probability that $B$ accepts on a uniformly random input. This extends the result of (Cheng and Hoza CCC 2020), who proved that an optimal hitting set implies a white-box two-sided derandomization.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-03-28T19:09:05Z">Tuesday, March 28 2023, 19:09</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -4175,95 +4238,6 @@ degrees. While the problem is NP-hard already when all functions are the same,
 we show that it can be solved for arbitrary functions in polynomial time over
 graphs of bounded treewidth. Its complexity remains widely open, in particular
 over complete graphs and complete bipartite graphs.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-03-23T00:30:00Z">Thursday, March 23 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2303.12768'>Almost-Optimal Sublinear Additive Spanners</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Zihan Tan, Tianyi Zhang</p><p>Given an undirected unweighted graph $G = (V, E)$ on $n$ vertices and $m$
-edges, a subgraph $H\subseteq G$ is a spanner of $G$ with stretch function $f:
-\mathbb{R}_+ \rightarrow \mathbb{R}_+$, iff for every pair $s, t$ of vertices
-in $V$, $\textsf{dist}_{H}(s, t)\le f(\textsf{dist}_{G}(s, t))$. When $f(d) = d
-+ o(d)$, $H$ is called a sublinear additive spanner; when $f(d) = d + o(n)$,
-$H$ is called an additive spanner, and $f(d) - d$ is usually called the
-additive stretch of $H$.
-</p>
-<p>As our primary result, we show that for any constant $\delta&gt;0$ and constant
-integer $k\geq 2$, every graph on $n$ vertices has a sublinear additive spanner
-with stretch function $f(d)=d+O(d^{1-1/k})$ and
-$O\big(n^{1+\frac{1+\delta}{2^{k+1}-1}}\big)$ edges. When $k = 2$, this
-improves upon the previous spanner construction with stretch function $f(d) = d
-+ O(d^{1/2})$ and $\tilde{O}(n^{1+3/17})$ edges [Chechik, 2013]; for any
-constant integer $k\geq 3$, this improves upon the previous spanner
-construction with stretch function $f(d) = d + O(d^{1-1/k})$ and
-$O\bigg(n^{1+\frac{(3/4)^{k-2}}{7 - 2\cdot (3/4)^{k-2}}}\bigg)$ edges [Pettie,
-2009]. Most importantly, the size of our spanners almost matches the lower
-bound of $\Omega\big(n^{1+\frac{1}{2^{k+1}-1}}\big)$ [Abboud, Bodwin, Pettie,
-2017].
-</p>
-<p>As our second result, we show a new construction of additive spanners with
-stretch $O(n^{0.403})$ and $O(n)$ edges, which slightly improves upon the
-previous stretch bound of $O(n^{3/7+\epsilon})$ achieved by linear-size
-spanners [Bodwin and Vassilevska Williams, 2016]. An additional advantage of
-our spanner is that it admits a subquadratic construction runtime of
-$\tilde{O}(m + n^{13/7})$, while the previous construction in [Bodwin and
-Vassilevska Williams, 2016] requires all-pairs shortest paths computation which
-takes $O(\min\{mn, n^{2.373}\})$ time.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Tan_Z/0/1/0/all/0/1">Zihan Tan</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhang_T/0/1/0/all/0/1">Tianyi Zhang</a></p><p>Given an undirected unweighted graph $G = (V, E)$ on $n$ vertices and $m$
-edges, a subgraph $H\subseteq G$ is a spanner of $G$ with stretch function $f:
-\mathbb{R}_+ \rightarrow \mathbb{R}_+$, iff for every pair $s, t$ of vertices
-in $V$, $\textsf{dist}_{H}(s, t)\le f(\textsf{dist}_{G}(s, t))$. When $f(d) = d
-+ o(d)$, $H$ is called a sublinear additive spanner; when $f(d) = d + o(n)$,
-$H$ is called an additive spanner, and $f(d) - d$ is usually called the
-additive stretch of $H$.
-</p>
-<p>As our primary result, we show that for any constant $\delta&gt;0$ and constant
-integer $k\geq 2$, every graph on $n$ vertices has a sublinear additive spanner
-with stretch function $f(d)=d+O(d^{1-1/k})$ and
-$O\big(n^{1+\frac{1+\delta}{2^{k+1}-1}}\big)$ edges. When $k = 2$, this
-improves upon the previous spanner construction with stretch function $f(d) = d
-+ O(d^{1/2})$ and $\tilde{O}(n^{1+3/17})$ edges [Chechik, 2013]; for any
-constant integer $k\geq 3$, this improves upon the previous spanner
-construction with stretch function $f(d) = d + O(d^{1-1/k})$ and
-$O\bigg(n^{1+\frac{(3/4)^{k-2}}{7 - 2\cdot (3/4)^{k-2}}}\bigg)$ edges [Pettie,
-2009]. Most importantly, the size of our spanners almost matches the lower
-bound of $\Omega\big(n^{1+\frac{1}{2^{k+1}-1}}\big)$ [Abboud, Bodwin, Pettie,
-2017].
-</p>
-<p>As our second result, we show a new construction of additive spanners with
-stretch $O(n^{0.403})$ and $O(n)$ edges, which slightly improves upon the
-previous stretch bound of $O(n^{3/7+\epsilon})$ achieved by linear-size
-spanners [Bodwin and Vassilevska Williams, 2016]. An additional advantage of
-our spanner is that it admits a subquadratic construction runtime of
-$\tilde{O}(m + n^{13/7})$, while the previous construction in [Bodwin and
-Vassilevska Williams, 2016] requires all-pairs shortest paths computation which
-takes $O(\min\{mn, n^{2.373}\})$ time.
 </p>
         
         </div>
