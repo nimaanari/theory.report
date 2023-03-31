@@ -272,6 +272,57 @@ Email: pavan@iastate.edu&lt;/p&gt;
 </item>
 
 <item>
+  <title>Logic engines and product graphs</title>
+  <guid>https://11011110.github.io/blog/2023/03/30/logic-engines-product</guid>
+  <link>https://11011110.github.io/blog/2023/03/30/logic-engines-product.html</link>
+  <description>
+    &lt;p&gt;The graph product structure theorem of Dujmović et al.&lt;sup id=&quot;fnref:duj&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:duj&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; states that every planar graph can be represented as a subgraph of a special kind of graph product: the &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_product_of_graphs&quot;&gt;strong product&lt;/a&gt; of a &lt;a href=&quot;Path graph&quot;&gt;path graph&lt;/a&gt; and a graph of &lt;a href=&quot;https://en.wikipedia.org/wiki/Treewidth&quot;&gt;bounded treewidth&lt;/a&gt;. Like other graph products, the strong product \(G\boxtimes H\) of two graphs \(G\) and \(H\) has a vertex for each pair of a vertex in \(G\) and a vertex in \(H\). You can move in the strong product by moving along an edge in one of the factors and staying put in the other (like the Cartesian product) but also by moving along an edge in each factor (like the tensor product). So, for instance, the graph of king moves on a chessboard is a strong product of two paths, one representing the sequence of rows along which the king can move and the other representing the sequence of columns.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2019/kings-graph.svg&quot; alt=&quot;The king&#39;s graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In terminology later introduced by Bose et al.,&lt;sup id=&quot;fnref:bos&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:bos&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; the graph product structure theorem states that planar graphs have “bounded row treewidth”. Here, having row treewidth \(w\) is the same as being a subgraph of a strong product of a path with a graph of treewidth \(w\). You can define the same sort of concept “row X-width” for any other graph width parameter, meaning the same thing: having row X-width \(w\) means being a subgraph of a strong product of a graph of X-width \(w\). Since the announcement of the graph product structure theorem, this area has quickly expanded in interest, with many papers studying the relations between these row parameters, the decompositions of beyond-planar graphs, and other kinds of product decompositions.&lt;/p&gt;
+
+&lt;p&gt;However, there has not been as much work so far on the computational complexity of row treewidth and related parameters. Treewidth is NP-hard in general, but for any fixed \(k\), testing whether a graph has treewidth \(k\) takes only linear time.&lt;sup id=&quot;fnref:bod&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:bod&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Can this sort of fixed-parameter tractable algorithm be found for row treewidth and other analogous parameters? The answer turns out to be no. My new preprint, “On the complexity of embedding in graph products”, with Therese Biedl and Torsten Ueckerdt (&lt;a href=&quot;https://arxiv.org/abs/2303.17028&quot;&gt;arXiv:2303.17028&lt;/a&gt;) provides NP-completeness proofs showing that even the smallest nontrivial parameter values are difficult to test, even on very simple graphs.&lt;/p&gt;
+
+&lt;p&gt;The starting point for several of our proofs is a result that has been known for much longer: it is hard to tell whether a given graph is a subgraph of the integer grid. It remains hard even when the given graph is a tree.&lt;sup id=&quot;fnref:bc&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:bc&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; The proof uses a technique later called the “logic engine”,&lt;sup id=&quot;fnref:ew&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ew&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; in which one makes a graph with pieces that, in any grid embedding, must remain rigid, with flexible connections to the other pieces. The illustration below shows an example that could be used in a proof of the known result that embedding planar graphs as subgraphs of a grid is NP-complete. It is constructed from a not-all-equal satisfiability problem, whose variables are translated into the blue arms of the figure. Each arm can flip vertically, across the central horizontal spine, giving its variable two states, true or false. The green flags, each suspended from a vertical path attached to an arm, can flip to the left or to the right. Each row of flags is confined by the surrounding yellow frame, in such a way that the flags can only fit into their row if at least one arm is missing a flag on that row. When a variable belongs to a clause, its flag is removed from the clause’s row of the construction, providing a gap that will allow all the flags to fit on that row.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/logic-engine.svg&quot; alt=&quot;Logic engine graph constructed by a reduction from not-all-equal satisfiability to planar grid embedding. In order for the blue variable arms and green term flags to all fit within the yellow frame, each row of the grid must have at least one missing flag.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Grids are Cartesian products of a path with a path, but the products involved in row treewidth and row pathwidth are a bit more complicated, both because they use the strong product in place of the Cartesian product, and because one of the factors is not a path. The simplest case for row treewidth is width one, embedding into a strong product of a path and a tree. Testing whether such an embedding exists is trivial for trees (just use the product of the tree itself with a one-vertex path). But as we prove, it is hard for the next simplest case, when the graph to be embedded has treewidth two. Our proof again uses the logic engine. However, compared to the figure above, more care is needed in the construction to ensure that parts of the logic engine cannot avoid bumping into each other by twisting in ways that would be impossible for Cartesian products but possible in strong products, or by escaping into another branch of the factor graph.&lt;/p&gt;
+
+&lt;p&gt;Testing whether the row pathwidth one turns out to be hard even for trees. Because the graphs of pathwidth one are just the caterpillars, this means testing whether the given tree can be embedded into a strong product of a path with a caterpillar. It would be possible to prove this again using the logic engine, but we don’t. Instead, we use the known result that it’s hard to embed trees into grids. We find a way to transform trees into larger trees so that grid embedding of the smaller tree becomes equivalent to path-caterpillar-product embedding of the expanded tree.&lt;/p&gt;
+
+&lt;p&gt;We also prove that row treedepth, defined in the same way, is hard, even to test whether a tree has row treedepth one. This is the same as asking whether the given tree can be represented as a subgraph of a product of a path with a star. For this problem, the logic engine doesn’t work. Path-star products are too narrow for its components to fit into them. Instead, we use a different hardness reduction based on bin packing.&lt;/p&gt;
+
+&lt;p&gt;Even accurately approximating the row treewidth is hard, at least if you believe that approximating treewidth itself is hard. The hardness of approximation of treewidth has not been proven rigorously, but instead rests on an unproven assumption, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Small_set_expansion_hypothesis&quot;&gt;small set expansion hypothesis&lt;/a&gt;, a variant of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Unique_games_conjecture&quot;&gt;unique games conjecture&lt;/a&gt;. But if this assumption is true, then it is impossible to approximate treewidth to within any constant factor. If you add a universal vertex to a graph, you don’t change its treewidth much, but you force its row treewidth to be within a constant factor of its treewidth, because it prevents you from using path factors that are longer than two edges. So, under this assumption, it is also impossible to approximate row treewidth to within any constant factor.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:duj&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Vida Dujmović, Gwenaël Joret, Piotr Micek, Pat Morin, Torsten Ueckerdt, and David R. Wood (2020), “Planar graphs have bounded queue-number”, &lt;em&gt;JACM&lt;/em&gt; 67 (4): Art. 22, &lt;a href=&quot;https://doi.org/10.1145/3385731&quot;&gt;doi:10.1145/3385731&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/abs/1904.04791&quot;&gt;arXiv:1904.04791&lt;/a&gt;. &lt;a href=&quot;#fnref:duj&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:bos&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Prosenjit Bose, Vida Dujmović, Mehrnoosh Javarsineh, Pat Morin, David R. Wood (2022), “Separating layered treewidth and row treewidth”, &lt;em&gt;DMTCS&lt;/em&gt; 24 (1): Art. 18, &lt;a href=&quot;https://arxiv.org/abs/2105.01230&quot;&gt;arXiv:2105.01230&lt;/a&gt;. &lt;a href=&quot;#fnref:bos&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:bod&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Hans L. Bodlaender (1996), “A linear time algorithm for finding tree-decompositions of small treewidth”, &lt;em&gt;SICOMP&lt;/em&gt; 25 (6): 1305–1317, &lt;a href=&quot;https://doi.org/10.1137/S0097539793251219&quot;&gt;doi:10.1137/S0097539793251219&lt;/a&gt;. &lt;a href=&quot;#fnref:bod&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:bc&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Sandeep Bhatt and Stavros Cosmadakis (1987), “The complexity of minimizing wire lengths in VLSI layouts”, &lt;em&gt;IPL&lt;/em&gt; 25 (4): 263–267, &lt;a href=&quot;https://doi.org/10.1016/0020-0190(87)90173-6&quot;&gt;doi:10.1016/0020-0190(87)90173-6&lt;/a&gt; &lt;a href=&quot;#fnref:bc&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ew&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Peter Eades and Sue Whitesides (1996), “The logic engine and the realization problem for nearest neighbor graphs”, &lt;em&gt;TCS&lt;/em&gt; 169 (1): 23–27, &lt;a href=&quot;https://doi.org/10.1016/S0304-3975(97)84223-5&quot;&gt;doi:10.1016/S0304-3975(97)84223-5&lt;/a&gt;. &lt;a href=&quot;#fnref:ew&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/110115277230448668&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </description>
+  <pubDate>2023-03-30 16:46:00 UTC</pubDate>
+  <author>David Eppstein</author>
+</item>
+
+<item>
   <title>TCS for all travel grants and speaker nominations (guest post by Elena Grigorescu)</title>
   <guid>http://windowsontheory.org/?p=8588</guid>
   <link>https://windowsontheory.org/2023/03/30/tcs-for-all-travel-grants-and-speaker-nominations-guest-post-by-elena-grigorescu/</link>
@@ -1431,30 +1482,6 @@ of given points.
   </description>
   <pubDate>2023-03-27 00:30:00 UTC</pubDate>
   <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Stochastic Submodular Bandits with Delayed Composite Anonymous Bandit Feedback</title>
-  <guid>http://arxiv.org/abs/2303.13604</guid>
-  <link>http://arxiv.org/abs/2303.13604</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pedramfar_M/0/1/0/all/0/1&quot;&gt;Mohammad Pedramfar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Aggarwal_V/0/1/0/all/0/1&quot;&gt;Vaneet Aggarwal&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper investigates the problem of combinatorial multiarmed bandits with
-stochastic submodular (in expectation) rewards and full-bandit delayed
-feedback, where the delayed feedback is assumed to be composite and anonymous.
-In other words, the delayed feedback is composed of components of rewards from
-past actions, with unknown division among the sub-components. Three models of
-delayed feedback: bounded adversarial, stochastic independent, and stochastic
-conditionally independent are studied, and regret bounds are derived for each
-of the delay models. Ignoring the problem dependent parameters, we show that
-regret bound for all the delay models is $\tilde{O}(T^{2/3} + T^{1/3} \nu)$ for
-time horizon $T$, where $\nu$ is a delay parameter defined differently in the
-three cases, thus demonstrating an additive term in regret with delay in all
-the three delay models. The considered algorithm is demonstrated to outperform
-other full-bandit approaches with delayed composite anonymous feedback.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-27 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
