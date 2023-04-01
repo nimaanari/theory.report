@@ -10,6 +10,21 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Decentralized Thoughts: What is the difference between PBFT, Tendermint, HotStuff, and HotStuff-2?</title>
+    <link href="https://decentralizedthoughts.github.io/2023-04-01-hotstuff-2/"/>
+    <id>https://decentralizedthoughts.github.io/2023-04-01-hotstuff-2/</id>
+    <updated>2023-04-01T05:00:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    We recently published our work HotStuff-2 on eprint, introducing a two-phase HotStuff variant which simultaneously achieves $O(n^2)$ worst-case communication, optimistically linear communication, a two-phase commit regime within a view, and optimistic responsiveness in partially-synchronous BFT. The main takeaway is that two phases are enough for BFT after all. In this...
+  </content>
+    <author>
+      <name>Decentralized Thoughts</name>
+      <uri>https://decentralizedthoughts.github.io</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Richard Lipton: The ChatGPT Conundrum</title>
     <link href="https://rjlipton.wpcomstaging.com/2023/04/01/the-chatgpt-conundrum/"/>
     <id>https://rjlipton.wpcomstaging.com/?p=21383</id>
@@ -1836,30 +1851,6 @@ research topic.
     <author>
       <name>Luca Trevisan</name>
       <uri>https://lucatrevisan.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR23-036 |  Derandomization with Minimal Memory Footprint | 
-
-	Dean Doron, 
-
-	Roei Tell</title>
-    <link href="https://eccc.weizmann.ac.il/report/2023/036"/>
-    <id>https://eccc.weizmann.ac.il/report/2023/036</id>
-    <updated>2023-03-27T16:29:15+00:00</updated>
-    <content type="html" xml:lang="en">
-    Existing proofs that deduce BPL=L from circuit lower bounds convert randomized algorithms into deterministic algorithms with large constant overhead in space. We study space-bounded derandomization with minimal footprint, and ask what is the minimal possible space overhead for derandomization.
-We show that $BPSPACE[S] \subseteq DSPACE[c \cdot S]$ for $c \approx 2$, assuming space-efficient cryptographic PRGs, and, either: (1) lower bounds against bounded-space algorithms with advice, or: (2) lower bounds against certain uniform compression algorithms.
-Under additional assumptions regarding the power of catalytic computation, in a new setting of parameters that was not studied before, we are even able to get $c \approx 1$.
-
-Our results are constructive: Given a candidate hard function (and a candidate cryptographic PRG) we show how to transform the randomized algorithm into an efficient deterministic one.
-This follows from new PRGs and targeted PRGs for space-bounded algorithms, which we combine with novel space-efficient evaluation methods. A central ingredient in all our constructions is hardness amplification reductions in logspace-uniform $TC^0$, that were not known before.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
     </author>
   </entry>
 
