@@ -10,6 +10,31 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-041 |  The communication complexity of functions with large outputs | 
+
+	Sophie Laplante, 
+
+	Mathieu Lauriere, 
+
+	Lila Fontes, 
+
+	Alexandre Nolin</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/041"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/041</id>
+    <updated>2023-04-01T22:18:55+00:00</updated>
+    <content type="html" xml:lang="en">
+    We study the two-party communication complexity of functions with large outputs, and show that the communication complexity can greatly vary depending on what output model is considered. We study a variety of output models, ranging from the open model, in which an external observer can compute the outcome, to the XOR model, in which the outcome of the protocol should be the bitwise XOR of the players’ local outputs. This model is inspired by XOR games, which are widely studied two-player quantum games.
+We focus on the question of error-reduction in these new output models. For functions of output size k, applying standard error reduction techniques in the XOR model would introduce an additional cost linear in k. We show that no dependency on k is necessary. Similarly, standard randomness removal techniques, incur a multiplicative cost of 2k in the XOR model. We show how to reduce this factor to O(k).
+In addition, we prove analogous error reduction and randomness removal results in the other models, separate all models from each other, and show that some natural problems – including Set Intersection and Find the First Difference – separate the models when the Hamming weights of their inputs is bounded. Finally, we show how to use the rank lower bound technique for our weak output models.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Scott Aaronson: Quips are what I’ve got</title>
     <link href="https://scottaaronson.blog/?p=7188"/>
     <id>https://scottaaronson.blog/?p=7188</id>
@@ -1828,27 +1853,6 @@ covariance matrix of the Gaussian distribution conveying the uncertainty in the
 parameter. The approach is successfully illustrated on the problems of high
 dimensional least-squares and logistic regression, and generalized to a large
 class of nonlinear models.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Exact Short Products From Truncated Multipliers</title>
-    <link href="http://arxiv.org/abs/2303.14321"/>
-    <id>http://arxiv.org/abs/2303.14321</id>
-    <updated>2023-03-28T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lemire_D/0/1/0/all/0/1&quot;&gt;Daniel Lemire&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We sometimes need to compute the most significant digits of the product of
-small integers with a multiplier requiring much storage: e.g., a large integer
-(e.g., $5^{100}$) or an irrational number ($\pi$). We only need to access the
-most significant digits of the multiplier-as long as the integers are
-sufficiently small. We provide an efficient algorithm to compute the range of
-integers given a truncated multiplier and a desired number of digits.
 &lt;/p&gt;
   </content>
     <author>
