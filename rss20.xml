@@ -9,6 +9,117 @@
 
 
 <item>
+  <title>The communication complexity of functions with large outputs</title>
+  <guid>http://arxiv.org/abs/2304.00391</guid>
+  <link>http://arxiv.org/abs/2304.00391</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fontes_L/0/1/0/all/0/1&quot;&gt;Lila Fontes&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Laplante_S/0/1/0/all/0/1&quot;&gt;Sophie Laplante&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lauriere_M/0/1/0/all/0/1&quot;&gt;Mathieu Lauriere&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nolin_A/0/1/0/all/0/1&quot;&gt;Alexandre Nolin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the two-party communication complexity of functions with large
+outputs, and show that the communication complexity can greatly vary depending
+on what output model is considered. We study a variety of output models,
+ranging from the open model, in which an external observer can compute the
+outcome, to the XOR model, in which the outcome of the protocol should be the
+bitwise XOR of the players&#39; local outputs. This model is inspired by XOR games,
+which are widely studied two-player quantum games. We focus on the question of
+error-reduction in these new output models. For functions of output size k,
+applying standard error reduction techniques in the XOR model would introduce
+an additional cost linear in k. We show that no dependency on k is necessary.
+Similarly, standard randomness removal techniques, incur a multiplicative cost
+of $2^k$ in the XOR model. We show how to reduce this factor to O(k). In
+addition, we prove analogous error reduction and randomness removal results in
+the other models, separate all models from each other, and show that some
+natural problems, including Set Intersection and Find the First Difference,
+separate the models when the Hamming weights of their inputs is bounded.
+Finally, we show how to use the rank lower bound technique for our weak output
+models.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Gallai-like characterization of strong cocomparability graphs</title>
+  <guid>http://arxiv.org/abs/2304.00430</guid>
+  <link>http://arxiv.org/abs/2304.00430</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Huang_J/0/1/0/all/0/1&quot;&gt;Jing Huang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Strong cocomparability graphs are the reflexive graphs whose adjacency matrix
+can be rearranged by a simultaneous row and column permutation to avoid the
+submatrix with rows $01, 10$. Strong cocomparability graphs form a subclass of
+cocomparability graphs (i.e., the complements of comparability graphs) and can
+be recognized in polynomial time. In his seminal paper, Gallai characterized
+cocomparability graphs in terms of a forbidden structure called asteroids.
+Gallai proved that cocomparability graphs are precisely those reflexive graphs
+which do not contain asteroids.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we give a characterization of strong cocomparability graphs
+which is analogous to Gallai&#39;s characterization for cocomparability graphs. We
+prove that strong cocomparability graphs are precisely those reflexive graphs
+which do not contain weak edge-asteroids (a weaker version of asteroids). Our
+characterization also leads to a polynomial time recognition algorithm for
+strong cocomparability graphs.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Almost Linear Constant-Factor Sketching for $\ell_1$ and Logistic Regression</title>
+  <guid>http://arxiv.org/abs/2304.00051</guid>
+  <link>http://arxiv.org/abs/2304.00051</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Munteanu_A/0/1/0/all/0/1&quot;&gt;Alexander Munteanu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Omlor_S/0/1/0/all/0/1&quot;&gt;Simon Omlor&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Woodruff_D/0/1/0/all/0/1&quot;&gt;David Woodruff&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We improve upon previous oblivious sketching and turnstile streaming results
+for $\ell_1$ and logistic regression, giving a much smaller sketching dimension
+achieving $O(1)$-approximation and yielding an efficient optimization problem
+in the sketch space. Namely, we achieve for any constant $c&amp;gt;0$ a sketching
+dimension of $\tilde{O}(d^{1+c})$ for $\ell_1$ regression and $\tilde{O}(\mu
+d^{1+c})$ for logistic regression, where $\mu$ is a standard measure that
+captures the complexity of compressing the data. For $\ell_1$-regression our
+sketching dimension is near-linear and improves previous work which either
+required $\Omega(\log d)$-approximation with this sketching dimension, or
+required a larger $\operatorname{poly}(d)$ number of rows. Similarly, for
+logistic regression previous work had worse $\operatorname{poly}(\mu d)$
+factors in its sketching dimension. We also give a tradeoff that yields a
+$1+\varepsilon$ approximation in input sparsity time by increasing the total
+size to $(d\log(n)/\varepsilon)^{O(1/\varepsilon)}$ for $\ell_1$ and to $(\mu
+d\log(n)/\varepsilon)^{O(1/\varepsilon)}$ for logistic regression. Finally, we
+show that our sketch can be extended to approximate a regularized version of
+logistic regression where the data-dependent regularizer corresponds to the
+variance of the individual logistic losses.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Mini-batch $k$-means terminates within $O(d/\epsilon)$ iterations</title>
+  <guid>http://arxiv.org/abs/2304.00419</guid>
+  <link>http://arxiv.org/abs/2304.00419</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schwartzman_G/0/1/0/all/0/1&quot;&gt;Gregory Schwartzman&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We answer the question: &quot;Does local progress (on batches) imply global
+progress (on the entire dataset) for mini-batch $k$-means?&quot;. Specifically, we
+consider mini-batch $k$-means which terminates only when the improvement in the
+quality of the clustering on the sampled batch is below some threshold.
+&lt;/p&gt;
+&lt;p&gt;Although at first glance it appears that this algorithm might execute
+forever, we answer the above question in the affirmative and show that if the
+batch is of size $\tilde{\Omega}((d/\epsilon)^2)$, it must terminate within
+$O(d/\epsilon)$ iterations with high probability, where $d$ is the dimension of
+the input, and $\epsilon$ is a threshold parameter for termination. This is
+true regardless of how the centers are initialized. When the algorithm is
+initialized with the $k$-means++ initialization scheme, it achieves an
+approximation ratio of $O(\log k)$ (the same as the full-batch version).
+&lt;/p&gt;
+&lt;p&gt;Finally, we show the applicability of our results to the mini-batch $k$-means
+algorithm implemented in the scikit-learn (sklearn) python library.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-04 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Alef Corner: Deep Learning 2020, 2030, 2040</title>
   <guid>http://gilkalai.wordpress.com/?p=24111</guid>
   <link>https://gilkalai.wordpress.com/2023/04/03/alef-corner-deep-learning-2020-2030-2040/</link>
@@ -1532,132 +1643,6 @@ and no memory restrictions.
   </description>
   <pubDate>2023-03-29 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>An unexpected democracy slogan</title>
-  <guid>https://scottaaronson.blog/?p=7170</guid>
-  <link>https://scottaaronson.blog/?p=7170</link>
-  <description>
-    &lt;p&gt;At least six readers have by now sent me the following photo, which was taken in Israel a couple nights ago during the historic street protests against Netanyahu&amp;#8217;s attempted &lt;em&gt;putsch&lt;/em&gt;:&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image size-large&quot;&gt;&lt;img decoding=&quot;async&quot; src=&quot;https://www.scottaaronson.com/pnp.jpg&quot; alt=&quot;&quot;/&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;(&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update:&lt;/mark&gt;&lt;/strong&gt; The photo was also featured on &lt;a href=&quot;https://gilkalai.wordpress.com/2023/03/27/critical-times-in-israel-last-nights-demonstrations/&quot;&gt;Gil Kalai&amp;#8217;s blog&lt;/a&gt;, and was credited there to Alon Rosen.)&lt;/p&gt;
-
-
-
-&lt;p&gt;This is surely the first time that &amp;#8220;P=NP&amp;#8221; has emerged as a viral rallying cry for the preservation of liberal democracy, even to whatever limited extent it has.&lt;/p&gt;
-
-
-
-&lt;p&gt;But what was the graffiti artist&amp;#8217;s intended meaning?  A few possibilities:&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;The government has flouted so many rules of Israel&amp;#8217;s social compact that our side needs to flout the rules too: shut down the universities, shut down the airport, block the roads, &lt;em&gt;even assert that P=NP (!)&lt;/em&gt;.&lt;/li&gt;
-
-
-
-&lt;li&gt;As a protest movement up against overwhelming odds, we need to shoot for the possibly-impossible, like solving 3SAT in polynomial time.&lt;/li&gt;
-
-
-
-&lt;li&gt;A shibboleth for scientific literate people following the news: &amp;#8220;Israel is full of sane people who know what &amp;#8216;P=NP&amp;#8217; means as you know what it means, are amused by its use as political graffiti as you&amp;#8217;d be amused by it, and oppose Netanyahu&amp;#8217;s &lt;em&gt;putsch&lt;/em&gt; for the same reasons you&amp;#8217;d oppose it.&amp;#8221;&lt;/li&gt;
-
-
-
-&lt;li&gt;No meaning, the artist was just amusing himself or herself.&lt;/li&gt;
-
-
-
-&lt;li&gt;The artist reads &lt;em&gt;Shtetl-Optimized&lt;/em&gt; and wanted effectively to force me to feature his or her work here.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;Anyway, if the artist becomes aware of this post, he or she is warmly welcomed to clear things up for us.&lt;/p&gt;
-
-
-
-&lt;p&gt;And when this fight resumes after Passover, may those standing up for the checks and balances of a liberal-democratic society achieve &amp;#8230; err &amp;#8230; satisfaction, however exponentially unlikely it seems.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-28 20:27:28 UTC</pubDate>
-  <author>Scott Aaronson</author>
-</item>
-
-<item>
-  <title>TR23-040 |  Certified Hardness vs. Randomness for Log-Space | 
-
-	Edward Pyne, 
-
-	Wei Zhan, 
-
-	Ran Raz</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/040</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/040</link>
-  <description>
-    Let $\mathcal{L}$ be a language that can be decided in linear space and let $\epsilon &amp;gt;0$ be any constant. Let $\mathcal{A}$ be the exponential hardness assumption that for every $n$, membership in $\mathcal{L}$ for inputs of length~$n$ cannot be decided by circuits of size smaller than $2^{\epsilon n}$. 
-We prove that for every function $f :\{0,1\}^* \rightarrow \{0,1\}$, computable by a randomized logspace algorithm $R$, there exists a deterministic logspace algorithm $D$ (attempting to compute $f$), such that on every input $x$ of length $n$, the algorithm $D$ outputs one of the following:
-
-1: The correct value $f(x)$.
-
-2: The string: ``I am unable to compute $f(x)$ because the hardness assumption $\mathcal{A}$ is false&amp;#39;&amp;#39;, followed by a (provenly correct) circuit of size smaller than $2^{\epsilon n&amp;#39;}$ for membership in $\mathcal{L}$ for inputs of length~$n&amp;#39;$, for some $n&amp;#39; = \Theta (\log n)$; that is, a circuit that refutes $\mathcal{A}$.
-
-Moreover, $D$ is explicitly constructed, given $R$.
-
-We note that previous works on the hardness-versus-randomness paradigm give derandomized algorithms that rely blindly on the hardness assumption. If the hardness assumption is false, the algorithms may output incorrect values, and thus a user cannot trust that an output given by the algorithm is correct. Instead, our algorithm $D$ verifies the computation so that it never outputs an incorrect value. Thus, if $D$ outputs a value for $f(x)$, that value is certified to be correct. Moreover, if $D$ does not output a value for $f(x)$, it alerts that the hardness assumption was found to be false, and refutes the assumption.
-
-Our next result is a universal derandomizer for $BPL$ (the class of problems solvable by bounded-error randomized logspace algorithms): We give a deterministic algorithm $U$ that takes as an input a randomized logspace algorithm $R$ and an input $x$ and simulates the computation of $R$ on $x$, deteriministically. Under the widely believed assumption $BPL=L$, the space used by $U$ is at most $C_R \cdot \log n$ (where $C_R$ is a constant depending on~$R$). Moreover, for every constant $c \geq 1$, if $BPL\subseteq SPACE[(\log(n))^{c}]$ then the space used by $U$ is at most $C_R  \cdot (\log(n))^{c}$.
-
-Finally, we prove that if optimal hitting sets for ordered branching programs exist then there is a deterministic logspace algorithm that, given a black-box access to an ordered branching program $B$ of size $n$, estimates the probability that $B$ accepts on a uniformly random input. This extends the result of (Cheng and Hoza CCC 2020), who proved that an optimal hitting set implies a white-box two-sided derandomization.
-  </description>
-  <pubDate>2023-03-28 19:09:05 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>TR23-039 |  Query Complexity of Search Problems | 
-
-	Yogesh Dahiya, 
-
-	Arkadev Chattopadhyay, 
-
-	Meena Mahajan</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/039</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/039</link>
-  <description>
-    We relate various complexity measures like sensitivity, block sensitivity, certificate complexity for multi-output functions to the query complexities of such functions. Using these relations, we improve upon the known relationship between pseudo-deterministic query complexity and deterministic query complexity for total search problems: We show that pseudo-deterministic query complexity is at most the third power of its deterministic query complexity. (Previously a fourth-power relation was shown by Goldreich,Goldwasser,Ron (ITCS13).) We then obtain a significantly simpler and self-contained proof of a separation between pseudodeterminism and randomized query complexity recently proved by Goldwasser, Impagliazzo, Pitassi, Santhanam (CCC 2021). We also separate pseudodeterminism from randomness in AND decision trees, and determinism from pseudodeterminism in PARITY decision trees. For a hypercube colouring problem closely related to the pseudodeterministic complexity of a complete problem in $TFNP^{dt}$, we prove that either the monotone block-sensitivity or the anti-monotone block sensitivity is $\Omega(n^{1/3})$; previously an $\Omega(n^{1/2})$ bound was known but for general block-sensitivity.
-  </description>
-  <pubDate>2023-03-28 18:07:01 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>TR23-038 |  Indistinguishability Obfuscation, Range Avoidance, and Bounded Arithmetic | 
-
-	Rahul Ilango, 
-
-	Jiatu Li, 
-
-	Ryan Williams</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/038</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/038</link>
-  <description>
-    The range avoidance problem (denoted by Avoid) asks to find a string outside of the range of a given circuit $C:\{0,1\}^n\to\{0,1\}^m$, where $m&amp;gt;n$. Although at least half of the strings of length $m$ are correct answers, it is not clear how to deterministically find one. Recent results of Korten (FOCS&amp;#39;21) and Ren, Wang, and Santhanam (FOCS&amp;#39; 22) show that efficient deterministic algorithms for Avoid would have far-reaching consequences, including strong circuit lower bounds and explicit constructions of combinatorial objects (e.g., Ramsey graphs, extractors, rigid matrices). This strongly motivates the question: does an efficient deterministic algorithm for Avoid actually exist?
-
-In this work, we prove under the existence of subexponentially secure indistinguishability obfuscation (iO) that deterministic polynomial-time algorithms for Avoid imply NP=coNP. Combining this with Jain, Lin, and Sahai&amp;#39;s recent breakthrough construction of iO from well-founded assumptions (STOC&amp;#39;21, EUROCRYPT&amp;#39;22), we provide the first plausible evidence that Avoid has no efficient deterministic algorithm. Moreover, we also prove the hardness of Avoid based on polynomially-secure iO and a weaker variant of the Nondeterministic Exponential Time Hypothesis (NETH).
-
-Extending our techniques, we prove a surprising separation in bounded arithmetic, conditioned on similar assumptions. Assuming subexponentially secure iO and coNP is not infinitely often in AM, we show that Avoid has no deterministic polynomial-time algorithm even when we are allowed $O(1)$ queries to an oracle that can invert the given input circuit on an arbitrarily chosen $m$-bit string. It follows that the dual Weak Pigeonhole Principle, the combinatorial principle underlying Avoid, is not provable in Cook&amp;#39;s theory $PV_1$. This gives (under plausible assumptions) the first separation of Cook&amp;#39;s theory $PV_1$ for polynomial-time reasoning and Jerabek&amp;#39;s theory $APC_1$ for probabilistic polynomial-time reasoning.
-  </description>
-  <pubDate>2023-03-28 12:58:10 UTC</pubDate>
-  <author>ECCC Papers</author>
 </item>
 
 </channel>
