@@ -10,6 +10,21 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Computational Complexity: Neil Jones (1941-2023)</title>
+    <link href="https://blog.computationalcomplexity.org/2023/04/neil-jones-1941-2023.html"/>
+    <id>tag:blogger.com,1999:blog-3722233.post-4674935859497045234</id>
+    <updated>2023-04-04T19:05:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;&lt;/p&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvZYTofhc2zPgPq7_2CuI3JUbXlbSvpWL3xla-H8c4gpWz_wXGCjQQLGt3sNl3XP0E5PZ4qIzpnwddhMX1FzqbzTnicWf_oROVBk6TEzBq7novIBCrqlQ1-qj_KNB0LqJGeM6TXNGzx8yoFR4UyDOqme79mlKdSRpbGJrA0G-L_1m8nJF-1w/s885/Neil_D._Jones.jpg&quot; imageanchor=&quot;1&quot; style=&quot;clear: right; float: right; margin-bottom: 1em; margin-left: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;885&quot; data-original-width=&quot;657&quot; height=&quot;200&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgvZYTofhc2zPgPq7_2CuI3JUbXlbSvpWL3xla-H8c4gpWz_wXGCjQQLGt3sNl3XP0E5PZ4qIzpnwddhMX1FzqbzTnicWf_oROVBk6TEzBq7novIBCrqlQ1-qj_KNB0LqJGeM6TXNGzx8yoFR4UyDOqme79mlKdSRpbGJrA0G-L_1m8nJF-1w/w149-h200/Neil_D._Jones.jpg&quot; width=&quot;149&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;i&gt;Eric Allender graciously agreed to write this remembrance of Neil Jones.&lt;br /&gt;&lt;/i&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Neil_D._Jones&quot;&gt;Neil Jones&lt;/a&gt; passed away on March 27.&lt;/p&gt;&lt;p&gt;Neil&#39;s work had a profound impact on the field of computational complexity theory, although he was primarily known for his work in other areas of computer science.&amp;nbsp; For example, his 1998 ACM Fellow citation is &quot;For outstanding contributions to semantics-directed compilation, especially partial evaluation, and to the theory of computation, formal models and their practical realization.&quot;&amp;nbsp; Note that there&#39;s no mention of &quot;complexity&quot; (except as it is bundled together with &quot;theory of computation&quot; -- and Jones also published in the area of computability theory).&lt;/p&gt;&lt;p&gt;So what were some ways that Neil influenced the development of computational complexity theory?&lt;/p&gt;&lt;p&gt;In 1972, in the 4th STOC conference, Neil &lt;a href=&quot;https://doi.org/10.1145/800152.804909&quot;&gt;collaborated&lt;/a&gt; with Alan Selman, to show that a notion that logicians had been studying since the 1950&#39;s coincided exactly with a natural complexity class.&amp;nbsp; More specifically, given a logical formula F, the &quot;spectrum&quot; of F is the set of numbers {n : F has a finite model of size n}.&amp;nbsp; What kinds of sets can be the spectrum of a first-order formula?&amp;nbsp; Is this class of sets closed under complement?&amp;nbsp; These were some of the questions that logicians had struggled with.&amp;nbsp; Jones and Selman gave a precise characterization, as NE (nondeterministic exponential time).&amp;nbsp; Thus the complement of every spectrum is a spectrum if and only if NE=coNE.&amp;nbsp; As D. Sivakumar points out in a &lt;a href=&quot;https://www.linkedin.com/feed/update/urn:li:activity:7047571379897921536?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7047571379897921536%2C7048828674200006656%29&amp;amp;replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7047571379897921536%2C7048876431841378304%29&quot;&gt;LinkedIn comment&lt;/a&gt; on Neil&#39;s death: &quot;The following year, Fagin proved that generalized spectra coincide with NP, and descriptive complexity theory was born.&quot;&lt;/p&gt;&lt;p&gt;Of course, a lot of other things were happening in the late 60&#39;s and early 70&#39;s:&amp;nbsp; Savitch proved Savitch&#39;s Theorem.&amp;nbsp; The first NP-completeness results appeared.&amp;nbsp; It appears that several people were trying to build on Savitch&#39;s theorem, to show that everything in P can be done in log&lt;sup&gt;2&lt;/sup&gt; space, and this motivated Steve Cook to define a problem (&quot;Path Systems&quot;) and show (1) certain algorithms for Path Systems could not be implemented in small space, and (2) Path Systems has a small-space algorithm iff everything in P does.&amp;nbsp; This result of Cook&#39;s was similar in flavor to a theorem of Savitch, showing that a problem he called &quot;Threadable Mazes&quot; was in L if and only if NL=L.&amp;nbsp; Although these notions were clearly in the air, Jones (and -- simultaneously -- Meyer &amp;amp; Stockmeyer) were the first to explicitly formalize the notion of logspace reducibility (including closure under composition), and to notice that the NP-completeness results of Cook and Karp held also under logspace reducibility.&amp;nbsp; And Jones was the first one to go ahead and develop the general theory of logspace reducibility and the theory of completeness for subclasses of P (first for P itself (with Laaser), and later for NL (with Laaser and Lien)).&amp;nbsp; I think that this is when people started to get the idea that completeness was not a special property that only a few problems shared.&amp;nbsp; Rather: Nearly EVERY natural computational problem was likely to be complete for some reasonable complexity class.&lt;/p&gt;&lt;p&gt;Notably, Jones also recognized that logspace was overkill, when considering reductions.&amp;nbsp; He also wanted to have a really restricted notion of reducibility, so that one could talk meaningfully about problems being complete for L.&amp;nbsp; To this end, he &lt;a href=&quot;https://doi.org/10.1016/S0022-0000(75)80050-X&quot;&gt;defined&lt;/a&gt; &quot;log-rudimentary&quot; reducibility.&amp;nbsp; This was quite natural for him, since he had work previously on Smullyan&#39;s &quot;Rudimentary Relations&quot;.&amp;nbsp; But log-rudimentary reductions never really caught on.&amp;nbsp; Instead, after Furst, Saxe, and Sipser kickstarted the study of AC&lt;sup&gt;0&lt;/sup&gt; circuits, a notion of AC&lt;sup&gt;0&lt;/sup&gt; reducibility was developed by Chandra, Stockmeyer, and Vishkin in the mid-1980&#39;s, which turned out to be very useful in classifying problems as being complete in various subclasses of P.&amp;nbsp; Much later, in 1991, I published a &lt;a href=&quot;https://doi.org/10.1016/0020-0190(91)90015-A&quot;&gt;paper&lt;/a&gt; with Vivek Gore, showing that Neil&#39;s log-rudimentary reductions are precisely the same thing as uniform AC&lt;sup&gt;0&lt;/sup&gt; reducibility.&amp;nbsp; Thus Neil Jones had the insight to define and study a notion that would not become mainstream for another decade, and which still provides the best tool for classifying the complexity of natural problems in subclasses of P.&lt;/p&gt;&lt;p&gt;I only had the pleasure of meeting Neil once, during a visit to Copenhagen in 2004, although we would occasionally exchange some e-mail about topics in complexity.&amp;nbsp; It is interesting to note that the most &lt;a href=&quot;https://doi.org/10.48550/arXiv.2008.02932&quot;&gt;recent paper&lt;/a&gt; on Neil&#39;s &lt;a href=&quot;https://dblp.org/pid/j/NeilDJones.html&quot;&gt;DBLP page&lt;/a&gt; deals with complexity classes.&amp;nbsp; I haven&#39;t spent much time looking at the paper, but I do see that the authors define a complexity class that lies between NL and P.&amp;nbsp; It might be interesting to see if this class coincides with SAC&lt;sup&gt;1&lt;/sup&gt; (also known as LogCFL).&lt;/p&gt;&lt;p&gt;I thank Lance and Bill for encouraging me to write a few lines about Neil&#39;s importance to the field.&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
+  </content>
+    <author>
+      <name>Computational Complexity</name>
+      <uri>http://blog.computationalcomplexity.org/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">arXiv: Computational Complexity: The communication complexity of functions with large outputs</title>
     <link href="http://arxiv.org/abs/2304.00391"/>
     <id>http://arxiv.org/abs/2304.00391</id>
@@ -1810,33 +1825,6 @@ standard decompositions. We then use this relaxed decomposition to
 significantly improve the integrality of certain fractional solutions, before
 handing them to the local rounding procedure that now has to do fewer rounding
 steps.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Universal Coating in the 3D Hybrid Model</title>
-    <link href="http://arxiv.org/abs/2303.16180"/>
-    <id>http://arxiv.org/abs/2303.16180</id>
-    <updated>2023-03-29T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kostitsyna_I/0/1/0/all/0/1&quot;&gt;Irina Kostitsyna&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liedtke_D/0/1/0/all/0/1&quot;&gt;David Liedtke&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Scheideler_C/0/1/0/all/0/1&quot;&gt;Christian Scheideler&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Motivated by the prospect of nano-robots that assist human physiological
-functions at the nanoscale, we investigate the coating problem in the
-three-dimensional model for hybrid programmable matter. In this model, a single
-agent with strictly limited viewing range and the computational capability of a
-deterministic finite automaton can act on passive tiles by picking up a tile,
-moving, and placing it at some spot. The goal of the coating problem is to fill
-each node of some surface graph of size $n$ with a tile. We first solve the
-problem on a restricted class of graphs with a single tile type, and then use
-constantly many tile types to encode this graph in certain surface graphs
-capturing the surface of 3D objects. Our algorithm requires $\mathcal{O}(n^2)$
-steps, which is worst-case optimal compared to an agent with global knowledge
-and no memory restrictions.
 &lt;/p&gt;
   </content>
     <author>
