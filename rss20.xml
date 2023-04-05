@@ -9,6 +9,521 @@
 
 
 <item>
+  <title>The Planted $k$-SUM Problem: Algorithms, Lower Bounds, Hardness Amplification, and Cryptography</title>
+  <guid>http://arxiv.org/abs/2304.01787</guid>
+  <link>http://arxiv.org/abs/2304.01787</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saga_S/0/1/0/all/0/1&quot;&gt;Sagnik Saga&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schwartzbach_N/0/1/0/all/0/1&quot;&gt;Nikolaj I. Schwartzbach&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vasudevan_P/0/1/0/all/0/1&quot;&gt;Prashant Nalini Vasudevan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the average-case $k$-SUM problem, given $r$ integers chosen uniformly at
+random from $\{0,\ldots,M-1\}$, the objective is to find a set of $k$ numbers
+that sum to $0$ modulo $M$ (this set is called a solution). In the related
+$k$-XOR problem, given $k$ uniformly random Boolean vectors of length
+$\log{M}$, the objective is to find a set of $k$ of them whose bitwise-XOR is
+the all-zero vector. Both of these problems have widespread applications in the
+study of fine-grained complexity and cryptanalysis.
+&lt;/p&gt;
+&lt;p&gt;The feasibility and complexity of these problems depends on the relative
+values of $k$, $r$, and $M$. The dense regime of $M \leq r^k$, where solutions
+exist with high probability, is quite well-understood and we have several
+non-trivial algorithms and hardness conjectures here. Much less is known about
+the sparse regime of $M\gg r^k$, where solutions are unlikely to exist. The
+best answers we have for many fundamental questions here are limited to
+whatever carries over from the dense or worst-case settings.
+&lt;/p&gt;
+&lt;p&gt;We study the planted $k$-SUM and $k$-XOR problems in the sparse regime. In
+these problems, a random solution is planted in a randomly generated instance
+and has to be recovered. As $M$ increases past $r^k$, these planted solutions
+tend to be the only solutions with increasing probability, potentially becoming
+easier to find. We show several results about the complexity and applications
+of these problems.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Quantum Public-Key Encryption with Tamper-Resilient Public Keys from One-Way Functions</title>
+  <guid>http://arxiv.org/abs/2304.01800</guid>
+  <link>http://arxiv.org/abs/2304.01800</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Kitagawa_F/0/1/0/all/0/1&quot;&gt;Fuyuki Kitagawa&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Morimae_T/0/1/0/all/0/1&quot;&gt;Tomoyuki Morimae&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nishimaki_R/0/1/0/all/0/1&quot;&gt;Ryo Nishimaki&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Yamakawa_T/0/1/0/all/0/1&quot;&gt;Takashi Yamakawa&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We construct quantum public-key encryption from one-way functions. In our
+construction, public keys are quantum, but ciphertexts are classical. Quantum
+public-key encryption from one-way functions (or weaker primitives such as
+pseudorandom function-like states) are also proposed in some recent works
+[Morimae-Yamakawa, eprint:2022/1336; Coladangelo, eprint:2023/282;
+Grilo-Sattath-Vu, eprint:2023/345; Barooti-Malavolta-Walter, eprint:2023/306].
+However, they have a huge drawback: they are secure only when quantum public
+keys can be transmitted to the sender (who runs the encryption algorithm)
+without being tampered with by the adversary, which seems to require
+unsatisfactory physical setup assumptions such as secure quantum channels. Our
+construction is free from such a drawback: it guarantees the secrecy of the
+encrypted messages even if we assume only unauthenticated quantum channels.
+Thus, the encryption is done with adversarially tampered quantum public keys.
+Our construction based only on one-way functions is the first quantum
+public-key encryption that achieves the goal of classical public-key
+encryption, namely, to establish secure communication over insecure channels.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Minimizing Running Buffers for Tabletop Object Rearrangement: Complexity, Fast Algorithms, and Applications</title>
+  <guid>http://arxiv.org/abs/2304.01764</guid>
+  <link>http://arxiv.org/abs/2304.01764</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gao_K/0/1/0/all/0/1&quot;&gt;Kai Gao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Feng_S/0/1/0/all/0/1&quot;&gt;Si Wei Feng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Huang_B/0/1/0/all/0/1&quot;&gt;Baichuan Huang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yu_J/0/1/0/all/0/1&quot;&gt;Jingjin Yu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For rearranging objects on tabletops with overhand grasps, temporarily
+relocating objects to some buffer space may be necessary. This raises the
+natural question of how many simultaneous storage spaces, or &quot;running buffers&quot;,
+are required so that certain classes of tabletop rearrangement problems are
+feasible. In this work, we examine the problem for both labeled and unlabeled
+settings. On the structural side, we observe that finding the minimum number of
+running buffers (MRB) can be carried out on a dependency graph abstracted from
+a problem instance, and show that computing MRB is NP-hard. We then prove that
+under both labeled and unlabeled settings, even for uniform cylindrical
+objects, the number of required running buffers may grow unbounded as the
+number of objects to be rearranged increases. We further show that the bound
+for the unlabeled case is tight. On the algorithmic side, we develop effective
+exact algorithms for finding MRB for both labeled and unlabeled tabletop
+rearrangement problems, scalable to over a hundred objects under very high
+object density. More importantly, our algorithms also compute a sequence
+witnessing the computed MRB that can be used for solving object rearrangement
+tasks. Employing these algorithms, empirical evaluations reveal that random
+labeled and unlabeled instances, which more closely mimics real-world setups,
+generally have fairly small MRBs. Using real robot experiments, we demonstrate
+that the running buffer abstraction leads to state-of-the-art solutions for
+in-place rearrangement of many objects in tight, bounded workspace.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>A statistical framework for analyzing shape in a time series of random geometric objects</title>
+  <guid>http://arxiv.org/abs/2304.01984</guid>
+  <link>http://arxiv.org/abs/2304.01984</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Delft_A/0/1/0/all/0/1&quot;&gt;Anne van Delft&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Blumberg_A/0/1/0/all/0/1&quot;&gt;Andrew J. Blumberg&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce a new framework to analyze shape descriptors that capture the
+geometric features of an ensemble of point clouds. At the core of our approach
+is the point of view that the data arises as sampled recordings from a metric
+space-valued stochastic process, possibly of nonstationary nature, thereby
+integrating geometric data analysis into the realm of functional time series
+analysis. We focus on the descriptors coming from topological data analysis.
+Our framework allows for natural incorporation of spatial-temporal dynamics,
+heterogeneous sampling, and the study of convergence rates. Further, we derive
+complete invariants for classes of metric space-valued stochastic processes in
+the spirit of Gromov, and relate these invariants to so-called ball volume
+processes. Under mild dependence conditions, a weak invariance principle in
+$D([0,1]\times [0,\mathscr{R}])$ is established for sequential empirical
+versions of the latter, assuming the probabilistic structure possibly changes
+over time. Finally, we use this result to introduce novel test statistics for
+topological change, which are distribution free in the limit under the
+hypothesis of stationarity.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Distribution Testing Under the Parity Trace</title>
+  <guid>http://arxiv.org/abs/2304.01374</guid>
+  <link>http://arxiv.org/abs/2304.01374</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pinto_R/0/1/0/all/0/1&quot;&gt;Renato Ferreira Pinto Jr.&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Harms_N/0/1/0/all/0/1&quot;&gt;Nathaniel Harms&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Distribution testing is a fundamental statistical task with many
+applications, but we are interested in a variety of problems where systematic
+mislabelings of the sample prevent us from applying the existing theory. To
+apply distribution testing to these problems, we introduce distribution testing
+under the parity trace, where the algorithm receives an ordered sample $S$ that
+reveals only the least significant bit of each element. This abstraction
+reveals connections between the following three problems of interest, allowing
+new upper and lower bounds:
+&lt;/p&gt;
+&lt;p&gt;1. In distribution testing with a confused collector, the collector of the
+sample may be incapable of distinguishing between nearby elements of a domain
+(e.g. a machine learning classifier). We prove bounds for distribution testing
+with a confused collector on domains structured as a cycle or a path.
+&lt;/p&gt;
+&lt;p&gt;2. Recent work on the fundamental testing vs. learning question established
+tight lower bounds on distribution-free sample-based property testing by
+reduction from distribution testing, but the tightness is limited to symmetric
+properties. The parity trace allows a broader family of equivalences to
+non-symmetric properties, while recovering and strengthening many of the
+previous results with a different technique.
+&lt;/p&gt;
+&lt;p&gt;3. We give the first results for property testing in the well-studied trace
+reconstruction model, where the goal is to test whether an unknown string $x$
+satisfies some property or is far from satisfying that property, given only
+independent random traces of $x$.
+&lt;/p&gt;
+&lt;p&gt;Our main technical result is a tight bound of $\widetilde
+\Theta\left((n/\epsilon)^{4/5} + \sqrt n/\epsilon^2\right)$ for testing
+uniformity of distributions over $[n]$ under the parity trace, leading also to
+results for the problems above.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Tight Space Lower Bound for Pseudo-Deterministic Approximate Counting</title>
+  <guid>http://arxiv.org/abs/2304.01438</guid>
+  <link>http://arxiv.org/abs/2304.01438</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grossman_O/0/1/0/all/0/1&quot;&gt;Ofer Grossman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gupta_M/0/1/0/all/0/1&quot;&gt;Meghal Gupta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sellke_M/0/1/0/all/0/1&quot;&gt;Mark Sellke&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate one of the most basic problems in streaming algorithms:
+approximating the number of elements in the stream. In 1978, Morris famously
+gave a randomized algorithm achieving a constant-factor approximation error for
+streams of length at most N in space $O(\log \log N)$. We investigate the
+pseudo-deterministic complexity of the problem and prove a tight $\Omega(\log
+N)$ lower bound, thus resolving a problem of
+Goldwasser-Grossman-Mohanty-Woodruff.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>A greedy approach for increased vehicle utilization in ridesharing networks</title>
+  <guid>http://arxiv.org/abs/2304.01225</guid>
+  <link>http://arxiv.org/abs/2304.01225</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Makhdomi_A/0/1/0/all/0/1&quot;&gt;Aqsa Ashraf Makhdomi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gillani_I/0/1/0/all/0/1&quot;&gt;Iqra Altaf Gillani&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In recent years, ridesharing platforms have become a prominent mode of
+transportation for the residents of urban areas. As a fundamental problem,
+route recommendation for these platforms is vital for their sustenance. The
+works done in this direction have recommended routes with higher passenger
+demand. Despite the existing works, statistics have suggested that these
+services cause increased greenhouse emissions compared to private vehicles as
+they roam around in search of riders. This analysis provides finer details
+regarding the functionality of ridesharing systems and it reveals that in the
+face of their boom, they have not utilized the vehicle capacity efficiently. We
+propose to overcome the above limitations and recommend routes that will fetch
+multiple passengers simultaneously which will result in increased vehicle
+utilization and thereby decrease the effect of these systems on the
+environment. As route recommendation is NP-hard, we propose a k-hop-based
+sliding window approximation algorithm that reduces the search space from
+entire road network to a window. We further demonstrate that maximizing
+expected demand is submodular and greedy algorithms can be used to optimize our
+objective function within a window. We evaluate our proposed model on
+real-world datasets and experimental results demonstrate superior performance
+by our proposed model.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Randomly Punctured Reed-Solomon Codes Achieve the List Decoding Capacity over Polynomial-Size Alphabets</title>
+  <guid>http://arxiv.org/abs/2304.01403</guid>
+  <link>http://arxiv.org/abs/2304.01403</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Guo_Z/0/1/0/all/0/1&quot;&gt;Zeyu Guo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_Z/0/1/0/all/0/1&quot;&gt;Zihan Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper shows that, with high probability, randomly punctured Reed-Solomon
+codes over fields of polynomial size achieve the list decoding capacity. More
+specifically, we prove that for any $\epsilon&amp;gt;0$ and $R\in (0,1)$, with high
+probability, randomly punctured Reed-Solomon codes of block length $n$ and rate
+$R$ are $\left(1-R-\epsilon, O({1}/{\epsilon})\right)$ list decodable over
+alphabets of size at least $2^{\mathrm{poly}(1/\epsilon)}n^2$. This extends the
+recent breakthrough of Brakensiek, Gopi, and Makam (STOC 2023) that randomly
+punctured Reed-Solomon codes over fields of exponential size attain the
+generalized Singleton bound of Shangguan and Tamo (STOC 2020).
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>A $d^{1/2+o(1)}$ Monotonicity Tester for Boolean Functions on $d$-Dimensional Hypergrids</title>
+  <guid>http://arxiv.org/abs/2304.01416</guid>
+  <link>http://arxiv.org/abs/2304.01416</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Black_H/0/1/0/all/0/1&quot;&gt;Hadley Black&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chakrabarty_D/0/1/0/all/0/1&quot;&gt;Deeparnab Chakrabarty&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Seshadhri_C/0/1/0/all/0/1&quot;&gt;C. Seshadhri&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Monotonicity testing of Boolean functions on the hypergrid, $f:[n]^d \to
+\{0,1\}$, is a classic topic in property testing. Determining the non-adaptive
+complexity of this problem is an important open question. For arbitrary $n$,
+[Black-Chakrabarty-Seshadhri, SODA 2020] describe a tester with query
+complexity $\widetilde{O}(\varepsilon^{-4/3}d^{5/6})$. This complexity is
+independent of $n$, but has a suboptimal dependence on $d$. Recently,
+[Braverman-Khot-Kindler-Minzer, ITCS 2023] and [Black-Chakrabarty-Seshadhri,
+STOC 2023] describe $\widetilde{O}(\varepsilon^{-2} n^3\sqrt{d})$ and
+$\widetilde{O}(\varepsilon^{-2} n\sqrt{d})$-query testers, respectively. These
+testers have an almost optimal dependence on $d$, but a suboptimal polynomial
+dependence on $n$.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we describe a non-adaptive, one-sided monotonicity tester with
+query complexity $O(\varepsilon^{-2} d^{1/2 + o(1)})$, independent of $n$. Up
+to the $d^{o(1)}$-factors, our result resolves the non-adaptive complexity of
+monotonicity testing for Boolean functions on hypergrids. The independence of
+$n$ yields a non-adaptive, one-sided $O(\varepsilon^{-2} d^{1/2 + o(1)})$-query
+monotonicity tester for Boolean functions $f:\mathbb{R}^d \to \{0,1\}$
+associated with an arbitrary product measure.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Minimum Cost Flow in the CONGEST Model</title>
+  <guid>http://arxiv.org/abs/2304.01600</guid>
+  <link>http://arxiv.org/abs/2304.01600</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vos_T/0/1/0/all/0/1&quot;&gt;Tijn de Vos&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the CONGEST model on a network with $n$ nodes, $m$ edges,
+diameter $D$, and integer costs and capacities bounded by $\text{poly} n$. In
+this paper, we show how to find an exact solution to the minimum cost flow
+problem in $n^{1/2+o(1)}(\sqrt{n}+D)$ rounds, improving the state of the art
+algorithm with running time $m^{3/7+o(1)}(\sqrt nD^{1/4}+D)$ [Forster et al.
+FOCS 2021], which only holds for the special case of unit capacity graphs. For
+certain graphs, we achieve even better results. In particular, for planar
+graphs, expander graphs, $n^{o(1)}$-genus graphs, $n^{o(1)}$-treewidth graphs,
+and excluded-minor graphs our algorithm takes $n^{1/2+o(1)}D$ rounds. We obtain
+this result by combining recent results on Laplacian solvers in the CONGEST
+model [Forster et al. FOCS 2021, Anagnostides et al. DISC 2022] with a CONGEST
+implementation of the LP solver of Lee and Sidford [FOCS 2014], and finally
+show that we can round the approximate solution to an exact solution. Our
+algorithm solves certain linear programs, that generalize minimum cost flow, up
+to additive error $\epsilon$ in $n^{1/2+o(1)}(\sqrt{n}+D)\log^3 (1/\epsilon)$
+rounds.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Algorithms for the Generalized Poset Sorting Problem</title>
+  <guid>http://arxiv.org/abs/2304.01623</guid>
+  <link>http://arxiv.org/abs/2304.01623</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiang_S/0/1/0/all/0/1&quot;&gt;Shaofeng H.-C. Jiang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_W/0/1/0/all/0/1&quot;&gt;Wenqian Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_Y/0/1/0/all/0/1&quot;&gt;Yubo Zhang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_Y/0/1/0/all/0/1&quot;&gt;Yuhao Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider a generalized poset sorting problem (GPS), in which we are given
+a query graph $G = (V, E)$ and an unknown poset $\mathcal{P}(V, \prec)$ that is
+defined on the same vertex set $V$, and the goal is to make as few queries as
+possible to edges in $G$ in order to fully recover $\mathcal{P}$, where each
+query $(u, v)$ returns the relation between $u, v$, i.e., $u \prec v$, $v \prec
+u$ or $u \not \sim v$. This generalizes both the poset sorting problem [Faigle
+et al., SICOMP 88] and the generalized sorting problem [Huang et al., FOCS 11].
+&lt;/p&gt;
+&lt;p&gt;We give algorithms with $\tilde{O}(n\cdot \mathrm{poly}(k))$ query complexity
+when $G$ is a complete bipartite graph or $G$ is stochastic under the \ER
+model, where $k$ is the \emph{width} of the poset, and these generalize
+[Daskalakis et al., SICOMP 11] which only studies complete graph $G$. Both
+results are based on a unified framework that reduces the poset sorting to
+partitioning the vertices with respect to a given pivot element, which may be
+of independent interest.
+&lt;/p&gt;
+&lt;p&gt;Our study of GPS also leads to a new $\tilde{O}(n^{1 - 1 / (2W)})$
+competitive ratio for the so-called weighted generalized sorting problem where
+$W$ is the number of distinct weights in the query graph. This problem was
+considered as an open question in [Charikar et al., JCSS 02], and our result
+makes important progress as it yields the first nontrivial $\tilde{O}(n)$ ratio
+for general weighted query graphs (and better ratio if $W$ is bounded). We
+obtain this via an $\tilde{O}(nk + n^{1.5})$ query complexity algorithm for the
+case where every edge in $G$ is guaranteed to be comparable in the poset, which
+generalizes the state-of-the-art $\tilde{O}(n^{1.5})$ bound for generalized
+sorting [Huang et al., FOCS 11].
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Dynamic treewidth</title>
+  <guid>http://arxiv.org/abs/2304.01744</guid>
+  <link>http://arxiv.org/abs/2304.01744</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Korhonen_T/0/1/0/all/0/1&quot;&gt;Tuukka Korhonen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Majewski_K/0/1/0/all/0/1&quot;&gt;Konrad Majewski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nadara_W/0/1/0/all/0/1&quot;&gt;Wojciech Nadara&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pilipczuk_M/0/1/0/all/0/1&quot;&gt;Micha&amp;#x142; Pilipczuk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sokolowski_M/0/1/0/all/0/1&quot;&gt;Marek Soko&amp;#x142;owski&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a data structure that for a dynamic graph $G$ that is updated by
+edge insertions and deletions, maintains a tree decomposition of $G$ of width
+at most $6k+5$ under the promise that the treewidth of $G$ never grows above
+$k$. The amortized update time is ${\cal O}_k(2^{\sqrt{\log n}\log\log n})$,
+where $n$ is the vertex count of $G$ and the ${\cal O}_k(\cdot)$ notation hides
+factors depending on $k$. In addition, we also obtain the dynamic variant of
+Courcelle&#39;s Theorem: for any fixed property $\varphi$ expressible in the
+$\mathsf{CMSO}_2$ logic, the data structure can maintain whether $G$ satisfies
+$\varphi$ within the same time complexity bounds. To a large extent, this
+answers a question posed by Bodlaender [WG 1993].
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Mixing predictions for online metric algorithms</title>
+  <guid>http://arxiv.org/abs/2304.01781</guid>
+  <link>http://arxiv.org/abs/2304.01781</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Antoniadis_A/0/1/0/all/0/1&quot;&gt;Antonios Antoniadis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Coester_C/0/1/0/all/0/1&quot;&gt;Christian Coester&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Elias_M/0/1/0/all/0/1&quot;&gt;Marek Eli&amp;#xe1;&amp;#x161;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Polak_A/0/1/0/all/0/1&quot;&gt;Adam Polak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Simon_B/0/1/0/all/0/1&quot;&gt;Bertrand Simon&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A major technique in learning-augmented online algorithms is combining
+multiple algorithms or predictors. Since the performance of each predictor may
+vary over time, it is desirable to use not the single best predictor as a
+benchmark, but rather a dynamic combination which follows different predictors
+at different times. We design algorithms that combine predictions and are
+competitive against such dynamic combinations for a wide class of online
+problems, namely, metrical task systems. Against the best (in hindsight)
+unconstrained combination of $\ell$ predictors, we obtain a competitive ratio
+of $O(\ell^2)$, and show that this is best possible. However, for a benchmark
+with slightly constrained number of switches between different predictors, we
+can get a $(1+\epsilon)$-competitive algorithm. Moreover, our algorithms can be
+adapted to access predictors in a bandit-like fashion, querying only one
+predictor at a time. An unexpected implication of one of our lower bounds is a
+new structural insight about covering formulations for the $k$-server problem.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>VC Set Systems in Minor-free (Di)Graphs and Applications</title>
+  <guid>http://arxiv.org/abs/2304.01790</guid>
+  <link>http://arxiv.org/abs/2304.01790</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Le_H/0/1/0/all/0/1&quot;&gt;Hung Le&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wulff_Nilsen_C/0/1/0/all/0/1&quot;&gt;Christian Wulff-Nilsen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A recent line of work on VC set systems in minor-free (undirected) graphs,
+starting from Li and Parter, who constructed a new VC set system for planar
+graphs, has given surprising algorithmic results. In this work, we initialize a
+more systematic study of VC set systems for minor-free graphs and their
+applications in both undirected graphs and directed graphs (a.k.a digraphs).
+More precisely:
+&lt;/p&gt;
+&lt;p&gt;- We propose a new variant of Li-Parter set system for undirected graphs.
+&lt;/p&gt;
+&lt;p&gt;- We extend our set system to $K_h$-minor-free digraphs and show that its VC
+dimension is $O(h^2)$.
+&lt;/p&gt;
+&lt;p&gt;- We show that the system of directed balls in minor-free digraphs has VC
+dimension at most $h-1$.
+&lt;/p&gt;
+&lt;p&gt;- On the negative side, we show that VC set system constructed from shortest
+path trees of planar digraphs does not have a bounded VC dimension.
+&lt;/p&gt;
+&lt;p&gt;The highlight of our work is the results for digraphs, as we are not aware of
+known algorithmic work on constructing and exploiting VC set systems for
+digraphs.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Connected and Autonomous Vehicle Scheduling Problems: Some Models and Algorithms</title>
+  <guid>http://arxiv.org/abs/2304.01806</guid>
+  <link>http://arxiv.org/abs/2304.01806</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Gafarov_E/0/1/0/all/0/1&quot;&gt;Evgeny R. Gafarov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Werner_F/0/1/0/all/0/1&quot;&gt;Frank Werner&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we consider scheduling problems that arise in connected and
+autonomous vehicle systems. For four variants of such problems, mathematical
+models and solution algorithms are presented. In particular, three polynomial
+algorithms and a branch and bound algorithms are developed.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Chasing Positive Bodies</title>
+  <guid>http://arxiv.org/abs/2304.01889</guid>
+  <link>http://arxiv.org/abs/2304.01889</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhattacharya_S/0/1/0/all/0/1&quot;&gt;Sayan Bhattacharya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Buchbinder_N/0/1/0/all/0/1&quot;&gt;Niv Buchbinder&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Levin_R/0/1/0/all/0/1&quot;&gt;Roie Levin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saranurak_T/0/1/0/all/0/1&quot;&gt;Thatchaphol Saranurak&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of chasing positive bodies in $\ell_1$: given a sequence
+of bodies $K_{t}=\{x^{t}\in\mathbb{R}_{+}^{n}\mid C^{t}x^{t}\geq
+1,P^{t}x^{t}\leq 1\}$ revealed online, where $C^{t}$ and $P^{t}$ are
+nonnegative matrices, the goal is to (approximately) maintain a point $x_t \in
+K_t$ such that $\sum_t \|x_t - x_{t-1}\|_1$ is minimized. This captures the
+fully-dynamic low-recourse variant of any problem that can be expressed as a
+mixed packing-covering linear program and thus also the fractional version of
+many central problems in dynamic algorithms such as set cover, load balancing,
+hyperedge orientation, minimum spanning tree, and matching.
+&lt;/p&gt;
+&lt;p&gt;We give an $O(\log d)$-competitive algorithm for this problem, where $d$ is
+the maximum row sparsity of any matrix $C^t$. This bypasses and improves
+exponentially over the lower bound of $\sqrt{n}$ known for general convex
+bodies. Our algorithm is based on iterated information projections, and, in
+contrast to general convex body chasing algorithms, is entirely memoryless.
+&lt;/p&gt;
+&lt;p&gt;We also show how to round our solution dynamically to obtain the first fully
+dynamic algorithms with competitive recourse for all the stated problems above;
+i.e. their recourse is less than the recourse of every other algorithm on every
+update sequence, up to polylogarithmic factors. This is a significantly
+stronger notion than the notion of absolute recourse in the dynamic algorithms
+literature.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Strong spatial mixing for colorings on trees and its algorithmic applications</title>
+  <guid>http://arxiv.org/abs/2304.01954</guid>
+  <link>http://arxiv.org/abs/2304.01954</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_Z/0/1/0/all/0/1&quot;&gt;Zongchen Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_K/0/1/0/all/0/1&quot;&gt;Kuikui Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mani_N/0/1/0/all/0/1&quot;&gt;Nitya Mani&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moitra_A/0/1/0/all/0/1&quot;&gt;Ankur Moitra&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Strong spatial mixing (SSM) is an important quantitative notion of
+correlation decay for Gibbs distributions arising in statistical physics,
+probability theory, and theoretical computer science. A longstanding conjecture
+is that the uniform distribution on proper $q$-colorings on a $\Delta$-regular
+tree exhibits SSM whenever $q \ge \Delta+1$. Moreover, it is widely believed
+that as long as SSM holds on bounded-degree trees with $q$ colors, one would
+obtain an efficient sampler for $q$-colorings on all bounded-degree graphs via
+simple Markov chain algorithms. It is surprising that such a basic question is
+still open, even on trees, but then again it also highlights how much we still
+have to learn about random colorings. In this paper, we show the following:
+&lt;/p&gt;
+&lt;p&gt;(1) For any $\Delta \ge 3$, SSM holds for random $q$-colorings on trees of
+maximum degree $\Delta$ whenever $q \ge \Delta + 3$. Thus we almost fully
+resolve the aforementioned conjecture. Our result substantially improves upon
+the previously best bound which requires $q \ge 1.59\Delta+\gamma^*$ for an
+absolute constant $\gamma^* &amp;gt; 0$.
+&lt;/p&gt;
+&lt;p&gt;(2) For any $\Delta\ge 3$ and girth $g = \Omega_\Delta(1)$, we establish
+optimal mixing of the Glauber dynamics for $q$-colorings on graphs of maximum
+degree $\Delta$ and girth $g$ whenever $q \ge \Delta+3$. Our approach is based
+on a new general reduction from spectral independence on large-girth graphs to
+SSM on trees that is of independent interest.
+&lt;/p&gt;
+&lt;p&gt;Using the same techniques, we also prove near-optimal bounds on weak spatial
+mixing (WSM), a closely-related notion to SSM, for the antiferromagnetic Potts
+model on trees.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Online Time-Windows TSP with Predictions</title>
+  <guid>http://arxiv.org/abs/2304.01958</guid>
+  <link>http://arxiv.org/abs/2304.01958</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chawla_S/0/1/0/all/0/1&quot;&gt;Shuchi Chawla&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Christou_D/0/1/0/all/0/1&quot;&gt;Dimitris Christou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the Time-Windows TSP (TW-TSP) we are given requests at different locations
+on a network; each request is endowed with a reward and an interval of time;
+the goal is to find a tour that visits as much reward as possible during the
+corresponding time window. For the online version of this problem, where each
+request is revealed at the start of its time window, no finite competitive
+ratio can be obtained. We consider a version of the problem where the algorithm
+is presented with predictions of where and when the online requests will
+appear, without any knowledge of the quality of this side information.
+&lt;/p&gt;
+&lt;p&gt;Vehicle routing problems such as the TW-TSP can be very sensitive to errors
+or changes in the input due to the hard time-window constraints, and it is
+unclear whether imperfect predictions can be used to obtain a finite
+competitive ratio. We show that good performance can be achieved by explicitly
+building slack into the solution. Our main result is an online algorithm that
+achieves a competitive ratio logarithmic in the diameter of the underlying
+network, matching the performance of the best offline algorithm to within
+factors that depend on the quality of the provided predictions. The competitive
+ratio degrades smoothly as a function of the quality and we show that this
+dependence is tight within constant factors.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Neil Jones (1941-2023)</title>
   <guid>tag:blogger.com,1999:blog-3722233.post-4674935859497045234</guid>
   <link>https://blog.computationalcomplexity.org/2023/04/neil-jones-1941-2023.html</link>
@@ -1045,592 +1560,6 @@ Email: pavan@iastate.edu&lt;/p&gt;
   </description>
   <pubDate>2023-03-30 13:10:38 UTC</pubDate>
   <author>Windows on Theory</author>
-</item>
-
-<item>
-  <title>If AI scaling is to be shut down, let it be for a coherent reason</title>
-  <guid>https://scottaaronson.blog/?p=7174</guid>
-  <link>https://scottaaronson.blog/?p=7174</link>
-  <description>
-    &lt;p&gt;There&amp;#8217;s now an &lt;a href=&quot;https://futureoflife.org/open-letter/pause-giant-ai-experiments/&quot;&gt;open letter&lt;/a&gt; arguing that the world should impose a six-month moratorium on the further scaling of AI models such as GPT, by government fiat if necessary, to give AI safety and interpretability research a bit more time to catch up.  The letter is signed by many of my friends and colleagues, many who probably agree with each other about little else, over a thousand people including Elon Musk, Steve Wozniak, Andrew Yang, Jaan Tallinn, Stuart Russell, Max Tegmark, Yuval Noah Harari, Ernie Davis, Gary Marcus, and Yoshua Bengio. &lt;/p&gt;
-
-
-
-&lt;p&gt;Meanwhile, Eliezer Yudkowsky &lt;a href=&quot;https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/&quot;&gt;published a piece in &lt;em&gt;TIME&lt;/em&gt;&lt;/a&gt; arguing that the open letter doesn&amp;#8217;t go nearly far enough, and that AI scaling needs to be shut down entirely until the AI alignment problem is solved&amp;#8212;with the shutdown enforced by military strikes on GPU farms if needed, and treated as more important than preventing nuclear war.&lt;/p&gt;
-
-
-
-&lt;p&gt;Readers, as they do, asked me to respond.  Alright, alright.  While the open letter is presumably targeted at OpenAI more than any other entity, and while I’ve been &lt;a href=&quot;https://scottaaronson.blog/?p=6484&quot;&gt;spending the year at OpenAI&lt;/a&gt; to work on theoretical foundations of AI safety, I’m going to answer strictly for myself.&lt;/p&gt;
-
-
-
-&lt;p&gt;Given the jaw-droppingly spectacular abilities of GPT-4&amp;#8212;e.g., &lt;a href=&quot;https://www.semafor.com/article/03/15/2023/how-gpt-4-performed-in-academic-exams&quot;&gt;acing&lt;/a&gt; the Advanced Placement biology and macroeconomics exams, correctly &lt;a href=&quot;https://arxiv.org/abs/2303.12712&quot;&gt;manipulating images&lt;/a&gt; (via their source code) without having been programmed for anything of the kind, etc. etc.&amp;#8212;the idea that AI now needs to be treated with extreme caution strikes me as far from absurd.  I don&amp;#8217;t even dismiss the possibility that advanced AI could eventually require the same sorts of safeguards as nuclear weapons.&lt;/p&gt;
-
-
-
-&lt;p&gt;Furthermore, people might be surprised about the diversity of opinion about these issues &lt;em&gt;within&lt;/em&gt; OpenAI, by how many there have discussed or even forcefully advocated slowing down.  And there&amp;#8217;s a world not so far from this one where I, too, get behind a pause.  For example, one &lt;em&gt;actual&lt;/em&gt; major human tragedy caused by a generative AI model might suffice to push me over the edge.  (What would push &lt;em&gt;you&lt;/em&gt; over the edge, if you&amp;#8217;re not already over?)&lt;/p&gt;
-
-
-
-&lt;p&gt;Before I join the slowdown brigade, though, I have (this being the week before Passover) four questions for the signatories:&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;Would your rationale for this pause have applied to basically &lt;em&gt;any&lt;/em&gt; nascent technology — the printing press, radio, airplanes, the Internet?  “We don’t yet know the implications, but there’s an excellent chance terrible people will misuse this, ergo the only responsible choice is to pause until we&amp;#8217;re confident that they won&amp;#8217;t”?&lt;/li&gt;
-
-
-
-&lt;li&gt;Why six months?  Why not six weeks or six years?&lt;/li&gt;
-
-
-
-&lt;li&gt;When, by your lights, would we ever know that it was safe to &lt;em&gt;resume&lt;/em&gt; scaling AI&amp;#8212;or at least that the risks of pausing exceeded the risks of scaling?  Why won&amp;#8217;t the &lt;a href=&quot;https://en.wikipedia.org/wiki/Precautionary_principle&quot;&gt;precautionary principle&lt;/a&gt; continue for apply forever?&lt;/li&gt;
-
-
-
-&lt;li&gt;Were you, until approximately last week, ridiculing GPT as unimpressive, a stochastic parrot, lacking common sense, piffle, a scam, etc. — before turning around and declaring that it could be existentially dangerous? How can you have it both ways?  If the problem, in your view, is that GPT-4 is too stupid, then shouldn&amp;#8217;t GPT-5 be smarter &lt;em&gt;and therefore&lt;/em&gt; &lt;em&gt;safer&lt;/em&gt;?  Thus, shouldn&amp;#8217;t we keep scaling AI as quickly as we can &amp;#8230; &lt;em&gt;for safety reasons&lt;/em&gt;?  If, on the other hand, the problem is that GPT-4 is too smart, then why can’t you bring yourself to say so?&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;With the “why six months?” question, I confess that I was deeply confused, until I heard a dear friend and colleague in academic AI, one who&amp;#8217;s long been skeptical of AI-doom scenarios, explain why &lt;em&gt;he&lt;/em&gt; signed the open letter.  He said: look, we all started writing research papers about the safety issues with ChatGPT; then our work became obsolete when OpenAI released GPT-4 just a few months later.  So now we&amp;#8217;re writing papers about GPT-4.  Will we &lt;em&gt;again&lt;/em&gt; have to throw our work away when OpenAI releases GPT-5?  I realized that, while six months might not suffice to save human civilization, it&amp;#8217;s just enough for the more immediate concern of getting papers into academic AI conferences.&lt;/p&gt;
-
-
-
-&lt;p&gt;Look: while I&amp;#8217;ve spent &lt;a href=&quot;https://scottaaronson.blog/?p=6821&quot;&gt;multiple&lt;/a&gt; &lt;a href=&quot;https://scottaaronson.blog/?p=6823&quot;&gt;posts&lt;/a&gt; explaining how I part ways from the Orthodox Yudkowskyan position, I do find that position intellectually consistent, with conclusions that follow neatly from premises.  The Orthodox, in particular, can straightforwardly answer all four of my questions above:&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;AI is manifestly different from any other technology humans have ever created, because it could become to us as we are to orangutans;&lt;/li&gt;
-
-
-
-&lt;li&gt;a six-month pause is very far from sufficient but is better than no pause;&lt;/li&gt;
-
-
-
-&lt;li&gt;we&amp;#8217;ll know that it&amp;#8217;s safe to scale when (and only when) we understand our AIs so deeply that we can &lt;em&gt;mathematically explain&lt;/em&gt; why they won&amp;#8217;t do anything bad; and&lt;/li&gt;
-
-
-
-&lt;li&gt;GPT-4 is &lt;em&gt;extremely&lt;/em&gt; impressive&amp;#8212;that&amp;#8217;s why it&amp;#8217;s so terrifying!&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;On the other hand, I&amp;#8217;m deeply confused by the people who signed the open letter, &lt;em&gt;even though they continue to downplay or even ridicule GPT&amp;#8217;s abilities, as well as the &amp;#8220;sensationalist&amp;#8221; predictions of an AI apocalypse.&lt;/em&gt;  I&amp;#8217;d feel less confused if such people came out and argued explicitly: &amp;#8220;yes, we should also have paused the rapid improvement of printing presses to avert Europe&amp;#8217;s religious wars.  Yes, we should&amp;#8217;ve paused the scaling of radio transmitters to prevent the rise of Hitler.  Yes, we should&amp;#8217;ve paused the race for ever-faster home Internet to prevent the election of Donald Trump.  And yes, we should&amp;#8217;ve trusted our governments to manage these pauses, to foresee brand-new technologies&amp;#8217; likely harms and take appropriate actions to mitigate them.&amp;#8221;&lt;/p&gt;
-
-
-
-&lt;p&gt;Absent such an argument, I come back to the question of whether generative AI &lt;em&gt;actually&lt;/em&gt; poses a near-term risk that&amp;#8217;s totally unparalleled in human history, or perhaps approximated only by the risk of nuclear weapons.  After sharing an email from his partner, Eliezer rather movingly writes:&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;When the insider conversation is about the grief of seeing your daughter lose her first tooth, and thinking she’s not going to get a chance to grow up, I believe we are past the point of playing political chess about a six-month moratorium.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;Look, I too have a 10-year-old daughter and a 6-year-old son, and I wish to see them grow up.  But the causal story that starts with a GPT-5 or GPT-4.5 training run, and ends with the sudden death of my children and of all carbon-based life, still has a few too many gaps for my aging, inadequate brain to fill in.  I can complete the story in my imagination, of course, but I could equally complete a story that starts with GPT-5 and ends with the world saved from various natural stupidities.  For better or worse, I lack the &amp;#8220;Bayescraft&amp;#8221; to see why the first story is &lt;em&gt;obviously&lt;/em&gt; 1000x or 1,000,000x likelier than the second one.&lt;/p&gt;
-
-
-
-&lt;p&gt;But, I dunno, maybe I&amp;#8217;m making the greatest mistake of my life?  Feel free to try convincing me that I should sign the letter.  But let&amp;#8217;s see how polite and charitable everyone can be: hopefully a six-month moratorium won&amp;#8217;t be needed to solve the alignment problem of the &lt;em&gt;Shtetl-Optimized&lt;/em&gt; comment section.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-30 06:23:41 UTC</pubDate>
-  <author>Scott Aaronson</author>
-</item>
-
-<item>
-  <title>Planar 3-way Edge Perfect Matching Leads to A Holant Dichotomy</title>
-  <guid>http://arxiv.org/abs/2303.16705</guid>
-  <link>http://arxiv.org/abs/2303.16705</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cai_J/0/1/0/all/0/1&quot;&gt;Jin-Yi Cai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fan_A/0/1/0/all/0/1&quot;&gt;Austen Z. Fan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove a complexity dichotomy theorem for a class of Holant problems on
-planar 3-regular bipartite graphs. The complexity dichotomy states that for
-every weighted constraint function $f$ defining the problem (the weights can
-even be negative), the problem is either computable in polynomial time if $f$
-satisfies a tractability criterion, or \#P-hard otherwise. One particular
-problem in this problem space is a long-standing open problem of Moore and
-Robson on counting Cubic Planar X3C. The dichotomy resolves this problem by
-showing that it is \numP-hard. Our proof relies on the machinery of signature
-theory developed in the study of Holant problems. An essential ingredient in
-our proof of the main dichotomy theorem is a pure graph-theoretic result:
-Excepting some trivial cases, every 3-regular plane graph has a planar 3-way
-edge perfect matching. The proof technique of this graph-theoretic result is a
-combination of algebraic and combinatorial methods.
-&lt;/p&gt;
-&lt;p&gt;The P-time tractability criterion of the dichotomy is explicit. Other than
-the known classes of tractable constraint functions (degenerate, affine,
-product type, matchgates-transformable) we also identify a new infinite set of
-P-time computable planar Holant problems; however, its tractability is not by a
-direct holographic transformation to matchgates, but by a combination of this
-method and a global argument. The complexity dichotomy states that everything
-else in this Holant class is \#P-hard.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Constant-Hop Spanners for More Geometric Intersection Graphs, with Even Smaller Size</title>
-  <guid>http://arxiv.org/abs/2303.16303</guid>
-  <link>http://arxiv.org/abs/2303.16303</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chan_T/0/1/0/all/0/1&quot;&gt;Timothy M. Chan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Huang_Z/0/1/0/all/0/1&quot;&gt;Zhengcheng Huang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In SoCG 2022, Conroy and T\&#39;oth presented several constructions of sparse,
-low-hop spanners in geometric intersection graphs, including an $O(n\log
-n)$-size 3-hop spanner for $n$ disks (or fat convex objects) in the plane, and
-an $O(n\log^2 n)$-size 3-hop spanner for $n$ axis-aligned rectangles in the
-plane. Their work left open two major questions: (i) can the size be made
-closer to linear by allowing larger constant stretch? and (ii) can near-linear
-size be achieved for more general classes of intersection graphs?
-&lt;/p&gt;
-&lt;p&gt;We address both questions simultaneously, by presenting new constructions of
-constant-hop spanners that have almost linear size and that hold for a much
-larger class of intersection graphs. More precisely, we prove the existence of
-an $O(1)$-hop spanner for arbitrary string graphs with $O(n\alpha_k(n))$ size
-for any constant $k$, where $\alpha_k(n)$ denotes the $k$-th function in the
-inverse Ackermann hierarchy. We similarly prove the existence of an $O(1)$-hop
-spanner for intersection graphs of $d$-dimensional fat objects with
-$O(n\alpha_k(n))$ size for any constant $k$ and $d$.
-&lt;/p&gt;
-&lt;p&gt;We also improve on some of Conroy and T\&#39;oth&#39;s specific previous results, in
-either the number of hops or the size: we describe an $O(n\log n)$-size 2-hop
-spanner for disks (or more generally objects with linear union complexity) in
-the plane, and an $O(n\log n)$-size 3-hop spanner for axis-aligned rectangles
-in the plane.
-&lt;/p&gt;
-&lt;p&gt;Our proofs are all simple, using separator theorems, recursion, shifted
-quadtrees, and shallow cuttings.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Topological Point Cloud Clustering</title>
-  <guid>http://arxiv.org/abs/2303.16716</guid>
-  <link>http://arxiv.org/abs/2303.16716</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Grande_V/0/1/0/all/0/1&quot;&gt;Vincent P. Grande&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Schaub_M/0/1/0/all/0/1&quot;&gt;Michael T. Schaub&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present Topological Point Cloud Clustering (TPCC), a new method to cluster
-points in an arbitrary point cloud based on their contribution to global
-topological features. TPCC synthesizes desirable features from spectral
-clustering and topological data analysis and is based on considering the
-spectral properties of a simplicial complex associated to the considered point
-cloud. As it is based on considering sparse eigenvector computations, TPCC is
-similarly easy to interpret and implement as spectral clustering. However, by
-focusing not just on a single matrix associated to a graph created from the
-point cloud data, but on a whole set of Hodge-Laplacians associated to an
-appropriately constructed simplicial complex, we can leverage a far richer set
-of topological features to characterize the data points within the point cloud
-and benefit from the relative robustness of topological techniques against
-noise. We test the performance of TPCC on both synthetic and real-world data
-and compare it with classical spectral clustering.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Lifting uniform learners via distributional decomposition</title>
-  <guid>http://arxiv.org/abs/2303.16208</guid>
-  <link>http://arxiv.org/abs/2303.16208</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/stat/1/au:+Blanc_G/0/1/0/all/0/1&quot;&gt;Guy Blanc&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/stat/1/au:+Lange_J/0/1/0/all/0/1&quot;&gt;Jane Lange&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/stat/1/au:+Malik_A/0/1/0/all/0/1&quot;&gt;Ali Malik&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/stat/1/au:+Tan_L/0/1/0/all/0/1&quot;&gt;Li-Yang Tan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We show how any PAC learning algorithm that works under the uniform
-distribution can be transformed, in a blackbox fashion, into one that works
-under an arbitrary and unknown distribution $\mathcal{D}$. The efficiency of
-our transformation scales with the inherent complexity of $\mathcal{D}$,
-running in $\mathrm{poly}(n, (md)^d)$ time for distributions over $\{\pm 1\}^n$
-whose pmfs are computed by depth-$d$ decision trees, where $m$ is the sample
-complexity of the original algorithm. For monotone distributions our
-transformation uses only samples from $\mathcal{D}$, and for general ones it
-uses subcube conditioning samples.
-&lt;/p&gt;
-&lt;p&gt;A key technical ingredient is an algorithm which, given the aforementioned
-access to $\mathcal{D}$, produces an optimal decision tree decomposition of
-$\mathcal{D}$: an approximation of $\mathcal{D}$ as a mixture of uniform
-distributions over disjoint subcubes. With this decomposition in hand, we run
-the uniform-distribution learner on each subcube and combine the hypotheses
-using the decision tree. This algorithmic decomposition lemma also yields new
-algorithms for learning decision tree distributions with runtimes that
-exponentially improve on the prior state of the art -- results of independent
-interest in distribution learning.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Certified Hardness vs. Randomness for Log-Space</title>
-  <guid>http://arxiv.org/abs/2303.16413</guid>
-  <link>http://arxiv.org/abs/2303.16413</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pyne_E/0/1/0/all/0/1&quot;&gt;Edward Pyne&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Raz_R/0/1/0/all/0/1&quot;&gt;Ran Raz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhan_W/0/1/0/all/0/1&quot;&gt;Wei Zhan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Let $\mathcal{L}$ be a language that can be decided in linear space and let
-$\epsilon &amp;gt;0$ be any constant. Let $\mathcal{A}$ be the exponential hardness
-assumption that for every $n$, membership in $\mathcal{L}$ for inputs of
-length~$n$ cannot be decided by circuits of size smaller than $2^{\epsilon n}$.
-We prove that for every function $f :\{0,1\}^* \rightarrow \{0,1\}$, computable
-by a randomized logspace algorithm $R$, there exists a deterministic logspace
-algorithm $D$ (attempting to compute $f$), such that on every input $x$ of
-length $n$, the algorithm $D$ outputs one of the following:
-&lt;/p&gt;
-&lt;p&gt;1: The correct value $f(x)$.
-&lt;/p&gt;
-&lt;p&gt;2: The string: ``I am unable to compute $f(x)$ because the hardness
-assumption $\mathcal{A}$ is false&#39;&#39;, followed by a (provenly correct) circuit
-of size smaller than $2^{\epsilon n&#39;}$ for membership in $\mathcal{L}$ for
-inputs of length~$n&#39;$, for some $n&#39; = \Theta (\log n)$; that is, a circuit that
-refutes $\mathcal{A}$.
-&lt;/p&gt;
-&lt;p&gt;Our next result is a universal derandomizer for $BPL$: We give a
-deterministic algorithm $U$ that takes as an input a randomized logspace
-algorithm $R$ and an input $x$ and simulates the computation of $R$ on $x$,
-deteriministically. Under the widely believed assumption $BPL=L$, the space
-used by $U$ is at most $C_R \cdot \log n$ (where $C_R$ is a constant depending
-on~$R$). Moreover, for every constant $c \geq 1$, if $BPL\subseteq
-SPACE[(\log(n))^{c}]$ then the space used by $U$ is at most $C_R \cdot
-(\log(n))^{c}$.
-&lt;/p&gt;
-&lt;p&gt;Finally, we prove that if optimal hitting sets for ordered branching programs
-exist then there is a deterministic logspace algorithm that, given a black-box
-access to an ordered branching program $B$ of size $n$, estimates the
-probability that $B$ accepts on a uniformly random input. This extends the
-result of (Cheng and Hoza CCC 2020), who proved that an optimal hitting set
-implies a white-box two-sided derandomization.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Lower Bounds for Pseudo-Deterministic Counting in a Stream</title>
-  <guid>http://arxiv.org/abs/2303.16287</guid>
-  <link>http://arxiv.org/abs/2303.16287</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Braverman_V/0/1/0/all/0/1&quot;&gt;Vladimir Braverman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Krauthgamer_R/0/1/0/all/0/1&quot;&gt;Robert Krauthgamer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Krishnan_A/0/1/0/all/0/1&quot;&gt;Aditya Krishnan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sapir_S/0/1/0/all/0/1&quot;&gt;Shay Sapir&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Many streaming algorithms provide only a high-probability relative
-approximation. These two relaxations, of allowing approximation and
-randomization, seem necessary -- for many streaming problems, both relaxations
-must be employed simultaneously, to avoid an exponentially larger (and often
-trivial) space complexity. A common drawback of these randomized approximate
-algorithms is that independent executions on the same input have different
-outputs, that depend on their random coins. Pseudo-deterministic algorithms
-combat this issue, and for every input, they output with high probability the
-same ``canonical&#39;&#39; solution.
-&lt;/p&gt;
-&lt;p&gt;We consider perhaps the most basic problem in data streams, of counting the
-number of items in a stream of length at most $n$. Morris&#39;s counter [CACM,
-1978] is a randomized approximation algorithm for this problem that uses
-$O(\log\log n)$ bits of space, for every fixed approximation factor (greater
-than $1$). Goldwasser, Grossman, Mohanty and Woodruff [ITCS 2020] asked whether
-pseudo-deterministic approximation algorithms can match this space complexity.
-Our main result answers their question negatively, and shows that such
-algorithms must use $\Omega(\sqrt{\log n / \log\log n})$ bits of space.
-&lt;/p&gt;
-&lt;p&gt;Our approach is based on a problem that we call Shift Finding, and may be of
-independent interest. In this problem, one has query access to a shifted
-version of a known string $F\in\{0,1\}^{3n}$, which is guaranteed to start with
-$n$ zeros and end with $n$ ones, and the goal is to find the unknown shift
-using a small number of queries. We provide for this problem an algorithm that
-uses $O(\sqrt{n})$ queries. It remains open whether $poly(\log n)$ queries
-suffice; if true, then our techniques immediately imply a nearly-tight
-$\Omega(\log n/\log\log n)$ space bound for pseudo-deterministic approximate
-counting.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Complexity of Equilibria in First-Price Auctions under General Tie-Breaking Rules</title>
-  <guid>http://arxiv.org/abs/2303.16388</guid>
-  <link>http://arxiv.org/abs/2303.16388</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_X/0/1/0/all/0/1&quot;&gt;Xi Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Peng_B/0/1/0/all/0/1&quot;&gt;Binghui Peng&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the complexity of finding an approximate (pure) Bayesian Nash
-equilibrium in a first-price auction with common priors when the tie-breaking
-rule is part of the input. We show that the problem is PPAD-complete even when
-the tie-breaking rule is trilateral (i.e., it specifies item allocations when
-no more than three bidders are in tie, and adopts the uniform tie-breaking rule
-otherwise). This is the first hardness result for equilibrium computation in
-first-price auctions with common priors. On the positive side, we give a PTAS
-for the problem under the uniform tie-breaking rule.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-30 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Alan Turing, The Opera</title>
-  <guid>tag:blogger.com,1999:blog-3722233.post-448142924631254224</guid>
-  <link>https://blog.computationalcomplexity.org/2023/03/alan-turing-opera.html</link>
-  <description>
-    &lt;p&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEih91e9xcRo-Hr1RCp_82Gpy7YFV2sUTXy8IYTFSJ-LMZrr__CZtlFk2EHGczD2-XZdOtbkYNOC2pX_nSJqFqz6PFQTj0vNEDQMgSi02QC5vQ0gF5KnEsIXCDh4wB_NTBP2TzFdwYXCeYIoNRUDjKwYpNZpCGvTHyH8a2tW-q2Bw3F2vpMwxw/s1312/Turing.png&quot; style=&quot;clear: right; display: inline; float: right; margin-bottom: 1em; margin-left: 1em; text-align: center;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;1312&quot; data-original-width=&quot;855&quot; height=&quot;320&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEih91e9xcRo-Hr1RCp_82Gpy7YFV2sUTXy8IYTFSJ-LMZrr__CZtlFk2EHGczD2-XZdOtbkYNOC2pX_nSJqFqz6PFQTj0vNEDQMgSi02QC5vQ0gF5KnEsIXCDh4wB_NTBP2TzFdwYXCeYIoNRUDjKwYpNZpCGvTHyH8a2tW-q2Bw3F2vpMwxw/w210-h320/Turing.png&quot; width=&quot;210&quot; /&gt;&lt;/a&gt;&amp;nbsp;&lt;/p&gt;Last Thursday I attended the world premier of &lt;a href=&quot;https://chicagooperatheater.org/season/turing&quot;&gt;The Life and Death(s) of Alan Turing&lt;/a&gt;, a new production from Chicago Opera Theater composed by Justine Chen with the libretto (text) from David Simpatico.&lt;p&gt;&lt;/p&gt;&lt;p&gt;The opera takes a mostly chronological trip through his life in seven scenes, focusing less on the computer science and more on Turing&#39;s struggle with homosexuality and his prosecution. Turing does fiddle with an old computer throughout the opera. The opera ends with a different take on his death (spoiler alert), where he attempts to upload his consciousness to escape his chemically castrated body.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Between the scenes, a chorus chants random numbers and words as they floated on a scrim, in what the composer calls &quot;chat clouds&quot;.&amp;nbsp;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;These “chat clouds” transport the listeners with a sonic approximation of internet chatter, filled with information that brings them to the next moment. The aural depiction of these &quot;chat clouds&quot; was inspired by the animated movies and television series of Masamune Shirow&#39;s cyberpunk manga Ghost in the Shell. Another sonic influence was Walt Disney’s fantastical Snow White, one of Alan’s greatest obsessions.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;I found them reminiscent of the Philip Glass&#39;&amp;nbsp;&lt;a href=&quot;https://www.youtube.com/watch?v=9YRzS9y-8S8&quot;&gt;knee play&lt;/a&gt;&amp;nbsp;from Einstein on the Beach. I really enjoyed these sequences, though another academic I ran into during intermission felt otherwise.&lt;/p&gt;&lt;p&gt;Over all I enjoyed the music and the opera, particularly the courtroom scene where Turing gave an impassioned defense though it turns out all in his head. The cast did well across the board, especially Jonathan Michie who sang Turing.&amp;nbsp;&lt;/p&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTEyFR4Sjvw7Ew4ip5OXdi6Q0Q3iJLmzZg7P0jknvTJjHgVdUj7f_XtvW16CiHsbDu8pJxL8QVKurCOc3crdwE03zcWzfh0FF1SLPBGUBqqunj_GAUmmcGnoQKHr2b-QPI5X2fafywY1UrVIEXQBHJGxChdL699rjzysU0OgQbQvY1tuJnDg/s1954/PXL_20230324_024100463.jpg&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;769&quot; data-original-width=&quot;1954&quot; height=&quot;158&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTEyFR4Sjvw7Ew4ip5OXdi6Q0Q3iJLmzZg7P0jknvTJjHgVdUj7f_XtvW16CiHsbDu8pJxL8QVKurCOc3crdwE03zcWzfh0FF1SLPBGUBqqunj_GAUmmcGnoQKHr2b-QPI5X2fafywY1UrVIEXQBHJGxChdL699rjzysU0OgQbQvY1tuJnDg/w400-h158/PXL_20230324_024100463.jpg&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;Librettist David Simpatico (wearing jacking), Composer Justine Chen (in gown)&lt;br /&gt;conductor&amp;nbsp;Lidiya Yankovskaya behind her and Jonathan Michie (in red robe)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;One can&#39;t help compare this opera to &lt;a href=&quot;https://en.wikipedia.org/wiki/The_(R)evolution_of_Steve_Jobs&quot;&gt;The (R)evolution of Steve Jobs&lt;/a&gt;, that I&amp;nbsp;&lt;a href=&quot;https://blog.computationalcomplexity.org/2022/05/the-revolution-of-steve-jobs.html&quot;&gt;saw in Atlanta&lt;/a&gt; last year. Both operas chart a metaphysical journey of a computing giant through various important moments of their lives. During a Q&amp;amp;A I asked Simpatico about the two and he said he purposely avoided the Jobs opera so as to not affect how he wrote this one. Probably for the best.&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 15:29:00 UTC</pubDate>
-  <author>Computational Complexity</author>
-</item>
-
-<item>
-  <title>Complexity of Reconfiguration in Surface Chemical Reaction Networks</title>
-  <guid>http://arxiv.org/abs/2303.15556</guid>
-  <link>http://arxiv.org/abs/2303.15556</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alaniz_R/0/1/0/all/0/1&quot;&gt;Robert M. Alaniz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Brunner_J/0/1/0/all/0/1&quot;&gt;Josh Brunner&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Coulombe_M/0/1/0/all/0/1&quot;&gt;Michael Coulombe&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Demaine_E/0/1/0/all/0/1&quot;&gt;Erik D. Demaine&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Diomidov_Y/0/1/0/all/0/1&quot;&gt;Yevhenii Diomidov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Knobel_R/0/1/0/all/0/1&quot;&gt;Ryan Knobel&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gomez_T/0/1/0/all/0/1&quot;&gt;Timothy Gomez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grizzell_E/0/1/0/all/0/1&quot;&gt;Elise Grizzell&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lynch_J/0/1/0/all/0/1&quot;&gt;Jayson Lynch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rodriguez_A/0/1/0/all/0/1&quot;&gt;Andrew Rodriguez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schweller_R/0/1/0/all/0/1&quot;&gt;Robert Schweller&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wylie_T/0/1/0/all/0/1&quot;&gt;Tim Wylie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We analyze the computational complexity of basic reconfiguration problems for
-the recently introduced surface Chemical Reaction Networks (sCRNs), where
-ordered pairs of adjacent species nondeterministically transform into a
-different ordered pair of species according to a predefined set of allowed
-transition rules (chemical reactions). In particular, two questions that are
-fundamental to the simulation of sCRNs are whether a given configuration of
-molecules can ever transform into another given configuration, and whether a
-given cell can ever contain a given species, given a set of transition rules.
-We show that these problems can be solved in polynomial time, are NP-complete,
-or are PSPACE-complete in a variety of different settings, including when
-adjacent species just swap instead of arbitrary transformation (swap sCRNs),
-and when cells can change species a limited number of times (k-burnout). Most
-problems turn out to be at least NP-hard except with very few distinct species
-(2 or 3).
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Towards Crossing-Free Hamiltonian Cycles in Simple Drawings of Complete Graphs</title>
-  <guid>http://arxiv.org/abs/2303.15610</guid>
-  <link>http://arxiv.org/abs/2303.15610</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Aichholzer_O/0/1/0/all/0/1&quot;&gt;Oswin Aichholzer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Orthaber_J/0/1/0/all/0/1&quot;&gt;Joachim Orthaber&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Vogtenhuber_B/0/1/0/all/0/1&quot;&gt;Birgit Vogtenhuber&lt;/a&gt;&lt;/p&gt;&lt;p&gt;It is a longstanding conjecture that every simple drawing of a complete graph
-on $n\geq 3$ vertices contains a crossing-free Hamiltonian cycle. We confirm
-this conjecture for cylindrical drawings, strongly $c$-monotone drawings, as
-well as $x$-bounded drawings. Moreover, we introduce the stronger question of
-whether a crossing-free Hamiltonian path between each pair of vertices always
-exists.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Online embedding of metrics</title>
-  <guid>http://arxiv.org/abs/2303.15945</guid>
-  <link>http://arxiv.org/abs/2303.15945</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Newman_I/0/1/0/all/0/1&quot;&gt;Ilan Newman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rabinovich_Y/0/1/0/all/0/1&quot;&gt;Yuri Rabinovich&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study deterministic online embeddings of metrics spaces into normed spaces
-and into trees against an adaptive adversary. Main results include a polynomial
-lower bound on the (multiplicative) distortion of embedding into Euclidean
-spaces, a tight exponential upper bound on embedding into the line, and a
-$(1+\epsilon)$-distortion embedding in $\ell_\infty$ of a suitably high
-dimension.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Randomized rounding algorithms for large scale unsplittable flow problems</title>
-  <guid>http://arxiv.org/abs/2303.15550</guid>
-  <link>http://arxiv.org/abs/2303.15550</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lamothe_F/0/1/0/all/0/1&quot;&gt;Fran&amp;#xe7;ois Lamothe&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rachelson_E/0/1/0/all/0/1&quot;&gt;Emmanuel Rachelson&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hait_A/0/1/0/all/0/1&quot;&gt;Alain Ha&amp;#xef;t&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Baudoin_C/0/1/0/all/0/1&quot;&gt;Cedric Baudoin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dupe_J/0/1/0/all/0/1&quot;&gt;Jean-Baptiste Dupe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Unsplittable flow problems cover a wide range of telecommunication and
-transportation problems and their efficient resolution is key to a number of
-applications. In this work, we study algorithms that can scale up to large
-graphs and important numbers of commodities. We present and analyze in detail a
-heuristic based on the linear relaxation of the problem and randomized
-rounding. We provide empirical evidence that this approach is competitive with
-state-of-the-art resolution methods either by its scaling performance or by the
-quality of its solutions. We provide a variation of the heuristic which has the
-same approximation factor as the state-of-the-art approximation algorithm. We
-also derive a tighter analysis for the approximation factor of both the
-variation and the state-of-the-art algorithm. We introduce a new objective
-function for the unsplittable flow problem and discuss its differences with the
-classical congestion objective function. Finally, we discuss the gap in
-practical performance and theoretical guarantees between all the aforementioned
-algorithms.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On de novo Bridging Paired-end RNA-seq Data</title>
-  <guid>http://arxiv.org/abs/2303.15594</guid>
-  <link>http://arxiv.org/abs/2303.15594</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/q-bio/1/au:+Li_X/0/1/0/all/0/1&quot;&gt;Xiang Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/q-bio/1/au:+Shao_M/0/1/0/all/0/1&quot;&gt;Mingfu Shao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The high-throughput short-reads RNA-seq protocols often produce paired-end
-reads, with the middle portion of the fragments being unsequenced. We explore
-if the full-length fragments can be computationally reconstructed from the
-sequenced two ends in the absence of the reference genome - a problem here we
-refer to as de novo bridging. Solving this problem provides longer, more
-informative RNA-seq reads, and benefits downstream RNA-seq analysis such as
-transcript assembly, expression quantification, and splicing differential
-analysis. However, de novo bridging is a challenging and complicated task owing
-to alternative splicing, transcript noises, and sequencing errors. It remains
-unclear if the data provides sufficient information for accurate bridging, let
-alone efficient algorithms that determine the true bridges. Methods have been
-proposed to bridge paired-end reads in the presence of reference genome (called
-reference-based bridging), but the algorithms are far away from scaling for de
-novo bridging as the underlying compacted de Bruijn graph(cdBG) used in the
-latter task often contains millions of vertices and edges. We designed a new
-truncated Dijkstra&#39;s algorithm for this problem, and proposed a novel algorithm
-that reuses the shortest path tree to avoid running the truncated Dijkstra&#39;s
-algorithm from scratch for all vertices for further speeding up. These
-innovative techniques result in scalable algorithms that can bridge all
-paired-end reads in a cdBG with millions of vertices. Our experiments showed
-that paired-end RNA-seq reads can be accurately bridged to a large extent. The
-resulting tool is freely available at
-https://github.com/Shao-Group/rnabridge-denovo.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Overcoming Probabilistic Faults in Disoriented Linear Search</title>
-  <guid>http://arxiv.org/abs/2303.15608</guid>
-  <link>http://arxiv.org/abs/2303.15608</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Georgiou_K/0/1/0/all/0/1&quot;&gt;Konstantinos Georgiou&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Giachoudis_N/0/1/0/all/0/1&quot;&gt;Nikos Giachoudis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kranakis_E/0/1/0/all/0/1&quot;&gt;Evangelos Kranakis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider search by mobile agents for a hidden, idle target, placed on the
-infinite line. Feasible solutions are agent trajectories in which all agents
-reach the target sooner or later. A special feature of our problem is that the
-agents are $p$-faulty, meaning that every attempt to change direction is an
-independent Bernoulli trial with known probability $p$, where $p$ is the
-probability that a turn fails. We are looking for agent trajectories that
-minimize the worst-case expected termination time, relative to competitive
-analysis.
-&lt;/p&gt;
-&lt;p&gt;First, we study linear search with one deterministic $p$-faulty agent, i.e.,
-with no access to random oracles, $p\in (0,1/2)$. For this problem, we provide
-trajectories that leverage the probabilistic faults into an algorithmic
-advantage. Our strongest result pertains to a search algorithm (deterministic,
-aside from the adversarial probabilistic faults) which, as $p\to 0$, has
-optimal performance $4.59112+\epsilon$, up to the additive term $\epsilon$ that
-can be arbitrarily small. Additionally, it has performance less than $9$ for
-$p\leq 0.390388$. When $p\to 1/2$, our algorithm has performance
-$\Theta(1/(1-2p))$, which we also show is optimal up to a constant factor.
-&lt;/p&gt;
-&lt;p&gt;Second, we consider linear search with two $p$-faulty agents, $p\in (0,1/2)$,
-for which we provide three algorithms of different advantages, all with a
-bounded competitive ratio even as $p\rightarrow 1/2$. Indeed, for this problem,
-we show how the agents can simulate the trajectory of any $0$-faulty agent
-(deterministic or randomized), independently of the underlying communication
-model. As a result, searching with two agents allows for a solution with a
-competitive ratio of $9+\epsilon$, or a competitive ratio of
-$4.59112+\epsilon$. Our final contribution is a novel algorithm for searching
-with two $p$-faulty agents that achieves a competitive ratio
-$3+4\sqrt{p(1-p)}$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Structured Dynamic Pricing: Optimal Regret in a Global Shrinkage Model</title>
-  <guid>http://arxiv.org/abs/2303.15652</guid>
-  <link>http://arxiv.org/abs/2303.15652</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhuyan_R/0/1/0/all/0/1&quot;&gt;Rashmi Ranjan Bhuyan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Javanmard_A/0/1/0/all/0/1&quot;&gt;Adel Javanmard&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kim_S/0/1/0/all/0/1&quot;&gt;Sungchul Kim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mukherjee_G/0/1/0/all/0/1&quot;&gt;Gourab Mukherjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rossi_R/0/1/0/all/0/1&quot;&gt;Ryan A. Rossi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yu_T/0/1/0/all/0/1&quot;&gt;Tong Yu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhao_H/0/1/0/all/0/1&quot;&gt;Handong Zhao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider dynamic pricing strategies in a streamed longitudinal data set-up
-where the objective is to maximize, over time, the cumulative profit across a
-large number of customer segments. We consider a dynamic probit model with the
-consumers&#39; preferences as well as price sensitivity varying over time. Building
-on the well-known finding that consumers sharing similar characteristics act in
-similar ways, we consider a global shrinkage structure, which assumes that the
-consumers&#39; preferences across the different segments can be well approximated
-by a spatial autoregressive (SAR) model. In such a streamed longitudinal
-set-up, we measure the performance of a dynamic pricing policy via regret,
-which is the expected revenue loss compared to a clairvoyant that knows the
-sequence of model parameters in advance. We propose a pricing policy based on
-penalized stochastic gradient descent (PSGD) and explicitly characterize its
-regret as functions of time, the temporal variability in the model parameters
-as well as the strength of the auto-correlation network structure spanning the
-varied customer segments. Our regret analysis results not only demonstrate
-asymptotic optimality of the proposed policy but also show that for policy
-planning it is essential to incorporate available structural information as
-policies based on unshrunken models are highly sub-optimal in the
-aforementioned set-up.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Algorithms for subgraph complementation to some classes of graphs</title>
-  <guid>http://arxiv.org/abs/2303.15873</guid>
-  <link>http://arxiv.org/abs/2303.15873</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Antony_D/0/1/0/all/0/1&quot;&gt;Dhanyamol Antony&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pal_S/0/1/0/all/0/1&quot;&gt;Sagartanu Pal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sandeep_R/0/1/0/all/0/1&quot;&gt;R.B. Sandeep&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For a class $\mathcal{G}$ of graphs, the objective of \textsc{Subgraph
-Complementation to} $\mathcal{G}$ is to find whether there exists a subset $S$
-of vertices of the input graph $G$ such that modifying $G$ by complementing the
-subgraph induced by $S$ results in a graph in $\mathcal{G}$. We obtain a
-polynomial-time algorithm for the problem when $\mathcal{G}$ is the class of
-graphs with minimum degree at least $k$, for a constant $k$, answering an open
-problem by Fomin et al. (Algorithmica, 2020). When $\mathcal{G}$ is the class
-of graphs without any induced copies of the star graph on $t+1$ vertices (for
-any constant $t\geq 3$) and diamond, we obtain a polynomial-time algorithm for
-the problem. This is in contrast with a result by Antony et al. (Algorithmica,
-2022) that the problem is NP-complete and cannot be solved in
-subexponential-time (assuming the Exponential Time Hypothesis) when
-$\mathcal{G}$ is the class of graphs without any induced copies of the star
-graph on $t+1$ vertices, for every constant $t\geq 5$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Faster Deterministic Distributed MIS and Approximate Matching</title>
-  <guid>http://arxiv.org/abs/2303.16043</guid>
-  <link>http://arxiv.org/abs/2303.16043</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghaffari_M/0/1/0/all/0/1&quot;&gt;Mohsen Ghaffari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Grunau_C/0/1/0/all/0/1&quot;&gt;Christoph Grunau&lt;/a&gt;&lt;/p&gt;&lt;p&gt;$ \renewcommand{\tilde}{\widetilde} $We present an $\tilde{O}(\log^2 n)$
-round deterministic distributed algorithm for the maximal independent set
-problem. By known reductions, this round complexity extends also to maximal
-matching, $\Delta+1$ vertex coloring, and $2\Delta-1$ edge coloring. These four
-problems are among the most central problems in distributed graph algorithms
-and have been studied extensively for the past four decades. This improved
-round complexity comes closer to the $\tilde{\Omega}(\log n)$ lower bound of
-maximal independent set and maximal matching [Balliu et al. FOCS &#39;19]. The
-previous best known deterministic complexity for all of these problems was
-$\Theta(\log^3 n)$. Via the shattering technique, the improvement permeates
-also to the corresponding randomized complexities, e.g., the new randomized
-complexity of $\Delta+1$ vertex coloring is now $\tilde{O}(\log^2\log n)$
-rounds.
-&lt;/p&gt;
-&lt;p&gt;Our approach is a novel combination of the previously known two methods for
-developing deterministic algorithms for these problems, namely global
-derandomization via network decomposition (see e.g., [Rozhon, Ghaffari STOC&#39;20;
-Ghaffari, Grunau, Rozhon SODA&#39;21; Ghaffari et al. SODA&#39;23]) and local rounding
-of fractional solutions (see e.g., [Fischer DISC&#39;17; Harris FOCS&#39;19; Fischer,
-Ghaffari, Kuhn FOCS&#39;17; Ghaffari, Kuhn FOCS&#39;21; Faour et al. SODA&#39;23]). We
-consider a relaxation of the classic network decomposition concept, where
-instead of requiring the clusters in the same block to be non-adjacent, we
-allow each node to have a small number of neighboring clusters. We also show a
-deterministic algorithm that computes this relaxed decomposition faster than
-standard decompositions. We then use this relaxed decomposition to
-significantly improve the integrality of certain fractional solutions, before
-handing them to the local rounding procedure that now has to do fewer rounding
-steps.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-03-29 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
