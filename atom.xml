@@ -10,6 +10,434 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Tight Correlation Bounds for Circuits Between AC0 and TC0</title>
+    <link href="http://arxiv.org/abs/2304.02770"/>
+    <id>http://arxiv.org/abs/2304.02770</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kumar_V/0/1/0/all/0/1&quot;&gt;Vinayak M. Kumar&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We initiate the study of generalized AC0 circuits comprised of negations and
+arbitrary unbounded fan-in gates that only need to be constant over inputs of
+Hamming weight $\ge k$, which we denote GC0$(k)$. The gate set of this class
+includes biased LTFs like the $k$-$OR$ (output $1$ iff $\ge k$ bits are 1) and
+$k$-$AND$ (output $0$ iff $\ge k$ bits are 0), and thus can be seen as an
+interpolation between AC0 and TC0. We establish a tight multi-switching lemma
+for GC0$(k)$ circuits, which bounds the probability that several depth-2
+GC0$(k)$ circuits do not simultaneously simplify under a random restriction. We
+also establish a new depth reduction lemma such that coupled with our
+multi-switching lemma, we can show many results obtained from the
+multi-switching lemma for depth-$d$ size-$s$ AC0 circuits lifts to depth-$d$
+size-$s^{.99}$ GC0$(.01\log s)$ circuits with no loss in parameters (other than
+hidden constants). Our result has the following applications:
+&lt;/p&gt;
+&lt;p&gt;1.Size-$2^{\Omega(n^{1/d})}$ depth-$d$ GC0$(\Omega(n^{1/d}))$ circuits do not
+correlate with parity (extending a result of H{\aa}stad (SICOMP, 2014)).
+&lt;/p&gt;
+&lt;p&gt;2. Size-$n^{\Omega(\log n)}$ GC0$(\Omega(\log^2 n))$ circuits with $n^{.249}$
+arbitrary threshold gates or $n^{.499}$ arbitrary symmetric gates exhibit
+exponentially small correlation against an explicit function (extending a
+result of Tan and Servedio (RANDOM, 2019)).
+&lt;/p&gt;
+&lt;p&gt;3. There is a seed length $O((\log m)^{d-1}\log(m/\varepsilon)\log\log(m))$
+pseudorandom generator against size-$m$ depth-$d$ GC0$(\log m)$ circuits,
+matching the AC0 lower bound of H{\aa}stad stad up to a $\log\log m$ factor
+(extending a result of Lyu (CCC, 2022)).
+&lt;/p&gt;
+&lt;p&gt;4. Size-$m$ GC0$(\log m)$ circuits have exponentially small Fourier tails
+(extending a result of Tal (CCC, 2017)).
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Inapproximability of sufficient reasons for decision trees</title>
+    <link href="http://arxiv.org/abs/2304.02781"/>
+    <id>http://arxiv.org/abs/2304.02781</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kozachinskiy_A/0/1/0/all/0/1&quot;&gt;Alexander Kozachinskiy&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this note, we establish the hardness of approximation of the problem of
+computing the minimal size of a $\delta$-sufficient reason for decision trees.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Improved Hardness of Approximating k-Clique under ETH</title>
+    <link href="http://arxiv.org/abs/2304.02943"/>
+    <id>http://arxiv.org/abs/2304.02943</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lin_B/0/1/0/all/0/1&quot;&gt;Bingkai Lin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ren_X/0/1/0/all/0/1&quot;&gt;Xuandi Ren&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sun_Y/0/1/0/all/0/1&quot;&gt;Yican Sun&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_X/0/1/0/all/0/1&quot;&gt;Xiuhan Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we prove that assuming the exponential time hypothesis (ETH),
+there is no $f(k)\cdot n^{k^{o(1/\log\log k)}}$-time algorithm that can decide
+whether an $n$-vertex graph contains a clique of size $k$ or contains no clique
+of size $k/2$, and no FPT algorithm can decide whether an input graph has a
+clique of size $k$ or no clique of size $k/f(k)$, where $f(k)$ is some function
+in $k^{1-o(1)}$. Our results significantly improve the previous works [Lin21,
+LRSW22]. The crux of our proof is a framework to construct gap-producing
+reductions for the \kclique{} problem. More precisely, we show that given an
+error-correcting code $C:\Sigma_1^k\to\Sigma_2^{k&#39;}$ that is locally testable
+and smooth locally decodable in the parallel setting, one can construct a
+reduction which on input a graph $G$ outputs a graph $G&#39;$ in $(k&#39;)^{O(1)}\cdot
+n^{O(\log|\Sigma_2|/\log|\Sigma_1|)}$ time such that:
+&lt;/p&gt;
+&lt;p&gt;$\bullet$ If $G$ has a clique of size $k$, then $G&#39;$ has a clique of size
+$K$, where $K = (k&#39;)^{O(1)}$.
+&lt;/p&gt;
+&lt;p&gt;$\bullet$ If $G$ has no clique of size $k$, then $G&#39;$ has no clique of size
+$(1-\varepsilon)\cdot K$ for some constant $\varepsilon\in(0,1)$.
+&lt;/p&gt;
+&lt;p&gt;We then construct such a code with $k&#39;=k^{\Theta(\log\log k)}$ and
+$|\Sigma_2|=|\Sigma_1|^{k^{0.54}}$, establishing the hardness results above.
+Our code generalizes the derivative code [WY07] into the case with a super
+constant order of derivatives.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: The complexity of decomposing a graph into a matching and a bounded linear forest</title>
+    <link href="http://arxiv.org/abs/2304.03256"/>
+    <id>http://arxiv.org/abs/2304.03256</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Banerjee_A/0/1/0/all/0/1&quot;&gt;Agnijo Banerjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Marciano_J/0/1/0/all/0/1&quot;&gt;Jo&amp;#xe3;o Pedro Marciano&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mond_A/0/1/0/all/0/1&quot;&gt;Adva Mond&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Petr_J/0/1/0/all/0/1&quot;&gt;Jan Petr&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Portier_J/0/1/0/all/0/1&quot;&gt;Julien Portier&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Deciding whether a graph can be edge-decomposed into a matching and a
+$k$-bounded linear forest was recently shown by Campbell, H{\&quot;o}rsch and Moore
+to be NP-complete for every $k \ge 9$, and solvable in polynomial time for
+$k=1,2$. In the first part of this paper, we close this gap by showing that
+this problem is in NP-complete for every $k \ge 3$. In the second part of the
+paper, we show that deciding whether a graph can be edge-decomposed into a
+matching and a $k$-bounded star forest is polynomially solvable for any $k \in
+\mathbb{N} \cup \{ \infty \}$, answering another question by Campbell,
+H{\&quot;o}rsch and Moore from the same paper.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Software and Analysis for Dynamic Voronoi Diagrams in the Hilbert Metric</title>
+    <link href="http://arxiv.org/abs/2304.02745"/>
+    <id>http://arxiv.org/abs/2304.02745</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bumpus_M/0/1/0/all/0/1&quot;&gt;Madeline Bumpus&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dai_C/0/1/0/all/0/1&quot;&gt;Caesar Dai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gezalyan_A/0/1/0/all/0/1&quot;&gt;Auguste H. Gezalyan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Munoz_S/0/1/0/all/0/1&quot;&gt;Sam Munoz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Santhoshkumar_R/0/1/0/all/0/1&quot;&gt;Renita Santhoshkumar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ye_S/0/1/0/all/0/1&quot;&gt;Songyu Ye&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mount_D/0/1/0/all/0/1&quot;&gt;David M. Mount&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Hilbert metric is a projective metric defined on a convex body which
+generalizes the Cayley-Klein model of hyperbolic geometry to any convex set. In
+this paper we analyze Hilbert Voronoi diagrams in the Dynamic setting. In
+addition we introduce dynamic visualization software for Voronoi diagrams in
+the Hilbert metric on user specified convex polygons.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fast computation of approximate weak common intervals in multiple indeterminate strings</title>
+    <link href="http://arxiv.org/abs/2304.02657"/>
+    <id>http://arxiv.org/abs/2304.02657</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doerr_D/0/1/0/all/0/1&quot;&gt;Daniel Doerr&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moret_B/0/1/0/all/0/1&quot;&gt;Bernard M.E. Moret&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In ongoing work to define a principled method for syntenic block discovery
+and structuring, work based on homology-derived constraints and a
+generalization of common intervals, we faced a fundamental computational
+problem: how to determine quickly, among a set of indeterminate strings
+(strings whose elements consist of subsets of characters), contiguous intervals
+that would share a vast majority of their elements, but allow for sharing
+subsets of characters subsumed by others, and also for certain elements to be
+missing from certain genomes. An algorithm for this problem in the special case
+of determinate strings (where each element is a single character of the
+alphabet, i.e., &quot;normal&quot; strings) was described by Doerr et al., but its
+running time would explode if generalized to indeterminate strings. In this
+paper, we describe an algorithm for computing these special common intervals in
+time close to that of the simpler algorithm of Doerr et al. and show that can
+compute these intervals in just a couple of hours for large collections (tens
+to hundreds) of bacterial genomes.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Agnostic proper learning of monotone functions: beyond the black-box correction barrier</title>
+    <link href="http://arxiv.org/abs/2304.02700"/>
+    <id>http://arxiv.org/abs/2304.02700</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lange_J/0/1/0/all/0/1&quot;&gt;Jane Lange&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vasilyan_A/0/1/0/all/0/1&quot;&gt;Arsen Vasilyan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give the first agnostic, efficient, proper learning algorithm for monotone
+Boolean functions. Given $2^{\tilde{O}(\sqrt{n}/\varepsilon)}$ uniformly random
+examples of an unknown function $f:\{\pm 1\}^n \rightarrow \{\pm 1\}$, our
+algorithm outputs a hypothesis $g:\{\pm 1\}^n \rightarrow \{\pm 1\}$ that is
+monotone and $(\mathrm{opt} + \varepsilon)$-close to $f$, where $\mathrm{opt}$
+is the distance from $f$ to the closest monotone function. The running time of
+the algorithm (and consequently the size and evaluation time of the hypothesis)
+is also $2^{\tilde{O}(\sqrt{n}/\varepsilon)}$, nearly matching the lower bound
+of Blais et al (RANDOM &#39;15). We also give an algorithm for estimating up to
+additive error $\varepsilon$ the distance of an unknown function $f$ to
+monotone using a run-time of $2^{\tilde{O}(\sqrt{n}/\varepsilon)}$. Previously,
+for both of these problems, sample-efficient algorithms were known, but these
+algorithms were not run-time efficient. Our work thus closes this gap in our
+knowledge between the run-time and sample complexity.
+&lt;/p&gt;
+&lt;p&gt;This work builds upon the improper learning algorithm of Bshouty and Tamon
+(JACM &#39;96) and the proper semiagnostic learning algorithm of Lange, Rubinfeld,
+and Vasilyan (FOCS &#39;22), which obtains a non-monotone Boolean-valued
+hypothesis, then ``corrects&#39;&#39; it to monotone using query-efficient local
+computation algorithms on graphs. This black-box correction approach can
+achieve no error better than $2\mathrm{opt} + \varepsilon$
+information-theoretically; we bypass this barrier by
+&lt;/p&gt;
+&lt;p&gt;a) augmenting the improper learner with a convex optimization step, and
+&lt;/p&gt;
+&lt;p&gt;b) learning and correcting a real-valued function before rounding its values
+to Boolean.
+&lt;/p&gt;
+&lt;p&gt;Our real-valued correction algorithm solves the ``poset sorting&#39;&#39; problem of
+[LRV22] for functions over general posets with non-Boolean labels.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: LSketch: A Label-Enabled Graph Stream Sketch Toward Time-Sensitive Queries</title>
+    <link href="http://arxiv.org/abs/2304.02897"/>
+    <id>http://arxiv.org/abs/2304.02897</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zeng_Y/0/1/0/all/0/1&quot;&gt;Yiling Zeng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Song_C/0/1/0/all/0/1&quot;&gt;Chunyao Song&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_Y/0/1/0/all/0/1&quot;&gt;Yuhan Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ge_T/0/1/0/all/0/1&quot;&gt;Tingjian Ge&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Graph streams represent data interactions in real applications. The mining of
+graph streams plays an important role in network security, social network
+analysis, and traffic control, among others. However, the sheer volume and high
+dynamics cause great challenges for efficient storage and subsequent query
+analysis on them. Current studies apply sketches to summarize graph streams. We
+propose LSketch that works for heterogeneous graph streams, which effectively
+preserves the label information carried by the streams in real scenes, thereby
+enriching the expressive ability of sketches. In addition, as graph streams
+continue to evolve over time, edges too old may lose their practical
+significance. Therefore, we introduce the sliding window model into LSketch to
+eliminate the expired edges automatically. LSketch uses sub-linear storage
+space and can support structure based queries and time-sensitive queries with
+high accuracy. We perform extensive experiments over four real datasets,
+demonstrating the superiority of the proposed method over state-of-the-art
+methods, in aspects of query accuracy and time efficiency.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Parameterized Approximation Schemes for Clustering with General Norm Objectives</title>
+    <link href="http://arxiv.org/abs/2304.03146"/>
+    <id>http://arxiv.org/abs/2304.03146</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Abbasi_F/0/1/0/all/0/1&quot;&gt;Fateme Abbasi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Banerjee_S/0/1/0/all/0/1&quot;&gt;Sandip Banerjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Byrka_J/0/1/0/all/0/1&quot;&gt;Jaros&amp;#x142;aw Byrka&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chalermsook_P/0/1/0/all/0/1&quot;&gt;Parinya Chalermsook&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gadekar_A/0/1/0/all/0/1&quot;&gt;Ameet Gadekar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Khodamoradi_K/0/1/0/all/0/1&quot;&gt;Kamyar Khodamoradi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Marx_D/0/1/0/all/0/1&quot;&gt;D&amp;#xe1;niel Marx&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sharma_R/0/1/0/all/0/1&quot;&gt;Roohani Sharma&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Spoerhase_J/0/1/0/all/0/1&quot;&gt;Joachim Spoerhase&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper considers the well-studied algorithmic regime of designing a
+$(1+\epsilon)$-approximation algorithm for a $k$-clustering problem that runs
+in time $f(k,\epsilon)poly(n)$ (sometimes called an efficient parameterized
+approximation scheme or EPAS for short). Notable results of this kind include
+EPASes in the high-dimensional Euclidean setting for $k$-center [Bad\u{o}iu,
+Har-Peled, Indyk; STOC&#39;02] as well as $k$-median, and $k$-means [Kumar,
+Sabharwal, Sen; J. ACM 2010]. However, existing EPASes handle only basic
+objectives (such as $k$-center, $k$-median, and $k$-means) and are tailored to
+the specific objective and metric space.
+&lt;/p&gt;
+&lt;p&gt;Our main contribution is a clean and simple EPAS that settles more than ten
+clustering problems (across multiple well-studied objectives as well as metric
+spaces) and unifies well-known EPASes. Our algorithm gives EPASes for a large
+variety of clustering objectives (for example, $k$-means, $k$-center,
+$k$-median, priority $k$-center, $\ell$-centrum, ordered $k$-median, socially
+fair $k$-median aka robust $k$-median, or more generally monotone norm
+$k$-clustering) and metric spaces (for example, continuous high-dimensional
+Euclidean spaces, metrics of bounded doubling dimension, bounded treewidth
+metrics, and planar metrics).
+&lt;/p&gt;
+&lt;p&gt;Key to our approach is a new concept that we call bounded $\epsilon$-scatter
+dimension--an intrinsic complexity measure of a metric space that is a
+relaxation of the standard notion of bounded doubling dimension. Our main
+technical result shows that two conditions are essentially sufficient for our
+algorithm to yield an EPAS on the input metric $M$ for any clustering
+objective: (i) The objective is described by a monotone (not necessarily
+symmetric!) norm, and (ii) the $\epsilon$-scatter dimension of $M$ is upper
+bounded by a function of $\epsilon$.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Spectral Toolkit of Algorithms for Graphs: Technical Report (1)</title>
+    <link href="http://arxiv.org/abs/2304.03170"/>
+    <id>http://arxiv.org/abs/2304.03170</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Macgregor_P/0/1/0/all/0/1&quot;&gt;Peter Macgregor&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sun_H/0/1/0/all/0/1&quot;&gt;He Sun&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Spectral Toolkit of Algorithms for Graphs (STAG) is an open-source library
+for efficient spectral graph algorithms, and its development starts in
+September 2022. We have so far finished the component on local graph
+clustering, and this technical report presents a user&#39;s guide to STAG, showcase
+studies, and several technical considerations behind our development.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On the tractability of sampling from the Potts model at low temperatures via Swendsen--Wang dynamics</title>
+    <link href="http://arxiv.org/abs/2304.03182"/>
+    <id>http://arxiv.org/abs/2304.03182</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Blanca_A/0/1/0/all/0/1&quot;&gt;Antonio Blanca&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Gheissari_R/0/1/0/all/0/1&quot;&gt;Reza Gheissari&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sampling from the $q$-state ferromagnetic Potts model is a fundamental
+question in statistical physics, probability theory, and theoretical computer
+science. On general graphs, this problem is computationally hard, and this
+hardness holds at arbitrarily low temperatures. At the same time, in recent
+years, there has been significant progress showing the existence of
+low-temperature sampling algorithms in various specific families of graphs. Our
+aim in this paper is to understand the minimal structural properties of general
+graphs that enable polynomial-time sampling from the $q$-state ferromagnetic
+Potts model at low temperatures. We study this problem from the perspective of
+the widely-used Swendsen--Wang dynamics and the closely related random-cluster
+dynamics.
+&lt;/p&gt;
+&lt;p&gt;Our results demonstrate that the key graph property behind fast or slow
+convergence time for these dynamics is whether the independent edge-percolation
+on the graph admits a strongly supercritical phase. By this, we mean that at
+large $p&amp;lt;1$, it has a unique giant component of linear size, and the complement
+of that giant component is comprised of only small components. Specifically, we
+prove that such a condition implies fast mixing of the Swendsen--Wang and
+random-cluster dynamics on two general families of bounded-degree graphs: (a)
+graphs of at most stretched-exponential volume growth and (b) locally treelike
+graphs. In the other direction, we show that, even among graphs in those
+families, these Markov chains can converge exponentially slowly at arbitrarily
+low temperatures if the edge-percolation condition does not hold. In the
+process, we develop new tools for the analysis of non-local Markov chains,
+including a framework to bound the speed of disagreement propagation in the
+presence of long-range correlations, and an understanding of spatial mixing
+properties on trees with random boundary conditions.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Krylov Methods are (nearly) Optimal for Low-Rank Approximation</title>
+    <link href="http://arxiv.org/abs/2304.03191"/>
+    <id>http://arxiv.org/abs/2304.03191</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bakshi_A/0/1/0/all/0/1&quot;&gt;Ainesh Bakshi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Narayanan_S/0/1/0/all/0/1&quot;&gt;Shyam Narayanan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the problem of rank-$1$ low-rank approximation (LRA) in the
+matrix-vector product model under various Schatten norms: $$
+&lt;/p&gt;
+&lt;p&gt;\min_{\|u\|_2=1} \|A (I - u u^\top)\|_{\mathcal{S}_p} , $$ where
+$\|M\|_{\mathcal{S}_p}$ denotes the $\ell_p$ norm of the singular values of
+$M$. Given $\varepsilon&amp;gt;0$, our goal is to output a unit vector $v$ such that
+$$
+&lt;/p&gt;
+&lt;p&gt;\|A(I - vv^\top)\|_{\mathcal{S}_p} \leq (1+\varepsilon) \min_{\|u\|_2=1}\|A(I
+- u u^\top)\|_{\mathcal{S}_p}. $$ Our main result shows that Krylov methods
+(nearly) achieve the information-theoretically optimal number of matrix-vector
+products for Spectral ($p=\infty$), Frobenius ($p=2$) and Nuclear ($p=1$) LRA.
+&lt;/p&gt;
+&lt;p&gt;In particular, for Spectral LRA, we show that any algorithm requires
+$\Omega\left(\log(n)/\varepsilon^{1/2}\right)$ matrix-vector products, exactly
+matching the upper bound obtained by Krylov methods [MM15, BCW22]. Our lower
+bound addresses Open Question 1 in [Woo14], providing evidence for the lack of
+progress on algorithms for Spectral LRA and resolves Open Question 1.2 in
+[BCW22]. Next, we show that for any fixed constant $p$, i.e. $1\leq p =O(1)$,
+there is an upper bound of
+$O\left(\log(1/\varepsilon)/\varepsilon^{1/3}\right)$ matrix-vector products,
+implying that the complexity does not grow as a function of input size. This
+improves the $O\left(\log(n/\varepsilon)/\varepsilon^{1/3}\right)$ bound
+recently obtained in [BCW22], and matches their
+$\Omega\left(1/\varepsilon^{1/3}\right)$ lower bound, to a
+$\log(1/\varepsilon)$ factor.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Parameterized algorithms for Eccentricity Shortest Path Problem</title>
+    <link href="http://arxiv.org/abs/2304.03233"/>
+    <id>http://arxiv.org/abs/2304.03233</id>
+    <updated>2023-04-07T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhyravarapu_S/0/1/0/all/0/1&quot;&gt;Sriram Bhyravarapu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jana_S/0/1/0/all/0/1&quot;&gt;Satyabrata Jana&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kanesh_L/0/1/0/all/0/1&quot;&gt;Lawqueen Kanesh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saurabh_S/0/1/0/all/0/1&quot;&gt;Saket Saurabh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Verma_S/0/1/0/all/0/1&quot;&gt;Shaily Verma&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given an undirected graph $G=(V,E)$ and an integer $\ell$, the Eccentricity
+Shortest Path (ESP) asks to find a shortest path $P$ such that for every vertex
+$v\in V(G)$, there is a vertex $w\in P$ such that $d_G(v,w)\leq \ell$, where
+$d_G(v,w)$ represents the distance between $v$ and $w$ in $G$. Dragan and
+Leitert [Theor. Comput. Sci. 2017] showed that the optimization version of this
+problem, which asks to find the minimum $\ell$ for the ESP problem, is NP-hard
+even on planar bipartite graphs with maximum degree 3. They also showed that
+ESP is W[2]-hard when parameterized by $\ell$. On the positive side, Ku\v cera
+and Such\&#39;y [IWOCA 2021] showed that the problem exhibits fixed parameter
+tractable (FPT) behavior when parameterized by modular width, cluster vertex
+deletion set, maximum leaf number, or the combined parameters disjoint paths
+deletion set and $\ell$. It was asked as an open question in the above paper,
+if ESP is FPT parameterized by disjoint paths deletion set or feedback vertex
+set. We answer these questions partially and obtain the following results: -
+ESP is FPT when parameterized by disjoint paths deletion set, split vertex
+deletion set or the combined parameters feedback vertex set and eccentricity of
+the graph. - We design a $(1+\epsilon)$-factor FPT approximation algorithm when
+parameterized by the feedback vertex set number. - ESP is W[2]-hard when
+parameterized by the chordal vertex deletion set.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: PhD / Postdoc at Goethe University Frankfurt, Germany (apply by June 16, 2023)</title>
     <link href="https://cstheory-jobs.org/2023/04/06/phd-postdoc-at-goethe-university-frankfurt-germany-apply-by-june-16-2023/"/>
     <id>http://cstheory-jobs.org/2023/04/06/phd-postdoc-at-goethe-university-frankfurt-germany-apply-by-june-16-2023/</id>
@@ -1192,402 +1620,6 @@ models.
     <author>
       <name>arXiv: Computational Complexity</name>
       <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Gallai-like characterization of strong cocomparability graphs</title>
-    <link href="http://arxiv.org/abs/2304.00430"/>
-    <id>http://arxiv.org/abs/2304.00430</id>
-    <updated>2023-04-04T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Huang_J/0/1/0/all/0/1&quot;&gt;Jing Huang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Strong cocomparability graphs are the reflexive graphs whose adjacency matrix
-can be rearranged by a simultaneous row and column permutation to avoid the
-submatrix with rows $01, 10$. Strong cocomparability graphs form a subclass of
-cocomparability graphs (i.e., the complements of comparability graphs) and can
-be recognized in polynomial time. In his seminal paper, Gallai characterized
-cocomparability graphs in terms of a forbidden structure called asteroids.
-Gallai proved that cocomparability graphs are precisely those reflexive graphs
-which do not contain asteroids.
-&lt;/p&gt;
-&lt;p&gt;In this paper, we give a characterization of strong cocomparability graphs
-which is analogous to Gallai&#39;s characterization for cocomparability graphs. We
-prove that strong cocomparability graphs are precisely those reflexive graphs
-which do not contain weak edge-asteroids (a weaker version of asteroids). Our
-characterization also leads to a polynomial time recognition algorithm for
-strong cocomparability graphs.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Almost Linear Constant-Factor Sketching for $\ell_1$ and Logistic Regression</title>
-    <link href="http://arxiv.org/abs/2304.00051"/>
-    <id>http://arxiv.org/abs/2304.00051</id>
-    <updated>2023-04-04T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Munteanu_A/0/1/0/all/0/1&quot;&gt;Alexander Munteanu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Omlor_S/0/1/0/all/0/1&quot;&gt;Simon Omlor&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Woodruff_D/0/1/0/all/0/1&quot;&gt;David Woodruff&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We improve upon previous oblivious sketching and turnstile streaming results
-for $\ell_1$ and logistic regression, giving a much smaller sketching dimension
-achieving $O(1)$-approximation and yielding an efficient optimization problem
-in the sketch space. Namely, we achieve for any constant $c&amp;gt;0$ a sketching
-dimension of $\tilde{O}(d^{1+c})$ for $\ell_1$ regression and $\tilde{O}(\mu
-d^{1+c})$ for logistic regression, where $\mu$ is a standard measure that
-captures the complexity of compressing the data. For $\ell_1$-regression our
-sketching dimension is near-linear and improves previous work which either
-required $\Omega(\log d)$-approximation with this sketching dimension, or
-required a larger $\operatorname{poly}(d)$ number of rows. Similarly, for
-logistic regression previous work had worse $\operatorname{poly}(\mu d)$
-factors in its sketching dimension. We also give a tradeoff that yields a
-$1+\varepsilon$ approximation in input sparsity time by increasing the total
-size to $(d\log(n)/\varepsilon)^{O(1/\varepsilon)}$ for $\ell_1$ and to $(\mu
-d\log(n)/\varepsilon)^{O(1/\varepsilon)}$ for logistic regression. Finally, we
-show that our sketch can be extended to approximate a regularized version of
-logistic regression where the data-dependent regularizer corresponds to the
-variance of the individual logistic losses.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Mini-batch $k$-means terminates within $O(d/\epsilon)$ iterations</title>
-    <link href="http://arxiv.org/abs/2304.00419"/>
-    <id>http://arxiv.org/abs/2304.00419</id>
-    <updated>2023-04-04T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schwartzman_G/0/1/0/all/0/1&quot;&gt;Gregory Schwartzman&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We answer the question: &quot;Does local progress (on batches) imply global
-progress (on the entire dataset) for mini-batch $k$-means?&quot;. Specifically, we
-consider mini-batch $k$-means which terminates only when the improvement in the
-quality of the clustering on the sampled batch is below some threshold.
-&lt;/p&gt;
-&lt;p&gt;Although at first glance it appears that this algorithm might execute
-forever, we answer the above question in the affirmative and show that if the
-batch is of size $\tilde{\Omega}((d/\epsilon)^2)$, it must terminate within
-$O(d/\epsilon)$ iterations with high probability, where $d$ is the dimension of
-the input, and $\epsilon$ is a threshold parameter for termination. This is
-true regardless of how the centers are initialized. When the algorithm is
-initialized with the $k$-means++ initialization scheme, it achieves an
-approximation ratio of $O(\log k)$ (the same as the full-batch version).
-&lt;/p&gt;
-&lt;p&gt;Finally, we show the applicability of our results to the mini-batch $k$-means
-algorithm implemented in the scikit-learn (sklearn) python library.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Gil Kalai: Alef Corner: Deep Learning 2020, 2030, 2040</title>
-    <link href="https://gilkalai.wordpress.com/2023/04/03/alef-corner-deep-learning-2020-2030-2040/"/>
-    <id>http://gilkalai.wordpress.com/?p=24111</id>
-    <updated>2023-04-03T20:36:02+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&lt;img data-attachment-id=&quot;24112&quot; data-permalink=&quot;https://gilkalai.wordpress.com/img-20230228-wa0000/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg&quot; data-orig-size=&quot;1000,1000&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;IMG-20230228-WA0000&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg?w=640&quot; class=&quot;alignnone size-full wp-image-24112&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg?w=640&quot; alt=&quot;IMG-20230228-WA0000&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg?w=640 640w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg?w=150 150w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg?w=300 300w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg?w=768 768w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0000.jpg 1000w&quot; sizes=&quot;(max-width: 640px) 100vw, 640px&quot;   /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff0000&quot;&gt;Deep learning 2020&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-attachment-id=&quot;24113&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2023/04/03/alef-corner-deep-learning-2020-2030-2040/img-20230228-wa0002/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg&quot; data-orig-size=&quot;1000,1000&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;IMG-20230228-WA0002&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg?w=640&quot; class=&quot;alignnone size-full wp-image-24113&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg?w=640&quot; alt=&quot;IMG-20230228-WA0002&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg?w=640 640w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg?w=150 150w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg?w=300 300w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg?w=768 768w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0002.jpg 1000w&quot; sizes=&quot;(max-width: 640px) 100vw, 640px&quot;   /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff0000&quot;&gt;Deep learning 2030&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-attachment-id=&quot;24115&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2023/04/03/alef-corner-deep-learning-2020-2030-2040/img-20230228-wa0001/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg&quot; data-orig-size=&quot;1000,1000&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;IMG-20230228-WA0001&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg?w=640&quot; class=&quot;alignnone size-full wp-image-24115&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg?w=640&quot; alt=&quot;IMG-20230228-WA0001&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg?w=640 640w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg?w=150 150w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg?w=300 300w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg?w=768 768w, https://gilkalai.files.wordpress.com/2023/04/img-20230228-wa0001.jpg 1000w&quot; sizes=&quot;(max-width: 640px) 100vw, 640px&quot;   /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff0000&quot;&gt;Deep learning 2040&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
-  </content>
-    <author>
-      <name>Gil Kalai</name>
-      <uri>https://gilkalai.wordpress.com</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR23-042 |  On small-depth Frege proofs for PHP | 
-
-	Johan Håstad</title>
-    <link href="https://eccc.weizmann.ac.il/report/2023/042"/>
-    <id>https://eccc.weizmann.ac.il/report/2023/042</id>
-    <updated>2023-04-03T11:46:42+00:00</updated>
-    <content type="html" xml:lang="en">
-    We study Frege proofs for the one-to-one graph Pigeon Hole Principle
-defined on the $n\times n$ grid where $n$ is odd.
-We are interested in the case where each formula
-in the proof is a depth $d$ formula in the basis given by
-$\land$, $\lor$, and $\neg$.  We prove that in this situation the
-proof needs to be of size exponential in $n^{\Omega (1/d)}$.
-If we restrict the size of each line in the proof to be of
-size $M$ then the number of lines needed is exponential
-in $n/(\log M)^{O(d)}$.   The main technical component of
-the proofs is to design a new family of random restrictions
-and to prove the appropriate switching lemmas.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Luca Aceto: TheoretiCS: Status update</title>
-    <link href="http://processalgebra.blogspot.com/2023/04/theoretics-status-update.html"/>
-    <id>tag:blogger.com,1999:blog-27705661.post-3407399653899165687</id>
-    <updated>2023-04-03T10:33:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&lt;i&gt;Thomas Schwentick, Meena Mahajan and Pascal Weil (Chair, Secretary and Treasurer of the TheoretiCS Foundation, respectively) sent me the following information on &lt;a href=&quot;https://theoretics.episciences.org/&quot; target=&quot;_blank&quot;&gt;TheoretiCS&lt;/a&gt;, which I am happy to share with our community with their permission. I encourage everyone to support the journal by submitting their best work to it!&lt;/i&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;TheoretiCS was officially launched in 
-December 2021 and we wish to present you with the current status of the 
-project. You can find more precise information on the journal&#39;s site, &lt;a data-saferedirecturl=&quot;https://www.google.com/url?q=http://theoretics-journal.org&amp;amp;source=gmail&amp;amp;ust=1680603853854000&amp;amp;usg=AOvVaw0Ae4R2w9GxS1LLNOrTxwv2&quot; href=&quot;http://theoretics-journal.org&quot; rel=&quot;noreferrer&quot; target=&quot;_blank&quot;&gt;theoretics-journal.org&lt;/a&gt;.&lt;br /&gt;
-&lt;br /&gt;
-The first papers were submitted right away in December 2021, and some 
-were published in 2022: &lt;a href=&quot;https://theoretics.episciences.org/volume/view/id/691&quot; target=&quot;_blank&quot;&gt;Volume 1&lt;/a&gt; (2022) has two papers. &lt;a href=&quot;https://theoretics.episciences.org/volume/view/id/692&quot; target=&quot;_blank&quot;&gt;Volume 2&lt;/a&gt; (2023) 
-already has five published papers, more are very near acceptance and 
-there is a healthy list of papers under review, with more papers 
-submitted every month.&lt;br /&gt;
-&lt;br /&gt;
-Our intention was to have a journal that covers the whole of Theoretical
- Computer Science, and this is reflected in the list of published 
-papers. We also wanted to have an open-access journal (it operates under
- the so-called diamond open access paradigm, which means that no charges
- are levied to read it, nor to publish in it), and one that involves the
- theoretical computer science community as much as possible. This was 
-done by first establishing an Advisory Board, where the majority of the 
-members are representatives of many of the most prominent conferences of
- the domain. The Advisory Board selected a pair of remarkable 
-Editors-in-Chief (Javier Esparza, TU München, and Uri Zwick, Tel-Aviv 
-University) and then worked with the EiCs to assemble a prestigious 
-Editorial Board. The Advisory Board continues to meet regularly, with 
-the EiCs, to help steer the journal.&lt;br /&gt;
-&lt;br /&gt;
-We also wanted to innovate in the reviewing process, streamlining it 
-without compromising in any way the quality of the papers — as we are 
-aiming to become one of the very top journals in the field. The 
-Editorial Board has a so-called Phase 1 process which typically lasts 
-between 2 and 3 months, which determines whether the paper is of the 
-caliber expected for the journal (quality of the results and quality of 
-the exposition, relatively wide interest), under the assumption that the
- proofs are correct. When this Phase 1 concludes positively, Phase 2 
-starts, with the objective of verifying the proofs and, possibly, making
- constructive suggestions to the authors as to how to better present 
-their results. The result, we hope, is a higher quality for the papers 
-published, and also a shorter response time for most of the papers which
- will end up being rejected. As of early 2023, on average, a decision 
-for Phase 1 was reached 64 days after submission, within the three-month
- commitment the Editorial Board made. 85% of the papers got a Phase 1 
-decision within 94 days.&lt;br /&gt;
-&lt;br /&gt;
-TheoretiCS remains a work in progress, though we now have something to 
-show for our efforts. The long-term success of the journal will however 
-continue to depend on the support of the scientific community it wants 
-to serve. Your support is precious in this context, and we hope you will
- spread the word and encourage people around you to submit their best 
-papers to TheoretiCS.&lt;br /&gt;
-&lt;br /&gt;
-With best regards,&lt;br /&gt;
-&lt;br /&gt;Thomas Schwentick, Meena Mahajan and Pascal Weil,&lt;br /&gt;
-respectively Chair, Secretary and Treasurer of the TheoretiCS Foundation&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Luca Aceto&lt;/p&gt;
-  </content>
-    <author>
-      <name>Luca Aceto</name>
-      <uri>http://processalgebra.blogspot.com/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: The Many Qualities of a New Directly Accessible Compression Scheme</title>
-    <link href="http://arxiv.org/abs/2303.18063"/>
-    <id>http://arxiv.org/abs/2303.18063</id>
-    <updated>2023-04-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cantone_D/0/1/0/all/0/1&quot;&gt;Domenico Cantone&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Faro_S/0/1/0/all/0/1&quot;&gt;Simone Faro&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a new variable-length computation-friendly encoding scheme, named
-SFDC (Succinct Format with Direct aCcesibility), that supports direct and fast
-accessibility to any element of the compressed sequence and achieves
-compression ratios often higher than those offered by other solutions in the
-literature. The SFDC scheme provides a flexible and simple representation
-geared towards either practical efficiency or compression ratios, as required.
-For a text of length $n$ over an alphabet of size $\sigma$ and a fixed
-parameter $\lambda$, the access time of the proposed encoding is proportional
-to the length of the character&#39;s code-word, plus an expected
-$\mathcal{O}((F_{\sigma - \lambda + 3} - 3)/F_{\sigma+1})$ overhead, where
-$F_j$ is the $j$-th number of the Fibonacci sequence. In the overall it uses
-$N+\mathcal{O}\big(n \left(\lambda - (F_{\sigma+3}-3)/F_{\sigma+1}\big) \right)
-= N + \mathcal{O}(n)$ bits, where $N$ is the length of the encoded string.
-Experimental results show that the performance of our scheme is, in some
-respects, comparable with the performance of DACs and Wavelet Tees, which are
-among of the most efficient schemes. In addition our scheme is configured as a
-\emph{computation-friendly compression} scheme, as it counts several features
-that make it very effective in text processing tasks. In the string matching
-problem, that we take as a case study, we experimentally prove that the new
-scheme enables results that are up to 29 times faster than standard
-string-matching techniques on plain texts.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Shipper collaboration matching: fast enumeration of triangular transports with high cooperation effects</title>
-    <link href="http://arxiv.org/abs/2303.18222"/>
-    <id>http://arxiv.org/abs/2303.18222</id>
-    <updated>2023-04-03T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kira_A/0/1/0/all/0/1&quot;&gt;Akifumi Kira&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Terajima_N/0/1/0/all/0/1&quot;&gt;Nobuo Terajima&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Watanabe_Y/0/1/0/all/0/1&quot;&gt;Yasuhiko Watanabe&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yamamoto_H/0/1/0/all/0/1&quot;&gt;Hirotaka Yamamoto&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The logistics industry in Japan is facing a severe shortage of labor.
-Therefore, there is an increasing need for joint transportation allowing large
-amounts of cargo to be transported using fewer trucks. In recent years, the use
-of artificial intelligence and other new technologies has gained wide attention
-for improving matching efficiency. However, it is difficult to develop a system
-that can instantly respond to requests because browsing through enormous
-combinations of two transport lanes is time consuming. In this study, we focus
-on a form of joint transportation called triangular transportation and
-enumerate the combinations with high cooperation effects. The proposed
-algorithm makes good use of hidden inequalities, such as the distance axiom, to
-narrow down the search range without sacrificing accuracy. Numerical
-experiments show that the proposed algorithm is thousands of times faster than
-simple brute force. With this technology as the core engine, we developed a
-joint transportation matching system. The system has already been in use by
-over 150 companies as of October 2022, and was featured in a collection of
-logistics digital transformation cases published by Japan&#39;s Ministry of Land,
-Infrastructure, Transport and Tourism.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR23-041 |  The communication complexity of functions with large outputs | 
-
-	Sophie Laplante, 
-
-	Mathieu Lauriere, 
-
-	Lila Fontes, 
-
-	Alexandre Nolin</title>
-    <link href="https://eccc.weizmann.ac.il/report/2023/041"/>
-    <id>https://eccc.weizmann.ac.il/report/2023/041</id>
-    <updated>2023-04-01T22:18:55+00:00</updated>
-    <content type="html" xml:lang="en">
-    We study the two-party communication complexity of functions with large outputs, and show that the communication complexity can greatly vary depending on what output model is considered. We study a variety of output models, ranging from the open model, in which an external observer can compute the outcome, to the XOR model, in which the outcome of the protocol should be the bitwise XOR of the players’ local outputs. This model is inspired by XOR games, which are widely studied two-player quantum games.
-We focus on the question of error-reduction in these new output models. For functions of output size k, applying standard error reduction techniques in the XOR model would introduce an additional cost linear in k. We show that no dependency on k is necessary. Similarly, standard randomness removal techniques, incur a multiplicative cost of 2k in the XOR model. We show how to reduce this factor to O(k).
-In addition, we prove analogous error reduction and randomness removal results in the other models, separate all models from each other, and show that some natural problems – including Set Intersection and Find the First Difference – separate the models when the Hamming weights of their inputs is bounded. Finally, we show how to use the rank lower bound technique for our weak output models.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: Quips are what I’ve got</title>
-    <link href="https://scottaaronson.blog/?p=7188"/>
-    <id>https://scottaaronson.blog/?p=7188</id>
-    <updated>2023-04-01T21:11:47+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;In the comments on my &lt;a href=&quot;https://scottaaronson.blog/?p=7174&quot;&gt;last post&lt;/a&gt;&amp;#8212;the one about the open letter calling for a six-month pause on AI scaling&amp;#8212;a commenter named Hans Holander berates me over and over, as have others before him, for my failure to see that GPT is just a hoax and scam with no “true” intelligence.  Below is my reply: probably one of the most revealing things I’ve ever written (which is saying something).&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;The great irony here is that &lt;em&gt;if&lt;/em&gt; you’re right—and you’re obviously 3000% confident that you’re right—then by my lights, there is no reason whatsoever to pause the scaling of Large Language Models, as your fellow LLM skeptics have urged.  If LLMs are mere &amp;#8220;stochastic parrots,&amp;#8221; and if further scaling will do nothing to alleviate their parroticity, then there’d seem to be little danger that they&amp;#8217;ll ever form grounded plans to take over the world, or even help evil people form such plans. And soon it will be clear to everyone that LLMs are just a gigantic boondoggle that don’t help them solve their problems, and the entire direction will be abandoned. All a six-month pause would accomplish would be to delay this much-needed reckoning.&lt;/p&gt;
-
-
-
-&lt;p&gt;More broadly, though, do you see the problem with “just following your conscience” in this subject? There’s no way to operationalize “follow your conscience,” except “do the thing that will make the highest moral authorities that you recognize not be disappointed in you, not consider you a coward or a monster or a failure.” But what if there’s no agreement among the highest moral authorities that you recognize, or the people who set themselves up as the moral authorities? What if people will call you a coward or a monster or a failure, will even do so right in your comment section, &lt;em&gt;regardless&lt;/em&gt; of what you choose?&lt;/p&gt;
-
-
-
-&lt;p&gt;This, of course, is hardly the first time in my life I’ve been in this situation, condemned for X and equally condemned for not(X).  I’ve never known how to navigate it.  When presented with diametrically opposed views about morality or the future of civilization, all confidently held by people who I consider smart and grounded, I can switch back and forth between the perspectives like with the Necker cube or the duck-rabbit.  But I don’t have any confident worldview of my own.  What I have are mostly quips, and jokes, and metaphors, and realizing when one thing contradicts a different thing, and lectures (many people do seem to like my lectures) where I lay out all the different considerations, and sometimes I also have neat little technical observations that occasionally even get dignified with the name of “theorems” and published in papers.&lt;/p&gt;
-
-
-
-&lt;p&gt;A quarter-century ago, though I remember like yesterday, I was an undergrad at Cornell, and belonged to a scholarship house called Telluride, where house-members had responsibilities for upkeep and governance and whatnot and would write periodic reviews of each other&amp;#8217;s performance.  And I once got a scathing performance review, which took me to task for shirking my housework, and bringing my problem sets to the house meetings.  (These were meetings where the great issues of the day were debated&amp;#8212;like whether or not to allocate $50 for fixing a light, and how guilty to feel over hiring maintenance workers and thereby participating in capitalist exploitation.)  And then there was this: &amp;#8220;Scott&amp;#8217;s contributions to house meetings are often limited to clever quips that, while amusing, do not advance the meeting agenda at all.&amp;#8221;  &lt;/p&gt;
-
-
-
-&lt;p&gt;I’m not like Eliezer Yudkowsky, nor am I even like the anti-Eliezer people. I don’t, in the end, have any belief system at all with which to decide questions of a global or even cosmic magnitude, like whether the progress of AI should be paused or not. Mostly all I’ve got are the quips and the jokes, and the trying to do right on the smaller questions.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;And anyone who doesn’t like this post can consider it an April Fools (hey, Eliezer &lt;a href=&quot;https://www.lesswrong.com/posts/j9Q8bRmwCgXRYAgcJ/miri-announces-new-death-with-dignity-strategy&quot;&gt;did the same&lt;/a&gt; last year!).&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">CCI: jobs: postdoc at Institute of Mathematics, Czech Academy of Sciences (apply by April 30, 2023)</title>
-    <link href="https://cstheory-jobs.org/2023/04/01/postdoc-at-institute-of-mathematics-czech-academy-of-sciences-apply-by-april-30-2023/"/>
-    <id>http://cstheory-jobs.org/2023/04/01/postdoc-at-institute-of-mathematics-czech-academy-of-sciences-apply-by-april-30-2023/</id>
-    <updated>2023-04-01T19:25:48+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;(Extended deadline) The Institute of Mathematics of the Czech Academy of Sciences is seeking a researcher for the project “Logic and unsatisfiability”. Applications are invited from candidates who have completed their PhD within the last 5 years (or will have completed it before the time of hiring), and who have a strong background in proof complexity or bounded arithmetic.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;http://www.math.cas.cz/recrutements/postes.php&quot;&gt;http://www.math.cas.cz/recrutements/postes.php&lt;/a&gt;&lt;br /&gt;
-Email: thapen@math.cas.cz&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </content>
-    <author>
-      <name>CCI: jobs</name>
-      <uri>https://cstheory-jobs.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Computational Complexity: Who&#39;s on April First</title>
-    <link href="https://blog.computationalcomplexity.org/2023/04/whos-on-april-first.html"/>
-    <id>tag:blogger.com,1999:blog-3722233.post-691726575962306125</id>
-    <updated>2023-04-01T14:04:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUtAqIYgEqirBv-z2YRBAEYrFBAawDGs1NjdMsbwYKeoNs_ma5zlR9yyRD5ifxav8zQt3FhOBV8_xLQjScraH3UoscL-RS-nmYPpzQvEuZW9frJXlc1txBOpoTsGz5lUtJ1dAmArOvA2dagN1l-J5Uda-v959LDoBiidDWUZCQQVSsc7LUoA/s1024/baseball.jpg&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;769&quot; data-original-width=&quot;1024&quot; height=&quot;240&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUtAqIYgEqirBv-z2YRBAEYrFBAawDGs1NjdMsbwYKeoNs_ma5zlR9yyRD5ifxav8zQt3FhOBV8_xLQjScraH3UoscL-RS-nmYPpzQvEuZW9frJXlc1txBOpoTsGz5lUtJ1dAmArOvA2dagN1l-J5Uda-v959LDoBiidDWUZCQQVSsc7LUoA/w320-h240/baseball.jpg&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;Carlos May waving to the crowd on April 1, 1972&lt;/div&gt;&lt;p&gt;&lt;i&gt;Instead of the usual April Fools’ Day post, I present one of the best April Fools Day stunts ever. Here’s the text from an old Parade Magazine clipping I dug up recently that was published on April 1, 1985.&lt;/i&gt;&lt;/p&gt;&lt;p&gt;When it comes to innovative and wacky ideas in baseball, Bill Veeck was a true legend. As a team owner and promoter, Veeck was known for his creative approach to the sport, from planting ivy on the walls at Wrigley Field&amp;nbsp;to his famous &quot;exploding scoreboard&quot; at Comiskey Park. But did you know about the time Veeck pulled off an unforgettable April Fools&#39; stunt by having the 1972 Chicago White Sox wear the names from the classic &quot;Who&#39;s on First?&quot; sketch?&lt;/p&gt;&lt;p&gt;It was April 1, 1972, and the Chicago White Sox were getting ready to play a game that would go down in history. Bill Veeck had decided to pay homage to the &lt;a href=&quot;https://youtu.be/sShMA85pv8M&quot;&gt;iconic comedy routine&lt;/a&gt; by Bud Abbott and Lou Costello, considered by many the greatest comedy sketch ever performed. For those unfamiliar with the sketch, it revolves around a series of misunderstandings based on the names of the players on a fictional baseball team. The names sound like common phrases, leading to a hilariously confusing conversation.&lt;/p&gt;&lt;p&gt;In Veeck&#39;s version of the stunt, the White Sox players would take the field with the names of the &quot;Who&#39;s on First?&quot; team on the back of their jerseys. The players, initially skeptical of the idea, eventually embraced the spirit of April Fools&#39; Day and played along.&lt;/p&gt;&lt;p&gt;As the game commenced, fans were treated to a scene straight out of the Abbott and Costello routine. Instead of their usual names, the players&#39; jerseys featured names like &quot;Who,&quot; &quot;What,&quot; &quot;I Don&#39;t Know,&quot; &quot;Why,&quot; &quot;Because,&quot; &quot;Tomorrow,&quot; and &quot;Today.&quot; Here was the starting lineup:&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ol style=&quot;text-align: left;&quot;&gt;&lt;li&gt;Who - First Base: Dick Allen&lt;/li&gt;&lt;li&gt;What - Second Base: Mike Andrews&lt;/li&gt;&lt;li&gt;I Don&#39;t Know - Third Base: Bill Melton&lt;/li&gt;&lt;li&gt;Why - Left Field: Carlos May&lt;/li&gt;&lt;li&gt;Because - Center Field: Ken Berry&lt;/li&gt;&lt;li&gt;Abbott - Right Field: Jay Johnstone&lt;/li&gt;&lt;li&gt;I Don&#39;t Care - Shortstop: Luis Aparicio&lt;/li&gt;&lt;li&gt;Today - Catcher: Ed Herrmann&lt;/li&gt;&lt;li&gt;Tomorrow - Pitcher: Wilbur Wood&lt;/li&gt;&lt;/ol&gt;&lt;div&gt;The right fielder is never named in the sketch. Pat Kelly pinch hit for Johnstone in the 6th wearing “Costello”.&amp;nbsp;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The confusion was not only limited to the fans in the stadium. The opposing team and the umpires struggled to keep track of the game, often leading to comical misunderstandings on the field. For instance, the umpire might have shouted, &quot;Who&#39;s out!&quot; only to be met with the response, &quot;No, Who&#39;s on first!&quot;&lt;/p&gt;&lt;p&gt;Though some traditional baseball fans were initially taken aback by the stunt, the majority embraced the humor, making the game one of the most memorable in White Sox history. It was a testament to Veeck&#39;s genius that he could seamlessly blend comedy with the sport he loved.&lt;/p&gt;&lt;p&gt;The &quot;Who&#39;s on First?&quot; game became a cherished part of baseball lore and added to the legend of Bill Veeck. It demonstrated his willingness to think outside the box, engage fans, and remind everyone that, at its core, baseball should be a source of fun and entertainment.&lt;/p&gt;&lt;p&gt;The 1972 Chicago White Sox &quot;Who&#39;s on First?&quot; April Fools&#39; Day game captured the spirit of Bill Veeck&#39;s inventive approach to baseball. As we celebrate April Fools&#39; Day this year, let&#39;s remember the time when the White Sox took the field with the most confusing lineup in baseball history and showed us all that, sometimes, laughter truly is the best medicine.&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </content>
-    <author>
-      <name>Computational Complexity</name>
-      <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Decentralized Thoughts: What is the difference between PBFT, Tendermint, HotStuff, and HotStuff-2?</title>
-    <link href="https://decentralizedthoughts.github.io/2023-04-01-hotstuff-2/"/>
-    <id>https://decentralizedthoughts.github.io/2023-04-01-hotstuff-2/</id>
-    <updated>2023-04-01T05:00:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    We recently published our work HotStuff-2 on eprint, introducing a two-phase HotStuff variant which simultaneously achieves $O(n^2)$ worst-case communication, optimistically linear communication, a two-phase commit regime within a view, and optimistic responsiveness in partially-synchronous BFT. The main takeaway is that two phases are enough for BFT after all. In this...
-  </content>
-    <author>
-      <name>Decentralized Thoughts</name>
-      <uri>https://decentralizedthoughts.github.io</uri>
     </author>
   </entry>
 
