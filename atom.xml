@@ -10,6 +10,182 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Quantum delegation with an off-the-shelf device</title>
+    <link href="http://arxiv.org/abs/2304.03448"/>
+    <id>http://arxiv.org/abs/2304.03448</id>
+    <updated>2023-04-10T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Broadbent_A/0/1/0/all/0/1&quot;&gt;Anne Broadbent&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Mehta_A/0/1/0/all/0/1&quot;&gt;Arthur Mehta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Zhao_Y/0/1/0/all/0/1&quot;&gt;Yuming Zhao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given that reliable cloud quantum computers are becoming closer to reality,
+the concept of delegation of quantum computations and its verifiability is of
+central interest. Many models have been proposed, each with specific strengths
+and weaknesses. Here, we put forth a new model where the client trusts only its
+classical processing, makes no computational assumptions, and interacts with a
+quantum server in a single round. In addition, during a set-up phase, the
+client specifies the size $n$ of the computation and receives an untrusted,
+off-the-shelf (OTS) quantum device that is used to report the outcome of a
+single constant-sized measurement from a predetermined logarithmic-sized input.
+In the OTS model, we thus picture that a single quantum server does the bulk of
+the computations, while the OTS device is used as an untrusted and generic
+verification device, all in a single round.
+&lt;/p&gt;
+&lt;p&gt;We show how to delegate polynomial-time quantum computations in the OTS
+model. Scaling up the technique also yields an interactive proof system for all
+of QMA, which, furthermore, we show can be accomplished in statistical
+zero-knowledge. This yields the first relativistic (one-round), two-prover
+zero-knowledge proof system for QMA.
+&lt;/p&gt;
+&lt;p&gt;As a proof approach, we provide a new self-test for $n$-EPR pairs using only
+constant-sized Pauli measurements, and show how it provides a new avenue for
+the use of simulatable codes for local Hamiltonian verification. Along the way,
+we also provide an enhanced version of a well-known stability result due to
+Gowers and Hatami and show how it completes a common argument used in
+self-testing.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Maximal Distortion of Geodesic Diameters in Polygonal Domains</title>
+    <link href="http://arxiv.org/abs/2304.03484"/>
+    <id>http://arxiv.org/abs/2304.03484</id>
+    <updated>2023-04-10T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dumitrescu_A/0/1/0/all/0/1&quot;&gt;Adrian Dumitrescu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Toth_C/0/1/0/all/0/1&quot;&gt;Csaba D. T&amp;#xf3;th&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For a polygon $P$ with holes in the plane, we denote by $\varrho(P)$ the
+ratio between the geodesic and the Euclidean diameters of $P$. It is shown that
+over all convex polygons with $h$~convex holes, the supremum of $\varrho(P)$ is
+between $\Omega(h^{1/3})$ and $O(h^{1/2})$. The upper bound improves to
+$O(1+\min\{h^{3/4}\Delta,h^{1/2}\Delta^{1/2}\})$ if every hole has diameter at
+most $\Delta\cdot {\rm diam}_2(P)$; and to $O(1)$ if every hole is a \emph{fat}
+convex polygon. Furthermore, we show that the function $g(h)=\sup_P \varrho(P)$
+over convex polygons with $h$ convex holes has the same growth rate as an
+analogous quantity over geometric triangulations with $h$ vertices when
+$h\rightarrow \infty$.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Leveraging Reusability: Improved Competitive Ratio of Greedy for Reusable Resources</title>
+    <link href="http://arxiv.org/abs/2304.03377"/>
+    <id>http://arxiv.org/abs/2304.03377</id>
+    <updated>2023-04-10T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Baek_J/0/1/0/all/0/1&quot;&gt;Jackie Baek&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_S/0/1/0/all/0/1&quot;&gt;Shixin Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study online weighted bipartite matching of reusable resources where an
+adversarial sequence of requests for resources arrive over time. A resource
+that is matched is &#39;used&#39; for a random duration, drawn independently from a
+resource-dependent distribution, after which it returns and is able to be
+matched again. We study the performance of the greedy policy, which matches
+requests to the resource that yields the highest reward. Previously, it was
+known that the greedy policy is 1/2 competitive against a clairvoyant benchmark
+that knows the request sequence in advance. In this work, we improve this
+result by introducing a parameter that quantifies the degree of reusability of
+the resources. Specifically, if p represents the smallest probability over the
+usage distributions that a matched resource returns in one time step, the
+greedy policy achieves a competitive ratio of $1/(2-p)$. Furthermore, when the
+usage distributions are geometric, we establish a stronger competitive ratio of
+$(1+p)/2$, which we demonstrate to be tight. Both of these results align with
+the known results in the two extreme scenarios: p = 0 corresponds to
+non-reusable resources, where 1/2 is known to be tight, while p = 1 corresponds
+to every resource returning immediately, where greedy is the optimal policy and
+hence the competitive ratio is 1. Finally, we show that both results are robust
+to approximations of the greedy policy. Our work demonstrates that the
+reusability of resources can enhance performance compared to the non-reusable
+setting, and that a simple greedy policy suffices when the degree of
+reusability is high. Our insights contribute to the understanding of how
+resource reusability can influence the performance of online algorithms, and
+highlight the potential for improved performance as the degree of reusability
+increases.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Convex Minimization with Integer Minima in $\widetilde O(n^4)$ Time</title>
+    <link href="http://arxiv.org/abs/2304.03426"/>
+    <id>http://arxiv.org/abs/2304.03426</id>
+    <updated>2023-04-10T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiang_H/0/1/0/all/0/1&quot;&gt;Haotian Jiang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lee_Y/0/1/0/all/0/1&quot;&gt;Yin Tat Lee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Song_Z/0/1/0/all/0/1&quot;&gt;Zhao Song&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_L/0/1/0/all/0/1&quot;&gt;Lichen Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given a convex function $f$ on $\mathbb{R}^n$ with an integer minimizer, we
+show how to find an exact minimizer of $f$ using $O(n^2 \log n)$ calls to a
+separation oracle and $O(n^4 \log n)$ time. The previous best polynomial time
+algorithm for this problem given in [Jiang, SODA 2021, JACM 2022] achieves
+$\widetilde{O}(n^2)$ oracle complexity. However, the overall runtime of Jiang&#39;s
+algorithm is at least $\widetilde{\Omega}(n^8)$, due to expensive sub-routines
+such as the Lenstra-Lenstra-Lov\&#39;asz (LLL) algorithm [Lenstra, Lenstra,
+Lov\&#39;asz, Math. Ann. 1982] and random walk based cutting plane method
+[Bertsimas, Vempala, JACM 2004]. Our significant speedup is obtained by a
+nontrivial combination of a faster version of the LLL algorithm due to
+[Neumaier, Stehl\&#39;e, ISSAC 2016] that gives similar guarantees, the volumetric
+center cutting plane method (CPM) by [Vaidya, FOCS 1989] and its fast
+implementation given in [Jiang, Lee, Song, Wong, STOC 2020].
+&lt;/p&gt;
+&lt;p&gt;For the special case of submodular function minimization (SFM), our result
+implies a strongly polynomial time algorithm for this problem using $O(n^3 \log
+n)$ calls to an evaluation oracle and $O(n^4 \log n)$ additional arithmetic
+operations. Both the oracle complexity and the number of arithmetic operations
+of our more general algorithm are better than the previous best-known runtime
+algorithms for this specific problem given in [Lee, Sidford, Wong, FOCS 2015]
+and [Dadush, V\&#39;egh, Zambelli, SODA 2018, MOR 2021].
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Temporalizing digraphs via linear-size balanced bi-trees</title>
+    <link href="http://arxiv.org/abs/2304.03567"/>
+    <id>http://arxiv.org/abs/2304.03567</id>
+    <updated>2023-04-10T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Bessy_S/0/1/0/all/0/1&quot;&gt;St&amp;#xe9;phane Bessy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Thomasse_S/0/1/0/all/0/1&quot;&gt;St&amp;#xe9;phan Thomass&amp;#xe9;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Viennot_L/0/1/0/all/0/1&quot;&gt;Laurent Viennot&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In a directed graph $D$ on vertex set $v_1,\dots ,v_n$, a \emph{forward arc}
+is an arc $v_iv_j$ where $i&amp;lt;j$. A pair $v_i,v_j$ is \emph{forward connected} if
+there is a directed path from $v_i$ to $v_j$ consisting of forward arcs. In the
+{\tt Forward Connected Pairs Problem} ({\tt FCPP}), the input is a strongly
+connected digraph $D$, and the output is the maximum number of forward
+connected pairs in some vertex enumeration of $D$. We show that {\tt FCPP} is
+in APX, as one can efficiently enumerate the vertices of $D$ in order to
+achieve a quadratic number of forward connected pairs. For this, we construct a
+linear size balanced bi-tree $T$ (an out-tree and an in-tree with same size
+which roots are identified). The existence of such a $T$ was left as an open
+problem motivated by the study of temporal paths in temporal networks. More
+precisely, $T$ can be constructed in quadratic time (in the number of vertices)
+and has size at least $n/3$. The algorithm involves a particular depth-first
+search tree (Left-DFS) of independent interest, and shows that every strongly
+connected directed graph has a balanced separator which is a circuit.
+Remarkably, in the request version {\tt RFCPP} of {\tt FCPP}, where the input
+is a strong digraph $D$ and a set of requests $R$ consisting of pairs
+$\{x_i,y_i\}$, there is no constant $c&amp;gt;0$ such that one can always find an
+enumeration realizing $c.|R|$ forward connected pairs $\{x_i,y_i\}$ (in either
+direction).
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR23-044 |  Separations between Combinatorial Measures for Transitive Functions | 
 
 	Sourav Chakraborty, 
@@ -1462,168 +1638,6 @@ Courcelle&#39;s Theorem: for any fixed property $\varphi$ expressible in the
 $\mathsf{CMSO}_2$ logic, the data structure can maintain whether $G$ satisfies
 $\varphi$ within the same time complexity bounds. To a large extent, this
 answers a question posed by Bodlaender [WG 1993].
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Mixing predictions for online metric algorithms</title>
-    <link href="http://arxiv.org/abs/2304.01781"/>
-    <id>http://arxiv.org/abs/2304.01781</id>
-    <updated>2023-04-05T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Antoniadis_A/0/1/0/all/0/1&quot;&gt;Antonios Antoniadis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Coester_C/0/1/0/all/0/1&quot;&gt;Christian Coester&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Elias_M/0/1/0/all/0/1&quot;&gt;Marek Eli&amp;#xe1;&amp;#x161;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Polak_A/0/1/0/all/0/1&quot;&gt;Adam Polak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Simon_B/0/1/0/all/0/1&quot;&gt;Bertrand Simon&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A major technique in learning-augmented online algorithms is combining
-multiple algorithms or predictors. Since the performance of each predictor may
-vary over time, it is desirable to use not the single best predictor as a
-benchmark, but rather a dynamic combination which follows different predictors
-at different times. We design algorithms that combine predictions and are
-competitive against such dynamic combinations for a wide class of online
-problems, namely, metrical task systems. Against the best (in hindsight)
-unconstrained combination of $\ell$ predictors, we obtain a competitive ratio
-of $O(\ell^2)$, and show that this is best possible. However, for a benchmark
-with slightly constrained number of switches between different predictors, we
-can get a $(1+\epsilon)$-competitive algorithm. Moreover, our algorithms can be
-adapted to access predictors in a bandit-like fashion, querying only one
-predictor at a time. An unexpected implication of one of our lower bounds is a
-new structural insight about covering formulations for the $k$-server problem.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: VC Set Systems in Minor-free (Di)Graphs and Applications</title>
-    <link href="http://arxiv.org/abs/2304.01790"/>
-    <id>http://arxiv.org/abs/2304.01790</id>
-    <updated>2023-04-05T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Le_H/0/1/0/all/0/1&quot;&gt;Hung Le&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wulff_Nilsen_C/0/1/0/all/0/1&quot;&gt;Christian Wulff-Nilsen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A recent line of work on VC set systems in minor-free (undirected) graphs,
-starting from Li and Parter, who constructed a new VC set system for planar
-graphs, has given surprising algorithmic results. In this work, we initialize a
-more systematic study of VC set systems for minor-free graphs and their
-applications in both undirected graphs and directed graphs (a.k.a digraphs).
-More precisely:
-&lt;/p&gt;
-&lt;p&gt;- We propose a new variant of Li-Parter set system for undirected graphs.
-&lt;/p&gt;
-&lt;p&gt;- We extend our set system to $K_h$-minor-free digraphs and show that its VC
-dimension is $O(h^2)$.
-&lt;/p&gt;
-&lt;p&gt;- We show that the system of directed balls in minor-free digraphs has VC
-dimension at most $h-1$.
-&lt;/p&gt;
-&lt;p&gt;- On the negative side, we show that VC set system constructed from shortest
-path trees of planar digraphs does not have a bounded VC dimension.
-&lt;/p&gt;
-&lt;p&gt;The highlight of our work is the results for digraphs, as we are not aware of
-known algorithmic work on constructing and exploiting VC set systems for
-digraphs.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Connected and Autonomous Vehicle Scheduling Problems: Some Models and Algorithms</title>
-    <link href="http://arxiv.org/abs/2304.01806"/>
-    <id>http://arxiv.org/abs/2304.01806</id>
-    <updated>2023-04-05T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Gafarov_E/0/1/0/all/0/1&quot;&gt;Evgeny R. Gafarov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Werner_F/0/1/0/all/0/1&quot;&gt;Frank Werner&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we consider scheduling problems that arise in connected and
-autonomous vehicle systems. For four variants of such problems, mathematical
-models and solution algorithms are presented. In particular, three polynomial
-algorithms and a branch and bound algorithms are developed.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Chasing Positive Bodies</title>
-    <link href="http://arxiv.org/abs/2304.01889"/>
-    <id>http://arxiv.org/abs/2304.01889</id>
-    <updated>2023-04-05T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhattacharya_S/0/1/0/all/0/1&quot;&gt;Sayan Bhattacharya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Buchbinder_N/0/1/0/all/0/1&quot;&gt;Niv Buchbinder&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Levin_R/0/1/0/all/0/1&quot;&gt;Roie Levin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saranurak_T/0/1/0/all/0/1&quot;&gt;Thatchaphol Saranurak&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of chasing positive bodies in $\ell_1$: given a sequence
-of bodies $K_{t}=\{x^{t}\in\mathbb{R}_{+}^{n}\mid C^{t}x^{t}\geq
-1,P^{t}x^{t}\leq 1\}$ revealed online, where $C^{t}$ and $P^{t}$ are
-nonnegative matrices, the goal is to (approximately) maintain a point $x_t \in
-K_t$ such that $\sum_t \|x_t - x_{t-1}\|_1$ is minimized. This captures the
-fully-dynamic low-recourse variant of any problem that can be expressed as a
-mixed packing-covering linear program and thus also the fractional version of
-many central problems in dynamic algorithms such as set cover, load balancing,
-hyperedge orientation, minimum spanning tree, and matching.
-&lt;/p&gt;
-&lt;p&gt;We give an $O(\log d)$-competitive algorithm for this problem, where $d$ is
-the maximum row sparsity of any matrix $C^t$. This bypasses and improves
-exponentially over the lower bound of $\sqrt{n}$ known for general convex
-bodies. Our algorithm is based on iterated information projections, and, in
-contrast to general convex body chasing algorithms, is entirely memoryless.
-&lt;/p&gt;
-&lt;p&gt;We also show how to round our solution dynamically to obtain the first fully
-dynamic algorithms with competitive recourse for all the stated problems above;
-i.e. their recourse is less than the recourse of every other algorithm on every
-update sequence, up to polylogarithmic factors. This is a significantly
-stronger notion than the notion of absolute recourse in the dynamic algorithms
-literature.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Strong spatial mixing for colorings on trees and its algorithmic applications</title>
-    <link href="http://arxiv.org/abs/2304.01954"/>
-    <id>http://arxiv.org/abs/2304.01954</id>
-    <updated>2023-04-05T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_Z/0/1/0/all/0/1&quot;&gt;Zongchen Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_K/0/1/0/all/0/1&quot;&gt;Kuikui Liu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mani_N/0/1/0/all/0/1&quot;&gt;Nitya Mani&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moitra_A/0/1/0/all/0/1&quot;&gt;Ankur Moitra&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Strong spatial mixing (SSM) is an important quantitative notion of
-correlation decay for Gibbs distributions arising in statistical physics,
-probability theory, and theoretical computer science. A longstanding conjecture
-is that the uniform distribution on proper $q$-colorings on a $\Delta$-regular
-tree exhibits SSM whenever $q \ge \Delta+1$. Moreover, it is widely believed
-that as long as SSM holds on bounded-degree trees with $q$ colors, one would
-obtain an efficient sampler for $q$-colorings on all bounded-degree graphs via
-simple Markov chain algorithms. It is surprising that such a basic question is
-still open, even on trees, but then again it also highlights how much we still
-have to learn about random colorings. In this paper, we show the following:
-&lt;/p&gt;
-&lt;p&gt;(1) For any $\Delta \ge 3$, SSM holds for random $q$-colorings on trees of
-maximum degree $\Delta$ whenever $q \ge \Delta + 3$. Thus we almost fully
-resolve the aforementioned conjecture. Our result substantially improves upon
-the previously best bound which requires $q \ge 1.59\Delta+\gamma^*$ for an
-absolute constant $\gamma^* &amp;gt; 0$.
-&lt;/p&gt;
-&lt;p&gt;(2) For any $\Delta\ge 3$ and girth $g = \Omega_\Delta(1)$, we establish
-optimal mixing of the Glauber dynamics for $q$-colorings on graphs of maximum
-degree $\Delta$ and girth $g$ whenever $q \ge \Delta+3$. Our approach is based
-on a new general reduction from spectral independence on large-girth graphs to
-SSM on trees that is of independent interest.
-&lt;/p&gt;
-&lt;p&gt;Using the same techniques, we also prove near-optimal bounds on weak spatial
-mixing (WSM), a closely-related notion to SSM, for the antiferromagnetic Potts
-model on trees.
 &lt;/p&gt;
   </content>
     <author>
