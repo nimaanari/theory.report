@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-04-10T17:30:29Z">Monday, April 10 2023, 17:30</time>
+          <time class='timeago' datetime="2023-04-10T18:31:23Z">Monday, April 10 2023, 18:31</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,37 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Monday, April 10
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/04/complexity-and-generative-ai.html'>Complexity and Explainable AI</a></h3>
+        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>About six years ago, I posted&nbsp;on why it was important to understand machine learning, mentioning trust, fairness, security and causality. But I then I brought in complexity.</p><p></p><blockquote>What if P = NP? Would that help. Actually it would makes things worse. If you had a quick algorithm for NP-complete problems, you could use it to find the smallest possible circuit for say matching or traveling salesman but you would have no clue why that circuit works.&nbsp;</blockquote><p>Ryan Williams countered</p><p></p><blockquote>If P=NP you could also find the shortest proof in your favorite formal system that the smallest possible circuit does what you wanted it to do, as well as any other claim you are wondering that may be true about the circuit. That proof might not be comprehensible to you, but it could be written in a format where proof assistant software such as HOL or Coq could parse it and convince you it is correct. So if P=NP (with feasible low constants) I think that would definitely help.</blockquote><p>So if P = NP maybe you couldn't understand how the circuit works but any question about how it works you could answer.&nbsp;</p><p>While we don't live in a world where P = NP, we are in a world where we can produce very strong learning algorithms where we can't understand the programs they produce. They are now powerful enough to apply Ryan's idea and use the algorithms themselves to understand the decisions they make.</p><p>For example I tried using Google Translate on a Hungarian obituary of Vera&nbsp;Sós. Hungarian does not use gendered pronouns and and the translation incorrectly produced male pronouns. I then fed the translation into ChatGPT which translated with the correct female pronouns.&nbsp;</p><p>You can speculate why Google Translate uses male pronouns but you can't ask it why. But you can ask ChatGPT.</p><p></p><blockquote>I used female pronouns in the translation because Vera T. Sós is a female name. Vera is a feminine given name, and since the context of the original text is about her life and accomplishments, it is appropriate to use female pronouns in the English translation to maintain clarity and accurately convey information about her.</blockquote><p>So perhaps if you want to understand how ML works, perhaps we should seek stronger algorithms, not weaker ones, algorithms that can explain themselves. As they say, a dull knife is more dangerous than a sharp one.</p><p></p><p></p><p></p><p></p><p>By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>About six years ago, I <a href="https://blog.computationalcomplexity.org/2017/04/understanding-machine-learning.html">posted</a>&nbsp;on why it was important to understand machine learning, mentioning trust, fairness, security and causality. But I then I brought in complexity.</p><p></p><blockquote>What if P = NP? Would that help. Actually it would makes things worse. If you had a quick algorithm for NP-complete problems, you could use it to find the smallest possible circuit for say matching or traveling salesman but you would have no clue why that circuit works.&nbsp;</blockquote><p>Ryan Williams <a href="https://blog.computationalcomplexity.org/2017/04/understanding-machine-learning.html?showComment=1492464695392#c7595821335622802218">countered</a></p><p></p><blockquote>If P=NP you could also find the shortest proof in your favorite formal system that the smallest possible circuit does what you wanted it to do, as well as any other claim you are wondering that may be true about the circuit. That proof might not be comprehensible to you, but it could be written in a format where proof assistant software such as HOL or Coq could parse it and convince you it is correct. So if P=NP (with feasible low constants) I think that would definitely help.</blockquote><p>So if P = NP maybe you couldn't understand how the circuit works but any question about how it works you could answer.&nbsp;</p><p>While we don't live in a world where P = NP, we are in a world where we can produce very strong learning algorithms where we can't understand the programs they produce. They are now powerful enough to apply Ryan's idea and use the algorithms themselves to understand the decisions they make.</p><p>For example I tried using Google Translate on a <a href="https://mta.hu/mta_hirei/elhunyt-t-sos-vera-matematikus-az-mta-rendes-tagja-112809">Hungarian obituary</a> of Vera&nbsp;Sós. Hungarian does not use gendered pronouns and and the translation incorrectly produced male pronouns. I then fed the translation into ChatGPT which translated with the correct female pronouns.&nbsp;</p><p>You can speculate why Google Translate uses male pronouns but you can't ask it why. But you can ask ChatGPT.</p><p></p><blockquote>I used female pronouns in the translation because Vera T. Sós is a female name. Vera is a feminine given name, and since the context of the original text is about her life and accomplishments, it is appropriate to use female pronouns in the English translation to maintain clarity and accurately convey information about her.</blockquote><p>So perhaps if you want to understand how ML works, perhaps we should seek stronger algorithms, not weaker ones, algorithms that can explain themselves. As <a href="https://knivesengraved.com/blogs/news/why-sharp-knives-are-safer-than-dull-knives">they say</a>, a dull knife is more dangerous than a sharp one.</p><p></p><p></p><p></p><p></p><p class="authors">By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-10T17:37:00Z">Monday, April 10 2023, 17:37</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3573,57 +3604,6 @@ obtain this via an $\tilde{O}(nk + n^{1.5})$ query complexity algorithm for the
 case where every edge in $G$ is guaranteed to be comparable in the poset, which
 generalizes the state-of-the-art $\tilde{O}(n^{1.5})$ bound for generalized
 sorting [Huang et al., FOCS 11].
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-05T00:30:00Z">Wednesday, April 05 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.01744'>Dynamic treewidth</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Tuukka Korhonen, Konrad Majewski, Wojciech Nadara, Micha&#x142; Pilipczuk, Marek Soko&#x142;owski</p><p>We present a data structure that for a dynamic graph $G$ that is updated by
-edge insertions and deletions, maintains a tree decomposition of $G$ of width
-at most $6k+5$ under the promise that the treewidth of $G$ never grows above
-$k$. The amortized update time is ${\cal O}_k(2^{\sqrt{\log n}\log\log n})$,
-where $n$ is the vertex count of $G$ and the ${\cal O}_k(\cdot)$ notation hides
-factors depending on $k$. In addition, we also obtain the dynamic variant of
-Courcelle's Theorem: for any fixed property $\varphi$ expressible in the
-$\mathsf{CMSO}_2$ logic, the data structure can maintain whether $G$ satisfies
-$\varphi$ within the same time complexity bounds. To a large extent, this
-answers a question posed by Bodlaender [WG 1993].
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Korhonen_T/0/1/0/all/0/1">Tuukka Korhonen</a>, <a href="http://arxiv.org/find/cs/1/au:+Majewski_K/0/1/0/all/0/1">Konrad Majewski</a>, <a href="http://arxiv.org/find/cs/1/au:+Nadara_W/0/1/0/all/0/1">Wojciech Nadara</a>, <a href="http://arxiv.org/find/cs/1/au:+Pilipczuk_M/0/1/0/all/0/1">Micha&#x142; Pilipczuk</a>, <a href="http://arxiv.org/find/cs/1/au:+Sokolowski_M/0/1/0/all/0/1">Marek Soko&#x142;owski</a></p><p>We present a data structure that for a dynamic graph $G$ that is updated by
-edge insertions and deletions, maintains a tree decomposition of $G$ of width
-at most $6k+5$ under the promise that the treewidth of $G$ never grows above
-$k$. The amortized update time is ${\cal O}_k(2^{\sqrt{\log n}\log\log n})$,
-where $n$ is the vertex count of $G$ and the ${\cal O}_k(\cdot)$ notation hides
-factors depending on $k$. In addition, we also obtain the dynamic variant of
-Courcelle's Theorem: for any fixed property $\varphi$ expressible in the
-$\mathsf{CMSO}_2$ logic, the data structure can maintain whether $G$ satisfies
-$\varphi$ within the same time complexity bounds. To a large extent, this
-answers a question posed by Bodlaender [WG 1993].
 </p>
         
         </div>

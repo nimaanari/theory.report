@@ -9,6 +9,17 @@
 
 
 <item>
+  <title>Complexity and Explainable AI</title>
+  <guid>tag:blogger.com,1999:blog-3722233.post-8698511952609437812</guid>
+  <link>https://blog.computationalcomplexity.org/2023/04/complexity-and-generative-ai.html</link>
+  <description>
+    &lt;p&gt;About six years ago, I &lt;a href=&quot;https://blog.computationalcomplexity.org/2017/04/understanding-machine-learning.html&quot;&gt;posted&lt;/a&gt;&amp;nbsp;on why it was important to understand machine learning, mentioning trust, fairness, security and causality. But I then I brought in complexity.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;blockquote&gt;What if P = NP? Would that help. Actually it would makes things worse. If you had a quick algorithm for NP-complete problems, you could use it to find the smallest possible circuit for say matching or traveling salesman but you would have no clue why that circuit works.&amp;nbsp;&lt;/blockquote&gt;&lt;p&gt;Ryan Williams &lt;a href=&quot;https://blog.computationalcomplexity.org/2017/04/understanding-machine-learning.html?showComment=1492464695392#c7595821335622802218&quot;&gt;countered&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;blockquote&gt;If P=NP you could also find the shortest proof in your favorite formal system that the smallest possible circuit does what you wanted it to do, as well as any other claim you are wondering that may be true about the circuit. That proof might not be comprehensible to you, but it could be written in a format where proof assistant software such as HOL or Coq could parse it and convince you it is correct. So if P=NP (with feasible low constants) I think that would definitely help.&lt;/blockquote&gt;&lt;p&gt;So if P = NP maybe you couldn&#39;t understand how the circuit works but any question about how it works you could answer.&amp;nbsp;&lt;/p&gt;&lt;p&gt;While we don&#39;t live in a world where P = NP, we are in a world where we can produce very strong learning algorithms where we can&#39;t understand the programs they produce. They are now powerful enough to apply Ryan&#39;s idea and use the algorithms themselves to understand the decisions they make.&lt;/p&gt;&lt;p&gt;For example I tried using Google Translate on a &lt;a href=&quot;https://mta.hu/mta_hirei/elhunyt-t-sos-vera-matematikus-az-mta-rendes-tagja-112809&quot;&gt;Hungarian obituary&lt;/a&gt; of Vera&amp;nbsp;Sós. Hungarian does not use gendered pronouns and and the translation incorrectly produced male pronouns. I then fed the translation into ChatGPT which translated with the correct female pronouns.&amp;nbsp;&lt;/p&gt;&lt;p&gt;You can speculate why Google Translate uses male pronouns but you can&#39;t ask it why. But you can ask ChatGPT.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;blockquote&gt;I used female pronouns in the translation because Vera T. Sós is a female name. Vera is a feminine given name, and since the context of the original text is about her life and accomplishments, it is appropriate to use female pronouns in the English translation to maintain clarity and accurately convey information about her.&lt;/blockquote&gt;&lt;p&gt;So perhaps if you want to understand how ML works, perhaps we should seek stronger algorithms, not weaker ones, algorithms that can explain themselves. As &lt;a href=&quot;https://knivesengraved.com/blogs/news/why-sharp-knives-are-safer-than-dull-knives&quot;&gt;they say&lt;/a&gt;, a dull knife is more dangerous than a sharp one.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-10 17:37:00 UTC</pubDate>
+  <author>Computational Complexity</author>
+</item>
+
+<item>
   <title>Quantum delegation with an off-the-shelf device</title>
   <guid>http://arxiv.org/abs/2304.03448</guid>
   <link>http://arxiv.org/abs/2304.03448</link>
@@ -1419,27 +1430,6 @@ obtain this via an $\tilde{O}(nk + n^{1.5})$ query complexity algorithm for the
 case where every edge in $G$ is guaranteed to be comparable in the poset, which
 generalizes the state-of-the-art $\tilde{O}(n^{1.5})$ bound for generalized
 sorting [Huang et al., FOCS 11].
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Dynamic treewidth</title>
-  <guid>http://arxiv.org/abs/2304.01744</guid>
-  <link>http://arxiv.org/abs/2304.01744</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Korhonen_T/0/1/0/all/0/1&quot;&gt;Tuukka Korhonen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Majewski_K/0/1/0/all/0/1&quot;&gt;Konrad Majewski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nadara_W/0/1/0/all/0/1&quot;&gt;Wojciech Nadara&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pilipczuk_M/0/1/0/all/0/1&quot;&gt;Micha&amp;#x142; Pilipczuk&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sokolowski_M/0/1/0/all/0/1&quot;&gt;Marek Soko&amp;#x142;owski&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a data structure that for a dynamic graph $G$ that is updated by
-edge insertions and deletions, maintains a tree decomposition of $G$ of width
-at most $6k+5$ under the promise that the treewidth of $G$ never grows above
-$k$. The amortized update time is ${\cal O}_k(2^{\sqrt{\log n}\log\log n})$,
-where $n$ is the vertex count of $G$ and the ${\cal O}_k(\cdot)$ notation hides
-factors depending on $k$. In addition, we also obtain the dynamic variant of
-Courcelle&#39;s Theorem: for any fixed property $\varphi$ expressible in the
-$\mathsf{CMSO}_2$ logic, the data structure can maintain whether $G$ satisfies
-$\varphi$ within the same time complexity bounds. To a large extent, this
-answers a question posed by Bodlaender [WG 1993].
 &lt;/p&gt;
   </description>
   <pubDate>2023-04-05 00:30:00 UTC</pubDate>
