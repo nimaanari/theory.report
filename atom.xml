@@ -720,13 +720,13 @@ Also, in theory, if the graphs are isomorphic then the probability of |+&gt; wil
 
 (e) So then why doesn&#39;t this approach immediately imply a fast quantum algorithm for Graph Isomorphism?  Explain what could go wrong in passing from fast algorithms to sample $D_G$ and $D_H$, to fast algorithms to QSample them.
 
-&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-cyan-blue-color&quot;&gt;The approach described above does not immediately imply a fast quantum algorithm for Graph Isomorphism because there is a crucial difference between classical sampling and QSampling.
+&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-cyan-blue-color&quot;&gt;The approach described above does not immediately imply a fast quantum algorithm for Graph Isomorphism because there is a crucial difference between classical sampling and QSampling.
 
-In the algorithm, we assumed that we can efficiently construct quantum circuits $\mathcal{C}_G$ and $\mathcal{C}_{G&#39;}$ that map $\ket{0^n}$ to $\ket{\psi_{D_G}}$ and $\ket{\psi_{D_{G&#39;}}}$, respectively, given that the distributions $D_G$ and $D_{G&#39;}$ can be efficiently sampled classically. However, this assumption might not hold in general.
+In the algorithm, we assumed that we can efficiently construct quantum circuits $\mathcal{C}_G$ and $\mathcal{C}_{G&#39;}$ that map $\ket{0^n}$ to $\ket{\psi_{D_G}}$ and $\ket{\psi_{D_{G&#39;}}}$, respectively, given that the distributions $D_G$ and $D_{G&#39;}$ can be efficiently sampled classically. However, this assumption might not hold in general.
 
-Classical sampling allows us to draw samples from the distributions $D_G$ and $D_{G&#39;}$, but it does not directly provide a way to prepare the corresponding QSampling states $\ket{\psi_{D_G}}$ and $\ket{\psi_{D_{G&#39;}}}$. Preparing these quantum states requires a coherent superposition of all the elements in the distributions with the appropriate amplitudes, which might not be efficiently achievable using the classical sampling algorithms.
+Classical sampling allows us to draw samples from the distributions $D_G$ and $D_{G&#39;}$, but it does not directly provide a way to prepare the corresponding QSampling states $\ket{\psi_{D_G}}$ and $\ket{\psi_{D_{G&#39;}}}$. Preparing these quantum states requires a coherent superposition of all the elements in the distributions with the appropriate amplitudes, which might not be efficiently achievable using the classical sampling algorithms.
 
-In other words, the ability to efficiently sample from a probability distribution classically does not necessarily imply the ability to efficiently prepare the corresponding QSampling state on a quantum computer. This is the main reason why the approach does not immediately lead to a fast quantum algorithm for Graph Isomorphism.&lt;/mark&gt;
+In other words, the ability to efficiently sample from a probability distribution classically does not necessarily imply the ability to efficiently prepare the corresponding QSampling state on a quantum computer. This is the main reason why the approach does not immediately lead to a fast quantum algorithm for Graph Isomorphism.&lt;/mark&gt;
 
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;SCOTT: Correctly explains that sampling doesn&#39;t necessarily imply QSampling (i.e. generating a coherent superposition state), but doesn&#39;t say that this is because of the difficulty of uncomputing garbage.
 2 / 5 extra credit points.&lt;/mark&gt;&lt;/pre&gt;
@@ -826,8 +826,7 @@ is zero or nonzero as an integer.  (In other words, whether there&#39;s an $i$ s
 
 4. After $O(\sqrt{n})$ iterations, Alice measures the final state in the computational basis. If she obtains a non-zero result, then there exists an $i$ such that $x_i = y_i = 1$, and their inner product is nonzero as an integer. If she obtains a zero result, then their inner product is zero.
 
-Since Alice and Bob exchange $n$ qubits in each iteration, and they perform $O(\sqrt{n})$ iterations, the total number of qubits exchanged is $O(n\sqrt{n}) = O(\sqrt{n}\log n)$, as each qubit can represent $\log n$ bits of information. Thus, Alice and Bob can determine whether their inner product is zero or nonzero as an integer, with high probability, by exchanging only $O(\sqrt{n}\log n)$ qubits in
-total.
+Since Alice and Bob exchange $n$ qubits in each iteration, and they perform $O(\sqrt{n})$ iterations, the total number of qubits exchanged is $O(n\sqrt{n}) = O(\sqrt{n}\log n)$, as each qubit can represent $\log n$ bits of information. Thus, Alice and Bob can determine whether their inner product is zero or nonzero as an integer, with high probability, by exchanging only $O(\sqrt{n}\log n)$ qubits in total.
 &lt;/mark&gt;
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;SCOTT: LOOKS BASICALLY RIGHT, EXCEPT FOR A SLIP-UP AT THE END WHERE IT SAYS
 ALICE AND BOB EXCHANGE n QUBITS PER ITERATION RATHER THAN log n ...
@@ -902,8 +901,7 @@ Basically all this gets correct is to use Grover in some way.
 &lt;/mark&gt;
 (c) Suppose we wanted to prove that the algorithm from (b) was the fastest possible quantum algorithm for $k$-SUM.  Could that be shown via a lower bound on $k$-SUM&#39;s quantum query complexity?  Why or why not?
 
-&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-cyan-blue-color&quot;&gt;Proving that the algorithm from (b) is the fastest possible quantum algorithm for k-SUM would require showing a lower bound on k-SUM&#39;s quantum query complexity that matches the upper bound achieved by the algorithm. However, a lower bound on the quantum query complexity alone might not be sufficient to prove the optimality of
-the algorithm, as it only considers the number of queries to the oracle function and does not account for other computational resources, such as time or space complexity.
+&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-cyan-blue-color&quot;&gt;Proving that the algorithm from (b) is the fastest possible quantum algorithm for k-SUM would require showing a lower bound on k-SUM&#39;s quantum query complexity that matches the upper bound achieved by the algorithm. However, a lower bound on the quantum query complexity alone might not be sufficient to prove the optimality of the algorithm, as it only considers the number of queries to the oracle function and does not account for other computational resources, such as time or space complexity.
 
 To show that the algorithm from (b) is the fastest possible quantum algorithm for k-SUM, one would need to establish a lower bound on the quantum time complexity or some other relevant complexity measure that matches the upper bound achieved by the algorithm. This would provide a more comprehensive understanding of the problem&#39;s inherent difficulty and the limitations of quantum algorithms in solving it.&lt;/mark&gt;
 
