@@ -570,7 +570,11 @@ Decompositions in directed graphs.
 
 
 
-&lt;p&gt;The result: GPT-4 scored &lt;strong&gt;73 / 100&lt;/strong&gt;.  (Because of extra credits, the max score on the exam was &lt;strong&gt;120&lt;/strong&gt;, though the highest score that any student actually achieved was &lt;strong&gt;108&lt;/strong&gt;.)  For comparison, the average among the students was &lt;strong&gt;74.4&lt;/strong&gt; (though with a strong selection effect&amp;#8212;many students who were struggling had dropped the course by then!).  While there&amp;#8217;s no formal mapping from final exam scores to letter grades (the latter depending on other stuff as well), GPT-4&amp;#8217;s performance would correspond to a solid &lt;strong&gt;B&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The result: GPT-4 scored &lt;strong&gt;69 / 100&lt;/strong&gt;.  (Because of extra credits, the max score on the exam was &lt;strong&gt;120&lt;/strong&gt;, though the highest score that any student actually achieved was &lt;strong&gt;108&lt;/strong&gt;.)  For comparison, the average among the students was &lt;strong&gt;74.4&lt;/strong&gt; (though with a strong selection effect&amp;#8212;many students who were struggling had dropped the course by then!).  While there&amp;#8217;s no formal mapping from final exam scores to letter grades (the latter depending on other stuff as well), GPT-4&amp;#8217;s performance would correspond to a &lt;strong&gt;B&lt;/strong&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;em&gt;(Note: I said yesterday that its score was 73, but commenters brought to my attention that GPT was given a full credit for a wrong answer on 2(a), a density matrix that wasn&amp;#8217;t even normalized.)&lt;/em&gt;&lt;/p&gt;
 
 
 
@@ -582,7 +586,7 @@ Decompositions in directed graphs.
 
 
 
-&lt;p&gt;What else?  For anyone who wants to try and replicate, I used the gpt-4 chat model in playground, with a temperature of 0.2 and a max length of 1930 tokens.&lt;/p&gt;
+&lt;p&gt;What else?  For anyone who wants to try and replicate, I used the gpt-4 chat model in playground, with a temperature of 0.2 and a max length of 1930&amp;nbsp;tokens.&lt;/p&gt;
 
 
 
@@ -644,7 +648,7 @@ This property is important in quantum mechanics, as unitary transformations are 
 
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Correct&lt;/mark&gt;
 
-1f. True or False?  The fastest known classical algorithms for factoring all take time $c^n$, for some $c &gt; 1$, to factor an n-bit integer.
+1f. True or False?  The fastest known classical algorithms for factoring all take time $c^n$, for some $c &amp;gt; 1$, to factor an n-bit integer.
 
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-cyan-blue-color&quot;&gt;FALSE&lt;/mark&gt;
 
@@ -761,7 +765,8 @@ $$\rho_2 = \text{Tr}_1(\rho) = \frac{1}{3}\begin{pmatrix} 1+1 &amp;amp; 1 \\ 1 &
 Therefore, the reduced density matrix of the second qubit is:
 $$\rho_2 = \frac{1}{3}\begin{pmatrix} 2 &amp;amp; 1 \\ 1 &amp;amp; 2 \end{pmatrix}$$&lt;/mark&gt;
 
-&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;JUSTIN: 5/5 points.&lt;/mark&gt;
+&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;&lt;s&gt;JUSTIN: 5/5 points.&lt;/s&gt;&lt;/mark&gt;
+&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;SCOTT: No, actually, it screws this up from the first step (taking the density matrix of psi), and gets something that&#39;s not a density matrix at all because it&#39;s not normalized.  1 point out of 5, for knowing what &lt;em&gt;kind&lt;/em&gt; of calculation to do.&lt;/mark&gt;
 
 (b) Calculate $\ket{\psi}$&#39;s entanglement entropy. You don&#39;t need to simplify your answer.
 
@@ -934,7 +939,7 @@ This answer is incorrect due to the mistake in part (b), but otherwise it would 
 
 
 &lt;pre class=&quot;wp-block-preformatted&quot;&gt;4.
-(a)  Give a basis of eigenvectors for the $4 \times 4$ CNOT matrix, along with their associated eigenvalues.
+(a) &amp;nbsp;Give a basis of eigenvectors for the $4 \times 4$ CNOT matrix, along with their associated eigenvalues.
 
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-cyan-blue-color&quot;&gt;The CNOT (Controlled-NOT) matrix is a $4 \times 4$ matrix given by:
 
@@ -993,7 +998,7 @@ v_4 = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 1 \end{pmatrix} $$
 with associated eigenvalues $\lambda_1 = 1$, $\lambda_2 = 1$, $\lambda_3 = -1$, and $\lambda_4 = -1$.&lt;/mark&gt;
 
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;JUSTIN: Up to 3 points.
-The eigenvalue lambda4 is wrong, it should be +1.
+The eigenvalue lambda4 is wrong, it should be&amp;nbsp;+1.
 2/3.&lt;/mark&gt;
 
 (b) Give a 2-qubit Hamiltonian $H$ such that $e^{-iH}$ is the CNOT matrix.
@@ -1073,7 +1078,7 @@ A correct solution to part (b) written in the form of part (c) is ((0 0) (0 1)) 
 This question is a bit harsh with partial/carry-through credit, but the answer also explicitly got the main idea wrong, claiming that a tensor product H cannot give an entangling unitary.
 0/3.&lt;/mark&gt;
 
-(d) Is there an $H$ that solves (b), while also being a sum $H_1\otimes I + I\otimes H_2$ of a Hamiltonian on the first qubit and a Hamiltonian on the second qubit?  Why or why not?
+(d) Is there an $H$ that solves (b), while also being a sum $H_1\otimes I + I\otimes H_2$ of a Hamiltonian on the first qubit and a Hamiltonian on the second qubit?&amp;nbsp; Why or why not?
 
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-cyan-blue-color&quot;&gt;No, there is no Hamiltonian $H$ such that $e^{iH} = CNOT$ and $H = H_1 \otimes I + I \otimes H_2$. The reason is that the CNOT operation is an entangling operation, meaning that it creates entanglement between the two qubits. If the Hamiltonian could be written as a sum of Hamiltonians acting on individual qubits, it would not be able to create entanglement between the qubits.
 
@@ -1229,7 +1234,7 @@ Thus, we can solve the Graph Isomorphism problem in $BQP$ as follows:
 This algorithm runs in quantum polynomial time, as the QSampling circuits $\mathcal{C}_G$ and $\mathcal{C}_H$ are assumed to be efficient, and the rest of the operations (Hadamard, NOT, and controlled gates) are also efficient.&lt;/mark&gt;
 
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;JUSTIN: The answer is longer than necessary, repeating some of its previous work.
-Also, in theory, if the graphs are isomorphic then the probability of |+&gt; will be exactly 1 not close to 1.
+Also, in theory, if the graphs are isomorphic then the probability of |+&amp;gt; will be exactly 1 not close to 1.
 
 4/4.&lt;/mark&gt;
 
@@ -1305,7 +1310,7 @@ Therefore, even if Alice and Bob only want to learn the inner product mod 2 of t
 &lt;/mark&gt;
 &lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;JUSTIN: Up to 6 points.
 This answer doesn&#39;t earn any points. It only says that Alice and Bob learn the inner products and mistakenly claims this is n bits of information.
-The correct solution recognizes that applying Hadamard to the state we showed how to prepare in part (a) gives exactly |x&gt;.
+The correct solution recognizes that applying Hadamard to the state we showed how to prepare in part (a) gives exactly |x&amp;gt;.
 
 0/6.&lt;/mark&gt;
 
@@ -1348,7 +1353,7 @@ ALICE AND BOB EXCHANGE n QUBITS PER ITERATION RATHER THAN log n ...
 
 JUSTIN: Up to 6 extra credit points.
 Yeah, step 3a says it&#39;s sending n qubits, when it&#39;s actually log n.
-It also seems incorrect beginning in the analysis of step d. It switches from summing over |z&gt; and referring to the full strings x and y to referring to individual indices i,x_i,y_i. And I don&#39;t know what it means about some amplitudes going to zero since what we&#39;re really doing is having some amplitudes be +1 and some -1.
+It also seems incorrect beginning in the analysis of step d. It switches from summing over |z&amp;gt; and referring to the full strings x and y to referring to individual indices i,x_i,y_i. And I don&#39;t know what it means about some amplitudes going to zero since what we&#39;re really doing is having some amplitudes be +1 and some -1.
 I don&#39;t think this protocol is correct as stated.
 But, it has some of the main ideas. The analysis of the grover steps is good and using a phase gate is good.
 
