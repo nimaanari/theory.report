@@ -9,6 +9,292 @@
 
 
 <item>
+  <title>Thoughts on AI safety</title>
+  <guid>http://windowsontheory.org/?p=8591</guid>
+  <link>https://windowsontheory.org/2023/04/12/thoughts-on-ai-safety/</link>
+  <description>
+    &lt;p&gt;Last week, I gave a lecture on AI safety as part of my &lt;a href=&quot;https://boazbk.github.io/mltheoryseminar/&quot;&gt;deep learning foundations course&lt;/a&gt;. In this post, I’ll try to write down a few of my thoughts on this topic. (The lecture was three hours, and this blog post will not cover all of what we discussed or all the points that appeared in the pre-readings and the papers linked below.)  &lt;/p&gt;
+
+
+
+&lt;p&gt;The general goal of safety in artificial intelligence is to protect individual humans or society at large from harm. The field of AI safety is broad and considers risks including:&lt;/p&gt;
+
+
+
+&lt;ol&gt;
+&lt;li&gt;Harm to users of an AI system or harm to third parties due to the system not functioning as intended. One example includes drivers or pedestrians harmed by the failures of self-driving cars. For instance, there were several fatal accidents involving Tesla&amp;#8217;s autopilot. Interestingly, just last week, Elon Musk tweeted the following: &lt;img width=&quot;355&quot; height=&quot;320&quot; src=&quot;https://lh6.googleusercontent.com/i9Z8g5ZkhsRZgxZgRMNf09mSgrrRY2zTK0ZukDVs3kooksLLCwroUgdZr6OSGBNb0DbtAFK3FBYW_DIVpOPuCSu4ImmboKNTZH6fq9hWlZiDkLWkxIVEJeMFEcx9UBOHgVlRPce772sv9AZo-E6MPVo&quot;&gt;&lt;/li&gt;
+
+
+
+&lt;li&gt;Another example is harm from automated decisions that may be unfair. The paper of&lt;a href=&quot;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4238015&quot;&gt; Wang &lt;/a&gt;et al. discusses the risks of “predictive optimization.” One well-known example is the COMPAS risk-assessment system for bail decisions (see &lt;a href=&quot;https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing&quot;&gt;Pro-Publica’s investigation&lt;/a&gt;, as well as the broader discussion by &lt;a href=&quot;https://arxiv.org/abs/1610.02413&quot;&gt;Hardt, Price, and Srebro&lt;/a&gt;)&lt;/li&gt;
+
+
+
+&lt;li&gt;Algorithmic decisions could cause “feedback loops”, where several algorithms interact with each other in unexpected and ever-escalating ways. Algorithmic trading was blamed for the &lt;a href=&quot;https://en.wikipedia.org/wiki/2010_flash_crash&quot;&gt;2010 “Flash Crash”&lt;/a&gt;; another example is how a single not-very-rare book came to be priced &lt;a href=&quot;https://www.wired.com/2011/04/amazon-flies-24-million/&quot;&gt;at $24M on Amazon&lt;/a&gt;.&lt;/li&gt;
+
+
+
+&lt;li&gt;There are many societal risks in AI. These include &lt;a href=&quot;https://www.forbes.com/sites/jackkelly/2023/03/31/goldman-sachs-predicts-300-million-jobs-will-be-lost-or-degraded-by-artificial-intelligence/?sh=7306d7e4782b&quot;&gt;job loss&lt;/a&gt;, &lt;a href=&quot;https://www.nytimes.com/2019/11/19/technology/artificial-intelligence-bias.html&quot;&gt;amplifying biases&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Age_of_Surveillance_Capitalism&quot;&gt;concentrating power&lt;/a&gt;, &lt;a href=&quot;https://www.newyorker.com/culture/infinite-scroll/is-ai-art-stealing-from-artists&quot;&gt;appropriating content&lt;/a&gt;, and &lt;a href=&quot;https://www.noemamag.com/the-exploited-labor-behind-artificial-intelligence/&quot;&gt;exploiting data workers&lt;/a&gt;.&lt;/li&gt;
+
+
+
+&lt;li&gt;Yet another issue was pointed out to me by Yejin Choi &amp;#8211; “AI literacy.” As AI’s capabilities are rapidly advancing, it will take some time for people to get used to them, and during this time, we may misinterpret them. This is manifested in people seeing such systems as &lt;a href=&quot;https://www.scientificamerican.com/article/google-engineer-claims-ai-chatbot-is-sentient-why-that-matters/&quot;&gt;sentient&lt;/a&gt; (something that already happened with the 1966 chatbot &lt;a href=&quot;https://en.wikipedia.org/wiki/ELIZA_effect&quot;&gt;ELIZA&lt;/a&gt;). Another example is “deepfakes”: inauthentic images or videos that could mislead people that are not yet aware of AI’s capabilities (again, an issue with a &lt;a href=&quot;https://en.wikipedia.org/wiki/Cottingley_Fairies&quot;&gt;long history&lt;/a&gt;).&lt;br&gt;&lt;br&gt;&lt;img width=&quot;504&quot; height=&quot;325&quot; src=&quot;https://lh4.googleusercontent.com/DTisxiomU8oCYSmmjTUULGCvq8Cwy6Xxlq872pWXHU-gaC6SDgESdwRVdu_cyIGmHBgpleY2ozToXU-8MYADtUG8sPpfaKlbb_1HAlfvEnBG_nC1d3_oLZoNqC5hBw8VfK8aPNrDIZpM_812ia-hpco&quot;&gt;    &lt;/li&gt;
+
+
+
+&lt;li&gt;AI could be misused by bad actors for hacking, spreading dis-information, help in designing weapons, and more.&lt;/li&gt;
+
+
+
+&lt;li&gt;Finally, several people are concerned about artificial intelligence systems acting themselves as “malicious agents”, which could behave in adversarial ways, harming humanity and in extreme cases leading to an existential risk of “loss of control” of humanity over its future or extinction.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;p&gt;Different subfields of “AI safety” deal with different aspects of these risks. AI “&lt;strong&gt;assurance&lt;/strong&gt;,&lt;em&gt;” &lt;/em&gt;or quality control, is about ensuring that systems have clear specifications and satisfy these specifications. An example of work along these lines is &lt;a href=&quot;https://arxiv.org/abs/1708.06374&quot;&gt;Shalev-Shwartz et al&lt;/a&gt;, who gave a framework for formally specifying safety assurances for self-driving cars.. AI &lt;em&gt;&lt;strong&gt;ethics&lt;/strong&gt;&lt;/em&gt; deals with the individual and social implications of deploying AI systems, asking the question of how AI systems could be deployed responsibly and even&lt;em&gt; &lt;/em&gt;whether such a system should be deployed at all. &lt;em&gt;&lt;strong&gt;Security&lt;/strong&gt;&lt;/em&gt; deals with malicious actors, that could both be the users of AI, suppliers of data (e.g., data poisoning and prompt injection attacks), or control other aspects of the environment. Finally, researchers in &lt;em&gt;“&lt;strong&gt;alignment&lt;/strong&gt;”&lt;/em&gt; or &lt;em&gt;“&lt;strong&gt;existential risk&lt;/strong&gt;”&lt;/em&gt; are concerned with the case in which the AI itself is the adversary. These subfields are not disjoint and share overlapping concerns.&lt;/p&gt;
+
+
+
+&lt;p&gt;Another way to classify risks is to consider the extent to which they are reduced or magnified by the normal processes of the free market and improved technology. &lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image size-large is-resized&quot;&gt;&lt;a href=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-2.png&quot;&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;8602&quot; data-permalink=&quot;https://windowsontheory.org/2023/04/12/thoughts-on-ai-safety/image-2-4/&quot; data-orig-file=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-2.png&quot; data-orig-size=&quot;1224,692&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;image-2&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-2.png?w=300&quot; data-large-file=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-2.png?w=656&quot; src=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-2.png?w=1024&quot; alt=&quot;&quot; class=&quot;wp-image-8602&quot; width=&quot;680&quot; height=&quot;385&quot; srcset=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-2.png?w=1024 1024w, https://windowsontheory.files.wordpress.com/2023/04/image-2.png?w=680 680w, https://windowsontheory.files.wordpress.com/2023/04/image-2.png?w=150 150w, https://windowsontheory.files.wordpress.com/2023/04/image-2.png?w=300 300w, https://windowsontheory.files.wordpress.com/2023/04/image-2.png?w=768 768w, https://windowsontheory.files.wordpress.com/2023/04/image-2.png 1224w&quot; sizes=&quot;(max-width: 680px) 100vw, 680px&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;In some cases, the interests of safety go hand in hand with the economic incentives for the entity controlling the model, while in others they could be unrelated or even directly opposed to these incentives. Similarly, in some cases, improving capabilities (e.g., by increasing the size of models and data) would reduce risks, while in others, this might not help or even harm.&lt;/p&gt;
+
+
+
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Impact of AI on humanity &amp;#8211; the baseline expectation&lt;/h2&gt;
+
+
+
+&lt;p&gt;Artificial intelligence is a very general technology, and as such, we might expect its impact on humanity to be qualitatively similar to that of past technological revolutions. If we look at the past, we can draw two lessons:&lt;/p&gt;
+
+
+
+&lt;ol&gt;
+&lt;li&gt;Technological revolutions have both positive and negative impacts, but in the long run and summing over populations, the positives outweigh the negatives. For example, measures such as life expectancy and GDP per capita have gone up over history.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/Z8ccZBQmNvYP8ylKcAFuAox35d7rmpx16r1zpqAAyA6yG9X0xAVcNJFICaG5gbIKqH_2Af2EacONKXOnfQQRzMBGUA9FS0KTOD2Jw7ovvp2DXeRpofulsOKB1-2lYU0KjTAPIUNhrlcPGFEfK6WR8hw&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;There is no reason to assume that the benefits of technology will be distributed equally. &lt;a href=&quot;https://www.cbpp.org/research/poverty-and-inequality/a-guide-to-statistics-on-historical-trends-in-income-inequality&quot;&gt;Inequality&lt;/a&gt; can go either &lt;a href=&quot;https://www.imf.org/external/pubs/ft/fandd/2011/09/picture.htm&quot;&gt;up or down&lt;/a&gt;, dependent on government policies rather than technological improvements. &lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;p&gt;In my lecture, I discussed the issue of fairness. I discussed both the COMPAS system as well as the paper of &lt;a href=&quot;https://arxiv.org/abs/1610.02413&quot;&gt;Hardt et al&lt;/a&gt;, visualized in the &lt;a href=&quot;https://research.google.com/bigpicture/attacking-discrimination-in-ml/&quot;&gt;following page&lt;/a&gt;, demonstrating how different notions of fairness can be at odds with maximizing profits and even at odds with one another.  In this blog post, I focus on the settings where &lt;strong&gt;capabilities&lt;/strong&gt; and &lt;strong&gt;safety &lt;/strong&gt;may be at odds.&lt;/p&gt;
+
+
+
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Capabilities&lt;/h2&gt;
+
+
+
+&lt;p&gt;As is well known, the capabilities of artificial intelligence systems have been growing in recent years, see, for example this paper of &lt;a href=&quot;https://arxiv.org/abs/2206.07682&quot;&gt;Wei et al&lt;/a&gt;. &lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image is-resized&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/M18nhEY3ApIXjrril-PxYPFrgx4mxgIxzIXYvXWaAXfgwguAO9r0igfIoYplJ59b1oV5_dTwe-QmETaHCN4_fZPmA4TTTOaxdiUD_YdEITKID8nVoctBU3Hg707JRKZ2ntqFUxOH6qmSPgCNbkH2HGs&quot; alt=&quot;&quot; width=&quot;543&quot; height=&quot;367&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;Graphs like these show capabilities emerging suddenly with model scale. However, we should note that these graphs are plotted with the X axis on the &lt;strong&gt;log scale.&lt;/strong&gt; If we plot it on linear scale, it would be much less abrupt.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image is-resized&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/UbtJ1n09TuRPznworgdaznIIkGdceuK_ZUrVwpYqsGmjUUktxCfdHBAdtKTf-KG9-TZTf709ZS9gNDtnUr2BoCQeYq_KzsnQS3-NCOZEtkbYrqJCqzEXHfTfWlC2FnofBHIgfP5VsSkSu05jaYGkjug&quot; alt=&quot;&quot; width=&quot;635&quot; height=&quot;376&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;Another way to plot increasing capabilities is to look at improvements in ELO scores of Chess engines.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image is-resized&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/9MNusf0mSr5PExwfDqGULmPYEwuL7QU79m0fTBmzEI1iCXcVsYabauEiAjLSEq_owZUK1UqlImqwWIwuLTBP74fOXAldhbW988uARoG8N08mmsfawt4Q-PV2T3a8Hq4TgaKk5GCo_s6okNB2U7NyP0Y&quot; alt=&quot;&quot; width=&quot;691&quot; height=&quot;369&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;Once again, we see improvement with time. (Due to Moore’s law, we can also treat the X axis as a log scale here. BTW credit for this figure is due to GPT4; I didn’t verify the numbers though I probably should have.)&lt;/p&gt;
+
+
+
+&lt;p&gt;Given the above, we might expect future capabilities to increase roughly as follows: (this is a cartoon, so the slope or the labels on either axis should not be taken too seriously)&lt;img src=&quot;https://lh3.googleusercontent.com/7t_z2fR0rHtTnjq7XVBa2kyQsPiIM3zFvXPo_GrXciBjNay046-9-WcVaSA9itWAbxD2o50K9VP6Q6UJHmw8_NA3jeSc2ngCOBsrBrJXjmBheqxe9kNESt-8UVgToR770JPTSSJKfoekfW7Z1IG9Ks4&quot; width=&quot;474&quot; height=&quot;349&quot;&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;However, Moore’s law (assuming &lt;a href=&quot;https://www.semianalysis.com/p/a-century-of-moores-law&quot;&gt;it keeps holding&lt;/a&gt;) can reduce costs as a function of time. Also, the graph may well behave differently for different skills. Finally, if we manage to use AI to reduce the costs of building future AI (i.e. “self improvement” or “singularity”), then the costs could be radically reduced.&lt;/p&gt;
+
+
+
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Capabilities vs. Safety Round 1: Risk of misuse&lt;/h2&gt;
+
+
+
+&lt;p&gt;One aspect in which increased capabilities seem to be at odds with safety is the potential for &lt;em&gt;misuse&lt;/em&gt; of AI. The more powerful an AI system is, the more harm one can do with it. However, this logic assumes that only the attacker can access the system. In many cases, increased capabilities of AI benefits both the “attacker” and “defender”, and it is unclear which one would be helped more. &lt;/p&gt;
+
+
+
+&lt;p&gt;For example, AI systems could find software vulnerabilities and help hackers, but software companies could also use them to secure their systems. AI could be used to spread disinformation on social media and by social media companies to detect such disinformation. A related setting is the use of AI for persuasion. However, it is still an open question whether the current “limiting factor” in persuasion, whether it’s advertising or scams, is a lack of know-how or workforce on the part of the persuaders. Rather, it may be that different people have varying susceptibility to persuasion; thus, even very skilled persuaders will be limited in the number of people they can persuade and the things they can persuade them to do. Also, AI could be used to combat illicit persuasion by detecting scams, just as it is currently used in spam detection.&lt;/p&gt;
+
+
+
+&lt;p&gt;An example closest to my expertise is student cheating. AI may help professors detect cheating more than it helps potential cheaters. In past semesters, if I wanted to detect whether two students copied from one another, I needed to &amp;#8220;run&amp;#8221; an N² time algorithm (manually comparing all pairs of submissions).  Now I could ask ChatGPT to compare all pairs and summarize any suspicious similarities. If I am worried about students using ChatGPT itself to cheat, I can ask it to throw its own solution into the pool of comparands (and maybe some solutions from past semesters or Course Hero as well). &lt;/p&gt;
+
+
+
+&lt;p&gt;There are other misuse scenarios in which the balance does favor the attacker. For example, an attacker might be able to use a system to learn how to make a bomb or get detailed information about a physical target for an attack. However, society has been through inflection points such as this in the past, when the amount of information available to ordinary citizens radically increased. It is unclear to me that the increase in access to harmful information due to AI would be larger than the increase between the pre- and post-Internet eras. &lt;/p&gt;
+
+
+
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Capabilities vs. Safety Round 2: Unaligned powerful AI systems&lt;br&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;The other setting in which increased capabilities could lead to higher risk is when we are concerned with the AI systems themselves behaving in “agentic” or malicious ways. We do not have to get into the question of whether such systems could be “sentient” or “concious” but rather ask whether it might be possible that the systems’ actions would be so complex and unpredictable that they could be modeled as adversarial. &lt;/p&gt;
+
+
+
+&lt;p&gt;There is a long history of worrying about such risks. Alan Turing famously said in 1951 that &lt;em&gt;“it seems probable that once the machine thinking method had started, it would not take long to outstrip our feeble powers. They would be able to converse with each other to sharpen their wits. At some stage therefore, we should have to expect the machines to take control.”&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image size-large is-resized&quot;&gt;&lt;a href=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-1.png&quot;&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;8598&quot; data-permalink=&quot;https://windowsontheory.org/2023/04/12/thoughts-on-ai-safety/image-1-4/&quot; data-orig-file=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-1.png&quot; data-orig-size=&quot;1224,464&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;0&amp;quot;}&quot; data-image-title=&quot;image-1&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-1.png?w=300&quot; data-large-file=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-1.png?w=656&quot; src=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-1.png?w=1024&quot; alt=&quot;&quot; class=&quot;wp-image-8598&quot; width=&quot;656&quot; height=&quot;248&quot; srcset=&quot;https://windowsontheory.files.wordpress.com/2023/04/image-1.png?w=1024 1024w, https://windowsontheory.files.wordpress.com/2023/04/image-1.png?w=654 654w, https://windowsontheory.files.wordpress.com/2023/04/image-1.png?w=150 150w, https://windowsontheory.files.wordpress.com/2023/04/image-1.png?w=300 300w, https://windowsontheory.files.wordpress.com/2023/04/image-1.png?w=768 768w, https://windowsontheory.files.wordpress.com/2023/04/image-1.png 1224w&quot; sizes=&quot;(max-width: 656px) 100vw, 656px&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;There are two metaphors for a “super human AI”. One is the model of an AI as a&lt;strong&gt; “genie”:&lt;/strong&gt; an entity that is single-mindedly focused on optimizing some objective (a.k.a granting a wish). However, like the genies in many stories, it may interpret the wish in a way that is literally true but completely misaligned with the intentions and interests of the human who made it. A less fanciful way to phrase this is that we expect that &lt;em&gt;any&lt;/em&gt; objective, when pursued relentlessly, will eventually be misaligned with the general well-being of society. In his &lt;a href=&quot;https://sohl-dickstein.github.io/2022/11/06/strong-Goodhart.html&quot;&gt;blog&lt;/a&gt;, Jascha Sohl-Dickstein called this principle the “strong version of Goodhat’s law” and illustrated it as follows:&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image is-resized&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/BdPFfV53mLAN3gY6IkBCImnNXHbZW_P4LO97CMg_NGBXPp-03s21GWo0isaDZMaWaP4b-16997bp6fmG2Yb8KAYBHoSACfl_m9XwRTYXmQnUIPv8OL2zJBxnx749bnhvJLlJeBdLaOt5VXWjfNbN75A&quot; alt=&quot;&quot; width=&quot;545&quot; height=&quot;279&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;Specifically, the concern is that to satisfy any objective, it seems useful to &lt;a href=&quot;https://arxiv.org/abs/1912.01683&quot;&gt;seek power&lt;/a&gt;, and it is possible systems might use deception as well. &lt;a href=&quot;https://arxiv.org/abs/2209.00626&quot;&gt;Ngo et al &lt;/a&gt;raised the concern that such systems would develop “situational awareness” and behave differently when trained and deployed.&lt;/p&gt;
+
+
+
+&lt;p&gt;The other metaphor for a “super-human AI” is the one of the “alien”: it is highly intelligent, but like us, it is not focused on a single goal; rather, its intelligence (to use another term from Sohl-Dickstein) is a “hot mess”. Being like us is not necessarily a good thing. For example, the interaction between early modern humans and the Neanderthals did not go well for the latter. (Though &lt;a href=&quot;https://www.nature.com/articles/s41598-021-84410-7&quot;&gt;we&lt;/a&gt; &lt;a href=&quot;https://www.discovermagazine.com/planet-earth/neanderthal-brains-bigger-not-necessarily-better&quot;&gt;don’t&lt;/a&gt; &lt;a href=&quot;https://www.nature.com/articles/s41559-021-01391-6&quot;&gt;know&lt;/a&gt; whether or not Homo Sapiens had cognitive advantages over Neanderthals, and if so, whether those played a key role in the Neanderthal’s extinction. Also, as our society has grown more sophisticated, we are trying to do more to &lt;a href=&quot;https://www.iucn.org/&quot;&gt;conserve&lt;/a&gt; rather than extinguish other species.)&lt;/p&gt;
+
+
+
+&lt;p&gt;The “AI as a genie” metaphor arises from the fact that AI systems are often the result of some optimization procedure. In particular, in &lt;em&gt;reinforcement learning (RL)&lt;/em&gt;, the system is trained to maximize some &lt;em&gt;reward&lt;/em&gt;. While RL wasn’t used in earlier large language models (LLMs), it has &lt;a href=&quot;https://arxiv.org/abs/2203.02155&quot;&gt;recently been used&lt;/a&gt; in models such as GPT3.5, training a “reward model” from human feedback that is later used in an RL procedure to generate a sequence of tokens that maximizes the reward (this is known as RL from human feedback or RLHF). Ngo et al claimed that the use of RLHF could lead models to “reward hacking” in which the model pursues goals that, like in the “strong version of Goodhart’s law” would be ultimately detrimental to humanity.&lt;/p&gt;
+
+
+
+&lt;p&gt;To me, this particular concern hinges on the question of whether RLHF amounts to most of the “magic” in modern LLMs or whether (to use a phrase favored by &lt;a href=&quot;https://medium.com/syncedreview/yann-lecun-cake-analogy-2-0-a361da560dae&quot;&gt;Yann LeCun&lt;/a&gt;) it is merely the “cherry on top”. &lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/tmylI-HGa_ec4wXtiYfu9t2hgBAq3UcnwyUtOqydL-nl0tL1ZD3eo6BwOHt4K5EaFaR998IuMbxu7k5N9k3FukbmCznqRmKqu0n8vMVmwqgy81mQgrn1aXSmTvzukQ0YLw-3b1s4KHaihOrIHdGBsAs&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;If we believe that “magic” corresponds to computational or data resources, then RLHF is merely the &amp;#8220;cherry on top&amp;#8221;. While OpenAI did not reveal details, &lt;a href=&quot;https://arxiv.org/abs/2204.05862&quot;&gt;Anthropic&lt;/a&gt; trained a similar model and used about 10¹¹ tokens in pre-training, while only about 10⁵ human annotations for RLHF.  So if the computational scale is the same as “magic,” then intelligence is formed at pre-training and only shaped by RLHF. Is scale the same as magic? I would argue that this is what &lt;a href=&quot;http://www.incompleteideas.net/IncIdeas/BitterLesson.html&quot;&gt;the bitter lesson&lt;/a&gt; tells us.&lt;/p&gt;
+
+
+
+&lt;p&gt;Even so, should we still be worried about the “alien” model? The question is, again, who is the alien? Do we think of the AI system as the combination of the pre-trained model and whatever “fine tuning” or “reinforcement learning” adapter is on top of it? Or is the heart of the system the pre-trained model itself? &lt;/p&gt;
+
+
+
+&lt;p&gt;If we consider the pre-trained model as the heart of the system, then I argue that modeling it as an individual entity or agent is misguided.&amp;nbsp; In fact:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;em&gt;A pre-trained language model is not an imitation of any human, it is an imitation of all of humanity.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;A pre-trained generative text model is not designed to model any particular entity. Rather, it is designed to generate all text that it has been trained on and, along the way, develop the skills to perform deductions, combinations, and style transfers on this text. To use such a model as an assistant, we need to &lt;em&gt;condition&lt;/em&gt; it by providing a &lt;a href=&quot;https://www.reddit.com/r/copypasta/comments/111mlh7/entire_microsoft_bing_ai_prompt_leaked/&quot;&gt;prompt&lt;/a&gt;, much like we can condition an image generative model to generate images inside one particular building. If we think of a pre-trained model as an “intelligence engine” that is later used with “adapters” (that could include learned models, hard-coded programs, as well as humans), then our assumptions on the risk scenarios change. Rather than a monolithic “AI system” that could act in adversarial ways, we might have a variety of agents/modules built on top of the “intelligence engine”. Some of these agents, whether human or artificial, may well be adversarial. However, all of those would have access to the same “engine,” and so the rising tide of AI will lift all (good and bad) boats. &lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/dUGyRSPiw0M1Gnb4UYsMOMff-n536k3BJ7VfBUQvf3dgIIeRd7Ns5CTzdtIK9JPbYfP4Xsdir73jIFIc-q-X3ttfb-K8vAu78eW2GckWfsBzf5dmaDVXaCai-So9fC5n8GBxNr2rA9eHyFA9Ezl_T4g&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;Generally, I think that the view of “intelligence” as some inherent skill belonging to a monolithic entity or agent is quite anthropocentric. In fact, it’s not even true for humans. While the human brains have not grown for more than hundred thousand years,  human society has collectively become more intelligent over the last millennia and centuries, and all of us can access this collective intelligence. Indeed, with modern deep learning, we can take any advanced AI system and &lt;em&gt;fine-tune&lt;/em&gt; it to achieve a particular task of interest. Hence&lt;strong&gt; intelligence is not so much a skill of an individual as a capability of the system as a whole.&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Verification&lt;/h2&gt;
+
+
+
+&lt;p&gt;Regardless of whether you are concerned about AI taking over humanity or simply about the wisdom of deploying highly complex systems that we don’t fully understand, &lt;em&gt;verification&lt;/em&gt; can be a crucial element for ensuring safety. One of the general principles we see time and again in theoretical computer science is that&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;em&gt;Verification is easier than creation.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;(In other words, it’s easier to be the critic than the “&lt;a href=&quot;https://www.theodorerooseveltcenter.org/Learn-About-TR/TR-Encyclopedia/Culture-and-Society/Man-in-the-Arena.aspx&quot;&gt;man in the arena&lt;/a&gt;” &amp;#8211; and that’s a good thing!)&lt;/p&gt;
+
+
+
+&lt;p&gt;This is the content of the P vs NP conjecture and also underlies the theory of &lt;a href=&quot;http://people.csail.mit.edu/madhu/papers/2009/pcpcacm.pdf&quot;&gt;probabilistically  checkable proofs. (PCPs)&lt;/a&gt; These are now used in cryptography to delegate computation by a weak verifier to a powerful server (see this &lt;a href=&quot;https://cap.csail.mit.edu/engage/spotlights/yael-kalai&quot;&gt;interview&lt;/a&gt; with Yael Kalai, and her &lt;a href=&quot;https://gilkalai.files.wordpress.com/2018/01/cacm-delegation.pdf&quot;&gt;survey&lt;/a&gt;) which is a problem not unlike the task of verifying a powerful AI by a weaker entity.&lt;/p&gt;
+
+
+
+&lt;p&gt;I recently saw a talk by Zico Kolter in which he put forward the following equation as to when generative models have positive utility:&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/aQtCbNVlUK1AM_V2PvU1iSNwwRH_Zhg3bH_XcU7_jwYMi6yJDRAP7kHVbLuUwkDPi_H9kYcHJeImzlMow-oVtjhaQwOJJuk89Yf6nOtBrxdzBq6AGd_EYvKUM4R0ES6s8rA0Q9nihvnqomayae2COt4&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;That is, as long as the time for us to verify a solution is smaller than the time to generate it ourselves multiplied by the probability that the model’s output is correct, then we can efficiently use a model by always verifying its output, spending the effort to generate a solution ourself if verification fails. Our expected time would be smaller than the time spent generating solutions from scratch, even if the model is far from always correct.&lt;/p&gt;
+
+
+
+&lt;p&gt;The principle that verification can be done even with powerful provers is one we see in human enterprises as well. &lt;a href=&quot;https://en.wikipedia.org/wiki/Terence_Tao&quot;&gt;Terence Tao&lt;/a&gt; might be (by some measures) the world’s top mathematician. But he still submits his papers to peer review, and they can (and are) checked by mere “mortals”. Indeed I would argue that this ability to &lt;strong&gt;communicate&lt;/strong&gt;, &lt;strong&gt;verify&lt;/strong&gt;, and &lt;strong&gt;teach&lt;/strong&gt; is &lt;em&gt;the reason&lt;/em&gt; that human society has managed to “stand on the shoulders of giants” and achieve such growth in productivity despite working with the same human brains our ancestors used to run from animals. Theories like relativity may have taken a huge effort to &lt;em&gt;discover&lt;/em&gt;, but once discovered, could be communicated, verified, and are now taught to first-year undergraduates.&lt;/p&gt;
+
+
+
+&lt;p&gt;Interestingly, it seems that the professions that are &lt;a href=&quot;https://academic.oup.com/qje/article-abstract/132/4/1877/3859758?redirectedFrom=fulltext&amp;amp;login=false&quot;&gt;more subject to verification&lt;/a&gt; are not the ones that require the most information-processing skills but rather “alignment”: more “wisdom” than “smartness”. Perhaps those professions &lt;a href=&quot;https://windowsontheory.org/2022/11/22/ai-will-change-the-world-but-wont-take-it-over-by-playing-3-dimensional-chess/&quot;&gt;would not be the professions most amenable for AIs&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/zt9TK0wqTCqgyCcwOelndi2KWvqbc7EEkTMfkw09CFOyT0Sj5QuafmRF9ro-VaMpR_n6JD-1txqau3c4bc1QWbPaE5G-942lomjrSk3qGS2XVIkcYppZ5t1OPxKVkEYbZpPOttrCQEdv4-yBCeqn-Rg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;Practical verification of ML systems is still an ongoing effort. There are methods for &lt;a href=&quot;https://www.deepmind.com/publications/red-teaming-language-models-with-language-models&quot;&gt;red teaming&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/abs/2206.05802&quot;&gt;self-critiquing&lt;/a&gt;,  &lt;a href=&quot;https://arxiv.org/abs/2205.11822&quot;&gt;probing for consistency&lt;/a&gt;, or &lt;a href=&quot;https://arxiv.org/abs/2112.02969&quot;&gt;testing generated code&lt;/a&gt; that can reduce errors. However, we do not yet have robust verification schemes in the sense that we can reliably drive the error probability to zero by spending more effort at inference (let alone drive it &lt;em&gt;exponentially fast&lt;/em&gt; to zero, as we can often do in theoretical CS- something that may be crucial for ensuring robustness against adversarial inputs).&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://lh5.googleusercontent.com/ylrE7vqPWD3urdsy34vHOGxzEleKZr9906UMKksSNDeIkeg1y9p_4Pqwi2dikT__blW7cYjOxAfraLhsavMWPwSYMLbIBuGPdM27_TbEFPtNXaFDt2rlHxj6dq1AoKwNWPFe4VOgjxgQlGk4ppF2_-U&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;One potential advantage of AI models is that they can themselves write symbolic proofs that may later be verifiable with formal theorem provers. For example, &lt;a href=&quot;https://arxiv.org/abs/2205.12615&quot;&gt;Wu et al&lt;/a&gt; used LLMs to formalize mathematical competition problems in the systems Isabelle/HOL. Overall, there seems to be a huge potential in combining the rich literature on proof systems with the power of modern language models.&lt;/p&gt;
+
+
+
+&lt;p&gt;To sum up, artificial Intelligence has made great strides in performance over the last decade and will be widely deployed across many fields in the near future. As the use of AI systems increases, so will the importance of ensuring reliability, fairness, trustworthiness, and security.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Boaz Barak&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-12 15:25:45 UTC</pubDate>
+  <author>Windows on Theory</author>
+</item>
+
+<item>
   <title>Geometry of Rounding: Near Optimal Bounds and a New Neighborhood Sperner&#39;s Lemma</title>
   <guid>http://arxiv.org/abs/2304.04837</guid>
   <link>http://arxiv.org/abs/2304.04837</link>
@@ -2195,47 +2481,6 @@ proof is an application of robust sunflowers and block unpredictability.
   </description>
   <pubDate>2023-04-06 00:30:00 UTC</pubDate>
   <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Algorithm and Hardness for Dynamic Attention Maintenance in Large Language Models</title>
-  <guid>http://arxiv.org/abs/2304.02207</guid>
-  <link>http://arxiv.org/abs/2304.02207</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Brand_J/0/1/0/all/0/1&quot;&gt;Jan van den Brand&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Song_Z/0/1/0/all/0/1&quot;&gt;Zhao Song&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_T/0/1/0/all/0/1&quot;&gt;Tianyi Zhou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Large language models (LLMs) have made fundamental changes in human life. The
-attention scheme is one of the key components over all the LLMs, such as BERT,
-GPT-1, Transformers, GPT-2, 3, 3.5 and 4. Inspired by previous theoretical
-study of static version of the attention multiplication problem [Zandieh, Han,
-Daliri, and Karbasi arXiv 2023, Alman and Song arXiv 2023]. In this work, we
-formally define a dynamic version of attention matrix multiplication problem.
-There are matrices $Q,K, V \in \mathbb{R}^{n \times d}$, they represent query,
-key and value in LLMs. In each iteration we update one entry in $K$ or $V$. In
-the query stage, we receive $(i,j) \in [n] \times [d]$ as input, and want to
-answer $(D^{-1} A V)_{i,j}$, where $A:=\exp(QK^\top) \in \mathbb{R}^{n \times
-n}$ is a square matrix and $D := \mathrm{diag}(A {\bf 1}_n) \in \mathbb{R}^{n
-\times n}$ is a diagonal matrix. Here ${\bf 1}_n$ denote a length-$n$ vector
-that all the entries are ones.
-&lt;/p&gt;
-&lt;p&gt;We provide two results: an algorithm and a conditional lower bound.
-&lt;/p&gt;
-&lt;p&gt;$\bullet$ On one hand, inspired by the lazy update idea from [Demetrescu and
-Italiano FOCS 2000, Sankowski FOCS 2004, Cohen, Lee and Song STOC 2019, Brand
-SODA 2020], we provide a data-structure that uses
-$O(n^{\omega(1,1,\tau)-\tau})$ amortized update time, and $O(n^{1+\tau})$
-worst-case query time.
-&lt;/p&gt;
-&lt;p&gt;$\bullet$ On the other hand, show that unless the hinted matrix vector
-multiplication conjecture [Brand, Nanongkai and Saranurak FOCS 2019] is false,
-there is no algorithm that can use both $O(n^{\omega(1,1,\tau) - \tau-
-\Omega(1)})$ amortized update time, and $O(n^{1+\tau-\Omega(1)})$ worst query
-time.
-&lt;/p&gt;
-&lt;p&gt;In conclusion, our algorithmic result is conditionally optimal unless hinted
-matrix vector multiplication conjecture is false.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-06 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
