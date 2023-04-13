@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-04-13T02:00:22Z">Thursday, April 13 2023, 02:00</time>
+          <time class='timeago' datetime="2023-04-13T02:30:23Z">Thursday, April 13 2023, 02:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,110 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, April 13
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/'>ACM Prize to Yael Kalai</a></h3>
+        <p class='tr-article-feed'>from <a href='https://rjlipton.wpcomstaging.com'>Richard Lipton</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Plus evocations of the roles of complexity and verification in crypto and human relations Yael Kalai has just been named the winner of the 2022 ACM Prize. She works at Microsoft Research. Today we congratulate her, say a little about her work, and riff on some related and &#8220;unrelated&#8221; matters. The prize cites Kalai for [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>
+<font color="#0044cc"><br />
+<em>Plus evocations of the roles of complexity and verification in crypto and human relations</em><br />
+<font color="#000000"></p>
+<p><a href="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/kalai_6965246/" rel="attachment wp-att-21430"><img data-attachment-id="21430" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/kalai_6965246/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/kalai_6965246.jpeg?fit=485%2C550&amp;ssl=1" data-orig-size="485,550" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="kalai_6965246" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/kalai_6965246.jpeg?fit=265%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/kalai_6965246.jpeg?fit=485%2C550&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/kalai_6965246.jpeg?resize=124%2C138&#038;ssl=1" alt="" width="124" height="138" class="alignright wp-image-21430" data-recalc-dims="1" /></a></p>
+<p>
+Yael Kalai has just been named the winner of the <a href="https://awards.acm.org/about/2022-acm-prize">2022 ACM Prize</a>. She works at Microsoft Research. </p>
+<p>
+Today we congratulate her, say a little about her work, and riff on some related and &#8220;unrelated&#8221; matters.</p>
+<p>
+The prize cites Kalai for her work on cryptography. Her work is immediately practical. It provides both ways to speed up interactive protocols and to verify the results. Two ways of speeding up the kind of protocols we engage in daily are:</p>
+<ol>
+<li>
+Reduce the number of rounds of interaction needed. </p>
+<li>
+Shift the computational burden on the weaker party (e.g., your credit card chip) to the stronger party&#8212;without allowing the latter ways to be malicious.
+</ol>
+<p>
+One also needs to devise and provide an efficient certificate that the security needs have been met.</p>
+<p>
+<p><H2> Her Work </H2></p>
+<p><p>
+Kalai&#8217;s work on objective 1 starts with a <a href="https://en.wikipedia.org/wiki/Fiat-Shamir_heuristic">paradigm</a> originally expounded by Amos Fiat and Adi Shamir in the 1980s:</p>
+<blockquote><p><b> </b> <em> An interactive round in which Arthur challenges Merlin with a string he chose <b>randomly</b> from public coins can be replaced by nonteractive requests to a random oracle. The oracle in turn can be simulated via a cryptographically strong hash function. </em>
+</p></blockquote>
+<p><p>
+The second clause is the delicate one. How can we know, in a particular application, that a particular hash function does not have correlations that could be exploited by malicious choices of plaintext or seed strings? She and Shafi Goldwasser, her PhD advisor, <a href="https://eprint.iacr.org/2003/034.pdf">showed</a> cases where a 3-round protocol secure in the random oracle model becomes insecure under cases of this transformation. </p>
+<p>
+However, in a series of papers culminating in a <a href="https://dl.acm.org/doi/10.1145/3313276.3316380">Part I</a> and a <a href="https://eprint.iacr.org/2018/1248.pdf">Part II</a>, she and coauthors designed cases that work under progressively more reasonable hardness assumptions. (Note: the date on the &#8220;Part II&#8221; paper is three days earlier than that on the &#8220;Part I&#8221;&#8211;a good solution to a problem we noted at the end of <a href="https://rjlipton.wpcomstaging.com/2013/03/13/no-go-theorems/">this post</a>.)</p>
+<p>
+Objective 2 not only runs the risk of leakage in shifting the party who executes the computation, it involves issues of trust. How does the one who delegated the task know the result is correct, without having done the computation? This leads to issues of proving computations correct that we have mentioned, but with a twist: both the computation and the proof needs to be real-time efficient to generate. Her many papers on this (ACM features <a href="https://dl.acm.org/doi/10.1145/2699436">these</a> <a href="https://dl.acm.org/doi/pdf/10.1145/3456867">two</a>) are well represented in a <a href="https://gilkalai.files.wordpress.com/2018/01/cacm-delegation.pdf">survey</a> she presented at the 2018 International Congress of Mathematicians. Its abstract proclaims:</p>
+<blockquote><p><b> </b> <em> Efficient verification of computation, also known as delegation of computation, is one of the most fundamental notions in computer science, and in particular it lies at the heart of the P vs. NP question. </em>
+</p></blockquote>
+<p>
+<p><H2> P = NP: An Omen? </H2></p>
+<p><p>
+Her survey was unveiled &#8220;exclusively for our readers&#8221; in a January 6, 2018 <a href="https://gilkalai.wordpress.com/2018/01/06/yael-tauman-kalais-icm2018-paper-my-paper-and-cryptography/">post</a> by Gil Kalai, along with two photos of adoring father(-in-law)/grandparent type. We hasten to add that all this is not just how &#8220;P=NP?&#8221; captures the question of whether it is just as easy to <em>generate</em> a proof as to <em>verify</em> it. Much of Yael Kalai&#8217;s work depends on hardness assumptions that vanish if in fact P equals NP (with relevant efficiency).</p>
+<p>
+Thinking of Gil Kalai makes us leap to two other topics that are variously related and &#8220;unrelated.&#8221; Gil recently <a href="https://gilkalai.wordpress.com/2023/03/27/critical-times-in-israel-last-nights-demonstrations/">featured</a> the following photo from street protests in Israel on his blog:</p>
+<p><P><br />
+<a href="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/pnp-3/" rel="attachment wp-att-21433"><img data-attachment-id="21433" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/pnp-3/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?fit=1080%2C816&amp;ssl=1" data-orig-size="1080,816" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="pnp" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?fit=300%2C227&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?fit=600%2C454&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?resize=550%2C415&#038;ssl=1" alt="" width="550" height="415" class="aligncenter wp-image-21433" srcset="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?resize=1024%2C774&amp;ssl=1 1024w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?resize=300%2C227&amp;ssl=1 300w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?resize=768%2C580&amp;ssl=1 768w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?resize=200%2C150&amp;ssl=1 200w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/pnp.jpg?w=1080&amp;ssl=1 1080w" sizes="(max-width: 550px) 100vw, 550px" data-recalc-dims="1" /></a></p>
+<p><P><br />
+The photo was also <a href="https://scottaaronson.blog/?p=7170">picked up</a> and commented on by Scott Aaronson on his blog. Gil added:</p>
+<blockquote><p><b> </b> <em> Whether the picture is genuine or not, it shows the anarchist nature of at least some of the protestors. (We know for sure that some computer scientists were there.) I am not sure if a proof of this bold claim was also provided. </em>
+</p></blockquote>
+<p><p>
+Lightheartedness aside, we wonder if this is an omen of growing public awareness of the connection of our field&#8217;s signature question not only to the security workings of governments, but to the walks of life represented by Yael Kalai&#8217;s applications. </p>
+<p>
+<p><H2> Educating GPT </H2></p>
+<p><p>
+Your humble bloggers face a kind of verification problem with nearly every post: how to pin down and attest basic facts. Here we remembered <a href="https://rjlipton.wpcomstaging.com/2014/12/13/chats/">writing</a> in 2014&#8212;correctly&#8212;that &#8220;Yael Kalai [is] not related to our friend Gil Kalai.&#8221; But learning that Yael Tauman married Adam Kalai (<a href="https://en.wikipedia.org/wiki/Yael_Tauman_Kalai">which</a> is <a href="https://www.facebook.com/adam.t.kalai/">attested</a> in <a href="https://kids.kiddle.co/Yael_Tauman_Kalai">many</a> <a href="https://www.microsoft.com/en-us/research/blog/new-england-researcher-finds-bliss/">places</a>) added another thing to check. The passage of time&#8212;and Gil&#8217;s photos&#8212;revived doubt. </p>
+<p>
+Heretofore we&#8217;ve refined the art of crafting Google queries to filter out professional information and bring what we want to the top page of hits. But in theory we should better pose such questions directly to the likes of ChatGPT. So I (Ken) did, first to the free GPT-3.5:</p>
+<p><P><br />
+<a href="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/gpt3-5kalais-2/" rel="attachment wp-att-21441"><img data-attachment-id="21441" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/gpt3-5kalais-2/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT3.5Kalais-1.jpg?fit=590%2C458&amp;ssl=1" data-orig-size="590,458" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;KWRegan&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1681333545&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="GPT3.5Kalais" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT3.5Kalais-1.jpg?fit=300%2C233&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT3.5Kalais-1.jpg?fit=590%2C458&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT3.5Kalais-1.jpg?resize=590%2C458&#038;ssl=1" alt="" width="590" height="458" class="aligncenter size-full wp-image-21441" srcset="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT3.5Kalais-1.jpg?w=590&amp;ssl=1 590w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT3.5Kalais-1.jpg?resize=300%2C233&amp;ssl=1 300w" sizes="(max-width: 590px) 100vw, 590px" data-recalc-dims="1" /></a></p>
+<p><P><br />
+Wait a second&#8212;has ChatGPT not been briefed on the injunction against incestuous marriage? Or have too many Roman and Greek emperors dominated its data? When Moses flung down and broke the stone tablets in exasperation, was it over chatbots? I tried the pay-grade version and got a different&#8212;but not better&#8212;answer:</p>
+<p><P><br />
+<a href="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/gpt4kalaisa-2/" rel="attachment wp-att-21442"><img data-attachment-id="21442" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/gpt4kalaisa-2/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisA-1.jpg?fit=540%2C350&amp;ssl=1" data-orig-size="540,350" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;KWRegan&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1681334250&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="GPT4KalaisA" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisA-1.jpg?fit=300%2C194&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisA-1.jpg?fit=540%2C350&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisA-1.jpg?resize=540%2C350&#038;ssl=1" alt="" width="540" height="350" class="aligncenter size-full wp-image-21442" srcset="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisA-1.jpg?w=540&amp;ssl=1 540w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisA-1.jpg?resize=300%2C194&amp;ssl=1 300w" sizes="(max-width: 540px) 100vw, 540px" data-recalc-dims="1" /></a></p>
+<p><P><br />
+Nor did GPT-4 correct my typo of an extra &#8216;n.&#8217; Happily, Gil&#8217;s mention of the <a href="https://en.wikipedia.org/wiki/Ehud_Kalai">fourth Kalai</a>&#8212;and confirmation <a href="https://blog.computationalcomplexity.org/2008/07/games-and-computer-science.html">gratia</a> Lance Fortnow found via Google&#8212;enabled me to confront GPT-4 with a pertinent question. This produced an all-too-human reaction:</p>
+<p><P><br />
+<a href="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/gpt4kalaisb-2/" rel="attachment wp-att-21443"><img data-attachment-id="21443" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/gpt4kalaisb-2/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisB-1.jpg?fit=536%2C313&amp;ssl=1" data-orig-size="536,313" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;KWRegan&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1681334908&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="GPT4KalaisB" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisB-1.jpg?fit=300%2C175&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisB-1.jpg?fit=536%2C313&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisB-1.jpg?resize=536%2C313&#038;ssl=1" alt="" width="536" height="313" class="aligncenter size-full wp-image-21443" srcset="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisB-1.jpg?w=536&amp;ssl=1 536w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisB-1.jpg?resize=300%2C175&amp;ssl=1 300w" sizes="(max-width: 536px) 100vw, 536px" data-recalc-dims="1" /></a></p>
+<p><P><br />
+&#8220;Confusion&#8221; indeed? At the right are little hands to upvote or downvote responses. I upvoted the true one and gave the reason as, &#8220;it is true.&#8221; <em>Then</em> I down-voted the false one and clicked a reason button saying, &#8220;This isn&#8217;t true.&#8221; To my consternation a new box appeared:</p>
+<p><P><br />
+<a href="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/gpt4kalaisc-2/" rel="attachment wp-att-21444"><img data-attachment-id="21444" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/gpt4kalaisc-2/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisC-1.jpg?fit=642%2C384&amp;ssl=1" data-orig-size="642,384" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;KWRegan&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1681335110&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="GPT4KalaisC" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisC-1.jpg?fit=300%2C179&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisC-1.jpg?fit=600%2C359&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisC-1.jpg?resize=540%2C323&#038;ssl=1" alt="" width="540" height="323" class="aligncenter wp-image-21444" srcset="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisC-1.jpg?w=642&amp;ssl=1 642w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/GPT4KalaisC-1.jpg?resize=300%2C179&amp;ssl=1 300w" sizes="(max-width: 540px) 100vw, 540px" data-recalc-dims="1" /></a></p>
+<p><P><br />
+In words that won the 2016 Literature Nobel, <a href="https://en.wikipedia.org/wiki/No_Direction_Home">no direction home</a>. It seems our task of educating GPT will pale that in the wonderful play and movie <a href="https://en.wikipedia.org/wiki/Educating_Rita_(film)">Educating Rita</a>.</p>
+<p>
+<p><H2> Open Problems </H2></p>
+<p><p>
+Should we have been more worried if P=PSPACE was sprayed in the street? Or if a proof was referenced somehow?  As for GPT, it calls to our minds some other <a href="https://www.azlyrics.com/lyrics/simongarfunkel/thesoundofsilence.html">words</a> that have not yet won a Literature Nobel.  </p>
+<p class="authors">By RJLipton+KWRegan</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-13T02:26:38Z">Thursday, April 13 2023, 02:26</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -841,7 +945,7 @@ the $\ell_\infty$ error of our Lipschitz extensions is nearly optimal.
       <div class='tr-article-body'>
         <div class='tr-article-snippet'>
         
-          Last week, I gave a lecture on AI safety as part of my deep learning foundations course. In this post, I’ll try to write down a few of my thoughts on this topic. (The lecture was three hours, and this blog post will not cover all of what we discussed or all the points that &#8230; Continue reading Thoughts on AI safety
+          Last week, I gave a lecture on AI safety as part of my deep learning foundations course. In this post, I’ll try to write down a few of my thoughts on this topic. (The lecture was three hours, and this blog post will not cover all of what we discussed or all the points that &#8230; Continue reading Thoughts on AI&#160;safety
         
         </div>
 
@@ -4534,91 +4638,6 @@ for efficient spectral graph algorithms, and its development starts in
 September 2022. We have so far finished the component on local graph
 clustering, and this technical report presents a user's guide to STAG, showcase
 studies, and several technical considerations behind our development.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-07T00:30:00Z">Friday, April 07 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.03182'>On the tractability of sampling from the Potts model at low temperatures via Swendsen--Wang dynamics</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Antonio Blanca, Reza Gheissari</p><p>Sampling from the $q$-state ferromagnetic Potts model is a fundamental
-question in statistical physics, probability theory, and theoretical computer
-science. On general graphs, this problem is computationally hard, and this
-hardness holds at arbitrarily low temperatures. At the same time, in recent
-years, there has been significant progress showing the existence of
-low-temperature sampling algorithms in various specific families of graphs. Our
-aim in this paper is to understand the minimal structural properties of general
-graphs that enable polynomial-time sampling from the $q$-state ferromagnetic
-Potts model at low temperatures. We study this problem from the perspective of
-the widely-used Swendsen--Wang dynamics and the closely related random-cluster
-dynamics.
-</p>
-<p>Our results demonstrate that the key graph property behind fast or slow
-convergence time for these dynamics is whether the independent edge-percolation
-on the graph admits a strongly supercritical phase. By this, we mean that at
-large $p&lt;1$, it has a unique giant component of linear size, and the complement
-of that giant component is comprised of only small components. Specifically, we
-prove that such a condition implies fast mixing of the Swendsen--Wang and
-random-cluster dynamics on two general families of bounded-degree graphs: (a)
-graphs of at most stretched-exponential volume growth and (b) locally treelike
-graphs. In the other direction, we show that, even among graphs in those
-families, these Markov chains can converge exponentially slowly at arbitrarily
-low temperatures if the edge-percolation condition does not hold. In the
-process, we develop new tools for the analysis of non-local Markov chains,
-including a framework to bound the speed of disagreement propagation in the
-presence of long-range correlations, and an understanding of spatial mixing
-properties on trees with random boundary conditions.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Blanca_A/0/1/0/all/0/1">Antonio Blanca</a>, <a href="http://arxiv.org/find/math/1/au:+Gheissari_R/0/1/0/all/0/1">Reza Gheissari</a></p><p>Sampling from the $q$-state ferromagnetic Potts model is a fundamental
-question in statistical physics, probability theory, and theoretical computer
-science. On general graphs, this problem is computationally hard, and this
-hardness holds at arbitrarily low temperatures. At the same time, in recent
-years, there has been significant progress showing the existence of
-low-temperature sampling algorithms in various specific families of graphs. Our
-aim in this paper is to understand the minimal structural properties of general
-graphs that enable polynomial-time sampling from the $q$-state ferromagnetic
-Potts model at low temperatures. We study this problem from the perspective of
-the widely-used Swendsen--Wang dynamics and the closely related random-cluster
-dynamics.
-</p>
-<p>Our results demonstrate that the key graph property behind fast or slow
-convergence time for these dynamics is whether the independent edge-percolation
-on the graph admits a strongly supercritical phase. By this, we mean that at
-large $p&lt;1$, it has a unique giant component of linear size, and the complement
-of that giant component is comprised of only small components. Specifically, we
-prove that such a condition implies fast mixing of the Swendsen--Wang and
-random-cluster dynamics on two general families of bounded-degree graphs: (a)
-graphs of at most stretched-exponential volume growth and (b) locally treelike
-graphs. In the other direction, we show that, even among graphs in those
-families, these Markov chains can converge exponentially slowly at arbitrarily
-low temperatures if the edge-percolation condition does not hold. In the
-process, we develop new tools for the analysis of non-local Markov chains,
-including a framework to bound the speed of disagreement propagation in the
-presence of long-range correlations, and an understanding of spatial mixing
-properties on trees with random boundary conditions.
 </p>
         
         </div>
