@@ -9,6 +9,31 @@
 
 
 <item>
+  <title>TR23-045 |  Tight Correlation Bounds for Circuits Between AC0 and TC0 | 
+
+	Vinayak Kumar</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/045</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/045</link>
+  <description>
+    We initiate the study of generalized $AC^0$ circuits comprised of arbitrary unbounded fan-in gates which only need to be constant over inputs of Hamming weight $\ge k$ (up to negations of the input bits), which we denote $GC^0(k)$. The gate set of this class includes biased LTFs like the $k$-$OR$ (outputs $1$ iff $\ge k$ bits are $1$) and $k$-$AND$ (outputs $0$ iff $\ge k$ bits are $0$), and thus can be seen as an interpolation between $AC^0$ and $TC^0$. 
+
+We establish a tight multi-switching lemma for $GC(k)$ circuits, which bounds the probability that several depth-2 $GC^0(k)$ circuits do not simultaneously simplify under a random restriction. We also establish a new depth reduction lemma such that coupled with our multi-switching lemma, we can show many results obtained from the multi-switching lemma for depth-$d$ size-$s$ $AC^0$ circuits lifts to depth-$d$ size-$s^{.99}$ $GC^0(.01\log s)$ circuits with no loss in parameters (other than hidden constants). 
+
+Our result has the following applications:
+
+-Size-$2^{\Omega(n^{1/d})}$ depth-$d$ $GC^0(\Omega(n^{1/d}))$ circuits do not correlate with parity (extending a result of Håstad (SICOMP, 2014)).
+
+-Size-$n^{\Omega(\log n)}$ $GC^0(\Omega(\log^2 n))$ circuits with $n^{.249}$ arbitrary threshold gates or $n^{.499}$ arbitrary symmetric gates exhibit exponentially small correlation against an explicit function (extending a result of Tan and Servedio (RANDOM, 2019)).
+
+-There is a seed length $O((\log m)^{d-1}\log(m/\varepsilon)\log\log(m))$ pseudorandom generator against size-$m$ depth-$d$ $GC^0(\log m)$ circuits, matching the $AC^0$ lower bound of Håstad up to a $\log\log m$ factor (extending a result of Lyu (CCC, 2022)).
+
+-Size-$m$ $GC^0(\log m)$ circuits have exponentially small Fourier tails (extending a result of Tal (CCC, 2017)).
+  </description>
+  <pubDate>2023-04-13 11:23:19 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>ACM Prize to Yael Kalai</title>
   <guid>https://rjlipton.wpcomstaging.com/?p=21427</guid>
   <link>https://rjlipton.wpcomstaging.com/2023/04/12/acm-prize-to-yael-kalai/</link>
@@ -2542,22 +2567,6 @@ algorithm to yield an EPAS on the input metric $M$ for any clustering
 objective: (i) The objective is described by a monotone (not necessarily
 symmetric!) norm, and (ii) the $\epsilon$-scatter dimension of $M$ is upper
 bounded by a function of $\epsilon$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-07 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Spectral Toolkit of Algorithms for Graphs: Technical Report (1)</title>
-  <guid>http://arxiv.org/abs/2304.03170</guid>
-  <link>http://arxiv.org/abs/2304.03170</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Macgregor_P/0/1/0/all/0/1&quot;&gt;Peter Macgregor&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sun_H/0/1/0/all/0/1&quot;&gt;He Sun&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Spectral Toolkit of Algorithms for Graphs (STAG) is an open-source library
-for efficient spectral graph algorithms, and its development starts in
-September 2022. We have so far finished the component on local graph
-clustering, and this technical report presents a user&#39;s guide to STAG, showcase
-studies, and several technical considerations behind our development.
 &lt;/p&gt;
   </description>
   <pubDate>2023-04-07 00:30:00 UTC</pubDate>
