@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-04-16T11:30:36Z">Sunday, April 16 2023, 11:30</time>
+          <time class='timeago' datetime="2023-04-16T12:44:44Z">Sunday, April 16 2023, 12:44</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,43 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Sunday, April 16
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/047'>TR23-047 |  Ruling Out Short Proofs of Unprovable Sentences is Hard | 
+
+	Hunter Monroe</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          If no optimal propositional proof system exists, we (and independently Pudlák) prove that ruling out length $t$ proofs of any unprovable sentence is hard. This mapping from unprovable to hard-to-prove sentences powerfully translates facts about noncomputability into complexity theory. For instance, because proving string $x$ is Kolmogorov random ($x{\in}R$) is typically impossible, it is typically hard to prove &quot;no length $t$ proof shows $x{\in}R$&quot;, or tautologies encoding this. Therefore, a proof system with one family of hard tautologies has these densely in an enumeration of families. The assumption also implies that a natural language is $\textbf{NP}$-intermediate: with $R$ redefined to have a sparse complement, the complement of the language $\{\langle x,1^t\rangle|$ no length $t$ proof exists of  $x{\in}R\}$ is also sparse. 
+
+Efficiently ruling out length $t$ proofs of $x{\in}R$ might violate the constraint on using the fact of $x{\in}R$&#39;s unprovability. We conjecture: any computable predicate on $R$ that might be used in if-then statements (or case-based proofs) does no better than branching at random, because $R$ appears random by any effective test. This constraint could also inhibit the usefulness in circuits and propositional proofs of NOT gates and cancellation---needed to encode if-then statements. If $R$ defeats if-then logic, exhaustive search is necessary.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          If no optimal propositional proof system exists, we (and independently Pudlák) prove that ruling out length $t$ proofs of any unprovable sentence is hard. This mapping from unprovable to hard-to-prove sentences powerfully translates facts about noncomputability into complexity theory. For instance, because proving string $x$ is Kolmogorov random ($x{\in}R$) is typically impossible, it is typically hard to prove &quot;no length $t$ proof shows $x{\in}R$&quot;, or tautologies encoding this. Therefore, a proof system with one family of hard tautologies has these densely in an enumeration of families. The assumption also implies that a natural language is $\textbf{NP}$-intermediate: with $R$ redefined to have a sparse complement, the complement of the language $\{\langle x,1^t\rangle|$ no length $t$ proof exists of  $x{\in}R\}$ is also sparse. 
+
+Efficiently ruling out length $t$ proofs of $x{\in}R$ might violate the constraint on using the fact of $x{\in}R$&#39;s unprovability. We conjecture: any computable predicate on $R$ that might be used in if-then statements (or case-based proofs) does no better than branching at random, because $R$ appears random by any effective test. This constraint could also inhibit the usefulness in circuits and propositional proofs of NOT gates and cancellation---needed to encode if-then statements. If $R$ defeats if-then logic, exhaustive search is necessary.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-16T12:20:26Z">Sunday, April 16 2023, 12:20</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -4819,93 +4856,6 @@ data types (CRDT). We also show how a key-value map model can be derived from
 the EDP formulation, and give an outlook on an EDP-based systemic access
 control CRDT as a formalization of the CRDT used in the Matrix messaging
 system.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-11T00:30:00Z">Tuesday, April 11 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.04397'>Randomized and Deterministic Attention Sparsification Algorithms for Over-parameterized Feature Dimension</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Yichuan Deng, Sridhar Mahadevan, Zhao Song</p><p>Large language models (LLMs) have shown their power in different areas.
-Attention computation, as an important subroutine of LLMs, has also attracted
-interests in theory. Recently the static computation and dynamic maintenance of
-attention matrix has been studied by [Alman and Song 2023] and [Brand, Song and
-Zhou 2023] from both algorithmic perspective and hardness perspective. In this
-work, we consider the sparsification of the attention problem. We make one
-simplification which is the logit matrix is symmetric. Let $n$ denote the
-length of sentence, let $d$ denote the embedding dimension. Given a matrix $X
-\in \mathbb{R}^{n \times d}$, suppose $d \gg n$ and $\| X X^\top \|_{\infty} &lt;
-r$ with $r \in (0,0.1)$, then we aim for finding $Y \in \mathbb{R}^{n \times
-m}$ (where $m\ll d$) such that \begin{align*} \| D(Y)^{-1} \exp( Y Y^\top ) -
-D(X)^{-1} \exp( X X^\top) \|_{\infty} \leq O(r) \end{align*} We provide two
-results for this problem.
-</p>
-<p>$\bullet$ Our first result is a randomized algorithm. It runs in
-$\widetilde{O}(\mathrm{nnz}(X) + n^{\omega} ) $ time, has $1-\delta$ succeed
-probability, and chooses $m = O(n \log(n/\delta))$. Here $\mathrm{nnz}(X)$
-denotes the number of non-zero entries in $X$. We use $\omega$ to denote the
-exponent of matrix multiplication. Currently $\omega \approx 2.373$.
-</p>
-<p>$\bullet$ Our second result is a deterministic algorithm. It runs in
-$\widetilde{O}(\min\{\sum_{i\in[d]}\mathrm{nnz}(X_i)^2, dn^{\omega-1}\} +
-n^{\omega+1})$ time and chooses $m = O(n)$. Here $X_i$ denote the $i$-th column
-of matrix $X$.
-</p>
-<p>Our main findings have the following implication for applied LLMs task: for
-any super large feature dimension, we can reduce it down to the size nearly
-linear in length of sentence.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Deng_Y/0/1/0/all/0/1">Yichuan Deng</a>, <a href="http://arxiv.org/find/cs/1/au:+Mahadevan_S/0/1/0/all/0/1">Sridhar Mahadevan</a>, <a href="http://arxiv.org/find/cs/1/au:+Song_Z/0/1/0/all/0/1">Zhao Song</a></p><p>Large language models (LLMs) have shown their power in different areas.
-Attention computation, as an important subroutine of LLMs, has also attracted
-interests in theory. Recently the static computation and dynamic maintenance of
-attention matrix has been studied by [Alman and Song 2023] and [Brand, Song and
-Zhou 2023] from both algorithmic perspective and hardness perspective. In this
-work, we consider the sparsification of the attention problem. We make one
-simplification which is the logit matrix is symmetric. Let $n$ denote the
-length of sentence, let $d$ denote the embedding dimension. Given a matrix $X
-\in \mathbb{R}^{n \times d}$, suppose $d \gg n$ and $\| X X^\top \|_{\infty} &lt;
-r$ with $r \in (0,0.1)$, then we aim for finding $Y \in \mathbb{R}^{n \times
-m}$ (where $m\ll d$) such that \begin{align*} \| D(Y)^{-1} \exp( Y Y^\top ) -
-D(X)^{-1} \exp( X X^\top) \|_{\infty} \leq O(r) \end{align*} We provide two
-results for this problem.
-</p>
-<p>$\bullet$ Our first result is a randomized algorithm. It runs in
-$\widetilde{O}(\mathrm{nnz}(X) + n^{\omega} ) $ time, has $1-\delta$ succeed
-probability, and chooses $m = O(n \log(n/\delta))$. Here $\mathrm{nnz}(X)$
-denotes the number of non-zero entries in $X$. We use $\omega$ to denote the
-exponent of matrix multiplication. Currently $\omega \approx 2.373$.
-</p>
-<p>$\bullet$ Our second result is a deterministic algorithm. It runs in
-$\widetilde{O}(\min\{\sum_{i\in[d]}\mathrm{nnz}(X_i)^2, dn^{\omega-1}\} +
-n^{\omega+1})$ time and chooses $m = O(n)$. Here $X_i$ denote the $i$-th column
-of matrix $X$.
-</p>
-<p>Our main findings have the following implication for applied LLMs task: for
-any super large feature dimension, we can reduce it down to the size nearly
-linear in length of sentence.
 </p>
         
         </div>
