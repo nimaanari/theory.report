@@ -10,6 +10,144 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">Scott Aaronson: AI safety: what should actually be done now?</title>
+    <link href="https://scottaaronson.blog/?p=7230"/>
+    <id>https://scottaaronson.blog/?p=7230</id>
+    <updated>2023-04-16T22:18:25+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;So, I recorded a 2.5-hour-long podcast with &lt;a href=&quot;https://danielfilan.com/&quot;&gt;Daniel Filan&lt;/a&gt; about &amp;#8220;reform AI alignment,&amp;#8221; and the work I’ve been doing this year at OpenAI.  The end result is &amp;#8230; well, probably closer to my current views on this subject than anything else I&amp;#8217;ve said or written! &lt;a href=&quot;https://podcasts.google.com/feed/aHR0cHM6Ly9heHJwb2RjYXN0LmxpYnN5bi5jb20vcnNz/episode/NTM1YTQ1MzAtMDVlNS00OTE4LThlMjgtOWRmZWUzMjM1Mjk0&quot;&gt;Listen here&lt;/a&gt; or &lt;a href=&quot;https://axrp.net/episode/2023/04/11/episode-20-reform-ai-alignment-scott-aaronson.html&quot;&gt;read the transcript here&lt;/a&gt;.  Here&amp;#8217;s Daniel&amp;#8217;s abstract:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;How should we scientifically think about the impact of AI on human civilization, and whether or not it will doom us all? In this episode, I speak with Scott Aaronson about his views on how to make progress in AI alignment, as well as his work on watermarking the output of language models, and how he moved from a background in quantum complexity theory to working on AI.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;Thanks so much to Daniel for making this podcast happen.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;Maybe I should make a broader comment, though.&lt;/p&gt;
+
+
+
+&lt;p&gt;From my recent posts, and from my declining to sign the &lt;a href=&quot;https://futureoflife.org/open-letter/pause-giant-ai-experiments/&quot;&gt;six-month AI pause letter&lt;/a&gt; (even though I sympathize with many of its goals), many people seem to have goten the impression that I’m not worried about AI, or that (ironically, given my job this year) I&amp;#8217;m basically in the &amp;#8220;full speed ahead&amp;#8221; camp.&lt;/p&gt;
+
+
+
+&lt;p&gt;This is not true.  In reality, I’m &lt;em&gt;full&lt;/em&gt; &lt;em&gt;of&lt;/em&gt; worry.  The issue is just that, in this case, I’m also full of &lt;em&gt;metaworry&lt;/em&gt;&amp;#8212;i.e., the worry that whichever things I worry about will turn out to have been the wrong things.&lt;/p&gt;
+
+
+
+&lt;p&gt;Even if we look at the pause letter, or more generally, at the people who wish to slow down AI research, we find that they wildly disagree &lt;em&gt;among themselves&lt;/em&gt; about why a slowdown is called for.  One faction says that AI needs to be paused because it will spread misinformation and entrench social biases … or (this part is said aloud surprisingly often) because progress is being led by, you know, like, &lt;em&gt;totally gross&lt;/em&gt; capitalistic Silicon Valley nerdbros, and might enhance those nerds&amp;#8217; power.&lt;/p&gt;
+
+
+
+&lt;p&gt;A second faction, one that &lt;em&gt;contains&lt;/em&gt; many of the gross nerdbros, is worried about AI because it might become superintelligent, recursively improve itself, and destroy all life on earth while optimizing for some alien goal.  Hopefully both factions agree that this scenario would be bad, so that the only disagreement is about its likelihood.&lt;/p&gt;
+
+
+
+&lt;p&gt;As I&amp;#8217;ll never tire of pointing out, the two factions seem to have been converging on the same conclusion&amp;#8212;namely, &lt;em&gt;AI progress urgently needs to be slowed down&lt;/em&gt;&amp;#8212;even while they sharply reject each other&amp;#8217;s rationales and indeed are barely on speaking terms with each other.&lt;/p&gt;
+
+
+
+&lt;p&gt;OK, you might object, but that&amp;#8217;s just sociology.  Why shouldn&amp;#8217;t a rational person worry about near-term AI risk &lt;em&gt;and&lt;/em&gt; long-term AI risk?  Why shouldn&amp;#8217;t the ethics people focused on the former and the alignment people focused on the latter strategically join forces?  Such a hybrid Frankenpause is, it seems to me, precisely what the pause letter was trying to engineer.  Alas, the result was that, while a few AI ethics people (like Gary Marcus and Ernest Davis) agreed to sign, many others (Emily Bender, Timnit Gebru, Arvind Narayanan&amp;#8230;) pointedly declined, because&amp;#8212;as they explained on social media&amp;#8212;to do so would be to legitimate the gross nerds and their sci-fi fantasies.&lt;/p&gt;
+
+
+
+&lt;p&gt;From my perspective, the problem is this:&lt;/p&gt;
+
+
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Under the ethics people&amp;#8217;s assumptions, I don&amp;#8217;t see that an AI pause is called for.&lt;/strong&gt;  Or rather, while I understand the arguments, the &lt;em&gt;same&lt;/em&gt; arguments would seem to have justified stopping the development of the printing press, aviation, radio, computers, the Internet, and virtually every other nascent technology, until committees of academic experts had decided that the positive social effects would outweigh the negative ones, which might&amp;#8217;ve been never.  The trouble is, well, how do you even &lt;em&gt;study&lt;/em&gt; the social effects of a new technology, before society starts using it?  Aren&amp;#8217;t we mostly &lt;em&gt;happy&lt;/em&gt; that technological pioneers went ahead with all the previously-mentioned things, and dealt with the problems later as they arose?  But preventing the widespread societal adoption of GPT-like tools seems to be what the AI ethics camp &lt;em&gt;really&lt;/em&gt; wants, much more than preventing further scaling for scientific research.  I reject any anti-AI argument that could be generalized and transplanted backwards to produce an argument against moving forward with, let&amp;#8217;s say, agriculture or metallurgy.&lt;/li&gt;
+
+
+
+&lt;li&gt;&lt;strong&gt;Under the alignment people&amp;#8217;s assumptions, I &lt;em&gt;do&lt;/em&gt; see that an AI pause is urgently called for&amp;#8212;but I&amp;#8217;m not yet on board with their assumptions.&lt;/strong&gt;  The kind of relentlessly optimizing AI that could form the intention to doom humanity, still seems very different to me from the kind of AI that’s astonished the world these past couple years, to the point that it’s not obvious how much progress in the latter should increase our terror about the former.  Even Eliezer Yudkowsky &lt;a href=&quot;https://www.youtube.com/watch?v=AaTRHFaaPG8&quot;&gt;agrees&lt;/a&gt; that GPT-4 doesn&amp;#8217;t seem too dangerous in itself.  And an AI that was only &lt;em&gt;slightly&lt;/em&gt; dangerous could presumably be recognized as such before it was too late.  So everything hinges on the conjecture that, in going from GPT-n to GPT-(n+1), there might be a &amp;#8220;sharp turn&amp;#8221; where an existential risk to humanity very suddenly emerged, with or without the cooperation of bad humans who used GPT-(n+1) for nefarious purposes.  I still don&amp;#8217;t know how to think about the likelihood of this risk.  The empirical case for it is likely to be inadequate, by its proponents&amp;#8217; own admission.  I admired how my friend Sarah Constantin thought through the issues in her recent essay &lt;a href=&quot;https://sarahconstantin.substack.com/p/why-i-am-not-an-ai-doomer&quot;&gt;Why I Am Not An AI Doomer&lt;/a&gt;&amp;#8212;but on the other hand, as others have pointed out, Sarah ends up conceding a staggering fraction of the doomers&amp;#8217; case in the course of arguing against the rest of it.  What today passes for an &amp;#8220;anti-doomer&amp;#8221; might&amp;#8217;ve been called a &amp;#8220;doomer&amp;#8221; just a few years ago.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+&lt;p&gt;In short, one could say, the ethics and alignment communities are &lt;em&gt;both&lt;/em&gt; building up cases for pausing AI progress, working at it from opposite ends, but their efforts haven&amp;#8217;t yet met at any single argument that I wholeheartedly endorse.&lt;/p&gt;
+
+
+
+&lt;p&gt;This might just be a question of timing.  &lt;em&gt;If&lt;/em&gt; AI is going become existentially dangerous, then I definitely want global coordination well &lt;em&gt;before&lt;/em&gt; that happens.  And while it seems unlikely to me that we&amp;#8217;re anywhere near the existential danger zone yet, the pace of progress over the past few years has been so astounding, and has upended so many previous confident assumptions, that caution seems well-advised.&lt;/p&gt;
+
+
+
+&lt;p&gt;But is a pause the right action?  How should we compare the risk of acceleration now to the risk of a so-called &amp;#8220;overhang,&amp;#8221; where capabilities might skyrocket even faster in the future, faster than society can react or adapt, &lt;em&gt;because&lt;/em&gt; of a previous pause?  Also, would a pause even force OpenAI to change its plans from what they would&amp;#8217;ve been otherwise?  (If I knew, I&amp;#8217;d be prohibited from telling, which makes it convenient that I don&amp;#8217;t!)  Or would the main purpose be symbolic, just to show that the main AI labs can coordinate on &lt;em&gt;something&lt;/em&gt;?&lt;/p&gt;
+
+
+
+&lt;p&gt;If so, then one striking aspect of the pause letter is that it was written without consultation with the main entities who would need to agree to any such pause (OpenAI, DeepMind, Google, &amp;#8230;).  Another striking aspect is that it applies only to systems &amp;#8220;more powerful than&amp;#8221; GPT-4.  There are two problems here.  Firstly, the concept &amp;#8220;more powerful than&amp;#8221; isn&amp;#8217;t well-defined: presumably it rules out more parameters and more gradient descent, but what about more reinforcement learning or tuning of hyperparameters?  Secondly, to whatever extent it makes sense, it seems specifically tailored to tie the hands of OpenAI, while giving OpenAI&amp;#8217;s competitors a chance to catch up to OpenAI.  The fact that the most famous signatory is Elon Musk, who&amp;#8217;s now trying to build an &amp;#8220;anti-woke&amp;#8221; chatbot to compete against GPT, doesn&amp;#8217;t help.&lt;/p&gt;
+
+
+
+&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
+
+
+
+&lt;p&gt;So, if not this pause letter, &lt;em&gt;what do I think ought to happen instead?&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;I&amp;#8217;ve been thinking about it a lot, and the most important thing I can come up with is: clear articulation of fire alarms, red lines, whatever you want to call them, along with what our responses to those fire alarms should be.  Two of my previous fire alarms were the first use of chatbots for academic cheating, and the first depressed person who commits suicide after interacting with a chatbot.  Both of those have now happened.  Here are some others:&lt;/p&gt;
+
+
+
+&lt;ul&gt;
+&lt;li&gt;A chatbot is used to impersonate someone for fraudulent purposes, by imitating his or her writing style.&lt;/li&gt;
+
+
+
+&lt;li&gt;A chatbot helps a hacker find security vulnerabilities in code that are then actually exploited.&lt;/li&gt;
+
+
+
+&lt;li&gt;A child dies because his or her parents follow wrong chatbot-supplied medical advice.&lt;/li&gt;
+
+
+
+&lt;li&gt;Russian or Iranian or Chinese intelligence, or some other such organization, uses a chatbot to mass-manufacture disinformation and propaganda.&lt;/li&gt;
+
+
+
+&lt;li&gt;A chatbot helps a terrorist manufacture weapons that are used in a terrorist attack.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;p&gt;I&amp;#8217;m extremely curious: which fire alarms are &lt;em&gt;you&lt;/em&gt; most worried about?  How do you think the AI companies and governments should respond if and when they happen?&lt;/p&gt;
+
+
+
+&lt;p&gt;In my view, articulating fire alarms actually provides multiple benefits.  Not only will it give us a playbook if and when any of the bad events happen, it will also give us clear &lt;em&gt;targets to try to forecast&lt;/em&gt;.  If we&amp;#8217;ve decided that behavior X is unacceptable, and if extrapolating the performance of GPT-1 through GPT-n on various metrics leads to the prediction that GPT-(n+1) will be capable of X, then we suddenly have a clear, legible case for delaying the release of GPT-(n+1).&lt;/p&gt;
+
+
+
+&lt;p&gt;Or&amp;#8212;and this is yet a third benefit&amp;#8212;we have something clear on which to &lt;em&gt;test&lt;/em&gt; GPT-(n+1), in &amp;#8220;sandboxes,&amp;#8221; before releasing it.  I think the kinds of &lt;a href=&quot;https://www.lesswrong.com/posts/4Gt42jX7RiaNaxCwP/more-information-about-the-dangerous-capability-evaluations&quot;&gt;safety evals&lt;/a&gt; that ARC (the Alignment Research Center) did on GPT-4 before it was released&amp;#8212;for example, testing its ability to deceive Mechanical Turkers&amp;#8212;were an extremely important prototype, something that we&amp;#8217;ll need a lot more of before the release of future language models.   But all of society should have a say on what, specifically, &lt;em&gt;are&lt;/em&gt; the dangerous behaviors that these evals are checking for.&lt;/p&gt;
+
+
+
+&lt;p&gt;So let&amp;#8217;s get started on that!  Readers: which unaligned behaviors would you like GPT-5 to be tested for prior to its release?  Bonus points for plausibility and non-obviousness.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
+  </content>
+    <author>
+      <name>Scott Aaronson</name>
+      <uri>https://scottaaronson.blog</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR23-047 |  Ruling Out Short Proofs of Unprovable Sentences is Hard | 
 
 	Hunter Monroe</title>
@@ -2957,27 +3095,6 @@ step to find the convex hull of $n$ random points uniformly distributed in the
 plane. For such a set of points, it is shown that eliminating all but $O(\log
 n)$ of points can derive the same convex hull as the input set. Finally it will
 be shown that the running time of the algorithm is $O(n)
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On Extend-Only Directed Posets and Derived Byzantine-Tolerant Replicated Data Types (Extended Version)</title>
-    <link href="http://arxiv.org/abs/2304.04318"/>
-    <id>http://arxiv.org/abs/2304.04318</id>
-    <updated>2023-04-11T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jacob_F/0/1/0/all/0/1&quot;&gt;Florian Jacob&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hartenstein_H/0/1/0/all/0/1&quot;&gt;Hannes Hartenstein&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We uncover the extend-only directed posets (EDP) structure as a unification
-of recently discussed DAG-based Byzantine-tolerant conflict-free replicated
-data types (CRDT). We also show how a key-value map model can be derived from
-the EDP formulation, and give an outlook on an EDP-based systemic access
-control CRDT as a formalization of the CRDT used in the Matrix messaging
-system.
 &lt;/p&gt;
   </content>
     <author>
