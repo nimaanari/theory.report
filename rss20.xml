@@ -9,6 +9,26 @@
 
 
 <item>
+  <title>TR23-048 |  A $d^{1/2+o(1)}$ Monotonicity Tester for Boolean Functions on $d$-Dimensional Hypergrids | 
+
+	Hadley Black, 
+
+	Deeparnab Chakrabarty, 
+
+	C. Seshadhri</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/048</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/048</link>
+  <description>
+    Monotonicity testing of Boolean functions on the hypergrid, $f:[n]^d \to \{0,1\}$, is a classic topic in property testing. Determining the non-adaptive complexity of this problem is an important open question. For arbitrary $n$, [Black-Chakrabarty-Seshadhri, SODA 2020] describe a tester with query complexity $\widetilde{O}(\varepsilon^{-4/3}d^{5/6})$. This complexity is independent of $n$, but has a suboptimal dependence on $d$. Recently, [Braverman-Khot-Kindler-Minzer, ITCS 2023] and [Black-Chakrabarty-Seshadhri, STOC 2023] describe $\widetilde{O}(\varepsilon^{-2} n^3\sqrt{d})$ and $\widetilde{O}(\varepsilon^{-2} n\sqrt{d})$-query testers, respectively. These testers have an almost optimal dependence on $d$, but a suboptimal polynomial dependence on $n$. 
+
+In this paper, we describe a non-adaptive, one-sided monotonicity tester with query complexity
+$O(\varepsilon^{-2} d^{1/2 + o(1)})$, independent of $n$. Up to the $d^{o(1)}$-factors, our result resolves the non-adaptive complexity of monotonicity testing for Boolean functions on hypergrids. The independence of $n$ yields a non-adaptive, one-sided $O(\varepsilon^{-2} d^{1/2 + o(1)})$-query monotonicity tester for Boolean functions $f:\mathbb{R}^d \to \{0,1\}$ associated with an arbitrary product measure.
+  </description>
+  <pubDate>2023-04-18 19:15:38 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Regression and Algorithmic Information Theory</title>
   <guid>http://arxiv.org/abs/2304.07825</guid>
   <link>http://arxiv.org/abs/2304.07825</link>
@@ -1717,44 +1737,6 @@ Should we have been more worried if P=PSPACE was sprayed in the street? Or if a 
   </description>
   <pubDate>2023-04-13 02:26:38 UTC</pubDate>
   <author>Richard Lipton</author>
-</item>
-
-<item>
-  <title>Optimal Testing of Generalized Reed-Muller Codes in Fewer Queries</title>
-  <guid>http://arxiv.org/abs/2304.05598</guid>
-  <link>http://arxiv.org/abs/2304.05598</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Minzer_D/0/1/0/all/0/1&quot;&gt;Dor Minzer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zheng_K/0/1/0/all/0/1&quot;&gt;Kai Zheng&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A local tester for an error correcting code $C\subseteq \Sigma^{n}$ is a
-tester that makes $Q$ oracle queries to a given word $w\in \Sigma^n$ and
-decides to accept or reject the word $w$. An optimal local tester is a local
-tester that has the additional properties of completeness and optimal
-soundness. By completeness, we mean that the tester must accept with
-probability $1$ if $w\in C$. By optimal soundness, we mean that if the tester
-accepts with probability at least $1-\epsilon$ (where $\epsilon$ is small),
-then it must be the case that $w$ is $O(\epsilon/Q)$-close to some codeword
-$c\in C$ in Hamming distance.
-&lt;/p&gt;
-&lt;p&gt;We show that Generalized Reed-Muller codes admit optimal testers with $Q =
-(3q)^{\lceil{ \frac{d+1}{q-1}\rceil}+O(1)}$ queries. Here, for a prime power $q
-= p^{k}$, the Generalized Reed-Muller code, RM[n,q,d], consists of the
-evaluations of all $n$-variate degree $d$ polynomials over $\mathbb{F}_q$.
-Previously, no tester achieving this query complexity was known, and the best
-known testers due to Haramaty, Shpilka and Sudan(which is optimal) and due to
-Ron-Zewi and Sudan(which was not known to be optimal) both required
-$q^{\lceil{\frac{d+1}{q-q/p} \rceil}}$ queries. Our tester achieves query
-complexity which is polynomially better than by a power of $p/(p-1)$, which is
-nearly the best query complexity possible for generalized Reed-Muller codes.
-&lt;/p&gt;
-&lt;p&gt;The tester we analyze is due to Ron-Zewi and Sudan, and we show that their
-basic tester is in fact optimal. Our methods are more general and also allow us
-to prove that a wide class of testers, which follow the form of the Ron-Zewi
-and Sudan tester, are optimal. This result applies to testers for all
-affine-invariant codes (which are not necessarily generalized Reed-Muller
-codes).
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-13 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
 </item>
 
 </channel>
