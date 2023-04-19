@@ -9,6 +9,52 @@
 
 
 <item>
+  <title>TR23-050 |  Communication complexity of half-plane membership | 
+
+	Hamed Hatami, 
+
+	TsunMing Cheung, 
+
+	Manasseh Ahmed, 
+
+	Kusha Sareen</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/050</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/050</link>
+  <description>
+    We study the randomized communication complexity of the following problem. Alice receives the integer coordinates of a point in the plane, and Bob receives the integer parameters of a half-plane, and their goal is to determine whether Alice&amp;#39;s point belongs to Bob&amp;#39;s half-plane. 
+
+
+This communication task corresponds to  determining whether $x_1y_1+y_2\geq x_2$, where the first player knows $(x_1,x_2) \in [n]^2$ and the second player knows $(y_1,y_2) \in [n]^2$. We prove that its randomized communication complexity is $\Omega(\log n)$.   
+  
+
+
+ 
+Our lower bound extends a recent result of Hatami, Hosseini, and Lovett (CCC &amp;#39;20 and ToC &amp;#39;22) regarding the largest possible gap between sign-rank and randomized communication complexity.
+  </description>
+  <pubDate>2023-04-19 12:14:07 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
+  <title>TR23-049 |  Top-Down Lower Bounds for Depth-Four Circuits | 
+
+	Mika Göös, 
+
+	Artur Riazanov, 
+
+	Anastasia Sofronova, 
+
+	Dmitry Sokolov</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/049</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/049</link>
+  <description>
+    We present a top-down lower-bound method for depth-$4$  boolean circuits. In particular, we give a new proof of the well-known result that the parity function requires depth-$4$ circuits of size exponential in $n^{1/3}$. Our proof is an application of robust sunflowers and block unpredictability.
+  </description>
+  <pubDate>2023-04-19 12:02:39 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>An Award For Ellen Zegura</title>
   <guid>https://rjlipton.wpcomstaging.com/?p=21480</guid>
   <link>https://rjlipton.wpcomstaging.com/2023/04/18/an-award-for-ellen-zegura/</link>
@@ -1618,65 +1664,6 @@ constants and does not use randomness.
   </description>
   <pubDate>2023-04-14 00:30:00 UTC</pubDate>
   <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>How Will It Drape Like? Capturing Fabric Mechanics from Depth Images</title>
-  <guid>http://arxiv.org/abs/2304.06704</guid>
-  <link>http://arxiv.org/abs/2304.06704</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rodriguez_Pardo_C/0/1/0/all/0/1&quot;&gt;Carlos Rodriguez-Pardo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Prieto_Martin_M/0/1/0/all/0/1&quot;&gt;Melania Prieto-Martin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Casas_D/0/1/0/all/0/1&quot;&gt;Dan Casas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Garces_E/0/1/0/all/0/1&quot;&gt;Elena Garces&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose a method to estimate the mechanical parameters of fabrics using a
-casual capture setup with a depth camera. Our approach enables to create
-mechanically-correct digital representations of real-world textile materials,
-which is a fundamental step for many interactive design and engineering
-applications. As opposed to existing capture methods, which typically require
-expensive setups, video sequences, or manual intervention, our solution can
-capture at scale, is agnostic to the optical appearance of the textile, and
-facilitates fabric arrangement by non-expert operators. To this end, we propose
-a sim-to-real strategy to train a learning-based framework that can take as
-input one or multiple images and outputs a full set of mechanical parameters.
-Thanks to carefully designed data augmentation and transfer learning protocols,
-our solution generalizes to real images despite being trained only on synthetic
-data, hence successfully closing the sim-to-real loop.Key in our work is to
-demonstrate that evaluating the regression accuracy based on the similarity at
-parameter space leads to an inaccurate distances that do not match the human
-perception. To overcome this, we propose a novel metric for fabric drape
-similarity that operates on the image domain instead on the parameter space,
-allowing us to evaluate our estimation within the context of a similarity rank.
-We show that out metric correlates with human judgments about the perception of
-drape similarity, and that our model predictions produce perceptually accurate
-results compared to the ground truth parameters.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-14 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Evaluating the Robustness of Interpretability Methods through Explanation Invariance and Equivariance</title>
-  <guid>http://arxiv.org/abs/2304.06715</guid>
-  <link>http://arxiv.org/abs/2304.06715</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Crabbe_J/0/1/0/all/0/1&quot;&gt;Jonathan Crabb&amp;#xe9;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schaar_M/0/1/0/all/0/1&quot;&gt;Mihaela van der Schaar&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Interpretability methods are valuable only if their explanations faithfully
-describe the explained model. In this work, we consider neural networks whose
-predictions are invariant under a specific symmetry group. This includes
-popular architectures, ranging from convolutional to graph neural networks. Any
-explanation that faithfully explains this type of model needs to be in
-agreement with this invariance property. We formalize this intuition through
-the notion of explanation invariance and equivariance by leveraging the
-formalism from geometric deep learning. Through this rigorous formalism, we
-derive (1) two metrics to measure the robustness of any interpretability method
-with respect to the model symmetry group; (2) theoretical robustness guarantees
-for some popular interpretability methods and (3) a systematic approach to
-increase the invariance of any interpretability method with respect to a
-symmetry group. By empirically measuring our metrics for explanations of models
-associated with various modalities and symmetry groups, we derive a set of 5
-guidelines to allow users and developers of interpretability methods to produce
-robust explanations.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-14 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
 </item>
 
 </channel>
