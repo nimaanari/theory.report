@@ -9,6 +9,70 @@
 
 
 <item>
+  <title>TR23-055 |  On Approximability of Satisfiable $k$-CSPs: II | 
+
+	Amey Bhangale, 
+
+	Subhash Khot, 
+
+	Dor Minzer</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/055</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/055</link>
+  <description>
+    Let $\Sigma$ be an alphabet and $\mu$ be a distribution on $\Sigma^k$ for some $k \geq 2$. Let $\alpha &amp;gt; 0$ be the minimum probability of a tuple in the support of $\mu$ (denoted by $supp(\mu)$). Here, the support of $\mu$ is the set of all tuples in $\Sigma^k$ that have a positive probability mass under $\mu$. We treat the parameters $\Sigma, k, \mu, \alpha$ as fixed and constant.
+
+We say that the distribution $\mu$ has a  linear embedding if there exist an Abelian group $G$ (with the identity element $0_G$) and mappings $\sigma_i : \Sigma \rightarrow G$, $1 \leq i \leq k$, such that  at least one of the mappings is non-constant and for every $(a_1, a_2, \ldots, a_k)\in supp(\mu)$, $\sum_{i=1}^k \sigma_i(a_i) = 0_G$. In [Bhangale-Khot-Minzer, STOC 2022], the authors asked the following analytical question.
+
+Let $f_i: \Sigma^n\rightarrow [-1,1]$ be bounded functions, such that at least one of the functions $f_i$ essentially has degree at least $d$, meaning that the Fourier mass of $f_i$ on terms of degree less than $d$ is negligible, say at most $\delta$. In particular, $|\mathbb{E}[f_i]| \leq \delta$. The Fourier representation is w.r.t. the marginal of $\mu$ on the $i^{th}$ co-ordinate, denoted $(\Sigma, \mu_i)$. If $\mu$ has no linear embedding (over any Abelian group), then is it necessarily the case that
+
+$$|\mathbb{E}_{(x_1, x_2, \ldots, x_k)\sim \mu^{\otimes n}}[f_1(x_1)f_2(x_2)\cdots f_k(x_k)]   = o_{d, \delta}(1),$$
+
+where the right hand side $\to 0$ as the degree $d \to \infty$  and $\delta \to 0$?
+
+
+In this paper, we answer this analytical question fully and in the affirmative for $k=3$. We also show the following two applications of the result.
+
+1. The first application is related to hardness of approximation. Using the reduction from [Bhangale-Khot-Minzer, STOC 2022], we show that for every $3$-ary predicate $P:\Sigma^3 \to \{0,1\}$ such that $P$ has no linear embedding, an SDP integrality gap instance of a $P$-CSP instance with gap $(1,s)$ can be translated into a dictatorship test with completeness $1$ and soundness $s+o(1)$, under certain additional conditions on the instance.
+
+2. The second application is related to additive combinatorics. We show that if the distribution $\mu$ on $\Sigma^3$ has no linear embedding, marginals of $\mu$ are uniform on $\Sigma$, and $(a,a,a)\in supp(\mu)$ for every $a\in \Sigma$, then every large enough subset of $\Sigma^n$ contains a triple $(x_1, x_2,x_3)$ from $\mu^{\otimes n}$ (and in fact a significant density of such triples).
+  </description>
+  <pubDate>2023-04-20 22:00:35 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
+  <title>TR23-054 |  On Approximability of Satisfiable $k$-CSPs: III | 
+
+	Amey Bhangale, 
+
+	Subhash Khot, 
+
+	Dor Minzer</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/054</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/054</link>
+  <description>
+    In this paper we study functions on the Boolean hypercube that have the property that after applying certain random restrictions, the restricted function is correlated to a linear function with non-negligible probability. If the given function is correlated with a linear function then this property clearly holds. Furthermore, the property also holds for low-degree functions as low-degree functions become a constant function under a random restriction with a non-negligible probability. We show that this essentially is the only possible reason.  More specifically, we show that the function must be correlated to a product of a linear function and a low-degree function. One of the main motivations of studying this question comes from the recent work of the authors [Bhangale, Khot and Minzer, STOC 2021] towards understanding approximability of satisfiable Constraint Satisfaction Problems.
+
+Towards proving our structural theorem, we analyze a $2$-query direct product test for the table $F: {[n]\choose qn} \rightarrow \{0,1\}^{qn}$ where $q\in (0,1)$. We show that, for every constant $\varepsilon&amp;gt;0$, if the test passes with probability $\varepsilon&amp;gt;0$, then there is a global function such that for at least $\delta(\varepsilon)$ fraction of sets, the global function agrees with the given table on {\em all except $\alpha(\varepsilon)$ many locations}. The novelty of this result lies in the fact that $\alpha(\varepsilon)$ is independent of the set sizes. Prior to our work, such a conclusion (in fact, a stronger conclusion with $\alpha = 0$) was shown in [Dinur-Filmus-Harsha, SODA 2019] albeit when the test accepts with probability $1-\varepsilon$ for a small constant $\varepsilon&amp;gt;0$. The setting of parameters in our direct product tests is fundamentally different compared to [Dinur-Goldenberg, FOCS 2008], [Impagliazzo-Kabanets-Wigderson, SIAM Journal of Computing 2012], [Dinur-Steurer, CCC 2014], [Dinur-Filmus-Harsha, SODA 2019]  and hence our analysis involves new techniques, including the use of the small-set expansion property of graphs defined on multi-slices. Such expansion property was recently shown in [Braverman-Khot-Lifshitz-Minzer, FOCS 2022].
+
+As one application of our structural result, we give a $4$-query linearity test under the $p$-biased distribution. More specifically, for any $p\in (\frac{1}{3},\frac{2}{3})$, we give a test that queries a given function $f: \{0,1\}^n \rightarrow \{0,1\}$ at $4$ locations, where the marginal distribution of each query is $\mu_p^{\otimes n}$. The test has perfect completeness and soundness $\frac{1}{2}+\varepsilon$ -- in other words, for every constant $\varepsilon&amp;gt;0$,  if the test passes with probability at least $\frac{1}{2}+\varepsilon$, then the function $f$ is correlated to a linear function under the $\mu_p^{\otimes n}$ measure. This qualitatively improves the results on the linearity testing under the $p$-biased distribution from the previous work [Kopparty-Saraf, APPROX/RANDOM 2009] and [Dinur-Filmus-Harsha, SODA 2019] in which the authors studied the test with soundness $1-\varepsilon$.
+  </description>
+  <pubDate>2023-04-20 22:00:22 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
+  <title>Health Tech</title>
+  <guid>tag:blogger.com,1999:blog-3722233.post-5261164684490370098</guid>
+  <link>https://blog.computationalcomplexity.org/2023/04/health-tech.html</link>
+  <description>
+    &lt;p&gt;&lt;/p&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyGNMicDXyUD2rOs44Tlkus5rR0BF-8qwueFzOJQdXm6L_eaGZ3V9blhL9X1Viqg01o_gl-YkkgkE7wwPWfbJlN9q0HJU8RpEJIw6iVauLUFPD-c_iK0645ZzXrpgVAuDHASeM1X7zFcBn3YQyHIPJrRKsPIw6Rj0VYGzzY4yZbmRwQ9rwIQ/s4080/PXL_20230418_180451901.jpg&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; data-original-height=&quot;3072&quot; data-original-width=&quot;4080&quot; height=&quot;301&quot; src=&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyGNMicDXyUD2rOs44Tlkus5rR0BF-8qwueFzOJQdXm6L_eaGZ3V9blhL9X1Viqg01o_gl-YkkgkE7wwPWfbJlN9q0HJU8RpEJIw6iVauLUFPD-c_iK0645ZzXrpgVAuDHASeM1X7zFcBn3YQyHIPJrRKsPIw6Rj0VYGzzY4yZbmRwQ9rwIQ/w400-h301/PXL_20230418_180451901.jpg&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;On Tuesday, at the behest of an alumnus, I spent the afternoon at &lt;a href=&quot;https://www.himss.org/global-conference&quot;&gt;HIMSS&lt;/a&gt;, a large health tech conference being held at the big convention center in Chicago. When I think of Health Tech, I imagine fancy medical devices, but most of the exhibitors were focused on software solutions.&lt;p&gt;&lt;/p&gt;&lt;p&gt;Cybersecurity had the biggest theme area, no surprise given the devasting role ransomware has had on some hospital chains. The second largest theme area focused on Interoperability. Just a few years ago, the vast majority of medical data is transferred via fax. A few companies, like Epic Systems, dominate the electronic health records space and don&#39;t share nicely. There&#39;s a relatively new standard,&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fast_Healthcare_Interoperability_Resources&quot;&gt;FHIR&lt;/a&gt;, for transferring medical data, making it easily accessible via APIs while keeping it secure. Hopefully, we can finally kill off the fax machines in doctors offices. Patient Engagement was the other big theme area.&lt;/p&gt;&lt;p&gt;Of course the big discussion topics are about how AI will change health care. For example, the advances in electronic records have led to doctors spending far too much time entering data instead of seeing patients. AI could make data entry quick, easier or perhaps even unnecessary. Also AI could help provide functionality for triage and initial diagnoses, helping to extend the capabilities in a staff-limited environment and help bring down health-care costs. Many of the exhibited software systems boasted about using AI but it won&#39;t be until next year&#39;s meeting that we see the true integration of large-language models into health care technology.&lt;/p&gt;&lt;p&gt;Many of the challenges of technology in health care carry over to higher education. We don&#39;t generally use faxes, but why do we send transcripts by PDFs? Health and student data share similar privacy and security challenges, why can&#39;t we develop a FHIR-like system for higher education? Cybersecurity and &lt;strike&gt;Patient&lt;/strike&gt;&amp;nbsp;Student Engagement challenges loom large for universities as well.&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-20 21:30:00 UTC</pubDate>
+  <author>Computational Complexity</author>
+</item>
+
+<item>
   <title>TR23-053 |  Proof Simulation via Round-based Strategy Extraction for QBF | 
 
 	Leroy Chew</title>
@@ -1535,80 +1599,6 @@ Let&amp;#8217;s send Squires some &amp;#8220;proofs&amp;#8221; for checking? Wou
   </description>
   <pubDate>2023-04-17 02:36:23 UTC</pubDate>
   <author>Richard Lipton</author>
-</item>
-
-<item>
-  <title>On representations of real numbers and the computational complexity of converting between such representations</title>
-  <guid>http://arxiv.org/abs/2304.07227</guid>
-  <link>http://arxiv.org/abs/2304.07227</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Ben_Amram_A/0/1/0/all/0/1&quot;&gt;Amir M. Ben-Amram&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Kristiansen_L/0/1/0/all/0/1&quot;&gt;Lars Kristiansen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Simonsen_J/0/1/0/all/0/1&quot;&gt;Jakob Grue Simonsen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the computational complexity of converting one representation of
-real numbers into another representation. Typical examples of representations
-are Cauchy sequences, base-10 expansions, Dedekind cuts and continued
-fractions.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-17 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Online Geometric Hitting Set and Set Cover Beyond Unit Balls in $\mathbb{R}^2$</title>
-  <guid>http://arxiv.org/abs/2304.06780</guid>
-  <link>http://arxiv.org/abs/2304.06780</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+De_M/0/1/0/all/0/1&quot;&gt;Minati De&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mandal_R/0/1/0/all/0/1&quot;&gt;Ratnadip Mandal&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Singh_S/0/1/0/all/0/1&quot;&gt;Satyam Singh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate the geometric hitting set problem in the online setup for the
-range space $\Sigma=({\cal P},{\cal S})$, where the set $\P\subset\mathbb{R}^2$
-is a collection of $n$ points and the set $\cal S$ is a family of geometric
-objects in $\mathbb{R}^2$. In the online setting, the geometric objects arrive
-one by one. Upon the arrival of an object, an online algorithm must maintain a
-valid hitting set by making an irreversible decision, i.e., once a point is
-added to the hitting set by the algorithm, it can not be deleted in the future.
-The objective of the geometric hitting set problem is to find a hitting set of
-the minimum cardinality. Even and Smorodinsky (Discret. Appl. Math., 2014)
-considered an online model (Model-I) in which the range space $\Sigma$ is known
-in advance, but the order of arrival of the input objects in $\cal S$ is
-unknown. They proposed online algorithms having optimal competitive ratios of
-$\Theta(\log n)$ for intervals, half-planes and unit disks in $\mathbb{R}^2$.
-Whether such an algorithm exists for unit squares remained open for a long
-time. This paper considers an online model (Model-II) in which the entire range
-space $\Sigma$ is not known in advance. We only know the set $\cal P$ but not
-the set $\cal S$ in advance. Note that any algorithm for Model-II will also
-work for Model-I, but not vice-versa. In Model-II, we obtain an optimal
-competitive ratio of $\Theta(\log(n))$ for unit disks and regular $k$-gon with
-$k\geq 4$ in $\mathbb{R}^2$. All the above-mentioned results also hold for the
-equivalent geometric set cover problem in Model-II.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-17 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>The Longest Subsequence-Repeated Subsequence Problem</title>
-  <guid>http://arxiv.org/abs/2304.06862</guid>
-  <link>http://arxiv.org/abs/2304.06862</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lafond_M/0/1/0/all/0/1&quot;&gt;Mahuel Lafond&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lai_W/0/1/0/all/0/1&quot;&gt;Wenfeng Lai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liyanage_A/0/1/0/all/0/1&quot;&gt;Adiesha Liyanage&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhu_B/0/1/0/all/0/1&quot;&gt;Binhai Zhu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Motivated by computing duplication patterns in sequences, a new fundamental
-problem called the longest subsequence-repeated subsequence (LSRS) is proposed.
-Given a sequence $S$ of length $n$, a letter-repeated subsequence is a
-subsequence of $S$ in the form of $x_1^{d_1}x_2^{d_2}\cdots x_k^{d_k}$ with
-$x_i$ a subsequence of $S$, $x_j\neq x_{j+1}$ and $d_i\geq 2$ for all $i$ in
-$[k]$ and $j$ in $[k-1]$. We first present an $O(n^6)$ time algorithm to
-compute the longest cubic subsequences of all the $O(n^2)$ substrings of $S$,
-improving the trivial $O(n^7)$ bound. Then, an $O(n^6)$ time algorithm for
-computing the longest subsequence-repeated subsequence (LSRS) of $S$ is
-obtained. Finally we focus on two variants of this problem. We first consider
-the constrained version when $\Sigma$ is unbounded, each letter appears in $S$
-at most $d$ times and all the letters in $\Sigma$ must appear in the solution.
-We show that the problem is NP-hard for $d=4$, via a reduction from a special
-version of SAT (which is obtained from 3-COLORING). We then show that when each
-letter appears in $S$ at most $d=3$ times, then the problem is solvable in
-$O(n^5)$ time.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-17 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
