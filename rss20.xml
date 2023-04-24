@@ -9,6 +9,266 @@
 
 
 <item>
+  <title>Geometry of Tensors: Open problems and research directions</title>
+  <guid>http://arxiv.org/abs/2304.10570</guid>
+  <link>http://arxiv.org/abs/2304.10570</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Gesmundo_F/0/1/0/all/0/1&quot;&gt;Fulvio Gesmundo&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This is a collection of open problems and research ideas following the
+presentations and the discussions of the AGATES Kickoff Workshop held at the
+Institute of Mathematics of the Polish Academy of Sciences (IMPAN) and at the
+Department of Mathematics of University of Warsaw (MIM UW), September 19-26,
+2022.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Comparative Analysis of Deterministic and Nondeterministic Decision Trees for Decision Tables from Closed Classes</title>
+  <guid>http://arxiv.org/abs/2304.10594</guid>
+  <link>http://arxiv.org/abs/2304.10594</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ostonov_A/0/1/0/all/0/1&quot;&gt;Azimkhon Ostonov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moshkov_M/0/1/0/all/0/1&quot;&gt;Mikhail Moshkov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we consider classes of decision tables with many-valued
+decisions closed under operations of removal of columns, changing of decisions,
+permutation of columns, and duplication of columns. We study relationships
+among three parameters of these tables: the complexity of a decision table (if
+we consider the depth of decision trees, then the complexity of a decision
+table is the number of columns in it), the minimum complexity of a
+deterministic decision tree, and the minimum complexity of a nondeterministic
+decision tree. We consider rough classification of functions characterizing
+relationships and enumerate all possible seven types of the relationships.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>A Conjecture Related to the Traveling Salesman Problem</title>
+  <guid>http://arxiv.org/abs/2304.10661</guid>
+  <link>http://arxiv.org/abs/2304.10661</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yang_J/0/1/0/all/0/1&quot;&gt;Jian Yang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We show that certain ways of solving some combinatorial optimization problems
+can be understood as using query planes to divide the space of problem
+instances into polyhedra that could fit into those that characterize the
+problem&#39;s various solutions. This viewpoint naturally leads to a
+splinter-proneness property that is then shown to be responsible for the
+hardness of the concerned problem. We conjecture that the $NP$-equivalent
+traveling salesman problem (TSP) has this property and hence is hard to solve
+to a certain extent.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Breaking the Log Barrier: a Novel Universal Restart Strategy for Faster Las Vegas Algorithms</title>
+  <guid>http://arxiv.org/abs/2304.11017</guid>
+  <link>http://arxiv.org/abs/2304.11017</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Scaman_K/0/1/0/all/0/1&quot;&gt;Kevin Scaman&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Let $\mathcal{A}$ be a Las Vegas algorithm, i.e. an algorithm whose running
+time $T$ is a random variable drawn according to a certain probability
+distribution $p$. In 1993, Luby, Sinclair and Zuckerman [LSZ93] proved that a
+simple universal restart strategy can, for any probability distribution $p$,
+provide an algorithm executing $\mathcal{A}$ and whose expected running time is
+$O(\ell^\star_p\log\ell^\star_p)$, where $\ell^\star_p=\Theta\left(\inf_{q\in
+(0,1]}Q_p(q)/q\right)$ is the minimum expected running time achievable with
+full prior knowledge of the probability distribution $p$, and $Q_p(q)$ is the
+$q$-quantile of $p$. Moreover, the authors showed that the logarithmic term
+could not be removed for universal restart strategies and was, in a certain
+sense, optimal. In this work, we show that, quite surprisingly, the logarithmic
+term can be replaced by a smaller quantity, thus reducing the expected running
+time in practical settings of interest. More precisely, we propose a novel
+restart strategy that executes $\mathcal{A}$ and whose expected running time is
+$O\big(\inf_{q\in (0,1]}\frac{Q_p(q)}{q}\,\psi\big(\log Q_p(q),\,\log
+(1/q)\big)\big)$ where $\psi(a,b)=1+\min\left\{a+b,a\log^2 a,\,b\log^2
+b\right\}$. This quantity is, up to a multiplicative factor, better than: 1)
+the universal restart strategy of [LSZ93], 2) any $q$-quantile of $p$ for
+$q\in(0,1]$, 3) the original algorithm, and 4) any quantity of the form
+$\phi^{-1}(\mathbb{E}[\phi(T)])$ for a large class of concave functions $\phi$.
+The latter extends the recent restart strategy of [Zam22] achieving
+$O\left(e^{\mathbb{E}[\ln(T)]}\right)$, and can be thought of as algorithmic
+reverse Jensen&#39;s inequalities. Finally, we show that the behavior of
+$\frac{t\phi&#39;&#39;(t)}{\phi&#39;(t)}$ at infinity controls the existence of reverse
+Jensen&#39;s inequalities by providing a necessary and a sufficient condition for
+these inequalities to hold.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Solid angle measure of polyhedral cones</title>
+  <guid>http://arxiv.org/abs/2304.11102</guid>
+  <link>http://arxiv.org/abs/2304.11102</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Fitisone_A/0/1/0/all/0/1&quot;&gt;Allison Fitisone&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Zhou_Y/0/1/0/all/0/1&quot;&gt;Yuan Zhou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper addresses the computation of normalized solid angle measure of
+polyhedral cones. This is well understood in dimensions two and three. For
+higher dimensions, assuming that a positive-definite criterion is met, the
+measure can be computed via a multivariable hypergeometric series. We present
+two decompositions of full-dimensional simplicial cones into finite families of
+cones satisfying the positive-definite criterion, enabling the use of the
+hypergeometric series to compute the solid angle measure of any polyhedral
+cone. Additionally, our second decomposition method yields cones with a special
+tridiagonal structure, reducing the number of required coordinates for the
+hypergeometric series formula. Furthermore, we investigate the convergence of
+the hypergeometric series for this case. Our findings provide a powerful tool
+for computing solid angle measures in high-dimensional spaces.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>New Lower Bounds for Adaptive Tolerant Junta Testing</title>
+  <guid>http://arxiv.org/abs/2304.10647</guid>
+  <link>http://arxiv.org/abs/2304.10647</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_X/0/1/0/all/0/1&quot;&gt;Xi Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Patel_S/0/1/0/all/0/1&quot;&gt;Shyamal Patel&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove a $k^{-\Omega(\log(\varepsilon_2 - \varepsilon_1))}$ lower bound for
+adaptively testing whether a Boolean function is $\varepsilon_1$-close to or
+$\varepsilon_2$-far from $k$-juntas. Our results provide the first
+superpolynomial separation between tolerant and non-tolerant testing for a
+natural property of boolean functions under the adaptive setting. Furthermore,
+our techniques generalize to show that adaptively testing whether a function is
+$\varepsilon_1$-close to a $k$-junta or $\varepsilon_2$-far from $(k +
+o(k))$-juntas cannot be done with $\textsf{poly} (k, (\varepsilon_2 -
+\varepsilon_1)^{-1})$ queries. This is in contrast to an algorithm by Iyer, Tal
+and Whitmeyer [CCC 2021] which uses $\textsf{poly} (k, (\varepsilon_2 -
+\varepsilon_1)^{-1})$ queries to test whether a function is
+$\varepsilon_1$-close to a $k$-junta or $\varepsilon_2$-far from
+$O(k/(\varepsilon_2-\varepsilon_1)^2)$-juntas.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>How Well Does the Metropolis Algorithm Cope With Local Optima?</title>
+  <guid>http://arxiv.org/abs/2304.10848</guid>
+  <link>http://arxiv.org/abs/2304.10848</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doerr_B/0/1/0/all/0/1&quot;&gt;Benjamin Doerr&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Houssaini_T/0/1/0/all/0/1&quot;&gt;Taha El Ghazi El Houssaini&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rajabi_A/0/1/0/all/0/1&quot;&gt;Amirhossein Rajabi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wit_C/0/1/0/all/0/1&quot;&gt;Carsten Wit&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Metropolis algorithm (MA) is a classic stochastic local search heuristic.
+It avoids getting stuck in local optima by occasionally accepting inferior
+solutions. To better and in a rigorous manner understand this ability, we
+conduct a mathematical runtime analysis of the MA on the CLIFF benchmark. Apart
+from one local optimum, cliff functions are monotonically increasing towards
+the global optimum. Consequently, to optimize a cliff function, the MA only
+once needs to accept an inferior solution. Despite seemingly being an ideal
+benchmark for the MA to profit from its main working principle, our
+mathematical runtime analysis shows that this hope does not come true. Even
+with the optimal temperature (the only parameter of the MA), the MA optimizes
+most cliff functions less efficiently than simple elitist evolutionary
+algorithms (EAs), which can only leave the local optimum by generating a
+superior solution possibly far away. This result suggests that our
+understanding of why the MA is often very successful in practice is not yet
+complete. Our work also suggests to equip the MA with global mutation
+operators, an idea supported by our preliminary experiments.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Faster Prefix-Sorting Algorithms for Deterministic Finite Automata</title>
+  <guid>http://arxiv.org/abs/2304.10962</guid>
+  <link>http://arxiv.org/abs/2304.10962</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kim_S/0/1/0/all/0/1&quot;&gt;Sung-Hwan Kim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Olivares_F/0/1/0/all/0/1&quot;&gt;Francisco Olivares&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Prezza_N/0/1/0/all/0/1&quot;&gt;Nicola Prezza&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sorting is a fundamental algorithmic pre-processing technique which often
+allows to represent data more compactly and, at the same time, speeds up search
+queries on it. In this paper, we focus on the well-studied problem of sorting
+and indexing string sets. Since the introduction of suffix trees in 1973,
+dozens of suffix sorting algorithms have been described in the literature. In
+2017, these techniques were extended to sets of strings described by means of
+finite automata: the theory of Wheeler graphs [Gagie et al., TCS&#39;17] introduced
+automata whose states can be totally-sorted according to the co-lexicographic
+(co-lex in the following) order of the prefixes of words accepted by the
+automaton. More recently, in [Cotumaccio, Prezza, SODA&#39;21] it was shown how to
+extend these ideas to arbitrary automata by means of partial co-lex orders.
+This work showed that a co-lex order of minimum width (thus optimizing search
+query times) on deterministic finite automata (DFAs) can be computed in $O(m^2
++ n^{5/2})$ time, $m$ being the number of transitions and $n$ the number of
+states of the input DFA.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we exhibit new combinatorial properties of the minimum-width
+co-lex order of DFAs and exploit them to design faster prefix sorting
+algorithms. In particular, we describe two algorithms sorting arbitrary DFAs in
+$O(mn)$ and $O(n^2\log n)$ time, respectively, and an algorithm sorting acyclic
+DFAs in $O(m\log n)$ time. Within these running times, all algorithms compute
+also a smallest chain partition of the partial order (required to index the
+DFA). We present an experiment result to show that an optimized implementation
+of the $O(n^2\log n)$-time algorithm exhibits a nearly-linear behaviour on
+large deterministic pan-genomic graphs and is thus also of practical interest.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Solving the List Coloring Problem through a Branch-and-Price algorithm</title>
+  <guid>http://arxiv.org/abs/2304.10995</guid>
+  <link>http://arxiv.org/abs/2304.10995</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lucci_M/0/1/0/all/0/1&quot;&gt;Mauro Lucci&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Severin_D/0/1/0/all/0/1&quot;&gt;Daniel Severin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nasini_G/0/1/0/all/0/1&quot;&gt;Graciela Nasini&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work, we present a branch-and-price algorithm to solve the weighted
+version of the List Coloring Problem, based on a vertex cover formulation by
+stable sets. This problem is interesting for its applications and also for the
+many other problems that it generalizes, including the well-known Graph
+Coloring Problem. With the introduction of the concept of indistinguishable
+colors, some theoretical results are presented which are later incorporated
+into the algorithm. We propose two branching strategies based on others for the
+Graph Coloring Problem, the first is an adaptation of the one used by Mehrotra
+and Trick in their pioneering branch-and-price algorithm, and the other is
+inspired by the one used by M\&#39;endez-D\&#39;iaz and Zabala in their branch-and-cut
+algorithm. The rich structure of this problem makes both branching strategies
+robust. Extended computation experimentation on a wide variety of instances
+shows the effectiveness of this approach and evidences the different behaviors
+that the algorithm can have according to the structure of each type of
+instance.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Learned Monotone Minimal Perfect Hashing</title>
+  <guid>http://arxiv.org/abs/2304.11012</guid>
+  <link>http://arxiv.org/abs/2304.11012</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ferragina_P/0/1/0/all/0/1&quot;&gt;Paolo Ferragina&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lehmann_H/0/1/0/all/0/1&quot;&gt;Hans-Peter Lehmann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sanders_P/0/1/0/all/0/1&quot;&gt;Peter Sanders&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vinciguerra_G/0/1/0/all/0/1&quot;&gt;Giorgio Vinciguerra&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A Monotone Minimal Perfect Hash Function (MMPHF) constructed on a set S of
+keys is a function that maps each key in S to its rank. On keys not in S, the
+function returns an arbitrary value. Applications range from databases, search
+engines, data encryption, to pattern-matching algorithms.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we describe LeMonHash, a new technique for constructing MMPHFs
+for integers. The core idea of LeMonHash is surprisingly simple and effective:
+we learn a monotone mapping from keys to their rank via an error-bounded
+piecewise linear model (the PGM-index), and then we solve the collisions that
+might arise among keys mapping to the same rank estimate by associating small
+integers with them in a retrieval data structure (BuRR). On synthetic random
+datasets, LeMonHash needs 35% less space than the next best competitor, while
+achieving about 16 times faster queries. On real-world datasets, the space
+usage is very close to or much better than the best competitors, while
+achieving up to 19 times faster queries than the next larger competitor. As far
+as the construction of LeMonHash is concerned, we get an improvement by a
+factor of up to 2, compared to the competitor with the next best space usage.
+&lt;/p&gt;
+&lt;p&gt;We also investigate the case of keys being variable-length strings,
+introducing the so-called LeMonHash-VL: it needs space within 10% of the best
+competitors while achieving up to 3 times faster queries.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Thoughts on Gordon Moore</title>
   <guid>tag:blogger.com,1999:blog-3722233.post-98191395906298011</guid>
   <link>https://blog.computationalcomplexity.org/2023/04/thoughts-on-gordon-moore.html</link>
@@ -1382,273 +1642,6 @@ algorithms.
 &lt;/p&gt;
   </description>
   <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On Approximate Reconfigurability of Label Cover</title>
-  <guid>http://arxiv.org/abs/2304.08746</guid>
-  <link>http://arxiv.org/abs/2304.08746</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ohsaka_N/0/1/0/all/0/1&quot;&gt;Naoto Ohsaka&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given a two-prover game $G$ and its two satisfying labelings
-$\psi_\mathsf{s}$ and $\psi_\mathsf{t}$, the Label Cover Reconfiguration
-problem asks whether $\psi_\mathsf{s}$ can be transformed into
-$\psi_\mathsf{t}$ by repeatedly changing the value of a vertex while preserving
-any intermediate labeling satisfying $G$. We consider an optimization variant
-of Label Cover Reconfiguration by relaxing the feasibility of labelings,
-referred to as Maxmin Label Cover Reconfiguration: we are allowed to transform
-by passing through any non-satisfying labelings, but required to maximize the
-minimum fraction of satisfied edges during transformation from
-$\psi_\mathsf{s}$ to $\psi_\mathsf{t}$. Since the parallel repetition theorem
-of Raz (SIAM J. Comput., 1998), which implies NP-hardness of Label Cover within
-any constant factor, produces strong inapproximability results for many NP-hard
-problems, one may think of using Maxmin Label Cover Reconfiguration to derive
-inapproximability results for reconfiguration problems. We prove the following
-results on Maxmin Label Cover Reconfiguration, which display different trends
-from those of Label Cover and the parallel repetition theorem:
-&lt;/p&gt;
-&lt;p&gt;(1) Maxmin Label Cover Reconfiguration can be approximated within a factor of
-nearly $\frac{1}{4}$ for restricted graph classes, including slightly dense
-graphs and balanced bipartite graphs.
-&lt;/p&gt;
-&lt;p&gt;(2) A naive parallel repetition of Maxmin Label Cover Reconfiguration does
-not decrease the optimal objective value.
-&lt;/p&gt;
-&lt;p&gt;(3) Label Cover Reconfiguration on projection games can be decided in
-polynomial time.
-&lt;/p&gt;
-&lt;p&gt;The above results suggest that a reconfiguration analogue of the parallel
-repetition theorem is unlikely.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Parallel Greedy Spanners</title>
-  <guid>http://arxiv.org/abs/2304.08892</guid>
-  <link>http://arxiv.org/abs/2304.08892</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Haeupler_B/0/1/0/all/0/1&quot;&gt;Bernhard Haeupler&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hershkowitz_D/0/1/0/all/0/1&quot;&gt;D Ellis Hershkowitz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tan_Z/0/1/0/all/0/1&quot;&gt;Zihan Tan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A $t$-spanner of a graph is a subgraph that $t$-approximates pairwise
-distances. The greedy algorithm is one of the simplest and most well-studied
-algorithms for constructing a sparse spanner: it computes a $t$-spanner with
-$n^{1+O(1/t)}$ edges by repeatedly choosing any edge which does not close a
-cycle of chosen edges with $t+1$ or fewer edges.
-&lt;/p&gt;
-&lt;p&gt;We demonstrate that the greedy algorithm computes a $t$-spanner with $n^{1 +
-O(1/t)}$ edges even when a matching of such edges are added in parallel. In
-particular, it suffices to repeatedly add any matching where each individual
-edge does not close a cycle with $t +1$ or fewer edges but where adding the
-entire matching might. Our analysis makes use of and illustrates the power of
-new advances in length-constrained expander decompositions.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Random Cuts are Optimal for Explainable k-Medians</title>
-  <guid>http://arxiv.org/abs/2304.09113</guid>
-  <link>http://arxiv.org/abs/2304.09113</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Makarychev_K/0/1/0/all/0/1&quot;&gt;Konstantin Makarychev&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shan_L/0/1/0/all/0/1&quot;&gt;Liren Shan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We show that the RandomCoordinateCut algorithm gives the optimal competitive
-ratio for explainable k-medians in l1. The problem of explainable k-medians was
-introduced by Dasgupta, Frost, Moshkovitz, and Rashtchian in 2020. Several
-groups of authors independently proposed a simple polynomial-time randomized
-algorithm for the problem and showed that this algorithm is O(log k loglog k)
-competitive. We provide a tight analysis of the algorithm and prove that its
-competitive ratio is upper bounded by 2ln k +2. This bound matches the
-Omega(log k) lower bound by Dasgupta et al (2020).
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Optimal PAC Bounds Without Uniform Convergence</title>
-  <guid>http://arxiv.org/abs/2304.09167</guid>
-  <link>http://arxiv.org/abs/2304.09167</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Aden_Ali_I/0/1/0/all/0/1&quot;&gt;Ishaq Aden-Ali&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cherapanamjeri_Y/0/1/0/all/0/1&quot;&gt;Yeshwanth Cherapanamjeri&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shetty_A/0/1/0/all/0/1&quot;&gt;Abhishek Shetty&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhivotovskiy_N/0/1/0/all/0/1&quot;&gt;Nikita Zhivotovskiy&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In statistical learning theory, determining the sample complexity of
-realizable binary classification for VC classes was a long-standing open
-problem. The results of Simon and Hanneke established sharp upper bounds in
-this setting. However, the reliance of their argument on the uniform
-convergence principle limits its applicability to more general learning
-settings such as multiclass classification. In this paper, we address this
-issue by providing optimal high probability risk bounds through a framework
-that surpasses the limitations of uniform convergence arguments.
-&lt;/p&gt;
-&lt;p&gt;Our framework converts the leave-one-out error of permutation invariant
-predictors into high probability risk bounds. As an application, by adapting
-the one-inclusion graph algorithm of Haussler, Littlestone, and Warmuth, we
-propose an algorithm that achieves an optimal PAC bound for binary
-classification. Specifically, our result shows that certain aggregations of
-one-inclusion graph algorithms are optimal, addressing a variant of a classic
-question posed by Warmuth.
-&lt;/p&gt;
-&lt;p&gt;We further instantiate our framework in three settings where uniform
-convergence is provably suboptimal. For multiclass classification, we prove an
-optimal risk bound that scales with the one-inclusion hypergraph density of the
-class, addressing the suboptimality of the analysis of Daniely and
-Shalev-Shwartz. For partial hypothesis classification, we determine the optimal
-sample complexity bound, resolving a question posed by Alon, Hanneke, Holzman,
-and Moran. For realizable bounded regression with absolute loss, we derive an
-optimal risk bound that relies on a modified version of the scale-sensitive
-dimension, refining the results of Bartlett and Long. Our rates surpass
-standard uniform convergence-based results due to the smaller complexity
-measure in our risk bound.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>TR23-048 |  A $d^{1/2+o(1)}$ Monotonicity Tester for Boolean Functions on $d$-Dimensional Hypergrids | 
-
-	Hadley Black, 
-
-	Deeparnab Chakrabarty, 
-
-	C. Seshadhri</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/048</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/048</link>
-  <description>
-    Monotonicity testing of Boolean functions on the hypergrid, $f:[n]^d \to \{0,1\}$, is a classic topic in property testing. Determining the non-adaptive complexity of this problem is an important open question. For arbitrary $n$, [Black-Chakrabarty-Seshadhri, SODA 2020] describe a tester with query complexity $\widetilde{O}(\varepsilon^{-4/3}d^{5/6})$. This complexity is independent of $n$, but has a suboptimal dependence on $d$. Recently, [Braverman-Khot-Kindler-Minzer, ITCS 2023] and [Black-Chakrabarty-Seshadhri, STOC 2023] describe $\widetilde{O}(\varepsilon^{-2} n^3\sqrt{d})$ and $\widetilde{O}(\varepsilon^{-2} n\sqrt{d})$-query testers, respectively. These testers have an almost optimal dependence on $d$, but a suboptimal polynomial dependence on $n$. 
-
-In this paper, we describe a non-adaptive, one-sided monotonicity tester with query complexity
-$O(\varepsilon^{-2} d^{1/2 + o(1)})$, independent of $n$. Up to the $d^{o(1)}$-factors, our result resolves the non-adaptive complexity of monotonicity testing for Boolean functions on hypergrids. The independence of $n$ yields a non-adaptive, one-sided $O(\varepsilon^{-2} d^{1/2 + o(1)})$-query monotonicity tester for Boolean functions $f:\mathbb{R}^d \to \{0,1\}$ associated with an arbitrary product measure.
-  </description>
-  <pubDate>2023-04-18 19:15:38 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>Regression and Algorithmic Information Theory</title>
-  <guid>http://arxiv.org/abs/2304.07825</guid>
-  <link>http://arxiv.org/abs/2304.07825</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Epstein_S/0/1/0/all/0/1&quot;&gt;Samuel Epstein&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper we prove a theorem about regression, in that the shortest
-description of a function consistent with a finite sample of data is less than
-the combined conditional Kolmogorov complexities over the data in the sample.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-18 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Efficient Incremental Penetration Depth Estimation between Convex Geometries</title>
-  <guid>http://arxiv.org/abs/2304.07357</guid>
-  <link>http://arxiv.org/abs/2304.07357</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gao_W/0/1/0/all/0/1&quot;&gt;Wei Gao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Penetration depth (PD) is essential for robotics due to its extensive
-applications in dynamic simulation, motion planning, haptic rendering, etc. The
-Expanding Polytope Algorithm (EPA) is the de facto standard for this problem,
-which estimates PD by expanding an inner polyhedral approximation of an
-implicit set. In this paper, we propose a novel optimization-based algorithm
-that incrementally estimates minimum penetration depth and its direction. One
-major advantage of our method is that it can be warm-started by exploiting the
-spatial and temporal coherence, which emerges naturally in many robotic
-applications (e.g., the temporal coherence between adjacent simulation time
-knots). As a result, our algorithm achieves substantial speedup -- we
-demonstrate it is 5-30x faster than EPA on several benchmarks. Moreover, our
-approach is built upon the same implicit geometry representation as EPA, which
-enables easy integration and deployment into existing software stacks. We also
-provide an open-source implementation for further evaluations and experiments.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-18 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Random $\epsilon$-Cover on Compact Symmetric Space</title>
-  <guid>http://arxiv.org/abs/2304.07622</guid>
-  <link>http://arxiv.org/abs/2304.07622</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Chakraborty_S/0/1/0/all/0/1&quot;&gt;Somnath Chakraborty&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A randomized scheme that succeeds with probability $1-\delta$ (for any
-$\delta&amp;gt;0$) has been devised to construct (1) an equidistributed
-$\epsilon$-cover of a compact Riemannian symmetric space $\mathbb M$ of
-dimension $d_{\mathbb M}$ and antipodal dimension $\bar{d}_{\mathbb M}$, and
-(2) an approximate $(\lambda_r,2)$-design, using $n(\epsilon,\delta)$-many
-Haar-random isometries of $\mathbb M$, where
-\begin{equation}n(\epsilon,\delta):=O_{\mathbb M}\left(d_{\mathbb M}\ln
-\left(\frac 1\epsilon\right)+\log\left(\frac
-1\delta\right)\right)\,,\end{equation} and $\lambda_r$ is the $r$-th smallest
-eigenvalue of the Laplace-Beltrami operator on $\mathbb M$. The
-$\epsilon$-cover so-produced can be used to compute the integral of 1-Lipschitz
-functions within additive $\tilde O(\epsilon)$-error, as well as in comparing
-persistence homology computed from data cloud to that of a hypothetical data
-cloud sampled from the uniform measure.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-18 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Simple Combinatorial Construction of the $k^{o(1)}$-Lower Bound for Approximating the Parameterized $k$-Clique</title>
-  <guid>http://arxiv.org/abs/2304.07516</guid>
-  <link>http://arxiv.org/abs/2304.07516</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_Y/0/1/0/all/0/1&quot;&gt;Yijia Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Feng_Y/0/1/0/all/0/1&quot;&gt;Yi Feng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Laekhanukit_B/0/1/0/all/0/1&quot;&gt;Bundit Laekhanukit&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Liu_Y/0/1/0/all/0/1&quot;&gt;Yanlin Liu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the parameterized $k$-clique problem, or $k$-Clique for short, we are
-given a graph $G$ and a parameter $k\ge 1$. The goal is to decide whether there
-exist $k$ vertices in $G$ that induce a complete subgraph (i.e., a $k$-clique).
-This problem plays a central role in the theory of parameterized intractability
-as one of the first W[1]-complete problems. Existing research has shown that
-even an FPT-approximation algorithm for $k$-Clique with arbitrary ratio does
-not exist, assuming the Gap-Exponential-Time Hypothesis (Gap-ETH) [Chalermsook
-et al., FOCS&#39;17 and SICOMP]. However, whether this inapproximability result can
-be based on the standard assumption of $\mathrm{W} 1\ne \mathrm{FPT}$ remains
-unclear. The recent breakthrough of Bingkai Lin [STOC&#39;21] and subsequent works
-by Karthik C.S. and Khot [CCC&#39;22], and by Lin, Ren, Sun Wang [ICALP&#39;22] give a
-technique that bypasses Gap-ETH, thus leading to the inapproximability ratio of
-$O(1)$ and $k^{o(1)}$ under $\mathrm{W}[1]$-hardness (the first two) and ETH
-(for the latter one). All the work along this line follows the framework
-developed by Lin, which starts from the $k$-vector-sum problem and requires
-some involved algebraic techniques.
-&lt;/p&gt;
-&lt;p&gt;This paper presents an alternative framework for proving the W[1]-hardness of
-the $k^{o(1)}$-FPT-inapproximability of $k$-Clique. Using this framework, we
-obtain a gap-producing self-reduction of $k$-Clique without any intermediate
-algebraic problem. More precisely, we reduce from $(k,k-1)$-Gap Clique to
-$(q^k, q^{k-1})$-Gap Clique, for any function $q$ depending only on the
-parameter $k$, thus implying the $k^{o(1)}$-inapproximability result when $q$
-is sufficiently large. Our proof is relatively simple and mostly combinatorial.
-At the core of our construction is a novel encoding of $k$-element subset
-stemming from the theory of &quot;network coding&quot; and a &quot;Sidon set&quot; representation
-of a graph.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-18 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On modeling NP-Complete problems as polynomial-sized linear programs: Escaping/Side-stepping the &quot;barriers&quot;</title>
-  <guid>http://arxiv.org/abs/2304.07716</guid>
-  <link>http://arxiv.org/abs/2304.07716</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Diaby_M/0/1/0/all/0/1&quot;&gt;Moustapha Diaby&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Karwan_M/0/1/0/all/0/1&quot;&gt;Mark Karwan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sun_L/0/1/0/all/0/1&quot;&gt;Lei Sun&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In view of the extended formulations (EFs) developments (e.g. &quot;Fiorini, S.,
-S. Massar, S. Pokutta, H.R. Tiwary, and R. de Wolf [2015]. Exponential Lower
-Bounds for Polytopes in Combinatorial Optimization. Journal of the ACM 62:2&quot;),
-we focus in this paper on the question of whether it is possible to model an
-NP-Complete problem as a polynomial-sized linear program. For the sake of
-simplicity of exposition, the discussions are focused on the TSP. We show that
-a finding that there exists no polynomial-sized extended formulation of &quot;the
-TSP polytope&quot; does not (necessarily) imply that it is &quot;impossible&quot; for a
-polynomial-sized linear program to solve the TSP optimization problem. We show
-that under appropriate conditions the TSP optimization problem can be solved
-without recourse to the traditional city-to-city (&quot;travel leg&quot;) variables,
-thereby side-stepping/&quot;escaping from&quot; &quot;the TSP polytope&quot; and hence, the
-barriers. Some illustrative examples are discussed.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-18 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
