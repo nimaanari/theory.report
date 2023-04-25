@@ -9,6 +9,183 @@
 
 
 <item>
+  <title>Deterministic identity testing paradigms for bounded top-fanin depth-4 circuits</title>
+  <guid>http://arxiv.org/abs/2304.11325</guid>
+  <link>http://arxiv.org/abs/2304.11325</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dutta_P/0/1/0/all/0/1&quot;&gt;Pranjal Dutta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dwivedi_P/0/1/0/all/0/1&quot;&gt;Prateek Dwivedi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saxena_N/0/1/0/all/0/1&quot;&gt;Nitin Saxena&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Polynomial Identity Testing (PIT) is a fundamental computational problem. The
+famous depth-$4$ reduction result by Agrawal and Vinay (FOCS 2008) has made PIT
+for depth-$4$ circuits an enticing pursuit. A restricted depth-4 circuit
+computing a $n$-variate degree-$d$ polynomial of the form $\sum_{i = 1}^{k}
+\prod_{j} g_{ij}$, where $\deg g_{ij} \leq \delta$ is called
+$\Sigma^{[k]}\Pi\Sigma\Pi^{[\delta]}$ circuit. On further restricting $g_{ij}$
+to be sum of univariates we obtain $\Sigma^{[k]}\Pi\Sigma\wedge$ circuits. The
+largely open, special-cases of $\Sigma^{[k]}\Pi\Sigma\Pi^{[\delta]}$ for
+constant $k$ and $\delta$, and $\Sigma^{[k]}\Pi\Sigma\wedge$ have been a source
+of many great ideas in the last two decades. For eg. depth-$3$ ideas of Dvir
+and Shpilka (STOC 2005), Kayal and Saxena (CCC 2006), and Saxena and Seshadhri
+(FOCS 2010 and STOC 2011). Further, depth-$4$ ideas of Beecken, Mittmann and
+Saxena (ICALP 2011), Saha, Saxena and Saptharishi (Comput.Compl. 2013), Forbes
+(FOCS 2015), and Kumar and Saraf (CCC 2016). Additionally, geometric
+Sylvester-Gallai ideas of Kayal and Saraf (FOCS 2009), Shpilka (STOC 2019), and
+Peleg and Shpilka (CCC 2020, STOC 2021). Very recently, a subexponential-time
+blackbox PIT algorithm for constant-depth circuits was obtained via lower bound
+breakthrough of Limaye, Srinivasan, Tavenas (FOCS 2021). We solve two of the
+basic underlying open problems in this work.
+&lt;/p&gt;
+&lt;p&gt;We give the first polynomial-time PIT for $\Sigma^{[k]}\Pi\Sigma\wedge$. We
+also give the first quasipolynomial time blackbox PIT for both
+$\Sigma^{[k]}\Pi\Sigma\wedge$ and $\Sigma^{[k]}\Pi\Sigma\Pi^{[\delta]}$. A key
+technical ingredient in all the three algorithms is how the logarithmic
+derivative, and its power-series, modify the top $\Pi$-gate to $\wedge$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-25 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Explicit Directional Affine Extractors and Improved Hardness for Linear Branching Programs</title>
+  <guid>http://arxiv.org/abs/2304.11495</guid>
+  <link>http://arxiv.org/abs/2304.11495</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_X/0/1/0/all/0/1&quot;&gt;Xin Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhong_Y/0/1/0/all/0/1&quot;&gt;Yan Zhong&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In a recent work, Gryaznov, Pudl\&#39;{a}k, and Talebanfard (CCC&#39; 22) introduced
+a stronger version of affine extractors known as directional affine extractors,
+together with a generalization of $\mathsf{ROBP}$s where each node can make
+linear queries, and showed that the former implies strong lower bound for a
+certain type of the latter known as strongly read-once linear branching
+programs ($\mathsf{SROLBP}$s). Their main result gives explicit constructions
+of directional affine extractors for entropy $k &amp;gt; 2n/3$, which implies
+average-case complexity $2^{n/3-o(n)}$ against $\mathsf{SROLBP}$s with
+exponentially small correlation. A follow-up work by Chattopadhyay and Liao
+(ECCC&#39; 22) improves the hardness to $2^{n-o(n)}$ at the price of increasing the
+correlation to polynomially large.
+&lt;/p&gt;
+&lt;p&gt;This paper provides a much more in-depth study of directional affine
+extractors, $\mathsf{SROLBP}$s, and $\mathsf{ROBP}$s. Our main results include:
+&lt;/p&gt;
+&lt;p&gt;A formal separation between $\mathsf{SROLBP}$ and $\mathsf{ROBP}$, showing
+that $\mathsf{SROLBP}$s can be exponentially more powerful than
+$\mathsf{ROBP}$s.
+&lt;/p&gt;
+&lt;p&gt;An explicit construction of directional affine extractors with $k=o(n)$ and
+exponentially small error, which gives average-case complexity $2^{n-o(n)}$
+against $\mathsf{SROLBP}$s with exponentially small correlation, thus answering
+the two open questions raised in previous works.
+&lt;/p&gt;
+&lt;p&gt;An explicit function in $\mathsf{AC}^0$ that gives average-case complexity
+$2^{(1-\delta)n}$ against $\mathsf{ROBP}$s with negligible correlation, for any
+constant $\delta&amp;gt;0$. Previously, the best size lower bound for any function in
+$\mathsf{AC}^0$ against $\mathsf{ROBP}$s is only $2^{\Omega(\sqrt{n})}$.
+&lt;/p&gt;
+&lt;p&gt;One of the key ingredients in our constructions is a new linear somewhere
+condenser for affine sources.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-25 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>The Voronoi Diagram of Rotating Rays with applications to Floodlight Illumination</title>
+  <guid>http://arxiv.org/abs/2304.11429</guid>
+  <link>http://arxiv.org/abs/2304.11429</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alegria_C/0/1/0/all/0/1&quot;&gt;Carlos Alegr&amp;#xed;a&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mantas_I/0/1/0/all/0/1&quot;&gt;Ioannis Mantas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Papadopoulou_E/0/1/0/all/0/1&quot;&gt;Evanthia Papadopoulou&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Savic_M/0/1/0/all/0/1&quot;&gt;Marko Savi&amp;#x107;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Seara_C/0/1/0/all/0/1&quot;&gt;Carlos Seara&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Suderland_M/0/1/0/all/0/1&quot;&gt;Martin Suderland&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the Voronoi Diagram of Rotating Rays, a Voronoi structure where the
+input sites are rays and the distance function between a point and a site/ray,
+is the counterclockwise angular distance. This novel Voronoi diagram is
+motivated by illumination or coverage problems, where a domain must be covered
+by floodlights/wedges of uniform angle, and the goal is to find the minimum
+angle necessary to cover the domain. We study the diagram in the plane, and we
+present structural properties, combinatorial complexity bounds, and a
+construction algorithm. If the rays are induced by a convex polygon, we show
+how to construct the Voronoi diagram within this polygon in linear time. Using
+this information, we can find in optimal linear time the Brocard angle, the
+minimum angle required to illuminate a convex polygon with floodlights of
+uniform angle.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-25 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>High-Accuracy Multicommodity Flows via Iterative Refinement</title>
+  <guid>http://arxiv.org/abs/2304.11252</guid>
+  <link>http://arxiv.org/abs/2304.11252</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_L/0/1/0/all/0/1&quot;&gt;Li Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ye_M/0/1/0/all/0/1&quot;&gt;Mingquan Ye&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The multicommodity flow problem is a classic problem in network flow and
+combinatorial optimization, with applications in transportation, communication,
+logistics, and supply chain management, etc. Existing algorithms often focus on
+low-accuracy approximate solutions, while high-accuracy algorithms typically
+rely on general linear program solvers. In this paper, we present efficient
+high-accuracy algorithms for a broad family of multicommodity flow problems on
+undirected graphs, demonstrating improved running times compared to general
+linear program solvers. Our main result shows that we can solve the $\ell_{q,
+p}$-norm multicommodity flow problem to a $(1 + \varepsilon)$ approximation in
+time $O_{q, p}(m^{1+o(1)} k^2 \log(1 / \varepsilon))$, where $k$ is the number
+of commodities, and $O_{q, p}(\cdot)$ hides constants depending only on $q$ or
+$p$. As $q$ and $p$ approach to $1$ and infinity respectively, $\ell_{q,
+p}$-norm flow tends to maximum concurrent flow.
+&lt;/p&gt;
+&lt;p&gt;We introduce the first iterative refinement framework for $\ell_{q, p}$-norm
+minimization problems, which reduces the problem to solving a series of
+decomposable residual problems. In the case of $k$-commodity flow, each
+residual problem can be decomposed into $k$ single commodity convex flow
+problems, each of which can be solved in almost-linear time. As many classical
+variants of multicommodity flows were shown to be complete for linear programs
+in the high-accuracy regime [Ding-Kyng-Zhang, ICALP&#39;22], our result provides
+new directions for studying more efficient high-accuracy multicommodity flow
+algorithms.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-25 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Euclidean Capacitated Vehicle Routing in Random Setting: A $1.55$-Approximation Algorithm</title>
+  <guid>http://arxiv.org/abs/2304.11281</guid>
+  <link>http://arxiv.org/abs/2304.11281</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nie_Z/0/1/0/all/0/1&quot;&gt;Zipei Nie&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_H/0/1/0/all/0/1&quot;&gt;Hang Zhou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the unit-demand capacitated vehicle routing problem in the random
+setting of the Euclidean plane. The objective is to visit $n$ random terminals
+in a square using a set of tours of minimum total length, such that each tour
+visits the depot and at most $k$ terminals.
+&lt;/p&gt;
+&lt;p&gt;We design an elegant algorithm combining the classical sweep heuristic and
+Arora&#39;s framework for the Euclidean traveling salesman problem [Journal of the
+ACM 1998]. We show that our algorithm is a polynomial-time approximation of
+ratio at most $1.55$ asymptotically almost surely. This improves on previous
+approximation ratios of $1.995$ due to Bompadre, Dror, and Orlin [Journal of
+Applied Probability 2007] and $1.915$ due to Mathieu and Zhou [Random
+Structures and Algorithms 2022]. In addition, we conjecture that, for any
+$\varepsilon&amp;gt;0$, our algorithm is a $(1+\varepsilon)$-approximation
+asymptotically almost surely.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-25 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Covering multigraphs with bipartite graphs</title>
+  <guid>http://arxiv.org/abs/2304.11691</guid>
+  <link>http://arxiv.org/abs/2304.11691</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Kim_J/0/1/0/all/0/1&quot;&gt;Jaehoon Kim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lee_H/0/1/0/all/0/1&quot;&gt;Hyunwoo Lee&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Hansel&#39;s lemma states that $\sum_{H\in \mathcal{H}}|H| \geq n \log_2 n$ holds
+where $\mathcal{H}$ is a collection of bipartite graphs covering all the edges
+of $K_n$. We generalize this lemma to the corresponding multigraph covering
+problem and the graphon covering problem. We also prove an upper bound on
+$\sum_{H\in \mathcal{H}}|H|$ which shows that our generalization is
+asymptotically tight in some sense.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-25 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Geometry of Tensors: Open problems and research directions</title>
   <guid>http://arxiv.org/abs/2304.10570</guid>
   <link>http://arxiv.org/abs/2304.10570</link>
@@ -1462,184 +1639,6 @@ computations and determine the values of the L2 relaxation for larger p&#39;s. O
 results provide additional numerical evidence that the L2 relaxations, and
 therefore also the SOS-4 relaxations, are asymptotically growing at an order
 smaller than the square root of p.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Super-Logarithmic Lower Bounds for Dynamic Graph Problems</title>
-  <guid>http://arxiv.org/abs/2304.08745</guid>
-  <link>http://arxiv.org/abs/2304.08745</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Larsen_K/0/1/0/all/0/1&quot;&gt;Kasper Green Larsen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yu_H/0/1/0/all/0/1&quot;&gt;Huacheng Yu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work, we prove a $\tilde{\Omega}(\lg^{3/2} n )$ unconditional lower
-bound on the maximum of the query time and update time for dynamic data
-structures supporting reachability queries in $n$-node directed acyclic graphs
-under edge insertions. This is the first super-logarithmic lower bound for any
-natural graph problem. In proving the lower bound, we also make novel
-contributions to the state-of-the-art data structure lower bound techniques
-that we hope may lead to further progress in proving lower bounds.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Lossy Compressor preserving variant calling through Extended BWT</title>
-  <guid>http://arxiv.org/abs/2304.08534</guid>
-  <link>http://arxiv.org/abs/2304.08534</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Guerrini_V/0/1/0/all/0/1&quot;&gt;Veronica Guerrini&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Louza_F/0/1/0/all/0/1&quot;&gt;Felipe A. Louza&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rosone_G/0/1/0/all/0/1&quot;&gt;Giovanna Rosone&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A standard format used for storing the output of high-throughput sequencing
-experiments is the FASTQ format. It comprises three main components: (i)
-headers, (ii) bases (nucleotide sequences), and (iii) quality scores. FASTQ
-files are widely used for variant calling, where sequencing data are mapped
-into a reference genome to discover variants that may be used for further
-analysis. There are many specialized compressors that exploit redundancy in
-FASTQ data with the focus only on either the bases or the quality scores
-components. In this paper we consider the novel problem of lossy compressing,
-in a reference-free way, FASTQ data by modifying both components at the same
-time, while preserving the important information of the original FASTQ. We
-introduce a general strategy, based on the Extended Burrows-Wheeler Transform
-(EBWT) and positional clustering, and we present implementations in both
-internal memory and external memory. Experimental results show that the lossy
-compression performed by our tool is able to achieve good compression while
-preserving information relating to variant calling more than the competitors.
-Availability: the software is freely available at
-https://github.com/veronicaguerrini/BFQzip.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Traversing combinatorial 0/1-polytopes via optimization</title>
-  <guid>http://arxiv.org/abs/2304.08567</guid>
-  <link>http://arxiv.org/abs/2304.08567</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Merino_A/0/1/0/all/0/1&quot;&gt;Arturo Merino&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mutze_T/0/1/0/all/0/1&quot;&gt;Torsten M&amp;#xfc;tze&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we present a new framework that exploits combinatorial
-optimization for efficiently generating a large variety of combinatorial
-objects based on graphs, matroids, posets and polytopes. Our method relies on a
-simple and versatile algorithm for computing a Hamilton path on the skeleton of
-any 0/1-polytope ${\rm conv}(X)$, where $X\subseteq \{0,1\}^n$. The algorithm
-uses as a black box any algorithm that solves a variant of the classical linear
-optimization problem $\min\{w\cdot x\mid x\in X\}$, and the resulting delay,
-i.e., the running time per visited vertex on the Hamilton path, is only by a
-factor of $\log n$ larger than the running time of the optimization algorithm.
-When $X$ encodes a particular class of combinatorial objects, then traversing
-the skeleton of the polytope ${\rm conv}(X)$ along a Hamilton path corresponds
-to listing the combinatorial objects by local change operations, i.e., we
-obtain Gray code listings. As concrete results of our general framework, we
-obtain efficient algorithms for generating all ($c$-optimal) bases in a
-matroid; ($c$-optimal) spanning trees, forests, ($c$-optimal) matchings in a
-general graph; ($c$-optimal) vertex covers, ($c$-optimal) stable sets in a
-bipartite graph; as well as ($c$-optimal) antichains and ideals of a poset. The
-delay and space required by these algorithms are polynomial in the size of the
-matroid, graph, or poset, respectively, and these listings correspond to
-Hamilton paths on the corresponding combinatorial polytopes. We also obtain an
-$O(t_{\rm LP} \log n)$ delay algorithm for the vertex enumeration problem on
-0/1-polytopes $\{x\in\mathbb{R}^n\mid Ax\leq b\}$, where $A\in
-\mathbb{R}^{m\times n}$ and $b\in\mathbb{R}^m$, and $t_{\rm LP}$ is the time
-needed to solve the linear program $\min\{w\cdot x\mid Ax\leq b\}$. This
-improves upon the 25-year old $O(t_{\rm LP}\,n)$ delay algorithm of Bussieck
-and L\&quot;ubbecke.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Graph Sparsification by Approximate Matrix Multiplication</title>
-  <guid>http://arxiv.org/abs/2304.08581</guid>
-  <link>http://arxiv.org/abs/2304.08581</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Charalambides_N/0/1/0/all/0/1&quot;&gt;Neophytos Charalambides&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Hero_A/0/1/0/all/0/1&quot;&gt;Alfred O. Hero III&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Graphs arising in statistical problems, signal processing, large networks,
-combinatorial optimization, and data analysis are often dense, which causes
-both computational and storage bottlenecks. One way of \textit{sparsifying} a
-\textit{weighted} graph, while sharing the same vertices as the original graph
-but reducing the number of edges, is through \textit{spectral sparsification}.
-We study this problem through the perspective of RandNLA. Specifically, we
-utilize randomized matrix multiplication to give a clean and simple analysis of
-how sampling according to edge weights gives a spectral approximation to graph
-Laplacians. Through the $CR$-MM algorithm, we attain a simple and
-computationally efficient sparsifier whose resulting Laplacian estimate is
-unbiased and of minimum variance. Furthermore, we define a new notion of
-\textit{additive spectral sparsifiers}, which has not been considered in the
-literature.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Subcubic algorithm for (Unweighted) Unrooted Tree Edit Distance</title>
-  <guid>http://arxiv.org/abs/2304.08632</guid>
-  <link>http://arxiv.org/abs/2304.08632</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pioro_K/0/1/0/all/0/1&quot;&gt;Krzysztof Pi&amp;#xf3;ro&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The tree edit distance problem is a natural generalization of the classic
-string edit distance problem. Given two ordered, edge-labeled trees $T_1$ and
-$T_2$, the edit distance between $T_1$ and $T_2$ is defined as the minimum
-total cost of operations that transform $T_1$ into $T_2$. In one operation, we
-can contract an edge, split a vertex into two or change the label of an edge.
-For the weighted version of the problem, where the cost of each operation
-depends on the type of the operation and the label on the edge involved,
-$\mathcal{O}(n^3)$ time algorithms are known for both rooted and unrooted
-trees. The existence of a truly subcubic $\mathcal{O}(n^{3-\epsilon})$ time
-algorithm is unlikely, as it would imply a truly subcubic algorithm for the
-APSP problem. However, recently Mao (FOCS&#39;21) showed that if we assume that
-each operation has a unit cost, then the tree edit distance between two rooted
-trees can be computed in truly subcubic time. In this paper, we show how to
-adapt Mao&#39;s algorithm to make it work for unrooted trees and we show an
-$\widetilde{\mathcal{O}}(n^{(7\omega + 15)/(2\omega + 6)}) \leq
-\mathcal{O}(n^{2.9417})$ time algorithm for the unweighted tree edit distance
-between two unrooted trees, where $\omega \leq 2.373$ is the matrix
-multiplication exponent. It is the first known subcubic algorithm for unrooted
-trees. The main idea behind our algorithm is the fact that to compute the tree
-edit distance between two unrooted trees, it is enough to compute the tree edit
-distance between an arbitrary rooting of the first tree and every rooting of
-the second tree.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-19 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Dynamic Vector Bin Packing for Online Resource Allocation in the Cloud</title>
-  <guid>http://arxiv.org/abs/2304.08648</guid>
-  <link>http://arxiv.org/abs/2304.08648</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Murhekar_A/0/1/0/all/0/1&quot;&gt;Aniket Murhekar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arbour_D/0/1/0/all/0/1&quot;&gt;David Arbour&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mai_T/0/1/0/all/0/1&quot;&gt;Tung Mai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rao_A/0/1/0/all/0/1&quot;&gt;Anup Rao&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Several cloud-based applications, such as cloud gaming, rent servers to
-execute jobs which arrive in an online fashion. Each job has a resource demand
-and must be dispatched to a cloud server which has enough resources to execute
-the job, which departs after its completion. Under the `pay-as-you-go&#39; billing
-model, the server rental cost is proportional to the total time that servers
-are actively running jobs. The problem of efficiently allocating a sequence of
-online jobs to servers without exceeding the resource capacity of any server
-while minimizing total server usage time can be modelled as a variant of the
-dynamic bin packing problem (DBP), called MinUsageTime DBP.
-&lt;/p&gt;
-&lt;p&gt;In this work, we initiate the study of the problem with multi-dimensional
-resource demands (e.g. CPU/GPU usage, memory requirement, bandwidth usage,
-etc.), called MinUsageTime Dynamic Vector Bin Packing (DVBP). We study the
-competitive ratio (CR) of Any Fit packing algorithms for this problem. We show
-almost-tight bounds on the CR of three specific Any Fit packing algorithms,
-namely First Fit, Next Fit, and Move To Front. We prove that the CR of Move To
-Front is at most $(2\mu+1)d +1$, where $\mu$ is the ratio of the max/min item
-durations. For $d=1$, this significantly improves the previously known upper
-bound of $6\mu+7$ (Kamali &amp;amp; Lopez-Ortiz, 2015). We then prove the CR of First
-Fit and Next Fit are bounded by $(\mu+2)d+1$ and $2\mu d+1$, respectively.
-Next, we prove a lower bound of $(\mu+1)d$ on the CR of any Any Fit packing
-algorithm, an improved lower bound of $2\mu d$ for Next Fit, and a lower bound
-of $2\mu$ for Move To Front in the 1-D case. All our bounds improve or match
-the best-known bounds for the 1-D case. Finally, we experimentally study the
-average-case performance of these algorithms on randomly generated synthetic
-data, and observe that Move To Front outperforms other Any Fit packing
-algorithms.
 &lt;/p&gt;
   </description>
   <pubDate>2023-04-19 00:30:00 UTC</pubDate>
