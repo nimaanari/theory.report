@@ -10,6 +10,31 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-056 |  Approximate Locally Decodable Codes with Constant Query Complexity and Nearly Optimal Rate | 
+
+	Geoffrey Mon, 
+
+	Dana Moshkovitz, 
+
+	Justin Oh</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/056"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/056</id>
+    <updated>2023-04-26T08:57:40+00:00</updated>
+    <content type="html" xml:lang="en">
+    We present simple constructions of good approximate locally decodable codes (ALDCs) in the presence of a $\delta$-fraction of errors for $\delta&amp;amp;lt;1/2$. In a standard locally decodable code $C \colon \Sigma_1^k \to \Sigma_2^n$, there is a decoder $M$ that on input $i \in [k]$ correctly outputs the $i$-th symbol of a message $x$ (with high probability) using only $q$ queries to a given string $w$ that is $\delta$-close to $C(x)$. In an ALDC, the decoder $M$ only needs to be correct on $1-\epsilon$ fraction of $i\in [k]$ for $\epsilon$ much smaller than $\delta$. We present a construction of explicit ALDCs for all constants $1/2&amp;gt;\delta&amp;gt;\epsilon$ with a constant number of queries $q$ and with constant, near-optimal rate. Standard LDCs with constant number of queries and any constant rate are known to be impossible. Past constructions of ALDCs had vanishingly small rate or a large super-constant number of queries.
+
+Our constructions can be adapted to admit a weak notion of list decoding. In a weak approximate locally list decodable code $C \colon \Sigma_1^k \to \Sigma_2^n$, there is a decoder $M$ that on input $i \in [k]$, makes at most $q$ queries to a string $w \in \Sigma_2^n$ and outputs a list of symbols $M(i) \subset \Sigma_1$ with $|M(i)| \ll |\Sigma_1|$. For any codeword $C(x)$ that is $\delta$-close to $w$, $x_i \in M(i)$ for at least $1-\epsilon$ fraction of $i \in [k]$. We provide constructions of weak approximate locally list decodable codes with a constant number of queries and with rate approaching that of random (standard) list decodable codes.
+
+We additionally explore what is the lowest error probability $\epsilon$ one can achieve for fixed $\delta$ and $q$. We show that for any ALDC, $\epsilon = \Omega(\delta^{\lceil q/2\rceil})$. We then show that there exist explicit constant rate ALDCs for any constant $q$ that achieve $\epsilon = O(\delta^{\lceil q/2\rceil})$. In particular, for $q = 3$, we have a constant rate ALDC with error probability $\epsilon = O(\delta^2)$.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: Postdoc at IDSIA – Dalle Molle Institute for Artificial Intelligence (USI-SUPSI) (apply by May 26, 2023)</title>
     <link href="https://cstheory-jobs.org/2023/04/26/postdoc-at-idsia-dalle-molle-institute-for-artificial-intelligence-usi-supsi-apply-by-may-26-2023/"/>
     <id>http://cstheory-jobs.org/2023/04/26/postdoc-at-idsia-dalle-molle-institute-for-artificial-intelligence-usi-supsi-apply-by-may-26-2023/</id>
@@ -1498,38 +1523,6 @@ optimal even for adaptive matrix-vector queries.
 data structure that combines high performance with very good space efficiency.
 This preliminary report outlines avenues for analysis and implementation that
 we intend to pursue.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A New Deterministic Algorithm for Fully Dynamic All-Pairs Shortest Paths</title>
-    <link href="http://arxiv.org/abs/2304.09321"/>
-    <id>http://arxiv.org/abs/2304.09321</id>
-    <updated>2023-04-20T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chuzhoy_J/0/1/0/all/0/1&quot;&gt;Julia Chuzhoy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_R/0/1/0/all/0/1&quot;&gt;Ruimin Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the fully dynamic All-Pairs Shortest Paths (APSP) problem in
-undirected edge-weighted graphs. Given an $n$-vertex graph $G$ with
-non-negative edge lengths, that undergoes an online sequence of edge insertions
-and deletions, the goal is to support approximate distance queries and
-shortest-path queries. We provide a deterministic algorithm for this problem,
-that, for a given precision parameter $\epsilon$, achieves approximation factor
-$(\log\log n)^{2^{O(1/\epsilon^3)}}$, and has amortized update time
-$O(n^{\epsilon}\log L)$ per operation, where $L$ is the ratio of longest to
-shortest edge length. Query time for distance-query is
-$O(2^{O(1/\epsilon)}\cdot \log n\cdot \log\log L)$, and query time for
-shortest-path query is $O(|E(P)|+2^{O(1/\epsilon)}\cdot \log n\cdot \log\log
-L)$, where $P$ is the path that the algorithm returns. To the best of our
-knowledge, even allowing any $o(n)$-approximation factor, no adaptive-update
-algorithms with better than $\Theta(m)$ amortized update time and better than
-$\Theta(n)$ query time were known prior to this work. We also note that our
-guarantees are stronger than the best current guarantees for APSP in
-decremental graphs in the adaptive-adversary setting.
 &lt;/p&gt;
   </content>
     <author>
