@@ -9,6 +9,22 @@
 
 
 <item>
+  <title>TCS+ talk: Wednesday, May 3 — Scott Aaronson, UT Austin</title>
+  <guid>http://tcsplus.wordpress.com/?p=686</guid>
+  <link>https://tcsplus.wordpress.com/2023/04/28/tcs-talk-wednesday-may-3-scott-aaronson-ut-austin/</link>
+  <description>
+    &lt;p&gt;The next TCS+ talk will take place this coming Wednesday, May 3rd at 2:30 PM Eastern Time (11:30 AM Pacific Time, 20:30 Central European Time, 18:30 UTC: &lt;strong&gt;note the unusual time!&lt;/strong&gt;). &lt;strong&gt;Scott Aaronson&lt;/strong&gt; from UT Austin will speak about &amp;#8220;&lt;em&gt;Certified Randomness from Quantum Supremacy&lt;/em&gt;&amp;#8221; (abstract below).&lt;/p&gt;
+&lt;p&gt;You can reserve a spot as an individual or a group to join us live by signing up on &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/next-tcs-talk&quot;&gt;the online form&lt;/a&gt;. Registration is &lt;em&gt;not&lt;/em&gt; required to attend the interactive talk, and the link will be posted on the website the day prior to the talk; however, by registering in the form, you will receive a reminder, along with the link. (The recorded talk will also be posted &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/past-talks&quot;&gt;on our website&lt;/a&gt; afterwards) As usual, for more information about the TCS+ online seminar series and the upcoming talks, or to &lt;a href=&quot;https://sites.google.com/view/tcsplus/welcome/suggest-a-talk&quot;&gt;suggest&lt;/a&gt; a possible topic or speaker, please see &lt;a href=&quot;https://sites.google.com/view/tcsplus/&quot;&gt;the website&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;&lt;p&gt;Abstract: We propose an application for near-term quantum devices: namely, generating cryptographically certified random bits, to use (for example) in proof-of-stake cryptocurrencies. Our protocol repurposes the existing &amp;#8220;quantum supremacy&amp;#8221; experiments, based on random circuit sampling, that Google and USTC have successfully carried out starting in 2019. We show that, whenever the outputs of these experiments pass the now-standard Linear Cross-Entropy Benchmark (LXEB), under plausible hardness assumptions they necessarily contain Ω(n) min-entropy, where n is the number of qubits. To achieve a net gain in randomness, we use a small random seed to produce pseudorandom challenge circuits. In response to the challenge circuits, the quantum computer generates output strings that, after verification, can then be fed into a randomness extractor to produce certified nearly-uniform bits &amp;#8212; thereby &amp;#8220;bootstrapping&amp;#8221; from pseudorandomness to genuine randomness. We prove our protocol sound in two senses: (i) under a hardness assumption called Long List Quantum Supremacy Verification, which we justify in the random oracle model, and (ii) unconditionally in the random oracle model against an eavesdropper who could share arbitrary entanglement with the device. (Note that our protocol&amp;#8217;s output is unpredictable even to a computationally unbounded adversary who can see the random oracle.) Currently, the central drawback of our protocol is the exponential cost of verification, which in practice will limit its implementation to at most n∼60 qubits, a regime where attacks are expensive but not impossible. Modulo that drawback, our protocol appears to be the only practical application of quantum computing that both requires a QC and is physically realizable today.&lt;/p&gt;
+&lt;p&gt;Joint work with Shih-Han Hung. To appear in STOC&amp;#8217;2023.&lt;br /&gt;
+&lt;a href=&quot;https://arxiv.org/abs/2303.01625&quot;&gt;https://arxiv.org/abs/2303.01625&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p class=&quot;authors&quot;&gt;By plustcs&lt;/p&gt;
+  </description>
+  <pubDate>2023-04-28 10:27:46 UTC</pubDate>
+  <author>TCS+ Seminar Series</author>
+</item>
+
+<item>
   <title>Five Worlds of AI (a joint post with Boaz Barak)</title>
   <guid>https://scottaaronson.blog/?p=7266</guid>
   <link>https://scottaaronson.blog/?p=7266</link>
@@ -1291,33 +1307,6 @@ and Whitmeyer [CCC 2021] which uses $\textsf{poly} (k, (\varepsilon_2 -
 \varepsilon_1)^{-1})$ queries to test whether a function is
 $\varepsilon_1$-close to a $k$-junta or $\varepsilon_2$-far from
 $O(k/(\varepsilon_2-\varepsilon_1)^2)$-juntas.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-04-24 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>How Well Does the Metropolis Algorithm Cope With Local Optima?</title>
-  <guid>http://arxiv.org/abs/2304.10848</guid>
-  <link>http://arxiv.org/abs/2304.10848</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doerr_B/0/1/0/all/0/1&quot;&gt;Benjamin Doerr&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Houssaini_T/0/1/0/all/0/1&quot;&gt;Taha El Ghazi El Houssaini&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rajabi_A/0/1/0/all/0/1&quot;&gt;Amirhossein Rajabi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wit_C/0/1/0/all/0/1&quot;&gt;Carsten Wit&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Metropolis algorithm (MA) is a classic stochastic local search heuristic.
-It avoids getting stuck in local optima by occasionally accepting inferior
-solutions. To better and in a rigorous manner understand this ability, we
-conduct a mathematical runtime analysis of the MA on the CLIFF benchmark. Apart
-from one local optimum, cliff functions are monotonically increasing towards
-the global optimum. Consequently, to optimize a cliff function, the MA only
-once needs to accept an inferior solution. Despite seemingly being an ideal
-benchmark for the MA to profit from its main working principle, our
-mathematical runtime analysis shows that this hope does not come true. Even
-with the optimal temperature (the only parameter of the MA), the MA optimizes
-most cliff functions less efficiently than simple elitist evolutionary
-algorithms (EAs), which can only leave the local optimum by generating a
-superior solution possibly far away. This result suggests that our
-understanding of why the MA is often very successful in practice is not yet
-complete. Our work also suggests to equip the MA with global mutation
-operators, an idea supported by our preliminary experiments.
 &lt;/p&gt;
   </description>
   <pubDate>2023-04-24 00:30:00 UTC</pubDate>
