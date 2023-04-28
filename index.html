@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-04-27T23:30:30Z">Thursday, April 27 2023, 23:30</time>
+          <time class='timeago' datetime="2023-04-28T01:00:21Z">Friday, April 28 2023, 01:00</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -341,6 +341,947 @@
 
   <div class="tr-articles tr-shrink">
     
+    
+    <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Friday, April 28
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://scottaaronson.blog/?p=7266'>Five Worlds of AI (a joint post with Boaz Barak)</a></h3>
+        <p class='tr-article-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Artificial intelligence has made incredible progress in the last decade, but in one crucial aspect, it still lags behind the theoretical computer science of the 1990s: namely, there is no essay describing five potential worlds that we could live in and giving each one of them whimsical names.  In other words, no one has done [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <div class="wp-block-image">
+<figure class="aligncenter size-large"><img decoding="async" src="https://www.scottaaronson.com/fiveworlds.jpg" alt=""/></figure></div>
+
+
+<p>Artificial intelligence has made incredible progress in the last decade, but in one crucial aspect, it still lags behind the theoretical computer science of the 1990s: namely, there is no <a href="https://www.quantamagazine.org/which-computational-universe-do-we-live-in-20220418/">essay describing five potential worlds that we could live in and giving each one of them whimsical names</a>.  In other words, no one has done for AI what Russell Impagliazzo did for complexity theory in 1995, when he defined the five worlds Algorithmica, Heuristica, Pessiland, Minicrypt, and Cryptomania, corresponding to five possible resolutions of the P vs. NP problem along with the central unsolved problems of cryptography.</p>
+
+
+
+<p>In this blog post, we&#8212;Scott and Boaz&#8212;aim to remedy this gap.  Specifically, we consider 5 possible scenarios for how AI will evolve in the future.  (Incidentally, it was at a <a href="http://dimacs.rutgers.edu/archive/Workshops/Cryptography/program.html">2009 workshop</a> devoted to Impagliazzo’s five worlds co-organized by Boaz where Scott met his now wife, complexity theorist <a href="https://www.cs.utexas.edu/~danama/">Dana Moshkovitz</a>.  We hope civilization will continue for long enough that someone in the future could meet their soulmate, or neuron-mate, at a future workshop about <em>our</em> five worlds.)</p>
+
+
+
+<p>Like in <a href="https://www.karlin.mff.cuni.cz/~krajicek/ri5svetu.pdf">Impagliazzo’s 1995 paper</a> on the five potential worlds of the difficulty of NP problems, we will not try to be exhaustive but rather concentrate on extreme cases.&nbsp; It’s possible that we’ll end up in a mixture of worlds or a situation not described by any of the worlds.&nbsp; Indeed, one crucial difference between our setting and Impagliazzo’s, is that in the complexity case, the worlds corresponded to concrete (and mutually exclusive) mathematical conjectures.&nbsp; So in some sense, the question wasn’t “which world <em>will</em> we live in?” but “which world have we Platonically <em>always</em> lived in, without knowing it?”&nbsp; In contrast, the impact of AI will be a complex mix of mathematical bounds, computational capabilities, human discoveries, and social and legal issues. Hence, the worlds we describe depend on more than just the fundamental capabilities and limitations of artificial intelligence, and humanity could also shift from one of these worlds to another over time.</p>
+
+
+
+<p>Without further ado, we name our five worlds “<strong>AI-Fizzle,”</strong> <strong>“Futurama,”</strong> <strong>”AI-Dystopia,”</strong> <strong>“Singularia,”</strong> and <strong>“Paperclipalypse.”</strong>&nbsp; In this essay, we don’t try to assign probabilities to these scenarios; we merely sketch their assumptions and technical and social consequences. We hope that by making assumptions explicit, we can help ground the debate on the various risks around AI.</p>
+
+
+
+<p><strong>AI-Fizzle. </strong>In this scenario, AI “runs out of steam” fairly soon. AI still has a significant impact on the world (so it’s not the same as a “cryptocurrency fizzle”), but relative to current expectations, this would be considered a disappointment.  Rather than the industrial or computer revolutions, AI might be compared in this case to nuclear power: people were initially thrilled about the seemingly limitless potential, but decades later, that potential remains mostly unrealized.  With nuclear power, though, many would argue that the potential went unrealized mostly for sociopolitical rather than technical reasons.  Could AI also fizzle by political fiat?</p>
+
+
+
+<p>Regardless of the answer, another possibility is that costs (in data and computation) scale up so rapidly as a function of performance and reliability that AI is not cost-effective to apply in many domains. That is, it could be that for most jobs, humans will still be more reliable and energy-efficient (we don’t normally think of <em>low wattage</em> as being key to human specialness, but it might turn out that way!).&nbsp; So, like nuclear fusion, an AI which yields dramatically more value than the resources needed to build and deploy it might always remain a couple of decades in the future.&nbsp; In this scenario, AI would replace and enhance some fraction of human jobs and improve productivity, but the 21st century would not be the “century of AI,” and AI’s impact on society would be limited for both good and bad.</p>
+
+
+
+<p><strong>Futurama.</strong> In this scenario, AI unleashes a revolution that’s entirely comparable to the scientific, industrial, or information revolutions (but “merely” those).  AI systems grow significantly in capabilities and perform many of the tasks currently performed by human experts at a small fraction of the cost, in some domains <em>superhumanly</em>.  However, AI systems are still used as <em>tools</em> by humans, and except for a few fringe thinkers, no one treats them as sentient.  AI easily passes the Turing test, can prove hard math theorems, and can generate entertaining content (as well as deepfakes). But humanity gets used to that, just like we got used to computers creaming us in chess, translating text, and generating special effects in movies.  Most people no more feel inferior to their AI than they feel inferior to their car because it runs faster.  In this scenario, people will anthropomorphize AI <em>less</em> over time (as happened with digital computers themselves).  In <strong>“Futurama,”</strong> AI will, like any revolutionary technology, be used for both good and bad.  but like prior major technological revolutions, on the whole, AI will have a large positive impact on humanity. AI will be used to reduce poverty and ensure that more of humanity has access to food, healthcare, education, and economic opportunities. The fraction of people living in democracies increases. In <strong>“Futurama,”</strong> AI systems will sometimes cause harm, but the vast majority of these failures will be due to human negligence or maliciousness.  Some AI systems might be so complex that it would be best to model them as potentially behaving  “adversarially,” and part of the practice of deploying AIs responsibly would be to ensure an “operating envelope” that limits their potential damage even under adversarial failures. </p>
+
+
+
+<p><strong>AI-Dystopia.</strong> The technical assumptions of <strong>“AI-Dystopia”</strong> are similar to those of <strong>“Futurama,”</strong> but the upshot could hardly be more different.  Here, again, AI unleashes a revolution on the scale of the industrial or computer revolutions, but the change is markedly for the worse.  AI greatly increases the scale of surveillance by government and private corporations.  It causes massive job losses while enriching a tiny elite.  It entrenches society’s existing inequalities and biases.  And it takes away a central tool against oppression: namely, the ability of humans to refuse or subvert orders.</p>
+
+
+
+<p>Interestingly, it’s even possible that <em>the same future</em> could be characterized as <strong>Futurama</strong> by some people and as <strong>AI-Dystopia</strong> by others–just like how some people emphasize how our <em>current</em> technological civilization has lifted billions out of poverty into a standard of living unprecedented in human history, while others focus on the still existing (and in some cases rising) inequalities and suffering, and consider it a neoliberal capitalist dystopia.</p>
+
+
+
+<p><strong>Singularia.</strong>&nbsp; Here AI breaks out of the current paradigm, where increasing capabilities require ever-growing resources of data and computation and no longer needs human data or human-provided hardware and energy to become stronger at an ever-increasing pace.&nbsp; AIs improve their own intellectual capabilities, including by developing new science, and (whether by deliberate design or happenstance) they act as goal-oriented agents in the physical world.&nbsp; They can effectively be thought of as an alien civilization–or perhaps as a new species, which is to us as we were to <em>Homo erectus</em>.</p>
+
+
+
+<p>Fortunately, though (and again, whether by careful design or just as a byproduct of their human origins), the AIs act to us like benevolent gods and lead us to an “AI utopia.”&nbsp; They solve our material problems for us, giving us unlimited abundance and presumably virtual-reality adventures of our choosing.&nbsp; (Though maybe, as in <em>The Matrix</em>, the AIs will discover that humans need some conflict, and we will all live in a simulation of 2020’s Twitter, constantly dunking on one another…)&nbsp;</p>
+
+
+
+<p><strong>Paperclipalypse.</strong>  In <strong>“Paperclipalypse”</strong> or “AI Doom,” we again think of future AIs as a superintelligent “alien race” that doesn’t need humanity for its own development.  Here, though, the AIs are either actively opposed to human existence or else indifferent to it in a way that causes our extinction as a byproduct.  In this scenario, AIs do not develop a notion of morality comparable to ours or even a notion that keeping a diversity of species and ensuring humans don’t go extinct might be useful to them in the long run.  Rather, the interaction between AI and Homo sapiens ends about the same way that the interaction between Homo sapiens and Neanderthals ended. </p>
+
+
+
+<p>In fact, the canonical depictions of such a scenario imagine an interaction that is much more abrupt than our brush with the Neanderthals. The idea is that, perhaps because they originated through some optimization procedure, AI systems will have some strong but weirdly-specific goal (a la “maximizing paperclips”), for which the continued existence of humans is, at best, a hindrance.  So the AIs quickly play out the scenarios and, in a matter of milliseconds, decide that the optimal solution is to kill all humans, taking a few extra milliseconds to make a plan for that and execute it.  If conditions are not yet ripe for executing their plan, the AIs pretend to be docile tools, as in the <strong>“Futurama”</strong> scenario, waiting for the right time to strike.  In this scenario, self-improvement happens so quickly that humans might not even notice it.  There need be no intermediate stage in which an AI “merely” kills a few thousand humans, raising 9/11-type alarm bells.</p>
+
+
+
+<p><strong>Regulations</strong>. The practical impact of AI regulations depends, in large part, on which scenarios we consider most likely.  Regulation is not terribly important in the<strong> “AI Fizzle”</strong> scenario where AI, well, fizzles.  In “<strong>Futurama,”</strong> regulations would be aimed at ensuring that on balance, AI is used more for good than for bad, and that the world doesn’t devolve into <strong>“AI Dystopia.”</strong>  The latter goal requires anti-trust and open-science regulations to ensure that power is not concentrated in a few corporations or governments.  Thus, regulations are needed to <em>democratize</em> AI development more than to <em>restrict</em> it.  This doesn’t mean that AI would be completely unregulated.  It might be treated somewhat similarly to drugs—something that can have complex effects and needs to undergo trials before mass deployment.  There would also be regulations aimed at reducing the chance of “bad actors” (whether other nations or individuals) getting access to cutting-edge AIs, but probably the bulk of the effort would be at increasing the chance of thwarting them (e.g., using AI to detect AI-generated misinformation, or using AI to harden systems against AI-aided hackers).  This is similar to how most academic experts believe cryptography should be regulated (and how it <em>is</em> largely regulated these days in most democratic countries): it’s a technology that can be used for both good and bad, but the cost of restricting its access to regular citizens outweighs the benefits.  However, as we do with security exploits today, we might restrict or delay public releases of AI systems to some extent.</p>
+
+
+
+<p>To whatever extent we foresee <strong>“Singularia”</strong> or <strong>“Paperclipalypse,”</strong> however, regulations play a completely different role.  If we knew we were headed for <strong>“Singularia,”</strong> then presumably regulations would be superfluous, except perhaps to try to accelerate the development of AIs!  Meanwhile, if one accepts the assumptions of <strong>“Paperclipalypse,”</strong> any regulations other than the most draconian might be futile.  If, in the near future, almost anyone will be able to spend a few billion dollars to build a recursively self-improving AI that might turn into a superintelligent world-destroying agent, and moreover (unlike with nuclear weapons) they won’t need exotic materials to do so, then it’s hard to see how to forestall the apocalypse, except perhaps via a worldwide, militarily enforced agreement to “<a href="https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/">shut it all down</a>,” as Eliezer Yudkowsky indeed now explicitly advocates.  “Ordinary” regulations could, at best, delay the end by a short amount–given the current pace of AI advances, perhaps not more than a few years.  Thus, regardless of how likely one considers this scenario, one might want to focus more on the other scenarios for methodological reasons alone!</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:37:27Z">Friday, April 28 2023, 00:37</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.13816'>Verifying linear temporal specifications of constant-rate multi-mode systems</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Michael Blondin, Philip Offtermatt, Alex Sansfa&#xe7;on-Buchanan</p><p>Constant-rate multi-mode systems (MMS) are hybrid systems with finitely many
+modes and real-valued variables that evolve over continuous time according to
+mode-specific constant rates. We introduce a variant of linear temporal logic
+(LTL) for MMS, and we investigate the complexity of the model-checking problem
+for syntactic fragments of LTL. We obtain a complexity landscape where each
+fragment is either P-complete, NP-complete or undecidable. These results
+generalize and unify several results on MMS and continuous counter systems.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Blondin_M/0/1/0/all/0/1">Michael Blondin</a>, <a href="http://arxiv.org/find/cs/1/au:+Offtermatt_P/0/1/0/all/0/1">Philip Offtermatt</a>, <a href="http://arxiv.org/find/cs/1/au:+Sansfacon_Buchanan_A/0/1/0/all/0/1">Alex Sansfa&#xe7;on-Buchanan</a></p><p>Constant-rate multi-mode systems (MMS) are hybrid systems with finitely many
+modes and real-valued variables that evolve over continuous time according to
+mode-specific constant rates. We introduce a variant of linear temporal logic
+(LTL) for MMS, and we investigate the complexity of the model-checking problem
+for syntactic fragments of LTL. We obtain a complexity landscape where each
+fragment is either P-complete, NP-complete or undecidable. These results
+generalize and unify several results on MMS and continuous counter systems.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.14058'>A Parameterized Theory of PAC Learning</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Cornelius Brand, Robert Ganian, Kirill Simonov</p><p>Probably Approximately Correct (i.e., PAC) learning is a core concept of
+sample complexity theory, and efficient PAC learnability is often seen as a
+natural counterpart to the class P in classical computational complexity. But
+while the nascent theory of parameterized complexity has allowed us to push
+beyond the P-NP ``dichotomy'' in classical computational complexity and
+identify the exact boundaries of tractability for numerous problems, there is
+no analogue in the domain of sample complexity that could push beyond efficient
+PAC learnability.
+</p>
+<p>As our core contribution, we fill this gap by developing a theory of
+parameterized PAC learning which allows us to shed new light on several recent
+PAC learning results that incorporated elements of parameterized complexity.
+Within the theory, we identify not one but two notions of fixed-parameter
+learnability that both form distinct counterparts to the class FPT -- the core
+concept at the center of the parameterized complexity paradigm -- and develop
+the machinery required to exclude fixed-parameter learnability. We then
+showcase the applications of this theory to identify refined boundaries of
+tractability for CNF and DNF learning as well as for a range of learning
+problems on graphs.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Brand_C/0/1/0/all/0/1">Cornelius Brand</a>, <a href="http://arxiv.org/find/cs/1/au:+Ganian_R/0/1/0/all/0/1">Robert Ganian</a>, <a href="http://arxiv.org/find/cs/1/au:+Simonov_K/0/1/0/all/0/1">Kirill Simonov</a></p><p>Probably Approximately Correct (i.e., PAC) learning is a core concept of
+sample complexity theory, and efficient PAC learnability is often seen as a
+natural counterpart to the class P in classical computational complexity. But
+while the nascent theory of parameterized complexity has allowed us to push
+beyond the P-NP ``dichotomy'' in classical computational complexity and
+identify the exact boundaries of tractability for numerous problems, there is
+no analogue in the domain of sample complexity that could push beyond efficient
+PAC learnability.
+</p>
+<p>As our core contribution, we fill this gap by developing a theory of
+parameterized PAC learning which allows us to shed new light on several recent
+PAC learning results that incorporated elements of parameterized complexity.
+Within the theory, we identify not one but two notions of fixed-parameter
+learnability that both form distinct counterparts to the class FPT -- the core
+concept at the center of the parameterized complexity paradigm -- and develop
+the machinery required to exclude fixed-parameter learnability. We then
+showcase the applications of this theory to identify refined boundaries of
+tractability for CNF and DNF learning as well as for a range of learning
+problems on graphs.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.14145'>Multiplicity Problems on Algebraic Series and Context-Free Grammars</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Nikhil Balaji, Lorenzo Clemente, Klara Nosan, Mahsa Shirmohammadi, James Worrell</p><p>In this paper we obtain complexity bounds for computational problems on
+algebraic power series over several commuting variables. The power series are
+specified by systems of polynomial equations: a formalism closely related to
+weighted context-free grammars. We focus on three problems -- decide whether a
+given algebraic series is identically zero, determine whether all but finitely
+many coefficients are zero, and compute the coefficient of a specific monomial.
+We relate these questions to well-known computational problems on arithmetic
+circuits and thereby show that all three problems lie in the counting
+hierarchy. Our main result improves the best known complexity bound on deciding
+zeroness of an algebraic series. This problem is known to lie in PSPACE by
+reduction to the decision problem for the existential fragment of the theory of
+real closed fields. Here we show that the problem lies in the counting
+hierarchy by reduction to the problem of computing the degree of a polynomial
+given by an arithmetic circuit. As a corollary we obtain new complexity bounds
+on multiplicity equivalence of context-free grammars restricted to a bounded
+language, language inclusion of a nondeterministic finite automaton in an
+unambiguous context-free grammar, and language inclusion of a non-deterministic
+context-free grammar in an unambiguous finite automaton.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Balaji_N/0/1/0/all/0/1">Nikhil Balaji</a>, <a href="http://arxiv.org/find/cs/1/au:+Clemente_L/0/1/0/all/0/1">Lorenzo Clemente</a>, <a href="http://arxiv.org/find/cs/1/au:+Nosan_K/0/1/0/all/0/1">Klara Nosan</a>, <a href="http://arxiv.org/find/cs/1/au:+Shirmohammadi_M/0/1/0/all/0/1">Mahsa Shirmohammadi</a>, <a href="http://arxiv.org/find/cs/1/au:+Worrell_J/0/1/0/all/0/1">James Worrell</a></p><p>In this paper we obtain complexity bounds for computational problems on
+algebraic power series over several commuting variables. The power series are
+specified by systems of polynomial equations: a formalism closely related to
+weighted context-free grammars. We focus on three problems -- decide whether a
+given algebraic series is identically zero, determine whether all but finitely
+many coefficients are zero, and compute the coefficient of a specific monomial.
+We relate these questions to well-known computational problems on arithmetic
+circuits and thereby show that all three problems lie in the counting
+hierarchy. Our main result improves the best known complexity bound on deciding
+zeroness of an algebraic series. This problem is known to lie in PSPACE by
+reduction to the decision problem for the existential fragment of the theory of
+real closed fields. Here we show that the problem lies in the counting
+hierarchy by reduction to the problem of computing the degree of a polynomial
+given by an arithmetic circuit. As a corollary we obtain new complexity bounds
+on multiplicity equivalence of context-free grammars restricted to a bounded
+language, language inclusion of a nondeterministic finite automaton in an
+unambiguous context-free grammar, and language inclusion of a non-deterministic
+context-free grammar in an unambiguous finite automaton.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.13896'>Structure-Aware Lower Bounds and Broadening the Horizon of Tractability for QBF</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Johannes K. Fichte, Robert Ganian, Markus Hecher, Friedrich Slivovsky, Sebastian Ordyniak</p><p>The QSAT problem, which asks to evaluate a quantified Boolean formula (QBF),
+is of fundamental interest in approximation, counting, decision, and
+probabilistic complexity and is also considered the prototypical PSPACEcomplete
+problem. As such, it has previously been studied under various structural
+restrictions (parameters), most notably parameterizations of the primal graph
+representation of instances. Indeed, it is known that QSAT remains
+PSPACE-complete even when restricted to instances with constant treewidth of
+the primal graph, but the problem admits a double-exponential fixed-parameter
+algorithm parameterized by the vertex cover number (primal graph). However,
+prior works have left a gap in our understanding of the complexity of QSAT when
+viewed from the perspective of other natural representations of instances, most
+notably via incidence graphs. In this paper, we develop structure-aware
+reductions which allow us to obtain essentially tight lower bounds for highly
+restricted instances of QSAT, including instances whose incidence graphs have
+bounded treedepth or feedback vertex number. We complement these lower bounds
+with novel algorithms for QSAT which establish a nearly-complete picture of the
+problem's complexity under standard graph-theoretic parameterizations. We also
+show implications for other natural graph representations, and obtain novel
+upper as well as lower bounds for QSAT under more fine-grained
+parameterizations of the primal graph.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Fichte_J/0/1/0/all/0/1">Johannes K. Fichte</a>, <a href="http://arxiv.org/find/cs/1/au:+Ganian_R/0/1/0/all/0/1">Robert Ganian</a>, <a href="http://arxiv.org/find/cs/1/au:+Hecher_M/0/1/0/all/0/1">Markus Hecher</a>, <a href="http://arxiv.org/find/cs/1/au:+Slivovsky_F/0/1/0/all/0/1">Friedrich Slivovsky</a>, <a href="http://arxiv.org/find/cs/1/au:+Ordyniak_S/0/1/0/all/0/1">Sebastian Ordyniak</a></p><p>The QSAT problem, which asks to evaluate a quantified Boolean formula (QBF),
+is of fundamental interest in approximation, counting, decision, and
+probabilistic complexity and is also considered the prototypical PSPACEcomplete
+problem. As such, it has previously been studied under various structural
+restrictions (parameters), most notably parameterizations of the primal graph
+representation of instances. Indeed, it is known that QSAT remains
+PSPACE-complete even when restricted to instances with constant treewidth of
+the primal graph, but the problem admits a double-exponential fixed-parameter
+algorithm parameterized by the vertex cover number (primal graph). However,
+prior works have left a gap in our understanding of the complexity of QSAT when
+viewed from the perspective of other natural representations of instances, most
+notably via incidence graphs. In this paper, we develop structure-aware
+reductions which allow us to obtain essentially tight lower bounds for highly
+restricted instances of QSAT, including instances whose incidence graphs have
+bounded treedepth or feedback vertex number. We complement these lower bounds
+with novel algorithms for QSAT which establish a nearly-complete picture of the
+problem's complexity under standard graph-theoretic parameterizations. We also
+show implications for other natural graph representations, and obtain novel
+upper as well as lower bounds for QSAT under more fine-grained
+parameterizations of the primal graph.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.13915'>Improved Stabilizer Estimation via Bell Difference Sampling</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Sabee Grewal, Vishnu Iyer, William Kretschmer, Daniel Liang</p><p>We study the complexity of learning quantum states in various models with
+respect to the stabilizer formalism and obtain the following results:
+</p>
+<p>- We prove that $\Omega(n)$ $T$-gates are necessary for any Clifford+$T$
+circuit to prepare computationally pseudorandom quantum states, an exponential
+improvement over the previously known bound. This bound is asymptotically tight
+if linear-time quantum-secure pseudorandom functions exist.
+</p>
+<p>- Given an $n$-qubit pure quantum state $|\psi\rangle$ that has fidelity at
+least $\tau$ with some stabilizer state, we give an algorithm that outputs a
+succinct description of a stabilizer state that witnesses fidelity at least
+$\tau - \varepsilon$. The algorithm uses $O(n/(\varepsilon^2\tau^4))$ samples
+and $\exp\left(O(n/\tau^4)\right) / \varepsilon^2$ time. In the regime of
+$\tau$ constant, this algorithm estimates stabilizer fidelity substantially
+faster than the na\"ive $\exp(O(n^2))$-time brute-force algorithm over all
+stabilizer states.
+</p>
+<p>- We improve the soundness analysis of the stabilizer state property testing
+algorithm due to Gross, Nezami, and Walter [Comms. Math. Phys. 385 (2021)]. As
+an application, we exhibit a tolerant property testing algorithm for stabilizer
+states.
+</p>
+<p>The underlying algorithmic primitive in all of our results is Bell difference
+sampling. To prove our results, we establish and/or strengthen connections
+between Bell difference sampling, symplectic Fourier analysis, and graph
+theory.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+Grewal_S/0/1/0/all/0/1">Sabee Grewal</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Iyer_V/0/1/0/all/0/1">Vishnu Iyer</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Kretschmer_W/0/1/0/all/0/1">William Kretschmer</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Liang_D/0/1/0/all/0/1">Daniel Liang</a></p><p>We study the complexity of learning quantum states in various models with
+respect to the stabilizer formalism and obtain the following results:
+</p>
+<p>- We prove that $\Omega(n)$ $T$-gates are necessary for any Clifford+$T$
+circuit to prepare computationally pseudorandom quantum states, an exponential
+improvement over the previously known bound. This bound is asymptotically tight
+if linear-time quantum-secure pseudorandom functions exist.
+</p>
+<p>- Given an $n$-qubit pure quantum state $|\psi\rangle$ that has fidelity at
+least $\tau$ with some stabilizer state, we give an algorithm that outputs a
+succinct description of a stabilizer state that witnesses fidelity at least
+$\tau - \varepsilon$. The algorithm uses $O(n/(\varepsilon^2\tau^4))$ samples
+and $\exp\left(O(n/\tau^4)\right) / \varepsilon^2$ time. In the regime of
+$\tau$ constant, this algorithm estimates stabilizer fidelity substantially
+faster than the na\"ive $\exp(O(n^2))$-time brute-force algorithm over all
+stabilizer states.
+</p>
+<p>- We improve the soundness analysis of the stabilizer state property testing
+algorithm due to Gross, Nezami, and Walter [Comms. Math. Phys. 385 (2021)]. As
+an application, we exhibit a tolerant property testing algorithm for stabilizer
+states.
+</p>
+<p>The underlying algorithmic primitive in all of our results is Bell difference
+sampling. To prove our results, we establish and/or strengthen connections
+between Bell difference sampling, symplectic Fourier analysis, and graph
+theory.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.14295'>On Solution Discovery via Reconfiguration</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Michael R. Fellows, Mario Grobler, Nicole Megow, Amer E. Mouawad, Vijayaragunathan Ramamoorthi, Frances A. Rosamond, Daniel Schmand, Sebastian Siebertz</p><p>The dynamics of real-world applications and systems require efficient methods
+for improving infeasible solutions or restoring corrupted ones by making
+modifications to the current state of a system in a restricted way. We propose
+a new framework of solution discovery via reconfiguration for constructing a
+feasible solution for a given problem by executing a sequence of small
+modifications starting from a given state. Our framework integrates and
+formalizes different aspects of classical local search, reoptimization, and
+combinatorial reconfiguration. We exemplify our framework on a multitude of
+fundamental combinatorial problems, namely Vertex Cover, Independent Set,
+Dominating Set, and Coloring. We study the classical as well as the
+parameterized complexity of the solution discovery variants of those problems
+and explore the boundary between tractable and intractable instances.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Fellows_M/0/1/0/all/0/1">Michael R. Fellows</a>, <a href="http://arxiv.org/find/cs/1/au:+Grobler_M/0/1/0/all/0/1">Mario Grobler</a>, <a href="http://arxiv.org/find/cs/1/au:+Megow_N/0/1/0/all/0/1">Nicole Megow</a>, <a href="http://arxiv.org/find/cs/1/au:+Mouawad_A/0/1/0/all/0/1">Amer E. Mouawad</a>, <a href="http://arxiv.org/find/cs/1/au:+Ramamoorthi_V/0/1/0/all/0/1">Vijayaragunathan Ramamoorthi</a>, <a href="http://arxiv.org/find/cs/1/au:+Rosamond_F/0/1/0/all/0/1">Frances A. Rosamond</a>, <a href="http://arxiv.org/find/cs/1/au:+Schmand_D/0/1/0/all/0/1">Daniel Schmand</a>, <a href="http://arxiv.org/find/cs/1/au:+Siebertz_S/0/1/0/all/0/1">Sebastian Siebertz</a></p><p>The dynamics of real-world applications and systems require efficient methods
+for improving infeasible solutions or restoring corrupted ones by making
+modifications to the current state of a system in a restricted way. We propose
+a new framework of solution discovery via reconfiguration for constructing a
+feasible solution for a given problem by executing a sequence of small
+modifications starting from a given state. Our framework integrates and
+formalizes different aspects of classical local search, reoptimization, and
+combinatorial reconfiguration. We exemplify our framework on a multitude of
+fundamental combinatorial problems, namely Vertex Cover, Independent Set,
+Dominating Set, and Coloring. We study the classical as well as the
+parameterized complexity of the solution discovery variants of those problems
+and explore the boundary between tractable and intractable instances.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.13984'>An FPTAS for Budgeted Laminar Matroid Independent Set</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Ilan Doron-Arad, Ariel Kulik, Hadas Shachnai</p><p>We study the budgeted laminar matroid independent set problem. The input is a
+ground set, where each element has a cost and a non-negative profit, along with
+a laminar matroid over the elements and a budget. The goal is to select a
+maximum profit independent set of the matroid whose total cost is bounded by
+the budget. Several well known special cases, where we have, e.g., no matroid
+constraint (the classic knapsack problem) or a uniform matroid constraint
+(knapsack with a cardinality constraint), admit a fully polynomial-time
+approximation scheme (FPTAS). In contrast, the budgeted matroid independent set
+(BMI) problem with a general matroid has an efficient polynomial-time
+approximation scheme (EPTAS) but does not admit an FPTAS. This implies an EPTAS
+for our problem, which is the best known result prior to this work.
+</p>
+<p>We present an FPTAS for budgeted laminar matroid independent set, improving
+the previous EPTAS for this matroid family and generalizing the FPTAS known for
+knapsack with a cardinality constraint and multiple-choice knapsack. Our scheme
+is based on a simple dynamic program which utilizes the tree-like structure of
+laminar matroids.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Doron_Arad_I/0/1/0/all/0/1">Ilan Doron-Arad</a>, <a href="http://arxiv.org/find/cs/1/au:+Kulik_A/0/1/0/all/0/1">Ariel Kulik</a>, <a href="http://arxiv.org/find/cs/1/au:+Shachnai_H/0/1/0/all/0/1">Hadas Shachnai</a></p><p>We study the budgeted laminar matroid independent set problem. The input is a
+ground set, where each element has a cost and a non-negative profit, along with
+a laminar matroid over the elements and a budget. The goal is to select a
+maximum profit independent set of the matroid whose total cost is bounded by
+the budget. Several well known special cases, where we have, e.g., no matroid
+constraint (the classic knapsack problem) or a uniform matroid constraint
+(knapsack with a cardinality constraint), admit a fully polynomial-time
+approximation scheme (FPTAS). In contrast, the budgeted matroid independent set
+(BMI) problem with a general matroid has an efficient polynomial-time
+approximation scheme (EPTAS) but does not admit an FPTAS. This implies an EPTAS
+for our problem, which is the best known result prior to this work.
+</p>
+<p>We present an FPTAS for budgeted laminar matroid independent set, improving
+the previous EPTAS for this matroid family and generalizing the FPTAS known for
+knapsack with a cardinality constraint and multiple-choice knapsack. Our scheme
+is based on a simple dynamic program which utilizes the tree-like structure of
+laminar matroids.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.13996'>A barrier for further approximating Sorting By Transpositions</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Luiz Augusto G. da Silva, Luis Antonio B. Kowada, Maria Em&#xed;lia M. T. Walter</p><p>The Transposition Distance Problem (TDP) is a classical problem in genome
+rearrangements which seeks to determine the minimum number of transpositions
+needed to transform a linear chromosome into another represented by the
+permutations $\pi$ and $\sigma$. This paper focuses on the equivalent problem
+of Sorting By Transpositions (SBT), where $\sigma$ is the identity permutation
+$\iota$. Specifically, we investigate properties of palisades, a family of
+permutations that are ``hard'' to sort, as they require numerous transpositions
+above the celebrated lower bound devised by Bafna and Pevzner. By determining
+the transposition distance of palisades, we were able to provide the exact
+transposition diameter for $3$-permutations (TD3), a special subset of the
+Symmetric Group $S_n$, essential for the study of approximate solutions for SBT
+using the simplification technique. The exact value for TD3 has remained
+unknown since Elias and Hartman showed an upper bound for it. Another
+consequence of determining the transposition distance of palisades is that,
+using as lower bound the one by Bafna and Pevzner, it is impossible to
+guarantee approximation ratios lower than $1.375$ when approximating SBT. This
+finding has significant implications for the study of SBT, as this problem has
+been subject of intense research efforts for the past 25 years.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Silva_L/0/1/0/all/0/1">Luiz Augusto G. da Silva</a>, <a href="http://arxiv.org/find/cs/1/au:+Kowada_L/0/1/0/all/0/1">Luis Antonio B. Kowada</a>, <a href="http://arxiv.org/find/cs/1/au:+Walter_M/0/1/0/all/0/1">Maria Em&#xed;lia M. T. Walter</a></p><p>The Transposition Distance Problem (TDP) is a classical problem in genome
+rearrangements which seeks to determine the minimum number of transpositions
+needed to transform a linear chromosome into another represented by the
+permutations $\pi$ and $\sigma$. This paper focuses on the equivalent problem
+of Sorting By Transpositions (SBT), where $\sigma$ is the identity permutation
+$\iota$. Specifically, we investigate properties of palisades, a family of
+permutations that are ``hard'' to sort, as they require numerous transpositions
+above the celebrated lower bound devised by Bafna and Pevzner. By determining
+the transposition distance of palisades, we were able to provide the exact
+transposition diameter for $3$-permutations (TD3), a special subset of the
+Symmetric Group $S_n$, essential for the study of approximate solutions for SBT
+using the simplification technique. The exact value for TD3 has remained
+unknown since Elias and Hartman showed an upper bound for it. Another
+consequence of determining the transposition distance of palisades is that,
+using as lower bound the one by Bafna and Pevzner, it is impossible to
+guarantee approximation ratios lower than $1.375$ when approximating SBT. This
+finding has significant implications for the study of SBT, as this problem has
+been subject of intense research efforts for the past 25 years.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.14127'>Improved Online Scheduling of Moldable Task Graphs under Common Speedup Models</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Lucas Perotin, Hongyang Sun</p><p>We consider the online scheduling problem of moldable task graphs on
+multiprocessor systems for minimizing the overall completion time (or
+makespan). Moldable job scheduling has been widely studied in the literature,
+in particular when tasks have dependencies (i.e., task graphs) or when tasks
+are released on-the-fly (i.e., online). However, few studies have focused on
+both (i.e., online scheduling of moldable task graphs). In this paper, we
+design a new online scheduling algorithm for this problem and derive constant
+competitive ratios under several common yet realistic speedup models (i.e.,
+roofline, communication, Amdahl, and a general combination). These results
+improve the ones we have shown in the preliminary version of this paper. We
+also prove, for each speedup model, a lower bound on the competitiveness of any
+online list scheduling algorithm that allocates processors to a task based only
+on the task's parameters and not on its position in the graph. This lower bound
+matches exactly the competitive ratio of our algorithm for the roofline,
+communication and Amdahl's model, and is close to the ratio for the general
+model. Finally, we provide a lower bound on the competitive ratio of any
+deterministic online algorithm for the arbitrary speedup model, which is not
+constant but depends on the number of tasks in the longest path of the graph.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Perotin_L/0/1/0/all/0/1">Lucas Perotin</a>, <a href="http://arxiv.org/find/cs/1/au:+Sun_H/0/1/0/all/0/1">Hongyang Sun</a></p><p>We consider the online scheduling problem of moldable task graphs on
+multiprocessor systems for minimizing the overall completion time (or
+makespan). Moldable job scheduling has been widely studied in the literature,
+in particular when tasks have dependencies (i.e., task graphs) or when tasks
+are released on-the-fly (i.e., online). However, few studies have focused on
+both (i.e., online scheduling of moldable task graphs). In this paper, we
+design a new online scheduling algorithm for this problem and derive constant
+competitive ratios under several common yet realistic speedup models (i.e.,
+roofline, communication, Amdahl, and a general combination). These results
+improve the ones we have shown in the preliminary version of this paper. We
+also prove, for each speedup model, a lower bound on the competitiveness of any
+online list scheduling algorithm that allocates processors to a task based only
+on the task's parameters and not on its position in the graph. This lower bound
+matches exactly the competitive ratio of our algorithm for the roofline,
+communication and Amdahl's model, and is close to the ratio for the general
+model. Finally, we provide a lower bound on the competitive ratio of any
+deterministic online algorithm for the arbitrary speedup model, which is not
+constant but depends on the number of tasks in the longest path of the graph.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.14184'>Compact Distance Oracles with Large Sensitivity and Low Stretch</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Davide Bil&#xf2;, Keerti Choudhary, Sarel Cohen, Tobias Friedrich, Simon Krogmann, Martin Schirneck</p><p>An $f$-edge fault-tolerant distance sensitive oracle ($f$-DSO) with stretch
+$\sigma \geq 1$ is a data structure that preprocesses an input graph $G$. When
+queried with the triple $(s,t,F)$, where $s, t \in V$ and $F \subseteq E$
+contains at most $f$ edges of $G$, the oracle returns an estimate
+$\widehat{d}_{G-F}(s,t)$ of the distance $d_{G-F}(s,t)$ between $s$ and $t$ in
+the graph $G-F$ such that $d_{G-F}(s,t) \leq \widehat{d}_{G-F}(s,t) \leq \sigma
+d_{G-F}(s,t)$. For any positive integer $k \ge 2$ and any $0 &lt; \alpha &lt; 1$, we
+present an $f$-DSO with sensitivity $f = o(\log n/\log\log n)$, stretch $2k-1$,
+space $O(n^{1+\frac{1}{k}+\alpha+o(1)})$, and an
+$\widetilde{O}(n^{1+\frac{1}{k} - \frac{\alpha}{k(f+1)}})$ query time.
+</p>
+<p>Prior to our work, there were only three known $f$-DSOs with subquadratic
+space. The first one by Chechik et al. [Algorithmica 2012] has a stretch of
+$(8k-2)(f+1)$, depending on $f$. Another approach is storing an $f$-edge
+fault-tolerant $(2k-1)$-spanner of $G$. The bottleneck is the large query time
+due to the size of any such spanner, which is $\Omega(n^{1+1/k})$ under the
+Erd\H{o}s girth conjecture. Bil\`o et al. [STOC 2023] gave a solution with
+stretch $3+\varepsilon$, query time $O(n^{\alpha})$ but space
+$O(n^{2-\frac{\alpha}{f+1}})$, approaching the quadratic barrier for large
+sensitivity. In the realm of subquadratic space, our $f$-DSOs are the first
+ones that guarantee, at the same time, large sensitivity, low stretch, and
+non-trivial query time. To obtain our results, we use the approximate distance
+oracles of Thorup and Zwick [JACM 2005], and the derandomization of the $f$-DSO
+of Weimann and Yuster [TALG 2013], that was recently given by Karthik and
+Parter [SODA 2021].
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bilo_D/0/1/0/all/0/1">Davide Bil&#xf2;</a>, <a href="http://arxiv.org/find/cs/1/au:+Choudhary_K/0/1/0/all/0/1">Keerti Choudhary</a>, <a href="http://arxiv.org/find/cs/1/au:+Cohen_S/0/1/0/all/0/1">Sarel Cohen</a>, <a href="http://arxiv.org/find/cs/1/au:+Friedrich_T/0/1/0/all/0/1">Tobias Friedrich</a>, <a href="http://arxiv.org/find/cs/1/au:+Krogmann_S/0/1/0/all/0/1">Simon Krogmann</a>, <a href="http://arxiv.org/find/cs/1/au:+Schirneck_M/0/1/0/all/0/1">Martin Schirneck</a></p><p>An $f$-edge fault-tolerant distance sensitive oracle ($f$-DSO) with stretch
+$\sigma \geq 1$ is a data structure that preprocesses an input graph $G$. When
+queried with the triple $(s,t,F)$, where $s, t \in V$ and $F \subseteq E$
+contains at most $f$ edges of $G$, the oracle returns an estimate
+$\widehat{d}_{G-F}(s,t)$ of the distance $d_{G-F}(s,t)$ between $s$ and $t$ in
+the graph $G-F$ such that $d_{G-F}(s,t) \leq \widehat{d}_{G-F}(s,t) \leq \sigma
+d_{G-F}(s,t)$. For any positive integer $k \ge 2$ and any $0 &lt; \alpha &lt; 1$, we
+present an $f$-DSO with sensitivity $f = o(\log n/\log\log n)$, stretch $2k-1$,
+space $O(n^{1+\frac{1}{k}+\alpha+o(1)})$, and an
+$\widetilde{O}(n^{1+\frac{1}{k} - \frac{\alpha}{k(f+1)}})$ query time.
+</p>
+<p>Prior to our work, there were only three known $f$-DSOs with subquadratic
+space. The first one by Chechik et al. [Algorithmica 2012] has a stretch of
+$(8k-2)(f+1)$, depending on $f$. Another approach is storing an $f$-edge
+fault-tolerant $(2k-1)$-spanner of $G$. The bottleneck is the large query time
+due to the size of any such spanner, which is $\Omega(n^{1+1/k})$ under the
+Erd\H{o}s girth conjecture. Bil\`o et al. [STOC 2023] gave a solution with
+stretch $3+\varepsilon$, query time $O(n^{\alpha})$ but space
+$O(n^{2-\frac{\alpha}{f+1}})$, approaching the quadratic barrier for large
+sensitivity. In the realm of subquadratic space, our $f$-DSOs are the first
+ones that guarantee, at the same time, large sensitivity, low stretch, and
+non-trivial query time. To obtain our results, we use the approximate distance
+oracles of Thorup and Zwick [JACM 2005], and the derandomization of the $f$-DSO
+of Weimann and Yuster [TALG 2013], that was recently given by Karthik and
+Parter [SODA 2021].
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.14289'>Fast Sampling of $b$-Matchings and $b$-Edge Covers</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Zongchen Chen, Yuzhou Gu</p><p>For integer $b \ge 1$, a $b$-matching (resp. $b$-edge cover) of a graph
+$G=(V,E)$ is a subset $S\subseteq E$ of edges such that every vertex is
+incident with at most (resp. at least) $b$ edges from $S$. We prove that for
+any $b \ge 1$ the simple Glauber dynamics for sampling (weighted) $b$-matchings
+and $b$-edge covers mixes in $O(n\log n)$ time on all $n$-vertex bounded-degree
+graphs. This significantly improves upon previous results which have worse
+running time and only work for $b$-matchings with $b \le 7$ and for $b$-edge
+covers with $b \le 2$.
+</p>
+<p>Moreover generally, we prove spectral independence for a broad class of
+binary symmetric Holant problems with log-concave signatures, including
+$b$-matchings, $b$-edge covers, and antiferromagnetic $2$-spin edge models. We
+hence deduce optimal mixing time of Glauber dynamics from spectral
+independence.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chen_Z/0/1/0/all/0/1">Zongchen Chen</a>, <a href="http://arxiv.org/find/cs/1/au:+Gu_Y/0/1/0/all/0/1">Yuzhou Gu</a></p><p>For integer $b \ge 1$, a $b$-matching (resp. $b$-edge cover) of a graph
+$G=(V,E)$ is a subset $S\subseteq E$ of edges such that every vertex is
+incident with at most (resp. at least) $b$ edges from $S$. We prove that for
+any $b \ge 1$ the simple Glauber dynamics for sampling (weighted) $b$-matchings
+and $b$-edge covers mixes in $O(n\log n)$ time on all $n$-vertex bounded-degree
+graphs. This significantly improves upon previous results which have worse
+running time and only work for $b$-matchings with $b \le 7$ and for $b$-edge
+covers with $b \le 2$.
+</p>
+<p>Moreover generally, we prove spectral independence for a broad class of
+binary symmetric Holant problems with log-concave signatures, including
+$b$-matchings, $b$-edge covers, and antiferromagnetic $2$-spin edge models. We
+hence deduce optimal mixing time of Glauber dynamics from spectral
+independence.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.14319'>The Covering Canadian Traveller Problem Revisited</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Niklas Hahn, Michalis Xefteris</p><p>In this paper, we consider the $k$-Covering Canadian Traveller Problem
+($k$-CCTP), which can be seen as a variant of the Travelling Salesperson
+Problem. The goal of $k$-CCTP is finding the shortest tour for a traveller to
+visit a set of locations in a given graph and return to the origin. Crucially,
+unknown to the traveller, up to $k$ edges of the graph are blocked and the
+traveller only discovers blocked edges online at one of their respective
+endpoints. The currently best known upper bound for $k$-CCTP is $O(\sqrt{k})$
+which was shown in [Huang and Liao, ISAAC '12]. We improve this polynomial
+bound to a logarithmic one by presenting a deterministic $O(\log
+k)$-competitive algorithm that runs in polynomial time. Further, we demonstrate
+the tightness of our analysis by giving a lower bound instance for our
+algorithm.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Hahn_N/0/1/0/all/0/1">Niklas Hahn</a>, <a href="http://arxiv.org/find/cs/1/au:+Xefteris_M/0/1/0/all/0/1">Michalis Xefteris</a></p><p>In this paper, we consider the $k$-Covering Canadian Traveller Problem
+($k$-CCTP), which can be seen as a variant of the Travelling Salesperson
+Problem. The goal of $k$-CCTP is finding the shortest tour for a traveller to
+visit a set of locations in a given graph and return to the origin. Crucially,
+unknown to the traveller, up to $k$ edges of the graph are blocked and the
+traveller only discovers blocked edges online at one of their respective
+endpoints. The currently best known upper bound for $k$-CCTP is $O(\sqrt{k})$
+which was shown in [Huang and Liao, ISAAC '12]. We improve this polynomial
+bound to a logarithmic one by presenting a deterministic $O(\log
+k)$-competitive algorithm that runs in polynomial time. Further, we demonstrate
+the tightness of our analysis by giving a lower bound instance for our
+algorithm.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.14345'>A Simple and Efficient Parallel Laplacian Solver</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Sushant Sachdeva, Yibin Zhao</p><p>A symmetric matrix is called a Laplacian if it has nonpositive off-diagonal
+entries and zero row sums. Since the seminal work of Spielman and Teng (2004)
+on solving Laplacian linear systems in nearly linear time, several algorithms
+have been designed for the task. Yet, the work of Kyng and Sachdeva (2016)
+remains the simplest and most practical sequential solver. They presented a
+solver purely based on random sampling and without graph-theoretic
+constructions such as low-stretch trees and sparsifiers.
+</p>
+<p>In this work, we extend the result of Kyng and Sachdeva to a simple parallel
+Laplacian solver with $O(m \log^3 n \log\log n)$ or $O((m + n\log^5 n)\log n
+\log\log n)$ work and $O(\log^2 n \log\log n)$ depth using the ideas of block
+Cholesky factorization from Kyng et al. (2016). Compared to the best known
+parallel Laplacian solvers that achieve polylogarithmic depth due to Lee et al.
+(2015), our solver achieves both better depth and, for dense graphs, better
+work.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Sachdeva_S/0/1/0/all/0/1">Sushant Sachdeva</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhao_Y/0/1/0/all/0/1">Yibin Zhao</a></p><p>A symmetric matrix is called a Laplacian if it has nonpositive off-diagonal
+entries and zero row sums. Since the seminal work of Spielman and Teng (2004)
+on solving Laplacian linear systems in nearly linear time, several algorithms
+have been designed for the task. Yet, the work of Kyng and Sachdeva (2016)
+remains the simplest and most practical sequential solver. They presented a
+solver purely based on random sampling and without graph-theoretic
+constructions such as low-stretch trees and sparsifiers.
+</p>
+<p>In this work, we extend the result of Kyng and Sachdeva to a simple parallel
+Laplacian solver with $O(m \log^3 n \log\log n)$ or $O((m + n\log^5 n)\log n
+\log\log n)$ work and $O(\log^2 n \log\log n)$ depth using the ideas of block
+Cholesky factorization from Kyng et al. (2016). Compared to the best known
+parallel Laplacian solvers that achieve polylogarithmic depth due to Lee et al.
+(2015), our solver achieves both better depth and, for dense graphs, better
+work.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T00:30:00Z">Friday, April 28 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
     
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, April 27
@@ -2424,969 +3365,6 @@ operators, an idea supported by our preliminary experiments.
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-04-24T00:30:00Z">Monday, April 24 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10962'>Faster Prefix-Sorting Algorithms for Deterministic Finite Automata</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Sung-Hwan Kim, Francisco Olivares, Nicola Prezza</p><p>Sorting is a fundamental algorithmic pre-processing technique which often
-allows to represent data more compactly and, at the same time, speeds up search
-queries on it. In this paper, we focus on the well-studied problem of sorting
-and indexing string sets. Since the introduction of suffix trees in 1973,
-dozens of suffix sorting algorithms have been described in the literature. In
-2017, these techniques were extended to sets of strings described by means of
-finite automata: the theory of Wheeler graphs [Gagie et al., TCS'17] introduced
-automata whose states can be totally-sorted according to the co-lexicographic
-(co-lex in the following) order of the prefixes of words accepted by the
-automaton. More recently, in [Cotumaccio, Prezza, SODA'21] it was shown how to
-extend these ideas to arbitrary automata by means of partial co-lex orders.
-This work showed that a co-lex order of minimum width (thus optimizing search
-query times) on deterministic finite automata (DFAs) can be computed in $O(m^2
-+ n^{5/2})$ time, $m$ being the number of transitions and $n$ the number of
-states of the input DFA.
-</p>
-<p>In this paper, we exhibit new combinatorial properties of the minimum-width
-co-lex order of DFAs and exploit them to design faster prefix sorting
-algorithms. In particular, we describe two algorithms sorting arbitrary DFAs in
-$O(mn)$ and $O(n^2\log n)$ time, respectively, and an algorithm sorting acyclic
-DFAs in $O(m\log n)$ time. Within these running times, all algorithms compute
-also a smallest chain partition of the partial order (required to index the
-DFA). We present an experiment result to show that an optimized implementation
-of the $O(n^2\log n)$-time algorithm exhibits a nearly-linear behaviour on
-large deterministic pan-genomic graphs and is thus also of practical interest.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Kim_S/0/1/0/all/0/1">Sung-Hwan Kim</a>, <a href="http://arxiv.org/find/cs/1/au:+Olivares_F/0/1/0/all/0/1">Francisco Olivares</a>, <a href="http://arxiv.org/find/cs/1/au:+Prezza_N/0/1/0/all/0/1">Nicola Prezza</a></p><p>Sorting is a fundamental algorithmic pre-processing technique which often
-allows to represent data more compactly and, at the same time, speeds up search
-queries on it. In this paper, we focus on the well-studied problem of sorting
-and indexing string sets. Since the introduction of suffix trees in 1973,
-dozens of suffix sorting algorithms have been described in the literature. In
-2017, these techniques were extended to sets of strings described by means of
-finite automata: the theory of Wheeler graphs [Gagie et al., TCS'17] introduced
-automata whose states can be totally-sorted according to the co-lexicographic
-(co-lex in the following) order of the prefixes of words accepted by the
-automaton. More recently, in [Cotumaccio, Prezza, SODA'21] it was shown how to
-extend these ideas to arbitrary automata by means of partial co-lex orders.
-This work showed that a co-lex order of minimum width (thus optimizing search
-query times) on deterministic finite automata (DFAs) can be computed in $O(m^2
-+ n^{5/2})$ time, $m$ being the number of transitions and $n$ the number of
-states of the input DFA.
-</p>
-<p>In this paper, we exhibit new combinatorial properties of the minimum-width
-co-lex order of DFAs and exploit them to design faster prefix sorting
-algorithms. In particular, we describe two algorithms sorting arbitrary DFAs in
-$O(mn)$ and $O(n^2\log n)$ time, respectively, and an algorithm sorting acyclic
-DFAs in $O(m\log n)$ time. Within these running times, all algorithms compute
-also a smallest chain partition of the partial order (required to index the
-DFA). We present an experiment result to show that an optimized implementation
-of the $O(n^2\log n)$-time algorithm exhibits a nearly-linear behaviour on
-large deterministic pan-genomic graphs and is thus also of practical interest.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-24T00:30:00Z">Monday, April 24 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10995'>Solving the List Coloring Problem through a Branch-and-Price algorithm</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Mauro Lucci, Daniel Severin, Graciela Nasini</p><p>In this work, we present a branch-and-price algorithm to solve the weighted
-version of the List Coloring Problem, based on a vertex cover formulation by
-stable sets. This problem is interesting for its applications and also for the
-many other problems that it generalizes, including the well-known Graph
-Coloring Problem. With the introduction of the concept of indistinguishable
-colors, some theoretical results are presented which are later incorporated
-into the algorithm. We propose two branching strategies based on others for the
-Graph Coloring Problem, the first is an adaptation of the one used by Mehrotra
-and Trick in their pioneering branch-and-price algorithm, and the other is
-inspired by the one used by M\'endez-D\'iaz and Zabala in their branch-and-cut
-algorithm. The rich structure of this problem makes both branching strategies
-robust. Extended computation experimentation on a wide variety of instances
-shows the effectiveness of this approach and evidences the different behaviors
-that the algorithm can have according to the structure of each type of
-instance.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Lucci_M/0/1/0/all/0/1">Mauro Lucci</a>, <a href="http://arxiv.org/find/cs/1/au:+Severin_D/0/1/0/all/0/1">Daniel Severin</a>, <a href="http://arxiv.org/find/cs/1/au:+Nasini_G/0/1/0/all/0/1">Graciela Nasini</a></p><p>In this work, we present a branch-and-price algorithm to solve the weighted
-version of the List Coloring Problem, based on a vertex cover formulation by
-stable sets. This problem is interesting for its applications and also for the
-many other problems that it generalizes, including the well-known Graph
-Coloring Problem. With the introduction of the concept of indistinguishable
-colors, some theoretical results are presented which are later incorporated
-into the algorithm. We propose two branching strategies based on others for the
-Graph Coloring Problem, the first is an adaptation of the one used by Mehrotra
-and Trick in their pioneering branch-and-price algorithm, and the other is
-inspired by the one used by M\'endez-D\'iaz and Zabala in their branch-and-cut
-algorithm. The rich structure of this problem makes both branching strategies
-robust. Extended computation experimentation on a wide variety of instances
-shows the effectiveness of this approach and evidences the different behaviors
-that the algorithm can have according to the structure of each type of
-instance.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-24T00:30:00Z">Monday, April 24 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.11012'>Learned Monotone Minimal Perfect Hashing</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Paolo Ferragina, Hans-Peter Lehmann, Peter Sanders, Giorgio Vinciguerra</p><p>A Monotone Minimal Perfect Hash Function (MMPHF) constructed on a set S of
-keys is a function that maps each key in S to its rank. On keys not in S, the
-function returns an arbitrary value. Applications range from databases, search
-engines, data encryption, to pattern-matching algorithms.
-</p>
-<p>In this paper, we describe LeMonHash, a new technique for constructing MMPHFs
-for integers. The core idea of LeMonHash is surprisingly simple and effective:
-we learn a monotone mapping from keys to their rank via an error-bounded
-piecewise linear model (the PGM-index), and then we solve the collisions that
-might arise among keys mapping to the same rank estimate by associating small
-integers with them in a retrieval data structure (BuRR). On synthetic random
-datasets, LeMonHash needs 35% less space than the next best competitor, while
-achieving about 16 times faster queries. On real-world datasets, the space
-usage is very close to or much better than the best competitors, while
-achieving up to 19 times faster queries than the next larger competitor. As far
-as the construction of LeMonHash is concerned, we get an improvement by a
-factor of up to 2, compared to the competitor with the next best space usage.
-</p>
-<p>We also investigate the case of keys being variable-length strings,
-introducing the so-called LeMonHash-VL: it needs space within 10% of the best
-competitors while achieving up to 3 times faster queries.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Ferragina_P/0/1/0/all/0/1">Paolo Ferragina</a>, <a href="http://arxiv.org/find/cs/1/au:+Lehmann_H/0/1/0/all/0/1">Hans-Peter Lehmann</a>, <a href="http://arxiv.org/find/cs/1/au:+Sanders_P/0/1/0/all/0/1">Peter Sanders</a>, <a href="http://arxiv.org/find/cs/1/au:+Vinciguerra_G/0/1/0/all/0/1">Giorgio Vinciguerra</a></p><p>A Monotone Minimal Perfect Hash Function (MMPHF) constructed on a set S of
-keys is a function that maps each key in S to its rank. On keys not in S, the
-function returns an arbitrary value. Applications range from databases, search
-engines, data encryption, to pattern-matching algorithms.
-</p>
-<p>In this paper, we describe LeMonHash, a new technique for constructing MMPHFs
-for integers. The core idea of LeMonHash is surprisingly simple and effective:
-we learn a monotone mapping from keys to their rank via an error-bounded
-piecewise linear model (the PGM-index), and then we solve the collisions that
-might arise among keys mapping to the same rank estimate by associating small
-integers with them in a retrieval data structure (BuRR). On synthetic random
-datasets, LeMonHash needs 35% less space than the next best competitor, while
-achieving about 16 times faster queries. On real-world datasets, the space
-usage is very close to or much better than the best competitors, while
-achieving up to 19 times faster queries than the next larger competitor. As far
-as the construction of LeMonHash is concerned, we get an improvement by a
-factor of up to 2, compared to the competitor with the next best space usage.
-</p>
-<p>We also investigate the case of keys being variable-length strings,
-introducing the so-called LeMonHash-VL: it needs space within 10% of the best
-competitors while achieving up to 3 times faster queries.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-24T00:30:00Z">Monday, April 24 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Sunday, April 23
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/04/thoughts-on-gordon-moore.html'>Thoughts on Gordon Moore</a></h3>
-        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>&nbsp;Gordon Moore passed away on March 24, 2023. He was 94 years old.&nbsp;</p><p>He is best known for the article&nbsp;</p><p><br></p><p>Cramming more components onto integrated circuits.&nbsp;</p><p>It appeared in the magazine Electronics (it is now defunct), Volume 38, No. 8, April 19, 1965. Do you need to track it down in the basement of your library. No. Its&nbsp;here&nbsp;and here.&nbsp;I wonder if Moore would have predicted that his article would be available easily over 50 years later. Or is it? Link rot is a serious problem so you might want to download it to your local files. Note that the first link is some sort of official version and the second version is my local version. Not clear which link will rot first. The article also has an addition which is an interview with Moore that was done later.</p><p>In the article Moore said that the number of components-per-circuit (I think that means chip) will double every year. Moore credits Dave House with modifying it to `doubling every 18 months' and Carver Mead with calling it `Moore's Law'.&nbsp; Later it came to be quoted as computer SPEED would double every 18 months. We will take this to be Moore's Law in this blog post.&nbsp;</p><p>Is Moore's law dead? Browsing Google the answer seems to be that it is slowing down but not dead yet. (IDEA for a comedy sketch: Redo the Monty Python Dead Parrot sketch about the death of Moore's law.)&nbsp;</p><p>If Moore had 1 penny in April 1965 and it doubled every 18 months then how rich would he be now? How rich was he in April 2022? Compare the two numbers.&nbsp;</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>By gasarch</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>&nbsp;Gordon Moore passed away on March 24, 2023. He was 94 years old.&nbsp;</p><p>He is best known for the article&nbsp;</p><p><br /></p><p><i>Cramming more components onto integrated circuits.&nbsp;</i></p><p>It appeared in the magazine Electronics (it is now defunct), Volume 38, No. 8, April 19, 1965. Do you need to track it down in the basement of your library. No. Its&nbsp;<a href="https://hasler.ece.gatech.edu/Published_papers/Technology_overview/gordon_moore_1965_article.pdf">here</a>&nbsp;and <a href="https://www.cs.umd.edu/~gasarch/BLOGPAPERS/gmoore.pdf">here</a>.&nbsp;I wonder if Moore would have predicted that his article would be available easily over 50 years later. Or is it? Link rot is a serious problem so you might want to download it to your local files. Note that the first link is some sort of official version and the second version is my local version. Not clear which link will rot first. The article also has an addition which is an interview with Moore that was done later.</p><p>In the article Moore said that the number of components-per-circuit (I think that means chip) will double every year. Moore credits Dave House with modifying it to `doubling every 18 months' and Carver Mead with calling it `Moore's Law'.&nbsp; Later it came to be quoted as computer SPEED would double every 18 months. We will take this to be Moore's Law in this blog post.&nbsp;</p><p>Is Moore's law dead? Browsing Google the answer seems to be that it is slowing down but not dead yet. (IDEA for a comedy sketch: Redo the Monty Python Dead Parrot sketch about the death of Moore's law.)&nbsp;</p><p>If Moore had 1 penny in April 1965 and it doubled every 18 months then how rich would he be now? How rich was he in April 2022? Compare the two numbers.&nbsp;</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p class="authors">By gasarch</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-23T20:05:00Z">Sunday, April 23 2023, 20:05</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Saturday, April 22
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/'>Some Rice News</a></h3>
-        <p class='tr-article-feed'>from <a href='https://rjlipton.wpcomstaging.com'>Richard Lipton</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          Lydia Kavraki is the Noah Harding Professor of Computer Science at Rice University. She is also professor of Bioengineering, professor of Electrical and Computer Engineering, and professor of Mechanical Engineering at Rice. She is the current Director of the Ken Kennedy Institute at Rice. Today we congratulate her on being elected to the American Academy [&#8230;]
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>
-Lydia Kavraki is the Noah Harding Professor of Computer Science at Rice University. She is also professor of Bioengineering, professor of Electrical and Computer Engineering, and professor of Mechanical Engineering at Rice. She is the current Director of the <a href="https://kenkennedy.rice.edu">Ken Kennedy Institute</a> at Rice. </p>
-<p>
-<a href="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/lk2/" rel="attachment wp-att-21504"><img data-attachment-id="21504" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/lk2/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/lk2.jpeg?fit=192%2C241&amp;ssl=1" data-orig-size="192,241" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="lk2" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/lk2.jpeg?fit=192%2C241&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/lk2.jpeg?fit=192%2C241&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/lk2.jpeg?resize=192%2C241&#038;ssl=1" alt="" width="192" height="241" class="aligncenter size-full wp-image-21504" data-recalc-dims="1" /></a></p>
-<p>
-Today we congratulate her on being elected to the American Academy of Arts and Sciences (<a href="https://www.amacad.org">AAAS</a>). </p>
-<p>
-Kavraki has multiple other affiliations listed on her <a href="https://www.cs.rice.edu/~kavraki/">home page</a>, including her own <a href="https://www.kavrakilab.org/">laboratory</a> on computational robotics and biomedicine. Now with AAAS, she acquires one more. It is enough to make us wonder whether her growth-of-affiliations function per year is additive or multiplicative. </p>
-<p>
-If the latter, then it would call to mind the story of rice grains on a chessboard. The emperor thinks it would be trivial to grant a reward of one grain of rice on the first square, two on the second square, four on the third square, eight on the fourth, and so on. It does not take many doublings for the number of grains to grow far in excess of this picture:</p>
-<p>
-<a href="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/rice/" rel="attachment wp-att-21494"><img data-attachment-id="21494" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/rice/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/rice.jpeg?fit=302%2C167&amp;ssl=1" data-orig-size="302,167" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="rice" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/rice.jpeg?fit=300%2C166&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/rice.jpeg?fit=302%2C167&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/rice.jpeg?resize=302%2C167&#038;ssl=1" alt="" width="302" height="167" class="aligncenter size-full wp-image-21494" srcset="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/rice.jpeg?w=302&amp;ssl=1 302w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/rice.jpeg?resize=300%2C167&amp;ssl=1 300w" sizes="(max-width: 302px) 100vw, 302px" data-recalc-dims="1" /></a></p>
-<p>
-<p><H2> Brief Roadmap to Her Work </H2></p>
-<p><p>
-Suppose a chess queen has outstretched arms that made it difficult to move her on a board without knocking over other pieces. We will require her to make a legal move in chess, but not necessarily take the direct route to her destination square. If a roundabout route through a less-crowded area of the board can get her safely to her goal, we will allow our player to move her that way. Naturally, the player could be a robot arm that can picture the whole board but may only slide the queen, not hoist her vertically to hop her to a square.</p>
-<p>
-What&#8217;s the best way in practice to find a route, if one exists? We could try all possible paths, but here is where the grains-of-rice factor comes in. This is not because there are many squares, but because the queen&#8217;s arms may leave her little wiggle room on a square. She may have to shimmy to get by the nose of an enemy knight, but then find herself unable to twist around a chain of pawns. To avoid such backtracks, we&#8217;d need to make a roadmap of the entire board not in the space of squares, but in the possible <em>configuration space</em> of the queen, given the positioning of other pieces as obstacles. That space can be too large to map exhaustively.</p>
-<p>
-In work with her PhD adviser Jean-Clause Latombe and others, Kavraki was the guiding force in discovering that random sampling of the configuration space almost always efficiently finds a route when one exists. The sampling grows progressively longer transitions between configurations that the queen is able to make, and proclaims success when the goal configuration is connected to the origin. Then a deterministic shortest-path algorithm can be run on the resulting graph&#8212;a manageable subset of the whole configuration space&#8212;to find an optimal route through that graph. By the nature of physical space, this is usually optimum overall.</p>
-<p>
-Kavraki&#8217;s <a href="https://en.wikipedia.org/wiki/Probabilistic_roadmap">probabilistic roadmap</a> <em>paradigm</em> extends to many other settings besides moving robots. In biomedicine it applies to how a drug molecule can be designed to maximize its expectation of finding configurations that will combat a pathogen. Her 2017 ACM Athena Lecturer Award <a href="https://www.acm.org/articles/bulletins/2017/april/athena-2017-kavraki">citation</a> notes how her work has found paths into &#8220;an impressively wide range of areas.&#8221;</p>
-<p>
-<p><H2> Ken Kennedy&#8217;s Institute </H2></p>
-<p><p>
-Rice University is one of the top university especially when we look at its computer science <a href="https://csweb.rice.edu">program</a>. This historically was thanks to Ken Kennedy who sadly died years ago on 2007 February 7th. Ken was one of the world&#8217;s foremost experts on high-performance computing. He attended Rice University, receiving a B.A. in mathematics (summa cum laude) in 1967. He pursued graduate studies at New York University, where he earned a M.S. in mathematics in 1969 and a Ph.D. in computer science in 1971. Then he returned to Rice.</p>
-<p>
-<a href="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/kk-2/" rel="attachment wp-att-21495"><img data-attachment-id="21495" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/kk-2/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/kk.jpeg?fit=140%2C158&amp;ssl=1" data-orig-size="140,158" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="kk" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/kk.jpeg?fit=140%2C158&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/kk.jpeg?fit=140%2C158&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/kk.jpeg?resize=140%2C158&#038;ssl=1" alt="" width="140" height="158" class="aligncenter size-full wp-image-21495" data-recalc-dims="1" /></a></p>
-<p>
-Rice president David Leebron said: </p>
-<blockquote><p>
-&#8220;In Ken Kennedy, Rice has lost one of its great intellectual leaders and a great human being.  [He] early on realized the power of computers to address real problems that confront people and the Earth. Ken leaves a great legacy for Rice and for mankind. He will be missed.&#8221;
-</p></blockquote>
-<p><a href="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/owls2/" rel="attachment wp-att-21496"><img data-attachment-id="21496" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/owls2/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/owls2.jpeg?fit=253%2C199&amp;ssl=1" data-orig-size="253,199" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="owls2" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/owls2.jpeg?fit=253%2C199&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/owls2.jpeg?fit=253%2C199&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/owls2.jpeg?resize=253%2C199&#038;ssl=1" alt="" width="253" height="199" class="aligncenter size-full wp-image-21496" data-recalc-dims="1" /></a></p>
-<p>
-<p><H2> Previous Leader </H2></p>
-<p>
-<p>
-A previous leader of the Kennedy Institute is Moshe Vardi, an old friend whose work we first covered <a href="https://rjlipton.wpcomstaging.com/2011/07/28/logic-in-action/">here</a> and whom we&#8217;ve mentioned numerous times since, including about <a href="https://rjlipton.wpcomstaging.com/2020/09/10/hybrid-versus-remote-teaching/">teaching</a> during the pandemic. </p>
-<p>
-<a href="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/mv2/" rel="attachment wp-att-21499"><img data-attachment-id="21499" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/mv2/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/mv2.jpeg?fit=240%2C240&amp;ssl=1" data-orig-size="240,240" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="mv2" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/mv2.jpeg?fit=240%2C240&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/mv2.jpeg?fit=240%2C240&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/mv2.jpeg?resize=160%2C160&#038;ssl=1" alt="" width="160" height="160" class="aligncenter wp-image-21499" srcset="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/mv2.jpeg?w=240&amp;ssl=1 240w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/mv2.jpeg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/mv2.jpeg?resize=200%2C200&amp;ssl=1 200w" sizes="(max-width: 160px) 100vw, 160px" data-recalc-dims="1" /></a></p>
-<p>
-He also has a bunch of titles, including Professor of Computer Science, University Professor, the Karen Ostrum George Professor in Computational Engineering, and Distinguished Service Professor&#8212;but more notable is that he <a href="https://www.cs.rice.edu/~vardi/long-bio.html">has</a> even more honorary doctorates than affiliations:</p>
-<blockquote>
-<p>
-He holds honorary doctorates from the University of Saarland, Germany, the University of Orleans in France, UFRGS in Brazil, the University of Liege in Belgium, the Technical University of Vienna, Austria, the University of Edinburgh in Scotland, the University of Grenoble-Alpes, and Gothenburg University in Sweden.
-</p></blockquote>
-<p>
-<p>
-<p><H2> AAAS </H2></p>
-<p><p>
-David Oxtoby is the current President of the American Academy of Arts and <a href="https://www.amacad.org">Sciences</a>. In his annoucement of the new class he says:</p>
-<blockquote><p><b> </b> <em></p>
-<p>
-The very first class of members elected to the Academy in 1781 included Benjamin Franklin and George Washington, and today I&#8217;m pleased to announce the new members elected to the American Academy of Arts and Sciences this year.<br />
-</em>
-</p></blockquote>
-<p>
-<a href="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/do/" rel="attachment wp-att-21500"><img data-attachment-id="21500" data-permalink="https://rjlipton.wpcomstaging.com/2023/04/22/some-rice-news/do/" data-orig-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/do.jpeg?fit=216%2C233&amp;ssl=1" data-orig-size="216,233" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="do" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/do.jpeg?fit=216%2C233&amp;ssl=1" data-large-file="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/do.jpeg?fit=216%2C233&amp;ssl=1" decoding="async" loading="lazy" src="https://i0.wp.com/rjlipton.wpcomstaging.com/wp-content/uploads/2023/04/do.jpeg?resize=144%2C158&#038;ssl=1" alt="" width="144" height="158" class="aligncenter wp-image-21500" data-recalc-dims="1" /></a></p>
-<p><p>
-The new computer science electees are listed <a href="https://www.amacad.org/new-members-2023">here</a> and include several others we know well and whose work we have covered. We list Kavraki again in case this list is taken as &#8220;the&#8221; list.</p>
-<ul>
-<p><li>
-Michael Franklin <a href="https://cs.uchicago.edu/people/michael-franklin/">MF</a>, University of Chicago </p>
-<p><li>
-Xuedong Huang <a href="https://www.microsoft.com/en-us/research/people/xdh/">XH</a>, Microsoft Corporation</p>
-<p><li>
-Piotr Indyk <a href="https://people.csail.mit.edu/indyk/">PI</a>, Massachusetts Institute of Technology</p>
-<p><li>
-Lydia Kavraki <a href="https://www.cs.rice.edu/~kavraki/">LK</a>, Rice University</p>
-<p><li>
-Marta Kwiatkowska <a href="https://www.trinity.ox.ac.uk/people/marta-kwiatkowska">MK</a>, University of Oxford (international honorary member)</p>
-<p><li>
-Maja Mataric <a href="https://viterbi.usc.edu/directory/faculty/Mataric/Maja">MM</a>, University of Southern California Viterbi School of Engineering</p>
-<p><li>
-Kathryn McKinley <a href="https://thenewstack.io/google-cloud-engineer-kathryn-s-mckinley-on-leadership-mentoring-garbage-collection-and-rust/">KM</a>, Google LLC</p>
-<p><li>
-Gordon Plotkin (IHM) <a href="https://www.research.ed.ac.uk/en/persons/gordon-plotkin">GP</a>, University of Edinburgh</p>
-<p><li>
-Moti Yung <a href="https://www.researchgate.net/profile/Moti-Yung">MY</a>, Google LLC</p>
-</ul>
-<p>
-<p><H2> Open Problems </H2></p>
-<p><p>
-Our congratulations again to all those just elected. </p>
-<p><P><br />
-[Words &#8220;for Information Technology&#8221; from previous name of the Ken Kennedy Institute deleted from intro]</p>
-<p class="authors">By RJLipton+KWRegan</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-22T15:22:28Z">Saturday, April 22 2023, 15:22</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Friday, April 21
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10106'>No Where to Go But High: A Perspective on High Dimensional Expanders</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Roy Gotlib, Tali Kaufman</p><p>"No Where to go but in" is a well known statement of Osho. Osho meant to say
-that the answers to all our questions should be obtained by looking into
-ourselves. In a paraphrase to Osho's statement we say "No Where to go but
-high". This meant to demonstrate that for various seemingly unrelated topics
-and questions the only way to get significant progress is via the prism of a
-new philosophy (new field) called high dimensional expansion. In this note we
-give an introduction \footnote{This introduction reflects the authors'
-interests and by no mean claim to represent the field in a through way} to the
-high dimensional expansion philosophy, and how it has been useful recently in
-obtaining progress in various questions in seemingly unrelated fields.
-</p>
-<p>This exposition is dedicated to the memory of my mother, Sarah Kaufman, who
-was always trying to understand the reason why things behave in a certain way.
-It is also dedicated to the memory of my father Eliezer Kaufman.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Gotlib_R/0/1/0/all/0/1">Roy Gotlib</a>, <a href="http://arxiv.org/find/math/1/au:+Kaufman_T/0/1/0/all/0/1">Tali Kaufman</a></p><p>"No Where to go but in" is a well known statement of Osho. Osho meant to say
-that the answers to all our questions should be obtained by looking into
-ourselves. In a paraphrase to Osho's statement we say "No Where to go but
-high". This meant to demonstrate that for various seemingly unrelated topics
-and questions the only way to get significant progress is via the prism of a
-new philosophy (new field) called high dimensional expansion. In this note we
-give an introduction \footnote{This introduction reflects the authors'
-interests and by no mean claim to represent the field in a through way} to the
-high dimensional expansion philosophy, and how it has been useful recently in
-obtaining progress in various questions in seemingly unrelated fields.
-</p>
-<p>This exposition is dedicated to the memory of my mother, Sarah Kaufman, who
-was always trying to understand the reason why things behave in a certain way.
-It is also dedicated to the memory of my father Eliezer Kaufman.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-21T00:30:00Z">Friday, April 21 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.09990'>Reconfiguration of 3D Pivoting Modular Robots</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Hugo A. Akitaya, Frederick Stock</p><p>We study a new model of 3-dimensional modular self-reconfigurable robots
-Rhombic Dodecahedral (RD). By extending results on the 2D analog of this model
-we characterize the free space requirements for a pivoting move and investigate
-the $\textit{reconfiguration problem}$, that is, given two configurations $s$
-and $t$ is there a sequence of moves that transforms $s$ into $t$? We show
-reconfiguration is PSPACE-hard for RD modules in a restricted pivoting model.
-In a more general model, we show that RD configurations are not universally
-reconfigurable despite the fact that their 2D analog is [Akitaya et al., SoCG
-2021]. Additionally, we present a new class of RD configurations that we call
-$\textit{super-rigid}$. Such a configuration remains rigid even as a subset of
-any larger configuration, which does not exist in the 2D setting.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Akitaya_H/0/1/0/all/0/1">Hugo A. Akitaya</a>, <a href="http://arxiv.org/find/cs/1/au:+Stock_F/0/1/0/all/0/1">Frederick Stock</a></p><p>We study a new model of 3-dimensional modular self-reconfigurable robots
-Rhombic Dodecahedral (RD). By extending results on the 2D analog of this model
-we characterize the free space requirements for a pivoting move and investigate
-the $\textit{reconfiguration problem}$, that is, given two configurations $s$
-and $t$ is there a sequence of moves that transforms $s$ into $t$? We show
-reconfiguration is PSPACE-hard for RD modules in a restricted pivoting model.
-In a more general model, we show that RD configurations are not universally
-reconfigurable despite the fact that their 2D analog is [Akitaya et al., SoCG
-2021]. Additionally, we present a new class of RD configurations that we call
-$\textit{super-rigid}$. Such a configuration remains rigid even as a subset of
-any larger configuration, which does not exist in the 2D setting.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-21T00:30:00Z">Friday, April 21 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10028'>Minimizing the Size of the Uncertainty Regions for Centers of Moving Entities</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: William Evans, Seyed Ali Tabatabaee</p><p>In this paper, we study the problems of computing the 1-center, centroid, and
-1-median of objects moving with bounded speed in Euclidean space. We can
-acquire the exact location of only a constant number of objects (usually one)
-per unit time, but for every other object, its set of potential locations,
-called the object's uncertainty region, grows subject only to the speed limit.
-As a result, the center of the objects may be at several possible locations,
-called the center's uncertainty region. For each of these center problems, we
-design query strategies to minimize the size of the center's uncertainty region
-and compare its performance to an optimal query strategy that knows the
-trajectories of the objects, but must still query to reduce their uncertainty.
-For the static case of the 1-center problem in R^1, we show an algorithm that
-queries four objects per unit time and works as well as the optimal algorithm
-with one query per unit time. For the general case of the 1-center problem in
-R^1, the centroid problem in R^d, and the 1-median problem in R^1, we prove
-that the Round-robin scheduling algorithm is the best possible competitive
-algorithm. For the center of mass problem in R^d, we provide an O(log
-n)-competitive algorithm. In addition, for the general case of the 1-center
-problem in R^d (d &gt;= 2), we argue that no algorithm can guarantee a bounded
-competitive ratio against the optimal algorithm.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Evans_W/0/1/0/all/0/1">William Evans</a>, <a href="http://arxiv.org/find/cs/1/au:+Tabatabaee_S/0/1/0/all/0/1">Seyed Ali Tabatabaee</a></p><p>In this paper, we study the problems of computing the 1-center, centroid, and
-1-median of objects moving with bounded speed in Euclidean space. We can
-acquire the exact location of only a constant number of objects (usually one)
-per unit time, but for every other object, its set of potential locations,
-called the object's uncertainty region, grows subject only to the speed limit.
-As a result, the center of the objects may be at several possible locations,
-called the center's uncertainty region. For each of these center problems, we
-design query strategies to minimize the size of the center's uncertainty region
-and compare its performance to an optimal query strategy that knows the
-trajectories of the objects, but must still query to reduce their uncertainty.
-For the static case of the 1-center problem in R^1, we show an algorithm that
-queries four objects per unit time and works as well as the optimal algorithm
-with one query per unit time. For the general case of the 1-center problem in
-R^1, the centroid problem in R^d, and the 1-median problem in R^1, we prove
-that the Round-robin scheduling algorithm is the best possible competitive
-algorithm. For the center of mass problem in R^d, we provide an O(log
-n)-competitive algorithm. In addition, for the general case of the 1-center
-problem in R^d (d &gt;= 2), we argue that no algorithm can guarantee a bounded
-competitive ratio against the optimal algorithm.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-21T00:30:00Z">Friday, April 21 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10078'>High-Performance and Flexible Parallel Algorithms for Semisort and Related Problems</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Xiaojun Dong, Yunshu Wu, Zhongqi Wang, Laxman Dhulipala, Yan Gu, Yihan Sun</p><p>Semisort is a fundamental algorithmic primitive widely used in the design and
-analysis of efficient parallel algorithms. It takes input as an array of
-records and a function extracting a \emph{key} per record, and reorders them so
-that records with equal keys are contiguous. Since many applications only
-require collecting equal values, but not fully sorting the input, semisort is
-broadly applicable, e.g., in string algorithms, graph analytics, and geometry
-processing, among many other domains. However, despite dozens of recent papers
-that use semisort in their theoretical analysis and the existence of an
-asymptotically optimal parallel semisort algorithm, most implementations of
-these parallel algorithms choose to implement semisort by using comparison or
-integer sorting in practice, due to potential performance issues in existing
-semisort implementations.
-</p>
-<p>In this paper, we revisit the semisort problem, with the goal of achieving a
-high-performance parallel semisort implementation with a flexible interface.
-Our approach can easily extend to two related problems, \emph{histogram} and
-\emph{collect-reduce}. Our algorithms achieve strong speedups in practice, and
-importantly, outperform state-of-the-art parallel sorting and semisorting
-methods for almost all settings we tested, with varying input sizes,
-distribution, and key types. We also test two important applications with
-real-world data, and show that our algorithms improve the performance over
-existing approaches. We believe that many other parallel algorithm
-implementations can be accelerated using our results.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Dong_X/0/1/0/all/0/1">Xiaojun Dong</a>, <a href="http://arxiv.org/find/cs/1/au:+Wu_Y/0/1/0/all/0/1">Yunshu Wu</a>, <a href="http://arxiv.org/find/cs/1/au:+Wang_Z/0/1/0/all/0/1">Zhongqi Wang</a>, <a href="http://arxiv.org/find/cs/1/au:+Dhulipala_L/0/1/0/all/0/1">Laxman Dhulipala</a>, <a href="http://arxiv.org/find/cs/1/au:+Gu_Y/0/1/0/all/0/1">Yan Gu</a>, <a href="http://arxiv.org/find/cs/1/au:+Sun_Y/0/1/0/all/0/1">Yihan Sun</a></p><p>Semisort is a fundamental algorithmic primitive widely used in the design and
-analysis of efficient parallel algorithms. It takes input as an array of
-records and a function extracting a \emph{key} per record, and reorders them so
-that records with equal keys are contiguous. Since many applications only
-require collecting equal values, but not fully sorting the input, semisort is
-broadly applicable, e.g., in string algorithms, graph analytics, and geometry
-processing, among many other domains. However, despite dozens of recent papers
-that use semisort in their theoretical analysis and the existence of an
-asymptotically optimal parallel semisort algorithm, most implementations of
-these parallel algorithms choose to implement semisort by using comparison or
-integer sorting in practice, due to potential performance issues in existing
-semisort implementations.
-</p>
-<p>In this paper, we revisit the semisort problem, with the goal of achieving a
-high-performance parallel semisort implementation with a flexible interface.
-Our approach can easily extend to two related problems, \emph{histogram} and
-\emph{collect-reduce}. Our algorithms achieve strong speedups in practice, and
-importantly, outperform state-of-the-art parallel sorting and semisorting
-methods for almost all settings we tested, with varying input sizes,
-distribution, and key types. We also test two important applications with
-real-world data, and show that our algorithms improve the performance over
-existing approaches. We believe that many other parallel algorithm
-implementations can be accelerated using our results.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-21T00:30:00Z">Friday, April 21 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10350'>Polylog-Competitive Algorithms for Dynamic Balanced Graph Partitioning for Ring Demands</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Harald R&#xe4;cke, Stefan Schmid, Ruslan Zabrodin</p><p>The performance of many large-scale and data-intensive distributed systems
-critically depends on the capacity of the interconnecting network. This paper
-is motivated by the vision of self-adjusting infrastructures whose resources
-can be adjusted according to the workload they currently serve, in a
-demand-aware manner. Such dynamic adjustments can be exploited to improve
-network utilization and hence performance, by dynamically moving frequently
-interacting communication partners closer, e.g., collocating them in the same
-server or datacenter rack.
-</p>
-<p>In particular, we revisit the online balanced graph partitioning problem
-which captures the fundamental tradeoff between the benefits and costs of
-dynamically collocating communication partners. The demand is modelled as a
-sequence $\sigma$ (revealed in an online manner) of communication requests
-between $n$ processes, each of which is running on one of the $\ell$ servers.
-Each server has capacity $k=n/\ell$, hence, the processes have to be scheduled
-in a balanced manner across the servers. A request incurs cost $1$, if the
-requested processes are located on different servers, otherwise the cost is 0.
-A process can be migrated to a different server at cost $1$.
-</p>
-<p>This paper presents the first online algorithm for online balanced graph
-partitioning achieving a polylogarithmic competitive ratio for the fundamental
-case of ring communication patterns. Specifically, our main contribution is a
-$O(\log^3 n)$-competitive randomized online algorithm for this problem. We
-further present a randomized online algorithm which is $O(\log^2
-n)$-competitive when compared to a static optimal solution. Our two results
-rely on different algorithms and techniques and hence are of independent
-interest.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Racke_H/0/1/0/all/0/1">Harald R&#xe4;cke</a>, <a href="http://arxiv.org/find/cs/1/au:+Schmid_S/0/1/0/all/0/1">Stefan Schmid</a>, <a href="http://arxiv.org/find/cs/1/au:+Zabrodin_R/0/1/0/all/0/1">Ruslan Zabrodin</a></p><p>The performance of many large-scale and data-intensive distributed systems
-critically depends on the capacity of the interconnecting network. This paper
-is motivated by the vision of self-adjusting infrastructures whose resources
-can be adjusted according to the workload they currently serve, in a
-demand-aware manner. Such dynamic adjustments can be exploited to improve
-network utilization and hence performance, by dynamically moving frequently
-interacting communication partners closer, e.g., collocating them in the same
-server or datacenter rack.
-</p>
-<p>In particular, we revisit the online balanced graph partitioning problem
-which captures the fundamental tradeoff between the benefits and costs of
-dynamically collocating communication partners. The demand is modelled as a
-sequence $\sigma$ (revealed in an online manner) of communication requests
-between $n$ processes, each of which is running on one of the $\ell$ servers.
-Each server has capacity $k=n/\ell$, hence, the processes have to be scheduled
-in a balanced manner across the servers. A request incurs cost $1$, if the
-requested processes are located on different servers, otherwise the cost is 0.
-A process can be migrated to a different server at cost $1$.
-</p>
-<p>This paper presents the first online algorithm for online balanced graph
-partitioning achieving a polylogarithmic competitive ratio for the fundamental
-case of ring communication patterns. Specifically, our main contribution is a
-$O(\log^3 n)$-competitive randomized online algorithm for this problem. We
-further present a randomized online algorithm which is $O(\log^2
-n)$-competitive when compared to a static optimal solution. Our two results
-rely on different algorithms and techniques and hence are of independent
-interest.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-21T00:30:00Z">Friday, April 21 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10414'>How the Move Acceptance Hyper-Heuristic Copes With Local Optima: Drastic Differences Between Jumps and Cliffs</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Benjamin Doerr, Arthur Dremaux, Johannes Lutzeyer, Aur&#xe9;lien Stumpf</p><p>In recent work, Lissovoi, Oliveto, and Warwicker (Artificial Intelligence
-(2023)) proved that the Move Acceptance Hyper-Heuristic (MAHH) leaves the local
-optimum of the multimodal cliff benchmark with remarkable efficiency. With its
-$O(n^3)$ runtime, for almost all cliff widths $d,$ the MAHH massively
-outperforms the $\Theta(n^d)$ runtime of simple elitist evolutionary algorithms
-(EAs). For the most prominent multimodal benchmark, the jump functions, the
-given runtime estimates of $O(n^{2m} m^{-\Theta(m)})$ and
-$\Omega(2^{\Omega(m)})$, for gap size $m \ge 2$, are far apart and the real
-performance of MAHH is still an open question.
-</p>
-<p>In this work, we resolve this question. We prove that for any choice of the
-MAHH selection parameter~$p$, the expected runtime of the MAHH on a jump
-function with gap size $m = o(n^{1/2})$ is at least $\Omega(n^{2m-1} /
-(2m-1)!)$. This renders the MAHH much slower than simple elitist evolutionary
-algorithms with their typical $O(n^m)$ runtime.
-</p>
-<p>We also show that the MAHH with the global bit-wise mutation operator instead
-of the local one-bit operator optimizes jump functions in time $O(\min\{m
-n^m,\frac{n^{2m-1}}{m!\Omega(m)^{m-2}}\})$, essentially the minimum of the
-optimization times of the $(1+1)$ EA and the MAHH. This suggests that combining
-several ways to cope with local optima can be a fruitful approach.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Doerr_B/0/1/0/all/0/1">Benjamin Doerr</a>, <a href="http://arxiv.org/find/cs/1/au:+Dremaux_A/0/1/0/all/0/1">Arthur Dremaux</a>, <a href="http://arxiv.org/find/cs/1/au:+Lutzeyer_J/0/1/0/all/0/1">Johannes Lutzeyer</a>, <a href="http://arxiv.org/find/cs/1/au:+Stumpf_A/0/1/0/all/0/1">Aur&#xe9;lien Stumpf</a></p><p>In recent work, Lissovoi, Oliveto, and Warwicker (Artificial Intelligence
-(2023)) proved that the Move Acceptance Hyper-Heuristic (MAHH) leaves the local
-optimum of the multimodal cliff benchmark with remarkable efficiency. With its
-$O(n^3)$ runtime, for almost all cliff widths $d,$ the MAHH massively
-outperforms the $\Theta(n^d)$ runtime of simple elitist evolutionary algorithms
-(EAs). For the most prominent multimodal benchmark, the jump functions, the
-given runtime estimates of $O(n^{2m} m^{-\Theta(m)})$ and
-$\Omega(2^{\Omega(m)})$, for gap size $m \ge 2$, are far apart and the real
-performance of MAHH is still an open question.
-</p>
-<p>In this work, we resolve this question. We prove that for any choice of the
-MAHH selection parameter~$p$, the expected runtime of the MAHH on a jump
-function with gap size $m = o(n^{1/2})$ is at least $\Omega(n^{2m-1} /
-(2m-1)!)$. This renders the MAHH much slower than simple elitist evolutionary
-algorithms with their typical $O(n^m)$ runtime.
-</p>
-<p>We also show that the MAHH with the global bit-wise mutation operator instead
-of the local one-bit operator optimizes jump functions in time $O(\min\{m
-n^m,\frac{n^{2m-1}}{m!\Omega(m)^{m-2}}\})$, essentially the minimum of the
-optimization times of the $(1+1)$ EA and the MAHH. This suggests that combining
-several ways to cope with local optima can be a fruitful approach.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-21T00:30:00Z">Friday, April 21 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10524'>Learning Narrow One-Hidden-Layer ReLU Networks</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Sitan Chen, Zehao Dou, Surbhi Goel, Adam R Klivans, Raghu Meka</p><p>We consider the well-studied problem of learning a linear combination of $k$
-ReLU activations with respect to a Gaussian distribution on inputs in $d$
-dimensions. We give the first polynomial-time algorithm that succeeds whenever
-$k$ is a constant. All prior polynomial-time learners require additional
-assumptions on the network, such as positive combining coefficients or the
-matrix of hidden weight vectors being well-conditioned.
-</p>
-<p>Our approach is based on analyzing random contractions of higher-order moment
-tensors. We use a multi-scale analysis to argue that sufficiently close neurons
-can be collapsed together, sidestepping the conditioning issues present in
-prior work. This allows us to design an iterative procedure to discover
-individual neurons.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chen_S/0/1/0/all/0/1">Sitan Chen</a>, <a href="http://arxiv.org/find/cs/1/au:+Dou_Z/0/1/0/all/0/1">Zehao Dou</a>, <a href="http://arxiv.org/find/cs/1/au:+Goel_S/0/1/0/all/0/1">Surbhi Goel</a>, <a href="http://arxiv.org/find/cs/1/au:+Klivans_A/0/1/0/all/0/1">Adam R Klivans</a>, <a href="http://arxiv.org/find/cs/1/au:+Meka_R/0/1/0/all/0/1">Raghu Meka</a></p><p>We consider the well-studied problem of learning a linear combination of $k$
-ReLU activations with respect to a Gaussian distribution on inputs in $d$
-dimensions. We give the first polynomial-time algorithm that succeeds whenever
-$k$ is a constant. All prior polynomial-time learners require additional
-assumptions on the network, such as positive combining coefficients or the
-matrix of hidden weight vectors being well-conditioned.
-</p>
-<p>Our approach is based on analyzing random contractions of higher-order moment
-tensors. We use a multi-scale analysis to argue that sufficiently close neurons
-can be collapsed together, sidestepping the conditioning issues present in
-prior work. This allows us to design an iterative procedure to discover
-individual neurons.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-21T00:30:00Z">Friday, April 21 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Thursday, April 20
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/055'>TR23-055 |  On Approximability of Satisfiable $k$-CSPs: II | 
-
-	Amey Bhangale, 
-
-	Subhash Khot, 
-
-	Dor Minzer</a></h3>
-        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          Let $\Sigma$ be an alphabet and $\mu$ be a distribution on $\Sigma^k$ for some $k \geq 2$. Let $\alpha &gt; 0$ be the minimum probability of a tuple in the support of $\mu$ (denoted by $supp(\mu)$). Here, the support of $\mu$ is the set of all tuples in $\Sigma^k$ that have a positive probability mass under $\mu$. We treat the parameters $\Sigma, k, \mu, \alpha$ as fixed and constant.
-
-We say that the distribution $\mu$ has a  linear embedding if there exist an Abelian group $G$ (with the identity element $0_G$) and mappings $\sigma_i : \Sigma \rightarrow G$, $1 \leq i \leq k$, such that  at least one of the mappings is non-constant and for every $(a_1, a_2, \ldots, a_k)\in supp(\mu)$, $\sum_{i=1}^k \sigma_i(a_i) = 0_G$. In [Bhangale-Khot-Minzer, STOC 2022], the authors asked the following analytical question.
-
-Let $f_i: \Sigma^n\rightarrow [-1,1]$ be bounded functions, such that at least one of the functions $f_i$ essentially has degree at least $d$, meaning that the Fourier mass of $f_i$ on terms of degree less than $d$ is negligible, say at most $\delta$. In particular, $|\mathbb{E}[f_i]| \leq \delta$. The Fourier representation is w.r.t. the marginal of $\mu$ on the $i^{th}$ co-ordinate, denoted $(\Sigma, \mu_i)$. If $\mu$ has no linear embedding (over any Abelian group), then is it necessarily the case that
-
-$$|\mathbb{E}_{(x_1, x_2, \ldots, x_k)\sim \mu^{\otimes n}}[f_1(x_1)f_2(x_2)\cdots f_k(x_k)]   = o_{d, \delta}(1),$$
-
-where the right hand side $\to 0$ as the degree $d \to \infty$  and $\delta \to 0$?
-
-
-In this paper, we answer this analytical question fully and in the affirmative for $k=3$. We also show the following two applications of the result.
-
-1. The first application is related to hardness of approximation. Using the reduction from [Bhangale-Khot-Minzer, STOC 2022], we show that for every $3$-ary predicate $P:\Sigma^3 \to \{0,1\}$ such that $P$ has no linear embedding, an SDP integrality gap instance of a $P$-CSP instance with gap $(1,s)$ can be translated into a dictatorship test with completeness $1$ and soundness $s+o(1)$, under certain additional conditions on the instance.
-
-2. The second application is related to additive combinatorics. We show that if the distribution $\mu$ on $\Sigma^3$ has no linear embedding, marginals of $\mu$ are uniform on $\Sigma$, and $(a,a,a)\in supp(\mu)$ for every $a\in \Sigma$, then every large enough subset of $\Sigma^n$ contains a triple $(x_1, x_2,x_3)$ from $\mu^{\otimes n}$ (and in fact a significant density of such triples).
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          Let $\Sigma$ be an alphabet and $\mu$ be a distribution on $\Sigma^k$ for some $k \geq 2$. Let $\alpha &gt; 0$ be the minimum probability of a tuple in the support of $\mu$ (denoted by $supp(\mu)$). Here, the support of $\mu$ is the set of all tuples in $\Sigma^k$ that have a positive probability mass under $\mu$. We treat the parameters $\Sigma, k, \mu, \alpha$ as fixed and constant.
-
-We say that the distribution $\mu$ has a  linear embedding if there exist an Abelian group $G$ (with the identity element $0_G$) and mappings $\sigma_i : \Sigma \rightarrow G$, $1 \leq i \leq k$, such that  at least one of the mappings is non-constant and for every $(a_1, a_2, \ldots, a_k)\in supp(\mu)$, $\sum_{i=1}^k \sigma_i(a_i) = 0_G$. In [Bhangale-Khot-Minzer, STOC 2022], the authors asked the following analytical question.
-
-Let $f_i: \Sigma^n\rightarrow [-1,1]$ be bounded functions, such that at least one of the functions $f_i$ essentially has degree at least $d$, meaning that the Fourier mass of $f_i$ on terms of degree less than $d$ is negligible, say at most $\delta$. In particular, $|\mathbb{E}[f_i]| \leq \delta$. The Fourier representation is w.r.t. the marginal of $\mu$ on the $i^{th}$ co-ordinate, denoted $(\Sigma, \mu_i)$. If $\mu$ has no linear embedding (over any Abelian group), then is it necessarily the case that
-
-$$|\mathbb{E}_{(x_1, x_2, \ldots, x_k)\sim \mu^{\otimes n}}[f_1(x_1)f_2(x_2)\cdots f_k(x_k)]   = o_{d, \delta}(1),$$
-
-where the right hand side $\to 0$ as the degree $d \to \infty$  and $\delta \to 0$?
-
-
-In this paper, we answer this analytical question fully and in the affirmative for $k=3$. We also show the following two applications of the result.
-
-1. The first application is related to hardness of approximation. Using the reduction from [Bhangale-Khot-Minzer, STOC 2022], we show that for every $3$-ary predicate $P:\Sigma^3 \to \{0,1\}$ such that $P$ has no linear embedding, an SDP integrality gap instance of a $P$-CSP instance with gap $(1,s)$ can be translated into a dictatorship test with completeness $1$ and soundness $s+o(1)$, under certain additional conditions on the instance.
-
-2. The second application is related to additive combinatorics. We show that if the distribution $\mu$ on $\Sigma^3$ has no linear embedding, marginals of $\mu$ are uniform on $\Sigma$, and $(a,a,a)\in supp(\mu)$ for every $a\in \Sigma$, then every large enough subset of $\Sigma^n$ contains a triple $(x_1, x_2,x_3)$ from $\mu^{\otimes n}$ (and in fact a significant density of such triples).
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-20T22:00:35Z">Thursday, April 20 2023, 22:00</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/054'>TR23-054 |  On Approximability of Satisfiable $k$-CSPs: III | 
-
-	Amey Bhangale, 
-
-	Subhash Khot, 
-
-	Dor Minzer</a></h3>
-        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          In this paper we study functions on the Boolean hypercube that have the property that after applying certain random restrictions, the restricted function is correlated to a linear function with non-negligible probability. If the given function is correlated with a linear function then this property clearly holds. Furthermore, the property also holds for low-degree functions as low-degree functions become a constant function under a random restriction with a non-negligible probability. We show that this essentially is the only possible reason.  More specifically, we show that the function must be correlated to a product of a linear function and a low-degree function. One of the main motivations of studying this question comes from the recent work of the authors [Bhangale, Khot and Minzer, STOC 2021] towards understanding approximability of satisfiable Constraint Satisfaction Problems.
-
-Towards proving our structural theorem, we analyze a $2$-query direct product test for the table $F: {[n]\choose qn} \rightarrow \{0,1\}^{qn}$ where $q\in (0,1)$. We show that, for every constant $\varepsilon&gt;0$, if the test passes with probability $\varepsilon&gt;0$, then there is a global function such that for at least $\delta(\varepsilon)$ fraction of sets, the global function agrees with the given table on {\em all except $\alpha(\varepsilon)$ many locations}. The novelty of this result lies in the fact that $\alpha(\varepsilon)$ is independent of the set sizes. Prior to our work, such a conclusion (in fact, a stronger conclusion with $\alpha = 0$) was shown in [Dinur-Filmus-Harsha, SODA 2019] albeit when the test accepts with probability $1-\varepsilon$ for a small constant $\varepsilon&gt;0$. The setting of parameters in our direct product tests is fundamentally different compared to [Dinur-Goldenberg, FOCS 2008], [Impagliazzo-Kabanets-Wigderson, SIAM Journal of Computing 2012], [Dinur-Steurer, CCC 2014], [Dinur-Filmus-Harsha, SODA 2019]  and hence our analysis involves new techniques, including the use of the small-set expansion property of graphs defined on multi-slices. Such expansion property was recently shown in [Braverman-Khot-Lifshitz-Minzer, FOCS 2022].
-
-As one application of our structural result, we give a $4$-query linearity test under the $p$-biased distribution. More specifically, for any $p\in (\frac{1}{3},\frac{2}{3})$, we give a test that queries a given function $f: \{0,1\}^n \rightarrow \{0,1\}$ at $4$ locations, where the marginal distribution of each query is $\mu_p^{\otimes n}$. The test has perfect completeness and soundness $\frac{1}{2}+\varepsilon$ -- in other words, for every constant $\varepsilon&gt;0$,  if the test passes with probability at least $\frac{1}{2}+\varepsilon$, then the function $f$ is correlated to a linear function under the $\mu_p^{\otimes n}$ measure. This qualitatively improves the results on the linearity testing under the $p$-biased distribution from the previous work [Kopparty-Saraf, APPROX/RANDOM 2009] and [Dinur-Filmus-Harsha, SODA 2019] in which the authors studied the test with soundness $1-\varepsilon$.
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          In this paper we study functions on the Boolean hypercube that have the property that after applying certain random restrictions, the restricted function is correlated to a linear function with non-negligible probability. If the given function is correlated with a linear function then this property clearly holds. Furthermore, the property also holds for low-degree functions as low-degree functions become a constant function under a random restriction with a non-negligible probability. We show that this essentially is the only possible reason.  More specifically, we show that the function must be correlated to a product of a linear function and a low-degree function. One of the main motivations of studying this question comes from the recent work of the authors [Bhangale, Khot and Minzer, STOC 2021] towards understanding approximability of satisfiable Constraint Satisfaction Problems.
-
-Towards proving our structural theorem, we analyze a $2$-query direct product test for the table $F: {[n]\choose qn} \rightarrow \{0,1\}^{qn}$ where $q\in (0,1)$. We show that, for every constant $\varepsilon&gt;0$, if the test passes with probability $\varepsilon&gt;0$, then there is a global function such that for at least $\delta(\varepsilon)$ fraction of sets, the global function agrees with the given table on {\em all except $\alpha(\varepsilon)$ many locations}. The novelty of this result lies in the fact that $\alpha(\varepsilon)$ is independent of the set sizes. Prior to our work, such a conclusion (in fact, a stronger conclusion with $\alpha = 0$) was shown in [Dinur-Filmus-Harsha, SODA 2019] albeit when the test accepts with probability $1-\varepsilon$ for a small constant $\varepsilon&gt;0$. The setting of parameters in our direct product tests is fundamentally different compared to [Dinur-Goldenberg, FOCS 2008], [Impagliazzo-Kabanets-Wigderson, SIAM Journal of Computing 2012], [Dinur-Steurer, CCC 2014], [Dinur-Filmus-Harsha, SODA 2019]  and hence our analysis involves new techniques, including the use of the small-set expansion property of graphs defined on multi-slices. Such expansion property was recently shown in [Braverman-Khot-Lifshitz-Minzer, FOCS 2022].
-
-As one application of our structural result, we give a $4$-query linearity test under the $p$-biased distribution. More specifically, for any $p\in (\frac{1}{3},\frac{2}{3})$, we give a test that queries a given function $f: \{0,1\}^n \rightarrow \{0,1\}$ at $4$ locations, where the marginal distribution of each query is $\mu_p^{\otimes n}$. The test has perfect completeness and soundness $\frac{1}{2}+\varepsilon$ -- in other words, for every constant $\varepsilon&gt;0$,  if the test passes with probability at least $\frac{1}{2}+\varepsilon$, then the function $f$ is correlated to a linear function under the $\mu_p^{\otimes n}$ measure. This qualitatively improves the results on the linearity testing under the $p$-biased distribution from the previous work [Kopparty-Saraf, APPROX/RANDOM 2009] and [Dinur-Filmus-Harsha, SODA 2019] in which the authors studied the test with soundness $1-\varepsilon$.
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-20T22:00:22Z">Thursday, April 20 2023, 22:00</time>
         </div>
       </div>
     </details>
