@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-04-28T20:30:36Z">Friday, April 28 2023, 20:30</time>
+          <time class='timeago' datetime="2023-04-28T21:30:26Z">Friday, April 28 2023, 21:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,216 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Friday, April 28
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/060'>TR23-060 |  The Planted $k$-SUM Problem: Algorithms, Lower Bounds, Hardness Amplification, and Cryptography | 
+
+	Nikolaj Schwartzbach, 
+
+	Sagnik Saha, 
+
+	Prashant Nalini Vasudevan</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          In the average-case $k$-SUM problem, given $r$ integers chosen uniformly at random from $\{0,\ldots,M-1\}$, the objective is to find a set of $k$ numbers that sum to $0$ modulo $M$ (this set is called a ``solution&#39;&#39;). In the related $k$-XOR problem, given $k$ uniformly random Boolean vectors of length $\log{M}$, the objective is to find a set of $k$ of them whose bitwise-XOR is the all-zero vector. Both of these problems have widespread applications in the study of fine-grained complexity and cryptanalysis.
+    
+The feasibility and complexity of these problems depends on the relative values of $k$, $r$, and $M$. The dense regime of $M \leq r^k$, where solutions exist with high probability, is quite well-understood and we have several non-trivial algorithms and hardness conjectures here. Much less is known about the sparse regime of $M\gg r^k$, where solutions are unlikely to exist. The best answers we have for many fundamental questions here are limited to whatever carries over from the dense or worst-case settings. 
+
+We study the planted $k$-SUM and $k$-XOR problems in the sparse regime. In these problems, a random solution is planted in a randomly generated instance and has to be recovered. As $M$ increases past $r^k$, these planted solutions tend to be the only solutions with increasing probability, potentially becoming easier to find. We show several results about the complexity and applications of these problems.
+
+Conditional Lower Bounds: Assuming established conjectures about the hardness of average-case (non-planted) $k$-SUM when $M = r^k$, we show non-trivial lower bounds on the running time of algorithms for planted $k$-SUM when $r^k\leq M\leq r^{2k}$. We show the same for $k$-XOR as well.
+
+Search-to-Decision Reduction: For any $M&gt;r^k$, suppose there is an algorithm running in time $T$ that can distinguish between a random $k$-SUM instance and a random instance with a planted solution, with success probability $(1-o(1))$. Then, for the same $M$, there is an algorithm running in time $\widetilde{O}(T)$ that solves planted $k$-SUM with constant probability. The same holds for $k$-XOR as well.
+
+Hardness Amplification: For any $M\geq r^k$, if an algorithm running in time $T$ solves planted $k$-XOR with success probability $\Omega(1/\text{polylog}(r))$, then there is an algorithm running in time $\widetilde{O}(T)$ that solves it with probability $(1-o(1))$. We show this by constructing a rapidly mixing random walk over $k$-XOR instances that preserves the planted solution.
+
+Cryptography: For some $M \leq 2^{\mathrm{polylog}(r)}$, the hardness of the $k$-XOR problem can be used to construct Public-Key Encryption (PKE) assuming that the Learning Parity with Noise (LPN) problem over $n$-bit vectors with constant noise rate is hard for $2^{n^{0.01}}$-time algorithms. Previous constructions of PKE from LPN needed either a noise rate of $O(1/\sqrt{n})$, or hardness for $2^{n^{0.5}}$-time algorithms.
+
+Algorithms: For any $M \geq 2^{r^2}$, there is a constant $c$ (independent of $k$) and an algorithm running in time $r^c$ that, for any $k$, solves planted $k$-SUM with success probability $\Omega(1/8^k)$. We get this by showing an average-case reduction from planted $k$-SUM to the Subset Sum problem. For $r^k \leq M \ll 2^{r^2}$, the best known algorithms are still the worst-case $k$-SUM algorithms running in time $r^{\lceil{k/2}\rceil-o(1)}$.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          In the average-case $k$-SUM problem, given $r$ integers chosen uniformly at random from $\{0,\ldots,M-1\}$, the objective is to find a set of $k$ numbers that sum to $0$ modulo $M$ (this set is called a ``solution&#39;&#39;). In the related $k$-XOR problem, given $k$ uniformly random Boolean vectors of length $\log{M}$, the objective is to find a set of $k$ of them whose bitwise-XOR is the all-zero vector. Both of these problems have widespread applications in the study of fine-grained complexity and cryptanalysis.
+    
+The feasibility and complexity of these problems depends on the relative values of $k$, $r$, and $M$. The dense regime of $M \leq r^k$, where solutions exist with high probability, is quite well-understood and we have several non-trivial algorithms and hardness conjectures here. Much less is known about the sparse regime of $M\gg r^k$, where solutions are unlikely to exist. The best answers we have for many fundamental questions here are limited to whatever carries over from the dense or worst-case settings. 
+
+We study the planted $k$-SUM and $k$-XOR problems in the sparse regime. In these problems, a random solution is planted in a randomly generated instance and has to be recovered. As $M$ increases past $r^k$, these planted solutions tend to be the only solutions with increasing probability, potentially becoming easier to find. We show several results about the complexity and applications of these problems.
+
+Conditional Lower Bounds: Assuming established conjectures about the hardness of average-case (non-planted) $k$-SUM when $M = r^k$, we show non-trivial lower bounds on the running time of algorithms for planted $k$-SUM when $r^k\leq M\leq r^{2k}$. We show the same for $k$-XOR as well.
+
+Search-to-Decision Reduction: For any $M&gt;r^k$, suppose there is an algorithm running in time $T$ that can distinguish between a random $k$-SUM instance and a random instance with a planted solution, with success probability $(1-o(1))$. Then, for the same $M$, there is an algorithm running in time $\widetilde{O}(T)$ that solves planted $k$-SUM with constant probability. The same holds for $k$-XOR as well.
+
+Hardness Amplification: For any $M\geq r^k$, if an algorithm running in time $T$ solves planted $k$-XOR with success probability $\Omega(1/\text{polylog}(r))$, then there is an algorithm running in time $\widetilde{O}(T)$ that solves it with probability $(1-o(1))$. We show this by constructing a rapidly mixing random walk over $k$-XOR instances that preserves the planted solution.
+
+Cryptography: For some $M \leq 2^{\mathrm{polylog}(r)}$, the hardness of the $k$-XOR problem can be used to construct Public-Key Encryption (PKE) assuming that the Learning Parity with Noise (LPN) problem over $n$-bit vectors with constant noise rate is hard for $2^{n^{0.01}}$-time algorithms. Previous constructions of PKE from LPN needed either a noise rate of $O(1/\sqrt{n})$, or hardness for $2^{n^{0.5}}$-time algorithms.
+
+Algorithms: For any $M \geq 2^{r^2}$, there is a constant $c$ (independent of $k$) and an algorithm running in time $r^c$ that, for any $k$, solves planted $k$-SUM with success probability $\Omega(1/8^k)$. We get this by showing an average-case reduction from planted $k$-SUM to the Subset Sum problem. For $r^k \leq M \ll 2^{r^2}$, the best known algorithms are still the worst-case $k$-SUM algorithms running in time $r^{\lceil{k/2}\rceil-o(1)}$.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T20:59:43Z">Friday, April 28 2023, 20:59</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/059'>TR23-059 |  A $d^{1/2+o(1)}$ Monotonicity Tester for Boolean Functions on $d$-Dimensional Hypergrids | 
+
+	Hadley Black, 
+
+	Deeparnab Chakrabarty, 
+
+	C. Seshadhri</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Monotonicity testing of Boolean functions on the hypergrid, $f:[n]^d \to \{0,1\}$, is a classic topic in property testing. Determining the non-adaptive complexity of this problem is an important open question. For arbitrary $n$, [Black-Chakrabarty-Seshadhri, SODA 2020] describe a tester with query complexity $\widetilde{O}(\varepsilon^{-4/3}d^{5/6})$. This complexity is independent of $n$, but has a suboptimal dependence on $d$. Recently, [Braverman-Khot-Kindler-Minzer, ITCS 2023] and [Black-Chakrabarty-Seshadhri, STOC 2023] describe $\widetilde{O}(\varepsilon^{-2} n^3\sqrt{d})$ and $\widetilde{O}(\varepsilon^{-2} n\sqrt{d})$-query testers, respectively. These testers have an almost optimal dependence on $d$, but a suboptimal polynomial dependence on $n$.
+
+In this paper, we describe a non-adaptive, one-sided monotonicity tester with query complexity $O(\varepsilon^{-2} d^{1/2 + o(1)})$, independent of $n$. Up to the $d^{o(1)}$-factors, our result resolves the non-adaptive complexity of monotonicity testing for Boolean functions on hypergrids. The independence of $n$ yields a non-adaptive, one-sided $O(\varepsilon^{-2} d^{1/2 + o(1)})$-query monotonicity tester for Boolean functions $f:\mathbb{R}^d \to \{0,1\}$ associated with an arbitrary product measure.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          Monotonicity testing of Boolean functions on the hypergrid, $f:[n]^d \to \{0,1\}$, is a classic topic in property testing. Determining the non-adaptive complexity of this problem is an important open question. For arbitrary $n$, [Black-Chakrabarty-Seshadhri, SODA 2020] describe a tester with query complexity $\widetilde{O}(\varepsilon^{-4/3}d^{5/6})$. This complexity is independent of $n$, but has a suboptimal dependence on $d$. Recently, [Braverman-Khot-Kindler-Minzer, ITCS 2023] and [Black-Chakrabarty-Seshadhri, STOC 2023] describe $\widetilde{O}(\varepsilon^{-2} n^3\sqrt{d})$ and $\widetilde{O}(\varepsilon^{-2} n\sqrt{d})$-query testers, respectively. These testers have an almost optimal dependence on $d$, but a suboptimal polynomial dependence on $n$.
+
+In this paper, we describe a non-adaptive, one-sided monotonicity tester with query complexity $O(\varepsilon^{-2} d^{1/2 + o(1)})$, independent of $n$. Up to the $d^{o(1)}$-factors, our result resolves the non-adaptive complexity of monotonicity testing for Boolean functions on hypergrids. The independence of $n$ yields a non-adaptive, one-sided $O(\varepsilon^{-2} d^{1/2 + o(1)})$-query monotonicity tester for Boolean functions $f:\mathbb{R}^d \to \{0,1\}$ associated with an arbitrary product measure.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T20:58:51Z">Friday, April 28 2023, 20:58</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/058'>TR23-058 |  Explicit Directional Affine Extractors and Improved Hardness for Linear Branching Programs | 
+
+	Xin Li, 
+
+	Yan Zhong</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Affine extractors give some of the best-known lower bounds for various computational models, such as AC$^0$ circuits, parity decision trees, and general Boolean circuits. However, they are not known to give strong lower bounds for read-once branching programs (ROBPs). In a recent work, Gryaznov, Pudl\&#39;{a}k, and Talebanfard (CCC&#39; 22) introduced a stronger version of affine extractors known as directional affine extractors, together with a generalization of ROBPs where each node can make linear queries, and showed that the former implies strong lower bound for a certain type of the latter known as strongly read-once linear branching programs (SROLBPs). Their main result gives explicit constructions of directional affine extractors for entropy $k &gt; 2n/3$, which implies average-case complexity $2^{n/3-o(n)}$ against SROLBPs with exponentially small correlation. A follow-up work by Chattopadhyay and Liao (ECCC&#39; 22) improves the hardness to $2^{n-o(n)}$ at the price of increasing the correlation to polynomially large, via a new connection to sumset extractors introduced by Chattopadhyay and Li (STOC&#39; 16) and explicit constructions of such extractors by Chattopadhyay and Liao (STOC&#39; 22). Both works left open the questions of better constructions of directional affine extractors and improved average-case complexity against SROLBPs in the regime of small correlation.
+
+This paper provides a much more in-depth study of directional affine extractors, SROLBPs, and ROBPs. Our main results include:
+(1) formal separation between SROLBP and ROBP, showing that SROLBPs can be exponentially more powerful than ROBPs.
+(2) An explicit construction of directional affine extractors with $k=o(n)$ and exponentially small error, which gives average-case complexity $2^{n-o(n)}$ against SROLBPs with exponentially small correlation, thus answering the two open questions raised in previous works.
+(3) An explicit function in AC$^0$ that gives average-case complexity $2^{(1-\delta)n}$ against ROBPs with negligible correlation, for any constant $\delta&gt;0$. Previously, the best size lower bound for any function in AC$^0$ against ROBPs is only $2^{\Omega(\sqrt{n})}$.
+
+
+One of the key ingredients in our constructions is a new linear somewhere condenser for affine sources, which is based on dimension expanders. We conjecture that it also works for general weak random sources, and prove it under the Polynomial Freiman-Ruzsa conjecture. The condenser also leads to an unconditional improvement of the entropy requirement of explicit affine extractors with negligible error.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          Affine extractors give some of the best-known lower bounds for various computational models, such as AC$^0$ circuits, parity decision trees, and general Boolean circuits. However, they are not known to give strong lower bounds for read-once branching programs (ROBPs). In a recent work, Gryaznov, Pudl\&#39;{a}k, and Talebanfard (CCC&#39; 22) introduced a stronger version of affine extractors known as directional affine extractors, together with a generalization of ROBPs where each node can make linear queries, and showed that the former implies strong lower bound for a certain type of the latter known as strongly read-once linear branching programs (SROLBPs). Their main result gives explicit constructions of directional affine extractors for entropy $k &gt; 2n/3$, which implies average-case complexity $2^{n/3-o(n)}$ against SROLBPs with exponentially small correlation. A follow-up work by Chattopadhyay and Liao (ECCC&#39; 22) improves the hardness to $2^{n-o(n)}$ at the price of increasing the correlation to polynomially large, via a new connection to sumset extractors introduced by Chattopadhyay and Li (STOC&#39; 16) and explicit constructions of such extractors by Chattopadhyay and Liao (STOC&#39; 22). Both works left open the questions of better constructions of directional affine extractors and improved average-case complexity against SROLBPs in the regime of small correlation.
+
+This paper provides a much more in-depth study of directional affine extractors, SROLBPs, and ROBPs. Our main results include:
+(1) formal separation between SROLBP and ROBP, showing that SROLBPs can be exponentially more powerful than ROBPs.
+(2) An explicit construction of directional affine extractors with $k=o(n)$ and exponentially small error, which gives average-case complexity $2^{n-o(n)}$ against SROLBPs with exponentially small correlation, thus answering the two open questions raised in previous works.
+(3) An explicit function in AC$^0$ that gives average-case complexity $2^{(1-\delta)n}$ against ROBPs with negligible correlation, for any constant $\delta&gt;0$. Previously, the best size lower bound for any function in AC$^0$ against ROBPs is only $2^{\Omega(\sqrt{n})}$.
+
+
+One of the key ingredients in our constructions is a new linear somewhere condenser for affine sources, which is based on dimension expanders. We conjecture that it also works for general weak random sources, and prove it under the Polynomial Freiman-Ruzsa conjecture. The condenser also leads to an unconditional improvement of the entropy requirement of explicit affine extractors with negligible error.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T20:57:45Z">Friday, April 28 2023, 20:57</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/057'>TR23-057 |  Stretching Demi-Bits and Nondeterministic-Secure Pseudorandomness | 
+
+	Iddo  Tzameret, 
+
+	Luming Zhang</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          We develop the theory of cryptographic nondeterministic-secure pseudorandomness beyond the point reached by Rudich&#39;s original work (Rudich 1997), and apply it to draw new consequences in average-case complexity and proof complexity. Specifically, we show the following: 
+
+?*Demi-bit stretch*: Super-bits and demi-bits are variants of cryptographic pseudorandom generators which are secure against nondeterministic statistical tests (Rudich 1997). They were introduced to rule out certain approaches to proving strong complexity lower bounds beyond the limitations set out by the Natural Proofs barrier (Rudich and Razborov 1997).  Whether demi-bits are stretchable at all had been an open problem since their introduction. We answer this question affirmatively by showing that: every demi-bit $b:\{0,1\}^n\to \{0,1\}^{n+1}$ can be stretched into sublinear many demi-bits $b&#39;:\{0,1\}^{n}\to \{0,1\}^{n+n^{c}}$, for every constant $0&lt;c&lt;1$.
+    
+?*Average-case hardness*: Using work by Santhanam (2020), we apply our results to obtain new  average-case Kolmogorov complexity results: we show that K$^{\rm poly}[n-O(1)]$ is zero-error average-case hard against NP/poly machines iff K$^{\rm poly}[n-o(n)]$ is, where  for a function $s(n):\mathbb{N}\to\mathbb{N}$, K$^{\rm poly}[s(n)]$ denotes the languages of all strings $x\in\{0,1\}^n$ for which there are (fixed) poly-time Turing machines of description-length at most $s(n)$ that output $x$.   
+
+?*Characterising super-bits by nondeterministic unpredictability:* In the deterministic setting, Yao proved that super-polynomial hardness of pseudorandom generators is equivalent to (&quot;next-bit&quot;) unpredictability. Unpredictability roughly means that given any strict prefix of a random string, it is infeasible to predict the next bit. We initiate the study of unpredictability beyond the deterministic setting (in the cryptographic regime), and characterise the nondeterministic hardness of generators from an unpredictability perspective. Specifically, we propose four stronger notions of unpredictability:
+NP/poly-unpredictability, coNP/poly-unpredictability, $\cap$-unpredictability and $\cup$-unpredictability, and show that super-polynomial nondeterministic hardness of generators lies between $\cap$-unpredictability and $\cup$-unpredictability.
+
+?*Characterising super-bits by nondeterministic hard-core predicates:* We introduce a nondeterministic variant of hard-core predicates, called *super-core* predicates. We show that the existence of a super-bit is equivalent to the existence of a super-core of some non-shrinking function. This serves as an analogue of the equivalence between the existence of a strong pseudorandom generator and the existence of a hard-core of some one-way function (Goldreich and Levin 1989, Hastad, Impagliazzo, Levin and Luby 1999), and provides a first alternative characterisation of super-bits. We also prove that a certain class of functions, which may have hard-cores, cannot possess any super-core.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          We develop the theory of cryptographic nondeterministic-secure pseudorandomness beyond the point reached by Rudich&#39;s original work (Rudich 1997), and apply it to draw new consequences in average-case complexity and proof complexity. Specifically, we show the following: 
+
+?*Demi-bit stretch*: Super-bits and demi-bits are variants of cryptographic pseudorandom generators which are secure against nondeterministic statistical tests (Rudich 1997). They were introduced to rule out certain approaches to proving strong complexity lower bounds beyond the limitations set out by the Natural Proofs barrier (Rudich and Razborov 1997).  Whether demi-bits are stretchable at all had been an open problem since their introduction. We answer this question affirmatively by showing that: every demi-bit $b:\{0,1\}^n\to \{0,1\}^{n+1}$ can be stretched into sublinear many demi-bits $b&#39;:\{0,1\}^{n}\to \{0,1\}^{n+n^{c}}$, for every constant $0&lt;c&lt;1$.
+    
+?*Average-case hardness*: Using work by Santhanam (2020), we apply our results to obtain new  average-case Kolmogorov complexity results: we show that K$^{\rm poly}[n-O(1)]$ is zero-error average-case hard against NP/poly machines iff K$^{\rm poly}[n-o(n)]$ is, where  for a function $s(n):\mathbb{N}\to\mathbb{N}$, K$^{\rm poly}[s(n)]$ denotes the languages of all strings $x\in\{0,1\}^n$ for which there are (fixed) poly-time Turing machines of description-length at most $s(n)$ that output $x$.   
+
+?*Characterising super-bits by nondeterministic unpredictability:* In the deterministic setting, Yao proved that super-polynomial hardness of pseudorandom generators is equivalent to (&quot;next-bit&quot;) unpredictability. Unpredictability roughly means that given any strict prefix of a random string, it is infeasible to predict the next bit. We initiate the study of unpredictability beyond the deterministic setting (in the cryptographic regime), and characterise the nondeterministic hardness of generators from an unpredictability perspective. Specifically, we propose four stronger notions of unpredictability:
+NP/poly-unpredictability, coNP/poly-unpredictability, $\cap$-unpredictability and $\cup$-unpredictability, and show that super-polynomial nondeterministic hardness of generators lies between $\cap$-unpredictability and $\cup$-unpredictability.
+
+?*Characterising super-bits by nondeterministic hard-core predicates:* We introduce a nondeterministic variant of hard-core predicates, called *super-core* predicates. We show that the existence of a super-bit is equivalent to the existence of a super-core of some non-shrinking function. This serves as an analogue of the equivalence between the existence of a strong pseudorandom generator and the existence of a hard-core of some one-way function (Goldreich and Levin 1989, Hastad, Impagliazzo, Levin and Luby 1999), and provides a first alternative characterisation of super-bits. We also prove that a certain class of functions, which may have hard-cores, cannot possess any super-core.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-04-28T20:57:05Z">Friday, April 28 2023, 20:57</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3090,248 +3300,6 @@ table is the number of columns in it), the minimum complexity of a
 deterministic decision tree, and the minimum complexity of a nondeterministic
 decision tree. We consider rough classification of functions characterizing
 relationships and enumerate all possible seven types of the relationships.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-24T00:30:00Z">Monday, April 24 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10661'>A Conjecture Related to the Traveling Salesman Problem</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Jian Yang</p><p>We show that certain ways of solving some combinatorial optimization problems
-can be understood as using query planes to divide the space of problem
-instances into polyhedra that could fit into those that characterize the
-problem's various solutions. This viewpoint naturally leads to a
-splinter-proneness property that is then shown to be responsible for the
-hardness of the concerned problem. We conjecture that the $NP$-equivalent
-traveling salesman problem (TSP) has this property and hence is hard to solve
-to a certain extent.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Yang_J/0/1/0/all/0/1">Jian Yang</a></p><p>We show that certain ways of solving some combinatorial optimization problems
-can be understood as using query planes to divide the space of problem
-instances into polyhedra that could fit into those that characterize the
-problem's various solutions. This viewpoint naturally leads to a
-splinter-proneness property that is then shown to be responsible for the
-hardness of the concerned problem. We conjecture that the $NP$-equivalent
-traveling salesman problem (TSP) has this property and hence is hard to solve
-to a certain extent.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-24T00:30:00Z">Monday, April 24 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.11017'>Breaking the Log Barrier: a Novel Universal Restart Strategy for Faster Las Vegas Algorithms</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Kevin Scaman</p><p>Let $\mathcal{A}$ be a Las Vegas algorithm, i.e. an algorithm whose running
-time $T$ is a random variable drawn according to a certain probability
-distribution $p$. In 1993, Luby, Sinclair and Zuckerman [LSZ93] proved that a
-simple universal restart strategy can, for any probability distribution $p$,
-provide an algorithm executing $\mathcal{A}$ and whose expected running time is
-$O(\ell^\star_p\log\ell^\star_p)$, where $\ell^\star_p=\Theta\left(\inf_{q\in
-(0,1]}Q_p(q)/q\right)$ is the minimum expected running time achievable with
-full prior knowledge of the probability distribution $p$, and $Q_p(q)$ is the
-$q$-quantile of $p$. Moreover, the authors showed that the logarithmic term
-could not be removed for universal restart strategies and was, in a certain
-sense, optimal. In this work, we show that, quite surprisingly, the logarithmic
-term can be replaced by a smaller quantity, thus reducing the expected running
-time in practical settings of interest. More precisely, we propose a novel
-restart strategy that executes $\mathcal{A}$ and whose expected running time is
-$O\big(\inf_{q\in (0,1]}\frac{Q_p(q)}{q}\,\psi\big(\log Q_p(q),\,\log
-(1/q)\big)\big)$ where $\psi(a,b)=1+\min\left\{a+b,a\log^2 a,\,b\log^2
-b\right\}$. This quantity is, up to a multiplicative factor, better than: 1)
-the universal restart strategy of [LSZ93], 2) any $q$-quantile of $p$ for
-$q\in(0,1]$, 3) the original algorithm, and 4) any quantity of the form
-$\phi^{-1}(\mathbb{E}[\phi(T)])$ for a large class of concave functions $\phi$.
-The latter extends the recent restart strategy of [Zam22] achieving
-$O\left(e^{\mathbb{E}[\ln(T)]}\right)$, and can be thought of as algorithmic
-reverse Jensen's inequalities. Finally, we show that the behavior of
-$\frac{t\phi''(t)}{\phi'(t)}$ at infinity controls the existence of reverse
-Jensen's inequalities by providing a necessary and a sufficient condition for
-these inequalities to hold.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Scaman_K/0/1/0/all/0/1">Kevin Scaman</a></p><p>Let $\mathcal{A}$ be a Las Vegas algorithm, i.e. an algorithm whose running
-time $T$ is a random variable drawn according to a certain probability
-distribution $p$. In 1993, Luby, Sinclair and Zuckerman [LSZ93] proved that a
-simple universal restart strategy can, for any probability distribution $p$,
-provide an algorithm executing $\mathcal{A}$ and whose expected running time is
-$O(\ell^\star_p\log\ell^\star_p)$, where $\ell^\star_p=\Theta\left(\inf_{q\in
-(0,1]}Q_p(q)/q\right)$ is the minimum expected running time achievable with
-full prior knowledge of the probability distribution $p$, and $Q_p(q)$ is the
-$q$-quantile of $p$. Moreover, the authors showed that the logarithmic term
-could not be removed for universal restart strategies and was, in a certain
-sense, optimal. In this work, we show that, quite surprisingly, the logarithmic
-term can be replaced by a smaller quantity, thus reducing the expected running
-time in practical settings of interest. More precisely, we propose a novel
-restart strategy that executes $\mathcal{A}$ and whose expected running time is
-$O\big(\inf_{q\in (0,1]}\frac{Q_p(q)}{q}\,\psi\big(\log Q_p(q),\,\log
-(1/q)\big)\big)$ where $\psi(a,b)=1+\min\left\{a+b,a\log^2 a,\,b\log^2
-b\right\}$. This quantity is, up to a multiplicative factor, better than: 1)
-the universal restart strategy of [LSZ93], 2) any $q$-quantile of $p$ for
-$q\in(0,1]$, 3) the original algorithm, and 4) any quantity of the form
-$\phi^{-1}(\mathbb{E}[\phi(T)])$ for a large class of concave functions $\phi$.
-The latter extends the recent restart strategy of [Zam22] achieving
-$O\left(e^{\mathbb{E}[\ln(T)]}\right)$, and can be thought of as algorithmic
-reverse Jensen's inequalities. Finally, we show that the behavior of
-$\frac{t\phi''(t)}{\phi'(t)}$ at infinity controls the existence of reverse
-Jensen's inequalities by providing a necessary and a sufficient condition for
-these inequalities to hold.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-24T00:30:00Z">Monday, April 24 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.11102'>Solid angle measure of polyhedral cones</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Allison Fitisone, Yuan Zhou</p><p>This paper addresses the computation of normalized solid angle measure of
-polyhedral cones. This is well understood in dimensions two and three. For
-higher dimensions, assuming that a positive-definite criterion is met, the
-measure can be computed via a multivariable hypergeometric series. We present
-two decompositions of full-dimensional simplicial cones into finite families of
-cones satisfying the positive-definite criterion, enabling the use of the
-hypergeometric series to compute the solid angle measure of any polyhedral
-cone. Additionally, our second decomposition method yields cones with a special
-tridiagonal structure, reducing the number of required coordinates for the
-hypergeometric series formula. Furthermore, we investigate the convergence of
-the hypergeometric series for this case. Our findings provide a powerful tool
-for computing solid angle measures in high-dimensional spaces.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Fitisone_A/0/1/0/all/0/1">Allison Fitisone</a>, <a href="http://arxiv.org/find/math/1/au:+Zhou_Y/0/1/0/all/0/1">Yuan Zhou</a></p><p>This paper addresses the computation of normalized solid angle measure of
-polyhedral cones. This is well understood in dimensions two and three. For
-higher dimensions, assuming that a positive-definite criterion is met, the
-measure can be computed via a multivariable hypergeometric series. We present
-two decompositions of full-dimensional simplicial cones into finite families of
-cones satisfying the positive-definite criterion, enabling the use of the
-hypergeometric series to compute the solid angle measure of any polyhedral
-cone. Additionally, our second decomposition method yields cones with a special
-tridiagonal structure, reducing the number of required coordinates for the
-hypergeometric series formula. Furthermore, we investigate the convergence of
-the hypergeometric series for this case. Our findings provide a powerful tool
-for computing solid angle measures in high-dimensional spaces.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-04-24T00:30:00Z">Monday, April 24 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2304.10647'>New Lower Bounds for Adaptive Tolerant Junta Testing</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Xi Chen, Shyamal Patel</p><p>We prove a $k^{-\Omega(\log(\varepsilon_2 - \varepsilon_1))}$ lower bound for
-adaptively testing whether a Boolean function is $\varepsilon_1$-close to or
-$\varepsilon_2$-far from $k$-juntas. Our results provide the first
-superpolynomial separation between tolerant and non-tolerant testing for a
-natural property of boolean functions under the adaptive setting. Furthermore,
-our techniques generalize to show that adaptively testing whether a function is
-$\varepsilon_1$-close to a $k$-junta or $\varepsilon_2$-far from $(k +
-o(k))$-juntas cannot be done with $\textsf{poly} (k, (\varepsilon_2 -
-\varepsilon_1)^{-1})$ queries. This is in contrast to an algorithm by Iyer, Tal
-and Whitmeyer [CCC 2021] which uses $\textsf{poly} (k, (\varepsilon_2 -
-\varepsilon_1)^{-1})$ queries to test whether a function is
-$\varepsilon_1$-close to a $k$-junta or $\varepsilon_2$-far from
-$O(k/(\varepsilon_2-\varepsilon_1)^2)$-juntas.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chen_X/0/1/0/all/0/1">Xi Chen</a>, <a href="http://arxiv.org/find/cs/1/au:+Patel_S/0/1/0/all/0/1">Shyamal Patel</a></p><p>We prove a $k^{-\Omega(\log(\varepsilon_2 - \varepsilon_1))}$ lower bound for
-adaptively testing whether a Boolean function is $\varepsilon_1$-close to or
-$\varepsilon_2$-far from $k$-juntas. Our results provide the first
-superpolynomial separation between tolerant and non-tolerant testing for a
-natural property of boolean functions under the adaptive setting. Furthermore,
-our techniques generalize to show that adaptively testing whether a function is
-$\varepsilon_1$-close to a $k$-junta or $\varepsilon_2$-far from $(k +
-o(k))$-juntas cannot be done with $\textsf{poly} (k, (\varepsilon_2 -
-\varepsilon_1)^{-1})$ queries. This is in contrast to an algorithm by Iyer, Tal
-and Whitmeyer [CCC 2021] which uses $\textsf{poly} (k, (\varepsilon_2 -
-\varepsilon_1)^{-1})$ queries to test whether a function is
-$\varepsilon_1$-close to a $k$-junta or $\varepsilon_2$-far from
-$O(k/(\varepsilon_2-\varepsilon_1)^2)$-juntas.
 </p>
         
         </div>
