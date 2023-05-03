@@ -9,6 +9,24 @@
 
 
 <item>
+  <title>TR23-064 |   On the Lower Bound on the Length of Relaxed Locally Decodable Codes | 
+
+	Oded Goldreich</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/064</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/064</link>
+  <description>
+    We revisit the known proof of the lower bound on the length of relaxed locally decodable codes, providing an arguably simpler exposition that yields a slightly better lower bound for the non-adaptive case and a weaker bound in the general case.
+
+Recall that a locally decodable code is an error correcting code that allows for the recovery of any desired bit in the message based on a constant number of randomly selected bits in the possibly corrupted codeword.
+The relaxed version requires correct recovery only in case of actual codewords, while requiring that for strings that are (only) close to the code, with high probability, the local decoder outputs either the correct value or a special failure symbol (but not a wrong value). 
+
+The lower bounds we prove are $n\geq k^{1+\Omega(1/q^2)}$ for the non-adaptive case and $n\geq k^{1+\Omega(1/q^3)}$ for the general case, where $k$ denotes the message length, $n$ denotes the length of the codewords, and $q$ denotes the (constant) number of queries.
+  </description>
+  <pubDate>2023-05-03 14:52:01 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Questions and Concerns About Google&#39;s Quantum Supremacy Claim</title>
   <guid>http://arxiv.org/abs/2305.01064</guid>
   <link>http://arxiv.org/abs/2305.01064</link>
@@ -1580,31 +1598,6 @@ introduced by Bonamy et al.
 regarding the complexity of both problems in the landscape of parameterized
 complexity, since in all cases we provide essentially matching upper and lower
 bounds.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-01 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Approximate Nearest Neighbor for Polygonal Curves under Fr\&#39;echet Distance</title>
-  <guid>http://arxiv.org/abs/2304.14643</guid>
-  <link>http://arxiv.org/abs/2304.14643</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cheng_S/0/1/0/all/0/1&quot;&gt;Siu-Wing Cheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Huang_H/0/1/0/all/0/1&quot;&gt;Haoqiang Huang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose $\kappa$-approximate nearest neighbor (ANN) data structures for
-$n$ polygonal curves under the Fr\&#39;{e}chet distance in $\real^d$, where $\kappa
-\in \{1+\eps,3+\eps\}$ and $d \geq 2$. We assume that every input curve has at
-most $m$ vertices, every query curve has at most $k$ vertices, $k \ll m$, and
-$k$ is given for preprocessing. The query times are
-$\tilde{O}(k(mn)^{0.5+\eps}/\eps^d+ k(d/\eps)^{O(dk)})$ for $(1+\eps)$-ANN and
-$\tilde{O}(k(mn)^{0.5+\eps}/\eps^d)$ for $(3+\eps)$-ANN. The space and expected
-preprocessing time are $\tilde{O}(k(mnd^d/\eps^d)^{O(k+1/\eps^2)})$ in both
-cases. In two and three dimensions, we improve the query times to
-$O(1/\eps)^{O(k)} \cdot \tilde{O}(k)$ for $(1+\eps)$-ANN and $\tilde{O}(k)$ for
-$(3+\eps)$-ANN. The space and expected preprocessing time improve to
-$O(mn/\eps)^{O(k)} \cdot \tilde{O}(k)$ in both cases. For ease of presentation,
-we treat factors in our bounds that depend purely on $d$ as~$O(1)$. The hidden
-polylog factors in the big-$\tilde{O}$ notation have powers dependent on $d$.
 &lt;/p&gt;
   </description>
   <pubDate>2023-05-01 00:30:00 UTC</pubDate>
