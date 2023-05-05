@@ -9,6 +9,29 @@
 
 
 <item>
+  <title>TR23-066 |  Protecting Single-Hop Radio Networks from Message Drops | 
+
+	Dmitry Paramonov, 
+
+	Gillat Kol, 
+
+	Raghuvansh Saxena, 
+
+	Klim Efremenko</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/066</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/066</link>
+  <description>
+    Single-hop radio networks (SHRN) are a well studied abstraction of communication over a wireless channel. In this model, in every round, each of the $n$ participating parties may decide to broadcast a message to all the others, potentially causing collisions. We consider the SHRN model in the presence of stochastic message drops (i.e., erasures), where in every round, the message received by each party is erased (replaced by $\bot$) with some small constant probability, independently.
+
+Our main result is a constant rate coding scheme, allowing one to run protocols designed to work over the (noiseless) SHRN model over the SHRN model with erasures. Our scheme converts any protocol $\Pi$ of length at most exponential in $n$ over the SHRN model to a protocol $\Pi&amp;#39;$ that is resilient to constant fraction of erasures and has length linear in the length of $\Pi$.
+
+We mention that for the special case where the protocol $\Pi$ is non-adaptive, i.e., the order of communication is fixed in advance, such a scheme was known. Nevertheless, adaptivity is widely used and is known to hugely boost the power of wireless channels, which makes handling the general case of adaptive protocols $\Pi$ both important and more challenging. Indeed, to the best of our knowledge, our result is the first constant rate scheme that converts adaptive protocols to noise resilient ones in any multi-party model.
+  </description>
+  <pubDate>2023-05-05 17:23:04 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>AI and Aaronson&amp;#8217;s Law of Dark Irony</title>
   <guid>https://scottaaronson.blog/?p=7278</guid>
   <link>https://scottaaronson.blog/?p=7278</link>
@@ -1323,44 +1346,6 @@ that a crucial simple formula for a priori estimation of the fidelity seems to
 involve an unexpected independence assumption, and yet it gives very accurate
 predictions. The third concern is about statistical properties of the
 calibration process.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-03 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Coverability in VASS Revisited: Improving Rackoff&#39;s Bound to Obtain Conditional Optimality</title>
-  <guid>http://arxiv.org/abs/2305.01581</guid>
-  <link>http://arxiv.org/abs/2305.01581</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kunnemann_M/0/1/0/all/0/1&quot;&gt;Marvin K&amp;#xfc;nnemann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mazowiecki_F/0/1/0/all/0/1&quot;&gt;Filip Mazowiecki&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Schutze_L/0/1/0/all/0/1&quot;&gt;Lia Sch&amp;#xfc;tze&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sinclair_Banks_H/0/1/0/all/0/1&quot;&gt;Henry Sinclair-Banks&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wegrzycki_K/0/1/0/all/0/1&quot;&gt;Karol W&amp;#x119;grzycki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Seminal results establish that the coverability problem for Vector Addition
-Systems with States (VASS) is in EXPSPACE (Rackoff, &#39;78) and is EXPSPACE-hard
-already under unary encodings (Lipton, &#39;76). More precisely, Rosier and Yen
-later utilise Rackoff&#39;s bounding technique to show that if coverability holds
-then there is a run of length at most $n^{2^{\mathcal{O}(d \log d)}}$, where
-$d$ is the dimension and $n$ is the size of the given unary VASS. Earlier,
-Lipton showed that there exist instances of coverability in $d$-dimensional
-unary VASS that are only witnessed by runs of length at least
-$n^{2^{\Omega(d)}}$. Our first result closes this gap. We improve the upper
-bound by removing the twice-exponentiated $\log(d)$ factor, thus matching
-Lipton&#39;s lower bound. This closes the corresponding gap for the exact space
-required to decide coverability. This also yields a deterministic
-$n^{2^{\mathcal{O}(d)}}$-time algorithm for coverability. Our second result is
-a matching lower bound, that there does not exist a deterministic
-$n^{2^{o(d)}}$-time algorithm, conditioned upon the Exponential Time
-Hypothesis.
-&lt;/p&gt;
-&lt;p&gt;When analysing coverability, a standard proof technique is to consider VASS
-with bounded counters. Bounded VASS make for an interesting and popular model
-due to strong connections with timed automata. Withal, we study a natural
-setting where the counter bound is linear in the size of the VASS. Here the
-trivial exhaustive search algorithm runs in $\mathcal{O}(n^{d+1})$-time. We
-give evidence to this being near-optimal. We prove that in dimension one this
-trivial algorithm is conditionally optimal, by showing that $n^{2-o(1)}$-time
-is required under the $k$-cycle hypothesis. In general fixed dimension $d$, we
-show that $n^{d-2-o(1)}$-time is required under the 3-uniform hyperclique
-hypothesis.
 &lt;/p&gt;
   </description>
   <pubDate>2023-05-03 00:30:00 UTC</pubDate>
