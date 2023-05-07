@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-05-07T19:30:31Z">Sunday, May 07 2023, 19:30</time>
+          <time class='timeago' datetime="2023-05-07T20:30:38Z">Sunday, May 07 2023, 20:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -341,6 +341,73 @@
 
   <div class="tr-articles tr-shrink">
     
+    
+    <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Sunday, May 07
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/067'>TR23-067 |  Linear Relaxed Locally Decodable and Correctable Codes Do Not Need Adaptivity and Two-Sided Error | 
+
+	Guy Goldberg</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Relaxed locally decodable codes (RLDCs) are error-correcting codes in which individual bits of the message can be recovered by querying only a few bits from a noisy codeword.
+Unlike standard (non-relaxed) decoders, a relaxed one is allowed to output a ``rejection&#39;&#39; symbol, indicating that the decoding failed.
+To prevent the decoder from always rejecting, we demand that if its input is a valid codeword, then for every bit, the decoder is correct with high probability.
+
+We study the power of adaptivity and two-sided error for RLDCs.
+Our main result is that if the underlying code is linear, *adaptivity and two-sided error do not give any power to relaxed local decoding.*
+We construct a reduction from adaptive, two-sided error relaxed decoders to non-adaptive, one-sided error ones.
+That is, the reduction produces a relaxed decoder that never errs or rejects if its input is a valid codeword and makes queries based on its internal randomness (and the requested index to decode), independently of the input.
+The reduction does not change the query complexity (nor the underlying code), and for any input, the decoder&#39;s error probability increases at most two-fold.
+
+The idea behind the reduction is our new notion of *additive* promise problem.
+A promise problem is additive if the sum of any two YES-instances is a YES-instance (i.e., the YES instances are a subspace) and the sum of any NO-instance and a YES-instance is a NO-instance (i.e., the NO-instances are a collection of cosets).
+
+We prove that relaxed decoding, interpreted as a promise problem, satisfies this definition.
+We construct a reduction that applies to *any* additive promise problem, allowing us to obtain the result for RLDCs.
+Our result also holds for relaxed locally *correctable* codes (RLCCs), where a *codeword* bit should be recovered.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          Relaxed locally decodable codes (RLDCs) are error-correcting codes in which individual bits of the message can be recovered by querying only a few bits from a noisy codeword.
+Unlike standard (non-relaxed) decoders, a relaxed one is allowed to output a ``rejection&#39;&#39; symbol, indicating that the decoding failed.
+To prevent the decoder from always rejecting, we demand that if its input is a valid codeword, then for every bit, the decoder is correct with high probability.
+
+We study the power of adaptivity and two-sided error for RLDCs.
+Our main result is that if the underlying code is linear, *adaptivity and two-sided error do not give any power to relaxed local decoding.*
+We construct a reduction from adaptive, two-sided error relaxed decoders to non-adaptive, one-sided error ones.
+That is, the reduction produces a relaxed decoder that never errs or rejects if its input is a valid codeword and makes queries based on its internal randomness (and the requested index to decode), independently of the input.
+The reduction does not change the query complexity (nor the underlying code), and for any input, the decoder&#39;s error probability increases at most two-fold.
+
+The idea behind the reduction is our new notion of *additive* promise problem.
+A promise problem is additive if the sum of any two YES-instances is a YES-instance (i.e., the YES instances are a subspace) and the sum of any NO-instance and a YES-instance is a NO-instance (i.e., the NO-instances are a collection of cosets).
+
+We prove that relaxed decoding, interpreted as a promise problem, satisfies this definition.
+We construct a reduction that applies to *any* additive promise problem, allowing us to obtain the result for RLDCs.
+Our result also holds for relaxed locally *correctable* codes (RLCCs), where a *codeword* bit should be recovered.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-07T19:30:37Z">Sunday, May 07 2023, 19:30</time>
+        </div>
+      </div>
+    </details>
+  
     
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Friday, May 05
@@ -3323,63 +3390,6 @@ The lower bounds we prove are $n\geq k^{1+\Omega(1/q^2)}$ for the non-adaptive c
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-05-03T14:52:01Z">Wednesday, May 03 2023, 14:52</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.01064'>Questions and Concerns About Google's Quantum Supremacy Claim</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Gil Kalai, Yosef Rinott, Tomer Shoham</p><p>In October 2019, Nature published a paper [6] describing an experimental work
-that was performed at Google. The paper claims to demonstrate quantum
-(computational) supremacy on a 53-qubit quantum computer. Since then we have
-been involved in a long-term project to study various statistical aspects of
-the Google experiment. In [30] we studied Google's statistical framework that
-we found to be very sound and offered some technical improvements. This
-document describes three main concerns (based on statistical analysis) about
-the Google 2019 experiment. The first concern is that the data do not agree
-with Google's noise model (or any other specific model). The second concern is
-that a crucial simple formula for a priori estimation of the fidelity seems to
-involve an unexpected independence assumption, and yet it gives very accurate
-predictions. The third concern is about statistical properties of the
-calibration process.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+Kalai_G/0/1/0/all/0/1">Gil Kalai</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Rinott_Y/0/1/0/all/0/1">Yosef Rinott</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Shoham_T/0/1/0/all/0/1">Tomer Shoham</a></p><p>In October 2019, Nature published a paper [6] describing an experimental work
-that was performed at Google. The paper claims to demonstrate quantum
-(computational) supremacy on a 53-qubit quantum computer. Since then we have
-been involved in a long-term project to study various statistical aspects of
-the Google experiment. In [30] we studied Google's statistical framework that
-we found to be very sound and offered some technical improvements. This
-document describes three main concerns (based on statistical analysis) about
-the Google 2019 experiment. The first concern is that the data do not agree
-with Google's noise model (or any other specific model). The second concern is
-that a crucial simple formula for a priori estimation of the fidelity seems to
-involve an unexpected independence assumption, and yet it gives very accurate
-predictions. The third concern is about statistical properties of the
-calibration process.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-03T00:30:00Z">Wednesday, May 03 2023, 00:30</time>
         </div>
       </div>
     </details>
