@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-05-08T13:30:41Z">Monday, May 08 2023, 13:30</time>
+          <time class='timeago' datetime="2023-05-08T14:30:25Z">Monday, May 08 2023, 14:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -349,6 +349,70 @@
 
     <details class='tr-article' open>
       <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://ptreview.sublinear.info/2023/05/news-for-april-2023/'>News for April 2023</a></h3>
+        <p class='tr-article-feed'>from <a href='https://ptreview.sublinear.info'>Property Testing Review</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          After an empty month, the engines of PTReview are roaring back to life with a fresh batch of papers for this month&#8217;s edition. In total, we have four papers that are sure to pique your interest. It&#8217;s been an action-packed month with a diverse range of topics covered in the featured papers. The first paper [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>After an empty month, the engines of PTReview are roaring back to life with a fresh batch of papers for this month&#8217;s edition. In total, we have four papers that are sure to pique your interest. It&#8217;s been an action-packed month with a diverse range of topics covered in the featured papers. The first paper delves into new variations in distribution testing, while the second paper discusses optimal testers for Bayes Nets. The third paper focuses on optimal tolerant junta-testers, and the final paper introduces a cool monotonicity tester over hypergrids.</p>
+
+
+
+<p><strong>Distribution Testing Under the Parity Trace</strong> by Renato Ferreira Pinto Jr and Nathaniel Harms (<a href="https://arxiv.org/abs/2304.01374">arXiv</a>) The featured paper considers the classic setup in distribution testing with <em>a twist</em>. To explain the results, let me introduce the framework considered in this work. Consider distributions supported over \([n]\). Suppose I want to design distribution testers where instead of obtaining samples in the usual way, I first obtain an ordered list of samples, I store it in a sequence \(S\) and only the least significant bit of each element of \(S\) is made available to your distribution testing algorithm. This is called a parity trace.  Note that with this access model, suddenly a bunch of standard tasks become non-trivial. To take an example from the paper, you can no longer distinguish between the uniform distribution supported on \(\{1,2, \ldots, n\}\) and the uniform distribution supported on \(\{n+1, n+2, \ldots 2n\}\) in this access model. Nevertheless, the paper shows, you can still obtain testers which require only sublinear number of accesses for testing uniformity in this model.</p>
+
+
+
+<p>Another cool feature of this <em>big</em> paper is an unexpected foray into the trace reconstruction literature from a property testing viewpoint. I wish I understood the formal connection better to describe a bit more about it. But for now, let me leave that as an appetizer which (hopefully) encourages you to take a look at the paper.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>New Lower Bounds for Adaptive Tolerant Junta Testing</strong> by Xi Chen and Shyamal Patel (<a href="https://arxiv.org/abs/2304.10647">arXiv</a>) If you are a regular here on the PTReview corner, you are probably no stranger to the <em>tolerant junta testing</em> problem. As a corollary to the main result, the paper in question proves a lower bound of \(k^{\Omega(\log k)}\) queries on any adaptive algorithm that wishes to test whether the input function \(f\) is \(\varepsilon_1\) close to being a \(k\)-junta or whether it is \(\varepsilon_2 \geq \varepsilon_1 + \displaystyle\frac{1}{poly(k)}\). Indeed, another remarkable achievement of the paper is that it achieves a superpolynomial separation between non-tolerant versions and the tolerant versions of any natural property of boolean functions under the adaptive setting.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Near-Optimal Degree Testing for Bayes Nets</strong> by Vipul Arora, Arnab Bhattacharyya, Clément L. Canonne (our own!) and Joy Qiping Yang (<a href="https://arxiv.org/abs/2304.06733">arXiv</a>) This paper continues a line of investigation which a subset of the authors were a part of (which we also covered in our <a href="https://ptreview.sublinear.info/2022/05/news-for-april-2022/">News for April 2022</a>). Let us remind ourselves of the setup. You are given a probability distribution \(\mathcal{P}\) supported over the Boolean Hypercube. Suppose \(\mathcal{P}\) can be generated by a Bayseian Network. You may think of a Bayesian Network as a DAG where each vertex tosses a coin (with different heads probabilities). The question seeks to test whether \(\mathcal{P}\) admits a sparse Bayesian Net (in the sense of each vertex having small in-degree). The main result of the paper gives an algorithm for this task which requires \(\Theta(2^{n/2}/\varepsilon^2)\) samples. The paper also proves an almost matching lower bound.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>A \(d^{1/2+o(1)}\) Monotonicity Tester for Boolean Functions on \(d\)-Dimensional Hypergrids</strong> by Hadley Black, Deeparnab Chakrabarty and C. Seshadhri (again, our own!) (<a href="https://arxiv.org/abs/2304.01416">arXiv</a>) Again, the problem of monotonicity testing of boolean functions hardly requires any detailing to the regular readers of PTReview. As you can see in our <a href="https://ptreview.sublinear.info/2022/12/news-for-october-2022-2/">News from November 2022</a> there were two concurrent papers mulling over this problem over the hypergrid domain. The featured paper is the result of a dedicated pursuit by the authors and the key result is what the title says. Namely, you can test monotonicity with a number of (non-adaptive, one-sided) queries that has no dependence on \(n\).</p>
+<p class="authors">By Akash</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T13:54:49Z">Monday, May 08 2023, 13:54</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
         <h3 class='tr-article-title'><a href='https://gilkalai.wordpress.com/2023/05/08/mathematics-mainly-combinatorics-related-matters-a-lot-of-activity/'>Mathematics (mainly combinatorics) related matters: A lot of activity.</a></h3>
         <p class='tr-article-feed'>from <a href='https://gilkalai.wordpress.com'>Gil Kalai</a></p>
         <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -374,7 +438,7 @@
 <p><a href="https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg"><img data-attachment-id="24262" data-permalink="https://gilkalai.wordpress.com/2023/05/08/mathematics-mainly-combinatorics-related-matters-a-lot-of-activity/avinoam/" data-orig-file="https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg" data-orig-size="1036,723" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;1.8&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;SM-G986B&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1680451480&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;5.4&quot;,&quot;iso&quot;:&quot;500&quot;,&quot;shutter_speed&quot;:&quot;0.02&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Avinoam" data-image-description="" data-image-caption="" data-medium-file="https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=300" data-large-file="https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=640" class="alignnone size-full wp-image-24262" src="https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=640" alt="Avinoam" srcset="https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=640 640w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=150 150w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=300 300w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=768 768w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=1024 1024w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg 1036w" sizes="(max-width: 640px) 100vw, 640px"   /></a></p>
 <h2>Many many many Seminars</h2>
 <h3>HUJI Combinatorics  seminars</h3>
-<p>The seminar takes place on Mondays between 11-13. The 2-hour format allows ample discussions. There were brilliant talks at the HUJI (Hebrew University of Jerusalem) Combinatorics Seminar. The last four were given by  Illay Hoshen, Yuval Filmus, Igor Balla, and Nathan Keller. <strong>Ilay Hoshen</strong> spoke about his paper with <strong>Wojtek Samotij</strong> on Simonovits&#8217;s theorem for random graphs, and presented a (partial) resolution to a conjecture by DeMarco and Kahn.  <strong>Yuval Filmus</strong> talked about a joint work with <strong>Nathan Lindzey</strong>, where the starting point was Fourier expansion for function on the Boolean cube  and asked what happens if we study functions on other domains, such as the &#8220;slice&#8221; or the symmetric group? (very elegant connection with representation theory.) Once it&#8217;s on the arxive we will add the link. <strong>Igor Balla</strong> talked about <span style="color: initial">Equiangular lines via matrix projection. This work presents a definite progress on the classical problem of equiangular lines as well as some connections to problems in quantum information theory.  <strong>Nathan Keller</strong> talked about <a href="https://arxiv.org/abs/2303.15755">his joint work</a> with </span><strong>Noam Lifshitz, Dor Minzer</strong>, and <strong>Ohad Sheinfeld. </strong>Hypercontractivity for global functions is used for far reaching Erdos-Ko-Rado theorems for permutations. Nati Linial wrote to me about the lecture: <span style="color: #ff0000"><strong>מצויינת, מדוייקת, אינפורמטיבית, א-מחיה</strong></span> . (which roughly translates to: “Outstanding, Accurate, Informative – Oh the Joy!”). Today <b></b><strong>Amir Yehudayoff</strong> will talk about <a href="https://arxiv.org/abs/2304.05456">his work</a> with <strong>Dan Cameron</strong> on dual systolic graphs.</p>
+<p>The seminar takes place on Mondays between 11-13. The 2-hour format allows ample discussions. There were brilliant talks at the HUJI (Hebrew University of Jerusalem) Combinatorics Seminar. The last four were given by  Illay Hoshen, Yuval Filmus, Igor Balla, and Nathan Keller. <strong>Ilay Hoshen</strong> spoke about his paper with <strong>Wojtek Samotij</strong> on Simonovits&#8217;s theorem for random graphs, and presented a (partial) resolution to a conjecture by DeMarco and Kahn.  <strong>Yuval Filmus</strong> talked about a joint work with <strong>Nathan Lindzey</strong>, where the starting point was Fourier expansion for function on the Boolean cube  and asked what happens if we study functions on other domains, such as the &#8220;slice&#8221; or the symmetric group? (very elegant connection with representation theory.) Once it&#8217;s on the arxive we will add the link. <strong>Igor Balla</strong> talked about <span style="color: initial">Equiangular lines via matrix projection. This work presents a definite progress on the classical problem of equiangular lines as well as some connections to problems in quantum information theory.  <strong>Nathan Keller</strong> talked about <a href="https://arxiv.org/abs/2303.15755">his joint work</a> with </span><strong>Noam Lifshitz, Dor Minzer</strong>, and <strong>Ohad Sheinfeld. </strong>Hypercontractivity for global functions is used for far reaching Erdos-Ko-Rado theorems for permutations. Nati Linial wrote to me about the lecture: <span style="color: #ff0000"><strong>מצויינת, מדוייקת, אינפורמטיבית, א-מחיה</strong></span> . (which roughly translates to: “Outstanding, Accurate, Informative – Oh the Joy!”). Today <b></b><strong>Amir Yehudayoff</strong> will talk about <a href="https://arxiv.org/abs/2304.05456">his work</a> with <strong>Dan Carmon</strong> on dual systolic graphs.</p>
 <p>This is not the only HUJI combinatorics seminar, on Thursday afternoon we have a joint Jerusalem-Copenhagen combinatorics seminar and at noon we have a joint Jerusalem Copenhagen lunch seminar. I gave a lecture in the lunch seminar a couple of weeks ago about challenges in the combinatorial theory of convex polytopes and spheres beyond the <img src="https://s0.wp.com/latex.php?latex=g&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002" srcset="https://s0.wp.com/latex.php?latex=g&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=g&#038;bg=ffffff&#038;fg=333333&#038;s=0&#038;c=20201002&#038;zoom=4.5 4x" alt="g" class="latex" />-theorem. Of course, our CS-theory Wednesday seminars have plenty of lectures of combinatorial flavour.</p>
 <h3>Shachar Lovett&#8217;s lecture at Tel Aviv Combinatorics Seminar</h3>
 <p>Things in TAU (Tel Aviv University) are not calmer.</p>
@@ -3411,91 +3475,6 @@ bounds if $\omega=2$.
 <p>- We also prove an $\Omega(n^{2-\delta})$ lower bound for the problem of
 finding 2 boxes to cover the largest number of points, given $n$ points and $n$
 boxes in 12D. This matches the straightforward near-quadratic upper bound.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.01714'>Streaming Edge Coloring with Asymptotically Optimal Colors</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Soheil Behnezhad, Mohammad Saneian</p><p>Given a graph $G$, an edge-coloring is an assignment of colors to edges of
-$G$ such that any two edges sharing an endpoint receive different colors. By
-Vizing's celebrated theorem, any graph of maximum degree $\Delta$ needs at
-least $\Delta$ and at most $(\Delta + 1)$ colors to be properly edge colored.
-In this paper, we study edge colorings in the streaming setting. The edges
-arrive one by one in an arbitrary order. The algorithm takes a single pass over
-the input and must output a solution using a much smaller space than the input
-size. Since the output of edge coloring is as large as its input, the assigned
-colors should also be reported in a streaming fashion.
-</p>
-<p>The streaming edge coloring problem has been studied in a series of works
-over the past few years. The main challenge is that the algorithm cannot
-"remember" all the color assignments that it returns. To ensure the validity of
-the solution, existing algorithms use many more colors than Vizing's bound.
-Namely, in $n$-vertex graphs, the state-of-the-art algorithm with
-$\widetilde{O}(n s)$ space requires $O(\Delta^2/s + \Delta)$ colors. Note, in
-particular, that for an asymptotically optimal $O(\Delta)$ coloring, this
-algorithm requires $\Omega(n\Delta)$ space which is as large as the input.
-Whether such a coloring can be achieved with sublinear space has been left
-open.
-</p>
-<p>In this paper, we answer this question in the affirmative. We present a
-randomized algorithm that returns an asymptotically optimal $O(\Delta)$ edge
-coloring using $\widetilde{O}(n \sqrt{\Delta})$ space. More generally, our
-algorithm returns a proper $O(\Delta^{1.5}/s + \Delta)$ edge coloring with
-$\widetilde{O}(n s)$ space, improving prior algorithms for the whole range of
-$s$.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Behnezhad_S/0/1/0/all/0/1">Soheil Behnezhad</a>, <a href="http://arxiv.org/find/cs/1/au:+Saneian_M/0/1/0/all/0/1">Mohammad Saneian</a></p><p>Given a graph $G$, an edge-coloring is an assignment of colors to edges of
-$G$ such that any two edges sharing an endpoint receive different colors. By
-Vizing's celebrated theorem, any graph of maximum degree $\Delta$ needs at
-least $\Delta$ and at most $(\Delta + 1)$ colors to be properly edge colored.
-In this paper, we study edge colorings in the streaming setting. The edges
-arrive one by one in an arbitrary order. The algorithm takes a single pass over
-the input and must output a solution using a much smaller space than the input
-size. Since the output of edge coloring is as large as its input, the assigned
-colors should also be reported in a streaming fashion.
-</p>
-<p>The streaming edge coloring problem has been studied in a series of works
-over the past few years. The main challenge is that the algorithm cannot
-"remember" all the color assignments that it returns. To ensure the validity of
-the solution, existing algorithms use many more colors than Vizing's bound.
-Namely, in $n$-vertex graphs, the state-of-the-art algorithm with
-$\widetilde{O}(n s)$ space requires $O(\Delta^2/s + \Delta)$ colors. Note, in
-particular, that for an asymptotically optimal $O(\Delta)$ coloring, this
-algorithm requires $\Omega(n\Delta)$ space which is as large as the input.
-Whether such a coloring can be achieved with sublinear space has been left
-open.
-</p>
-<p>In this paper, we answer this question in the affirmative. We present a
-randomized algorithm that returns an asymptotically optimal $O(\Delta)$ edge
-coloring using $\widetilde{O}(n \sqrt{\Delta})$ space. More generally, our
-algorithm returns a proper $O(\Delta^{1.5}/s + \Delta)$ edge coloring with
-$\widetilde{O}(n s)$ space, improving prior algorithms for the whole range of
-$s$.
 </p>
         
         </div>
