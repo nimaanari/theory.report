@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-05-07T23:30:31Z">Sunday, May 07 2023, 23:30</time>
+          <time class='timeago' datetime="2023-05-08T01:00:49Z">Monday, May 08 2023, 01:00</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -343,8 +343,912 @@
     
     
     <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Monday, May 08
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03439'>Degrees of Second and Higher-Order Polynomials</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Donghyun Lim, Martin Ziegler</p><p>Second-order polynomials generalize classical first-order ones in allowing
+for additional variables that range over functions rather than values. We are
+motivated by their applications in higher-order computational complexity
+theory, extending for example classical classes like P or PSPACE to operators
+in Analysis [doi:10.1137/S0097539794263452, doi:10.1145/2189778.2189780]. The
+degree subclassifies ordinary polynomial growth into linear, quadratic, cubic
+etc. In order to similarly classify second-order polynomials, define their
+degree to be an 'arctic' first-order polynomial (namely a term/expression over
+variable $D$ and operations $+$ and $\cdot$ and $\max$). Our normal form and
+semantic uniqueness results for second-order polynomials assert said
+second-order degree to be well-defined; and it turns out to transform well
+under (now two kinds of) polynomial composition. More generally we define the
+degree of a third-order polynomial to be an arctic second-order polynomial, and
+establish its transformation under three kinds of composition.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Lim_D/0/1/0/all/0/1">Donghyun Lim</a>, <a href="http://arxiv.org/find/cs/1/au:+Ziegler_M/0/1/0/all/0/1">Martin Ziegler</a></p><p>Second-order polynomials generalize classical first-order ones in allowing
+for additional variables that range over functions rather than values. We are
+motivated by their applications in higher-order computational complexity
+theory, extending for example classical classes like P or PSPACE to operators
+in Analysis [doi:10.1137/S0097539794263452, doi:10.1145/218<a href="/abs/9778.21897">9778.21897</a>80]. The
+degree subclassifies ordinary polynomial growth into linear, quadratic, cubic
+etc. In order to similarly classify second-order polynomials, define their
+degree to be an 'arctic' first-order polynomial (namely a term/expression over
+variable $D$ and operations $+$ and $\cdot$ and $\max$). Our normal form and
+semantic uniqueness results for second-order polynomials assert said
+second-order degree to be well-defined; and it turns out to transform well
+under (now two kinds of) polynomial composition. More generally we define the
+degree of a third-order polynomial to be an arctic second-order polynomial, and
+establish its transformation under three kinds of composition.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03180'>On Range Summary Queries</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Peyman Afshani, Pingan Cheng, Aniket Basu Roy, Zhewei Wei</p><p>We study the query version of the approximate heavy hitter and quantile
+problems. In the former problem, the input is a parameter $\varepsilon$ and a
+set $P$ of $n$ points in $\mathbb{R}^d$ where each point is assigned a color
+from a set $C$, and we want to build a structure s.t. given any geometric range
+$\gamma$, we can efficiently find a list of approximate heavy hitters in
+$\gamma\cap P$, i.e., colors that appear at least $\varepsilon |\gamma \cap P|$
+times in $\gamma \cap P$, as well as their frequencies with an additive error
+of $\varepsilon |\gamma \cap P|$. In the latter problem, each point is assigned
+a weight from a totally ordered universe and the query must output a sequence
+$S$ of $1+1/\varepsilon$ weights s.t. the $i$-th weight in $S$ has approximate
+rank $i\varepsilon|\gamma\cap P|$, meaning, rank $i\varepsilon|\gamma\cap P|$
+up to an additive error of $\varepsilon|\gamma\cap P|$. Previously, optimal
+results were only known in 1D [WY11] but a few sub-optimal methods were
+available in higher dimensions [AW17, ACH+12].
+</p>
+<p>We study the problems for 3D halfspace and dominance queries. We consider the
+real RAM model with integer registers of size $w=\Theta(\log n)$ bits. For
+dominance queries, we show optimal solutions for both heavy hitter and quantile
+problems: using linear space, we can answer both queries in time $O(\log n +
+1/\varepsilon)$. Note that as the output size is $\frac{1}{\varepsilon}$, after
+investing the initial $O(\log n)$ searching time, our structure takes on
+average $O(1)$ time to find a heavy hitter or a quantile! For more general
+halfspace heavy hitter queries, the same optimal query time can be achieved by
+increasing the space by an extra $\log_w\frac{1}{\varepsilon}$ (resp.
+$\log\log_w\frac{1}{\varepsilon}$) factor in 3D (resp. 2D). By spending extra
+$\log^{O(1)}\frac{1}{\varepsilon}$ factors in time and space, we can also
+support quantile queries.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Afshani_P/0/1/0/all/0/1">Peyman Afshani</a>, <a href="http://arxiv.org/find/cs/1/au:+Cheng_P/0/1/0/all/0/1">Pingan Cheng</a>, <a href="http://arxiv.org/find/cs/1/au:+Roy_A/0/1/0/all/0/1">Aniket Basu Roy</a>, <a href="http://arxiv.org/find/cs/1/au:+Wei_Z/0/1/0/all/0/1">Zhewei Wei</a></p><p>We study the query version of the approximate heavy hitter and quantile
+problems. In the former problem, the input is a parameter $\varepsilon$ and a
+set $P$ of $n$ points in $\mathbb{R}^d$ where each point is assigned a color
+from a set $C$, and we want to build a structure s.t. given any geometric range
+$\gamma$, we can efficiently find a list of approximate heavy hitters in
+$\gamma\cap P$, i.e., colors that appear at least $\varepsilon |\gamma \cap P|$
+times in $\gamma \cap P$, as well as their frequencies with an additive error
+of $\varepsilon |\gamma \cap P|$. In the latter problem, each point is assigned
+a weight from a totally ordered universe and the query must output a sequence
+$S$ of $1+1/\varepsilon$ weights s.t. the $i$-th weight in $S$ has approximate
+rank $i\varepsilon|\gamma\cap P|$, meaning, rank $i\varepsilon|\gamma\cap P|$
+up to an additive error of $\varepsilon|\gamma\cap P|$. Previously, optimal
+results were only known in 1D [WY11] but a few sub-optimal methods were
+available in higher dimensions [AW17, ACH+12].
+</p>
+<p>We study the problems for 3D halfspace and dominance queries. We consider the
+real RAM model with integer registers of size $w=\Theta(\log n)$ bits. For
+dominance queries, we show optimal solutions for both heavy hitter and quantile
+problems: using linear space, we can answer both queries in time $O(\log n +
+1/\varepsilon)$. Note that as the output size is $\frac{1}{\varepsilon}$, after
+investing the initial $O(\log n)$ searching time, our structure takes on
+average $O(1)$ time to find a heavy hitter or a quantile! For more general
+halfspace heavy hitter queries, the same optimal query time can be achieved by
+increasing the space by an extra $\log_w\frac{1}{\varepsilon}$ (resp.
+$\log\log_w\frac{1}{\varepsilon}$) factor in 3D (resp. 2D). By spending extra
+$\log^{O(1)}\frac{1}{\varepsilon}$ factors in time and space, we can also
+support quantile queries.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03609'>Differentially Private Topological Data Analysis</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Taegyu Kang, Sehwan Kim, Jinwon Sohn, Jordan Awan</p><p>This paper is the first to attempt differentially private (DP) topological
+data analysis (TDA), producing near-optimal private persistence diagrams. We
+analyze the sensitivity of persistence diagrams in terms of the bottleneck
+distance, and we show that the commonly used \v{C}ech complex has sensitivity
+that does not decrease as the sample size $n$ increases. This makes it
+challenging for the persistence diagrams of \v{C}ech complexes to be
+privatized. As an alternative, we show that the persistence diagram obtained by
+the $L^1$-distance to measure (DTM) has sensitivity $O(1/n)$. Based on the
+sensitivity analysis, we propose using the exponential mechanism whose utility
+function is defined in terms of the bottleneck distance of the $L^1$-DTM
+persistence diagrams. We also derive upper and lower bounds of the accuracy of
+our privacy mechanism; the obtained bounds indicate that the privacy error of
+our mechanism is near-optimal. We demonstrate the performance of our privatized
+persistence diagrams through simulations as well as on a real dataset tracking
+human movement.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/stat/1/au:+Kang_T/0/1/0/all/0/1">Taegyu Kang</a>, <a href="http://arxiv.org/find/stat/1/au:+Kim_S/0/1/0/all/0/1">Sehwan Kim</a>, <a href="http://arxiv.org/find/stat/1/au:+Sohn_J/0/1/0/all/0/1">Jinwon Sohn</a>, <a href="http://arxiv.org/find/stat/1/au:+Awan_J/0/1/0/all/0/1">Jordan Awan</a></p><p>This paper is the first to attempt differentially private (DP) topological
+data analysis (TDA), producing near-optimal private persistence diagrams. We
+analyze the sensitivity of persistence diagrams in terms of the bottleneck
+distance, and we show that the commonly used \v{C}ech complex has sensitivity
+that does not decrease as the sample size $n$ increases. This makes it
+challenging for the persistence diagrams of \v{C}ech complexes to be
+privatized. As an alternative, we show that the persistence diagram obtained by
+the $L^1$-distance to measure (DTM) has sensitivity $O(1/n)$. Based on the
+sensitivity analysis, we propose using the exponential mechanism whose utility
+function is defined in terms of the bottleneck distance of the $L^1$-DTM
+persistence diagrams. We also derive upper and lower bounds of the accuracy of
+our privacy mechanism; the obtained bounds indicate that the privacy error of
+our mechanism is near-optimal. We demonstrate the performance of our privatized
+persistence diagrams through simulations as well as on a real dataset tracking
+human movement.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03146'>Testing Convex Truncation</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Anindya De, Shivam Nadimpalli, Rocco A. Servedio</p><p>We study the basic statistical problem of testing whether normally
+distributed $n$-dimensional data has been truncated, i.e. altered by only
+retaining points that lie in some unknown truncation set $S \subseteq
+\mathbb{R}^n$. As our main algorithmic results,
+</p>
+<p>(1) We give a computationally efficient $O(n)$-sample algorithm that can
+distinguish the standard normal distribution $N(0,I_n)$ from $N(0,I_n)$
+conditioned on an unknown and arbitrary convex set $S$.
+</p>
+<p>(2) We give a different computationally efficient $O(n)$-sample algorithm
+that can distinguish $N(0,I_n)$ from $N(0,I_n)$ conditioned on an unknown and
+arbitrary mixture of symmetric convex sets.
+</p>
+<p>These results stand in sharp contrast with known results for learning or
+testing convex bodies with respect to the normal distribution or learning
+convex-truncated normal distributions, where state-of-the-art algorithms
+require essentially $n^{\sqrt{n}}$ samples. An easy argument shows that no
+finite number of samples suffices to distinguish $N(0,I_n)$ from an unknown and
+arbitrary mixture of general (not necessarily symmetric) convex sets, so no
+common generalization of results (1) and (2) above is possible.
+</p>
+<p>We also prove that any algorithm (computationally efficient or otherwise)
+that can distinguish $N(0,I_n)$ from $N(0,I_n)$ conditioned on an unknown
+symmetric convex set must use $\Omega(n)$ samples. This shows that the sample
+complexity of each of our algorithms is optimal up to a constant factor.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+De_A/0/1/0/all/0/1">Anindya De</a>, <a href="http://arxiv.org/find/cs/1/au:+Nadimpalli_S/0/1/0/all/0/1">Shivam Nadimpalli</a>, <a href="http://arxiv.org/find/cs/1/au:+Servedio_R/0/1/0/all/0/1">Rocco A. Servedio</a></p><p>We study the basic statistical problem of testing whether normally
+distributed $n$-dimensional data has been truncated, i.e. altered by only
+retaining points that lie in some unknown truncation set $S \subseteq
+\mathbb{R}^n$. As our main algorithmic results,
+</p>
+<p>(1) We give a computationally efficient $O(n)$-sample algorithm that can
+distinguish the standard normal distribution $N(0,I_n)$ from $N(0,I_n)$
+conditioned on an unknown and arbitrary convex set $S$.
+</p>
+<p>(2) We give a different computationally efficient $O(n)$-sample algorithm
+that can distinguish $N(0,I_n)$ from $N(0,I_n)$ conditioned on an unknown and
+arbitrary mixture of symmetric convex sets.
+</p>
+<p>These results stand in sharp contrast with known results for learning or
+testing convex bodies with respect to the normal distribution or learning
+convex-truncated normal distributions, where state-of-the-art algorithms
+require essentially $n^{\sqrt{n}}$ samples. An easy argument shows that no
+finite number of samples suffices to distinguish $N(0,I_n)$ from an unknown and
+arbitrary mixture of general (not necessarily symmetric) convex sets, so no
+common generalization of results (1) and (2) above is possible.
+</p>
+<p>We also prove that any algorithm (computationally efficient or otherwise)
+that can distinguish $N(0,I_n)$ from $N(0,I_n)$ conditioned on an unknown
+symmetric convex set must use $\Omega(n)$ samples. This shows that the sample
+complexity of each of our algorithms is optimal up to a constant factor.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03307'>On Optimization and Counting of Non-Broken Bases of Matroids</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Dorna Abdolazimi, Kasper Lindberg, Shayan Oveis Gharan</p><p>Given a matroid $M=(E,{\cal I})$, and a total ordering over the elements $E$,
+a broken circuit is a circuit where the smallest element is removed and an NBC
+independent set is an independent set in ${\cal I}$ with no broken circuit. The
+set of NBC independent sets of any matroid $M$ define a simplicial complex
+called the broken circuit complex which has been the subject of intense study
+in combinatorics. Recently, Adiprasito, Huh and Katz showed that the face of
+numbers of any broken circuit complex form a log-concave sequence, proving a
+long-standing conjecture of Rota.
+</p>
+<p>We study counting and optimization problems on NBC bases of a generic
+matroid. We find several fundamental differences with the independent set
+complex: for example, we show that it is NP-hard to find the max-weight NBC
+base of a matroid or that the convex hull of NBC bases of a matroid has edges
+of arbitrary large length. We also give evidence that the natural down-up walk
+on the space of NBC bases of a matroid may not mix rapidly by showing that for
+some family of matroids it is NP-hard to count the number of NBC bases after
+certain conditionings.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Abdolazimi_D/0/1/0/all/0/1">Dorna Abdolazimi</a>, <a href="http://arxiv.org/find/cs/1/au:+Lindberg_K/0/1/0/all/0/1">Kasper Lindberg</a>, <a href="http://arxiv.org/find/cs/1/au:+Gharan_S/0/1/0/all/0/1">Shayan Oveis Gharan</a></p><p>Given a matroid $M=(E,{\cal I})$, and a total ordering over the elements $E$,
+a broken circuit is a circuit where the smallest element is removed and an NBC
+independent set is an independent set in ${\cal I}$ with no broken circuit. The
+set of NBC independent sets of any matroid $M$ define a simplicial complex
+called the broken circuit complex which has been the subject of intense study
+in combinatorics. Recently, Adiprasito, Huh and Katz showed that the face of
+numbers of any broken circuit complex form a log-concave sequence, proving a
+long-standing conjecture of Rota.
+</p>
+<p>We study counting and optimization problems on NBC bases of a generic
+matroid. We find several fundamental differences with the independent set
+complex: for example, we show that it is NP-hard to find the max-weight NBC
+base of a matroid or that the convex hull of NBC bases of a matroid has edges
+of arbitrary large length. We also give evidence that the natural down-up walk
+on the space of NBC bases of a matroid may not mix rapidly by showing that for
+some family of matroids it is NP-hard to count the number of NBC bases after
+certain conditionings.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03110'>A Sparse Johnson-Lindenstrauss Transform using Fast Hashing</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Jakob B&#xe6;k Tejs Houen, Mikkel Thorup</p><p>The \emph{Sparse Johnson-Lindenstrauss Transform} of Kane and Nelson (SODA
+2012) provides a linear dimensionality-reducing map $A \in \mathbb{R}^{m \times
+u}$ in $\ell_2$ that preserves distances up to distortion of $1 + \varepsilon$
+with probability $1 - \delta$, where $m = O(\varepsilon^{-2} \log 1/\delta)$
+and each column of $A$ has $O(\varepsilon m)$ non-zero entries. The previous
+analyses of the Sparse Johnson-Lindenstrauss Transform all assumed access to a
+$\Omega(\log 1/\delta)$-wise independent hash function. The main contribution
+of this paper is a more general analysis of the Sparse Johnson-Lindenstrauss
+Transform with less assumptions on the hash function. We also show that the
+\emph{Mixed Tabulation hash function} of Dahlgaard, Knudsen, Rotenberg, and
+Thorup (FOCS 2015) satisfies the conditions of our analysis, thus giving us the
+first analysis of a Sparse Johnson-Lindenstrauss Transform that works with a
+practical hash function.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Houen_J/0/1/0/all/0/1">Jakob B&#xe6;k Tejs Houen</a>, <a href="http://arxiv.org/find/cs/1/au:+Thorup_M/0/1/0/all/0/1">Mikkel Thorup</a></p><p>The \emph{Sparse Johnson-Lindenstrauss Transform} of Kane and Nelson (SODA
+2012) provides a linear dimensionality-reducing map $A \in \mathbb{R}^{m \times
+u}$ in $\ell_2$ that preserves distances up to distortion of $1 + \varepsilon$
+with probability $1 - \delta$, where $m = O(\varepsilon^{-2} \log 1/\delta)$
+and each column of $A$ has $O(\varepsilon m)$ non-zero entries. The previous
+analyses of the Sparse Johnson-Lindenstrauss Transform all assumed access to a
+$\Omega(\log 1/\delta)$-wise independent hash function. The main contribution
+of this paper is a more general analysis of the Sparse Johnson-Lindenstrauss
+Transform with less assumptions on the hash function. We also show that the
+\emph{Mixed Tabulation hash function} of Dahlgaard, Knudsen, Rotenberg, and
+Thorup (FOCS 2015) satisfies the conditions of our analysis, thus giving us the
+first analysis of a Sparse Johnson-Lindenstrauss Transform that works with a
+practical hash function.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03194'>Testing Convexity of Discrete Sets in High Dimensions</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Hadley Black, Eric Blais, Nathaniel Harms</p><p>We study the problem of testing whether an unknown set $S$ in $n$ dimensions
+is convex or far from convex, using membership queries. The simplest
+high-dimensional discrete domain where the problem of testing convexity is
+non-trivial is the domain $\{-1,0,1\}^n$. Our main results are nearly-tight
+upper and lower bounds of $3^{\widetilde \Theta( \sqrt n)}$ for one-sided error
+testing of convex sets over this domain with non-adaptive queries. Together
+with our $3^{\Omega(n)}$ lower bound on one-sided error testing with samples,
+this shows that non-adaptive queries are significantly more powerful than
+samples for this problem.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Black_H/0/1/0/all/0/1">Hadley Black</a>, <a href="http://arxiv.org/find/cs/1/au:+Blais_E/0/1/0/all/0/1">Eric Blais</a>, <a href="http://arxiv.org/find/cs/1/au:+Harms_N/0/1/0/all/0/1">Nathaniel Harms</a></p><p>We study the problem of testing whether an unknown set $S$ in $n$ dimensions
+is convex or far from convex, using membership queries. The simplest
+high-dimensional discrete domain where the problem of testing convexity is
+non-trivial is the domain $\{-1,0,1\}^n$. Our main results are nearly-tight
+upper and lower bounds of $3^{\widetilde \Theta( \sqrt n)}$ for one-sided error
+testing of convex sets over this domain with non-adaptive queries. Together
+with our $3^{\Omega(n)}$ lower bound on one-sided error testing with samples,
+this shows that non-adaptive queries are significantly more powerful than
+samples for this problem.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03240'>Sum-of-Local-Effects Data Structures for Separable Graphs</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Xing Lyu, Travis Gagie, Meng He, Yakov Nekrich, Norbert Zeh</p><p>It is not difficult to think of applications that can be modelled as graph
+problems in which placing some facility or commodity at a vertex has some
+positive or negative effect on the values of all the vertices out to some
+distance, and we want to be able to calculate quickly the cumulative effect on
+any vertex's value at any time or the list of the most beneficial or most
+detrimential effects on a vertex. In this paper we show how, given an
+edge-weighted graph with constant-size separators, we can support the following
+operations on it in time polylogarithmic in the number of vertices and the
+number of facilities placed on the vertices, where distances between vertices
+are measured with respect to the edge weights:
+</p>
+<p>Add (v, f, w, d) places a facility of weight w and with effect radius d onto
+vertex v.
+</p>
+<p>Remove (v, f) removes a facility f previously placed on v using Add from v.
+</p>
+<p>Sum (v) or Sum (v, d) returns the total weight of all facilities affecting v
+or, with a distance parameter d, the total weight of all facilities whose
+effect region intersects the ``circle'' with radius d around v.
+</p>
+<p>Top (v, k) or Top (v, k, d) returns the k facilities of greatest weight that
+affect v or, with a distance parameter d, whose effect region intersects the
+``circle'' with radius d around v.
+</p>
+<p>The weights of the facilities and the operation that Sum uses to ``sum'' them
+must form a semigroup. For Top queries, the weights must be drawn from a total
+order.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Lyu_X/0/1/0/all/0/1">Xing Lyu</a>, <a href="http://arxiv.org/find/cs/1/au:+Gagie_T/0/1/0/all/0/1">Travis Gagie</a>, <a href="http://arxiv.org/find/cs/1/au:+He_M/0/1/0/all/0/1">Meng He</a>, <a href="http://arxiv.org/find/cs/1/au:+Nekrich_Y/0/1/0/all/0/1">Yakov Nekrich</a>, <a href="http://arxiv.org/find/cs/1/au:+Zeh_N/0/1/0/all/0/1">Norbert Zeh</a></p><p>It is not difficult to think of applications that can be modelled as graph
+problems in which placing some facility or commodity at a vertex has some
+positive or negative effect on the values of all the vertices out to some
+distance, and we want to be able to calculate quickly the cumulative effect on
+any vertex's value at any time or the list of the most beneficial or most
+detrimential effects on a vertex. In this paper we show how, given an
+edge-weighted graph with constant-size separators, we can support the following
+operations on it in time polylogarithmic in the number of vertices and the
+number of facilities placed on the vertices, where distances between vertices
+are measured with respect to the edge weights:
+</p>
+<p>Add (v, f, w, d) places a facility of weight w and with effect radius d onto
+vertex v.
+</p>
+<p>Remove (v, f) removes a facility f previously placed on v using Add from v.
+</p>
+<p>Sum (v) or Sum (v, d) returns the total weight of all facilities affecting v
+or, with a distance parameter d, the total weight of all facilities whose
+effect region intersects the ``circle'' with radius d around v.
+</p>
+<p>Top (v, k) or Top (v, k, d) returns the k facilities of greatest weight that
+affect v or, with a distance parameter d, whose effect region intersects the
+``circle'' with radius d around v.
+</p>
+<p>The weights of the facilities and the operation that Sum uses to ``sum'' them
+must form a semigroup. For Top queries, the weights must be drawn from a total
+order.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03381'>Tighter Approximation for the Uniform Cost-Distance Steiner Tree Problem</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Josefine Foos, Stephan Held, Yannik Kyle Dustin Spitzley</p><p>Uniform cost-distance Steiner trees minimize the sum of the total length and
+weighted path lengths from a dedicated root to the other terminals. They are
+applied when the tree is intended for signal transmission, e.g. in chip design
+or telecommunication networks. They are a special case of general cost-distance
+Steiner trees, where different distance functions are used for total length and
+path lengths.
+</p>
+<p>We improve the best published approximation factor for the uniform
+cost-distance Steiner tree problem from 2.39 to 2.05. If we can approximate the
+minimum-length Steiner tree problem arbitrarily well, our algorithm achieves an
+approximation factor arbitrarily close to $ 1 + \frac{1}{\sqrt{2}} $. This
+bound is tight in the following sense. We also prove the gap $ 1 +
+\frac{1}{\sqrt{2}} $ between optimum solutions and the lower bound which we and
+all previous approximation algorithms for this problem use.
+</p>
+<p>Similarly to previous approaches, we start with an approximate minimum-length
+Steiner tree and split it into subtrees that are later re-connected. To improve
+the approximation factor, we split it into components more carefully, taking
+the cost structure into account, and we significantly enhance the analysis.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Foos_J/0/1/0/all/0/1">Josefine Foos</a>, <a href="http://arxiv.org/find/cs/1/au:+Held_S/0/1/0/all/0/1">Stephan Held</a>, <a href="http://arxiv.org/find/cs/1/au:+Spitzley_Y/0/1/0/all/0/1">Yannik Kyle Dustin Spitzley</a></p><p>Uniform cost-distance Steiner trees minimize the sum of the total length and
+weighted path lengths from a dedicated root to the other terminals. They are
+applied when the tree is intended for signal transmission, e.g. in chip design
+or telecommunication networks. They are a special case of general cost-distance
+Steiner trees, where different distance functions are used for total length and
+path lengths.
+</p>
+<p>We improve the best published approximation factor for the uniform
+cost-distance Steiner tree problem from 2.39 to 2.05. If we can approximate the
+minimum-length Steiner tree problem arbitrarily well, our algorithm achieves an
+approximation factor arbitrarily close to $ 1 + \frac{1}{\sqrt{2}} $. This
+bound is tight in the following sense. We also prove the gap $ 1 +
+\frac{1}{\sqrt{2}} $ between optimum solutions and the lower bound which we and
+all previous approximation algorithms for this problem use.
+</p>
+<p>Similarly to previous approaches, we start with an approximate minimum-length
+Steiner tree and split it into subtrees that are later re-connected. To improve
+the approximation factor, we split it into components more carefully, taking
+the cost structure into account, and we significantly enhance the analysis.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03440'>Tight Bounds for Chordal/Interval Vertex Deletion Parameterized by Treewidth</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Michal Wlodarczyk</p><p>In Chordal/Interval Vertex Deletion we ask how many vertices one needs to
+remove from a graph to make it chordal (respectively: interval). We study these
+problems under the parameterization by treewidth $tw$ of the input graph $G$.
+On the one hand, we present an algorithm for Chordal Vertex Deletion with
+running time $2^{O(tw)} \cdot |V(G)|$, improving upon the running time
+$2^{O(tw^2)} \cdot |V(G)|^{O(1)}$ by Jansen, de Kroon, and Wlodarczyk
+(STOC'21). When a tree decomposition of width $tw$ is given, then the base of
+the exponent equals $2^{\omega-1}\cdot 3 + 1$. Our algorithm is based on a
+novel link between chordal graphs and graphic matroids, which allows us to
+employ the framework of representative families. On the other hand, we prove
+that the known $2^{O(tw \log tw)} \cdot |V(G)|$-time algorithm for Interval
+Vertex Deletion cannot be improved assuming Exponential Time Hypothesis.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Wlodarczyk_M/0/1/0/all/0/1">Michal Wlodarczyk</a></p><p>In Chordal/Interval Vertex Deletion we ask how many vertices one needs to
+remove from a graph to make it chordal (respectively: interval). We study these
+problems under the parameterization by treewidth $tw$ of the input graph $G$.
+On the one hand, we present an algorithm for Chordal Vertex Deletion with
+running time $2^{O(tw)} \cdot |V(G)|$, improving upon the running time
+$2^{O(tw^2)} \cdot |V(G)|^{O(1)}$ by Jansen, de Kroon, and Wlodarczyk
+(STOC'21). When a tree decomposition of width $tw$ is given, then the base of
+the exponent equals $2^{\omega-1}\cdot 3 + 1$. Our algorithm is based on a
+novel link between chordal graphs and graphic matroids, which allows us to
+employ the framework of representative families. On the other hand, we prove
+that the known $2^{O(tw \log tw)} \cdot |V(G)|$-time algorithm for Interval
+Vertex Deletion cannot be improved assuming Exponential Time Hypothesis.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03693'>Fast Dynamic Programming in Trees in the MPC Model</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Chetan Gupta, Rustam Latypov, Yannic Maus, Shreyas Pai, Simo S&#xe4;rkk&#xe4;, Jan Studen&#xfd;, Jukka Suomela, Jara Uitto, Hossein Vahidi</p><p>We present a deterministic algorithm for solving a wide range of dynamic
+programming problems in trees in $O(\log D)$ rounds in the massively parallel
+computation model (MPC), with $O(n^\delta)$ words of local memory per machine,
+for any given constant $0 &lt; \delta &lt; 1$. Here $D$ is the diameter of the tree
+and $n$ is the number of nodes--we emphasize that our running time is
+independent of $n$.
+</p>
+<p>Our algorithm can solve many classical graph optimization problems such as
+maximum weight independent set, maximum weight matching, minimum weight
+dominating set, and minimum weight vertex cover. It can also be used to solve
+many accumulation tasks in which some aggregate information is propagated
+upwards or downwards in the tree--this includes, for example, computing the
+sum, minimum, or maximum of the input labels in each subtree, as well as many
+inference tasks commonly solved with belief propagation. Our algorithm can also
+solve any locally checkable labeling problem (LCLs) in trees. Our algorithm
+works for any reasonable representation of the input tree; for example, the
+tree can be represented as a list of edges or as a string with nested
+parentheses or tags. The running time of $O(\log D)$ rounds is also known to be
+necessary, assuming the widely-believed $2$-cycle conjecture.
+</p>
+<p>Our algorithm strictly improves on two prior algorithms: (i) Bateni,
+Behnezhad, Derakhshan, Hajiaghayi, and Mirrokni [ICALP'18] solve problems of
+these flavors in $O(\log n)$ rounds, while our algorithm is much faster in
+low-diameter trees. Furthermore, their algorithm also uses randomness, while
+our algorithm is deterministic. (ii) Balliu, Latypov, Maus, Olivetti, and Uitto
+[SODA'23] solve only locally checkable labeling problems in $O(\log D)$ rounds,
+while our algorithm can be applied to a much broader family of problems.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Gupta_C/0/1/0/all/0/1">Chetan Gupta</a>, <a href="http://arxiv.org/find/cs/1/au:+Latypov_R/0/1/0/all/0/1">Rustam Latypov</a>, <a href="http://arxiv.org/find/cs/1/au:+Maus_Y/0/1/0/all/0/1">Yannic Maus</a>, <a href="http://arxiv.org/find/cs/1/au:+Pai_S/0/1/0/all/0/1">Shreyas Pai</a>, <a href="http://arxiv.org/find/cs/1/au:+Sarkka_S/0/1/0/all/0/1">Simo S&#xe4;rkk&#xe4;</a>, <a href="http://arxiv.org/find/cs/1/au:+Studeny_J/0/1/0/all/0/1">Jan Studen&#xfd;</a>, <a href="http://arxiv.org/find/cs/1/au:+Suomela_J/0/1/0/all/0/1">Jukka Suomela</a>, <a href="http://arxiv.org/find/cs/1/au:+Uitto_J/0/1/0/all/0/1">Jara Uitto</a>, <a href="http://arxiv.org/find/cs/1/au:+Vahidi_H/0/1/0/all/0/1">Hossein Vahidi</a></p><p>We present a deterministic algorithm for solving a wide range of dynamic
+programming problems in trees in $O(\log D)$ rounds in the massively parallel
+computation model (MPC), with $O(n^\delta)$ words of local memory per machine,
+for any given constant $0 &lt; \delta &lt; 1$. Here $D$ is the diameter of the tree
+and $n$ is the number of nodes--we emphasize that our running time is
+independent of $n$.
+</p>
+<p>Our algorithm can solve many classical graph optimization problems such as
+maximum weight independent set, maximum weight matching, minimum weight
+dominating set, and minimum weight vertex cover. It can also be used to solve
+many accumulation tasks in which some aggregate information is propagated
+upwards or downwards in the tree--this includes, for example, computing the
+sum, minimum, or maximum of the input labels in each subtree, as well as many
+inference tasks commonly solved with belief propagation. Our algorithm can also
+solve any locally checkable labeling problem (LCLs) in trees. Our algorithm
+works for any reasonable representation of the input tree; for example, the
+tree can be represented as a list of edges or as a string with nested
+parentheses or tags. The running time of $O(\log D)$ rounds is also known to be
+necessary, assuming the widely-believed $2$-cycle conjecture.
+</p>
+<p>Our algorithm strictly improves on two prior algorithms: (i) Bateni,
+Behnezhad, Derakhshan, Hajiaghayi, and Mirrokni [ICALP'18] solve problems of
+these flavors in $O(\log n)$ rounds, while our algorithm is much faster in
+low-diameter trees. Furthermore, their algorithm also uses randomness, while
+our algorithm is deterministic. (ii) Balliu, Latypov, Maus, Olivetti, and Uitto
+[SODA'23] solve only locally checkable labeling problems in $O(\log D)$ rounds,
+while our algorithm can be applied to a much broader family of problems.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.03697'>Fault-Tolerant ST-Diameter Oracles</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Davide Bil&#xf2;, Keerti Choudhary, Sarel Cohen, Tobias Friedrich, Simon Krogmann, Martin Schirneck</p><p>We study the problem of estimating the $ST$-diameter of a graph that is
+subject to a bounded number of edge failures. An $f$-edge fault-tolerant
+$ST$-diameter oracle ($f$-FDO-$ST$) is a data structure that preprocesses a
+given graph $G$, two sets of vertices $S,T$, and positive integer $f$. When
+queried with a set $F$ of at most $f$ edges, the oracle returns an estimate
+$\widehat{D}$ of the $ST$-diameter $\operatorname{diam}(G-F,S,T)$, the maximum
+distance between vertices in $S$ and $T$ in $G-F$. The oracle has stretch
+$\sigma \geq 1$ if $\operatorname{diam}(G-F,S,T) \leq \widehat{D} \leq \sigma
+\operatorname{diam}(G-F,S,T)$. If $S$ and $T$ both contain all vertices, the
+data structure is called an $f$-edge fault-tolerant diameter oracle ($f$-FDO).
+An $f$-edge fault-tolerant distance sensitivity oracles ($f$-DSO) estimates the
+pairwise graph distances under up to $f$ failures.
+</p>
+<p>We design new $f$-FDOs and $f$-FDO-$ST$s by reducing their construction to
+that of all-pairs and single-source $f$-DSOs. We obtain several new tradeoffs
+between the size of the data structure, stretch guarantee, query and
+preprocessing times for diameter oracles by combining our black-box reductions
+with known results from the literature.
+</p>
+<p>We also provide an information-theoretic lower bound on the space requirement
+of approximate $f$-FDOs. We show that there exists a family of graphs for which
+any $f$-FDO with sensitivity $f \ge 2$ and stretch less than $5/3$ requires
+$\Omega(n^{3/2})$ bits of space, regardless of the query time.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bilo_D/0/1/0/all/0/1">Davide Bil&#xf2;</a>, <a href="http://arxiv.org/find/cs/1/au:+Choudhary_K/0/1/0/all/0/1">Keerti Choudhary</a>, <a href="http://arxiv.org/find/cs/1/au:+Cohen_S/0/1/0/all/0/1">Sarel Cohen</a>, <a href="http://arxiv.org/find/cs/1/au:+Friedrich_T/0/1/0/all/0/1">Tobias Friedrich</a>, <a href="http://arxiv.org/find/cs/1/au:+Krogmann_S/0/1/0/all/0/1">Simon Krogmann</a>, <a href="http://arxiv.org/find/cs/1/au:+Schirneck_M/0/1/0/all/0/1">Martin Schirneck</a></p><p>We study the problem of estimating the $ST$-diameter of a graph that is
+subject to a bounded number of edge failures. An $f$-edge fault-tolerant
+$ST$-diameter oracle ($f$-FDO-$ST$) is a data structure that preprocesses a
+given graph $G$, two sets of vertices $S,T$, and positive integer $f$. When
+queried with a set $F$ of at most $f$ edges, the oracle returns an estimate
+$\widehat{D}$ of the $ST$-diameter $\operatorname{diam}(G-F,S,T)$, the maximum
+distance between vertices in $S$ and $T$ in $G-F$. The oracle has stretch
+$\sigma \geq 1$ if $\operatorname{diam}(G-F,S,T) \leq \widehat{D} \leq \sigma
+\operatorname{diam}(G-F,S,T)$. If $S$ and $T$ both contain all vertices, the
+data structure is called an $f$-edge fault-tolerant diameter oracle ($f$-FDO).
+An $f$-edge fault-tolerant distance sensitivity oracles ($f$-DSO) estimates the
+pairwise graph distances under up to $f$ failures.
+</p>
+<p>We design new $f$-FDOs and $f$-FDO-$ST$s by reducing their construction to
+that of all-pairs and single-source $f$-DSOs. We obtain several new tradeoffs
+between the size of the data structure, stretch guarantee, query and
+preprocessing times for diameter oracles by combining our black-box reductions
+with known results from the literature.
+</p>
+<p>We also provide an information-theoretic lower bound on the space requirement
+of approximate $f$-FDOs. We show that there exists a family of graphs for which
+any $f$-FDO with sensitivity $f \ge 2$ and stretch less than $5/3$ requires
+$\Omega(n^{3/2})$ bits of space, regardless of the query time.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-08T00:30:00Z">Monday, May 08 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+    <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Sunday, May 07
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://scottaaronson.blog/?p=7287'>Brief Update on Texan Tenure</a></h3>
+        <p class='tr-article-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          I blogged a few weeks ago about SB 18, a bill that would end tenure at Texas public universities, including UT Austin and Texas A&#38;M. The bad news is that SB 18 passed the Texas Senate. The good news is that I&#8217;m told&#8212;I don&#8217;t know how reliably&#8212;that it has little chance of passing the House. [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>I <a href="https://scottaaronson.blog/?p=7243">blogged</a> a few weeks ago about SB 18, a bill that would end tenure at Texas public universities, including UT Austin and Texas A&amp;M.  The bad news is that SB 18 passed the Texas Senate.  The good news is that I&#8217;m told&#8212;I don&#8217;t know how reliably&#8212;that it has little chance of passing the House.</p>
+
+
+
+<p>But it&#8217;s going to be discussed in the House tomorrow.  Any Texas residents reading this can, and are strongly urged, to <a href="https://comments.house.texas.gov/home?c=c290">submit brief comments here</a>. <strong> Please note that the deadline is tomorrow (Monday) morning.</strong></p>
+
+
+
+<p>I just submitted the comment below.  Obviously, among the arguments that I genuinely believe, I made only those that I expect might have some purchase on a Texas Republican.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>I’m a professor of computer science at UT Austin, specializing in quantum computing.  I am however writing this statement strictly in my capacity as a private citizen and Texas resident, not in my professional capacity.</p>
+
+
+
+<p>Like the supporters of SB 18, I too see leftist ideological indoctrination on college campuses as a serious problem.&nbsp; It’s something that I and many other moderates and classical liberals in academia have been pushing back on for years.</p>
+
+
+
+<p>But my purpose in this comment is to explain why eliminating tenure at UT Austin and Texas A&amp;M is NOT the solution — indeed, it would be the equivalent of treating a tumor by murdering the patient.</p>
+
+
+
+<p>I’ve seen firsthand how already, just the *threat* that SB 18 might pass has seriously hampered our ability to recruit the best scientists and engineers to become faculty at UT Austin.&nbsp; If this bill were actually to pass, I expect that the impact on our recruiting would be total and catastrophic.&nbsp; It would effectively mean the end of UT Austin as one of the top public universities in the country.&nbsp; Hundreds of scientists who were lured to Texas by UT’s excellence, including me and my wife, would start looking for jobs elsewhere — even those whose own tenure was “grandfathered in.” &nbsp;They’d leave en masse for California and Massachusetts and anywhere else they could continue the lives they’d planned.</p>
+
+
+
+<p>The reality is this: the sorts of scientists and engineers we’re talking about could typically make vastly higher incomes, in the high six figures or even seven figures, by working in private industry or forming their own startups.&nbsp; Yet they choose to accept much lower salaries to spend their careers in academia.&nbsp; Why?&nbsp; Because of the promise of a certain way of life: one where they can speak freely as scholars and individuals without worrying about how it will affect their employment.&nbsp; Tenure is a central part of that promise.&nbsp; Remove it, and the value proposition collapses.</p>
+
+
+
+<p>In some sense, the state of Texas (like nearly every other state) actually gets a bargain through tenure.&nbsp; It couldn’t possibly afford to retain top-caliber scientists and engineers — working on medical breakthroughs, revolutionary advances in AI, and all the other stuff — if it DIDN’T offer tenure.</p>
+
+
+
+<p>For this reason, I hope that even conservatives in the Texas House will see that we have a common interest here, in ensuring SB 18 never even makes it out of committee — for the sake of the future of innovation in Texas.&nbsp; I’m open to other possible responses to the problem of political indoctrination on campus.</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-07T23:39:34Z">Sunday, May 07 2023, 23:39</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -2614,782 +3518,6 @@ $d_{\star}$ and the size of the graph.
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.01942'>Experimental Design for Any $p$-Norm</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Lap Chi Lau, Robert Wang, Hong Zhou</p><p>We consider a general $p$-norm objective for experimental design problems
-that captures some well-studied objectives (D/A/E-design) as special cases. We
-prove that a randomized local search approach provides a unified algorithm to
-solve this problem for all $p$. This provides the first approximation algorithm
-for the general $p$-norm objective, and a nice interpolation of the best known
-bounds of the special cases.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Lau_L/0/1/0/all/0/1">Lap Chi Lau</a>, <a href="http://arxiv.org/find/cs/1/au:+Wang_R/0/1/0/all/0/1">Robert Wang</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhou_H/0/1/0/all/0/1">Hong Zhou</a></p><p>We consider a general $p$-norm objective for experimental design problems
-that captures some well-studied objectives (D/A/E-design) as special cases. We
-prove that a randomized local search approach provides a unified algorithm to
-solve this problem for all $p$. This provides the first approximation algorithm
-for the general $p$-norm objective, and a nice interpolation of the best known
-bounds of the special cases.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.01993'>Computing paths of large rank in planar frameworks deterministically</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Fedor V. Fomin, Petr A. Golovach, Tuukka Korhonen, Giannos Stamoulis</p><p>A framework consists of an undirected graph $G$ and a matroid $M$ whose
-elements correspond to the vertices of $G$. Recently, Fomin et al. [SODA 2023]
-and Eiben et al. [ArXiV 2023] developed parameterized algorithms for computing
-paths of rank $k$ in frameworks. More precisely, for vertices $s$ and $t$ of
-$G$, and an integer $k$, they gave FPT algorithms parameterized by $k$ deciding
-whether there is an $(s,t)$-path in $G$ whose vertex set contains a subset of
-elements of $M$ of rank $k$. These algorithms are based on Schwartz-Zippel
-lemma for polynomial identity testing and thus are randomized, and therefore
-the existence of a deterministic FPT algorithm for this problem remains open.
-We present the first deterministic FPT algorithm that solves the problem in
-frameworks whose underlying graph $G$ is planar. While the running time of our
-algorithm is worse than the running times of the recent randomized algorithms,
-our algorithm works on more general classes of matroids. In particular, this is
-the first FPT algorithm for the case when matroid $M$ is represented over
-rationals. Our main technical contribution is the nontrivial adaptation of the
-classic irrelevant vertex technique to frameworks to reduce the given instance
-to one of bounded treewidth. This allows us to employ the toolbox of
-representative sets to design a dynamic programming procedure solving the
-problem efficiently on instances of bounded treewidth.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Fomin_F/0/1/0/all/0/1">Fedor V. Fomin</a>, <a href="http://arxiv.org/find/cs/1/au:+Golovach_P/0/1/0/all/0/1">Petr A. Golovach</a>, <a href="http://arxiv.org/find/cs/1/au:+Korhonen_T/0/1/0/all/0/1">Tuukka Korhonen</a>, <a href="http://arxiv.org/find/cs/1/au:+Stamoulis_G/0/1/0/all/0/1">Giannos Stamoulis</a></p><p>A framework consists of an undirected graph $G$ and a matroid $M$ whose
-elements correspond to the vertices of $G$. Recently, Fomin et al. [SODA 2023]
-and Eiben et al. [ArXiV 2023] developed parameterized algorithms for computing
-paths of rank $k$ in frameworks. More precisely, for vertices $s$ and $t$ of
-$G$, and an integer $k$, they gave FPT algorithms parameterized by $k$ deciding
-whether there is an $(s,t)$-path in $G$ whose vertex set contains a subset of
-elements of $M$ of rank $k$. These algorithms are based on Schwartz-Zippel
-lemma for polynomial identity testing and thus are randomized, and therefore
-the existence of a deterministic FPT algorithm for this problem remains open.
-We present the first deterministic FPT algorithm that solves the problem in
-frameworks whose underlying graph $G$ is planar. While the running time of our
-algorithm is worse than the running times of the recent randomized algorithms,
-our algorithm works on more general classes of matroids. In particular, this is
-the first FPT algorithm for the case when matroid $M$ is represented over
-rationals. Our main technical contribution is the nontrivial adaptation of the
-classic irrelevant vertex technique to frameworks to reduce the given instance
-to one of bounded treewidth. This allows us to employ the toolbox of
-representative sets to design a dynamic programming procedure solving the
-problem efficiently on instances of bounded treewidth.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.02011'>Approximating Long Cycle Above Dirac's Guarantee</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Fedor F. Fomin, Petr A. Golovach, Danil Sagunov, Kirill Simonov</p><p>Parameterization above (or below) a guarantee is a successful concept in
-parameterized algorithms. The idea is that many computational problems admit
-``natural'' guarantees bringing to algorithmic questions whether a better
-solution (above the guarantee) could be obtained efficiently. The above
-guarantee paradigm has led to several exciting discoveries in the areas of
-parameterized algorithms and kernelization. We argue that this paradigm could
-bring forth fresh perspectives on well-studied problems in approximation
-algorithms. Our example is the longest cycle problem. One of the oldest results
-in extremal combinatorics is the celebrated Dirac's theorem from 1952. Dirac's
-theorem provides the following guarantee on the length of the longest cycle:
-for every 2-connected n-vertex graph G with minimum degree \delta(G)\leq n/2,
-the length of a longest cycle L is at least 2\delta(G). Thus, the ``essential''
-part in finding the longest cycle is in approximating the ``offset'' k = L - 2
-\delta(G). The main result of this paper is the above-guarantee approximation
-theorem for k. Informally, the theorem says that approximating the offset k is
-not harder than approximating the total length L of a cycle. In other words,
-for any (reasonably well-behaved) function f, a polynomial time algorithm
-constructing a cycle of length f(L) in an undirected graph with a cycle of
-length L, yields a polynomial time algorithm constructing a cycle of length
-2\delta(G)+\Omega(f(k)).
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Fomin_F/0/1/0/all/0/1">Fedor F. Fomin</a>, <a href="http://arxiv.org/find/cs/1/au:+Golovach_P/0/1/0/all/0/1">Petr A. Golovach</a>, <a href="http://arxiv.org/find/cs/1/au:+Sagunov_D/0/1/0/all/0/1">Danil Sagunov</a>, <a href="http://arxiv.org/find/cs/1/au:+Simonov_K/0/1/0/all/0/1">Kirill Simonov</a></p><p>Parameterization above (or below) a guarantee is a successful concept in
-parameterized algorithms. The idea is that many computational problems admit
-``natural'' guarantees bringing to algorithmic questions whether a better
-solution (above the guarantee) could be obtained efficiently. The above
-guarantee paradigm has led to several exciting discoveries in the areas of
-parameterized algorithms and kernelization. We argue that this paradigm could
-bring forth fresh perspectives on well-studied problems in approximation
-algorithms. Our example is the longest cycle problem. One of the oldest results
-in extremal combinatorics is the celebrated Dirac's theorem from 1952. Dirac's
-theorem provides the following guarantee on the length of the longest cycle:
-for every 2-connected n-vertex graph G with minimum degree \delta(G)\leq n/2,
-the length of a longest cycle L is at least 2\delta(G). Thus, the ``essential''
-part in finding the longest cycle is in approximating the ``offset'' k = L - 2
-\delta(G). The main result of this paper is the above-guarantee approximation
-theorem for k. Informally, the theorem says that approximating the offset k is
-not harder than approximating the total length L of a cycle. In other words,
-for any (reasonably well-behaved) function f, a polynomial time algorithm
-constructing a cycle of length f(L) in an undirected graph with a cycle of
-length L, yields a polynomial time algorithm constructing a cycle of length
-2\delta(G)+\Omega(f(k)).
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.02059'>Algorithmic Theory of Qubit Routing</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Takehiro Ito, Naonori Kakimura, Naoyuki Kamiyama, Yusuke Kobayashi, Yoshio Okamoto</p><p>The qubit routing problem, also known as the swap minimization problem, is a
-(classical) combinatorial optimization problem that arises in the design of
-compilers of quantum programs. We study the qubit routing problem from the
-viewpoint of theoretical computer science, while most of the existing studies
-investigated the practical aspects. We concentrate on the linear nearest
-neighbor (LNN) architectures of quantum computers, in which the graph topology
-is a path. Our results are three-fold. (1) We prove that the qubit routing
-problem is NP-hard. (2) We give a fixed-parameter algorithm when the number of
-two-qubit gates is a parameter. (3) We give a polynomial-time algorithm when
-each qubit is involved in at most one two-qubit gate.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Ito_T/0/1/0/all/0/1">Takehiro Ito</a>, <a href="http://arxiv.org/find/cs/1/au:+Kakimura_N/0/1/0/all/0/1">Naonori Kakimura</a>, <a href="http://arxiv.org/find/cs/1/au:+Kamiyama_N/0/1/0/all/0/1">Naoyuki Kamiyama</a>, <a href="http://arxiv.org/find/cs/1/au:+Kobayashi_Y/0/1/0/all/0/1">Yusuke Kobayashi</a>, <a href="http://arxiv.org/find/cs/1/au:+Okamoto_Y/0/1/0/all/0/1">Yoshio Okamoto</a></p><p>The qubit routing problem, also known as the swap minimization problem, is a
-(classical) combinatorial optimization problem that arises in the design of
-compilers of quantum programs. We study the qubit routing problem from the
-viewpoint of theoretical computer science, while most of the existing studies
-investigated the practical aspects. We concentrate on the linear nearest
-neighbor (LNN) architectures of quantum computers, in which the graph topology
-is a path. Our results are three-fold. (1) We prove that the qubit routing
-problem is NP-hard. (2) We give a fixed-parameter algorithm when the number of
-two-qubit gates is a parameter. (3) We give a polynomial-time algorithm when
-each qubit is involved in at most one two-qubit gate.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.02132'>An Efficient Algorithm for All-Pairs Bounded Edge Connectivity</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Shyan Akmal, Ce Jin</p><p>Our work concerns algorithms for an unweighted variant of Maximum Flow. In
-the All-Pairs Connectivity (APC) problem, we are given a graph $G$ on $n$
-vertices and $m$ edges, and are tasked with computing the maximum number of
-edge-disjoint paths from $s$ to $t$ (equivalently, the size of a minimum
-$(s,t)$-cut) in $G$, for all pairs of vertices $(s,t)$. Although over
-undirected graphs APC can be solved in essentially optimal $n^{2+o(1)}$ time,
-the true time complexity of APC over directed graphs remains open: this problem
-can be solved in $\tilde{O}(m^\omega)$ time, where $\omega \in [2, 2.373)$ is
-the exponent of matrix multiplication, but no matching conditional lower bound
-is known.
-</p>
-<p>We study a variant of APC called the $k$-Bounded All Pairs Connectivity
-($k$-APC) problem. In this problem, we are given an integer $k$ and graph $G$,
-and are tasked with reporting the size of a minimum $(s,t)$-cut only for pairs
-$(s,t)$ of vertices with a minimum cut size less than $k$ (if the minimum
-$(s,t)$-cut has size at least $k$, we just report it is "large" instead of
-computing the exact value).
-</p>
-<p>We present an algorithm solving $k$-APC in directed graphs in
-$\tilde{O}((kn)^\omega)$ time. This runtime is $\tilde O(n^\omega)$ for all $k$
-polylogarithmic in $n$, which is essentially optimal under popular conjectures
-from fine-grained complexity. Previously, this runtime was only known for $k\le
-2$ [Georgiadis et al., ICALP 2017].
-</p>
-<p>We also study a variant of $k$-APC, the $k$-Bounded All-Pairs Vertex
-Connectivity ($k$-APVC) problem, which considers internally vertex-disjoint
-paths instead of edge-disjoint paths. We present an algorithm solving $k$-APVC
-in directed graphs in $\tilde{O}(k^2n^\omega)$ time. Previous work solved an
-easier version of the $k$-APVC problem in $\tilde O((kn)^\omega)$ time [Abboud
-et al, ICALP 2019].
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Akmal_S/0/1/0/all/0/1">Shyan Akmal</a>, <a href="http://arxiv.org/find/cs/1/au:+Jin_C/0/1/0/all/0/1">Ce Jin</a></p><p>Our work concerns algorithms for an unweighted variant of Maximum Flow. In
-the All-Pairs Connectivity (APC) problem, we are given a graph $G$ on $n$
-vertices and $m$ edges, and are tasked with computing the maximum number of
-edge-disjoint paths from $s$ to $t$ (equivalently, the size of a minimum
-$(s,t)$-cut) in $G$, for all pairs of vertices $(s,t)$. Although over
-undirected graphs APC can be solved in essentially optimal $n^{2+o(1)}$ time,
-the true time complexity of APC over directed graphs remains open: this problem
-can be solved in $\tilde{O}(m^\omega)$ time, where $\omega \in [2, 2.373)$ is
-the exponent of matrix multiplication, but no matching conditional lower bound
-is known.
-</p>
-<p>We study a variant of APC called the $k$-Bounded All Pairs Connectivity
-($k$-APC) problem. In this problem, we are given an integer $k$ and graph $G$,
-and are tasked with reporting the size of a minimum $(s,t)$-cut only for pairs
-$(s,t)$ of vertices with a minimum cut size less than $k$ (if the minimum
-$(s,t)$-cut has size at least $k$, we just report it is "large" instead of
-computing the exact value).
-</p>
-<p>We present an algorithm solving $k$-APC in directed graphs in
-$\tilde{O}((kn)^\omega)$ time. This runtime is $\tilde O(n^\omega)$ for all $k$
-polylogarithmic in $n$, which is essentially optimal under popular conjectures
-from fine-grained complexity. Previously, this runtime was only known for $k\le
-2$ [Georgiadis et al., ICALP 2017].
-</p>
-<p>We also study a variant of $k$-APC, the $k$-Bounded All-Pairs Vertex
-Connectivity ($k$-APVC) problem, which considers internally vertex-disjoint
-paths instead of edge-disjoint paths. We present an algorithm solving $k$-APVC
-in directed graphs in $\tilde{O}(k^2n^\omega)$ time. Previous work solved an
-easier version of the $k$-APVC problem in $\tilde O((kn)^\omega)$ time [Abboud
-et al, ICALP 2019].
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.02154'>Random Shreier graphs of the general linear group over finite fields and expanders</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Geoffroy Caillat-Grenier</p><p>In this paper we discuss potentially practical ways to produce expander
-graphs with good spectral properties and a compact description. We focus on
-several classes of uniform and bipartite expander graphs defined as random
-Schreier graphs of the general linear group over the finite field of size two.
-We perform numerical experiments and show that such constructions produce
-spectral expanders that can be useful for practical applications. To find a
-theoretical explanation of the observed experimental results, we used the
-method of moments to prove upper bounds for the expected second largest
-eigenvalue of the random Schreier graphs used in our constructions. We focus on
-bounds for which it is difficult to study the asymptotic behaviour but it is
-possible to compute non-trivial conclusions for relatively small graphs with
-parameters from our numerical experiments (e.g., with less than 2^200 vertices
-and degree at least logarithmic in the number of vertices).
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Caillat_Grenier_G/0/1/0/all/0/1">Geoffroy Caillat-Grenier</a></p><p>In this paper we discuss potentially practical ways to produce expander
-graphs with good spectral properties and a compact description. We focus on
-several classes of uniform and bipartite expander graphs defined as random
-Schreier graphs of the general linear group over the finite field of size two.
-We perform numerical experiments and show that such constructions produce
-spectral expanders that can be useful for practical applications. To find a
-theoretical explanation of the observed experimental results, we used the
-method of moments to prove upper bounds for the expected second largest
-eigenvalue of the random Schreier graphs used in our constructions. We focus on
-bounds for which it is difficult to study the asymptotic behaviour but it is
-possible to compute non-trivial conclusions for relatively small graphs with
-parameters from our numerical experiments (e.g., with less than 2^200 vertices
-and degree at least logarithmic in the number of vertices).
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.02166'>Minimum Chain Cover in Almost Linear Time</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Manuel Caceres</p><p>A minimum chain cover (MCC) of a $k$-width directed acyclic graph (DAG) $G =
-(V, E)$ is a set of $k$ chains (paths in the transitive closure) of $G$ such
-that every vertex appears in at least one chain in the cover. The
-state-of-the-art solutions for MCC run in time $\tilde{O}(k(|V|+|E|))$
-[M\"akinen et at., TALG], $O(T_{MF}(|E|) + k|V|)$, $O(k^2|V| + |E|)$ [C\'aceres
-et al., SODA 2022], $\tilde{O}(|V|^{3/2} + |E|)$ [Kogan and Parter, ICALP 2022]
-and $\tilde{O}(T_{MCF}(|E|) + \sqrt{k}|V|)$ [Kogan and Parter, SODA 2023],
-where $T_{MF}(|E|)$ and $T_{MCF}(|E|)$ are the running times for solving
-maximum flow (MF) and minimum-cost flow (MCF), respectively.
-</p>
-<p>In this work we present an algorithm running in time $O(T_{MF}(|E|) +
-(|V|+|E|)\log{k})$. By considering the recent result for solving MF [Chen et
-al., FOCS 2022] our algorithm is the first running in almost linear time.
-Moreover, our techniques are deterministic and derive a deterministic
-near-linear time algorithm for MCC if the same is provided for MF. At the core
-of our solution we use a modified version of the mergeable dictionaries [Farach
-and Thorup, Algorithmica], [Iacono and \"Ozkan, ICALP 2010] data structure
-boosted with the SIZE-SPLIT operation and answering queries in amortized
-logarithmic time, which can be of independent interest.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Caceres_M/0/1/0/all/0/1">Manuel Caceres</a></p><p>A minimum chain cover (MCC) of a $k$-width directed acyclic graph (DAG) $G =
-(V, E)$ is a set of $k$ chains (paths in the transitive closure) of $G$ such
-that every vertex appears in at least one chain in the cover. The
-state-of-the-art solutions for MCC run in time $\tilde{O}(k(|V|+|E|))$
-[M\"akinen et at., TALG], $O(T_{MF}(|E|) + k|V|)$, $O(k^2|V| + |E|)$ [C\'aceres
-et al., SODA 2022], $\tilde{O}(|V|^{3/2} + |E|)$ [Kogan and Parter, ICALP 2022]
-and $\tilde{O}(T_{MCF}(|E|) + \sqrt{k}|V|)$ [Kogan and Parter, SODA 2023],
-where $T_{MF}(|E|)$ and $T_{MCF}(|E|)$ are the running times for solving
-maximum flow (MF) and minimum-cost flow (MCF), respectively.
-</p>
-<p>In this work we present an algorithm running in time $O(T_{MF}(|E|) +
-(|V|+|E|)\log{k})$. By considering the recent result for solving MF [Chen et
-al., FOCS 2022] our algorithm is the first running in almost linear time.
-Moreover, our techniques are deterministic and derive a deterministic
-near-linear time algorithm for MCC if the same is provided for MF. At the core
-of our solution we use a modified version of the mergeable dictionaries [Farach
-and Thorup, Algorithmica], [Iacono and \"Ozkan, ICALP 2010] data structure
-boosted with the SIZE-SPLIT operation and answering queries in amortized
-logarithmic time, which can be of independent interest.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.02169'>Learning-Augmented Online TSP on Rings, Trees, Flowers and (almost) Everywhere Else</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Evripidis Bampis, Bruno Escoffier, Themis Gouleakis, Niklas Hahn, Kostas Lakis, Golnoosh Shahkarami, Michalis Xefteris</p><p>We study the Online Traveling Salesperson Problem (OLTSP) with predictions.
-In OLTSP, a sequence of initially unknown requests arrive over time at points
-(locations) of a metric space. The goal is, starting from a particular point of
-the metric space (the origin), to serve all these requests while minimizing the
-total time spent. The server moves with unit speed or is "waiting" (zero speed)
-at some location. We consider two variants: in the open variant, the goal is
-achieved when the last request is served. In the closed one, the server
-additionally has to return to the origin. We adopt a prediction model,
-introduced for OLTSP on the line, in which the predictions correspond to the
-locations of the requests and extend it to more general metric spaces.
-</p>
-<p>We first propose an oracle-based algorithmic framework, inspired by previous
-work. This framework allows us to design online algorithms for general metric
-spaces that provide competitive ratio guarantees which, given perfect
-predictions, beat the best possible classical guarantee (consistency).
-Moreover, they degrade gracefully along with the increase in error
-(smoothness), but always within a constant factor of the best known competitive
-ratio in the classical case (robustness).
-</p>
-<p>Having reduced the problem to designing suitable efficient oracles, we
-describe how to achieve this for general metric spaces as well as specific
-metric spaces (rings, trees and flowers), the resulting algorithms being
-tractable in the latter case. The consistency guarantees of our algorithms are
-tight in almost all cases, and their smoothness guarantees only suffer a linear
-dependency on the error, which we show is necessary. Finally, we provide
-robustness guarantees improving previous results.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bampis_E/0/1/0/all/0/1">Evripidis Bampis</a>, <a href="http://arxiv.org/find/cs/1/au:+Escoffier_B/0/1/0/all/0/1">Bruno Escoffier</a>, <a href="http://arxiv.org/find/cs/1/au:+Gouleakis_T/0/1/0/all/0/1">Themis Gouleakis</a>, <a href="http://arxiv.org/find/cs/1/au:+Hahn_N/0/1/0/all/0/1">Niklas Hahn</a>, <a href="http://arxiv.org/find/cs/1/au:+Lakis_K/0/1/0/all/0/1">Kostas Lakis</a>, <a href="http://arxiv.org/find/cs/1/au:+Shahkarami_G/0/1/0/all/0/1">Golnoosh Shahkarami</a>, <a href="http://arxiv.org/find/cs/1/au:+Xefteris_M/0/1/0/all/0/1">Michalis Xefteris</a></p><p>We study the Online Traveling Salesperson Problem (OLTSP) with predictions.
-In OLTSP, a sequence of initially unknown requests arrive over time at points
-(locations) of a metric space. The goal is, starting from a particular point of
-the metric space (the origin), to serve all these requests while minimizing the
-total time spent. The server moves with unit speed or is "waiting" (zero speed)
-at some location. We consider two variants: in the open variant, the goal is
-achieved when the last request is served. In the closed one, the server
-additionally has to return to the origin. We adopt a prediction model,
-introduced for OLTSP on the line, in which the predictions correspond to the
-locations of the requests and extend it to more general metric spaces.
-</p>
-<p>We first propose an oracle-based algorithmic framework, inspired by previous
-work. This framework allows us to design online algorithms for general metric
-spaces that provide competitive ratio guarantees which, given perfect
-predictions, beat the best possible classical guarantee (consistency).
-Moreover, they degrade gracefully along with the increase in error
-(smoothness), but always within a constant factor of the best known competitive
-ratio in the classical case (robustness).
-</p>
-<p>Having reduced the problem to designing suitable efficient oracles, we
-describe how to achieve this for general metric spaces as well as specific
-metric spaces (rings, trees and flowers), the resulting algorithms being
-tractable in the latter case. The consistency guarantees of our algorithms are
-tight in almost all cases, and their smoothness guarantees only suffer a linear
-dependency on the error, which we show is necessary. Finally, we provide
-robustness guarantees improving previous results.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.02240'>A $4/3$ Approximation for $2$-Vertex-Connectivity</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Miguel Bosch-Calvo, Fabrizio Grandoni, Afrouz Jabal Ameli</p><p>The 2-Vertex-Connected Spanning Subgraph problem (2VCSS) is among the most
-basic NP-hard (Survivable) Network Design problems: we are given an
-(unweighted) undirected graph $G$. Our goal is to find a subgraph $S$ of $G$
-with the minimum number of edges which is $2$-vertex-connected, namely $S$
-remains connected after the deletion of an arbitrary node. 2VCSS is
-well-studied in terms of approximation algorithms, and the current best
-(polynomial-time) approximation factor is $10/7$ by Heeger and Vygen [SIDMA'17]
-(improving on earlier results by Khuller and Vishkin [STOC'92] and Garg,
-Vempala and Singla [SODA'93]).
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bosch_Calvo_M/0/1/0/all/0/1">Miguel Bosch-Calvo</a>, <a href="http://arxiv.org/find/cs/1/au:+Grandoni_F/0/1/0/all/0/1">Fabrizio Grandoni</a>, <a href="http://arxiv.org/find/cs/1/au:+Ameli_A/0/1/0/all/0/1">Afrouz Jabal Ameli</a></p><p>The 2-Vertex-Connected Spanning Subgraph problem (2VCSS) is among the most
-basic NP-hard (Survivable) Network Design problems: we are given an
-(unweighted) undirected graph $G$. Our goal is to find a subgraph $S$ of $G$
-with the minimum number of edges which is $2$-vertex-connected, namely $S$
-remains connected after the deletion of an arbitrary node. 2VCSS is
-well-studied in terms of approximation algorithms, and the current best
-(polynomial-time) approximation factor is $10/7$ by Heeger and Vygen [SIDMA'17]
-(improving on earlier results by Khuller and Vishkin [STOC'92] and Garg,
-Vempala and Singla [SODA'93]).
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.02263'>Triangle Counting with Local Edge Differential Privacy</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Talya Eden, Quanquan C. Liu, Sofya Raskhodnikova, Adam Smith</p><p>Many deployments of differential privacy in industry are in the local model,
-where each party releases its private information via a differentially private
-randomizer. We study triangle counting in the noninteractive and interactive
-local model with edge differential privacy (that, intuitively, requires that
-the outputs of the algorithm on graphs that differ in one edge be
-indistinguishable). In this model, each party's local view consists of the
-adjacency list of one vertex.
-</p>
-<p>In the noninteractive model, we prove that additive $\Omega(n^2)$ error is
-necessary, where $n$ is the number of nodes. This lower bound is our main
-technical contribution. It uses a reconstruction attack with a new class of
-linear queries and a novel mix-and-match strategy of running the local
-randomizers with different completions of their adjacency lists. It matches the
-additive error of the algorithm based on Randomized Response, proposed by
-Imola, Murakami and Chaudhuri (USENIX2021) and analyzed by Imola, Murakami and
-Chaudhuri (CCS2022) for constant $\varepsilon$. We use a different
-postprocessing of Randomized Response and provide tight bounds on the variance
-of the resulting algorithm.
-</p>
-<p>In the interactive setting, we prove a lower bound of $\Omega(n^{3/2})$ on
-the additive error. Previously, no hardness results were known for interactive,
-edge-private algorithms in the local model, except for those that follow
-trivially from the results for the central model. Our work significantly
-improves on the state of the art in differentially private graph analysis in
-the local model.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Eden_T/0/1/0/all/0/1">Talya Eden</a>, <a href="http://arxiv.org/find/cs/1/au:+Liu_Q/0/1/0/all/0/1">Quanquan C. Liu</a>, <a href="http://arxiv.org/find/cs/1/au:+Raskhodnikova_S/0/1/0/all/0/1">Sofya Raskhodnikova</a>, <a href="http://arxiv.org/find/cs/1/au:+Smith_A/0/1/0/all/0/1">Adam Smith</a></p><p>Many deployments of differential privacy in industry are in the local model,
-where each party releases its private information via a differentially private
-randomizer. We study triangle counting in the noninteractive and interactive
-local model with edge differential privacy (that, intuitively, requires that
-the outputs of the algorithm on graphs that differ in one edge be
-indistinguishable). In this model, each party's local view consists of the
-adjacency list of one vertex.
-</p>
-<p>In the noninteractive model, we prove that additive $\Omega(n^2)$ error is
-necessary, where $n$ is the number of nodes. This lower bound is our main
-technical contribution. It uses a reconstruction attack with a new class of
-linear queries and a novel mix-and-match strategy of running the local
-randomizers with different completions of their adjacency lists. It matches the
-additive error of the algorithm based on Randomized Response, proposed by
-Imola, Murakami and Chaudhuri (USENIX2021) and analyzed by Imola, Murakami and
-Chaudhuri (CCS2022) for constant $\varepsilon$. We use a different
-postprocessing of Randomized Response and provide tight bounds on the variance
-of the resulting algorithm.
-</p>
-<p>In the interactive setting, we prove a lower bound of $\Omega(n^{3/2})$ on
-the additive error. Previously, no hardness results were known for interactive,
-edge-private algorithms in the local model, except for those that follow
-trivially from the results for the central model. Our work significantly
-improves on the state of the art in differentially private graph analysis in
-the local model.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:30:00Z">Thursday, May 04 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://blog.simons.berkeley.edu/2023/05/mechanisms-inside-or-in-between/'>Mechanisms: Inside or In-Between?</a></h3>
-        <p class='tr-article-feed'>from <a href='https://blog.simons.berkeley.edu'>Simons Institute Blog</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          by Issa Kohler-Hausmann (Senior Law and Society Fellow, Spring 2022, Simons Institute)1 This work was made possible by the Simons Institute’s Causality program in the spring of 2022, where I was the Law and Society fellow and had the opportunity &#8230; Continue reading &#8594;<p>By Simons Institute Editor</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          by Issa Kohler-Hausmann (Senior Law and Society Fellow, Spring 2022, Simons Institute)1 This work was made possible by the Simons Institute’s Causality program in the spring of 2022, where I was the Law and Society fellow and had the opportunity &#8230; <a href="https://blog.simons.berkeley.edu/2023/05/mechanisms-inside-or-in-between/">Continue reading <span class="meta-nav">&#8594;</span></a><p class="authors">By Simons Institute Editor</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-04T00:00:00Z">Thursday, May 04 2023, 00:00</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Wednesday, May 03
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://cstheory-jobs.org/2023/05/03/postdocs-at-aalto-university-apply-by-june-1-2023/'>Postdocs at Aalto University (apply by June 1, 2023)</a></h3>
-        <p class='tr-article-feed'>from <a href='https://cstheory-jobs.org'>CCI: jobs</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          The research group of Jukka Suomela at Aalto University is looking for postdoctoral researchers to work on the foundations of distributed and parallel computing. Website: research.cs.aalto.fi/da/jobs/ Email: jukka.suomela@aalto.fi
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>The research group of Jukka Suomela at Aalto University is looking for postdoctoral researchers to work on the foundations of distributed and parallel computing.</p>
-<p>Website: <a href="https://research.cs.aalto.fi/da/jobs/">https://research.cs.aalto.fi/da/jobs/</a><br />
-Email: jukka.suomela@aalto.fi</p>
-<p class="authors">By shacharlovett</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-03T20:30:59Z">Wednesday, May 03 2023, 20:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/064'>TR23-064 |   On the Lower Bound on the Length of Relaxed Locally Decodable Codes | 
-
-	Oded Goldreich</a></h3>
-        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          We revisit the known proof of the lower bound on the length of relaxed locally decodable codes, providing an arguably simpler exposition that yields a slightly better lower bound for the non-adaptive case and a weaker bound in the general case.
-
-Recall that a locally decodable code is an error correcting code that allows for the recovery of any desired bit in the message based on a constant number of randomly selected bits in the possibly corrupted codeword.
-The relaxed version requires correct recovery only in case of actual codewords, while requiring that for strings that are (only) close to the code, with high probability, the local decoder outputs either the correct value or a special failure symbol (but not a wrong value). 
-
-The lower bounds we prove are $n\geq k^{1+\Omega(1/q^2)}$ for the non-adaptive case and $n\geq k^{1+\Omega(1/q^3)}$ for the general case, where $k$ denotes the message length, $n$ denotes the length of the codewords, and $q$ denotes the (constant) number of queries.
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          We revisit the known proof of the lower bound on the length of relaxed locally decodable codes, providing an arguably simpler exposition that yields a slightly better lower bound for the non-adaptive case and a weaker bound in the general case.
-
-Recall that a locally decodable code is an error correcting code that allows for the recovery of any desired bit in the message based on a constant number of randomly selected bits in the possibly corrupted codeword.
-The relaxed version requires correct recovery only in case of actual codewords, while requiring that for strings that are (only) close to the code, with high probability, the local decoder outputs either the correct value or a special failure symbol (but not a wrong value). 
-
-The lower bounds we prove are $n\geq k^{1+\Omega(1/q^2)}$ for the non-adaptive case and $n\geq k^{1+\Omega(1/q^3)}$ for the general case, where $k$ denotes the message length, $n$ denotes the length of the codewords, and $q$ denotes the (constant) number of queries.
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-03T14:52:01Z">Wednesday, May 03 2023, 14:52</time>
         </div>
       </div>
     </details>
