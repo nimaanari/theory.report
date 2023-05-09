@@ -9,6 +9,69 @@
 
 
 <item>
+  <title>An Improved PTAS for Covering Targets with Mobile Sensors</title>
+  <guid>http://arxiv.org/abs/2305.03946</guid>
+  <link>http://arxiv.org/abs/2305.03946</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wongwattanakij_N/0/1/0/all/0/1&quot;&gt;Nonthaphat Wongwattanakij&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Phetmak_N/0/1/0/all/0/1&quot;&gt;Nattawut Phetmak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jaikaeo_C/0/1/0/all/0/1&quot;&gt;Chaiporn Jaikaeo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fakcharoenphol_J/0/1/0/all/0/1&quot;&gt;Jittat Fakcharoenphol&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper considers a movement minimization problem for mobile sensors.
+Given a set of $n$ point targets, the $k$-Sink Minimum Movement Target Coverage
+Problem is to schedule mobile sensors, initially located at $k$ base stations,
+to cover all targets minimizing the total moving distance of the sensors. We
+present a polynomial-time approximation scheme for finding a $(1+\epsilon)$
+approximate solution running in time $n^{O(1/\epsilon)}$ for this problem when
+$k$, the number of base stations, is constant. Our algorithm improves the
+running time exponentially from the previous work that runs in time
+$n^{O(1/\epsilon^2)}$, without any target distribution assumption. To devise a
+faster algorithm, we prove a stronger bound on the number of sensors in any
+unit area in the optimal solution and employ a more refined dynamic programming
+algorithm whose complexity depends only on the width of the problem.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-09 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Minimum-Membership Geometric Set Cover, Revisited</title>
+  <guid>http://arxiv.org/abs/2305.03985</guid>
+  <link>http://arxiv.org/abs/2305.03985</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bandyapadhyay_S/0/1/0/all/0/1&quot;&gt;Sayan Bandyapadhyay&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lochet_W/0/1/0/all/0/1&quot;&gt;William Lochet&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Saurabh_S/0/1/0/all/0/1&quot;&gt;Saket Saurabh&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xue_J/0/1/0/all/0/1&quot;&gt;Jie Xue&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We revisit a natural variant of geometric set cover, called
+minimum-membership geometric set cover (MMGSC). In this problem, the input
+consists of a set $S$ of points and a set $\mathcal{R}$ of geometric objects,
+and the goal is to find a subset $\mathcal{R}^*\subseteq\mathcal{R}$ to cover
+all points in $S$ such that the \textit{membership} of $S$ with respect to
+$\mathcal{R}^*$, denoted by $\mathsf{memb}(S,\mathcal{R}^*)$, is minimized,
+where $\mathsf{memb}(S,\mathcal{R}^*)=\max_{p\in S}|\{R\in\mathcal{R}^*: p\in
+R\}|$. We achieve the following two main results.
+&lt;/p&gt;
+&lt;p&gt;* We give the first polynomial-time constant-approximation algorithm for
+MMGSC with unit squares. This answers a question left open since the work of
+Erlebach and Leeuwen [SODA&#39;08], who gave a constant-approximation algorithm
+with running time $n^{O(\mathsf{opt})}$ where $\mathsf{opt}$ is the optimum of
+the problem (i.e., the minimum membership).
+&lt;/p&gt;
+&lt;p&gt;* We give the first polynomial-time approximation scheme (PTAS) for MMGSC
+with halfplanes. Prior to this work, it was even unknown whether the problem
+can be approximated with a factor of $o(\log n)$ in polynomial time, while it
+is well-known that the minimum-size set cover problem with halfplanes can be
+solved in polynomial time.
+&lt;/p&gt;
+&lt;p&gt;We also consider a problem closely related to MMGSC, called minimum-ply
+geometric set cover (MPGSC), in which the goal is to find
+$\mathcal{R}^*\subseteq\mathcal{R}$ to cover $S$ such that the ply of
+$\mathcal{R}^*$ is minimized, where the ply is defined as the maximum number of
+objects in $\mathcal{R}^*$ which have a nonempty common intersection. Very
+recently, Durocher et al. gave the first constant-approximation algorithm for
+MPGSC with unit squares which runs in $O(n^{12})$ time. We give a significantly
+simpler constant-approximation algorithm with near-linear running time.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-09 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Other Ramsey&#39;s</title>
   <guid>tag:blogger.com,1999:blog-3722233.post-7835545901904295299</guid>
   <link>https://blog.computationalcomplexity.org/2023/05/other-ramseys.html</link>
@@ -1375,58 +1438,6 @@ https://github.com/cm8908/CNN_Transformer3
   </description>
   <pubDate>2023-05-04 00:30:00 UTC</pubDate>
   <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Approximate Evaluation of Quantitative Second Order Queries</title>
-  <guid>http://arxiv.org/abs/2305.02056</guid>
-  <link>http://arxiv.org/abs/2305.02056</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dreier_J/0/1/0/all/0/1&quot;&gt;Jan Dreier&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ganian_R/0/1/0/all/0/1&quot;&gt;Robert Ganian&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hamm_T/0/1/0/all/0/1&quot;&gt;Thekla Hamm&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Courcelle&#39;s theorem and its adaptations to cliquewidth have shaped the field
-of exact parameterized algorithms and are widely considered the archetype of
-algorithmic meta-theorems. In the past decade, there has been growing interest
-in developing parameterized approximation algorithms for problems which are not
-captured by Courcelle&#39;s theorem and, in particular, are considered not
-fixed-parameter tractable under the associated widths.
-&lt;/p&gt;
-&lt;p&gt;We develop a generalization of Courcelle&#39;s theorem that yields efficient
-approximation schemes for any problem that can be captured by an expanded logic
-we call Blocked CMSO, capable of making logical statements about the sizes of
-set variables via so-called weight comparisons. The logic controls weight
-comparisons via the quantifier-alternation depth of the involved variables,
-allowing full comparisons for zero-alternation variables and limited
-comparisons for one-alternation variables. We show that the developed framework
-threads the very needle of tractability: on one hand it can describe a broad
-range of approximable problems, while on the other hand we show that the
-restrictions of our logic cannot be relaxed under well-established complexity
-assumptions.
-&lt;/p&gt;
-&lt;p&gt;The running time of our approximation scheme is polynomial in
-$1/\varepsilon$, allowing us to fully interpolate between faster approximate
-algorithms and slower exact algorithms. This provides a unified framework to
-explain the tractability landscape of graph problems parameterized by treewidth
-and cliquewidth, as well as classical non-graph problems such as Subset Sum and
-Knapsack.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-04 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>$L$ is unequal $NL$ under the Strong Exponential Time Hypothesis</title>
-  <guid>http://arxiv.org/abs/2305.02271</guid>
-  <link>http://arxiv.org/abs/2305.02271</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Czerwinski_R/0/1/0/all/0/1&quot;&gt;Reiner Czerwinski&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Due to Savitch&#39;s theorem we know $NL\subseteq DSPACE(\log^2(n))$. To show
-this upper bound, Savitch constructed an algorithm with $O(\log^2(n))$ space on
-the working tape. We will show that Savitch&#39;s algorithm also described a lower
-bound under the Strong Exponential Time Hypothesis. Every algorithm for the
-Connectivity Problem needs $O(\log^2(n))$ space in this case.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-04 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
