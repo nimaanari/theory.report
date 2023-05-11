@@ -10,6 +10,33 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-068 |  Colourful TFNP and Propositional Proofs | 
+
+	Ben Davis, 
+
+	Robert Robere</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/068"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/068</id>
+    <updated>2023-05-11T14:19:24+00:00</updated>
+    <content type="html" xml:lang="en">
+    Recent work has shown that many of the standard TFNP classes — such as PLS, PPADS, PPAD, SOPL, and EOPL — have corresponding proof systems in propositional proof complexity, in the sense that a total search problem is in the class if and only if the totality of the problem can be efficiently proved by the corresponding proof system. We build on this line of work by studying coloured variants of these TFNP classes: C-PLS, C-PPADS, C-PPAD, C-SOPL, and C-EOPL. While C-PLS has been studied in the literature before, the coloured variants of the other classes are introduced here for the first time. We give a family of results showing that these coloured TFNP classes are natural objects of study, and that the correspondence between TFNP and natural propositional proof systems is not an exceptional phenomenon isolated to weak TFNP classes. Namely, we show that:
+
+- Each of the classes C-PLS, C-PPADS, and C-SOPL have corresponding proof systems characterizing them. Specifically, the proof systems for these classes are obtained by adding depth to the formulas in the corresponding proof system for the uncoloured class. For instance, while it was previously known that PLS is characterized by bounded-width Res- olution (i.e. depth 0.5 Frege), we prove that C-PLS is characterized by depth-1.5 Frege (Res(polylog(n))).
+
+- The classes C-PPAD and C-EOPL coincide exactly with the uncoloured classes PPADS and SOPL, respectively. Thus, both of these classes also have corresponding proof systems: unary Sherali-Adams and Reversible Resolution, respectively.
+
+- Finally, we prove a coloured intersection theorem for the coloured sink classes, showing C-PLS?C-PPADS = C-SOPL, generalizing the intersection theorem PLS?PPADS = SOPL. However, while it is known in the uncoloured world that PLS ? PPAD = EOPL = CLS, we prove that this equality fails in the coloured world in the black-box setting. More precisely, we show that there is an oracle O relative to which C-PLS ? C-PPAD $\neq$ C-EOPL.
+
+To prove our results, we introduce an abstract multivalued proof system — the Blockwise Calculus — which may be of independent interest.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Computational Complexity: Winter is Coming</title>
     <link href="https://blog.computationalcomplexity.org/2023/05/winter-is-coming.html"/>
     <id>tag:blogger.com,1999:blog-3722233.post-7739714885756524623</id>
@@ -1703,30 +1730,6 @@ Transform with less assumptions on the hash function. We also show that the
 Thorup (FOCS 2015) satisfies the conditions of our analysis, thus giving us the
 first analysis of a Sparse Johnson-Lindenstrauss Transform that works with a
 practical hash function.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Testing Convexity of Discrete Sets in High Dimensions</title>
-    <link href="http://arxiv.org/abs/2305.03194"/>
-    <id>http://arxiv.org/abs/2305.03194</id>
-    <updated>2023-05-08T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Black_H/0/1/0/all/0/1&quot;&gt;Hadley Black&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Blais_E/0/1/0/all/0/1&quot;&gt;Eric Blais&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Harms_N/0/1/0/all/0/1&quot;&gt;Nathaniel Harms&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of testing whether an unknown set $S$ in $n$ dimensions
-is convex or far from convex, using membership queries. The simplest
-high-dimensional discrete domain where the problem of testing convexity is
-non-trivial is the domain $\{-1,0,1\}^n$. Our main results are nearly-tight
-upper and lower bounds of $3^{\widetilde \Theta( \sqrt n)}$ for one-sided error
-testing of convex sets over this domain with non-adaptive queries. Together
-with our $3^{\Omega(n)}$ lower bound on one-sided error testing with samples,
-this shows that non-adaptive queries are significantly more powerful than
-samples for this problem.
 &lt;/p&gt;
   </content>
     <author>
