@@ -9,6 +9,541 @@
 
 
 <item>
+  <title>Scheme-Theoretic Approach to Computational Complexity. IV. A New Perspective on Hardness of Approximation</title>
+  <guid>http://arxiv.org/abs/2305.05676</guid>
+  <link>http://arxiv.org/abs/2305.05676</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Civril_A/0/1/0/all/0/1&quot;&gt;Ali &amp;#xc7;ivril&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a new approach for establishing hardness of approximation results,
+based on the theory recently introduced by the author. It allows one to
+directly show that approximating a problem beyond a certain threshold requires
+super-polynomial time. To exhibit the framework, we revisit two famous problems
+in this paper. The particular results we prove are:
+&lt;/p&gt;
+&lt;p&gt;MAX-3-SAT$(1,\frac{7}{8}+\epsilon)$ requires exponential time for any
+constant $\epsilon$ satisfying $\frac{1}{8} \geq \epsilon &amp;gt; 0$. In particular,
+the gap exponential time hypothesis (Gap-ETH) holds.
+&lt;/p&gt;
+&lt;p&gt;MAX-3-LIN-2$(1-\epsilon, \frac{1}{2}+\epsilon)$ requires exponential time for
+any constant $\epsilon$ satisfying $\frac{1}{4} \geq \epsilon &amp;gt; 0$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>On the average-case complexity of learning output distributions of quantum circuits</title>
+  <guid>http://arxiv.org/abs/2305.05765</guid>
+  <link>http://arxiv.org/abs/2305.05765</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nietner_A/0/1/0/all/0/1&quot;&gt;Alexander Nietner&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Ioannou_M/0/1/0/all/0/1&quot;&gt;Marios Ioannou&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Sweke_R/0/1/0/all/0/1&quot;&gt;Ryan Sweke&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Kueng_R/0/1/0/all/0/1&quot;&gt;Richard Kueng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Eisert_J/0/1/0/all/0/1&quot;&gt;Jens Eisert&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Hinsche_M/0/1/0/all/0/1&quot;&gt;Marcel Hinsche&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Haferkamp_J/0/1/0/all/0/1&quot;&gt;Jonas Haferkamp&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this work, we show that learning the output distributions of brickwork
+random quantum circuits is average-case hard in the statistical query model.
+This learning model is widely used as an abstract computational model for most
+generic learning algorithms. In particular, for brickwork random quantum
+circuits on $n$ qubits of depth $d$, we show three main results:
+&lt;/p&gt;
+&lt;p&gt;- At super logarithmic circuit depth $d=\omega(\log(n))$, any learning
+algorithm requires super polynomially many queries to achieve a constant
+probability of success over the randomly drawn instance.
+&lt;/p&gt;
+&lt;p&gt;- There exists a $d=O(n)$, such that any learning algorithm requires
+$\Omega(2^n)$ queries to achieve a $O(2^{-n})$ probability of success over the
+randomly drawn instance.
+&lt;/p&gt;
+&lt;p&gt;- At infinite circuit depth $d\to\infty$, any learning algorithm requires
+$2^{2^{\Omega(n)}}$ many queries to achieve a $2^{-2^{\Omega(n)}}$ probability
+of success over the randomly drawn instance.
+&lt;/p&gt;
+&lt;p&gt;As an auxiliary result of independent interest, we show that the output
+distribution of a brickwork random quantum circuit is constantly far from any
+fixed distribution in total variation distance with probability $1-O(2^{-n})$,
+which confirms a variant of a conjecture by Aaronson and Chen.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>On the Information Capacity of Nearest Neighbor Representations</title>
+  <guid>http://arxiv.org/abs/2305.05808</guid>
+  <link>http://arxiv.org/abs/2305.05808</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kilic_K/0/1/0/all/0/1&quot;&gt;Kordag Mehmet Kilic&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sima_J/0/1/0/all/0/1&quot;&gt;Jin Sima&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bruck_J/0/1/0/all/0/1&quot;&gt;Jehoshua Bruck&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The $\textit{von Neumann Computer Architecture}$ has a distinction between
+computation and memory. In contrast, the brain has an integrated architecture
+where computation and memory are indistinguishable. Motivated by the
+architecture of the brain, we propose a model of $\textit{associative
+computation}$ where memory is defined by a set of vectors in $\mathbb{R}^n$
+(that we call $\textit{anchors}$), computation is performed by convergence from
+an input vector to a nearest neighbor anchor, and the output is a label
+associated with an anchor. Specifically, in this paper, we study the
+representation of Boolean functions in the associative computation model, where
+the inputs are binary vectors and the corresponding outputs are the labels ($0$
+or $1$) of the nearest neighbor anchors. The information capacity of a Boolean
+function in this model is associated with two quantities: $\textit{(i)}$ the
+number of anchors (called $\textit{Nearest Neighbor (NN) Complexity}$) and
+$\textit{(ii)}$ the maximal number of bits representing entries of anchors
+(called $\textit{Resolution}$). We study symmetric Boolean functions and
+present constructions that have optimal NN complexity and resolution.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>DNN Verification, Reachability, and the Exponential Function Problem</title>
+  <guid>http://arxiv.org/abs/2305.06064</guid>
+  <link>http://arxiv.org/abs/2305.06064</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Isac_O/0/1/0/all/0/1&quot;&gt;Omri Isac&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zohar_Y/0/1/0/all/0/1&quot;&gt;Yoni Zohar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Barrett_C/0/1/0/all/0/1&quot;&gt;Clark Barrett&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Katz_G/0/1/0/all/0/1&quot;&gt;Guy Katz&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Deep neural networks (DNNs) are increasingly being deployed to perform
+safety-critical tasks. The opacity of DNNs, which prevents humans from
+reasoning about them, presents new safety and security challenges. To address
+these challenges, the verification community has begun developing techniques
+for rigorously analyzing DNNs, with numerous verification algorithms proposed
+in recent years. While a significant amount of work has gone into developing
+these verification algorithms, little work has been devoted to rigorously
+studying the computability and complexity of the underlying theoretical
+problems. Here, we seek to contribute to the bridging of this gap. We focus on
+two kinds of DNNs: those that employ piecewise-linear activation functions
+(e.g., ReLU), and those that employ piecewise-smooth activation functions
+(e.g., Sigmoids). We prove the two following theorems: 1) The decidability of
+verifying DNNs with piecewise-smooth activation functions is equivalent to a
+well-known, open problem formulated by Tarski; and 2) The DNN verification
+problem for any quantifier-free linear arithmetic specification can be reduced
+to the DNN reachability problem, whose approximation is NP-complete. These
+results answer two fundamental questions about the computability and complexity
+of DNN verification, and the ways it is affected by the network&#39;s activation
+functions and error tolerance; and could help guide future efforts in
+developing DNN verification tools.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Deterministic and Strongly Nondeterministic Decision Trees for Decision Tables from Closed Classes</title>
+  <guid>http://arxiv.org/abs/2305.06093</guid>
+  <link>http://arxiv.org/abs/2305.06093</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ostonov_A/0/1/0/all/0/1&quot;&gt;Azimkhon Ostonov&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Moshkov_M/0/1/0/all/0/1&quot;&gt;Mikhail Moshkov&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we consider classes of decision tables with 0-1-decisions
+closed relative to removal of attributes (columns) and changing decisions
+assigned to rows. For tables from an arbitrary closed class, we study the
+dependence of the minimum complexity of deterministic decision trees on various
+parameters of the tables: the minimum complexity of a test, the complexity of
+the set of attributes attached to columns, and the minimum complexity of a
+strongly nondeterministic decision tree. We also study the dependence of the
+minimum complexity of strongly nondeterministic decision trees on the
+complexity of the set of attributes attached to columns. Note that a strongly
+nondeterministic decision tree can be interpreted as a set of true decision
+rules that cover all rows labeled with the decision 1.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Shape Formation and Locomotion with Joint Movements in the Amoebot Model</title>
+  <guid>http://arxiv.org/abs/2305.06146</guid>
+  <link>http://arxiv.org/abs/2305.06146</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Padalkin_A/0/1/0/all/0/1&quot;&gt;Andreas Padalkin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kumar_M/0/1/0/all/0/1&quot;&gt;Manish Kumar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Scheideler_C/0/1/0/all/0/1&quot;&gt;Christian Scheideler&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We are considering the geometric amoebot model where a set of $n$ amoebots is
+placed on the triangular grid. An amoebot is able to send information to its
+neighbors, and to move via expansions and contractions. Since amoebots and
+information can only travel node by node, most problems have a natural lower
+bound of $\Omega(D)$ where $D$ denotes the diameter of the structure. Inspired
+by the nervous and muscular system, Feldmann et al. have proposed the
+reconfigurable circuit extension and the joint movement extension of the
+amoebot model with the goal of breaking this lower bound.
+&lt;/p&gt;
+&lt;p&gt;In the joint movement extension, the way amoebots move is altered. Amoebots
+become able to push and pull other amoebots. Feldmann et al. demonstrated the
+power of joint movements by transforming a line of amoebots into a rhombus
+within $O(\log n)$ rounds. However, they left the details of the extension
+open. The goal of this paper is therefore to formalize and extend the joint
+movement extension. In order to provide a proof of concept for the extension,
+we consider two fundamental problems of modular robot systems: shape formation
+and locomotion.
+&lt;/p&gt;
+&lt;p&gt;We approach these problems by defining meta-modules of rhombical and
+hexagonal shape, respectively. The meta-modules are capable of movement
+primitives like sliding, rotating, and tunneling. This allows us to simulate
+shape formation algorithms of various modular robot systems. Finally, we
+construct three amoebot structures capable of locomotion by rolling, crawling,
+and walking, respectively.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>NervePool: A Simplicial Pooling Layer</title>
+  <guid>http://arxiv.org/abs/2305.06315</guid>
+  <link>http://arxiv.org/abs/2305.06315</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+McGuire_S/0/1/0/all/0/1&quot;&gt;Sarah McGuire&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Munch_E/0/1/0/all/0/1&quot;&gt;Elizabeth Munch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hirn_M/0/1/0/all/0/1&quot;&gt;Matthew Hirn&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For deep learning problems on graph-structured data, pooling layers are
+important for down sampling, reducing computational cost, and to minimize
+overfitting. We define a pooling layer, NervePool, for data structured as
+simplicial complexes, which are generalizations of graphs that include
+higher-dimensional simplices beyond vertices and edges; this structure allows
+for greater flexibility in modeling higher-order relationships. The proposed
+simplicial coarsening scheme is built upon partitions of vertices, which allow
+us to generate hierarchical representations of simplicial complexes, collapsing
+information in a learned fashion. NervePool builds on the learned vertex
+cluster assignments and extends to coarsening of higher dimensional simplices
+in a deterministic fashion. While in practice, the pooling operations are
+computed via a series of matrix operations, the topological motivation is a
+set-theoretic construction based on unions of stars of simplices and the nerve
+complex
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Parallel External Sorting of ASCII Records Using Learned Models</title>
+  <guid>http://arxiv.org/abs/2305.05671</guid>
+  <link>http://arxiv.org/abs/2305.05671</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kristo_A/0/1/0/all/0/1&quot;&gt;Ani Kristo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kraska_T/0/1/0/all/0/1&quot;&gt;Tim Kraska&lt;/a&gt;&lt;/p&gt;&lt;p&gt;External sorting is at the core of many operations in large-scale database
+systems, such as ordering and aggregation queries for large result sets,
+building indexes, sort-merge joins, duplicate removal, sharding, and record
+clustering. Unlike in-memory sorting, these algorithms need to work together
+with the OS and the filesystem to efficiently utilize system resources and
+minimize disk I/O.
+&lt;/p&gt;
+&lt;p&gt;In this paper we describe ELSAR: a parallel external sorting algorithm that
+uses an innovative paradigm based on a learned data distribution model. The
+algorithm leverages the model to arrange the input records into mutually
+exclusive, monotonic, and equi-depth partitions that, once sorted, can simply
+be concatenated to form the output. This method completely eliminates the need
+for multi-way file merging, which is typically used in external sorting.
+&lt;/p&gt;
+&lt;p&gt;We present thorough benchmarks for uniform and skewed datasets in various
+storage media, where we measure the sorting rates, size scalability, and energy
+efficiency of ELSAR and other sorting algorithms. We observed that ELSAR has up
+to 1.65x higher sorting rates than the next-best external sort (Nsort) on SSD
+drives and 5.31x higher than the GNU coreutils&#39; sort utility on Intel Optane
+non-volatile memory. In addition, ELSAR supersedes the current winner of the
+SortBenchmark for the most energy-efficient external string sorting algorithm
+by an impressive margin of 41%.
+&lt;/p&gt;
+&lt;p&gt;These results reinforce the premise that novel learning-enhanced algorithms
+can provide remarkable performance benefits over traditional ones.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>On the Number of $t$-Lee-Error-Correcting Codes</title>
+  <guid>http://arxiv.org/abs/2305.05763</guid>
+  <link>http://arxiv.org/abs/2305.05763</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Willenborg_N/0/1/0/all/0/1&quot;&gt;Nadja Willenborg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Horlemann_A/0/1/0/all/0/1&quot;&gt;Anna-Lena Horlemann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Weger_V/0/1/0/all/0/1&quot;&gt;Violetta Weger&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider $t$-Lee-error-correcting codes of length $n$ over the residue
+ring $\mathbb{Z}_m := \mathbb{Z}/m\mathbb{Z}$ and determine upper and lower
+bounds on the number of $t$-Lee-error-correcting codes. We use two different
+methods, namely estimating isolated nodes on bipartite graphs and the graph
+container method. The former gives density results for codes of fixed size and
+the latter for any size. This confirms some recent density results for linear
+Lee metric codes and provides new density results for nonlinear codes. To apply
+a variant of the graph container algorithm we also investigate some geometrical
+properties of the balls in the Lee metric.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Universal Matrix Sparsifiers and Fast Deterministic Algorithms for Linear Algebra</title>
+  <guid>http://arxiv.org/abs/2305.05826</guid>
+  <link>http://arxiv.org/abs/2305.05826</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhattacharjee_R/0/1/0/all/0/1&quot;&gt;Rajarshi Bhattacharjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dexter_G/0/1/0/all/0/1&quot;&gt;Gregory Dexter&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Musco_C/0/1/0/all/0/1&quot;&gt;Cameron Musco&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ray_A/0/1/0/all/0/1&quot;&gt;Archan Ray&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Woodruff_D/0/1/0/all/0/1&quot;&gt;David P Woodruff&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given $\mathbf A \in \mathbb{R}^{n \times n}$ with entries bounded in
+magnitude by $1$, it is well-known that if $S \subset [n] \times [n]$ is a
+uniformly random subset of $\tilde{O} (n/\epsilon^2)$ entries, and if ${\mathbf
+A}_S$ equals $\mathbf A$ on the entries in $S$ and is zero elsewhere, then
+$\|\mathbf A - \frac{n^2}{s} \cdot {\mathbf A}_S\|_2 \le \epsilon n$ with high
+probability, where $\|\cdot\|_2$ is the spectral norm. We show that for
+positive semidefinite (PSD) matrices, no randomness is needed at all in this
+statement. Namely, there exists a fixed subset $S$ of $\tilde{O}
+(n/\epsilon^2)$ entries that acts as a universal sparsifier: the above error
+bound holds simultaneously for every bounded entry PSD matrix $\mathbf A \in
+\mathbb{R}^{n \times n}$. One can view this result as a significant extension
+of a Ramanujan expander graph, which sparsifies any bounded entry PSD matrix,
+not just the all ones matrix.
+&lt;/p&gt;
+&lt;p&gt;We leverage the existence of such universal sparsifiers to give the first
+deterministic algorithms for several central problems related to singular value
+computation that run in faster than matrix multiplication time. We also prove
+universal sparsification bounds for non-PSD matrices, showing that $\tilde{O}
+(n/\epsilon^4)$ entries suffices to achieve error $\epsilon \cdot
+\max(n,\|\mathbf A\|_1)$, where $\|\mathbf A\|_1$ is the trace norm. We prove
+that this is optimal up to an $\tilde{O} (1/\epsilon^2)$ factor. Finally, we
+give an improved deterministic spectral approximation algorithm for PSD
+$\mathbf A$ with entries lying in $\{-1,0,1\}$, which we show is nearly
+information-theoretically optimal.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Constant Approximation for Network Revenue Management with Markovian-Correlated Customer Arrivals</title>
+  <guid>http://arxiv.org/abs/2305.05829</guid>
+  <link>http://arxiv.org/abs/2305.05829</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiang_J/0/1/0/all/0/1&quot;&gt;Jiashuo Jiang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Network Revenue Management (NRM) problem is a well-known challenge in
+dynamic decision-making under uncertainty. In this problem, fixed resources
+must be allocated to serve customers over a finite horizon, while customers
+arrive according to a stochastic process. The typical NRM model assumes that
+customer arrivals are independent over time. However, in this paper, we explore
+a more general setting where customer arrivals over different periods can be
+correlated. We propose a new model that assumes the existence of a system
+state, which determines customer arrivals for the current period. This system
+state evolves over time according to a time-inhomogeneous Markov chain. Our
+model can be used to represent correlation in various settings and synthesizes
+previous literature on correlation models.
+&lt;/p&gt;
+&lt;p&gt;To solve the NRM problem under our correlated model, we derive a new linear
+programming (LP) approximation of the optimal policy. Our approximation
+provides a tighter upper bound on the total expected value collected by the
+optimal policy than existing upper bounds. We use our LP to develop a new bid
+price policy, which computes bid prices for each system state and time period
+in a backward induction manner. The decision is then made by comparing the
+reward of the customer against the associated bid prices. Our policy guarantees
+to collect at least $1/(1+L)$ fraction of the total reward collected by the
+optimal policy, where $L$ denotes the maximum number of resources required by a
+customer.
+&lt;/p&gt;
+&lt;p&gt;In summary, our work presents a new model for correlated customer arrivals in
+the NRM problem and provides an LP approximation for solving the problem under
+this model. We derive a new bid price policy and provides a theoretical
+guarantee on the performance of the policy.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Acceleration of FM-index Queries Through Prefix-free Parsing</title>
+  <guid>http://arxiv.org/abs/2305.05893</guid>
+  <link>http://arxiv.org/abs/2305.05893</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hong_A/0/1/0/all/0/1&quot;&gt;Aaron Hong&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Oliva_M/0/1/0/all/0/1&quot;&gt;Marco Oliva&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Koppl_D/0/1/0/all/0/1&quot;&gt;Dominik K&amp;#xf6;ppl&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bannai_H/0/1/0/all/0/1&quot;&gt;Hideo Bannai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Boucher_C/0/1/0/all/0/1&quot;&gt;Christina Boucher&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gagie_T/0/1/0/all/0/1&quot;&gt;Travis Gagie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;FM-indexes are a crucial data structure in DNA alignment, for example, but
+searching with them usually takes at least one random access per character in
+the query pattern. Ferragina and Fischer observed in 2007 that word-based
+indexes often use fewer random accesses than character-based indexes, and thus
+support faster searches. Since DNA lacks natural word-boundaries, however, it
+is necessary to parse it somehow before applying word-based FM-indexing. Last
+year, Deng et al.\ proposed parsing genomic data by induced suffix sorting, and
+showed the resulting word-based FM-indexes support faster counting queries than
+standard FM-indexes when patterns are a few thousand characters or longer. In
+this paper we show that using prefix-free parsing -- which takes parameters
+that let us tune the average length of the phrases -- instead of induced suffix
+sorting, gives a significant speedup for patterns of only a few hundred
+characters. We implement our method and demonstrate it is between 3 and 18
+times faster than competing methods on queries to GRCh38. And was consistently
+faster on queries made to 25,000, 50,000 and 100,000 SARS-CoV-2 genomes. Hence,
+it is very clear that our method accelerates the performance of count over all
+state-of-the-art methods with a minor increase in the memory. Our source code
+is available at https://github.com/marco-oliva/afm .
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Novel Quantum Information Processing Methods and Investigation</title>
+  <guid>http://arxiv.org/abs/2305.05953</guid>
+  <link>http://arxiv.org/abs/2305.05953</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Yu_Z/0/1/0/all/0/1&quot;&gt;Zhang Ze Yu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Quantum information processing and its subfield, quantum image processing,
+are rapidly growing fields as a result of advancements in the practicality of
+quantum mechanics. In this paper, we propose a quantum algorithm for processing
+information, such as one-dimensional time series and two-dimensional images, in
+the frequency domain. The information of interest is encoded into the magnitude
+of probability amplitude or the coefficient of each basis state. The oracle for
+filtering operates based on postselection results, and its explicit circuit
+design is presented. This oracle is versatile enough to perform all basic
+filtering, including high pass, low pass, band pass, band stop, and many other
+processing techniques. Finally, we present two novel schemes for transposing
+matrices in this paper. They use similar encoding rules but with deliberate
+choices in terms of selecting basis states. These schemes could potentially be
+useful for other quantum information processing tasks, such as edge detection.
+The proposed techniques are implemented on the IBM Qiskit quantum simulator.
+Some results are compared with traditional information processing results to
+verify their correctness and are presented in this paper.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Coding for IBLTs with Listing Guarantees</title>
+  <guid>http://arxiv.org/abs/2305.05972</guid>
+  <link>http://arxiv.org/abs/2305.05972</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bar_Lev_D/0/1/0/all/0/1&quot;&gt;Daniella Bar-Lev&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mizrahi_A/0/1/0/all/0/1&quot;&gt;Avi Mizrahi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Etzion_T/0/1/0/all/0/1&quot;&gt;Tuvi Etzion&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rottenstreich_O/0/1/0/all/0/1&quot;&gt;Ori Rottenstreich&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yaakobi_E/0/1/0/all/0/1&quot;&gt;Eitan Yaakobi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Invertible Bloom Lookup Table (IBLT) is a probabilistic data structure
+for set representation, with applications in network and traffic monitoring. It
+is known for its ability to list its elements, an operation that succeeds with
+high probability for sufficiently large table. However, listing can fail even
+for relatively small sets. This paper extends recent work on the worst-case
+analysis of IBLT, which guarantees successful listing for all sets of a certain
+size, by introducing more general IBLT schemes. These schemes allow for greater
+freedom in the implementation of the insert, delete, and listing operations and
+demonstrate that the IBLT memory can be reduced while still maintaining
+successful listing guarantees. The paper also explores the time-memory
+trade-off of these schemes, some of which are based on linear codes and
+\(B_h\)-sequences over finite fields.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Improving the performance of classical linear algebra iterative methods via hybrid parallelism</title>
+  <guid>http://arxiv.org/abs/2305.05988</guid>
+  <link>http://arxiv.org/abs/2305.05988</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Martinez_Ferrer_P/0/1/0/all/0/1&quot;&gt;Pedro J. Martinez-Ferrer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arslan_T/0/1/0/all/0/1&quot;&gt;Tufan Arslan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Beltran_V/0/1/0/all/0/1&quot;&gt;Vicen&amp;#xe7; Beltran&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose fork-join and task-based hybrid implementations of four classical
+linear algebra iterative methods (Jacobi, Gauss-Seidel, conjugate gradient and
+biconjugate gradient stabilised) as well as variations of them. Algorithms are
+duly documented and the corresponding source code is made publicly available
+for reproducibility. Both weak and strong scalability benchmarks are conducted
+to statistically analyse their relative efficiencies.
+&lt;/p&gt;
+&lt;p&gt;The weak scalability results assert the superiority of a task-based hybrid
+parallelisation over MPI-only and fork-join hybrid implementations. Indeed, the
+task-based model is able to achieve speedups of up to 25% larger than its
+MPI-only counterpart depending on the numerical method and the computational
+resources used. For strong scalability scenarios, hybrid methods based on tasks
+remain more efficient with moderate computational resources where data locality
+does not play an important role. Fork-join hybridisation often yields mixed
+results and hence does not present a competitive advantage over a much simpler
+MPI approach.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Pebble guided Treasure Hunt in Plane</title>
+  <guid>http://arxiv.org/abs/2305.06067</guid>
+  <link>http://arxiv.org/abs/2305.06067</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhattacharya_A/0/1/0/all/0/1&quot;&gt;Adri Bhattacharya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gorain_B/0/1/0/all/0/1&quot;&gt;Barun Gorain&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mandal_P/0/1/0/all/0/1&quot;&gt;Partha Sarathi Mandal&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of treasure hunt in a Euclidean plane by a mobile agent
+with the guidance of pebbles. The initial position of the agent and position of
+the treasure are modeled as special points in the Euclidean plane. The treasure
+is situated at a distance at most $D&amp;gt;0$ from the initial position of the agent.
+The agent has a perfect compass, but an adversary controls the speed of the
+agent. Hence, the agent can not measure how much distance it traveled for a
+given time. The agent can find the treasure only when it reaches the exact
+position of the treasure. The cost of the treasure hunt is defined as the total
+distance traveled by the agent before it finds the treasure. The agent has no
+prior knowledge of the position of the treasure or the value of $D$. An Oracle,
+which knows the treasure&#39;s position and the agent&#39;s initial location, places
+some pebbles to guide the agent towards the treasure. Once decided to move
+along some specified angular direction, the agent can decide to change its
+direction only when it encounters a pebble or a special point.
+&lt;/p&gt;
+&lt;p&gt;We ask the following central question in this paper:
+&lt;/p&gt;
+&lt;p&gt;``For given $k \ge 0$, What is cheapest treasure hunt algorithm if at most
+$k$ pebbles are placed by the Oracle?&quot;
+&lt;/p&gt;
+&lt;p&gt;We show that for $k=1$, there does not exist any treasure hunt algorithm that
+finds the treasure with finite cost. We show the existence of an algorithm with
+cost $O(D)$ for $k=2$. For $k&amp;gt;8$ we have designed an algorithm that uses $k$
+many pebbles to find the treasure with cost $O(k^{2}) + D(\sin\theta&#39; +
+\cos\theta&#39;)$, where $\theta&#39;=\frac{\pi}{2^{k-8}}$. The second result shows the
+existence of an algorithm with cost arbitrarily close to $D$ for sufficiently
+large values of $D$.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Average Awake Complexity of MIS and Matching</title>
+  <guid>http://arxiv.org/abs/2305.06120</guid>
+  <link>http://arxiv.org/abs/2305.06120</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghaffari_M/0/1/0/all/0/1&quot;&gt;Mohsen Ghaffari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Portmann_J/0/1/0/all/0/1&quot;&gt;Julian Portmann&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Chatterjee, Gmyr, and Pandurangan [PODC 2020] recently introduced the notion
+of awake complexity for distributed algorithms, which measures the number of
+rounds in which a node is awake. In the other rounds, the node is sleeping and
+performs no computation or communication. Measuring the number of awake rounds
+can be of significance in many settings of distributed computing, e.g., in
+sensor networks where energy consumption is of concern.
+&lt;/p&gt;
+&lt;p&gt;In that paper, Chatterjee et al. provide an elegant randomized algorithm for
+the Maximal Independent Set (MIS) problem that achieves an $O(1)$ node-averaged
+awake complexity. That is, the average awake time among the nodes is $O(1)$
+rounds. However, to achieve that, the algorithm sacrifices the more standard
+round complexity measure from the well-known $O(\log n)$ bound of MIS, due to
+Luby [STOC&#39;85], to $O(\log^{3.41} n)$ rounds.
+&lt;/p&gt;
+&lt;p&gt;Our first contribution is to present a simple randomized distributed MIS
+algorithm that, with high probability, has $O(1)$ node-averaged awake
+complexity and $O(\log n)$ worst-case round complexity. Our second, and more
+technical contribution, is to show algorithms with the same $O(1)$
+node-averaged awake complexity and $O(\log n)$ worst-case round complexity for
+$(1+\varepsilon)$-approximation of maximum matching and
+$(2+\varepsilon)$-approximation of minimum vertex cover, where $\varepsilon$
+denotes an arbitrary small positive constant.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Optimal mixing of the down-up walk on independent sets of a given size</title>
+  <guid>http://arxiv.org/abs/2305.06198</guid>
+  <link>http://arxiv.org/abs/2305.06198</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jain_V/0/1/0/all/0/1&quot;&gt;Vishesh Jain&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Michelen_M/0/1/0/all/0/1&quot;&gt;Marcus Michelen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pham_H/0/1/0/all/0/1&quot;&gt;Huy Tuan Pham&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vuong_T/0/1/0/all/0/1&quot;&gt;Thuy-Duong Vuong&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Let $G$ be a graph on $n$ vertices of maximum degree $\Delta$. We show that,
+for any $\delta &amp;gt; 0$, the down-up walk on independent sets of size $k \leq
+(1-\delta)\alpha_c(\Delta)n$ mixes in time $O_{\Delta,\delta}(k\log{n})$,
+thereby resolving a conjecture of Davies and Perkins in an optimal form. Here,
+$\alpha_{c}(\Delta)n$ is the NP-hardness threshold for the problem of counting
+independent sets of a given size in a graph on $n$ vertices of maximum degree
+$\Delta$. Our mixing time has optimal dependence on $k,n$ for the entire range
+of $k$; previously, even polynomial mixing was not known. In fact, for $k =
+\Omega_{\Delta}(n)$ in this range, we establish a log-Sobolev inequality with
+optimal constant $\Omega_{\Delta,\delta}(1/n)$.
+&lt;/p&gt;
+&lt;p&gt;At the heart of our proof are three new ingredients, which may be of
+independent interest. The first is a method for lifting
+$\ell_\infty$-independence from a suitable distribution on the discrete cube --
+in this case, the hard-core model -- to the slice by proving stability of an
+Edgeworth expansion using a multivariate zero-free region for the base
+distribution. The second is a generalization of the Lee-Yau induction to prove
+log-Sobolev inequalities for distributions on the slice with considerably less
+symmetry than the uniform distribution. The third is a sharp decomposition-type
+result which provides a lossless comparison between the Dirichlet form of the
+original Markov chain and that of the so-called projected chain in the presence
+of a contractive coupling.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Robin Hanson and I discuss the AI future</title>
   <guid>https://scottaaronson.blog/?p=7299</guid>
   <link>https://scottaaronson.blog/?p=7299</link>
@@ -897,567 +1432,6 @@ $\Omega(n^{3/2})$ bits of space, regardless of the query time.
 &lt;/p&gt;
   </description>
   <pubDate>2023-05-08 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Brief Update on Texan Tenure</title>
-  <guid>https://scottaaronson.blog/?p=7287</guid>
-  <link>https://scottaaronson.blog/?p=7287</link>
-  <description>
-    &lt;p&gt;&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update (May 8):&lt;/mark&gt;&lt;/strong&gt; Some &lt;a href=&quot;https://www.texastribune.org/2023/05/07/texas-house-tenure-bill/&quot;&gt;tentative good news&lt;/a&gt;!  It looks like there&amp;#8217;s now a compromise bill in the House that would preserve tenure, insisting only on the sort of post-tenure review that UT (like most universities) already has.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update (May 9):&lt;/mark&gt;&lt;/strong&gt; Alas, it looks like the revised bill is not much better.  See &lt;a href=&quot;https://twitter.com/kewhittington/status/1655346773303480326&quot;&gt;this thread&lt;/a&gt; from Keith Whittington of the Academic Freedom Alliance.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;I &lt;a href=&quot;https://scottaaronson.blog/?p=7243&quot;&gt;blogged&lt;/a&gt; a few weeks ago about SB 18, a bill that would end tenure at Texas public universities, including UT Austin and Texas A&amp;amp;M.  The bad news is that SB 18 passed the Texas Senate.  The good news is that I&amp;#8217;m told&amp;#8212;I don&amp;#8217;t know how reliably&amp;#8212;that it has little chance of passing the House.&lt;/p&gt;
-
-
-
-&lt;p&gt;But it&amp;#8217;s going to be discussed in the House tomorrow.  Any Texas residents reading this can, and are strongly urged, to &lt;a href=&quot;https://comments.house.texas.gov/home?c=c290&quot;&gt;submit brief comments here&lt;/a&gt;. &lt;strong&gt; Please note that the deadline is tomorrow (Monday) morning.&lt;/strong&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;I just submitted the comment below.  Obviously, among the arguments that I genuinely believe, I made only those that I expect might have some purchase on a Texas Republican.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;I’m a professor of computer science at UT Austin, specializing in quantum computing.&amp;nbsp; I am however writing this statement strictly in my capacity as a private citizen and Texas resident, not in my professional capacity.&lt;/p&gt;
-
-
-
-&lt;p&gt;Like the supporters of SB 18, I too see leftist ideological indoctrination on college campuses as a serious problem.&amp;nbsp; It’s something that I and many other moderates and classical liberals in academia have been pushing back on for years.&lt;/p&gt;
-
-
-
-&lt;p&gt;But my purpose in this comment is to explain why eliminating tenure at UT Austin and Texas A&amp;amp;M is NOT the solution — indeed, it would be the equivalent of treating a tumor by murdering the patient.&lt;/p&gt;
-
-
-
-&lt;p&gt;I’ve seen firsthand how already, just the *threat* that SB 18 might pass has seriously hampered our ability to recruit the best scientists and engineers to become faculty at UT Austin.&amp;nbsp; If this bill were actually to pass, I expect that the impact on our recruiting would be total and catastrophic.&amp;nbsp; It would effectively mean the end of UT Austin as one of the top public universities in the country.&amp;nbsp; Hundreds of scientists who were lured to Texas by UT’s excellence, including me and my wife, would start looking for jobs elsewhere — even those whose own tenure was “grandfathered in.” &amp;nbsp;They’d leave en masse for California and Massachusetts and anywhere else they could continue the lives they’d planned.&lt;/p&gt;
-
-
-
-&lt;p&gt;The reality is this: the sorts of scientists and engineers we’re talking about could typically make vastly higher incomes, in the high six figures or even seven figures, by working in private industry or forming their own startups.&amp;nbsp; Yet they choose to accept much lower salaries to spend their careers in academia.&amp;nbsp; Why?&amp;nbsp; Because of the promise of a certain way of life: one where they can speak freely as scholars and individuals without worrying about how it will affect their employment.&amp;nbsp; Tenure is a central part of that promise.&amp;nbsp; Remove it, and the value proposition collapses.&lt;/p&gt;
-
-
-
-&lt;p&gt;In some sense, the state of Texas (like nearly every other state) actually gets a bargain through tenure.&amp;nbsp; It couldn’t possibly afford to retain top-caliber scientists and engineers — working on medical breakthroughs, revolutionary advances in AI, and all the other stuff — if it DIDN’T offer tenure.&lt;/p&gt;
-
-
-
-&lt;p&gt;For this reason, I hope that even conservatives in the Texas House will see that we have a common interest here, in ensuring SB 18 never even makes it out of committee — for the sake of the future of innovation in Texas.&amp;nbsp; I’m open to other possible responses to the problem of political indoctrination on campus.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-07 23:39:34 UTC</pubDate>
-  <author>Scott Aaronson</author>
-</item>
-
-<item>
-  <title>TR23-067 |  Linear Relaxed Locally Decodable and Correctable Codes Do Not Need Adaptivity and Two-Sided Error | 
-
-	Guy Goldberg</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/067</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/067</link>
-  <description>
-    Relaxed locally decodable codes (RLDCs) are error-correcting codes in which individual bits of the message can be recovered by querying only a few bits from a noisy codeword.
-Unlike standard (non-relaxed) decoders, a relaxed one is allowed to output a ``rejection&amp;#39;&amp;#39; symbol, indicating that the decoding failed.
-To prevent the decoder from always rejecting, we demand that if its input is a valid codeword, then for every bit, the decoder is correct with high probability.
-
-We study the power of adaptivity and two-sided error for RLDCs.
-Our main result is that if the underlying code is linear, *adaptivity and two-sided error do not give any power to relaxed local decoding.*
-We construct a reduction from adaptive, two-sided error relaxed decoders to non-adaptive, one-sided error ones.
-That is, the reduction produces a relaxed decoder that never errs or rejects if its input is a valid codeword and makes queries based on its internal randomness (and the requested index to decode), independently of the input.
-The reduction does not change the query complexity (nor the underlying code), and for any input, the decoder&amp;#39;s error probability increases at most two-fold.
-
-The idea behind the reduction is our new notion of *additive* promise problem.
-A promise problem is additive if the sum of any two YES-instances is a YES-instance (i.e., the YES instances are a subspace) and the sum of any NO-instance and a YES-instance is a NO-instance (i.e., the NO-instances are a collection of cosets).
-
-We prove that relaxed decoding, interpreted as a promise problem, satisfies this definition.
-We construct a reduction that applies to *any* additive promise problem, allowing us to obtain the result for RLDCs.
-Our result also holds for relaxed locally *correctable* codes (RLCCs), where a *codeword* bit should be recovered.
-  </description>
-  <pubDate>2023-05-07 19:30:37 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>TR23-066 |  Protecting Single-Hop Radio Networks from Message Drops | 
-
-	Dmitry Paramonov, 
-
-	Gillat Kol, 
-
-	Raghuvansh Saxena, 
-
-	Klim Efremenko</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/066</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/066</link>
-  <description>
-    Single-hop radio networks (SHRN) are a well studied abstraction of communication over a wireless channel. In this model, in every round, each of the $n$ participating parties may decide to broadcast a message to all the others, potentially causing collisions. We consider the SHRN model in the presence of stochastic message drops (i.e., erasures), where in every round, the message received by each party is erased (replaced by $\bot$) with some small constant probability, independently.
-
-Our main result is a constant rate coding scheme, allowing one to run protocols designed to work over the (noiseless) SHRN model over the SHRN model with erasures. Our scheme converts any protocol $\Pi$ of length at most exponential in $n$ over the SHRN model to a protocol $\Pi&amp;#39;$ that is resilient to constant fraction of erasures and has length linear in the length of $\Pi$.
-
-We mention that for the special case where the protocol $\Pi$ is non-adaptive, i.e., the order of communication is fixed in advance, such a scheme was known. Nevertheless, adaptivity is widely used and is known to hugely boost the power of wireless channels, which makes handling the general case of adaptive protocols $\Pi$ both important and more challenging. Indeed, to the best of our knowledge, our result is the first constant rate scheme that converts adaptive protocols to noise resilient ones in any multi-party model.
-  </description>
-  <pubDate>2023-05-05 17:23:04 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>AI and Aaronson&amp;#8217;s Law of Dark Irony</title>
-  <guid>https://scottaaronson.blog/?p=7278</guid>
-  <link>https://scottaaronson.blog/?p=7278</link>
-  <description>
-    &lt;p&gt;The major developments in human history are &lt;em&gt;always&lt;/em&gt; steeped in dark ironies.  Yes, that&amp;#8217;s my Law of Dark Irony, the whole thing.&lt;/p&gt;
-
-
-
-&lt;p&gt;I don&amp;#8217;t know why it&amp;#8217;s true, but it certainly seems to be.  Taking WWII as the archetypal example, let&amp;#8217;s enumerate just the more obvious ones:&lt;/p&gt;
-
-
-
-&lt;ul&gt;
-&lt;li&gt;After the carnage of WWI, the world&amp;#8217;s most sensitive and thoughtful people (many of them) learned the lesson that they should oppose war at any cost.  This attitude let Germany rearm and set the stage for WWII.&lt;/li&gt;
-
-
-
-&lt;li&gt;Hitler, who was neither tall nor blond, wished to establish the worldwide domination of tall, blond Aryans &amp;#8230; and do so via an alliance with the Japanese.&lt;/li&gt;
-
-
-
-&lt;li&gt;The Nazis touted the dream of eugenically perfecting the human race, then perpetrated a genocide against a tiny group that had produced Einstein, von Neumann, Wigner, Ulam, and Tarski.&lt;/li&gt;
-
-
-
-&lt;li&gt;The Jews were murdered using a chemical&amp;#8212;&lt;a href=&quot;https://en.wikipedia.org/wiki/Zyklon_B&quot;&gt;Zyklon B&lt;/a&gt;&amp;#8212;developed in part by the Jewish chemist Fritz Haber.&lt;/li&gt;
-
-
-
-&lt;li&gt;The Allied force that made the greatest sacrifice in lives to defeat Hitler was Stalin&amp;#8217;s USSR, &lt;em&gt;another&lt;/em&gt; of history&amp;#8217;s most murderous and horrifying regimes.&lt;/li&gt;
-
-
-
-&lt;li&gt;The man who rallied the free world to defeat Nazism, Winston Churchill, was himself a racist colonialist, whose views would be (and regularly are) denounced as &amp;#8220;Nazi&amp;#8221; on modern college campuses.&lt;/li&gt;
-
-
-
-&lt;li&gt;The WWII legacy that would go on to threaten humanity&amp;#8217;s existence&amp;#8212;the Bomb&amp;#8212;was created in what the scientists believed was a desperate race to &lt;em&gt;save&lt;/em&gt; humanity.  Then Hitler was defeated before the Bomb was ready, and it turned out the Nazis were never even close to building their own Bomb, and the Bomb was used instead against Japan.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;When I think about the scenarios where superintelligent AI destroys the world, they rarely seem to do enough justice to the Law of Dark Irony.  It&amp;#8217;s like: OK, AI is created to serve humanity, and instead it turns on humanity and destroys it.  Great, that&amp;#8217;s &lt;em&gt;one&lt;/em&gt; dark irony.  One.  What other dark ironies could there be?  How about:&lt;/p&gt;
-
-
-
-&lt;ul&gt;
-&lt;li&gt;For decades, the Yudkowskyans warned about the dangers of superintelligence.  So far, by all accounts, the great practical effect of these warnings has been to inspire the founding of both DeepMind and OpenAI, the entities that Yudkowskyans believe are locked into a race to &lt;em&gt;realize&lt;/em&gt; those dangers.&lt;/li&gt;
-
-
-
-&lt;li&gt;Maybe AIs will displace humans &amp;#8230; and they&amp;#8217;ll &lt;em&gt;deserve&lt;/em&gt; to, since they won&amp;#8217;t be quite as wretched and cruel as we are.  (This is basically the plot of &lt;em&gt;Westworld&lt;/em&gt;, or at least of its first couple seasons, which Dana and I are now belatedly watching.)&lt;/li&gt;
-
-
-
-&lt;li&gt;Maybe the world will get destroyed by what Yudkowsky calls a &lt;a href=&quot;https://arbital.com/p/pivotal/&quot;&gt;&amp;#8220;pivotal act&amp;#8221;&lt;/a&gt;: an act meant to &lt;em&gt;safeguard&lt;/em&gt; the world from takeover from an unaligned AGI, for example by taking it over with an aligned AGI first.  (I seriously worry about this; it&amp;#8217;s a pretty obvious one.)&lt;/li&gt;
-
-
-
-&lt;li&gt;Maybe AI will get the idea to take over the world, but only because it&amp;#8217;s been trained on generations of science fiction and decades of Internet discussion worrying about the possibility of AI taking over the world.  (I&amp;#8217;m far from the first to notice this possibility.)&lt;/li&gt;
-
-
-
-&lt;li&gt;Maybe AI will indeed destroy the world, but it will do so &amp;#8220;by mistake,&amp;#8221; while trying to &lt;em&gt;save&lt;/em&gt; the world, or by taking a calculated gamble to save the world that fails.  (A commenter on my last post &lt;a href=&quot;https://scottaaronson.blog/?p=7266#comment-1949890&quot;&gt;brought this one up&lt;/a&gt;.)&lt;/li&gt;
-
-
-
-&lt;li&gt;Maybe humanity will successfully coordinate to pause AGI development, and then promptly be destroyed by &lt;em&gt;something else&lt;/em&gt;&amp;#8212;runaway climate change, an accidental nuclear exchange&amp;#8212;that the AGI, had it been created, would&amp;#8217;ve prevented.  (This, of course, would be directly analogous to one of the great dark ironies of all time: the one where decades of antinuclear activism, intended to save the planet, has instead doomed us to destroy the earth by oil and coal.)&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-&lt;p&gt;Readers: which &lt;em&gt;other&lt;/em&gt; possible dark ironies have I missed?&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 02:27:52 UTC</pubDate>
-  <author>Scott Aaronson</author>
-</item>
-
-<item>
-  <title>Complexity and asymptotics of structure constants</title>
-  <guid>http://arxiv.org/abs/2305.02553</guid>
-  <link>http://arxiv.org/abs/2305.02553</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Panova_G/0/1/0/all/0/1&quot;&gt;Greta Panova&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Kostka, Littlewood-Richardson, Kronecker, and plethysm coefficients are
-fundamental quantities in algebraic combinatorics, yet many natural questions
-about them stay unanswered for more than 80 years. Kronecker and plethysm
-coefficients lack ``nice formulas&#39;&#39;, a notion that can be formalized using
-computational complexity theory. Beyond formulas and combinatorial
-interpretations, we can attempt to understand their asymptotic behavior in
-various regimes, and inequalities they could satisfy. Understanding these
-quantities has applications beyond combinatorics. On the one hand, the
-asymptotics of structure constants is closely related to understanding the
-[limit] behavior of vertex and tiling models in statistical mechanics. More
-recently, these structure constants have been involved in establishing
-computational complexity lower bounds and separation of complexity classes like
-VP vs VNP, the algebraic analogs of P vs NP in arithmetic complexity theory.
-Here we discuss the outstanding problems related to asymptotics, positivity,
-and complexity of structure constants focusing mostly on the Kronecker
-coefficients of the symmetric group and, less so, on the plethysm coefficients.
-&lt;/p&gt;
-&lt;p&gt;This expository paper is based on the talk presented at the Open Problems in
-Algebraic Combinatorics coneference in May 2022.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>On the parameterized complexity of the Perfect Phylogeny problem</title>
-  <guid>http://arxiv.org/abs/2305.02800</guid>
-  <link>http://arxiv.org/abs/2305.02800</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vlas_J/0/1/0/all/0/1&quot;&gt;Jorke M. de Vlas&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper categorizes the parameterized complexity of the algorithmic
-problems Perfect Phylogeny and Triangulating Colored Graphs. We show that they
-are complete for the parameterized complexity class XALP using a reduction from
-Tree-chained Multicolor Independent Set and a proof of membership. We introduce
-the problem Triangulating Multicolored Graphs as a stepping stone and prove
-XALP-completeness for this problem as well. We also show that, assuming the
-Exponential Time Hypothesis, there exists no algorithm that solves any of these
-problems in time $f(k) n^{o(k)}$, where $n$ is the input size, $k$ the
-parameter, and $f$ any computable function.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>All Kronecker coefficients are reduced Kronecker coefficients</title>
-  <guid>http://arxiv.org/abs/2305.03003</guid>
-  <link>http://arxiv.org/abs/2305.03003</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Ikenmeyer_C/0/1/0/all/0/1&quot;&gt;Christian Ikenmeyer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Panova_G/0/1/0/all/0/1&quot;&gt;Greta Panova&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We settle the question of where exactly the reduced Kronecker coefficients
-lie on the spectrum between the Littlewood-Richardson and Kronecker
-coefficients by showing that every Kronecker coefficient of the symmetric group
-is equal to a reduced Kronecker coefficient by an explicit construction. This
-implies the equivalence of a question by Stanley from 2000 and a question by
-Kirillov from 2004 about combinatorial interpretations of these two families of
-coefficients. Moreover, as a corollary, we deduce that deciding the positivity
-of reduced Kronecker coefficients is $NP$-hard, and computing them is
-$\#P$-hard under parsimonious many-one reductions.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Online Geometric Covering and Piercing</title>
-  <guid>http://arxiv.org/abs/2305.02445</guid>
-  <link>http://arxiv.org/abs/2305.02445</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+De_M/0/1/0/all/0/1&quot;&gt;Minati De&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jain_S/0/1/0/all/0/1&quot;&gt;Saksham Jain&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kallepalli_S/0/1/0/all/0/1&quot;&gt;Sarat Varma Kallepalli&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Singh_S/0/1/0/all/0/1&quot;&gt;Satyam Singh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the online version of the piercing set problem, where geometric
-objects arrive one by one, and the online algorithm must maintain a valid
-piercing set for the already arrived objects by making irrevocable decisions.
-It is easy to observe that any deterministic online algorithm that solves this
-problem has a competitive ratio of at least $\Omega(n)$, which even holds when
-the objects are intervals. This paper considers the piercing set problem when
-objects are bounded scaled. We propose deterministic algorithms for bounded
-scaled fat objects. Piercing translated copies of an object is equivalent to
-the unit covering problem, which is well-studied in the online setup.
-Surprisingly, no upper bound of the competitive ratio was known for the unit
-covering problem when unit objects are anything other than balls and
-hypercubes. Our result gives an upper bound of the competitive ratio for the
-unit covering problem for various unit objects. For fixed-oriented hypercubes
-in $\mathbb{R}^d$ with the scaling factor in the range $[1,k]$, we propose an
-algorithm having a competitive ratio of at most~$3^d\log_2 k+2^d$. In the end,
-we show a lower bound of the competitive ratio for bounded scaled objects of
-various types like $\alpha$-fat objects in $\mathbb{R}^2$, axis-aligned
-hypercubes in $\mathbb{R}^d$, and balls in $\mathbb{R}^2$ and~$\mathbb{R}^3$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Towards Stratified Space Learning: 2-complexes</title>
-  <guid>http://arxiv.org/abs/2305.02724</guid>
-  <link>http://arxiv.org/abs/2305.02724</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bleile_Y/0/1/0/all/0/1&quot;&gt;Yossi Bokor Bleile&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we consider a simple class of stratified spaces --
-2-complexes. We present an algorithm that learns the abstract structure of an
-embedded 2-complex from a point cloud sampled from it. We use tools and
-inspiration from computational geometry, algebraic topology, and topological
-data analysis and prove the correctness of the identified abstract structure
-under assumptions on the embedding.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Impossibility of Depth Reduction in Explainable Clustering</title>
-  <guid>http://arxiv.org/abs/2305.02850</guid>
-  <link>http://arxiv.org/abs/2305.02850</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deng_C/0/1/0/all/0/1&quot;&gt;Chengyuan Deng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gavva_S/0/1/0/all/0/1&quot;&gt;Surya Teja Gavva&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+S%2E_K/0/1/0/all/0/1&quot;&gt;Karthik C. S.&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Patel_P/0/1/0/all/0/1&quot;&gt;Parth Patel&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Srinivasan_A/0/1/0/all/0/1&quot;&gt;Adarsh Srinivasan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Over the last few years Explainable Clustering has gathered a lot of
-attention. Dasgupta et al. [ICML&#39;20] initiated the study of explainable k-means
-and k-median clustering problems where the explanation is captured by a
-threshold decision tree which partitions the space at each node using axis
-parallel hyperplanes. Recently, Laber et al. [Pattern Recognition&#39;23] made a
-case to consider the depth of the decision tree as an additional complexity
-measure of interest.
-&lt;/p&gt;
-&lt;p&gt;In this work, we prove that even when the input points are in the Euclidean
-plane, then any depth reduction in the explanation incurs unbounded loss in the
-k-means and k-median cost. Formally, we show that there exists a data set X in
-the Euclidean plane, for which there is a decision tree of depth k-1 whose
-k-means/k-median cost matches the optimal clustering cost of X, but every
-decision tree of depth less than k-1 has unbounded cost w.r.t. the optimal cost
-of clustering. We extend our results to the k-center objective as well, albeit
-with weaker guarantees.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Perfect Sampling for Hard Spheres from Strong Spatial Mixing</title>
-  <guid>http://arxiv.org/abs/2305.02450</guid>
-  <link>http://arxiv.org/abs/2305.02450</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Anand_K/0/1/0/all/0/1&quot;&gt;Konrad Anand&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gobel_A/0/1/0/all/0/1&quot;&gt;Andreas G&amp;#xf6;bel&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pappik_M/0/1/0/all/0/1&quot;&gt;Marcus Pappik&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Perkins_W/0/1/0/all/0/1&quot;&gt;Will Perkins&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide a perfect sampling algorithm for the hard-sphere model on subsets
-of $\mathbb{R}^d$ with expected running time linear in the volume under the
-assumption of strong spatial mixing. A large number of perfect and approximate
-sampling algorithms have been devised to sample from the hard-sphere model, and
-our perfect sampling algorithm is efficient for a range of parameters for which
-only efficient approximate samplers were previously known and is faster than
-these known approximate approaches. Our methods also extend to the more general
-setting of Gibbs point processes interacting via finite-range, repulsive
-potentials.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Efficient Caching with Reserves via Marking</title>
-  <guid>http://arxiv.org/abs/2305.02508</guid>
-  <link>http://arxiv.org/abs/2305.02508</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ibrahimpur_S/0/1/0/all/0/1&quot;&gt;Sharat Ibrahimpur&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Purohit_M/0/1/0/all/0/1&quot;&gt;Manish Purohit&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Svitkina_Z/0/1/0/all/0/1&quot;&gt;Zoya Svitkina&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vee_E/0/1/0/all/0/1&quot;&gt;Erik Vee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_J/0/1/0/all/0/1&quot;&gt;Joshua R. Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Online caching is among the most fundamental and well-studied problems in the
-area of online algorithms. Innovative algorithmic ideas and analysis --
-including potential functions and primal-dual techniques -- give insight into
-this still-growing area. Here, we introduce a new analysis technique that first
-uses a potential function to upper bound the cost of an online algorithm and
-then pairs that with a new dual-fitting strategy to lower bound the cost of an
-offline optimal algorithm. We apply these techniques to the Caching with
-Reserves problem recently introduced by Ibrahimpur et al. [10] and give an
-O(log k)-competitive fractional online algorithm via a marking strategy, where
-k denotes the size of the cache. We also design a new online rounding algorithm
-that runs in polynomial time to obtain an O(log k)-competitive randomized
-integral algorithm. Additionally, we provide a new, simple proof for randomized
-marking for the classical unweighted paging problem.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Prefix Sorting DFAs: a Recursive Algorithm</title>
-  <guid>http://arxiv.org/abs/2305.02526</guid>
-  <link>http://arxiv.org/abs/2305.02526</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cotumaccio_N/0/1/0/all/0/1&quot;&gt;Nicola Cotumaccio&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In the past thirty years, numerous algorithms for building the suffix array
-of a string have been proposed. In 2021, the notion of suffix array was
-extended from strings to DFAs, and it was shown that the resulting data
-structure can be built in $ O(m^2 + n^{5/2}) $ time, where $ n $ is the number
-of states and $ m $ is the number of edges [SODA 2021]. Recently, algorithms
-running in $ O(mn) $ and $ O(n^2\log n) $ time have been described [CPM 2023].
-&lt;/p&gt;
-&lt;p&gt;In this paper, we improve the previous bounds by proposing an $ O(n^2) $
-recursive algorithm inspired by Farach&#39;s algorithm for building a suffix tree
-[FOCS 1997]. To this end, we provide insight into the rich lexicographic and
-combinatorial structure of a graph, so contributing to the fascinating journey
-which might lead to solve the long-standing open problem of building the suffix
-tree of a graph.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On the Unreasonable Effectiveness of Single Vector Krylov Methods for Low-Rank Approximation</title>
-  <guid>http://arxiv.org/abs/2305.02535</guid>
-  <link>http://arxiv.org/abs/2305.02535</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Meyer_R/0/1/0/all/0/1&quot;&gt;Raphael A. Meyer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Musco_C/0/1/0/all/0/1&quot;&gt;Cameron Musco&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Musco_C/0/1/0/all/0/1&quot;&gt;Christopher Musco&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Krylov subspace methods are a ubiquitous tool for computing near-optimal rank
-$k$ approximations of large matrices. While &quot;large block&quot; Krylov methods with
-block size at least $k$ give the best known theoretical guarantees, block size
-one (a single vector) or a small constant is often preferred in practice.
-Despite their popularity, we lack theoretical bounds on the performance of such
-&quot;small block&quot; Krylov methods for low-rank approximation.
-&lt;/p&gt;
-&lt;p&gt;We address this gap between theory and practice by proving that small block
-Krylov methods essentially match all known low-rank approximation guarantees
-for large block methods. Via a black-box reduction we show, for example, that
-the standard single vector Krylov method run for $t$ iterations obtains the
-same spectral norm and Frobenius norm error bounds as a Krylov method with
-block size $\ell \geq k$ run for $O(t/\ell)$ iterations, up to a logarithmic
-dependence on the smallest gap between sequential singular values. That is, for
-a given number of matrix-vector products, single vector methods are essentially
-as effective as any choice of large block size.
-&lt;/p&gt;
-&lt;p&gt;By combining our result with tail-bounds on eigenvalue gaps in random
-matrices, we prove that the dependence on the smallest singular value gap can
-be eliminated if the input matrix is perturbed by a small random matrix.
-Further, we show that single vector methods match the more complex algorithm of
-[Bakshi et al. `22], which combines the results of multiple block sizes to
-achieve an improved algorithm for Schatten $p$-norm low-rank approximation.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Nearly-Linear Time and Streaming Algorithms for Outlier-Robust PCA</title>
-  <guid>http://arxiv.org/abs/2305.02544</guid>
-  <link>http://arxiv.org/abs/2305.02544</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Diakonikolas_I/0/1/0/all/0/1&quot;&gt;Ilias Diakonikolas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kane_D/0/1/0/all/0/1&quot;&gt;Daniel M. Kane&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pensia_A/0/1/0/all/0/1&quot;&gt;Ankit Pensia&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pittas_T/0/1/0/all/0/1&quot;&gt;Thanasis Pittas&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study principal component analysis (PCA), where given a dataset in
-$\mathbb{R}^d$ from a distribution, the task is to find a unit vector $v$ that
-approximately maximizes the variance of the distribution after being projected
-along $v$. Despite being a classical task, standard estimators fail drastically
-if the data contains even a small fraction of outliers, motivating the problem
-of robust PCA. Recent work has developed computationally-efficient algorithms
-for robust PCA that either take super-linear time or have sub-optimal error
-guarantees. Our main contribution is to develop a nearly-linear time algorithm
-for robust PCA with near-optimal error guarantees. We also develop a
-single-pass streaming algorithm for robust PCA with memory usage nearly-linear
-in the dimension.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>$\alpha_i$-Metric Graphs: Radius, Diameter and all Eccentricities</title>
-  <guid>http://arxiv.org/abs/2305.02545</guid>
-  <link>http://arxiv.org/abs/2305.02545</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dragan_F/0/1/0/all/0/1&quot;&gt;Feodor F. Dragan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ducoffe_G/0/1/0/all/0/1&quot;&gt;Guillaume Ducoffe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We extend known results on chordal graphs and distance-hereditary graphs to
-much larger graph classes by using only a common metric property of these
-graphs. Specifically, a graph is called $\alpha_i$-metric ($i\in \mathcal{N}$)
-if it satisfies the following $\alpha_i$-metric property for every vertices
-$u,w,v$ and $x$: if a shortest path between $u$ and $w$ and a shortest path
-between $x$ and $v$ share a terminal edge $vw$, then $d(u,x)\geq d(u,v) +
-d(v,x)-i$. Roughly, gluing together any two shortest paths along a common
-terminal edge may not necessarily result in a shortest path but yields a
-``near-shortest&#39;&#39; path with defect at most $i$. It is known that
-$\alpha_0$-metric graphs are exactly ptolemaic graphs, and that chordal graphs
-and distance-hereditary graphs are $\alpha_i$-metric for $i=1$ and $i=2$,
-respectively. We show that an additive $O(i)$-approximation of the radius, of
-the diameter, and in fact of all vertex eccentricities of an $\alpha_i$-metric
-graph can be computed in total linear time. Our strongest results are obtained
-for $\alpha_1$-metric graphs, for which we prove that a central vertex can be
-computed in subquadratic time, and even better in linear time for so-called
-$(\alpha_1,\Delta)$-metric graphs (a superclass of chordal graphs and of plane
-triangulations with inner vertices of degree at least $7$). The latter answers
-a question raised in (Dragan, IPL, 2020). Our algorithms follow from new
-results on centers and metric intervals of $\alpha_i$-metric graphs. In
-particular, we prove that the diameter of the center is at most $3i+2$ (at most
-$3$, if $i=1$). The latter partly answers a question raised in (Yushmanov &amp;amp;
-Chepoi, Mathematical Problems in Cybernetics, 1991).
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>A Hyperbolic Extension of Kadison-Singer Type Results</title>
-  <guid>http://arxiv.org/abs/2305.02566</guid>
-  <link>http://arxiv.org/abs/2305.02566</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Zhang_R/0/1/0/all/0/1&quot;&gt;Ruizhe Zhang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Zhang_X/0/1/0/all/0/1&quot;&gt;Xinzhi Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In 2013, Marcus, Spielman, and Srivastava resolved the famous Kadison-Singer
-conjecture. It states that for $n$ independent random vectors $v_1,\cdots, v_n$
-that have expected squared norm bounded by $\epsilon$ and are in the isotropic
-position in expectation, there is a positive probability that the determinant
-polynomial $\det(xI - \sum_{i=1}^n v_iv_i^\top)$ has roots bounded by $(1 +
-\sqrt{\epsilon})^2$. An interpretation of the Kadison-Singer theorem is that we
-can always find a partition of the vectors $v_1,\cdots,v_n$ into two sets with
-a low discrepancy in terms of the spectral norm (in other words, rely on the
-determinant polynomial).
-&lt;/p&gt;
-&lt;p&gt;In this paper, we provide two results for a broader class of polynomials, the
-hyperbolic polynomials. Furthermore, our results are in two generalized
-settings:
-&lt;/p&gt;
-&lt;p&gt;$\bullet$ The first one shows that the Kadison-Singer result requires a
-weaker assumption that the vectors have a bounded sum of hyperbolic norms.
-&lt;/p&gt;
-&lt;p&gt;$\bullet$ The second one relaxes the Kadison-Singer result&#39;s distribution
-assumption to the Strongly Rayleigh distribution.
-&lt;/p&gt;
-&lt;p&gt;To the best of our knowledge, the previous results only support determinant
-polynomials [Anari and Oveis Gharan&#39;14, Kyng, Luh and Song&#39;20]. It is unclear
-whether they can be generalized to a broader class of polynomials. In addition,
-we also provide a sub-exponential time algorithm for constructing our results.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Shannon meets Gray: Noise-robust, Low-sensitivity Codes with Applications in Differential Privacy</title>
-  <guid>http://arxiv.org/abs/2305.02816</guid>
-  <link>http://arxiv.org/abs/2305.02816</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lolck_D/0/1/0/all/0/1&quot;&gt;David Rasmussen Lolck&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pagh_R/0/1/0/all/0/1&quot;&gt;Rasmus Pagh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Integer data is typically made differentially private by adding noise from a
-Discrete Laplace (or Discrete Gaussian) distribution. We study the setting
-where differential privacy of a counting query is achieved using bit-wise
-randomized response, i.e., independent, random bit flips on the encoding of the
-query answer.
-&lt;/p&gt;
-&lt;p&gt;Binary error-correcting codes transmitted through noisy channels with
-independent bit flips are well-studied in information theory. However, such
-codes are unsuitable for differential privacy since they have (by design) high
-sensitivity, i.e., neighboring integers have encodings with a large Hamming
-distance. Gray codes show that it is possible to create an efficient
-sensitivity 1 encoding, but are also not suitable for differential privacy due
-to lack of noise-robustness.
-&lt;/p&gt;
-&lt;p&gt;Our main result is that it is possible, with a constant rate code, to
-simultaneously achieve the sensitivity of Gray codes and the noise-robustness
-of error-correcting codes (down to the noise level required for differential
-privacy). An application of this new encoding of the integers is a faster,
-space-optimal differentially private data structure for histograms.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-05 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
