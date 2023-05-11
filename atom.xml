@@ -10,6 +10,34 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-069 |  Constant-depth circuits vs. monotone circuits | 
+
+	Bruno Pasqualotto Cavalar, 
+
+	Igor Carboni Oliveira</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/069"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/069</id>
+    <updated>2023-05-11T15:29:27+00:00</updated>
+    <content type="html" xml:lang="en">
+    We establish new separations between the power of monotone and general (non-monotone) Boolean circuits:
+
+- For every $k \geq 1$, there is a monotone function in ${\rm AC^0}$ (constant-depth poly-size circuits) that requires monotone circuits of depth $\Omega(\log^k n)$. This significantly extends a classical result of Okol&amp;#39;nishnikova (1982) and Ajtai and Gurevich (1987). In addition, our separation holds for a monotone graph property, which was unknown even in the context of ${\rm AC^0}$ versus ${\rm mAC^0}$.
+- For every $k \geq 1$, there is a monotone function in ${\rm AC^0}[\oplus]$ (constant-depth poly-size circuits extended with parity gates) that requires monotone circuits of size $\exp(\Omega(\log^k n))$. This makes progress towards a question posed by Grigni and Sipser (1992).
+  
+These results show that constant-depth circuits can be more efficient than monotone circuits when computing monotone functions.
+
+In the opposite direction, we observe that non-trivial simulations are possible in the absence of parity gates: every monotone function computed by an ${\rm AC^0}$ circuit of size $s$ and depth $d$ can be computed by a monotone circuit of size $2^{n - n/O(\log s)^{d-1}}$. We show that the existence of significantly faster monotone simulations would lead to breakthrough circuit lower bounds. In particular, if every monotone function in ${\rm AC^0}$ admits a polynomial size monotone circuit, then ${\rm NC^2}$ is not contained in ${\rm NC^1}$ .
+
+Finally, we revisit our separation result against monotone circuit size and investigate the limits of our approach, which is based on a monotone lower bound for constraint satisfaction problems established by Göös, Kamath, Robere and Sokolov (2019) via lifting techniques. Adapting results of Schaefer (1978) and Allender, Bauland, Immerman, Schnoor and Vollmer (2009), we obtain an unconditional classification of the monotone circuit complexity of Boolean-valued CSPs via their polymorphisms. This result and the consequences we derive from it might be of independent interest.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR23-068 |  Colourful TFNP and Propositional Proofs | 
 
 	Ben Davis, 
@@ -933,6 +961,10 @@ of a contractive coupling.
 
 
 &lt;p&gt;&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update: &lt;/mark&gt;&lt;/strong&gt;Oh, and &lt;a href=&quot;https://share.transistor.fm/s/33bf25d3&quot;&gt;another new podcast&lt;/a&gt; is up, with me and Sebastian Hassinger of Amazon/AWS!  Audio only.  Mostly quantum computing but with a little AI thrown in.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update:&lt;/mark&gt;&lt;/strong&gt; &lt;a href=&quot;https://thegradientpub.substack.com/p/scott-aaronson-against-ai-doomerism&quot;&gt;Yet another new podcast&lt;/a&gt;, with Daniel Bashir of The Gradient.  Daniel titled it &amp;#8220;Against AI Doomerism,&amp;#8221; but it covers a bunch of topics (and I&amp;#8217;d say my views are a bit more complicated than &amp;#8220;anti-doomerist&amp;#8221;&amp;#8230;).&lt;/p&gt;
 &lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
   </content>
     <author>
@@ -1702,34 +1734,6 @@ of arbitrary large length. We also give evidence that the natural down-up walk
 on the space of NBC bases of a matroid may not mix rapidly by showing that for
 some family of matroids it is NP-hard to count the number of NBC bases after
 certain conditionings.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Sparse Johnson-Lindenstrauss Transform using Fast Hashing</title>
-    <link href="http://arxiv.org/abs/2305.03110"/>
-    <id>http://arxiv.org/abs/2305.03110</id>
-    <updated>2023-05-08T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Houen_J/0/1/0/all/0/1&quot;&gt;Jakob B&amp;#xe6;k Tejs Houen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Thorup_M/0/1/0/all/0/1&quot;&gt;Mikkel Thorup&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The \emph{Sparse Johnson-Lindenstrauss Transform} of Kane and Nelson (SODA
-2012) provides a linear dimensionality-reducing map $A \in \mathbb{R}^{m \times
-u}$ in $\ell_2$ that preserves distances up to distortion of $1 + \varepsilon$
-with probability $1 - \delta$, where $m = O(\varepsilon^{-2} \log 1/\delta)$
-and each column of $A$ has $O(\varepsilon m)$ non-zero entries. The previous
-analyses of the Sparse Johnson-Lindenstrauss Transform all assumed access to a
-$\Omega(\log 1/\delta)$-wise independent hash function. The main contribution
-of this paper is a more general analysis of the Sparse Johnson-Lindenstrauss
-Transform with less assumptions on the hash function. We also show that the
-\emph{Mixed Tabulation hash function} of Dahlgaard, Knudsen, Rotenberg, and
-Thorup (FOCS 2015) satisfies the conditions of our analysis, thus giving us the
-first analysis of a Sparse Johnson-Lindenstrauss Transform that works with a
-practical hash function.
 &lt;/p&gt;
   </content>
     <author>
