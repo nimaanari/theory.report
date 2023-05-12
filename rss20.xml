@@ -9,6 +9,247 @@
 
 
 <item>
+  <title>Constant-depth circuits vs. monotone circuits</title>
+  <guid>http://arxiv.org/abs/2305.06821</guid>
+  <link>http://arxiv.org/abs/2305.06821</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cavalar_B/0/1/0/all/0/1&quot;&gt;Bruno P. Cavalar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Oliveira_I/0/1/0/all/0/1&quot;&gt;Igor C. Oliveira&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We establish new separations between the power of monotone and general
+(non-monotone) Boolean circuits:
+&lt;/p&gt;
+&lt;p&gt;- For every $k \geq 1$, there is a monotone function in ${\sf AC^0}$ that
+requires monotone circuits of depth $\Omega(\log^k n)$. This significantly
+extends a classical result of Okol&#39;nishnikova (1982) and Ajtai and Gurevich
+(1987). In addition, our separation holds for a monotone graph property, which
+was unknown even in the context of ${\sf AC^0}$ versus ${\sf mAC^0}$.
+&lt;/p&gt;
+&lt;p&gt;- For every $k \geq 1$, there is a monotone function in ${\sf AC^0}[\oplus]$
+that requires monotone circuits of size $\exp(\Omega(\log^k n))$. This makes
+progress towards a question posed by Grigni and Sipser (1992).
+&lt;/p&gt;
+&lt;p&gt;These results show that constant-depth circuits can be more efficient than
+monotone circuits when computing monotone functions.
+&lt;/p&gt;
+&lt;p&gt;In the opposite direction, we observe that non-trivial simulations are
+possible in the absence of parity gates: every monotone function computed by an
+${\sf AC^0}$ circuit of size $s$ and depth $d$ can be computed by a monotone
+circuit of size $2^{n - n/O(\log s)^{d-1}}$. We show that the existence of
+significantly faster monotone simulations would lead to breakthrough circuit
+lower bounds. In particular, if every monotone function in ${\sf AC^0}$ admits
+a polynomial size monotone circuit, then ${\sf NC^2}$ is not contained in ${\sf
+NC^1}$ .
+&lt;/p&gt;
+&lt;p&gt;Finally, we revisit our separation result against monotone circuit size and
+investigate the limits of our approach, which is based on a monotone lower
+bound for constraint satisfaction problems established by G\&quot;o\&quot;os et al.
+(2019) via lifting techniques. Adapting results of Schaefer (1978) and Allender
+et al. (2009), we obtain an unconditional classification of the monotone
+circuit complexity of Boolean-valued CSPs via their polymorphisms. This result
+and the consequences we derive from it might be of independent interest.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-12 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>A Near-Optimal Deterministic Distributed Synchronizer</title>
+  <guid>http://arxiv.org/abs/2305.06452</guid>
+  <link>http://arxiv.org/abs/2305.06452</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghaffari_M/0/1/0/all/0/1&quot;&gt;Mohsen Ghaffari&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Trygub_A/0/1/0/all/0/1&quot;&gt;Anton Trygub&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide the first deterministic distributed synchronizer with near-optimal
+time complexity and message complexity overheads. Concretely, given any
+distributed algorithm $\mathcal{A}$ that has time complexity $T$ and message
+complexity $M$ in the synchronous message-passing model (subject to some care
+in defining the model), the synchronizer provides a distributed algorithm
+$\mathcal{A}&#39;$ that runs in the asynchronous message-passing model with time
+complexity $T \cdot poly(\log n)$ and message complexity $(M+m)\cdot poly(\log
+n)$. Here, $n$ and $m$ denote the number of nodes and edges in the network,
+respectively. The synchronizer is deterministic in the sense that if algorithm
+$\mathcal{A}$ is deterministic, then so is algorithm $\mathcal{A}&#39;$.
+Previously, only a randomized synchronizer with near-optimal overheads was
+known by seminal results of Awerbuch, Patt-Shamir, Peleg, and Saks [STOC 1992]
+and Awerbuch and Peleg [FOCS 1990]. We also point out and fix some inaccuracies
+in these prior works.
+&lt;/p&gt;
+&lt;p&gt;As concrete applications of our synchronizer, we resolve some longstanding
+and fundamental open problems in distributed algorithms: we get the first
+asynchronous deterministic distributed algorithms with near-optimal time and
+message complexities for leader election, breadth-first search tree, and
+minimum spanning tree computations: these all have message complexity
+$\tilde{O}(m)$ message complexity. The former two have $\tilde{O}(D)$ time
+complexity, where $D$ denotes the network diameter, and the latter has
+$\tilde{O}(D+\sqrt{n})$ time complexity. All these bounds are optimal up to
+logarithmic factors. Previously all such near-optimal algorithms were either
+restricted to the synchronous setting or required randomization.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-12 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Spectral Clustering on Large Datasets: When Does it Work? Theory from Continuous Clustering and Density Cheeger-Buser</title>
+  <guid>http://arxiv.org/abs/2305.06541</guid>
+  <link>http://arxiv.org/abs/2305.06541</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chu_T/0/1/0/all/0/1&quot;&gt;Timothy Chu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Miller_G/0/1/0/all/0/1&quot;&gt;Gary Miller&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Walkington_N/0/1/0/all/0/1&quot;&gt;Noel Walkington&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Spectral clustering is one of the most popular clustering algorithms that has
+stood the test of time. It is simple to describe, can be implemented using
+standard linear algebra, and often finds better clusters than traditional
+clustering algorithms like $k$-means and $k$-centers. The foundational
+algorithm for two-way spectral clustering, by Shi and Malik, creates a
+geometric graph from data and finds a spectral cut of the graph.
+&lt;/p&gt;
+&lt;p&gt;In modern machine learning, many data sets are modeled as a large number of
+points drawn from a probability density function. Little is known about when
+spectral clustering works in this setting -- and when it doesn&#39;t. Past
+researchers justified spectral clustering by appealing to the graph Cheeger
+inequality (which states that the spectral cut of a graph approximates the
+``Normalized Cut&#39;&#39;), but this justification is known to break down on large
+data sets.
+&lt;/p&gt;
+&lt;p&gt;We provide theoretically-informed intuition about spectral clustering on
+large data sets drawn from probability densities, by proving when a continuous
+form of spectral clustering considered by past researchers (the unweighted
+spectral cut of a probability density) finds good clusters of the underlying
+density itself. Our work suggests that Shi-Malik spectral clustering works well
+on data drawn from mixtures of Laplace distributions, and works poorly on data
+drawn from certain other densities, such as a density we call the `square-root
+trough&#39;.
+&lt;/p&gt;
+&lt;p&gt;Our core theorem proves that weighted spectral cuts have low weighted
+isoperimetry for all probability densities. Our key tool is a new Cheeger-Buser
+inequality for all probability densities, including discontinuous ones.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-12 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Optimal Algorithms for Bounded Weighted Edit Distance</title>
+  <guid>http://arxiv.org/abs/2305.06659</guid>
+  <link>http://arxiv.org/abs/2305.06659</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cassis_A/0/1/0/all/0/1&quot;&gt;Alejandro Cassis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kociumaka_T/0/1/0/all/0/1&quot;&gt;Tomasz Kociumaka&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wellnitz_P/0/1/0/all/0/1&quot;&gt;Philip Wellnitz&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The edit distance of two strings is the minimum number of insertions,
+deletions, and substitutions of characters needed to transform one string into
+the other. The textbook dynamic-programming algorithm computes the edit
+distance of two length-$n$ strings in $O(n^2)$ time, which is optimal up to
+subpolynomial factors under SETH. An established way of circumventing this
+hardness is to consider the bounded setting, where the running time is
+parameterized by the edit distance $k$. A celebrated algorithm by Landau and
+Vishkin (JCSS &#39;88) achieves time $O(n + k^2)$, which is optimal as a function
+of $n$ and $k$.
+&lt;/p&gt;
+&lt;p&gt;Most practical applications rely on a more general weighted edit distance,
+where each edit has a weight depending on its type and the involved characters
+from the alphabet $\Sigma$. This is formalized through a weight function $w :
+\Sigma\cup\{\varepsilon\}\times\Sigma\cup\{\varepsilon\}\to\mathbb{R}$
+normalized so that $w(a,a)=0$ and $w(a,b)\geq 1$ for all $a,b \in
+\Sigma\cup\{\varepsilon\}$ with $a \neq b$; the goal is to find an alignment of
+the two strings minimizing the total weight of edits. The $O(n^2)$-time
+algorithm supports this setting seamlessly, but only very recently, Das,
+Gilbert, Hajiaghayi, Kociumaka, and Saha (STOC &#39;23) gave the first non-trivial
+algorithm for the bounded version, achieving time $O(n + k^5)$. While this
+running time is linear for $k\le n^{1/5}$, it is still very far from the bound
+$O(n+k^2)$ achievable in the unweighted setting.
+&lt;/p&gt;
+&lt;p&gt;In this paper, we essentially close this gap by showing both an improved
+$\tilde O(n+\sqrt{nk^3})$-time algorithm and, more surprisingly, a matching
+lower bound: Conditioned on the All-Pairs Shortest Paths (APSP) hypothesis, our
+running time is optimal for $\sqrt{n}\le k\le n$ (up to subpolynomial factors).
+This is the first separation between the complexity of the weighted and
+unweighted edit distance problems.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-12 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Characterizing the impact of last-level cache replacement policies on big-data workloads</title>
+  <guid>http://arxiv.org/abs/2305.06696</guid>
+  <link>http://arxiv.org/abs/2305.06696</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jamet_A/0/1/0/all/0/1&quot;&gt;Alexandre Valentin Jamet&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Alvarez_L/0/1/0/all/0/1&quot;&gt;Lluc Alvarez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Casas_M/0/1/0/all/0/1&quot;&gt;Marc Casas&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In recent years, graph-processing has become an essential class of workloads
+with applications in a rapidly growing number of fields. Graph-processing
+typically uses large input sets, often in multi-gigabyte scale, and
+data-dependent graph traversal methods exhibiting irregular memory access
+patterns. Recent work demonstrates that, due to the highly irregular memory
+access patterns of data-dependent graph traversals, state-of-the-art
+graph-processing workloads spend up to 80 % of the total execution time waiting
+for memory accesses to be served by the DRAM. The vast disparity between the
+Last Level Cache (LLC) and main memory latencies is a problem that has been
+addressed for years in computer architecture. One of the prevailing approaches
+when it comes to mitigating this performance gap between modern CPUs and DRAM
+is cache replacement policies. In this work, we characterize the challenges
+drawn by graph-processing workloads and evaluate the most relevant cache
+replacement policies.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-12 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Minimal dominating sets enumeration with FPT-delay parameterized by the degeneracy and maximum degree</title>
+  <guid>http://arxiv.org/abs/2305.06974</guid>
+  <link>http://arxiv.org/abs/2305.06974</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bartier_V/0/1/0/all/0/1&quot;&gt;Valentin Bartier&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Defrain_O/0/1/0/all/0/1&quot;&gt;Oscar Defrain&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Inerney_F/0/1/0/all/0/1&quot;&gt;Fionn Mc Inerney&lt;/a&gt;&lt;/p&gt;&lt;p&gt;At STOC 2002, Eiter, Gottlob, and Makino presented a technique called ordered
+generation that yields an $n^{O(d)}$-delay algorithm listing all minimal
+transversals of an $n$-vertex hypergraph of degeneracy $d$, for an appropriate
+definition of degeneracy. Recently at IWOCA 2019, Conte, Kant\&#39;e, Marino, and
+Uno asked whether, even for a more restrictive notion of degeneracy, this
+XP-delay algorithm parameterized by $d$ could be made FPT-delay parameterized
+by $d$ and the maximum degree $\Delta$, i.e., an algorithm with delay
+$f(d,\Delta)\cdot n^{O(1)}$ for some computable function $f$. We answer this
+question in the affirmative whenever the hypergraph corresponds to the closed
+neighborhoods of a graph, i.e., we show that the intimately related problem of
+enumerating minimal dominating sets in graphs admits an FPT-delay algorithm
+parameterized by the degeneracy and the maximum degree.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-12 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Fair Price Discrimination</title>
+  <guid>http://arxiv.org/abs/2305.07006</guid>
+  <link>http://arxiv.org/abs/2305.07006</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Banerjee_S/0/1/0/all/0/1&quot;&gt;Siddhartha Banerjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Munagala_K/0/1/0/all/0/1&quot;&gt;Kamesh Munagala&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shen_Y/0/1/0/all/0/1&quot;&gt;Yiheng Shen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_K/0/1/0/all/0/1&quot;&gt;Kangning Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A seller is pricing identical copies of a good to a stream of unit-demand
+buyers. Each buyer has a value on the good as his private information. The
+seller only knows the empirical value distribution of the buyer population and
+chooses the revenue-optimal price. We consider a widely studied third-degree
+price discrimination model where an information intermediary with perfect
+knowledge of the arriving buyer&#39;s value sends a signal to the seller, hence
+changing the seller&#39;s posterior and inducing the seller to set a personalized
+posted price. Prior work of Bergemann, Brooks, and Morris (American Economic
+Review, 2015) has shown the existence of a signaling scheme that preserves
+seller revenue, while always selling the item, hence maximizing consumer
+surplus. In a departure from prior work, we ask whether the consumer surplus
+generated is fairly distributed among buyers with different values. To this
+end, we aim to maximize welfare functions that reward more balanced surplus
+allocations.
+&lt;/p&gt;
+&lt;p&gt;Our main result is the surprising existence of a novel signaling scheme that
+simultaneously $8$-approximates all welfare functions that are non-negative,
+monotonically increasing, symmetric, and concave, compared with any other
+signaling scheme. Classical examples of such welfare functions include the
+utilitarian social welfare, the Nash welfare, and the max-min welfare. Such a
+guarantee cannot be given by any consumer-surplus-maximizing scheme -- which
+are the ones typically studied in the literature. In addition, our scheme is
+socially efficient, and has the fairness property that buyers with higher
+values enjoy higher expected surplus, which is not always the case for existing
+schemes.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-12 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>TR23-070 |  Bounded Relativization | 
 
 	Shuichi Hirahara, 
@@ -1313,230 +1554,6 @@ simpler constant-approximation algorithm with near-linear running time.
 &lt;/p&gt;
   </description>
   <pubDate>2023-05-09 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Other Ramsey&#39;s</title>
-  <guid>tag:blogger.com,1999:blog-3722233.post-7835545901904295299</guid>
-  <link>https://blog.computationalcomplexity.org/2023/05/other-ramseys.html</link>
-  <description>
-    &lt;p&gt;&amp;nbsp;I often Google Ramsey stuff to find something. I often end up back on my own collection of Ramsey theory&amp;nbsp; papers. But I sometimes find OTHER uses of the phrase&amp;nbsp; &lt;i&gt;Ramsey.&amp;nbsp;&lt;/i&gt;&lt;/p&gt;&lt;p&gt;To tell these Ramsey&#39;s apart we will call the math Ramsey guy &lt;i&gt;Frank Ramsey &lt;/i&gt;since that was his name.&amp;nbsp;&lt;/p&gt;&lt;p&gt;1) Frank&#39;s brother Arthur Michael Ramsey (usually just Michael Ramsey). He was the Archbishop of Canterbury from 1961 until 1974.&amp;nbsp; &amp;nbsp;He was ahead of his time in being Ecumenical and supporting women clergy. His Wikipedia page is&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Michael_Ramsey&quot;&gt;here&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;&lt;p&gt;2) The Ramsey Effect. Aaron Ramsey is a football player (what Americans call Soccer). There were four time when he scored a goal and soon after an important person died. This was dubbed &lt;i&gt;The Ramsey Effect. &lt;/i&gt;This is of course silly, and if he asked Frank about the probabilities (unlikely-Frank died in the 1930&#39;s and Aaron was born in 1990) I am sure Frank would tell you that four is too small a number to make anything out of this. The Ramsey Effect is discussed&amp;nbsp;&lt;a href=&quot;https://knowyourmeme.com/memes/the-ramsey-effect&quot;&gt;here&lt;/a&gt;. There is no Wikipedia page about it, and I found it by accident so, as the kids say, its NOT a think.&amp;nbsp;&lt;/p&gt;&lt;p&gt;3) Jon Bennett Ramsey. A girl who was murdered when she was six. Case still unsolved. See the Wikipedia page on this&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Killing_of_JonBen%C3%A9t_Ramsey&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;4) First name Ramsey:&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Ramsey_(given_name)&quot;&gt;here&lt;/a&gt;. The only one I had heard of is Ramsey Clark.&lt;/p&gt;&lt;p&gt;5) Last name Ramsey:&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Ramsey_(surname)&quot;&gt;here&lt;/a&gt;. Lots of people! Most I had not heard of.&amp;nbsp;&lt;/p&gt;&lt;p&gt;(With regard to 4 and 5: there are so many famous people you can&#39;t have heard of all of them)&lt;/p&gt;&lt;p&gt;6) For more Ramsey Stuff see&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Ramsey&quot;&gt;here&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-08 23:06:00 UTC</pubDate>
-  <author>Computational Complexity</author>
-</item>
-
-<item>
-  <title>News for April 2023</title>
-  <guid>https://ptreview.sublinear.info/?p=1871</guid>
-  <link>https://ptreview.sublinear.info/2023/05/news-for-april-2023/</link>
-  <description>
-    &lt;p&gt;After an empty month, the engines of PTReview are roaring back to life with a fresh batch of papers for this month&amp;#8217;s edition. In total, we have four papers that are sure to pique your interest. It&amp;#8217;s been an action-packed month with a diverse range of topics covered in the featured papers. The first paper delves into new variations in distribution testing, while the second paper discusses optimal testers for Bayes Nets. The third paper focuses on optimal tolerant junta-testers, and the final paper presents a cool monotonicity tester over hypergrids.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Distribution Testing Under the Parity Trace&lt;/strong&gt; by Renato Ferreira Pinto Jr and Nathaniel Harms (&lt;a href=&quot;https://arxiv.org/abs/2304.01374&quot;&gt;arXiv&lt;/a&gt;) The featured paper considers the classic setup in distribution testing with &lt;em&gt;a twist&lt;/em&gt;. To explain the results, let me introduce the framework considered in this work. Consider distributions supported over \([n]\). Suppose I want to design distribution testers where instead of obtaining samples in the usual way, I first obtain an ordered list of samples, I store it in a sequence \(S\) and only the least significant bit of each element of \(S\) is made available to your distribution testing algorithm. This is called a parity trace.  Note that with this access model, suddenly a bunch of standard tasks become non-trivial. To take an example from the paper, you can no longer distinguish between the uniform distribution supported on \(\{1,2, \ldots, n\}\) and the uniform distribution supported on \(\{n+1, n+2, \ldots 2n\}\) in this access model. Nevertheless, the paper shows, you can still obtain testers which require only sublinear number of accesses for testing uniformity in this model.&lt;/p&gt;
-
-
-
-&lt;p&gt;Another cool feature of this &lt;em&gt;big&lt;/em&gt; paper is an unexpected foray into the trace reconstruction literature from a property testing viewpoint. I wish I understood the formal connection better to describe a bit more about it. But for now, let me leave that as an appetizer which (hopefully) encourages you to take a look at the paper.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;New Lower Bounds for Adaptive Tolerant Junta Testing&lt;/strong&gt; by Xi Chen and Shyamal Patel (&lt;a href=&quot;https://arxiv.org/abs/2304.10647&quot;&gt;arXiv&lt;/a&gt;) If you are a regular here on the PTReview corner, you are probably no stranger to the &lt;em&gt;tolerant junta testing&lt;/em&gt; problem. As a corollary to the main result, the paper in question proves a lower bound of \(k^{\Omega(\log k)}\) queries on any adaptive algorithm that wishes to test whether the input function \(f\) is \(\varepsilon_1\) close to being a \(k\)-junta or whether it is \(\varepsilon_2\)-far \(\left(\text{where } \varepsilon_2 \geq \varepsilon_1 + \displaystyle\frac{1}{poly(k)}\right)\). Indeed, another remarkable achievement of the paper is that it achieves a superpolynomial separation between non-tolerant versions and the tolerant versions of any natural property of boolean functions under the adaptive setting.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;Near-Optimal Degree Testing for Bayes Nets&lt;/strong&gt; by Vipul Arora, Arnab Bhattacharyya, Clément L. Canonne (our own!) and Joy Qiping Yang (&lt;a href=&quot;https://arxiv.org/abs/2304.06733&quot;&gt;arXiv&lt;/a&gt;) This paper continues a line of investigation which a subset of the authors were a part of (which we also covered in our &lt;a href=&quot;https://ptreview.sublinear.info/2022/05/news-for-april-2022/&quot;&gt;News for April 2022&lt;/a&gt;). Let us remind ourselves of the setup. You are given a probability distribution \(\mathcal{P}\) supported over the Boolean Hypercube. Suppose \(\mathcal{P}\) can be generated by a Bayseian Network. You may think of a Bayesian Network as a DAG where each vertex tosses a coin (with different heads probabilities). The question seeks to test whether \(\mathcal{P}\) admits a sparse Bayesian Net (in the sense of each vertex having small in-degree). The main result of the paper gives an algorithm for this task which requires \(\Theta(2^{n/2}/\varepsilon^2)\) samples. The paper also proves an almost matching lower bound.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;A \(d^{1/2+o(1)}\) Monotonicity Tester for Boolean Functions on \(d\)-Dimensional Hypergrids&lt;/strong&gt; by Hadley Black, Deeparnab Chakrabarty and C. Seshadhri (again, our own!) (&lt;a href=&quot;https://arxiv.org/abs/2304.01416&quot;&gt;arXiv&lt;/a&gt;) Again, the problem of monotonicity testing of boolean functions hardly requires any detailing to the regular readers of PTReview. As you can see in our &lt;a href=&quot;https://ptreview.sublinear.info/2022/12/news-for-october-2022-2/&quot;&gt;News from November 2022&lt;/a&gt; there were two concurrent papers mulling over this problem over the hypergrid domain. The featured paper is the result of a dedicated pursuit by the authors and the key result is what the title says. Namely, you can test monotonicity with a number of (non-adaptive, one-sided) queries that has no dependence on \(n\).&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Akash&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-08 13:54:49 UTC</pubDate>
-  <author>Property Testing Review</author>
-</item>
-
-<item>
-  <title>Mathematics (mainly combinatorics) related matters: A lot of activity.</title>
-  <guid>http://gilkalai.wordpress.com/?p=24215</guid>
-  <link>https://gilkalai.wordpress.com/2023/05/08/mathematics-mainly-combinatorics-related-matters-a-lot-of-activity/</link>
-  <description>
-    &lt;h3&gt;Plan for next weeks blogging&lt;/h3&gt;
-&lt;p&gt;There are various things to blog about and let me give a quick preview for the plan for the next few posts. The purpose of this post is to give an impression about the hectic mathematical activities around here with special emphasis on combinatorics and early-in-the-week activities. There is so much action around that I feel tired just to write about it. Next post will be around &lt;a href=&quot;https://youtu.be/Qz3q6jcknHE&quot;&gt;Amnon Shashua&amp;#8217;s lecture&lt;/a&gt; at Reichman university giving a deep dive on LLMs. Following it I will tell you about developments around physics with special emphasis to the &lt;a href=&quot;https://www.youtube.com/live/mg3gy4Et_xY?feature=share&quot;&gt;evening at the Israeli Academy&lt;/a&gt; celebrating Israel entrance to CERN. Fourth in line is a post about my&lt;a href=&quot;https://arxiv.org/abs/2305.01064&quot;&gt; recent paper with Yosef Rinott and Tomer Shoham&lt;/a&gt; on the Google 2019 quantum supremacy experiment (this is our third paper on the subject).&lt;/p&gt;
-&lt;p&gt;Let&amp;#8217;s move on to today&amp;#8217;s post which will include more than the usual dose of Hebrew.&lt;/p&gt;
-&lt;h2&gt;Avinoam&lt;/h2&gt;
-&lt;p&gt;A few weeks ago, Avinoam Mann, a dear member of our department in Jerusalem, passed away. Avinoam was a famous group theorist working on many aspects of this theory. I have many warm memories of Avinoam since I was a student when I took with Avinoam two very demanding reading courses, and later as colleagues and friends for many decades. Avinoam was also a poet and here is a poem he wrote.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg&quot;&gt;&lt;img loading=&quot;lazy&quot; data-attachment-id=&quot;24262&quot; data-permalink=&quot;https://gilkalai.wordpress.com/2023/05/08/mathematics-mainly-combinatorics-related-matters-a-lot-of-activity/avinoam/&quot; data-orig-file=&quot;https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg&quot; data-orig-size=&quot;1036,723&quot; data-comments-opened=&quot;1&quot; data-image-meta=&quot;{&amp;quot;aperture&amp;quot;:&amp;quot;1.8&amp;quot;,&amp;quot;credit&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;camera&amp;quot;:&amp;quot;SM-G986B&amp;quot;,&amp;quot;caption&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;created_timestamp&amp;quot;:&amp;quot;1680451480&amp;quot;,&amp;quot;copyright&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;focal_length&amp;quot;:&amp;quot;5.4&amp;quot;,&amp;quot;iso&amp;quot;:&amp;quot;500&amp;quot;,&amp;quot;shutter_speed&amp;quot;:&amp;quot;0.02&amp;quot;,&amp;quot;title&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;orientation&amp;quot;:&amp;quot;1&amp;quot;}&quot; data-image-title=&quot;Avinoam&quot; data-image-description=&quot;&quot; data-image-caption=&quot;&quot; data-medium-file=&quot;https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=300&quot; data-large-file=&quot;https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=640&quot; class=&quot;alignnone size-full wp-image-24262&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg&quot; alt=&quot;Avinoam&quot; width=&quot;1036&quot; height=&quot;723&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg 1036w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=150&amp;amp;h=105 150w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=300&amp;amp;h=209 300w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=768&amp;amp;h=536 768w, https://gilkalai.files.wordpress.com/2023/05/avinoam.jpg?w=1024&amp;amp;h=715 1024w&quot; sizes=&quot;(max-width: 1036px) 100vw, 1036px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Many many many Seminars&lt;/h2&gt;
-&lt;h3&gt;HUJI Combinatorics  seminars&lt;/h3&gt;
-&lt;p&gt;The seminar takes place on Mondays between 11-13. The 2-hour format allows ample discussions. There were brilliant talks at the HUJI (Hebrew University of Jerusalem) Combinatorics Seminar. The last four were given by  Illay Hoshen, Yuval Filmus, Igor Balla, and Nathan Keller. &lt;strong&gt;Ilay Hoshen&lt;/strong&gt; spoke about his paper with &lt;strong&gt;Wojtek Samotij&lt;/strong&gt; on Simonovits&amp;#8217;s theorem for random graphs, and presented a (partial) resolution to a conjecture by DeMarco and Kahn.  &lt;strong&gt;Yuval Filmus&lt;/strong&gt; talked about a joint work with &lt;strong&gt;Nathan Lindzey&lt;/strong&gt;, where the starting point was Fourier expansion for function on the Boolean cube  and asked what happens if we study functions on other domains, such as the &amp;#8220;slice&amp;#8221; or the symmetric group? (very elegant connection with representation theory.) Once it&amp;#8217;s on the arxive we will add the link. &lt;strong&gt;Igor Balla&lt;/strong&gt; talked about &lt;span style=&quot;color: initial&quot;&gt;Equiangular lines via matrix projection. This work presents a definite progress on the classical problem of equiangular lines as well as some connections to problems in quantum information theory.  &lt;strong&gt;Nathan Keller&lt;/strong&gt; talked about &lt;a href=&quot;https://arxiv.org/abs/2303.15755&quot;&gt;his joint work&lt;/a&gt; with &lt;/span&gt;&lt;strong&gt;Noam Lifshitz, Dor Minzer&lt;/strong&gt;, and &lt;strong&gt;Ohad Sheinfeld. &lt;/strong&gt;Hypercontractivity for global functions is used for far reaching Erdos-Ko-Rado theorems for permutations. Nati Linial wrote to me about the lecture: &lt;span style=&quot;color: #ff0000&quot;&gt;&lt;strong&gt;מצויינת, מדוייקת, אינפורמטיבית, א-מחיה&lt;/strong&gt;&lt;/span&gt; . (which roughly translates to: “Outstanding, Accurate, Informative – Oh the Joy!”). Today &lt;b&gt;&lt;/b&gt;&lt;strong&gt;Amir Yehudayoff&lt;/strong&gt; will talk about &lt;a href=&quot;https://arxiv.org/abs/2304.05456&quot;&gt;his work&lt;/a&gt; with &lt;strong&gt;Dan Carmon&lt;/strong&gt; on dual systolic graphs.&lt;/p&gt;
-&lt;p&gt;This is not the only HUJI combinatorics seminar, on Thursday afternoon we have a joint Jerusalem-Copenhagen combinatorics seminar and at noon we have a joint Jerusalem Copenhagen lunch seminar. I gave a lecture in the lunch seminar a couple of weeks ago about challenges in the combinatorial theory of convex polytopes and spheres beyond the &lt;img src=&quot;https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=g&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;g&quot; class=&quot;latex&quot; /&gt;-theorem. Of course, our CS-theory Wednesday seminars have plenty of lectures of combinatorial flavour.&lt;/p&gt;
-&lt;h3&gt;Shachar Lovett&amp;#8217;s lecture at Tel Aviv Combinatorics Seminar&lt;/h3&gt;
-&lt;p&gt;Things in TAU (Tel Aviv University) are not calmer.&lt;/p&gt;
-&lt;p&gt;TAU combinatorics seminar is on Sundays 10:05-11:05, and last  week (April 30) the legendary &lt;strong&gt;Shachar Lovett&lt;/strong&gt; gave a talk about his paper with &lt;strong&gt;Alexander Knop&lt;/strong&gt;, &lt;strong&gt;Sam McGuire&lt;/strong&gt;, and &lt;strong&gt;Weiqiang Yuan &lt;/strong&gt;about &lt;a title=&quot;Structure of monomials of Boolean functions&quot; href=&quot;https://gilkalai.files.wordpress.com/2023/05/structure-of-monomials-of-boolean-functions.pptx&quot;&gt;Structure of monomials of Boolean functions.&lt;/a&gt; (Click for the slides.)&lt;/p&gt;
-&lt;p&gt;The main theorem is the following one. &lt;strong&gt;Theorem:&lt;/strong&gt; Let &lt;img src=&quot;https://s0.wp.com/latex.php?latex=f%3A%5C%7B0%2C1%5C%7D%5En+%5Cto+%5C%7B0%2C1%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=f%3A%5C%7B0%2C1%5C%7D%5En+%5Cto+%5C%7B0%2C1%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=f%3A%5C%7B0%2C1%5C%7D%5En+%5Cto+%5C%7B0%2C1%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;f:&amp;#92;{0,1&amp;#92;}^n &amp;#92;to &amp;#92;{0,1&amp;#92;}&quot; class=&quot;latex&quot; /&gt; be a Boolean function with &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%7CM%28f%29%7C%3Dm&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%7CM%28f%29%7C%3Dm&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%7CM%28f%29%7C%3Dm&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;|M(f)|=m&quot; class=&quot;latex&quot; /&gt;. (&lt;img src=&quot;https://s0.wp.com/latex.php?latex=M%28f%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=M%28f%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=M%28f%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;M(f)&quot; class=&quot;latex&quot; /&gt; is the number of monomials in the presentation of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=f&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=f&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=f&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;f&quot; class=&quot;latex&quot; /&gt;) Then f can be computed by an AND decision tree of depth &lt;img src=&quot;https://s0.wp.com/latex.php?latex=d%3DO%28%5Clog+%5E5m%5Clog+n%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=d%3DO%28%5Clog+%5E5m%5Clog+n%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=d%3DO%28%5Clog+%5E5m%5Clog+n%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;d=O(&amp;#92;log ^5m&amp;#92;log n)&quot; class=&quot;latex&quot; /&gt;.&lt;/p&gt;
-&lt;p&gt;The proof uses an auxiliary (sharp) result about hitting sets (aka transversals) for monomials. It is not known if the &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Clog+n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Clog+n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Clog+n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;log n&quot; class=&quot;latex&quot; /&gt; factor in the main theorem is needed. Shachar described exciting connections with the log-rank conjecture and with Frankl&amp;#8217;s union-closed conjecture. He also described the analogous (Fourier) question for functions  &lt;img src=&quot;https://s0.wp.com/latex.php?latex=f%3A%5C%7B-1%2C1%5C%7D%5En+%5Cto+%5C%7B0%2C1%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=f%3A%5C%7B-1%2C1%5C%7D%5En+%5Cto+%5C%7B0%2C1%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=f%3A%5C%7B-1%2C1%5C%7D%5En+%5Cto+%5C%7B0%2C1%5C%7D&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;f:&amp;#92;{-1,1&amp;#92;}^n &amp;#92;to &amp;#92;{0,1&amp;#92;}&quot; class=&quot;latex&quot; /&gt;.&lt;/p&gt;
-&lt;p&gt;After the lecture Shachar told me about some basic details of the recent amazing proof of Kelly and Meka for sharp bound for Roth&amp;#8217;s theorems. Shachar promised me that the crucial new ideas giving a Fourier proof for similar bounds for the cup set problem could be presented in four to six hours. (He started with two hours but I flatly disbelieved it.) We also came back to the idea of a polymath project devoted to Frankl&amp;#8217;s conjecture.&lt;/p&gt;
-&lt;p&gt;This Sunday &lt;strong&gt; Shir Peleg-Priester &lt;/strong&gt; talked about Sylvester-Gallai type theorems for quadratic polynomials. (Joint work with &lt;strong&gt; Amir Shpilka, Abhibhav Garg, Rafael Oliveira, Akash K Sengupta.)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Sunday seminar is not the only TAU combinatorics seminar.  Two days later, on May 2 &lt;strong&gt;Patrick Morris&lt;/strong&gt; gave a special seminar about &lt;a href=&quot;https://arxiv.org/abs/2209.01116&quot;&gt; a robust Corrádi–Hajnal Theorem&lt;/a&gt; (joint work with &lt;strong&gt;Peter Allen, Julia Böttcher, Jan Corsten, Ewan Davies, Matthew Jenssen, Barnaby Roberts&lt;/strong&gt; and &lt;strong&gt;Jozef Skokan&lt;/strong&gt;.) As far as I know there are plans to have special seminars dedicated to both the new ultimate Roth bounds and the Ramsey breakthrough. (Update: just learned too late that the Ramsey seminar already took place on Tuesday.)&lt;/p&gt;
-&lt;p&gt;Of course, there is also the weekly discrete and computational geometry seminar, and a few weeks ago I gave a talk about &amp;#8220;covering problems&amp;#8221; which was well accepted and is in line with this year&amp;#8217;s theme for the seminar.&lt;/p&gt;
-&lt;h3&gt;More combinatorics seminars&lt;/h3&gt;
-&lt;p&gt;There are many other combinatorics seminars around. If you have an urge for combinatorics lectures between the Tel Aviv seminar and the one in Jerusalem,  on Sundays at 2 o&amp;#8217;clock there is the Bar Ilan weekly Combinatorics Seminar, and on May 7  &lt;b&gt;Yelena Yuditsky &lt;/b&gt;talked about &lt;a href=&quot;https://arxiv.org/abs/2207.01041&quot;&gt;Conflict-free colouring of subsets&lt;/a&gt; (joint work with &lt;strong&gt;Bruno Jartoux, Chaya Keller&lt;/strong&gt; and &lt;strong&gt;Shakhar Smorodinsky&lt;/strong&gt;.) On Mondays Martin Golumbic runs the seminar: &amp;#8220;Monday with Marty and Students of Sunil&amp;#8221; devoted to algorithmic graph theory.  Tomorrow, &lt;strong&gt;Pradeesha Ashok&lt;/strong&gt; talks about: Exact and Parameterised algorithms for Graph Burning (joint work with &lt;strong&gt;Avi Tomar, Shaily Verma, Sayani Das, Lawqueen Kanesh&lt;/strong&gt; and &lt;strong&gt;Saket Saurabh&lt;/strong&gt;).&lt;/p&gt;
-&lt;h3&gt;Shmuel Weinberger&amp;#8217;s lectures&lt;/h3&gt;
-&lt;p&gt;Of course, things are just as amazingly intense in other fields of mathematics as well. Last week I attended two great talks by &lt;strong&gt;Shmuel Weinberger&lt;/strong&gt;. The first talk gave the answer to the question which groups act without fixed points on some aspherical topological space. Shmuel said that his talk will be structured like a Tarantino&amp;#8217;s movie, and at the end he expressed hope that the talk was as entertaining but not as violent.  This is based on joint work with &lt;strong&gt;Sylvain Cappell,&lt;/strong&gt; and &lt;strong&gt;Min Yan.&lt;/strong&gt; The second talk gave (among other things) a lower bound for the number of vertices needed to triangulate &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%282d-1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%282d-1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%282d-1%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;(2d-1)&quot; class=&quot;latex&quot; /&gt;-dimensional lens spaces which is the quotient space of an action of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=Z_n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=Z_n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=Z_n&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;Z_n&quot; class=&quot;latex&quot; /&gt; on &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+C%5Ed&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cmathbb+C%5Ed&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cmathbb+C%5Ed&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;mathbb C^d&quot; class=&quot;latex&quot; /&gt;. The proof goes via the notions of &lt;img src=&quot;https://s0.wp.com/latex.php?latex=%5Cell_2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; srcset=&quot;https://s0.wp.com/latex.php?latex=%5Cell_2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002 1x, https://s0.wp.com/latex.php?latex=%5Cell_2&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&amp;#038;zoom=4.5 4x&quot; alt=&quot;&amp;#92;ell_2&quot; class=&quot;latex&quot; /&gt;-homology and certain invariants of Cheeger and Gromov and it would be really nice to have some simpler proofs. (This is based on an old work with &lt;strong&gt;Stanley Chang&lt;/strong&gt;, and &lt;a href=&quot;https://arxiv.org/abs/2301.08870&quot;&gt;a new work&lt;/a&gt; with &lt;strong&gt;Geunho Lim&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;iframe class=&quot;youtube-player&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/qwojzqAcHqw?version=3&amp;#038;rel=1&amp;#038;showsearch=0&amp;#038;showinfo=1&amp;#038;iv_load_policy=1&amp;#038;fs=1&amp;#038;hl=en&amp;#038;autohide=2&amp;#038;wmode=transparent&quot; allowfullscreen=&quot;true&quot; style=&quot;border:0;&quot; sandbox=&quot;allow-scripts allow-same-origin allow-popups allow-presentation&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: #ff0000&quot;&gt;Here is a lecture on calculus on extraordinary spaces by Yael Karshon (Hebrew).&lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Kazhdan&amp;#8217;s Sunday seminars &amp;#8211; a plan for fall 2024 (maybe 2023).&lt;/h2&gt;
-&lt;p&gt;Since David Kazhdan moved from Harvard to HUJI he is running four-five semester-long seminars every  year on Sundays, and a basic notion seminar on Thursday afternoons. This semester, for example, in one of the seminars, Udi de Shalit presents Wiles&amp;#8217; proof of Fermat&amp;#8217;s last theorem (taking Ribet&amp;#8217;s part for granted).&lt;/p&gt;
-&lt;p&gt;Once every decade or so, I serve as a co-teacher in a Kazhdan seminar. In fall 2003 David Kazhdan and I ran a &lt;a href=&quot;http://www.ma.huji.ac.il/~kalai/polytopes.html&quot;&gt;seminar on polytopes&lt;/a&gt;, toric varieties, and related combinatorics and algebra.  In 2013 David and I felt that it was time to run another such event in 2014, perhaps establishing a tradition for a decennial joint seminar.  I announced this coming event in my &lt;a href=&quot;https://gilkalai.wordpress.com/2013/01/01/symplectic-geometry-quantization-and-quantum-noise/&quot;&gt;January 2013 post&lt;/a&gt; and wrote: &amp;#8220;So next spring, the plan is &amp;#8230;[to] devote one of David’s Sunday seminars to computation, quantumness, symplectic geometry, and information.&amp;#8221; Alas, David had a terrible car accident and we had to delay the plan to &lt;a href=&quot;https://gilkalai.wordpress.com/2019/10/27/starting-today-kazhdan-sunday-seminar-computation-quantumness-symplectic-geometry-and-information/&quot;&gt;a fall 2019 seminar&lt;/a&gt; that Leonid Polterovich, Dorit Aharonov, Guy Kindler and I ran.  Also, in fall 2018, Karim Adiprasito gave a Kazhdan seminar on  &amp;#8220;Positivity in combinatorics and beyond&amp;#8221; where Karim presented his proof for the g-conjecture. We are now planning a  Kazhdan seminar in fall 2024 around &amp;#8220;global hypercontractivity&amp;#8221; with Noam Lifshitz, myself and perhaps also Guy Kindler and others. (Kazhdan&amp;#8217;s 2023/2024 schedule was fully booked, but come to think of it, since Dor Minzer is in town in fall 2023, maybe we will do something then.)&lt;/p&gt;
-&lt;h2&gt;60th birthday conferences for the young: Gunter Ziegler and Leonid Polterovich&lt;/h2&gt;
-&lt;p&gt;Noga Alon recently complained that &amp;#8220;younger and younger people are celebrating their 60th birthdays&amp;#8221;. Indeed, two weeks from now there will be a &lt;a href=&quot;http://ehrhart.math.fu-berlin.de/gmz60/#arnau&quot;&gt;day-and-a half workshop&lt;/a&gt; in Berlin celebrating Günter Ziegler&amp;#8217;s birthday and in June there will be a &lt;a href=&quot;https://math.ethz.ch/fim/activities/conferences/lp60-geometry-and-dynamics-polterovich.html&quot;&gt;Leonid Polterovich fest&lt;/a&gt; in Zurich. Happy birthdays, kids!&lt;/p&gt;
-&lt;h2&gt;Maybe it is over&lt;/h2&gt;
-&lt;p&gt;A well-known Israeli poet and writer Yonatan Gefen passed away recently and here is a nice song he wrote (performed by Arik Einstein): &lt;a href=&quot;https://youtu.be/R384MOGq7HM&quot;&gt;Yhachol lihyot sheze nigmar&lt;/a&gt;  (It is possible that it is over.)&lt;/p&gt;
-&lt;p&gt;&lt;iframe class=&quot;youtube-player&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/R384MOGq7HM?version=3&amp;#038;rel=1&amp;#038;showsearch=0&amp;#038;showinfo=1&amp;#038;iv_load_policy=1&amp;#038;fs=1&amp;#038;hl=en&amp;#038;autohide=2&amp;#038;wmode=transparent&quot; allowfullscreen=&quot;true&quot; style=&quot;border:0;&quot; sandbox=&quot;allow-scripts allow-same-origin allow-popups allow-presentation&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-08 06:50:10 UTC</pubDate>
-  <author>Gil Kalai</author>
-</item>
-
-<item>
-  <title>Degrees of Second and Higher-Order Polynomials</title>
-  <guid>http://arxiv.org/abs/2305.03439</guid>
-  <link>http://arxiv.org/abs/2305.03439</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lim_D/0/1/0/all/0/1&quot;&gt;Donghyun Lim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ziegler_M/0/1/0/all/0/1&quot;&gt;Martin Ziegler&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Second-order polynomials generalize classical first-order ones in allowing
-for additional variables that range over functions rather than values. We are
-motivated by their applications in higher-order computational complexity
-theory, extending for example classical classes like P or PSPACE to operators
-in Analysis [doi:10.1137/S0097539794263452, doi:10.1145/218&lt;a href=&quot;/abs/9778.21897&quot;&gt;9778.21897&lt;/a&gt;80]. The
-degree subclassifies ordinary polynomial growth into linear, quadratic, cubic
-etc. In order to similarly classify second-order polynomials, define their
-degree to be an &#39;arctic&#39; first-order polynomial (namely a term/expression over
-variable $D$ and operations $+$ and $\cdot$ and $\max$). Our normal form and
-semantic uniqueness results for second-order polynomials assert said
-second-order degree to be well-defined; and it turns out to transform well
-under (now two kinds of) polynomial composition. More generally we define the
-degree of a third-order polynomial to be an arctic second-order polynomial, and
-establish its transformation under three kinds of composition.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-08 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>On Range Summary Queries</title>
-  <guid>http://arxiv.org/abs/2305.03180</guid>
-  <link>http://arxiv.org/abs/2305.03180</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Afshani_P/0/1/0/all/0/1&quot;&gt;Peyman Afshani&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cheng_P/0/1/0/all/0/1&quot;&gt;Pingan Cheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Roy_A/0/1/0/all/0/1&quot;&gt;Aniket Basu Roy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wei_Z/0/1/0/all/0/1&quot;&gt;Zhewei Wei&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the query version of the approximate heavy hitter and quantile
-problems. In the former problem, the input is a parameter $\varepsilon$ and a
-set $P$ of $n$ points in $\mathbb{R}^d$ where each point is assigned a color
-from a set $C$, and we want to build a structure s.t. given any geometric range
-$\gamma$, we can efficiently find a list of approximate heavy hitters in
-$\gamma\cap P$, i.e., colors that appear at least $\varepsilon |\gamma \cap P|$
-times in $\gamma \cap P$, as well as their frequencies with an additive error
-of $\varepsilon |\gamma \cap P|$. In the latter problem, each point is assigned
-a weight from a totally ordered universe and the query must output a sequence
-$S$ of $1+1/\varepsilon$ weights s.t. the $i$-th weight in $S$ has approximate
-rank $i\varepsilon|\gamma\cap P|$, meaning, rank $i\varepsilon|\gamma\cap P|$
-up to an additive error of $\varepsilon|\gamma\cap P|$. Previously, optimal
-results were only known in 1D [WY11] but a few sub-optimal methods were
-available in higher dimensions [AW17, ACH+12].
-&lt;/p&gt;
-&lt;p&gt;We study the problems for 3D halfspace and dominance queries. We consider the
-real RAM model with integer registers of size $w=\Theta(\log n)$ bits. For
-dominance queries, we show optimal solutions for both heavy hitter and quantile
-problems: using linear space, we can answer both queries in time $O(\log n +
-1/\varepsilon)$. Note that as the output size is $\frac{1}{\varepsilon}$, after
-investing the initial $O(\log n)$ searching time, our structure takes on
-average $O(1)$ time to find a heavy hitter or a quantile! For more general
-halfspace heavy hitter queries, the same optimal query time can be achieved by
-increasing the space by an extra $\log_w\frac{1}{\varepsilon}$ (resp.
-$\log\log_w\frac{1}{\varepsilon}$) factor in 3D (resp. 2D). By spending extra
-$\log^{O(1)}\frac{1}{\varepsilon}$ factors in time and space, we can also
-support quantile queries.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-08 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Differentially Private Topological Data Analysis</title>
-  <guid>http://arxiv.org/abs/2305.03609</guid>
-  <link>http://arxiv.org/abs/2305.03609</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/stat/1/au:+Kang_T/0/1/0/all/0/1&quot;&gt;Taegyu Kang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/stat/1/au:+Kim_S/0/1/0/all/0/1&quot;&gt;Sehwan Kim&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/stat/1/au:+Sohn_J/0/1/0/all/0/1&quot;&gt;Jinwon Sohn&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/stat/1/au:+Awan_J/0/1/0/all/0/1&quot;&gt;Jordan Awan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper is the first to attempt differentially private (DP) topological
-data analysis (TDA), producing near-optimal private persistence diagrams. We
-analyze the sensitivity of persistence diagrams in terms of the bottleneck
-distance, and we show that the commonly used \v{C}ech complex has sensitivity
-that does not decrease as the sample size $n$ increases. This makes it
-challenging for the persistence diagrams of \v{C}ech complexes to be
-privatized. As an alternative, we show that the persistence diagram obtained by
-the $L^1$-distance to measure (DTM) has sensitivity $O(1/n)$. Based on the
-sensitivity analysis, we propose using the exponential mechanism whose utility
-function is defined in terms of the bottleneck distance of the $L^1$-DTM
-persistence diagrams. We also derive upper and lower bounds of the accuracy of
-our privacy mechanism; the obtained bounds indicate that the privacy error of
-our mechanism is near-optimal. We demonstrate the performance of our privatized
-persistence diagrams through simulations as well as on a real dataset tracking
-human movement.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-08 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Testing Convex Truncation</title>
-  <guid>http://arxiv.org/abs/2305.03146</guid>
-  <link>http://arxiv.org/abs/2305.03146</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+De_A/0/1/0/all/0/1&quot;&gt;Anindya De&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nadimpalli_S/0/1/0/all/0/1&quot;&gt;Shivam Nadimpalli&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Servedio_R/0/1/0/all/0/1&quot;&gt;Rocco A. Servedio&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the basic statistical problem of testing whether normally
-distributed $n$-dimensional data has been truncated, i.e. altered by only
-retaining points that lie in some unknown truncation set $S \subseteq
-\mathbb{R}^n$. As our main algorithmic results,
-&lt;/p&gt;
-&lt;p&gt;(1) We give a computationally efficient $O(n)$-sample algorithm that can
-distinguish the standard normal distribution $N(0,I_n)$ from $N(0,I_n)$
-conditioned on an unknown and arbitrary convex set $S$.
-&lt;/p&gt;
-&lt;p&gt;(2) We give a different computationally efficient $O(n)$-sample algorithm
-that can distinguish $N(0,I_n)$ from $N(0,I_n)$ conditioned on an unknown and
-arbitrary mixture of symmetric convex sets.
-&lt;/p&gt;
-&lt;p&gt;These results stand in sharp contrast with known results for learning or
-testing convex bodies with respect to the normal distribution or learning
-convex-truncated normal distributions, where state-of-the-art algorithms
-require essentially $n^{\sqrt{n}}$ samples. An easy argument shows that no
-finite number of samples suffices to distinguish $N(0,I_n)$ from an unknown and
-arbitrary mixture of general (not necessarily symmetric) convex sets, so no
-common generalization of results (1) and (2) above is possible.
-&lt;/p&gt;
-&lt;p&gt;We also prove that any algorithm (computationally efficient or otherwise)
-that can distinguish $N(0,I_n)$ from $N(0,I_n)$ conditioned on an unknown
-symmetric convex set must use $\Omega(n)$ samples. This shows that the sample
-complexity of each of our algorithms is optimal up to a constant factor.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-08 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
