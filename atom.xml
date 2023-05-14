@@ -10,6 +10,59 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">David Eppstein: Coloring the plane for generic norms</title>
+    <link href="https://11011110.github.io/blog/2023/05/13/coloring-plane-generic.html"/>
+    <id>https://11011110.github.io/blog/2023/05/13/coloring-plane-generic</id>
+    <updated>2023-05-13T17:09:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;Noga Alon recently stopped by my department earlier this month to give two talks. During his visit, he pointed me to some interesting recent work he had done on coloring the plane, buried in the discussion at the end of his preprint “Unit and distinct distances in typical norms” (&lt;a href=&quot;https://arxiv.org/abs/2302.09058&quot;&gt;arXiv:2302.09058&lt;/a&gt;, with Matija Bucić and Lisa Sauermann). Recall that the still-unsolved &lt;a href=&quot;https://en.wikipedia.org/wiki/Hadwiger%E2%80%93Nelson_problem&quot;&gt;Hadwiger–Nelson problem&lt;/a&gt; asks how many colors are needed to color the points of the plane so that no two points at distance one from each other have the same color. The figure below shows a 7-coloring in the pattern of a hexagonal tiling, with this property, so at most seven colors are needed. The black unit distance graph outlined in the same figure, the &lt;a href=&quot;/blog/2011/11/29/moser-spindle.html&quot;&gt;Moser spindle&lt;/a&gt;, requires four colors, but by now much larger and more complicated unit distance graphs are known that force the number of colors to be at least five.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/Hadwiger-Nelson.svg&quot; alt=&quot;Seven-coloring of the plane with superimposed Moser spindle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The preprint asks, what if we use a different distance function for the plane, defined by a non-Euclidean &lt;a href=&quot;https://en.wikipedia.org/wiki/Norm_(mathematics)&quot;&gt;norm&lt;/a&gt;? The answer turns out to be very different: for most such distances, the optimal number of colors is four.&lt;/p&gt;
+
+&lt;p&gt;Any norm in the \(d\)-dimensional space \(\mathbb{R}^d\) can be described by its unit ball, a centrally symmetric convex body, and any centrally symmetric convex body defines a norm. The distance between two points is measured by the factor you would need to scale the body so that if you center it at one of the two points it touches the other one. A unit vector, for a distance defined in this way, is just a point on the boundary of the unit ball. For Euclidean distance in the plane the unit ball is a circular disk, and it is also common in computational geometry to consider norms whose unit ball is a regular polygon (with evenly many sides), such as a square or hexagon. But infinitely many other less-regular shapes are also possible, each defining its own distance. Because these distances are different from each other, the number of colors they need may also be different, and may be easier to compute. For instance, for a square unit ball, you can use a square tiling instead of the hexagonal one and color the tiling with only four colors (being careful of how to handle boundary points) so that no two points at unit distance have the same color:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/plaid.svg&quot; alt=&quot;Four-coloring of the plane for a square norm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Alon, Bucić, and Sauermann approach this problem by treating \(\mathbb{R}^d\) as an infinite-dimensional vector space over the rational numbers rather than a \(d\)-dimensional vector space over the real numbers, and asking questions about which subsets of the unit vectors are rationally independent (treating a unit vector and its negation as being the same for this purpose). That means that there is no way to produce one of the vectors as a weighted combination of other vectors in the same set, with rational numbers as the weights. This is much in the same spirit as &lt;a href=&quot;/blog/2022/04/03/dissection-into-rectangles.html&quot;&gt;using Dehn invariants to study polygonal dissections&lt;/a&gt; where again, it is rational dependence more than real dependence that is central.&lt;/p&gt;
+
+&lt;p&gt;For a polygonal distance, any two unit vectors on the same side of a polygon have infinitely many rational combinations that are also unit vectors. If \(u\) and \(v\) are unit vectors on one side of a convex polygon, and \(p\) is any rational number with \(0\lt p\lt 1\), then \(pu+(1-p)v\) is a rational combination that lies between \(u\) and \(v\) on the same side of the polygon. Because it is on the boundary of the polygon, it is a unit vector. For the Euclidean distance, we have to be more careful, but there still can be infinitely many rational combinations that are also unit vectors. For instance, if \(x=(1,0)\) and \(y=(0,1)\) are the axis-parallel unit vectors of a Cartesian coordinate system, their rational combination \(\tfrac12 x + \tfrac12 y = (\tfrac12,\tfrac12)\) is not a unit vector for Euclidean distance (its length is \(1/\sqrt2\)), and the unit vector in the same direction, \((1/\sqrt2,1/\sqrt2)\), is not a rational combination of \(x\) and \(y\). However, if \(a^2+b^2=c^2\) is any integer Pythagorean triple, the vector \(\tfrac{a}{c}x+\tfrac{b}{c}y=(\tfrac{a}{c},\tfrac{b}{c})\) is both a unit vector and a rational combination of \(x\) and \(y\). Because there are infinitely many Pythagorean triples, \(x\) and \(y\) have infinitely many unit-vector rational combinations.&lt;/p&gt;
+
+&lt;p&gt;What Alon, Bucić, and Sauermann show is that for “most” norms in a certain technical sense (a &lt;a href=&quot;https://en.wikipedia.org/wiki/Comeager&quot;&gt;comeager&lt;/a&gt; set of norms in a certain topological space of norms), rational combinations are much less common. More precisely, they prove the following statements, which are equivalent to each other by standard results in the theory of &lt;a href=&quot;https://en.wikipedia.org/wiki/Matroid_partitioning&quot;&gt;matroid partitions&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Every finite set \(U\) of unit vectors, for a \(d\)-dimensional generic norm, has rational rank \(\ge \vert U\vert/d\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If \(U\) is a finite set of unit vectors for a \(d\)-dimensional generic norm, then every subset of \(k\) vectors from \(U\) has at most \(kd\) rational combinations in \(U\) (including themselves, but not counting negations as different).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Every finite set of unit vectors for a \(d\)-dimensional generic norm can be partitioned into at most \(d\) subsets, so that the vectors within each subset are rationally independent.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If we give each of these \(d\) subsets a color, and use these colors for the edges of any finite unit distance graph, then every two parallel edges will have the same color, and every monochromatic cycle will have edges that can be paired into parallel edges in opposite directions from each other (like the edges of a square or regular hexagon). This means that the subgraph of edges of any single color will be bipartite. We can color each of these subgraphs with two colors, and combine the subgraphs to get \(2^d\) colors for the whole unit distance graph. Let’s see how such a coloring might look for the Moser spindle:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/spindle-color.svg&quot; alt=&quot;Four-coloring the Moser spindle by partitioning it into bipartite subgraphs&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this example, the blue-edge subgraph has two cycles, both rhombi. Each edge of a rhombus can be paired with another parallel edge; if you travel around the rhombus you will follow these two edges in opposite directions. The yellow-edge subgraph has no cycles at all. Combining the 2-colorings of the two subgraphs gives us a 4-coloring of the whole Moser spindle.&lt;/p&gt;
+
+&lt;p&gt;This method 4-colors every finite unit distance graph, for a generic norm, but not the whole plane at once. To color the whole plane, the &lt;a href=&quot;https://en.wikipedia.org/wiki/De_Bruijn%E2%80%93Erd%C5%91s_theorem_(graph_theory)&quot;&gt;De Bruijn–Erdős theorem&lt;/a&gt; can be used. This is a theorem that, whenever all finite subgraphs of an infinite graph can be colored with a certain finite number of colors, the whole graph can be colored with the same number of colors. It’s possible to construct a copy of the Moser spindle as a unit distance graph for any norm, by using the intermediate value theorem to find equilateral triangles supported by any edge and then rotating one pair of triangles with respect to another until getting another unit distance. Therefore, four colors is optimal. But the 4-coloring you get is a nasty set-theoretic thing, impossible to visualize, unlike the nice tiling-based 7-coloring of the Euclidean plane.&lt;/p&gt;
+
+&lt;p&gt;Noga left me with some related but unsolved questions: Can we find an explicit example of a norm with this few-rational-combinations property? It would need to be strictly convex (the boundaries of its balls could not include any line segments); can we find an explicit example of a strictly-convex norm requiring only four colors? Is it possible for such a norm to have a simple finite description? And what about smooth norms, or \(L^p\)-norms (possibly for non-integer \(p\))?&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/110364160343375481&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </content>
+    <author>
+      <name>David Eppstein</name>
+      <uri>https://11011110.github.io/blog/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">CCI: jobs: Postdoc at Cambridge (apply by July 1, 2023)</title>
     <link href="https://cstheory-jobs.org/2023/05/12/postdoc-at-cambridge-apply-by-july-1-2023/"/>
     <id>http://cstheory-jobs.org/2023/05/12/postdoc-at-cambridge-apply-by-july-1-2023/</id>
@@ -1701,33 +1754,6 @@ solutions of the problem.
     <author>
       <name>arXiv: Data Structures and Algorithms</name>
       <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: An Improved PTAS for Covering Targets with Mobile Sensors</title>
-    <link href="http://arxiv.org/abs/2305.03946"/>
-    <id>http://arxiv.org/abs/2305.03946</id>
-    <updated>2023-05-09T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wongwattanakij_N/0/1/0/all/0/1&quot;&gt;Nonthaphat Wongwattanakij&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Phetmak_N/0/1/0/all/0/1&quot;&gt;Nattawut Phetmak&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jaikaeo_C/0/1/0/all/0/1&quot;&gt;Chaiporn Jaikaeo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fakcharoenphol_J/0/1/0/all/0/1&quot;&gt;Jittat Fakcharoenphol&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper considers a movement minimization problem for mobile sensors.
-Given a set of $n$ point targets, the $k$-Sink Minimum Movement Target Coverage
-Problem is to schedule mobile sensors, initially located at $k$ base stations,
-to cover all targets minimizing the total moving distance of the sensors. We
-present a polynomial-time approximation scheme for finding a $(1+\epsilon)$
-approximate solution running in time $n^{O(1/\epsilon)}$ for this problem when
-$k$, the number of base stations, is constant. Our algorithm improves the
-running time exponentially from the previous work that runs in time
-$n^{O(1/\epsilon^2)}$, without any target distribution assumption. To devise a
-faster algorithm, we prove a stronger bound on the number of sensors in any
-unit area in the optimal solution and employ a more refined dynamic programming
-algorithm whose complexity depends only on the width of the problem.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
     </author>
   </entry>
 
