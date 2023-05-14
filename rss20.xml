@@ -9,6 +9,17 @@
 
 
 <item>
+  <title>Take a number and map it to the number of letters in its name</title>
+  <guid>tag:blogger.com,1999:blog-3722233.post-6967500125921426284</guid>
+  <link>https://blog.computationalcomplexity.org/2023/05/take-number-and-map-it-to-number-of.html</link>
+  <description>
+    &lt;p&gt;Let f: N--&amp;gt; N map a number to the number-of-letters in its name in English (we will consider other languages later).&lt;/p&gt;&lt;p&gt;So for example 14 is fourteen so it maps to 7. Let&#39;s iterate&lt;/p&gt;&lt;p&gt;14 --&amp;gt; 7 --&amp;gt; 5 --&amp;gt; 4--&amp;gt;4--&amp;gt;4 ...&lt;/p&gt;&lt;p&gt;It is known (perhaps well-known) that, given any starting point, the sequence eventually is all 4&#39;s.&amp;nbsp;&lt;/p&gt;&lt;p&gt;I recently got an email asking if this was PROVEN.&amp;nbsp; I could not find a proof on the web so I did it myself. My writeup of a proof is &lt;a href=&quot;https://www.cs.umd.edu/~gasarch/BLOGPAPERS/four.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;1) So now there IS a proof on the web. It may be hard to find. Does this problem have a well known name that I should add to this blog post so that it is easier to find?&lt;/p&gt;&lt;p&gt;2) My next thought was&lt;/p&gt;&lt;p&gt;For which functions f: N--&amp;gt;N is it the case that every sequence a, f(a), f(f(a)), ... is eventually constant. I leave that for you to ponder.&lt;/p&gt;&lt;p&gt;3) The asker of the question is of a more real-world bent and emailed me what happens in other languages:&lt;/p&gt;&lt;p&gt;Spanish has one number whose name is its own length: 5 is cinco. I leave it to the reader to show that in Spanish the sequence always becomes all 5&#39;s.&lt;/p&gt;&lt;p&gt;French seems to have no such numbers, so it cannot have this behavior.&lt;/p&gt;&lt;p&gt;Norwegian has three such numbers: 2 is to, 3 is tre, 4 is fire. So I suspect every such sequence either is constant-2, constant-3 or contant-4.&lt;/p&gt;&lt;p&gt;See this article&amp;nbsp;&lt;a href=&quot;https://mathlair.allfunandgames.ca/languages.php&quot;&gt;here&lt;/a&gt;&amp;nbsp;for more the numbers 1-10 in several languages.&lt;/p&gt;&lt;p&gt;OBLIGATORY ChatGpt note: Lance saw this post in our blog account and was curious what ChatGpt would do with it. For what he got see&amp;nbsp;&lt;a href=&quot;https://www.cs.umd.edu/~gasarch/BLOGPAPERS/mapnum.txt&quot;&gt;here&lt;/a&gt;. You can decide if a program can take over the blog anytime soon.&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-14 21:53:00 UTC</pubDate>
+  <author>Computational Complexity</author>
+</item>
+
+<item>
   <title>Mathematics of the impossible, Chapter 12, Data structures</title>
   <guid>http://emanueleviola.wordpress.com/?p=1254</guid>
   <link>https://emanueleviola.wordpress.com/2023/05/14/mathematics-of-the-impossible-chapter-12-data-structures/</link>
@@ -334,6 +345,59 @@ Email: neum@kth.se&lt;/p&gt;
   </description>
   <pubDate>2023-05-14 11:04:25 UTC</pubDate>
   <author>ECCC Papers</author>
+</item>
+
+<item>
+  <title>Amazing Recent Advances on Shotcut Set and The Likes</title>
+  <guid>https://minorfree.github.io/hopset-adv</guid>
+  <link>https://minorfree.github.io/hopset-adv/</link>
+  <description>
+    &lt;p&gt;&lt;a href=&quot;http://www.weizmann.ac.il/math/parter/home&quot;&gt;Merav Parter&lt;/a&gt; gave a talk at UMass theory seminar last week titled “Reachability Shortcuts: New Bounds and Algorithms”. In the talk, Merav summarized recent developments in shortcut sets and related concepts. It was amazing to see all the results, and I cannot resist the attempt to share my take here in this blog post.&lt;/p&gt;
+
+&lt;h1 id=&quot;1-shortcut-set-what-is-it&quot;&gt;1. Shortcut set: what is it?&lt;/h1&gt;
+
+&lt;p&gt;A \(d\)-shortcut set of a &lt;em&gt;directed graph&lt;/em&gt; \(G=(V,E)\) is a set of directed edges \(E_H\) such that (i) the graph \(H = (V,E\cup E_H)\) has the same transitive closure as \(G\) and (ii) for every \(u\not=v\in V\), if \(v\) is reachable from \(u\), then there is directed \(u\)-to-\(v\) path of at most \(d\) edges (a.k.a. hops).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/figs/shortcut-set.svg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figure:  Adding two shortcuts (the red dashed edges) reduces the hop distance from \(u\) to \(v\) to 4. For a shortcut set of linear size, DAG is the most difficult instance: one can shortcut any strongly connected graph to diameter \(2\) by \(n-1\) edges.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The shortcut set problem was introduced by &lt;a href=&quot;https://link.springer.com/chapter/10.1007/3-540-56402-0_48&quot;&gt;Thorup&lt;/a&gt;. The main goal is to understand the trade-off between the hop diameter \(d\) and the size of the shortcut set \(E_H\). The most well-studied regime is fixing \(\lvert E_H\rvert = \tilde{O}(n)\), and then minimizing \(d\). (Here, \(n\) is the number of vertices.) We will call this special regime &lt;em&gt;the shortcut set problem&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the shortcut set problem, a folklore sampling gives \(d = O(\sqrt{n})\): sample each vertex with probability \(\tilde{O}(1/\sqrt{n})\) to get a set \(S\), and add all (permissible) directed edges between vertices in \(S\). The key insight for bounding the diameter is: For any shortest path \(\pi_G(u,v)\) from \(u\) to \(v\) with at least \(2\sqrt{n}\) edges,  \(S\) will likely hit both the prefix and suffix of length \(\sqrt{n}\) of \(\pi_G(u,v)\). (This algorithm is attributed to &lt;a href=&quot;https://dl.acm.org/doi/10.1145/97444.97686&quot;&gt;Ullman and Yannakakis&lt;/a&gt;.) A long-standing open problem is:&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Question 1&lt;/strong&gt;: Is diameter bound \(\sqrt{n}\) optimal for shortcut sets of nearly linear size?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The answer is no due to the &lt;a href=&quot;https://arxiv.org/pdf/2111.13240.pdf&quot;&gt;recent breakthrough&lt;/a&gt; by Kogan and Parter: using  \(\tilde{O}(n)\) shorcuts, they reduced the diameter down to \(n^{1/3}\). Their result deservingly won the best paper award at SODA 22. A key conceptual contribution of their work is a shift in perspective: shortcutting by connecting vertices to paths of length roughly \(n^{1/3}\), instead of only making vertex-to-vertex connections as the folklore sampling. Find this intriguing? Read &lt;a href=&quot;https://arxiv.org/pdf/2111.13240.pdf&quot;&gt;the paper&lt;/a&gt; or watch &lt;a href=&quot;https://www.youtube.com/watch?v=qaY14SnLdMM&quot;&gt;Merav’s talk&lt;/a&gt; or both. The paper has a bunch of other interesting results.&lt;/p&gt;
+
+&lt;p&gt;At this point, you might wonder: how far could one go about reducing the diameter? Thorup &lt;a href=&quot;https://link.springer.com/chapter/10.1007/3-540-56402-0_48&quot;&gt;conjectured&lt;/a&gt; that the diameter could be reduced all the way down to \(\mathrm{poly}(\log(n))\) with a nearly linear number of shortcuts. This conjecture was disproved by &lt;a href=&quot;https://dl.acm.org/doi/pdf/10.5555/644108.644216&quot;&gt;Hesse&lt;/a&gt;, who was a graduate student at UMass Amherst at the time with our &lt;a href=&quot;https://www.mathgenealogy.org/id.php?id=30442&quot;&gt;Neil Immerman&lt;/a&gt; :). Hesse constructed a directed graph with \(m = \Theta(n^{19/17})\) edges such that one has to use \(\Omega(mn^{1/17})\) shortcuts to reduce the diameter to below \(\Theta(n^{1/17})\). This lower bound &lt;a href=&quot;https://arxiv.org/abs/1802.06271&quot;&gt;has been&lt;/a&gt; &lt;a href=&quot;https://arxiv.org/abs/2110.15809&quot;&gt;improved&lt;/a&gt; &lt;a href=&quot;https://arxiv.org/pdf/2304.02193.pdf&quot;&gt;further&lt;/a&gt;. Notably, &lt;a href=&quot;https://arxiv.org/pdf/2304.02193.pdf&quot;&gt;Bodwin and Hoppenworth&lt;/a&gt; recently obtained a lower bound of \(\Omega(n^{1/4})\) on the diameter, which is very close to the upper bound of \(O(n^{1/3})\) by Kogan and Parter. This result leaves another fascinating open problem:&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Open Problem&lt;/strong&gt;: Closing the gap \(O(n^{1/3})\) vs. \(\Omega(n^{1/4})\) on the diameter for shortcut sets of nearly linear size.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;2-approximate-hopsets&quot;&gt;2. (Approximate) hopsets&lt;/h1&gt;
+
+&lt;p&gt;Hopset is very similar to the shortcut set but applied to weighted graphs instead. More formally, a \(d\)-hopset set of a &lt;em&gt;directed, weighted graph&lt;/em&gt;  \(G=(V,E)\) is a set of directed, &lt;em&gt;weighted&lt;/em&gt; edges \(E_H\) such that (i) the graph \(H = (V,E\cup E_H)\) has the same distance metric as \(G\) and (ii) for every \(u\not=v\in V\),  there is a shortest \(u\)-to-\(v\) path of at most \(d\) edges in \(H = (V,E\cup E_H)\).&lt;/p&gt;
+
+&lt;p&gt;Clearly, the hopset problem is at least as hard as the shortcut set problem: any hopset is a shortcut set with the same diameter bound.&lt;/p&gt;
+
+&lt;p&gt;A related notion is &lt;em&gt;approximate hopset&lt;/em&gt;, in which we are given an additional parameter \(\epsilon \in (0,1)\), and for every \(u,v\), we would like to have a \((1+\epsilon)\)-approximate \(u\)-to-\(v\) path of at most \(d\) edges. We allow \(d\) to depend on \(\epsilon\)—think of \(\epsilon\) as a small constant.&lt;/p&gt;
+
+&lt;p&gt;One could check that the folklore sampling also works for hopset (and hence for approximate hopset as well): by adding \(\tilde{O}(n \log n)\) edges, one could reduce the diameter bound to \(\sqrt{n}\). The same question arises: Is the  \(\sqrt{n}\) bound on the diameter optimal for hopsets and approximate hopsets of nearly linear size?&lt;/p&gt;
+
+&lt;p&gt;For the approximate hopset, the same paper by Kogan and Parter provided a no answer: They constructed a nearly linear hopset with a diameter bound of \(n^{2/5}\). In follow-up work, &lt;a href=&quot;https://arxiv.org/abs/2207.04507&quot;&gt;Bernstein and Wein&lt;/a&gt; improved the diameter to \(n^{1/3}\), matching the known bound for shortcut set; &lt;a href=&quot;https://video.cs.utexas.edu/node/428&quot;&gt;watch the talk here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How about the (exact) hopset? One might expect that the diameter bound should also be improved to  \(n^{1/3}\). &lt;a href=&quot;https://arxiv.org/pdf/2304.02193.pdf&quot;&gt;Bodwin and Hoppenworth&lt;/a&gt; recently showed that \(\sqrt{n}\) is the best one could do (up to some polylog). I personally find this result very surprising. How do they achieve their lower bound? Read their paper; the exposition of the ideas in the paper is so well written that any attempt to summarize better would be in vain.&lt;/p&gt;
+
+&lt;p&gt;Somehow, the exact hopset is strictly harder than the approximate hopset and the shortcut set. Could approximate hopset be strictly harder than shortcut set? Bernstein and Wein provided state-of-the-art bounds for approximate hopsets, matching those of shortcut sets. As far as I understand, their proof does not provide a black-box reduction. Is such a reduction possible? I am curious to know the answer.&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Hung Le&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-14 00:00:00 UTC</pubDate>
+  <author>Hung Le</author>
 </item>
 
 <item>
@@ -1763,36 +1827,6 @@ the first well-known MSP variant with an $O(1)$-competitive algorithm that does
 not need to know the underlying matroid upfront and without any restriction on
 the underlying matroid. Our approach is based on first approximately learning
 the rank-density curve of the matroid, which we then exploit algorithmically.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-10 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>An Improved Approximation Algorithm for the Minimum 2-Vertex-Connected Spanning Subgraph Problem</title>
-  <guid>http://arxiv.org/abs/2305.05398</guid>
-  <link>http://arxiv.org/abs/2305.05398</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Civril_A/0/1/0/all/0/1&quot;&gt;Ali &amp;#xc7;ivril&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We provide an algorithm for the minimum 2-vertex-connected spanning subgraph
-problem with approximation ratio $\frac{4}{3}$, improving upon the previous
-best factor $\frac{10}{7}$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-10 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>4/3-Approximation of Graphic TSP</title>
-  <guid>http://arxiv.org/abs/2305.05411</guid>
-  <link>http://arxiv.org/abs/2305.05411</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Civril_A/0/1/0/all/0/1&quot;&gt;Ali &amp;#xc7;ivril&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We describe a $\frac{4}{3}$-approximation algorithm for the traveling
-salesman problem in which the distances between points are induced by
-graph-theoretical distances in an unweighted graph. The algorithm is based on
-finding a minimum cost perfect matching on the odd degree vertices of a
-carefully computed 2-edge-connected spanning subgraph.
 &lt;/p&gt;
   </description>
   <pubDate>2023-05-10 00:30:00 UTC</pubDate>
