@@ -9,6 +9,150 @@
 
 
 <item>
+  <title>Accelerating genetic optimization of nonlinear model predictive control by learning optimal search space size</title>
+  <guid>http://arxiv.org/abs/2305.08094</guid>
+  <link>http://arxiv.org/abs/2305.08094</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mostafa_E/0/1/0/all/0/1&quot;&gt;Eslam Mostafa&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Aly_H/0/1/0/all/0/1&quot;&gt;Hussein A. Aly&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Elliethy_A/0/1/0/all/0/1&quot;&gt;Ahmed Elliethy&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Nonlinear model predictive control (NMPC) solves a multivariate optimization
+problem to estimate the system&#39;s optimal control inputs in each control cycle.
+Such optimization is made more difficult by several factors, such as
+nonlinearities inherited in the system, highly coupled inputs, and various
+constraints related to the system&#39;s physical limitations. These factors make
+the optimization to be non-convex and hard to solve traditionally. Genetic
+algorithm (GA) is typically used extensively to tackle such optimization in
+several application domains because it does not involve differential
+calculation or gradient evaluation in its solution estimation. However, the
+size of the search space in which the GA searches for the optimal control
+inputs is crucial for the applicability of the GA with systems that require
+fast response. This paper proposes an approach to accelerate the genetic
+optimization of NMPC by learning optimal search space size. The proposed
+approach trains a multivariate regression model to adaptively predict the best
+smallest search space in every control cycle. The estimated best smallest size
+of search space is fed to the GA to allow for searching the optimal control
+inputs within this search space. The proposed approach not only reduces the
+GA&#39;s computational time but also improves the chance of obtaining the optimal
+control inputs in each cycle. The proposed approach was evaluated on two
+nonlinear systems and compared with two other genetic-based NMPC approaches
+implemented on the GPU of a Nvidia Jetson TX2 embedded platform in a
+processor-in-the-loop (PIL) fashion. The results show that the proposed
+approach provides a 39-53\% reduction in computational time. Additionally, it
+increases the convergence percentage to the optimal control inputs within the
+cycle&#39;s time by 48-56\%, resulting in a significant performance enhancement.
+The source code is available on GitHub.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-16 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Randomized Algorithm for the Maximum-Profit Routing Problem</title>
+  <guid>http://arxiv.org/abs/2305.07838</guid>
+  <link>http://arxiv.org/abs/2305.07838</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Armaselu_B/0/1/0/all/0/1&quot;&gt;Bogdan Armaselu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we consider the Maximum-Profit Routing Problem (MPRP),
+introduced in \cite{Armaselu-PETRA}. In MPRP, the goal is to route the given
+fleet of vehicles to pickup goods from specified sites in such a way as to
+maximize the profit, i.e., total quantity collected minus travelling costs.
+Although deterministic approximation algorithms are known for the problem,
+currently there is no randomized algorithm. In this paper, we propose the first
+randomized algorithm for MPRP.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-16 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Dynamic Convex Hulls under Window-Sliding Updates</title>
+  <guid>http://arxiv.org/abs/2305.08055</guid>
+  <link>http://arxiv.org/abs/2305.08055</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_H/0/1/0/all/0/1&quot;&gt;Haitao Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the problem of dynamically maintaining the convex hull of a set
+$S$ of points in the plane under the following special sequence of insertions
+and deletions (called window-sliding updates): insert a point to the right of
+all points of $S$ and delete the leftmost point of $S$. We propose an
+$O(|S|)$-space data structure that can handle each update in $O(1)$ amortized
+time, such that all standard binary-search-based queries on the convex hull of
+$S$ can be answered in $O(\log |S|)$ time, and the convex hull itself can be
+output in time linear in the number of its vertices.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-16 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Linearizability Analysis of the Contention-Friendly Binary Search Tree</title>
+  <guid>http://arxiv.org/abs/2305.07758</guid>
+  <link>http://arxiv.org/abs/2305.07758</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Abraham_U/0/1/0/all/0/1&quot;&gt;Uri Abraham&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hayoun_A/0/1/0/all/0/1&quot;&gt;Avi Hayoun&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a formal framework for proving the correctness of set
+implementations backed by binary-search-tree (BST) and linked lists, which are
+often difficult to prove correct using automation. This is because many
+concurrent set implementations admit non-local linearization points for their
+`contains&#39; procedure. We demonstrate this framework by applying it to the
+Contention-Friendly Binary-Search Tree algorithm of Crain et al.
+&lt;/p&gt;
+&lt;p&gt;We took care to structure our framework in a way that can be easily
+translated into input for model-checking tools such as TLA+, with the aim of
+using a computer to verify bounded versions of claims that we later proved
+manually. Although this approach does not provide complete proof (i.e., does
+not constitute full verification), it allows checking the reasonableness of the
+claims before spending effort constructing a complete proof. This is similar to
+the test-driven development methodology, that has proven very beneficial in the
+software engineering community.
+&lt;/p&gt;
+&lt;p&gt;We used this approach and validated many of the invariants and properties of
+the Contention-Friendly algorithm using TLA+. It proved beneficial, as it
+helped us avoid spending time trying to prove incorrect claims. In one example,
+TLA+ flagged a fundamental error in one of our core definitions. We corrected
+the definition (and the dependant proofs), based on the problematic scenario
+TLA+ provided as a counter-example.
+&lt;/p&gt;
+&lt;p&gt;Finally, we provide a complete, manual, proof of the correctness of the
+Contention-Friendly algorithm, based on the definitions and proofs of our
+two-tiered framework.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-16 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>The $2$-$3$-Set Packing problem and a $\frac{4}{3}$-approximation for the Maximum Leaf Spanning Arborescence problem in rooted dags</title>
+  <guid>http://arxiv.org/abs/2305.07808</guid>
+  <link>http://arxiv.org/abs/2305.07808</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Neuwohner_M/0/1/0/all/0/1&quot;&gt;Meike Neuwohner&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The weighted $3$-Set Packing problem is defined as follows: As input, we are
+given a collection $\mathcal{S}$ of sets, each of cardinality at most $3$ and
+equipped with a positive weight. The task is to find a disjoint sub-collection
+of maximum total weight. Already the special case of unit weights is known to
+be NP-hard, and the state-of-the-art are $\frac{4}{3}+\epsilon$-approximations
+by Cygan and F\&quot;urer and Yu. In this paper, we study the $2$-$3$-Set Packing
+problem, a generalization of the unweighted $3$-Set Packing problem, where our
+set collection may contain sets of cardinality $3$ and weight $2$, as well as
+sets of cardinality $2$ and weight $1$. Building upon the state-of-the-art
+works in the unit weight setting, we manage to provide a
+$\frac{4}{3}+\epsilon$-approximation also for the more general $2$-$3$-Set
+Packing problem. We believe that this result can be a good starting point to
+identify classes of weight functions to which the techniques used for unit
+weights can be generalized. Using a reduction by Fernandes and Lintzmayer, our
+result further implies a $\frac{4}{3}+\epsilon$-approximation for the Maximum
+Leaf Spanning Arborescence problem (MLSA) in rooted directed acyclic graphs,
+improving on the previously known $\frac{7}{5}$-approximation by Fernandes and
+Lintzmayer. By exploiting additional structural properties of the instance
+constructed in their reduction, we can further get the approximation guarantee
+for the MLSA down to $\frac{4}{3}$. The MLSA has applications in broadcasting
+where a message needs to be transferred from a source node to all other nodes
+along the arcs of an arborescence in a given network.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-16 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Ingrid Daubechies: Prizes and Art</title>
   <guid>https://rjlipton.wpcomstaging.com/?p=21611</guid>
   <link>https://rjlipton.wpcomstaging.com/2023/05/14/ingrid-daubechies-prizes-and-art/</link>
@@ -1729,164 +1873,6 @@ complex
   </description>
   <pubDate>2023-05-11 00:30:00 UTC</pubDate>
   <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Parallel External Sorting of ASCII Records Using Learned Models</title>
-  <guid>http://arxiv.org/abs/2305.05671</guid>
-  <link>http://arxiv.org/abs/2305.05671</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kristo_A/0/1/0/all/0/1&quot;&gt;Ani Kristo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kraska_T/0/1/0/all/0/1&quot;&gt;Tim Kraska&lt;/a&gt;&lt;/p&gt;&lt;p&gt;External sorting is at the core of many operations in large-scale database
-systems, such as ordering and aggregation queries for large result sets,
-building indexes, sort-merge joins, duplicate removal, sharding, and record
-clustering. Unlike in-memory sorting, these algorithms need to work together
-with the OS and the filesystem to efficiently utilize system resources and
-minimize disk I/O.
-&lt;/p&gt;
-&lt;p&gt;In this paper we describe ELSAR: a parallel external sorting algorithm that
-uses an innovative paradigm based on a learned data distribution model. The
-algorithm leverages the model to arrange the input records into mutually
-exclusive, monotonic, and equi-depth partitions that, once sorted, can simply
-be concatenated to form the output. This method completely eliminates the need
-for multi-way file merging, which is typically used in external sorting.
-&lt;/p&gt;
-&lt;p&gt;We present thorough benchmarks for uniform and skewed datasets in various
-storage media, where we measure the sorting rates, size scalability, and energy
-efficiency of ELSAR and other sorting algorithms. We observed that ELSAR has up
-to 1.65x higher sorting rates than the next-best external sort (Nsort) on SSD
-drives and 5.31x higher than the GNU coreutils&#39; sort utility on Intel Optane
-non-volatile memory. In addition, ELSAR supersedes the current winner of the
-SortBenchmark for the most energy-efficient external string sorting algorithm
-by an impressive margin of 41%.
-&lt;/p&gt;
-&lt;p&gt;These results reinforce the premise that novel learning-enhanced algorithms
-can provide remarkable performance benefits over traditional ones.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On the Number of $t$-Lee-Error-Correcting Codes</title>
-  <guid>http://arxiv.org/abs/2305.05763</guid>
-  <link>http://arxiv.org/abs/2305.05763</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Willenborg_N/0/1/0/all/0/1&quot;&gt;Nadja Willenborg&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Horlemann_A/0/1/0/all/0/1&quot;&gt;Anna-Lena Horlemann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Weger_V/0/1/0/all/0/1&quot;&gt;Violetta Weger&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider $t$-Lee-error-correcting codes of length $n$ over the residue
-ring $\mathbb{Z}_m := \mathbb{Z}/m\mathbb{Z}$ and determine upper and lower
-bounds on the number of $t$-Lee-error-correcting codes. We use two different
-methods, namely estimating isolated nodes on bipartite graphs and the graph
-container method. The former gives density results for codes of fixed size and
-the latter for any size. This confirms some recent density results for linear
-Lee metric codes and provides new density results for nonlinear codes. To apply
-a variant of the graph container algorithm we also investigate some geometrical
-properties of the balls in the Lee metric.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Universal Matrix Sparsifiers and Fast Deterministic Algorithms for Linear Algebra</title>
-  <guid>http://arxiv.org/abs/2305.05826</guid>
-  <link>http://arxiv.org/abs/2305.05826</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhattacharjee_R/0/1/0/all/0/1&quot;&gt;Rajarshi Bhattacharjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dexter_G/0/1/0/all/0/1&quot;&gt;Gregory Dexter&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Musco_C/0/1/0/all/0/1&quot;&gt;Cameron Musco&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ray_A/0/1/0/all/0/1&quot;&gt;Archan Ray&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Woodruff_D/0/1/0/all/0/1&quot;&gt;David P Woodruff&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Given $\mathbf A \in \mathbb{R}^{n \times n}$ with entries bounded in
-magnitude by $1$, it is well-known that if $S \subset [n] \times [n]$ is a
-uniformly random subset of $\tilde{O} (n/\epsilon^2)$ entries, and if ${\mathbf
-A}_S$ equals $\mathbf A$ on the entries in $S$ and is zero elsewhere, then
-$\|\mathbf A - \frac{n^2}{s} \cdot {\mathbf A}_S\|_2 \le \epsilon n$ with high
-probability, where $\|\cdot\|_2$ is the spectral norm. We show that for
-positive semidefinite (PSD) matrices, no randomness is needed at all in this
-statement. Namely, there exists a fixed subset $S$ of $\tilde{O}
-(n/\epsilon^2)$ entries that acts as a universal sparsifier: the above error
-bound holds simultaneously for every bounded entry PSD matrix $\mathbf A \in
-\mathbb{R}^{n \times n}$. One can view this result as a significant extension
-of a Ramanujan expander graph, which sparsifies any bounded entry PSD matrix,
-not just the all ones matrix.
-&lt;/p&gt;
-&lt;p&gt;We leverage the existence of such universal sparsifiers to give the first
-deterministic algorithms for several central problems related to singular value
-computation that run in faster than matrix multiplication time. We also prove
-universal sparsification bounds for non-PSD matrices, showing that $\tilde{O}
-(n/\epsilon^4)$ entries suffices to achieve error $\epsilon \cdot
-\max(n,\|\mathbf A\|_1)$, where $\|\mathbf A\|_1$ is the trace norm. We prove
-that this is optimal up to an $\tilde{O} (1/\epsilon^2)$ factor. Finally, we
-give an improved deterministic spectral approximation algorithm for PSD
-$\mathbf A$ with entries lying in $\{-1,0,1\}$, which we show is nearly
-information-theoretically optimal.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Constant Approximation for Network Revenue Management with Markovian-Correlated Customer Arrivals</title>
-  <guid>http://arxiv.org/abs/2305.05829</guid>
-  <link>http://arxiv.org/abs/2305.05829</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiang_J/0/1/0/all/0/1&quot;&gt;Jiashuo Jiang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The Network Revenue Management (NRM) problem is a well-known challenge in
-dynamic decision-making under uncertainty. In this problem, fixed resources
-must be allocated to serve customers over a finite horizon, while customers
-arrive according to a stochastic process. The typical NRM model assumes that
-customer arrivals are independent over time. However, in this paper, we explore
-a more general setting where customer arrivals over different periods can be
-correlated. We propose a new model that assumes the existence of a system
-state, which determines customer arrivals for the current period. This system
-state evolves over time according to a time-inhomogeneous Markov chain. Our
-model can be used to represent correlation in various settings and synthesizes
-previous literature on correlation models.
-&lt;/p&gt;
-&lt;p&gt;To solve the NRM problem under our correlated model, we derive a new linear
-programming (LP) approximation of the optimal policy. Our approximation
-provides a tighter upper bound on the total expected value collected by the
-optimal policy than existing upper bounds. We use our LP to develop a new bid
-price policy, which computes bid prices for each system state and time period
-in a backward induction manner. The decision is then made by comparing the
-reward of the customer against the associated bid prices. Our policy guarantees
-to collect at least $1/(1+L)$ fraction of the total reward collected by the
-optimal policy, where $L$ denotes the maximum number of resources required by a
-customer.
-&lt;/p&gt;
-&lt;p&gt;In summary, our work presents a new model for correlated customer arrivals in
-the NRM problem and provides an LP approximation for solving the problem under
-this model. We derive a new bid price policy and provides a theoretical
-guarantee on the performance of the policy.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Acceleration of FM-index Queries Through Prefix-free Parsing</title>
-  <guid>http://arxiv.org/abs/2305.05893</guid>
-  <link>http://arxiv.org/abs/2305.05893</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hong_A/0/1/0/all/0/1&quot;&gt;Aaron Hong&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Oliva_M/0/1/0/all/0/1&quot;&gt;Marco Oliva&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Koppl_D/0/1/0/all/0/1&quot;&gt;Dominik K&amp;#xf6;ppl&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bannai_H/0/1/0/all/0/1&quot;&gt;Hideo Bannai&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Boucher_C/0/1/0/all/0/1&quot;&gt;Christina Boucher&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gagie_T/0/1/0/all/0/1&quot;&gt;Travis Gagie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;FM-indexes are a crucial data structure in DNA alignment, for example, but
-searching with them usually takes at least one random access per character in
-the query pattern. Ferragina and Fischer observed in 2007 that word-based
-indexes often use fewer random accesses than character-based indexes, and thus
-support faster searches. Since DNA lacks natural word-boundaries, however, it
-is necessary to parse it somehow before applying word-based FM-indexing. Last
-year, Deng et al.\ proposed parsing genomic data by induced suffix sorting, and
-showed the resulting word-based FM-indexes support faster counting queries than
-standard FM-indexes when patterns are a few thousand characters or longer. In
-this paper we show that using prefix-free parsing -- which takes parameters
-that let us tune the average length of the phrases -- instead of induced suffix
-sorting, gives a significant speedup for patterns of only a few hundred
-characters. We implement our method and demonstrate it is between 3 and 18
-times faster than competing methods on queries to GRCh38. And was consistently
-faster on queries made to 25,000, 50,000 and 100,000 SARS-CoV-2 genomes. Hence,
-it is very clear that our method accelerates the performance of count over all
-state-of-the-art methods with a minor increase in the memory. Our source code
-is available at https://github.com/marco-oliva/afm .
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-11 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
