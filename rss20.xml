@@ -9,6 +9,33 @@
 
 
 <item>
+  <title>Permutation supersequences and shortest paths</title>
+  <guid>https://11011110.github.io/blog/2023/05/17/permutation-supersequences-shortest</guid>
+  <link>https://11011110.github.io/blog/2023/05/17/permutation-supersequences-shortest.html</link>
+  <description>
+    &lt;p&gt;You may have heard of &lt;a href=&quot;https://en.wikipedia.org/wiki/Superpattern&quot;&gt;permutation superpatterns&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Superpermutation&quot;&gt;superpermutations&lt;/a&gt;, but have you heard of permutation supersequences? They turn out to be closely related to how quickly we can find shortest paths in graphs with negative edge weights using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm&quot;&gt;Bellman–Ford algorithm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Superpatterns, superpermutations, and supersequences are all sequences of symbols that somehow contain each permutation of their symbols. But they use different definitions of “contain”, causing them to have different lengths. For supersequences, the goal is to have every permutation as a subsequence: its symbols must appear in the same order, but can be widely spaced. One way to create a supersequence of \(n\) symbols, but not the best way, is to repeat all of them \(n\) times: 1234123412341234. You can do a little better by alternating ascending and descending order, saving one symbol per repetition: 1234321234321. But this is still not optimal. According to Oliver Tan in “Skip letters for short supersequence of all permutations” (&lt;em&gt;Disc. Math.&lt;/em&gt; 2022, &lt;a href=&quot;https://doi.org/10.1016/j.disc.2022.113070&quot;&gt;doi:10.1016/j.disc.2022.113070&lt;/a&gt;), calculating the exact length of the shortest supersequence of \(n\) symbols, as a function &lt;span style=&quot;white-space:nowrap&quot;&gt;of \(n\),&lt;/span&gt; is still an open problem. Tan finds sequences of &lt;span style=&quot;white-space:nowrap&quot;&gt;length \(n^2-\tfrac52n+O(n^{2/3})\),&lt;/span&gt; and cites a bound of Kleitman and Kwiatkowski showing that they must have &lt;span style=&quot;white-space:nowrap&quot;&gt;length \(n^2-O(n^{7/4})\).&lt;/span&gt; So we have pretty accurate bounds on how short they can be: &lt;span style=&quot;white-space:nowrap&quot;&gt;near \(n^2\).&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Now let’s continue to look at sequences and subsequences, but change up what they have to contain. Any permutation has \(n-1\) consecutive pairs of symbols. I want to find a sequence of pairs that for each permutation contains its \(n-1\) pairs, in their correct order. For instance, a four-symbol pair sequence should contain the three pairs 12, 23, and 34, in that order, coming from the permutation 1234, and it should also contain the other 23 triples of pairs coming from the other 23 permutations of the four symbols.&lt;/p&gt;
+
+&lt;p&gt;Why? Because that’s what some versions of the Bellman–Ford algorithm do! Suppose we want to find shortest paths from some starting vertex \(v_0\) to all other vertices in a complete directed graph. We can initialize tentative distances \(D[i]\) for all other vertices &lt;span style=&quot;white-space:nowrap&quot;&gt;\(v_i\), \(i&amp;gt;0\)&lt;/span&gt; to be the lengths of the single edges from \(v_0\) to those vertices, and then repeatedly &lt;em&gt;relax&lt;/em&gt; a pair \((i,j)\) by &lt;span style=&quot;white-space:nowrap&quot;&gt;setting \(D[j]=\min\{D[j],D[i]+\operatorname{len}(v_i,v_j)\}\).&lt;/span&gt; If we relax all of the consecutive pairs of vertices along a shortest path, in order, this will cause the tentative distance for the endpoint of the path to equal its correct shortest path distance.&lt;/p&gt;
+
+&lt;p&gt;So one way to get a correct shortest path algorithm is simply to choose a supersequence of the consecutive pairs of all permutations, and update the tentative distances in this order. You might notice that such an algorithm doesn’t pay any attention to the results of its calculation; it just performs its pairwise calculations for the entire supersequence, in a set order. I’ll call an algorithm like this, that chooses its update steps ahead of time instead of taking account of what has happened so far, &lt;em&gt;non-adaptive&lt;/em&gt;. As a sequential algorithm, it would be better to be a little smarter, and use past information to guide future steps, but non-adaptive versions of Bellman–Ford turn out to be widely used in contexts where there is no centralized control, such as &lt;a href=&quot;https://en.wikipedia.org/wiki/Distance-vector_routing_protocol&quot;&gt;distance vector routing&lt;/a&gt; on the internet.&lt;/p&gt;
+
+&lt;p&gt;So to figure out how efficient Bellman–Ford can be, we need to figure out how short these pair supersequences can be. Frustratingly, I don’t know very tight bounds for this problem. I can at least find out the exponent of the leading term in the length of these sequences (it’s cubic), but its constant factor eludes me.&lt;/p&gt;
+
+&lt;p&gt;As an upper bound, we can look at what various versions of the Bellman–Ford algorithm actually do. The simplest choice is just to repeat all pairs of indexes, \(n-1\) times: for four symbols (graphs with five vertices, but not counting the start), repeat 12–13–14–21–23–24–31–32–34–41–42–43 three times. For \(n\) symbols, this would require a total of \(\bigl(1-o(1)\bigr)n^3\) pairs. A technique of Yen improves this by listing the ascending pairs in ascending order and then the descending pairs in descending order: 12–13–14–23–24–34–43–42–32–41–31–21. Such a sequence can cover the pairs from any run of ascending symbols followed by any run of descending symbols: for instance, it would by itself cover the pairs from the permutations 1234, 1243, 1342, 1432, 2341, 2431, 3421, and 4321, which each consist of one ascending and one descending run. In general, you only need to repeat this ascending-descending pair sequence \(\lceil n/2\rceil\) times to cover all ascending and descending runs, giving pair supersequences of &lt;span style=&quot;white-space:nowrap&quot;&gt;length \(\bigl(\tfrac12-o(1)\bigr)n^3\).&lt;/span&gt; And if you’re willing to tolerate a randomized algorithm that is correct only with high probability instead of with certainty, &lt;a href=&quot;/blog/2011/04/11/randomized-bellmanford.html&quot;&gt;a paper of mine with Michael Bannister from 2012&lt;/a&gt; randomly permutes the symbols before using Yen’s ascending-descending method to achieve &lt;span style=&quot;white-space:nowrap&quot;&gt;length \(\bigl(\tfrac13+o(1)\bigr)n^3\).&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;My newest preprint, “Lower bounds for non-adaptive shortest path relaxation” (&lt;a href=&quot;https://arxiv.org/abs/2305.09230&quot;&gt;arXiv:2305.09230&lt;/a&gt;, to appear at WADS), as the title suggests, looks at the lower bound side of the same problem. It shows that deterministically chosen sequences of pairs must have length at least \(\bigl(\tfrac16-o(1)\bigr)n^3\) and that random sequences (correct with high probability) must have length at least \(\bigl(\tfrac1{12}-o(1)\bigr)n^3\). It also contains analogous bounds for graphs that are not complete. However, these lower bounds are still far from the upper bounds. They are not even close enough to tell me whether randomized Bellman–Ford is really better than deterministic Bellman–Ford (in this non-adaptive setting) or whether a better deterministic pair sequence would beat the random one from my 2012 paper.&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/110384942112779003&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-17 09:11:00 UTC</pubDate>
+  <author>David Eppstein</author>
+</item>
+
+<item>
   <title>The Hardness of Reasoning about Probabilities and Causality</title>
   <guid>http://arxiv.org/abs/2305.09508</guid>
   <link>http://arxiv.org/abs/2305.09508</link>
@@ -1434,7 +1461,7 @@ graphs by strategic agents.
   <guid>tag:blogger.com,1999:blog-3722233.post-6967500125921426284</guid>
   <link>https://blog.computationalcomplexity.org/2023/05/take-number-and-map-it-to-number-of.html</link>
   <description>
-    &lt;p&gt;Let f: N--&amp;gt; N map a number to the number-of-letters in its name in English (we will consider other languages later).&lt;/p&gt;&lt;p&gt;So for example 14 is fourteen so it maps to 7. Let&#39;s iterate&lt;/p&gt;&lt;p&gt;14 --&amp;gt; 7 --&amp;gt; 5 --&amp;gt; 4--&amp;gt;4--&amp;gt;4 ...&lt;/p&gt;&lt;p&gt;It is known (perhaps well-known) that, given any starting point, the sequence eventually is all 4&#39;s.&amp;nbsp;&lt;/p&gt;&lt;p&gt;I recently got an email asking if this was PROVEN.&amp;nbsp; I could not find a proof on the web so I did it myself. My writeup of a proof is &lt;a href=&quot;https://www.cs.umd.edu/~gasarch/BLOGPAPERS/four.pdf&quot;&gt;here&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;&lt;p&gt;1) So now there IS a proof on the web. It may be hard to find. Does this problem have a well known name that I should add to this blog post so that it is easier to find?&lt;/p&gt;&lt;p&gt;2) My next thought was&lt;/p&gt;&lt;p&gt;For which functions f: N--&amp;gt;N is it the case that every sequence a, f(a), f(f(a)), ... is eventually constant. I leave that for you to ponder.&lt;/p&gt;&lt;p&gt;3) The asker of the question is of a more real-world bent and emailed me what happens in other languages:&lt;/p&gt;&lt;p&gt;Spanish has one number whose name is its own length: 5 is cinco. I leave it to the reader to show that in Spanish the sequence always becomes all 5&#39;s.&lt;/p&gt;&lt;p&gt;French seems to have no such numbers, so it cannot have this behavior.&lt;/p&gt;&lt;p&gt;Norwegian has three such numbers: 2 is to, 3 is tre, 4 is fire. So I suspect every such sequence either is constant-2, constant-3 or contant-4.&lt;/p&gt;&lt;p&gt;See this article&amp;nbsp;&lt;a href=&quot;https://mathlair.allfunandgames.ca/languages.php&quot;&gt;here&lt;/a&gt;&amp;nbsp;for more the numbers 1-10 in several languages.&lt;/p&gt;&lt;p&gt;OBLIGATORY ChatGpt note: Lance saw this post in our blog account and was curious what ChatGpt would do with it. For what he got see&amp;nbsp;&lt;a href=&quot;https://www.cs.umd.edu/~gasarch/BLOGPAPERS/mapnum.txt&quot;&gt;here&lt;/a&gt;. You can decide if a program can take over the blog anytime soon.&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
+    &lt;p&gt;Let f: N--&amp;gt; N map a number to the number-of-letters in its name in English (we will consider other languages later).&lt;/p&gt;&lt;p&gt;So for example 14 is fourteen so it maps to 7. Let&#39;s iterate&lt;/p&gt;&lt;p&gt;14 --&amp;gt; 7 --&amp;gt; 5 --&amp;gt; 4--&amp;gt;4--&amp;gt;4 ...&lt;/p&gt;&lt;p&gt;It is known (perhaps well-known) that, given any starting point, the sequence eventually is all 4&#39;s.&amp;nbsp;&lt;/p&gt;&lt;p&gt;I recently got an email asking if this was PROVEN.&amp;nbsp; I could not find a proof on the web so I did it myself. My writeup of a proof is &lt;a href=&quot;https://www.cs.umd.edu/~gasarch/BLOGPAPERS/four.pdf&quot;&gt;here&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;&lt;p&gt;1) So now there IS a proof on the web. It may be hard to find. Does this problem have a well known name that I should add to this blog post so that it is easier to find?&lt;/p&gt;&lt;p&gt;2) My next thought was&lt;/p&gt;&lt;p&gt;For which functions f: N--&amp;gt;N is it the case that every sequence a, f(a), f(f(a)), ... is eventually constant. I leave that for you to ponder.&lt;/p&gt;&lt;p&gt;3) The asker of the question is of a more real-world bent and emailed me what happens in other languages:&lt;/p&gt;&lt;p&gt;Spanish has one number whose name is its own length: 5 is cinco. I leave it to the reader to show that in Spanish the sequence always becomes all 5&#39;s. (NOTE- a commenter says NO, you an have a 4-6 cycle. Cool!)&amp;nbsp;&lt;/p&gt;&lt;p&gt;French seems to have no such numbers, so it cannot have this behavior.&lt;/p&gt;&lt;p&gt;Norwegian has three such numbers: 2 is to, 3 is tre, 4 is fire. So I suspect every such sequence either is constant-2, constant-3 or contant-4.&lt;/p&gt;&lt;p&gt;See this article&amp;nbsp;&lt;a href=&quot;https://mathlair.allfunandgames.ca/languages.php&quot;&gt;here&lt;/a&gt;&amp;nbsp;for more the numbers 1-10 in several languages.&lt;/p&gt;&lt;p&gt;OBLIGATORY ChatGpt note: Lance saw this post in our blog account and was curious what ChatGpt would do with it. For what he got see&amp;nbsp;&lt;a href=&quot;https://www.cs.umd.edu/~gasarch/BLOGPAPERS/mapnum.txt&quot;&gt;here&lt;/a&gt;. You can decide if a program can take over the blog anytime soon.&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
   </description>
   <pubDate>2023-05-14 21:53:00 UTC</pubDate>
   <author>Computational Complexity</author>
@@ -2083,42 +2110,6 @@ question in the affirmative whenever the hypergraph corresponds to the closed
 neighborhoods of a graph, i.e., we show that the intimately related problem of
 enumerating minimal dominating sets in graphs admits an FPT-delay algorithm
 parameterized by the degeneracy and the maximum degree.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-12 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Fair Price Discrimination</title>
-  <guid>http://arxiv.org/abs/2305.07006</guid>
-  <link>http://arxiv.org/abs/2305.07006</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Banerjee_S/0/1/0/all/0/1&quot;&gt;Siddhartha Banerjee&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Munagala_K/0/1/0/all/0/1&quot;&gt;Kamesh Munagala&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shen_Y/0/1/0/all/0/1&quot;&gt;Yiheng Shen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_K/0/1/0/all/0/1&quot;&gt;Kangning Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A seller is pricing identical copies of a good to a stream of unit-demand
-buyers. Each buyer has a value on the good as his private information. The
-seller only knows the empirical value distribution of the buyer population and
-chooses the revenue-optimal price. We consider a widely studied third-degree
-price discrimination model where an information intermediary with perfect
-knowledge of the arriving buyer&#39;s value sends a signal to the seller, hence
-changing the seller&#39;s posterior and inducing the seller to set a personalized
-posted price. Prior work of Bergemann, Brooks, and Morris (American Economic
-Review, 2015) has shown the existence of a signaling scheme that preserves
-seller revenue, while always selling the item, hence maximizing consumer
-surplus. In a departure from prior work, we ask whether the consumer surplus
-generated is fairly distributed among buyers with different values. To this
-end, we aim to maximize welfare functions that reward more balanced surplus
-allocations.
-&lt;/p&gt;
-&lt;p&gt;Our main result is the surprising existence of a novel signaling scheme that
-simultaneously $8$-approximates all welfare functions that are non-negative,
-monotonically increasing, symmetric, and concave, compared with any other
-signaling scheme. Classical examples of such welfare functions include the
-utilitarian social welfare, the Nash welfare, and the max-min welfare. Such a
-guarantee cannot be given by any consumer-surplus-maximizing scheme -- which
-are the ones typically studied in the literature. In addition, our scheme is
-socially efficient, and has the fairness property that buyers with higher
-values enjoy higher expected surplus, which is not always the case for existing
-schemes.
 &lt;/p&gt;
   </description>
   <pubDate>2023-05-12 00:30:00 UTC</pubDate>
