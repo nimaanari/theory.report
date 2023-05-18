@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-05-18T01:30:15Z">Thursday, May 18 2023, 01:30</time>
+          <time class='timeago' datetime="2023-05-18T01:45:54Z">Thursday, May 18 2023, 01:45</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -1134,6 +1134,69 @@ bipartite graphs has been an open problem. We give a polynomial-time algorithm
 to solve List $3$-Coloring for caterpillar-convex bipartite graphs, a
 superclass of comb-convex bipartite graphs. We also give a polynomial-time
 recognition algorithm for the class of caterpillar-convex bipartite graphs.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-18T00:30:00Z">Thursday, May 18 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.10292'>Linear Query Approximation Algorithms for Non-monotone Submodular Maximization under Knapsack Constraint</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Canh V. Pham, Tan D. Tran, Dung T.K. Ha, My T. Thai</p><p>This work, for the first time, introduces two constant factor approximation
+algorithms with linear query complexity for non-monotone submodular
+maximization over a ground set of size $n$ subject to a knapsack constraint,
+$\mathsf{DLA}$ and $\mathsf{RLA}$. $\mathsf{DLA}$ is a deterministic algorithm
+that provides an approximation factor of $6+\epsilon$ while $\mathsf{RLA}$ is a
+randomized algorithm with an approximation factor of $4+\epsilon$. Both run in
+$O(n \log(1/\epsilon)/\epsilon)$ query complexity. The key idea to obtain a
+constant approximation ratio with linear query lies in: (1) dividing the ground
+set into two appropriate subsets to find the near-optimal solution over these
+subsets with linear queries, and (2) combining a threshold greedy with
+properties of two disjoint sets or a random selection process to improve
+solution quality. In addition to the theoretical analysis, we have evaluated
+our proposed solutions with three applications: Revenue Maximization, Image
+Summarization, and Maximum Weighted Cut, showing that our algorithms not only
+return comparative results to state-of-the-art algorithms but also require
+significantly fewer queries.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Pham_C/0/1/0/all/0/1">Canh V. Pham</a>, <a href="http://arxiv.org/find/cs/1/au:+Tran_T/0/1/0/all/0/1">Tan D. Tran</a>, <a href="http://arxiv.org/find/cs/1/au:+Ha_D/0/1/0/all/0/1">Dung T.K. Ha</a>, <a href="http://arxiv.org/find/cs/1/au:+Thai_M/0/1/0/all/0/1">My T. Thai</a></p><p>This work, for the first time, introduces two constant factor approximation
+algorithms with linear query complexity for non-monotone submodular
+maximization over a ground set of size $n$ subject to a knapsack constraint,
+$\mathsf{DLA}$ and $\mathsf{RLA}$. $\mathsf{DLA}$ is a deterministic algorithm
+that provides an approximation factor of $6+\epsilon$ while $\mathsf{RLA}$ is a
+randomized algorithm with an approximation factor of $4+\epsilon$. Both run in
+$O(n \log(1/\epsilon)/\epsilon)$ query complexity. The key idea to obtain a
+constant approximation ratio with linear query lies in: (1) dividing the ground
+set into two appropriate subsets to find the near-optimal solution over these
+subsets with linear queries, and (2) combining a threshold greedy with
+properties of two disjoint sets or a random selection process to improve
+solution quality. In addition to the theoretical analysis, we have evaluated
+our proposed solutions with three applications: Revenue Maximization, Image
+Summarization, and Maximum Weighted Cut, showing that our algorithms not only
+return comparative results to state-of-the-art algorithms but also require
+significantly fewer queries.
 </p>
         
         </div>
@@ -3789,85 +3852,6 @@ motivation is tight approximation with reduced label complexity (number of
 labels revealed). We reduce label complexity by $\Omega(\sqrt{n})$. Open
 question: Can label complexity be reduced by $\Omega(n)$ with tight
 $(1+d/n)$-approximation?
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-15T00:30:00Z">Monday, May 15 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.07494'>Temporal Network Creation Games</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Davide Bil&#xf2;, Sarel Cohen, Tobias Friedrich, Hans Gawendowicz, Nicolas Klodt, Pascal Lenzner, George Skretas</p><p>Most networks are not static objects, but instead they change over time. This
-observation has sparked rigorous research on temporal graphs within the last
-years. In temporal graphs, we have a fixed set of nodes and the connections
-between them are only available at certain time steps. This gives rise to a
-plethora of algorithmic problems on such graphs, most prominently the problem
-of finding temporal spanners, i.e., the computation of subgraphs that guarantee
-all pairs reachability via temporal paths. To the best of our knowledge, only
-centralized approaches for the solution of this problem are known. However,
-many real-world networks are not shaped by a central designer but instead they
-emerge and evolve by the interaction of many strategic agents. This observation
-is the driving force of the recent intensive research on game-theoretic network
-formation models.
-</p>
-<p>In this work we bring together these two recent research directions: temporal
-graphs and game-theoretic network formation. As a first step into this new
-realm, we focus on a simplified setting where a complete temporal host graph is
-given and the agents, corresponding to its nodes, selfishly create incident
-edges to ensure that they can reach all other nodes via temporal paths in the
-created network. This yields temporal spanners as equilibria of our game. We
-prove results on the convergence to and the existence of equilibrium networks,
-on the complexity of finding best agent strategies, and on the quality of the
-equilibria. By taking these first important steps, we uncover challenging open
-problems that call for an in-depth exploration of the creation of temporal
-graphs by strategic agents.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bilo_D/0/1/0/all/0/1">Davide Bil&#xf2;</a>, <a href="http://arxiv.org/find/cs/1/au:+Cohen_S/0/1/0/all/0/1">Sarel Cohen</a>, <a href="http://arxiv.org/find/cs/1/au:+Friedrich_T/0/1/0/all/0/1">Tobias Friedrich</a>, <a href="http://arxiv.org/find/cs/1/au:+Gawendowicz_H/0/1/0/all/0/1">Hans Gawendowicz</a>, <a href="http://arxiv.org/find/cs/1/au:+Klodt_N/0/1/0/all/0/1">Nicolas Klodt</a>, <a href="http://arxiv.org/find/cs/1/au:+Lenzner_P/0/1/0/all/0/1">Pascal Lenzner</a>, <a href="http://arxiv.org/find/cs/1/au:+Skretas_G/0/1/0/all/0/1">George Skretas</a></p><p>Most networks are not static objects, but instead they change over time. This
-observation has sparked rigorous research on temporal graphs within the last
-years. In temporal graphs, we have a fixed set of nodes and the connections
-between them are only available at certain time steps. This gives rise to a
-plethora of algorithmic problems on such graphs, most prominently the problem
-of finding temporal spanners, i.e., the computation of subgraphs that guarantee
-all pairs reachability via temporal paths. To the best of our knowledge, only
-centralized approaches for the solution of this problem are known. However,
-many real-world networks are not shaped by a central designer but instead they
-emerge and evolve by the interaction of many strategic agents. This observation
-is the driving force of the recent intensive research on game-theoretic network
-formation models.
-</p>
-<p>In this work we bring together these two recent research directions: temporal
-graphs and game-theoretic network formation. As a first step into this new
-realm, we focus on a simplified setting where a complete temporal host graph is
-given and the agents, corresponding to its nodes, selfishly create incident
-edges to ensure that they can reach all other nodes via temporal paths in the
-created network. This yields temporal spanners as equilibria of our game. We
-prove results on the convergence to and the existence of equilibrium networks,
-on the complexity of finding best agent strategies, and on the quality of the
-equilibria. By taking these first important steps, we uncover challenging open
-problems that call for an in-depth exploration of the creation of temporal
-graphs by strategic agents.
 </p>
         
         </div>

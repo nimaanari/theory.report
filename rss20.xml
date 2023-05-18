@@ -350,6 +350,33 @@ recognition algorithm for the class of caterpillar-convex bipartite graphs.
 </item>
 
 <item>
+  <title>Linear Query Approximation Algorithms for Non-monotone Submodular Maximization under Knapsack Constraint</title>
+  <guid>http://arxiv.org/abs/2305.10292</guid>
+  <link>http://arxiv.org/abs/2305.10292</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pham_C/0/1/0/all/0/1&quot;&gt;Canh V. Pham&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tran_T/0/1/0/all/0/1&quot;&gt;Tan D. Tran&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ha_D/0/1/0/all/0/1&quot;&gt;Dung T.K. Ha&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Thai_M/0/1/0/all/0/1&quot;&gt;My T. Thai&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This work, for the first time, introduces two constant factor approximation
+algorithms with linear query complexity for non-monotone submodular
+maximization over a ground set of size $n$ subject to a knapsack constraint,
+$\mathsf{DLA}$ and $\mathsf{RLA}$. $\mathsf{DLA}$ is a deterministic algorithm
+that provides an approximation factor of $6+\epsilon$ while $\mathsf{RLA}$ is a
+randomized algorithm with an approximation factor of $4+\epsilon$. Both run in
+$O(n \log(1/\epsilon)/\epsilon)$ query complexity. The key idea to obtain a
+constant approximation ratio with linear query lies in: (1) dividing the ground
+set into two appropriate subsets to find the near-optimal solution over these
+subsets with linear queries, and (2) combining a threshold greedy with
+properties of two disjoint sets or a random selection process to improve
+solution quality. In addition to the theoretical analysis, we have evaluated
+our proposed solutions with three applications: Revenue Maximization, Image
+Summarization, and Maximum Weighted Cut, showing that our algorithms not only
+return comparative results to state-of-the-art algorithms but also require
+significantly fewer queries.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-05-18 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Permutation supersequences and shortest paths</title>
   <guid>https://11011110.github.io/blog/2023/05/17/permutation-supersequences-shortest</guid>
   <link>https://11011110.github.io/blog/2023/05/17/permutation-supersequences-shortest.html</link>
@@ -1756,41 +1783,6 @@ motivation is tight approximation with reduced label complexity (number of
 labels revealed). We reduce label complexity by $\Omega(\sqrt{n})$. Open
 question: Can label complexity be reduced by $\Omega(n)$ with tight
 $(1+d/n)$-approximation?
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-15 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Temporal Network Creation Games</title>
-  <guid>http://arxiv.org/abs/2305.07494</guid>
-  <link>http://arxiv.org/abs/2305.07494</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bilo_D/0/1/0/all/0/1&quot;&gt;Davide Bil&amp;#xf2;&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cohen_S/0/1/0/all/0/1&quot;&gt;Sarel Cohen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Friedrich_T/0/1/0/all/0/1&quot;&gt;Tobias Friedrich&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gawendowicz_H/0/1/0/all/0/1&quot;&gt;Hans Gawendowicz&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Klodt_N/0/1/0/all/0/1&quot;&gt;Nicolas Klodt&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lenzner_P/0/1/0/all/0/1&quot;&gt;Pascal Lenzner&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Skretas_G/0/1/0/all/0/1&quot;&gt;George Skretas&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Most networks are not static objects, but instead they change over time. This
-observation has sparked rigorous research on temporal graphs within the last
-years. In temporal graphs, we have a fixed set of nodes and the connections
-between them are only available at certain time steps. This gives rise to a
-plethora of algorithmic problems on such graphs, most prominently the problem
-of finding temporal spanners, i.e., the computation of subgraphs that guarantee
-all pairs reachability via temporal paths. To the best of our knowledge, only
-centralized approaches for the solution of this problem are known. However,
-many real-world networks are not shaped by a central designer but instead they
-emerge and evolve by the interaction of many strategic agents. This observation
-is the driving force of the recent intensive research on game-theoretic network
-formation models.
-&lt;/p&gt;
-&lt;p&gt;In this work we bring together these two recent research directions: temporal
-graphs and game-theoretic network formation. As a first step into this new
-realm, we focus on a simplified setting where a complete temporal host graph is
-given and the agents, corresponding to its nodes, selfishly create incident
-edges to ensure that they can reach all other nodes via temporal paths in the
-created network. This yields temporal spanners as equilibria of our game. We
-prove results on the convergence to and the existence of equilibrium networks,
-on the complexity of finding best agent strategies, and on the quality of the
-equilibria. By taking these first important steps, we uncover challenging open
-problems that call for an in-depth exploration of the creation of temporal
-graphs by strategic agents.
 &lt;/p&gt;
   </description>
   <pubDate>2023-05-15 00:30:00 UTC</pubDate>
