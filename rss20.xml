@@ -9,6 +9,34 @@
 
 
 <item>
+  <title>TR23-072 |  Range Avoidance, Remote Point, and Hard Partial Truth Tables via Satisfying-Pairs Algorithms | 
+
+	Yeyuan Chen, 
+
+	Yizhi Huang, 
+
+	Jiatu Li, 
+
+	Hanlin Ren</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/072</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/072</link>
+  <description>
+    The *range avoidance problem*, denoted as $\mathcal{C}$-$\rm Avoid$, asks to find a non-output of a given $\mathcal{C}$-circuit $C:\{0,1\}^n\to\{0,1\}^\ell$ with stretch $\ell&amp;gt;n$. This problem has recently received much attention in complexity theory for its connections with circuit lower bounds and other explicit construction problems. Inspired by the Algorithmic Method for circuit lower bounds, Ren, Santhanam, and Wang (FOCS&amp;#39;22) established a framework to design $\rm FP^{NP}$ algorithms for $\mathcal{C}$-$\rm Avoid$ via *slightly non-trivial* data structures related to $\mathcal{C}$. However, a major drawback of their approach is the lack of unconditional results even for $\mathcal{C}={\rm AC}^0$.
+	
+In this work, we present the first unconditional $\rm FP^{NP}$ algorithm for ${\rm ACC}^0$-$\rm Avoid$. Indeed, we obtain $\rm FP^{NP}$ algorithms for the following stronger problems:
+$\bullet$ (${\rm ACC}^0$-$\rm RemotePoint$). Given $C:\{0,1\}^n\to\{0,1\}^\ell$ for some $\ell={\rm quasipoly}(n)$ such that each output bit of $C$ is computed by a ${\rm quasipoly}(n)$-size ${\rm AC}^0[m]$ circuit, we can find some $y\in\{0,1\}^\ell$ in $\rm FP^{NP}$ such that for every $x\in\{0, 1\}^n$, the relative Hamming distance between $y$ and $C(x)$ is at least $1/2-1/{\rm poly}(n)$. This problem is the ``average-case&amp;#39;&amp;#39; analogue of ${\rm ACC}^0$-$\rm Avoid$.
+$\bullet$ (${\rm ACC}^0$-$\rm AvgPartialHard$). Given $x_1,\dots,x_\ell\in\{0,1\}^n$ for some $\ell={\rm quasipoly}(n)$, we can compute $\ell$ bits $y_1,\dots,y_\ell\in\{0,1\}$ in $\rm FP^{NP}$ such that for every $2^{\log^c(n)}$-size ${\rm ACC}^0$ circuit $C$, $\Pr_i[C(x_i)\ne y_i]\ge 1/2-1/{\rm poly}(n)$, where $c=O(1)$. This problem generalises the strong average-case circuit lower bounds against ${\rm ACC}^0$ in a different way. 
+Our algorithms can be seen as natural generalisations of the best known almost-everywhere average-case lower bounds against ${\rm ACC}^0$ circuits by Chen, Lyu, and Williams (FOCS&amp;#39;20). Note that both problems above have been studied prior to our work, and no $\rm FP^{NP}$ algorithm was known even for weak circuit classes such as ${\rm GF}(2)$-linear circuits and DNF formulas. 
+
+Our results follow from a strengthened algorithmic method: slightly non-trivial algorithms for the *Satisfying-Pairs* problem for $\mathcal{C}$ implies $\rm FP^{NP}$ algorithms for $\mathcal{C}$-$\rm Avoid$ (as well as $\mathcal{C}$-$\rm RemotePoint$ and $\mathcal{C}$-$\rm AvgPartialHard$). Here, given $\mathcal{C}$-circuits $\{C_i\}$ and inputs $\{x_j\}$, the $\mathcal{C}$-Satisfying-Pairs problem asks to (approximately) count the number of pairs $(i,j)$ such that $C_i(x_j)=1$.
+	
+A technical contribution of this work is a construction of a *short, smooth, and rectangular PCP of Proximity* that combines two previous PCP constructions, which may be of independent interest. It serves as a key tool that allows us to generalise the framework for $\rm Avoid$ to the average-case scenarios.
+  </description>
+  <pubDate>2023-05-18 12:12:41 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>FODSI Summer School on the Foundations of Data Science.</title>
   <guid>http://cstheory-events.org/2023/05/18/fodsi-summer-school-on-the-foundations-of-data-science/</guid>
   <link>https://cstheory-events.org/2023/05/18/fodsi-summer-school-on-the-foundations-of-data-science/</link>
@@ -1740,40 +1768,6 @@ $\texttt{CMS}$-$\texttt{BWT}$, both competitive in our experimental validation
 on highly repetitive real-life datasets. In most cases, they outperform other
 tools w.r.t. running time, trading off a higher memory footprint, which,
 however, is still considerably smaller than the total size of the input data.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-15 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>On the Fair Comparison of Optimization Algorithms in Different Machines</title>
-  <guid>http://arxiv.org/abs/2305.07345</guid>
-  <link>http://arxiv.org/abs/2305.07345</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arza_E/0/1/0/all/0/1&quot;&gt;Etor Arza&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ceberio_J/0/1/0/all/0/1&quot;&gt;Josu Ceberio&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Irurozki_E/0/1/0/all/0/1&quot;&gt;Ekhi&amp;#xf1;e Irurozki&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Perez_A/0/1/0/all/0/1&quot;&gt;Aritz P&amp;#xe9;rez&lt;/a&gt;&lt;/p&gt;&lt;p&gt;An experimental comparison of two or more optimization algorithms requires
-the same computational resources to be assigned to each algorithm. When a
-maximum runtime is set as the stopping criterion, all algorithms need to be
-executed in the same machine if they are to use the same resources.
-Unfortunately, the implementation code of the algorithms is not always
-available, which means that running the algorithms to be compared in the same
-machine is not always possible. And even if they are available, some
-optimization algorithms might be costly to run, such as training large
-neural-networks in the cloud.
-&lt;/p&gt;
-&lt;p&gt;In this paper, we consider the following problem: how do we compare the
-performance of a new optimization algorithm B with a known algorithm A in the
-literature if we only have the results (the objective values) and the runtime
-in each instance of algorithm A? Particularly, we present a methodology that
-enables a statistical analysis of the performance of algorithms executed in
-different machines. The proposed methodology has two parts. Firstly, we propose
-a model that, given the runtime of an algorithm in a machine, estimates the
-runtime of the same algorithm in another machine. This model can be adjusted so
-that the probability of estimating a runtime longer than what it should be is
-arbitrarily low. Secondly, we introduce an adaptation of the one-sided sign
-test that uses a modified \textit{p}-value and takes into account that
-probability. Such adaptation avoids increasing the probability of type I error
-associated with executing algorithms A and B in different machines.
 &lt;/p&gt;
   </description>
   <pubDate>2023-05-15 00:30:00 UTC</pubDate>
