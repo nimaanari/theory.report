@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-05-19T09:30:35Z">Friday, May 19 2023, 09:30</time>
+          <time class='timeago' datetime="2023-05-19T10:30:42Z">Friday, May 19 2023, 10:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,164 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Friday, May 19
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://scottaaronson.blog/?p=7321'>Book Review: &#8220;Quantum Supremacy&#8221; by Michio Kaku (tl;dr DO NOT BUY)</a></h3>
+        <p class='tr-article-feed'>from <a href='https://scottaaronson.blog'>Scott Aaronson</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          When I was a teenager, I enjoyed reading Hyperspace, an early popularization of string theory by the theoretical physicist Michio Kaku. I&#8217;m sure I&#8217;d have plenty of criticisms if I reread it today, but at the time, I liked it a lot. In the decades since, Kaku has widened his ambit to, well, pretty much [&#8230;]
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>When I was a teenager, I enjoyed reading <em><a href="https://www.amazon.com/Hyperspace-Scientific-Parallel-Universes-Dimension/dp/0385477058">Hyperspace</a></em>, an early popularization of string theory by the theoretical physicist Michio Kaku.  I&#8217;m sure I&#8217;d have plenty of criticisms if I reread it today, but at the time, I liked it a lot.  In the decades since, Kaku has widened his ambit to, well, pretty much everything, regularly churning out popular books with subtitles like &#8220;How Science Will Revolutionize the 21st Century&#8221; and &#8220;How Science Will Shape Human Destiny and Our Daily Lives.&#8221;  He&#8217;s also appeared on countless TV specials, in many cases to argue that UFOs likely contain extraterrestrial visitors.</p>
+
+
+
+<p>Now Kaku has a new bestseller about quantum computing, creatively entitled <em><a href="https://www.amazon.com/Quantum-Supremacy-Computer-Revolution-Everything/dp/0385548362">Quantum Supremacy</a></em>.  He even <a href="https://ogjre.com/episode/1980-michio-kaku">appeared on Joe Rogan</a> a couple weeks ago to promote the book, surely reaching an orders-of-magnitude larger audience than I have in two decades of trying to explain quantum computing to non-experts.  (Incidentally, to those who&#8217;ve asked why Joe Rogan hasn&#8217;t invited <em>me</em> on his show to explain quantum computing: I guess you now have an answer of sorts!)</p>
+
+
+
+<p>In the spirit, perhaps, of the TikTokkers who eat live cockroaches or whatever to satisfy their viewers, I decided to oblige loyal <em>Shtetl-Optimized</em> fans by buying <em>Quantum Supremacy</em> and reading it.  So I can now state with confidence: beating out a crowded field, this is <strong>the worst book about quantum computing,</strong> for some definition of the word &#8220;about,&#8221; that I&#8217;ve ever encountered.</p>
+
+
+
+<p>Admittedly, it&#8217;s not obvious why I&#8217;m reviewing the book here at all.  Among people who&#8217;ve heard of this blog, I expect that approximately zero would be tempted to buy Kaku&#8217;s book, at least if they flipped through a few random pages and saw the &#8230; <em>level of care</em> that went into them.  Conversely, the book&#8217;s target readers have probably never visited a blog like this one and never will.  So what&#8217;s the use of this post?</p>
+
+
+
+<p>Well, as the accidental #1 quantum computing blogger on the planet, I feel a sort of grim obligation here.  Who knows, maybe this post will show up in the first page of Google results for Kaku&#8217;s book, and it will manage to rescue two or three people from the kindergarten of lies.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Where to begin?  Should we just go through <em>the first chapter</em> with a red pen?  OK then: on the very first page, Kaku writes,</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>Google revealed that their Sycamore quantum computer could solve a mathematical problem in 200 seconds that would take 10,000 years on the world&#8217;s fastest supercomputer.</p>
+</blockquote>
+
+
+
+<p>No, the &#8220;10,000 years&#8221; estimate was <a href="https://scottaaronson.blog/?p=4372">quickly falsified</a>, as anyone following the subject knows.  I&#8217;d be the first to stress that the situation is complicated; compared to the best currently-known classical algorithms, some quantum advantage remains for the Random Circuit Sampling task, depending on how you measure it.  But to repeat the &#8220;10,000 years&#8221; figure at this point, with no qualifications, is actively misleading.</p>
+
+
+
+<p>Turning to the second page:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>[Quantum computers] are a new type of computer that can tackle problems that digital computers can never solve, even with an infinite amount of time.  For example, digital computers can never accurately calculate how atoms combine to create crucial chemical reactions, especially those that make life possible.  Digital computers can only compute on digital tape, consisting of a series of 0s and 1s, which are too crude to describe the delicate waves of electrons dancing deep inside a molecule.  For example, when tediously computing the paths taken by a mouse in a maze, a digital computer has to painfully analyze each possible path, one after the other.  A quantum computer, however, <em>simultaneously</em> analyzes all possible paths at the same time, with lightning speed.</p>
+</blockquote>
+
+
+
+<p>OK, so here Kaku has already perpetuated two of the most basic, forehead-banging errors about what quantum computers can do.  In truth, anything that a QC can calculate, a classical computer can calculate as well, <em>given exponentially more time</em>: for example, by representing the entire wavefunction, all 2<sup>n</sup> amplitudes, to whatever accuracy is needed.  That&#8217;s why it was understood from the very beginning that quantum computers can&#8217;t change what&#8217;s computable, but only how <em>efficiently</em> things can be computed.</p>
+
+
+
+<p>And then there&#8217;s the Misconception of Misconceptions, about how a QC &#8220;analyzes all possible paths at the same time&#8221;&#8212;with no recognition anywhere of the central difficulty, the thing that makes a QC enormously <em>weaker</em> than an exponentially parallel classical computer, but is also the new and interesting part, namely that you only get to see a <em>single, random outcome</em> when you measure.  That&#8217;s the one so common that I warn against it right below the title of my blog.</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>[Q]uantum computers are so powerful that, in principle, they could break all known cybercodes.</p>
+</blockquote>
+
+
+
+<p>Nope, that&#8217;s strongly believed to be false, just like the analogous statement for <em>classical</em> computers.  Despite its obvious relevance for business and policy types, the entire field of <a href="https://en.wikipedia.org/wiki/Post-quantum_cryptography">post-quantum cryptography</a>&#8212;including the <a href="https://en.wikipedia.org/wiki/Lattice-based_cryptography">lattice-based public-key cryptosystems</a> that have by now survived 20+ years of efforts to find a quantum algorithm to break them&#8212;receives just a single vague mention, on pages 84-85.  The possibility of cryptography surviving quantum computers is quickly dismissed because &#8220;these new trapdoor functions are not easy to implement.&#8221;  (But they <em><a href="https://cloud.google.com/blog/products/identity-security/why-google-now-uses-post-quantum-cryptography-for-internal-comms">have</a></em> been implemented.)</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>There&#8217;s no attempt, anywhere in this book, to explain how any quantum algorithm actually works, let alone is there any word anywhere about the <em>limitations</em> of quantum algorithms.  And yet there&#8217;s still enough said to be wrong.  On page 84, shortly after confusing the concept of a <a href="https://en.wikipedia.org/wiki/One-way_function">one-way function</a> with that of a <a href="https://en.wikipedia.org/wiki/Trapdoor_function">trapdoor function</a>, Kaku writes:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>Let N represent the number we wish to factorize.  For an ordinary digital computer, the amount of time it takes to factorize a number grows exponentially, like t ~ e<sup>N</sup>, times some unimportant factors.</p>
+</blockquote>
+
+
+
+<p>This is a double howler: first, trial division takes only ~√N time; Kaku has confused N itself with its <em>number of digits</em>, ~log<sub>2</sub>N.  Second, he seems unaware that much better classical factoring algorithms, like the <a href="https://en.wikipedia.org/wiki/General_number_field_sieve">Number Field Sieve</a>, have been known for decades, even though those algorithms play a central role in codebreaking and in any discussion of where the quantum/classical crossover might happen.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>Honestly, though, the errors aren&#8217;t the worst of it.  The majority of the book is not even <em>worth</em> hunting for errors in, because fundamentally, it&#8217;s <em>filler</em>.</p>
+
+
+
+<p>First there&#8217;s page after page breathlessly quoting prestigious-sounding people and organizations&#8212;Google&#8217;s Sundar Pichai, various government agencies, some report by Deloitte&#8212;about just how revolutionary they think quantum computing will be.  Then there are capsule hagiographies of Babbage and Lovelace, Gödel and Turing, Planck and Einstein, Feynman and Everett.</p>
+
+
+
+<p>And then the bulk of the book is actually about stuff <em>with no direct relation to quantum computing at all</em>&#8212;the origin of life, climate change, energy generation, cancer, curing aging, etc.&#8212;except with ungrounded speculations tacked onto the end of each chapter about how quantum computers will someday revolutionize all of this.  Personally, I&#8217;d say that</p>
+
+
+
+<ol>
+<li>Quantum simulation speeding up progress in biochemistry, high-temperature superconductivity, and the like is at least <em>plausible</em>&#8212;though very far from guaranteed, since one has to beat the cleverest classical approaches (a point that Kaku nowhere grapples with).</li>
+
+
+
+<li>The stuff involving optimization, machine learning, and the like is almost entirely wishful thinking.</li>
+
+
+
+<li>Not once in the book has Kaku even <em>mentioned</em> the intellectual tools that would be needed to distinguish 1 from 2.</li>
+</ol>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>In his acknowledgments section, Kaku simply lists a bunch of famous scientists he&#8217;s met in his life&#8212;Feynman, Witten, Hawking, Penrose, Brian Greene, Lisa Randall, Neil deGrasse Tyson.  Not a single living quantum computing researcher is acknowledged, not one.</p>
+
+
+
+<p>Recently, I&#8217;d been cautiously optimistic that, after decades of overblown headlines about &#8220;trying all answers in parallel,&#8221; &#8220;cracking all known codes,&#8221; etc., the standard for quantum computing popularization was slowly creeping upward.  Maybe I was just bowled over by <a href="https://www.youtube.com/watch?v=-UrdExQW0cs">this recent YouTube video</a> (&#8220;How Quantum Computers Break the Internet&#8230; Starting Now&#8221;), which despite its clickbait title and its slick presentation, miraculously gets essentially everything right, shaming the hypesters by demonstrating just how much better it&#8217;s possible to do.</p>
+
+
+
+<p>Kaku&#8217;s slapdash &#8220;book,&#8221; and the publicity campaign around it, represents a noxious step backwards.  The wonder of it, to me, is Kaku holds a PhD in theoretical physics.  And yet the average English major who&#8217;s written a &#8220;what&#8217;s the deal with quantum computing?&#8221; article for some obscure link aggregator site has done a more careful and honest job than Kaku has.  That&#8217;s setting the bar about a millimeter off the floor.  I think the difference is, at least the English major knows that they&#8217;re supposed to <em>call</em> an expert or two, when writing about an enormously complicated subject of which they&#8217;re completely ignorant.</p>
+<p class="authors">By Scott</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-19T10:15:56Z">Friday, May 19 2023, 10:15</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3759,57 +3917,6 @@ $k$-dimensional Boolean matrix has at least one $1$ in each line (e.g., each
 row and column when $k=2$), in terms of monotone $q$-multilinear Boolean
 circuits. We show that that any $\Sigma_3$ monotone Boolean circuit for
 $Isol_{k,n}$ has an exponential in $n$ size or it is not $(k-1)$-multilinear.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-15T00:30:00Z">Monday, May 15 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.07539'>Sampling recovery in the uniform norm</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: David Krieg, Kateryna Pozharska, Mario Ullrich, Tino Ullrich</p><p>We study the recovery of functions in the uniform norm based on function
-evaluations. We obtain worst case error bounds for general classes of
-functions, also in $L_p$-norm, in terms of the best $L_2$-approximation from a
-given nested sequence of subspaces combined with bounds on the the Christoffel
-function of these subspaces.
-</p>
-<p>Our results imply that linear sampling algorithms are optimal (up to
-constants) among all algorithms using arbitrary linear information for many
-reproducing kernel Hilbert spaces; a result that has been observed
-independently in [Geng \&amp; Wang, arXiv:2304.14748].
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Krieg_D/0/1/0/all/0/1">David Krieg</a>, <a href="http://arxiv.org/find/math/1/au:+Pozharska_K/0/1/0/all/0/1">Kateryna Pozharska</a>, <a href="http://arxiv.org/find/math/1/au:+Ullrich_M/0/1/0/all/0/1">Mario Ullrich</a>, <a href="http://arxiv.org/find/math/1/au:+Ullrich_T/0/1/0/all/0/1">Tino Ullrich</a></p><p>We study the recovery of functions in the uniform norm based on function
-evaluations. We obtain worst case error bounds for general classes of
-functions, also in $L_p$-norm, in terms of the best $L_2$-approximation from a
-given nested sequence of subspaces combined with bounds on the the Christoffel
-function of these subspaces.
-</p>
-<p>Our results imply that linear sampling algorithms are optimal (up to
-constants) among all algorithms using arbitrary linear information for many
-reproducing kernel Hilbert spaces; a result that has been observed
-independently in [Geng \&amp; Wang, <a href="/abs/2304.14748">arXiv:2304.14748</a>].
 </p>
         
         </div>
