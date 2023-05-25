@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-05-25T12:48:42Z">Thursday, May 25 2023, 12:48</time>
+          <time class='timeago' datetime="2023-05-25T13:33:00Z">Thursday, May 25 2023, 13:33</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,37 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, May 25
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/05/finding-primes-pseudodeterministically.html'>Finding Primes Pseudodeterministically</a></h3>
+        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>In 2003, Agrawal, Kayal and Saxena showed that primality testing is in P, i.e., you could test for primes without using any randomness.</p><p>What if you want to find a prime? Specifically given a number m in binary, can you find a prime p &gt; m in time polynomial in the length of m. In 2009 I&nbsp;posted&nbsp;about a polymath project to find a deterministic algorithm for finding primes and the problem remains open today.&nbsp;</p><p>Likely you could just try m+1,m+2, ... until you find a prime but whether that is bounded by a polynomial number of steps is a big open question in number theory. You can choose random numbers between m and 2m and find one in expected polytime given the prime number theorem. This algorithm will likely output a different prime every time you run it.</p><p>There's a new paper by&nbsp;Lijie Chen, Zhenjian Lu, Igor Carboni Oliveira, Hanlin Ren and Rahul Santhanam that solves this problem pseudodeterministically for infinitely many inputs. This is a randomized algorithm B that for infinitely many m, there is a specific prime p &gt; m such that B(m) outputs p with high probability. With high probability you will get the same prime every time you run the algorithm!</p><p>The proof uses a win-win kind of argument, if a certain algorithm fails to work you can use that to derandomize. Making that argument work requires bootstrapping on variants of previous pseudorandom generator and hitting sets constructions.&nbsp;</p><p>Almost surely there is a deterministic polytime algorithm for finding primes. But for now the new result of Chen et al. is the nice stop in that direction.&nbsp;</p><p>By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>In 2003, Agrawal, Kayal and Saxena showed that primality testing is in P, i.e., you could test for primes without using any randomness.</p><p>What if you want to find a prime? Specifically given a number m in binary, can you find a prime p &gt; m in time polynomial in the length of m. In 2009 I&nbsp;<a href="https://blog.computationalcomplexity.org/2009/08/finding-primes.html">posted</a>&nbsp;about a polymath project to find a deterministic algorithm for finding primes and the problem remains open today.&nbsp;</p><p>Likely you could just try m+1,m+2, ... until you find a prime but whether that is bounded by a polynomial number of steps is a big open question in number theory. You can choose random numbers between m and 2m and find one in expected polytime given the <a href="https://en.wikipedia.org/wiki/Prime_number_theorem">prime number theorem</a>. This algorithm will likely output a different prime every time you run it.</p><p>There's a <a href="https://eccc.weizmann.ac.il/report/2023/076/">new paper</a> by&nbsp;Lijie Chen, Zhenjian Lu, Igor Carboni Oliveira, Hanlin Ren and Rahul Santhanam that solves this problem pseudodeterministically for infinitely many inputs. This is a randomized algorithm B that for infinitely many m, there is a specific prime p &gt; m such that B(m) outputs p with high probability. With high probability you will get the same prime every time you run the algorithm!</p><p>The proof uses a win-win kind of argument, if a certain algorithm fails to work you can use that to derandomize. Making that argument work requires bootstrapping on variants of previous pseudorandom generator and hitting sets constructions.&nbsp;</p><p>Almost surely there is a deterministic polytime algorithm for finding primes. But for now the new result of Chen et al. is the nice stop in that direction.&nbsp;</p><p class="authors">By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-05-25T13:17:00Z">Thursday, May 25 2023, 13:17</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3453,81 +3484,6 @@ known [Lov"{a}sz (1989), Gurjar and Thierauf (2020)]. We show that this class
 is closed under approximation. In the language of algebraic geometry, we show
 that the set obtained by taking coordinatewise products of pairs of points from
 (the Pl\"{u}cker embedding of) a Grassmannian variety is closed.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-18T00:30:00Z">Thursday, May 18 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.09984'>The Noncommutative Edmonds' Problem Re-visited</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Abhranil Chatterjee, Partha Mukhopadhyay</p><p>Let $T$ be a matrix whose entries are linear forms over the noncommutative
-variables $x_1, x_2, \ldots, x_n$. The noncommutative Edmonds' problem
-(NSINGULAR) aims to determine whether $T$ is invertible in the free skew field
-generated by $x_1,x_2,\ldots,x_n$. Currently, there are three different
-deterministic polynomial-time algorithms to solve this problem: using operator
-scaling [Garg, Gurvits, Oliveira, and Wigserdon (2016)], algebraic methods
-[Ivanyos, Qiao, and Subrahmanyam (2018)], and convex optimization [Hamada and
-Hirai (2021)].
-</p>
-<p>In this paper, we present a simpler algorithm for the NSINGULAR problem.
-While our algorithmic template is similar to the one in Ivanyos et. al.(2018),
-it significantly differs in its implementation of the rank increment step.
-Instead of computing the limit of a second Wong sequence, we reduce the problem
-to the polynomial identity testing (PIT) of noncommutative algebraic branching
-programs (ABPs).
-</p>
-<p>This enables us to bound the bit-complexity of the algorithm over
-$\mathbb{Q}$ without requiring special care. Moreover, the rank increment step
-can be implemented in quasipolynomial-time even without an explicit description
-of the coefficient matrices in $T$. This is possible by exploiting the
-connection with the black-box PIT of noncommutative ABPs [Forbes and Shpilka
-(2013)].
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chatterjee_A/0/1/0/all/0/1">Abhranil Chatterjee</a>, <a href="http://arxiv.org/find/cs/1/au:+Mukhopadhyay_P/0/1/0/all/0/1">Partha Mukhopadhyay</a></p><p>Let $T$ be a matrix whose entries are linear forms over the noncommutative
-variables $x_1, x_2, \ldots, x_n$. The noncommutative Edmonds' problem
-(NSINGULAR) aims to determine whether $T$ is invertible in the free skew field
-generated by $x_1,x_2,\ldots,x_n$. Currently, there are three different
-deterministic polynomial-time algorithms to solve this problem: using operator
-scaling [Garg, Gurvits, Oliveira, and Wigserdon (2016)], algebraic methods
-[Ivanyos, Qiao, and Subrahmanyam (2018)], and convex optimization [Hamada and
-Hirai (2021)].
-</p>
-<p>In this paper, we present a simpler algorithm for the NSINGULAR problem.
-While our algorithmic template is similar to the one in Ivanyos et. al.(2018),
-it significantly differs in its implementation of the rank increment step.
-Instead of computing the limit of a second Wong sequence, we reduce the problem
-to the polynomial identity testing (PIT) of noncommutative algebraic branching
-programs (ABPs).
-</p>
-<p>This enables us to bound the bit-complexity of the algorithm over
-$\mathbb{Q}$ without requiring special care. Moreover, the rank increment step
-can be implemented in quasipolynomial-time even without an explicit description
-of the coefficient matrices in $T$. This is possible by exploiting the
-connection with the black-box PIT of noncommutative ABPs [Forbes and Shpilka
-(2013)].
 </p>
         
         </div>
