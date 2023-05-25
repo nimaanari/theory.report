@@ -97,6 +97,60 @@ one, next.
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">David Eppstein: Congratulations, Dr. Frishberg!</title>
+    <link href="https://11011110.github.io/blog/2023/05/24/congratulations-dr-frishberg.html"/>
+    <id>https://11011110.github.io/blog/2023/05/24/congratulations-dr-frishberg</id>
+    <updated>2023-05-24T21:06:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;My student &lt;a href=&quot;https://www.ics.uci.edu/~dfrishbe/&quot;&gt;Daniel Frishberg&lt;/a&gt; successfully passed his dissertation defense today!&lt;/p&gt;
+
+&lt;p&gt;I’ve written here already about several of our joint papers:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;“&lt;a href=&quot;/blog/2019/02/21/mutual-nearest-neighbors.html&quot;&gt;New applications of nearest-neighbor chains: Euclidean TSP and motorcycle graphs&lt;/a&gt;” (with Mamano, Efrat, Goodrich, Kobourov, Matias, and Polishchuk, &lt;a href=&quot;https://doi.org/10.4230/LIPIcs.ISAAC.2019.51&quot;&gt;ISAAC 2019&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;“&lt;a href=&quot;/blog/2019/01/29/simplifying-task-milestone.html&quot;&gt;Simplifying activity-on-edge graphs&lt;/a&gt; (with Havvaei, &lt;a href=&quot;https://doi.org/10.4230/LIPIcs.SWAT.2020.24&quot;&gt;SWAT 2020&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;“&lt;a href=&quot;/blog/2020/05/03/hanoi-vs-sierpinski.html&quot;&gt;On the treewidth of Hanoi graphs&lt;/a&gt;” (with Maxwell, &lt;a href=&quot;https://doi.org/10.4230/LIPIcs.FUN.2021.13&quot;&gt;FUN 2020&lt;/a&gt; and &lt;a href=&quot;https://doi.org/10.1016/j.tcs.2021.12.014&quot;&gt;&lt;em&gt;Theor. Comput. Sci.&lt;/em&gt; 2022&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;“&lt;a href=&quot;/blog/2021/07/10/angles-arc-triangles.html&quot;&gt;Angles of arc-polygons and Lombardi drawings of cacti&lt;/a&gt;” (with Osegueda, &lt;a href=&quot;https://projects.cs.dal.ca/cccg2021/wordpress/wp-content/uploads/2021/08/CCCG2021.pdf&quot;&gt;CCCG 2021&lt;/a&gt; and &lt;a href=&quot;https://doi.org/10.1016/j.comgeo.2023.101982&quot;&gt;&lt;em&gt;Comp. Geom. Theory &amp;amp; Applications&lt;/em&gt; 2023&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;“&lt;a href=&quot;/blog/2022/07/21/flipping-until-lost.html&quot;&gt;Improved mixing for the convex polygon triangulation flip walk&lt;/a&gt;” (ICALP 2023, to appear)&lt;/li&gt;
+  &lt;li&gt;“&lt;a href=&quot;/blog/2021/11/14/random-independent-sets.html&quot;&gt;Rapid mixing of the hardcore Glauber dynamics and other Markov chains in bounded-treewidth graphs&lt;/a&gt;” (not yet published)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Several more are on the way but not yet announced. As is typical for our students, the earlier ones involved more of my intervention, the last two were mostly Daniel’s work, and I’m not even likely to be a coauthor on the upcoming ones: the pattern we want to see developing in a new doctorate. The dissertation incorporates the last two of the papers listed above. Most of our students combine three papers to form a dissertation, and the Hanoi graph work would have fit thematically, but just with the two Daniel included it already had plenty of material.&lt;/p&gt;
+
+&lt;p&gt;The ICALP reviewers told us that we’ve been underselling one of the results in that paper, on the expansion of the associahedron, so I thought I’d elaborate on that a little more here. An &lt;a href=&quot;https://en.wikipedia.org/wiki/Associahedron&quot;&gt;associahedron&lt;/a&gt; is a graph whose vertices represent triangulations of a convex polygon (or binary search trees on a given set of keys) and whose edges represent “flips” that remove and replace one diagonal in a triangulation (or that perform a single binary tree rotation). There’s a lot we don’t know about associahedra still, including how to calculate shortest paths (“flip distance”) between vertices efficiently.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2006/fg6.png&quot; alt=&quot;Flip graph of a hexagon&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The version of expansion we’re using is &lt;a href=&quot;https://en.wikipedia.org/wiki/Expander_graph&quot;&gt;edge expansion&lt;/a&gt;,&lt;/p&gt;
+
+\[\min_{X\subset V(G)}\frac{\vert\partial X\vert}{\min(\vert X\vert,\vert V(G)\setminus X\vert)},\]
+
+&lt;p&gt;where \(\partial X\) represents the set of edges having one endpoint in \(X\). There are many other graphs of local moves in state spaces that, like the associahedron, can also be given the structure of the vertices and edges of a convex polytope, and in many such cases these have constant expansion. In fact, Milena Mihail and Umesh Vazirani conjectured some time prior to 1992 that every polytope whose vertex coordinates are all 0 or 1 has expansion at least one (for this history see e.g. Kaibel, “On the Expansion of
+Graphs of 0/1-Polytopes”, &lt;a href=&quot;https://arxiv.org/abs/math/0112146&quot;&gt;arXiv:math/0112146&lt;/a&gt;), and it was a big breakthrough in 2018 when &lt;a href=&quot;https://gilkalai.wordpress.com/2018/12/12/nima-anari-kuikui-liu-shayan-oveis-gharan-and-cynthia-vinzant-solved-the-mihail-vazirani-conjecture/&quot;&gt;Nima Anari, Kuikui Liu, Shayan Oveis Gharan, and Cynthia Vinzant proved it for flip graphs of matroids&lt;/a&gt; (&lt;a href=&quot;https://arxiv.org/abs/1811.01816&quot;&gt;arXiv:1811.01816&lt;/a&gt;). The associahedra are not 0-1 polytopes, but one can still ask what their expansion is. The ICALP paper gets within a logarithmic factor of the right answer: it proves that the expansion is \(\Omega\bigl(1/(\sqrt n\log n)\bigr)\) and \(O(1/\sqrt n)\). The lower bound is the part that fits into the machinery of Daniel’s thesis, but it is the upper bound that the referees told us we were underselling. It is the first time we have seen that the expansion of the associahedron is smaller than a constant.&lt;/p&gt;
+
+&lt;p&gt;To prove this upper bound (in appendix C of &lt;a href=&quot;https://arxiv.org/abs/2207.09972&quot;&gt;arXiv:2207.09972&lt;/a&gt;), we merely have to find a partition of the space of all triangulations into two subsets with few edges connecting them. This partition is defined very simply, as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For each triangulation, look at the triangle containing the center point of the polygon.&lt;/li&gt;
+  &lt;li&gt;This triangle has three sides. Define their “length” combinatorially, as the number of polygon sides they cut off. Thus, the three lengths sum to \(n\), and the shortest is at most \(n/3\).&lt;/li&gt;
+  &lt;li&gt;Put a triangulation into one side of the partition when its central triangle has a very short side, of length less than \(n/6\), and into the other side of the partition otherwise.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are always three flips that move one of the vertices of the central triangle, unless the short side is only one edge long. But short motions of these vertices are likelier than long ones, enough so to keep the expansion small. The details involve doing some sums with Catalan numbers.&lt;/p&gt;
+
+&lt;p&gt;The next step for Daniel will be to start an assistant professor position at Cal Poly in San Luis Obispo in the fall.&lt;/p&gt;
+
+&lt;p&gt;Congratulations, Daniel!&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/110427368041366794&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </content>
+    <author>
+      <name>David Eppstein</name>
+      <uri>https://11011110.github.io/blog/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">ECCC Papers: TR23-076 |  Polynomial-Time Pseudodeterministic Construction of Primes | 
 
 	Lijie Chen, 
@@ -1691,38 +1745,6 @@ approximate rank. In this paper, we improve this lower bound to $\tilde \Omega
 a strong lower bound on the approximate rank of a quantum state sampled from
 the Haar measure and a step-by-step analysis of the approximate rank of a
 magic-state teleportation protocol to sample from the Haar measure.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Principal-Agent Boolean Games</title>
-    <link href="http://arxiv.org/abs/2305.10334"/>
-    <id>http://arxiv.org/abs/2305.10334</id>
-    <updated>2023-05-18T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hyland_D/0/1/0/all/0/1&quot;&gt;David Hyland&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gutierrez_J/0/1/0/all/0/1&quot;&gt;Julian Gutierrez&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wooldridge_M/0/1/0/all/0/1&quot;&gt;Michael Wooldridge&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce and study a computational version of the principal-agent problem
--- a classic problem in Economics that arises when a principal desires to
-contract an agent to carry out some task, but has incomplete information about
-the agent or their subsequent actions. The key challenge in this setting is for
-the principal to design a contract for the agent such that the agent&#39;s
-preferences are then aligned with those of the principal. We study this problem
-using a variation of Boolean games, where multiple players each choose
-valuations for Boolean variables under their control, seeking the satisfaction
-of a personal goal, given as a Boolean logic formula. In our setting, the
-principal can only observe some subset of these variables, and the principal
-chooses a contract which rewards players on the basis of the assignments they
-make for the variables that are observable to the principal. The principal&#39;s
-challenge is to design a contract so that, firstly, the principal&#39;s goal is
-achieved in some or all Nash equilibrium choices, and secondly, that the
-principal is able to verify that their goal is satisfied. In this paper, we
-formally define this problem and completely characterise the computational
-complexity of the most relevant decision problems associated with it.
 &lt;/p&gt;
   </content>
     <author>
