@@ -10,6 +10,43 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">ECCC Papers: TR23-077 |  Batch Proofs are Statistically Hiding | 
+
+	Nir Bitansky, 
+
+	Chethan Kamath, 
+
+	Omer Paneth, 
+
+	Ron Rothblum, 
+
+	Prashant Nalini Vasudevan</title>
+    <link href="https://eccc.weizmann.ac.il/report/2023/077"/>
+    <id>https://eccc.weizmann.ac.il/report/2023/077</id>
+    <updated>2023-05-27T08:16:05+00:00</updated>
+    <content type="html" xml:lang="en">
+    Batch proofs are proof systems that convince a verifier that $x_1,\dots, x_t \in  L$, for some $NP$ language $L$, with communication that is much shorter than sending the $t$ witnesses. In the case of statistical soundness (where the cheating prover is unbounded but honest prover is efficient), interactive batch proofs are known for $UP$, the class of unique witness $NP$ languages. In the case of computational soundness (aka arguments, where both honest and dishonest provers are efficient), non-interactive solutions are now known for all of $NP$, assuming standard cryptographic assumptions. We study the necessary conditions for the existence of batch proofs in these two settings. Our main results are as follows.
+
+1. Statistical Soundness: the existence of a statistically-sound batch proof for $L$ implies that $L$ has a statistically witness indistinguishable ($SWI$) proof, with inverse polynomial $SWI$ error, and a non-uniform honest prover. The implication is unconditional for public-coin protocols and relies on one-way functions in the private-coin case.
+
+This poses a barrier for achieving batch proofs beyond $UP$ (where witness indistinguishability is trivial). In particular, assuming that $NP$ does not have $SWI$ proofs, batch proofs for all of $NP$ do not exist. This motivates further study of the complexity class $SWI$, which, in contrast to the related class $SZK$, has been largely left unexplored.
+
+2. Computational Soundness: the existence of batch arguments ($BARG$s) for $NP$, together with one-way functions, implies the existence of statistical zero-knowledge ($SZK$) arguments for $NP$ with roughly the same number of rounds, an inverse polynomial zero-knowledge error, and non-uniform honest prover.
+
+    Thus, constant-round interactive $BARG$s from one-way functions would yield constant-round $SZK$ arguments from one-way functions. This would be surprising as $SZK$ arguments are currently only known assuming constant-round statistically-hiding commitments (which in turn are unlikely to follow from one-way functions).
+
+3. Non-interactive: the existence of non-interactive $BARG$s for $NP$ and one-way functions, implies non-interactive statistical zero-knowledge arguments ($NISZKA$) for $NP$, with negligible soundness error, inverse polynomial zero-knowledge error, and non-uniform honest prover. Assuming also lossy public-key encryption, the statistical zero-knowledge error can be made negligible. We further show that $BARG$s satisfying a notion of honest somewhere extractability imply lossy public key encryption.
+
+All of our results stem from a common framework showing how to transform a batch protocol for a language $L$ into an $SWI$ protocol for $L$.
+  </content>
+    <author>
+      <name>ECCC Papers</name>
+      <uri>https://eccc.weizmann.ac.il/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">TCS+ Seminar Series: TCS+ talk: Wednesday, May 31 — Paul Gölz, Harvard University</title>
     <link href="https://tcsplus.wordpress.com/2023/05/26/tcs-talk-wednesday-may-31-paul-golz-harvard-university/"/>
     <id>http://tcsplus.wordpress.com/?p=691</id>
@@ -1663,34 +1700,6 @@ tiling. Nevertheless, certain concrete instances of the common multiple shape
 can be solved in a practical time. We present a method for determining the
 common multiple shape for provided tuples of polyominoes and outline concrete
 results, which improve on the previously known results in puzzle society.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: On $k$-means for segments and polylines</title>
-    <link href="http://arxiv.org/abs/2305.10922"/>
-    <id>http://arxiv.org/abs/2305.10922</id>
-    <updated>2023-05-19T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cabello_S/0/1/0/all/0/1&quot;&gt;Sergio Cabello&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Giannopoulos_P/0/1/0/all/0/1&quot;&gt;Panos Giannopoulos&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the problem of $k$-means clustering in the space of straight-line
-segments in $\mathbb{R}^{2}$ under the Hausdorff distance. For this problem, we
-give a $(1+\epsilon)$-approximation algorithm that, for an input of $n$
-segments, for any fixed $k$, and with constant success probability, runs in
-time $O(n+ \epsilon^{-O(k)} + \epsilon^{-O(k)}\cdot \log^{O(k)}
-(\epsilon^{-1}))$. The algorithm has two main ingredients. Firstly, we express
-the $k$-means objective in our metric space as a sum of algebraic functions and
-use the optimization technique of Vigneron~\cite{Vigneron14} to approximate its
-minimum. Secondly, we reduce the input size by computing a small size coreset
-using the sensitivity-based sampling framework by Feldman and
-Langberg~\cite{Feldman11, Feldman2020}. Our results can be extended to
-polylines of constant complexity with a running time of $O(n+
-\epsilon^{-O(k)})$.
 &lt;/p&gt;
   </content>
     <author>
