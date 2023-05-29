@@ -10,6 +10,235 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: Seeding with Differentially Private Network Information</title>
+    <link href="http://arxiv.org/abs/2305.16590"/>
+    <id>http://arxiv.org/abs/2305.16590</id>
+    <updated>2023-05-29T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rahimian_M/0/1/0/all/0/1&quot;&gt;M. Amin Rahimian&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Yu_F/0/1/0/all/0/1&quot;&gt;Fang-Yi Yu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Hurtado_C/0/1/0/all/0/1&quot;&gt;Carlos Hurtado&lt;/a&gt;&lt;/p&gt;&lt;p&gt;When designing interventions in public health, development, and education,
+decision makers rely on social network data to target a small number of people,
+capitalizing on peer effects and social contagion to bring about the most
+welfare benefits to the population. Developing new methods that are
+privacy-preserving for network data collection and targeted interventions is
+critical for designing sustainable public health and development interventions
+on social networks. In a similar vein, social media platforms rely on network
+data and information from past diffusions to organize their ad campaign and
+improve the efficacy of targeted advertising. Ensuring that these network
+operations do not violate users&#39; privacy is critical to the sustainability of
+social media platforms and their ad economies. We study privacy guarantees for
+influence maximization algorithms when the social network is unknown, and the
+inputs are samples of prior influence cascades that are collected at random.
+Building on recent results that address seeding with costly network
+information, our privacy-preserving algorithms introduce randomization in the
+collected data or the algorithm output, and can bound each node&#39;s (or group of
+nodes&#39;) privacy loss in deciding whether or not their data should be included
+in the algorithm input. We provide theoretical guarantees of the seeding
+performance with a limited sample size subject to differential privacy budgets
+in both central and local privacy regimes. Simulations on synthetic and
+empirical network datasets reveal the diminishing value of network information
+with decreasing privacy budget in both regimes.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: A Unified Approach for Maximizing Continuous DR-submodular Functions</title>
+    <link href="http://arxiv.org/abs/2305.16671"/>
+    <id>http://arxiv.org/abs/2305.16671</id>
+    <updated>2023-05-29T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pedramfar_M/0/1/0/all/0/1&quot;&gt;Mohammad Pedramfar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Quinn_C/0/1/0/all/0/1&quot;&gt;Christopher John Quinn&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Aggarwal_V/0/1/0/all/0/1&quot;&gt;Vaneet Aggarwal&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper presents a unified approach for maximizing continuous
+DR-submodular functions that encompasses a range of settings and oracle access
+types. Our approach includes a Frank-Wolfe type offline algorithm for both
+monotone and non-monotone functions, with different restrictions on the general
+convex set. We consider settings where the oracle provides access to either the
+gradient of the function or only the function value, and where the oracle
+access is either deterministic or stochastic. We determine the number of
+required oracle accesses in all cases. Our approach gives new/improved results
+for nine out of the sixteen considered cases, avoids computationally expensive
+projections in two cases, with the proposed framework matching performance of
+state-of-the-art approaches in the remaining five cases. Notably, our approach
+for the stochastic function value-based oracle enables the first regret bounds
+with bandit feedback for stochastic DR-submodular functions.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Polylogarithmic Approximation for Robust s-t Path</title>
+    <link href="http://arxiv.org/abs/2305.16439"/>
+    <id>http://arxiv.org/abs/2305.16439</id>
+    <updated>2023-05-29T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_S/0/1/0/all/0/1&quot;&gt;Shi Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xu_C/0/1/0/all/0/1&quot;&gt;Chenyang Xu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_R/0/1/0/all/0/1&quot;&gt;Ruilong Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The paper revisits the robust $s$-$t$ path problem, one of the most
+fundamental problems in robust optimization. In the problem, we are given a
+directed graph with $n$ vertices and $k$ distinct cost functions (scenarios)
+defined over edges, and aim to choose an $s$-$t$ path such that the total cost
+of the path is always provable no matter which scenario is realized. With the
+view of each cost function being associated with an agent, our goal is to find
+a common $s$-$t$ path minimizing the maximum objective among all agents, and
+thus create a fair solution for them. The problem is hard to approximate within
+$o(\log k)$ by any quasi-polynomial time algorithm unless $\mathrm{NP}
+\subseteq \mathrm{DTIME}(n^{\mathrm{poly}\log n})$, and the best approximation
+ratio known to date is $\widetilde{O}(\sqrt{n})$ which is based on the natural
+flow linear program. A longstanding open question is whether we can achieve a
+polylogarithmic approximation even when a quasi-polynomial running time is
+allowed.
+&lt;/p&gt;
+&lt;p&gt;We give the first polylogarithmic approximation for robust $s$-$t$ path since
+the problem was proposed more than two decades ago. In particular, we introduce
+a $O(\log n \log k)$-approximate algorithm running in quasi-polynomial time.
+The algorithm is built on a novel linear program formulation for a
+decision-tree-type structure which enables us to get rid of the
+$\Omega(\max\{k,\sqrt{n}\})$ integrality gap of the natural flow LP. Further,
+we also consider some well-known graph classes, e.g., graphs with bounded
+treewidth, and show that the polylogarithmic approximation can be achieved
+polynomially on these graphs. We hope the new proposed techniques in the paper
+can offer new insights into the robust $s$-$t$ path problem and related
+problems in robust optimization.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Sliding Window Sum Algorithms for Deep Neural Networks</title>
+    <link href="http://arxiv.org/abs/2305.16513"/>
+    <id>http://arxiv.org/abs/2305.16513</id>
+    <updated>2023-05-29T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Snytsar_R/0/1/0/all/0/1&quot;&gt;Roman Snytsar&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Sliding window sums are widely used for string indexing, hashing and time
+series analysis. We have developed a family of the generic vectorized sliding
+sum algorithms that provide speedup of O(P/w) for window size $w$ and number of
+processors P. For a sum with a commutative operator the speedup is improved to
+O(P/log(w)). Even more important, our algorithms exhibit efficient memory
+access patterns. In this paper we study the application of the sliding sum
+algorithms to the training and inference of the Deep Neural Networks. We
+demonstrate how both pooling and convolution primitives could be expressed as
+sliding sums and evaluated by the compute kernels with the shared structure. We
+show that the sliding sum convolution kernels are more efficient than the
+commonly used GEMM kernels on the CPU, and could even outperform their GPU
+counterparts.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Efficient Computation of Quantiles over Joins</title>
+    <link href="http://arxiv.org/abs/2305.16525"/>
+    <id>http://arxiv.org/abs/2305.16525</id>
+    <updated>2023-05-29T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tziavelis_N/0/1/0/all/0/1&quot;&gt;Nikolaos Tziavelis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Carmeli_N/0/1/0/all/0/1&quot;&gt;Nofar Carmeli&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gatterbauer_W/0/1/0/all/0/1&quot;&gt;Wolfgang Gatterbauer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kimelfeld_B/0/1/0/all/0/1&quot;&gt;Benny Kimelfeld&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Riedewald_M/0/1/0/all/0/1&quot;&gt;Mirek Riedewald&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present efficient algorithms for Quantile Join Queries, abbreviated as
+%JQ. A %JQ asks for the answer at a specified relative position (e.g., 50% for
+the median) under some ordering over the answers to a Join Query (JQ). Our goal
+is to avoid materializing the set of all join answers, and to achieve
+quasilinear time in the size of the database, regardless of the total number of
+answers. A recent dichotomy result rules out the existence of such an algorithm
+for a general family of queries and orders. Specifically, for acyclic JQs
+without self-joins, the problem becomes intractable for ordering by sum
+whenever we join more than two relations (and these joins are not trivial
+intersections). Moreover, even for basic ranking functions beyond sum, such as
+min or max over different attributes, so far it is not known whether there is
+any nontrivial tractable %JQ. In this work, we develop a new approach to
+solving %JQ. Our solution uses two subroutines: The first one needs to select
+what we call a &quot;pivot answer&quot;. The second subroutine partitions the space of
+query answers according to this pivot, and continues searching in one partition
+that is represented as new %JQ over a new database. For pivot selection, we
+develop an algorithm that works for a large class of ranking functions that are
+appropriately monotone. The second subroutine requires a customized
+construction for the specific ranking function at hand. We show the benefit and
+generality of our approach by using it to establish several new complexity
+results. First, we prove the tractability of min and max for all acyclic JQs,
+thereby resolving the above question. Second, we extend the previous %JQ
+dichotomy for sum to all partial sums. Third, we handle the intractable cases
+of sum by devising a deterministic approximation scheme that applies to every
+acyclic JQ.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: CARAMEL: A Succinct Read-Only Lookup Table via Compressed Static Functions</title>
+    <link href="http://arxiv.org/abs/2305.16545"/>
+    <id>http://arxiv.org/abs/2305.16545</id>
+    <updated>2023-05-29T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Coleman_B/0/1/0/all/0/1&quot;&gt;Benjamin Coleman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ramos_D/0/1/0/all/0/1&quot;&gt;David Torres Ramos&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Lakshman_V/0/1/0/all/0/1&quot;&gt;Vihan Lakshman&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Luo_C/0/1/0/all/0/1&quot;&gt;Chen Luo&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Shrivastava_A/0/1/0/all/0/1&quot;&gt;Anshumali Shrivastava&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Lookup tables are a fundamental structure in many data processing and systems
+applications. Examples include tokenized text in NLP, quantized embedding
+collections in recommendation systems, integer sketches for streaming data, and
+hash-based string representations in genomics. With the increasing size of
+web-scale data, such applications often require compression techniques that
+support fast random $O(1)$ lookup of individual parameters directly on the
+compressed data (i.e. without blockwise decompression in RAM). While the
+community has proposd a number of succinct data structures that support queries
+over compressed representations, these approaches do not fully leverage the
+low-entropy structure prevalent in real-world workloads to reduce space.
+Inspired by recent advances in static function construction techniques, we
+propose a space-efficient representation of immutable key-value data, called
+CARAMEL, specifically designed for the case where the values are multi-sets. By
+carefully combining multiple compressed static functions, CARAMEL occupies
+space proportional to the data entropy with low memory overheads and minimal
+lookup costs. We demonstrate 1.25-16x compression on practical lookup tasks
+drawn from real-world systems, improving upon established techniques, including
+a production-grade read-only database widely used for development within
+Amazon.com.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Sublinear-Space Streaming Algorithms for Estimating Graph Parameters on Sparse Graphs</title>
+    <link href="http://arxiv.org/abs/2305.16815"/>
+    <id>http://arxiv.org/abs/2305.16815</id>
+    <updated>2023-05-29T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_X/0/1/0/all/0/1&quot;&gt;Xiuge Chen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chitnis_R/0/1/0/all/0/1&quot;&gt;Rajesh Chitnis&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Eades_P/0/1/0/all/0/1&quot;&gt;Patrick Eades&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wirth_A/0/1/0/all/0/1&quot;&gt;Anthony Wirth&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we design sub-linear space streaming algorithms for estimating
+three fundamental parameters -- maximum independent set, minimum dominating set
+and maximum matching -- on sparse graph classes, i.e., graphs which satisfy
+$m=O(n)$ where $m,n$ is the number of edges, vertices respectively. Each of the
+three graph parameters we consider can have size $\Omega(n)$ even on sparse
+graph classes, and hence for sublinear-space algorithms we are restricted to
+parameter estimation instead of attempting to find a solution.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">Computational Complexity: On Nov 10, 2014 the TV show Scorpion mentions Software that is like ChatGPT for Music</title>
     <link href="https://blog.computationalcomplexity.org/2023/05/on-nov-10-2014-tv-show-scorpion.html"/>
     <id>tag:blogger.com,1999:blog-3722233.post-7380998070167715843</id>
@@ -1326,369 +1555,6 @@ prove lower bounds to show the optimality of some performance bounds.
     <author>
       <name>arXiv: Data Structures and Algorithms</name>
       <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Tester-Learners for Halfspaces: Universal Algorithms</title>
-    <link href="http://arxiv.org/abs/2305.11765"/>
-    <id>http://arxiv.org/abs/2305.11765</id>
-    <updated>2023-05-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gollakota_A/0/1/0/all/0/1&quot;&gt;Aravind Gollakota&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Klivans_A/0/1/0/all/0/1&quot;&gt;Adam R. Klivans&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Stavropoulos_K/0/1/0/all/0/1&quot;&gt;Konstantinos Stavropoulos&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Vasilyan_A/0/1/0/all/0/1&quot;&gt;Arsen Vasilyan&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We give the first tester-learner for halfspaces that succeeds universally
-over a wide class of structured distributions. Our universal tester-learner
-runs in fully polynomial time and has the following guarantee: the learner
-achieves error $O(\mathrm{opt}) + \epsilon$ on any labeled distribution that
-the tester accepts, and moreover, the tester accepts whenever the marginal is
-any distribution that satisfies a Poincar\&#39;e inequality. In contrast to prior
-work on testable learning, our tester is not tailored to any single target
-distribution but rather succeeds for an entire target class of distributions.
-The class of Poincar\&#39;e distributions includes all strongly log-concave
-distributions, and, assuming the Kannan--L\&#39;{o}vasz--Simonovits (KLS)
-conjecture, includes all log-concave distributions. In the special case where
-the label noise is known to be Massart, our tester-learner achieves error
-$\mathrm{opt} + \epsilon$ while accepting all log-concave distributions
-unconditionally (without assuming KLS). Our tests rely on checking
-hypercontractivity of the unknown distribution using a sum-of-squares (SOS)
-program, and crucially make use of the fact that Poincar\&#39;e distributions are
-certifiably hypercontractive in the SOS framework.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Computational Complexity: Logic and lack of Logic of Anti Vaxers</title>
-    <link href="https://blog.computationalcomplexity.org/2023/05/logic-and-lack-of-logic-of-anti-vaxers.html"/>
-    <id>tag:blogger.com,1999:blog-3722233.post-2325300399606087215</id>
-    <updated>2023-05-21T12:25:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;I wrote the&amp;nbsp; post below the dotted line a long time ago but never got around to posting it. Now that&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; WHO says COVID emergency is over.&lt;/p&gt;&lt;p&gt;(When I first saw I misread it as a question:&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Who says COVID emergency is over?&amp;nbsp;&lt;/p&gt;&lt;p&gt;)&amp;nbsp;&lt;/p&gt;&lt;p&gt;I decided to post it (with one update that has an ADDED LATER on it).&amp;nbsp;&lt;/p&gt;&lt;p&gt;If you didn&#39;t know , WHO is World Health Organization. Actually, that is true whether or not you know it.&lt;/p&gt;&lt;p&gt;------------------------------------------------------------------------------------&lt;/p&gt;&lt;p&gt;Some of the reasons anti-vaxers give are better than others. Some are consistent, some are not.&amp;nbsp;&lt;/p&gt;&lt;p&gt;We list some of them and invite the comments to list more. Our point is- which ones have something interesting to say?&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;I am PRO VAX but I often seek out intelligent opposing views on any of my opinions. Did I find any here? I leave that as an exercise for the reader.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Reasons anti-vaxxers give or could give.&amp;nbsp;&lt;/p&gt;&lt;p&gt;a)&amp;nbsp;&lt;i&gt;FREEDOM!&amp;nbsp;&lt;/i&gt;That&#39;s not quite a reason. I am reminded of asking a neighbor why he flies a confederate flag and he said&lt;/p&gt;&lt;p&gt;FREEDOM!&lt;/p&gt;&lt;p&gt;I was hoping he would say either&lt;/p&gt;&lt;p&gt;To honor my great grandfather who died for the south in the civil war.&lt;/p&gt;&lt;p&gt;or&lt;/p&gt;&lt;p&gt;Because I don&#39;t like black people.&lt;/p&gt;&lt;p&gt;or&lt;/p&gt;&lt;p&gt;To honor those many people, black and white, who died in the civil war fighting for the south.&amp;nbsp;&lt;/p&gt;&lt;p&gt;or&lt;/p&gt;&lt;p&gt;SOMETHING with content to it.&amp;nbsp;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Any of those answered would tell me something could be discussed. Just the word FREEDOM does not.&amp;nbsp;&lt;/p&gt;&lt;p&gt;b)&amp;nbsp;&lt;i&gt;Bill Gates put microchips in the vaccine so he can keep track of where you are&lt;/i&gt;. Why? Bill Gates and Mark Zuckerberg can ALREADY keep track of where you are. I do wonder if this is a common anti-vax viewpoint or if its VERY RARE and the media plays it up to make anti-vaxers look stupid. Same with the notion that the vaccine makes you magnetic (that sounds cool!)&lt;/p&gt;&lt;p&gt;c) I&lt;i&gt;&amp;nbsp;want to wait and see its effects since it was rushed out&lt;/i&gt;. That might have made sense&amp;nbsp; X months ago, but by now its very well established.&lt;/p&gt;&lt;p&gt;d)&amp;nbsp;&lt;i&gt;I haven&#39;t gotten around to it yet.&lt;/i&gt;&amp;nbsp;These are a very good target for the mandates or at least to be talked into doing it. It may be more fun to talk about the radical anti-vaxers; however, if the&amp;nbsp;&lt;i&gt;haven&#39;t gotten&lt;/i&gt;&amp;nbsp;&lt;i&gt;around to it&amp;nbsp;&lt;/i&gt;group all got vaccinated we would be closer to herd immunity.&lt;/p&gt;&lt;p&gt;e) I&lt;i&gt;&#39;ve got COVID so I am immune. &lt;/i&gt;This is true for Y months (I am not sure what Y is); however, the person I know who told me this had COVID about 3 years ago.&amp;nbsp;&amp;nbsp;But at least its an attempt at an argument.&amp;nbsp;&lt;/p&gt;&lt;p&gt;f)&amp;nbsp;&lt;i&gt;The medical community has been bad to (i) me, (ii) my people, (iii) some other people that I care&lt;/i&gt;&amp;nbsp;&lt;i&gt;about hence I do not trust them.&amp;nbsp;&lt;/i&gt;The premise is actually true, so this is an attempt at an intelligent argument.&amp;nbsp;&lt;/p&gt;&lt;p&gt;g)&amp;nbsp;&lt;i&gt;Big Pharma&amp;nbsp;is making a mint on this and ripping us off.&lt;/i&gt;&amp;nbsp;This is a view of, not the extreme left but the fringe left. Robert Kennedy is a big voice here, see&amp;nbsp;&lt;a href=&quot;https://www.mcgill.ca/oss/article/covid-19-health-pseudoscience/anti-vaccine-propaganda-robert-f-kennedy-jr&quot;&gt;here&lt;/a&gt;. On a right-wing relatives&#39; urging I listened to an hour-long interview with him. Mostly a rambling incoherent argument. Much of it was anti-business which got no pushback from the usually-pro-business republican&#39;s. Are there any mainstream democrats who are anti-vax? I do not think so. Also, is it true that Big Pharma is is making a mint? Ripping us off? Ripping someone off? This could be an interesting question if asked more coherently. But its not a good reason to be anti-vax.&amp;nbsp;&lt;/p&gt;&lt;p&gt;h) Trump said it was a hoax to get him out of office. Taking a vaccine now would be to admit its not a hoax. Such people should take Karl Popper&#39;s view of science: Conjecture that, as Ted Cruz said, if Biden wins then COVID will go away since it was a hoax made up to get Biden to win. If Biden wins and COVID does not go away then you must reject your conjecture. (ADDED LATER: Odd point- Trump has sometimes said, though not lately, that people should get the Vax that HE invented. If we called it a Trumpzine then would people take it? As of now Trump and DeathSantos are trying to anti-vax each other.)&amp;nbsp;&lt;/p&gt;&lt;p&gt;i) The first few days after you take it it hurts and you feel tired or get chills or other reactions. This is actually true, though one has to balance that against getting COVID.&lt;/p&gt;&lt;p&gt;j) The Ford Administration really messed up on the Swine Flu so why trust the government now? This is true- The Ford Admin DID mess up. Oddly enough, I have never (or perhaps rarely) heard this as a reason. This puzzles me- Why claim Bill Gates microchip stuff (which is absurd) or Vax causes autism (debunked)&amp;nbsp; and&amp;nbsp; NOT use arguments are are more reasonable?&lt;/p&gt;&lt;p&gt;k) Vaccines cause autism. That study was debunked a long time ago, but it still lives on.&lt;/p&gt;&lt;p&gt;l) Kamala Harris said she was hesitant since it was rushed.&amp;nbsp; I&#39;ve only heard this one as Republicans&amp;nbsp; try to blame her for Vaccine Hesitancy. The problem with that argument is that you are claiming that the anti-vaxers, who are mostly republicans, are listening to Kamala Harris for advice.&lt;/p&gt;&lt;p&gt;l)&amp;nbsp;If many people get Vaxed and COVID goes away then Biden will look good, and we can&#39;t have that.&lt;/p&gt;&lt;p&gt;m) COVID was invented by the Chinese to cripple us. Uh- even if true (which it is not, though the leaked lab hypothesis might be) that&#39;s a reason to TAKE it to thwart their plans. For that matter, Trump could have been Trumpian and PRO-MASK and&amp;nbsp; PRO-VAX by blaming the Chinese and George Soros and the Deep State and Biden and Obama and of course Hillary,&amp;nbsp; but using this to say WEAR THE MASK! TAKE THE VAX! to DEFEAT these ENEMIES who want to destroy America. Would that have worked to slow the spread of COVID? If so then would he have won re-election?&amp;nbsp;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
-  </content>
-    <author>
-      <name>Computational Complexity</name>
-      <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR23-075 |  Border Complexity of Symbolic Determinant under Rank One Restriction | 
-
-	Abhranil Chatterjee, 
-
-	Sumanta Ghosh, 
-
-	Rohit Gurjar, 
-
-	Roshan  Raj</title>
-    <link href="https://eccc.weizmann.ac.il/report/2023/075"/>
-    <id>https://eccc.weizmann.ac.il/report/2023/075</id>
-    <updated>2023-05-21T06:59:02+00:00</updated>
-    <content type="html" xml:lang="en">
-    VBP is the class of polynomial families that can be computed by the determinant of a symbolic matrix of the form $A_0 + \sum_{i=1}^n A_ix_i$ where the size of each $A_i$ is polynomial in the number of variables (equivalently, computable by polynomial-sized algebraic branching programs (ABP)). A major open problem in geometric complexity theory (GCT) is to determine whether VBP is closed under approximation. The power of approximation is well understood for some restricted models of computation, e.g., the class of depth-two circuits, read-once oblivious ABPs (ROABP), monotone ABPs, depth-three circuits of bounded top fan-in, and width-two ABPs. The former three classes are known to be closed under approximation [Bl&amp;quot;{a}ser, Ikenmeyer, Mahajan, Pandey, and Saurabh (2020)], whereas the approximative closure of the last one captures the whole class of polynomial families computable by polynomial-sized formulas [Bringmann, Ikenmeyer, and Zuiddam (2017)].
-
-In this work, we consider the subclass of VBP computed by the determinant of a symbolic matrix of the form $A_0 + \sum_{i=1}^n A_ix_i$ where for each $1\leq i \leq n$, $A_i$ is of rank one. It has been studied extensively [Edmonds(1968), Edmonds(1979)] and efficient identity testing algorithms are known [Lov&amp;quot;{a}sz (1989), Gurjar and Thierauf (2020)]. We show that this class is closed under approximation. In the language of algebraic geometry,
-we show that the set obtained by taking coordinatewise products of pairs of points from (the Pl\&amp;quot;{u}cker embedding of) a Grassmannian variety is closed.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR23-074 |  Radical Sylvester-Gallai Theorem for Tuples of Quadratics | 
-
-	Abhibhav Garg, 
-
-	Rafael Mendes de Oliveira, 
-
-	Shir Peleg, 
-
-	Akash Sengupta</title>
-    <link href="https://eccc.weizmann.ac.il/report/2023/074"/>
-    <id>https://eccc.weizmann.ac.il/report/2023/074</id>
-    <updated>2023-05-21T06:54:34+00:00</updated>
-    <content type="html" xml:lang="en">
-    We prove a higher codimensional radical Sylvester-Gallai type theorem for quadratic polynomials, simultaneously generalizing [Han65, Shp20]. Hansen&amp;#39;s theorem is a high-dimensional version of the classical Sylvester-Gallai theorem in which the incidence condition is given by high-dimensional flats instead of lines. We generalize Hansen&amp;#39;s theorem to the setting of quadratic forms in a polynomial ring, where the incidence condition is given by radical membership in a high-codimensional ideal. Our main theorem is also a generalization of the quadratic Sylvester--Gallai Theorem of [Shp20].
-
-Our work is the first to prove a radical Sylvester--Gallai type theorem for arbitrary  codimension $k\geq 2$, whereas previous works [Shp20,PS20,PS21,OS22] considered the case of codimension $2$ ideals. Our techniques combine algebraic geometric and combinatorial arguments. A key ingredient is a structural result for ideals generated by a constant number of quadratics, showing that such ideals must be radical whenever the quadratic forms are far apart. Using the wide algebras defined in [OS22], combined with results about integral ring extensions and dimension theory, we develop new techniques for studying such ideals generated by quadratic forms. One advantage of our approach is that it does not need the finer classification theorems for codimension $2$ complete intersection of quadratics proved in [Shp20, GOS22].
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">ECCC Papers: TR23-073 |  Reducing Tarski to Unique Tarski (in the Black-box Model) | 
-
-	Xi Chen, 
-
-	Yuhao Li, 
-
-	Mihalis Yannakakis</title>
-    <link href="https://eccc.weizmann.ac.il/report/2023/073"/>
-    <id>https://eccc.weizmann.ac.il/report/2023/073</id>
-    <updated>2023-05-21T02:59:43+00:00</updated>
-    <content type="html" xml:lang="en">
-    We study the problem of finding a Tarski fixed point over the $k$-dimensional grid $[n]^k$. We give a black-box reduction from the Tarski problem to the same problem with an additional promise that the input function has a unique fixed point. It implies that the Tarski problem and the unique Tarski problem have exactly the same query complexity. Our reduction is based on a novel notion of partial-information functions which we use to fool algorithms for the unique Tarski problem as if they were working on a monotone function with a unique fixed point.
-  </content>
-    <author>
-      <name>ECCC Papers</name>
-      <uri>https://eccc.weizmann.ac.il/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Windows on Theory: GPT as an “Intelligence Forklift.”</title>
-    <link href="https://windowsontheory.org/2023/05/19/gpt-as-an-intelligence-forklift/"/>
-    <id>http://windowsontheory.org/?p=8615</id>
-    <updated>2023-05-19T21:16:17+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;&lt;em&gt;[See my&amp;nbsp;&lt;/em&gt;&lt;a href=&quot;https://www.lesswrong.com/posts/zB3ukZJqt3pQDw9jz/ai-will-change-the-world-but-won-t-take-it-over-by-playing-3&quot;&gt;&lt;em&gt;&lt;u&gt;post with Edelman on AI takeover&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt; and&amp;nbsp;&lt;/em&gt;&lt;a href=&quot;https://scottaaronson.blog/?p=7266&quot;&gt;&lt;em&gt;&lt;u&gt;Aaronson on AI scenarios&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. This is a rough, with various fine print, caveats, and other discussions missing. Cross-posted on &lt;/em&gt;&lt;a href=&quot;https://windowsontheory.org/&quot;&gt;&lt;em&gt;Windows on Theory&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.]&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&amp;nbsp;&lt;br&gt;One challenge for considering the implications of “artificial intelligence,” especially of the “general” variety, is that we don’t have a consensus definition of intelligence. The&amp;nbsp;&lt;a href=&quot;https://www.amazon.com/Oxford-Companion-Mind-Companions/dp/0198662246&quot;&gt;&lt;u&gt;Oxford Companion to the Mind&lt;/u&gt;&lt;/a&gt; states that “there seem to be almost as many definitions of intelligence as experts asked to define it.”&amp;nbsp; Indeed,&amp;nbsp; in a recent discussion,&amp;nbsp;&lt;a href=&quot;https://www.lepoint.fr/sciences-nature/yuval-harari-sapiens-versus-yann-le-cun-meta-on-artificial-intelligence-11-05-2023-2519782_1924.php#11&quot;&gt;&lt;u&gt;Yann LeCun and Yuval Noah Harari&lt;/u&gt;&lt;/a&gt; offered two different definitions. However, it seems many people agree that:&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;Whatever intelligence is, more computational power or cognitive capacity (e.g., a more complex or larger neural network, a species with a larger brain)&amp;nbsp; leads to more of it.&amp;nbsp;&lt;/li&gt;
-
-
-
-&lt;li&gt;Whatever intelligence is, the more of it one has, the more one can impact one&amp;#8217;s environment.&amp;nbsp;&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;p&gt;1 and 2 together can already lead to growing concerns now that we are building artificial systems that every year are more powerful than the last.&amp;nbsp;&lt;a href=&quot;https://www.lesswrong.com/posts/3Jpchgy53D2gB5qdk/my-childhood-role-model&quot;&gt;&lt;u&gt;Yudkowski&lt;/u&gt;&lt;/a&gt; presents potential progress on intelligence with something like the following chart (taken from&amp;nbsp;&lt;a href=&quot;https://intelligenceexplosion.com/2011/plenty-of-room-above-us/&quot;&gt;&lt;u&gt;Muehlhauser&lt;/u&gt;&lt;/a&gt;):&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://39669.cdn.cke-cs.com/rQvD3VnunXZu34m86e5f/images/cfee2d12a17cf70d8bfdc038070a679c423c7061ed67439f.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;&lt;br&gt;Given that recent progress on AI was achieved by scaling ever larger amounts of computation and data, we might expect a cartoon that looks more like the following:&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;img src=&quot;https://39669.cdn.cke-cs.com/rQvD3VnunXZu34m86e5f/images/abf19d90ec5756ee84d74f5a21312ef7a7eb1fb11c8029f4.png&quot; style=&quot;width: 600px&quot;&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;em&gt;(Don’t take this cartoon or numbers too seriously. It is obtained by superimposing a hypothetical 1000T param model on the figure from &lt;/em&gt;&lt;a href=&quot;https://chomsky.info/20140826/&quot;&gt;&lt;em&gt;&lt;u&gt;Bolhuis, Tattersall, Chomsky and Berwick&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. 100T connections in Homo sapiens brain is a &lt;/em&gt;&lt;a href=&quot;https://www.scientificamerican.com/article/100-trillion-connections/&quot;&gt;&lt;em&gt;&lt;u&gt;rough estimate&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.  Axes implicitly assume &lt;/em&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8463089/&quot;&gt;&lt;em&gt;&lt;u&gt;synaptic density&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt; scales with volume.)&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;br&gt;Whether the first or the second cartoon is more accurate, the idea of constructing intelligence that surpasses ours to an increasing degree and on a growing number of dimensions is understandably unsettling to many people. (Especially given that none of the other species of the genus&amp;nbsp;&lt;em&gt;Homo&lt;/em&gt; in the chart above survived.)&amp;nbsp; This post is&amp;nbsp;&lt;em&gt;not&lt;/em&gt; to say that we should not worry about this. Instead I suggest a different metaphor for how we could think of future powerful models.&lt;br&gt;&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;h2 class=&quot;wp-block-heading&quot;&gt;Whose intelligence is it?&lt;/h2&gt;
-
-
-
-&lt;p&gt;In our own species’ evolution, as we have become more intelligent, we have become more able to act as&amp;nbsp;&lt;em&gt;agents&lt;/em&gt; that do not follow pre-ordained goals but rather choose our own. So we might imagine that there is some monotone “agency vs. intelligence” curve along the following:&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://39669.cdn.cke-cs.com/rQvD3VnunXZu34m86e5f/images/8617e5cafd5f4c3a19ca6e894a8b921c6b503a7b39b313f0.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;&amp;nbsp;&lt;em&gt;(Once again, don’t take the cartoon too seriously; whether it is a step function, sigmoid-like, or some other monotone curve can be debatable and also depends on what one&amp;#8217;s definitions of “agency” and “intelligence” are.)&lt;/em&gt;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;br&gt;But perhaps intelligence does not have to go hand-in-hand with agency. Consider the property of&amp;nbsp;&lt;strong&gt;physical strength&lt;/strong&gt;. Like intelligence, this is a capability that an individual can use to shape their environment. I am (much) weaker than&amp;nbsp;&lt;a href=&quot;https://en.wikipedia.org/wiki/Olga_Liashchuk&quot;&gt;&lt;u&gt;Olga Liashchuk&lt;/u&gt;&lt;/a&gt;, who can lift a 300kg Yoke and walk 24 meters with it in under 20 seconds.&amp;nbsp; However, if I were to drive a forklift, the combination of me and the forklift would be stronger than her. Thus, if we measure strength in functional terms (what we can&amp;nbsp;&lt;em&gt;do&lt;/em&gt; with it) instead of by artificial competitions, it makes sense to consider strength as a&amp;nbsp;&lt;strong&gt;property of a system rather than an individual&lt;/strong&gt;. Strength can be aggregated to combine several systems into a stronger one or split up to use different parts of the capacity for different tasks.&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;br&gt;Is there an&amp;nbsp;&lt;strong&gt;“intelligence forklift”&lt;/strong&gt;? It is hard to imagine a system that is more intelligent than humans but lacks agency. More accurately, up until recently, it would have been hard to imagine such a system. However, with generative pretrained transformers (GPTs), we have systems that have the potential to be just that. Even though recent GPTs undergo some adaptation and fine-tuning, the vast majority of the computational resources invested into GPTs is used to make them solve the task of finding a continuation of a sequence given its prefix.&amp;nbsp;&lt;/p&gt;
-
-
-
-&lt;p&gt;&lt;br&gt;We can phrase many general problems as special cases of the task above. (Indeed, with multimodal models, such tasks include essentially any problem that can be asked and answered using any type of digital representation.) Hence as GPT-n becomes better at this task, it is arguably becoming arbitrarily intelligent. However, it is still not an agent but rather a generic problem-solver. In that sense,&amp;nbsp;&lt;strong&gt;GPTs can best be modeled as intelligence forklifts&lt;/strong&gt;.&lt;/p&gt;
-
-
-
-&lt;figure class=&quot;wp-block-image is-resized&quot;&gt;&lt;img src=&quot;https://39669.cdn.cke-cs.com/rQvD3VnunXZu34m86e5f/images/9131b5cd330416a57ba14408cb461b4a2a3da0e89d8f224b.png&quot; alt=&quot;&quot; width=&quot;714&quot; height=&quot;312&quot; /&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;By “intelligence forklift” I mean that such a model can augment an agent with arbitrary intelligence to complete the goals the agent seeks. The agent may be human, but it can also be an AI itself. For example, it might be obtained using fine-tuning, reinforcement learning, or prompt-engineering on GPT. (So, while GPT is not an agent, it can “play one on TV” if asked to do so in its prompt.) Therefore, the above does not mean that we should not be concerned about an artificial highly intelligent agent. However, if the vast majority of an agent’s intelligence is derived from the non-agentic “forklift” (which can be used by many other agents as well), then a&amp;nbsp;&lt;strong&gt;multipolar scenario of many agents of competing objectives&lt;/strong&gt; is more likely than a unipolar one of a single dominating actor. The multipolar scenario might not be safer, but it is different.&lt;br&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Boaz Barak&lt;/p&gt;
-  </content>
-    <author>
-      <name>Windows on Theory</name>
-      <uri>https://windowsontheory.org</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Scott Aaronson: Book Review: &amp;#8220;Quantum Supremacy&amp;#8221; by Michio Kaku (tl;dr DO NOT BUY)</title>
-    <link href="https://scottaaronson.blog/?p=7321"/>
-    <id>https://scottaaronson.blog/?p=7321</id>
-    <updated>2023-05-19T10:15:56+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;When I was a teenager, I enjoyed reading &lt;em&gt;&lt;a href=&quot;https://www.amazon.com/Hyperspace-Scientific-Parallel-Universes-Dimension/dp/0385477058&quot;&gt;Hyperspace&lt;/a&gt;&lt;/em&gt;, an early popularization of string theory by the theoretical physicist Michio Kaku.  I&amp;#8217;m sure I&amp;#8217;d have plenty of criticisms if I reread it today, but at the time, I liked it a lot.  In the decades since, Kaku has widened his ambit to, well, pretty much everything, regularly churning out popular books with subtitles like &amp;#8220;How Science Will Revolutionize the 21st Century&amp;#8221; and &amp;#8220;How Science Will Shape Human Destiny and Our Daily Lives.&amp;#8221;  He&amp;#8217;s also appeared on countless TV specials, in many cases to argue that UFOs likely contain extraterrestrial visitors.&lt;/p&gt;
-
-
-
-&lt;p&gt;Now Kaku has a new bestseller about quantum computing, creatively entitled &lt;em&gt;&lt;a href=&quot;https://www.amazon.com/Quantum-Supremacy-Computer-Revolution-Everything/dp/0385548362&quot;&gt;Quantum Supremacy&lt;/a&gt;&lt;/em&gt;.  He even &lt;a href=&quot;https://ogjre.com/episode/1980-michio-kaku&quot;&gt;appeared on Joe Rogan&lt;/a&gt; a couple weeks ago to promote the book, surely reaching an orders-of-magnitude larger audience than I have in two decades of trying to explain quantum computing to non-experts.  (Incidentally, to those who&amp;#8217;ve asked why Joe Rogan hasn&amp;#8217;t invited &lt;em&gt;me&lt;/em&gt; on his show to explain quantum computing: I guess you now have an answer of sorts!)&lt;/p&gt;
-
-
-
-&lt;p&gt;In the spirit, perhaps, of the TikTokkers who eat live cockroaches or whatever to satisfy their viewers, I decided to oblige loyal &lt;em&gt;Shtetl-Optimized&lt;/em&gt; fans by buying &lt;em&gt;Quantum Supremacy&lt;/em&gt; and reading it.  So I can now state with confidence: beating out a crowded field, this is &lt;strong&gt;the worst book about quantum computing,&lt;/strong&gt; for some definition of the word &amp;#8220;about,&amp;#8221; that I&amp;#8217;ve ever encountered.&lt;/p&gt;
-
-
-
-&lt;p&gt;Admittedly, it&amp;#8217;s not obvious why I&amp;#8217;m reviewing the book here at all.  Among people who&amp;#8217;ve heard of this blog, I expect that approximately zero would be tempted to buy Kaku&amp;#8217;s book, at least if they flipped through a few random pages and saw the &amp;#8230; &lt;em&gt;level of care&lt;/em&gt; that went into them.  Conversely, the book&amp;#8217;s target readers have probably never visited a blog like this one and never will.  So what&amp;#8217;s the use of this post?&lt;/p&gt;
-
-
-
-&lt;p&gt;Well, as the accidental #1 quantum computing blogger on the planet, I feel a sort of grim obligation here.  Who knows, maybe this post will show up in the first page of Google results for Kaku&amp;#8217;s book, and it will manage to rescue two or three people from the kindergarten of lies.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Where to begin?  Should we just go through &lt;em&gt;the first chapter&lt;/em&gt; with a red pen?  OK then: on the very first page, Kaku writes,&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;Google revealed that their Sycamore quantum computer could solve a mathematical problem in 200 seconds that would take 10,000 years on the world&amp;#8217;s fastest supercomputer.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;No, the &amp;#8220;10,000 years&amp;#8221; estimate was &lt;a href=&quot;https://scottaaronson.blog/?p=4372&quot;&gt;quickly falsified&lt;/a&gt;, as anyone following the subject knows.  I&amp;#8217;d be the first to stress that the situation is complicated; compared to the best currently-known classical algorithms, some quantum advantage remains for the Random Circuit Sampling task, depending on how you measure it.  But to repeat the &amp;#8220;10,000 years&amp;#8221; figure at this point, with no qualifications, is actively misleading.&lt;/p&gt;
-
-
-
-&lt;p&gt;Turning to the second page:&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;[Quantum computers] are a new type of computer that can tackle problems that digital computers can never solve, even with an infinite amount of time.  For example, digital computers can never accurately calculate how atoms combine to create crucial chemical reactions, especially those that make life possible.  Digital computers can only compute on digital tape, consisting of a series of 0s and 1s, which are too crude to describe the delicate waves of electrons dancing deep inside a molecule.  For example, when tediously computing the paths taken by a mouse in a maze, a digital computer has to painfully analyze each possible path, one after the other.  A quantum computer, however, &lt;em&gt;simultaneously&lt;/em&gt; analyzes all possible paths at the same time, with lightning speed.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;OK, so here Kaku has already perpetuated two of the most basic, forehead-banging errors about what quantum computers can do.  In truth, anything that a QC can calculate, a classical computer can calculate as well, &lt;em&gt;given exponentially more time&lt;/em&gt;: for example, by representing the entire wavefunction, all 2&lt;sup&gt;n&lt;/sup&gt; amplitudes, to whatever accuracy is needed.  That&amp;#8217;s why it was understood from the very beginning that quantum computers can&amp;#8217;t change what&amp;#8217;s computable, but only how &lt;em&gt;efficiently&lt;/em&gt; things can be computed.&lt;/p&gt;
-
-
-
-&lt;p&gt;And then there&amp;#8217;s the Misconception of Misconceptions, about how a QC &amp;#8220;analyzes all possible paths at the same time&amp;#8221;&amp;#8212;with no recognition anywhere of the central difficulty, the thing that makes a QC enormously &lt;em&gt;weaker&lt;/em&gt; than an exponentially parallel classical computer, but is also the new and interesting part, namely that you only get to see a &lt;em&gt;single, random outcome&lt;/em&gt; when you measure, with its probability given by the Born rule.  That&amp;#8217;s the error so common that I warn against it right below the title of my blog.&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;[Q]uantum computers are so powerful that, in principle, they could break all known cybercodes.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;Nope, that&amp;#8217;s strongly believed to be false, just like the analogous statement for &lt;em&gt;classical&lt;/em&gt; computers.  Despite its obvious relevance for business and policy types, the entire field of &lt;a href=&quot;https://en.wikipedia.org/wiki/Post-quantum_cryptography&quot;&gt;post-quantum cryptography&lt;/a&gt;&amp;#8212;including the &lt;a href=&quot;https://en.wikipedia.org/wiki/Lattice-based_cryptography&quot;&gt;lattice-based public-key cryptosystems&lt;/a&gt; that have by now survived 20+ years of efforts to find a quantum algorithm to break them&amp;#8212;receives just a single vague mention, on pages 84-85.  The possibility of cryptography surviving quantum computers is quickly dismissed because &amp;#8220;these new trapdoor functions are not easy to implement.&amp;#8221;  (But they &lt;em&gt;&lt;a href=&quot;https://cloud.google.com/blog/products/identity-security/why-google-now-uses-post-quantum-cryptography-for-internal-comms&quot;&gt;have&lt;/a&gt;&lt;/em&gt; been implemented.)&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;There&amp;#8217;s no attempt, anywhere in this book, to explain how any quantum algorithm actually works, let alone is there a word anywhere about the &lt;em&gt;limitations&lt;/em&gt; of quantum algorithms.  And yet there&amp;#8217;s still enough said to be wrong.  On page 84, shortly after confusing the concept of a &lt;a href=&quot;https://en.wikipedia.org/wiki/One-way_function&quot;&gt;one-way function&lt;/a&gt; with that of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Trapdoor_function&quot;&gt;trapdoor function&lt;/a&gt;, Kaku writes:&lt;/p&gt;
-
-
-
-&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
-&lt;p&gt;Let N represent the number we wish to factorize.  For an ordinary digital computer, the amount of time it takes to factorize a number grows exponentially, like t ~ e&lt;sup&gt;N&lt;/sup&gt;, times some unimportant factors.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-&lt;p&gt;This is a double howler: first, trial division takes only ~√N time; Kaku has confused N itself with its &lt;em&gt;number of digits&lt;/em&gt;, ~log&lt;sub&gt;2&lt;/sub&gt;N.  Second, he seems unaware that much better classical factoring algorithms, like the &lt;a href=&quot;https://en.wikipedia.org/wiki/General_number_field_sieve&quot;&gt;Number Field Sieve&lt;/a&gt;, have been known for decades, even though those algorithms play a central role in codebreaking and in any discussion of where the quantum/classical crossover might happen.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;Honestly, though, the errors aren&amp;#8217;t the worst of it.  The majority of the book is not even &lt;em&gt;worth&lt;/em&gt; hunting for errors in, because fundamentally, it&amp;#8217;s &lt;em&gt;filler&lt;/em&gt;.&lt;/p&gt;
-
-
-
-&lt;p&gt;First there&amp;#8217;s page after page breathlessly quoting prestigious-sounding people and organizations&amp;#8212;Google&amp;#8217;s Sundar Pichai, various government agencies, some report by Deloitte&amp;#8212;about just how revolutionary they think quantum computing will be.  Then there are capsule hagiographies of Babbage and Lovelace, Gödel and Turing, Planck and Einstein, Feynman and Everett.&lt;/p&gt;
-
-
-
-&lt;p&gt;And then the bulk of the book is actually about stuff &lt;em&gt;with no direct relation to quantum computing at all&lt;/em&gt;&amp;#8212;the origin of life, climate change, energy generation, cancer, curing aging, etc.&amp;#8212;except with ungrounded speculations tacked onto the end of each chapter about how quantum computers will someday revolutionize all of this.  Personally, I&amp;#8217;d say that&lt;/p&gt;
-
-
-
-&lt;ol&gt;
-&lt;li&gt;Quantum simulation speeding up progress in biochemistry, high-temperature superconductivity, and the like is at least &lt;em&gt;plausible&lt;/em&gt;&amp;#8212;though very far from guaranteed, since one has to beat the cleverest classical approaches that can be designed for the same problems (a point that Kaku nowhere grapples with).&lt;/li&gt;
-
-
-
-&lt;li&gt;The stuff involving optimization, machine learning, and the like is almost entirely wishful thinking.&lt;/li&gt;
-
-
-
-&lt;li&gt;Not once in the book has Kaku even &lt;em&gt;mentioned&lt;/em&gt; the intellectual tools (e.g., looking at actual quantum algorithms like Grover’s algorithm or phase estimation, and their performance on various tasks) that would be needed to distinguish 1 from 2.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;In his acknowledgments section, Kaku simply lists a bunch of famous scientists he&amp;#8217;s met in his life&amp;#8212;Feynman, Witten, Hawking, Penrose, Brian Greene, Lisa Randall, Neil deGrasse Tyson.  Not a single living quantum computing researcher is acknowledged, not one.&lt;/p&gt;
-
-
-
-&lt;p&gt;Recently, I&amp;#8217;d been cautiously optimistic that, after decades of overblown headlines about &amp;#8220;trying all answers in parallel,&amp;#8221; &amp;#8220;cracking all known codes,&amp;#8221; etc., the standard for quantum computing popularization was slowly creeping upward.  Maybe I was just bowled over by &lt;a href=&quot;https://www.youtube.com/watch?v=-UrdExQW0cs&quot;&gt;this recent YouTube video&lt;/a&gt; (&amp;#8220;How Quantum Computers Break the Internet&amp;#8230; Starting Now&amp;#8221;), which despite its clickbait title and its slick presentation, miraculously gets essentially everything right, shaming the hypesters by demonstrating just how much better it&amp;#8217;s possible to do.&lt;/p&gt;
-
-
-
-&lt;p&gt;Kaku&amp;#8217;s slapdash &amp;#8220;book,&amp;#8221; and the publicity campaign around it, represents a noxious step backwards.  The wonder of it, to me, is Kaku holds a PhD in theoretical physics.  And yet the average English major who&amp;#8217;s written a &amp;#8220;what&amp;#8217;s the deal with quantum computing?&amp;#8221; article for some obscure link aggregator site has done a more careful and honest job than Kaku has.  That&amp;#8217;s setting the bar about a millimeter off the floor.  I think the difference is, at least the English major knows that they&amp;#8217;re supposed to &lt;em&gt;call&lt;/em&gt; an expert or two, when writing about an enormously complicated subject of which they&amp;#8217;re completely ignorant.&lt;/p&gt;
-
-
-
-&lt;hr class=&quot;wp-block-separator has-alpha-channel-opacity&quot;/&gt;
-
-
-
-&lt;p&gt;&lt;strong&gt;&lt;mark style=&quot;background-color:rgba(0, 0, 0, 0)&quot; class=&quot;has-inline-color has-vivid-red-color&quot;&gt;Update:&lt;/mark&gt;&lt;/strong&gt; I’ve now been immersed in the AI safety field for one year, let I wouldn’t consider myself &lt;em&gt;nearly&lt;/em&gt; ready to write a book on the subject.  My knowledge of related parts of CS, my year studying AI in grad school, and my having created the subject of computational learning theory of quantum states would all be relevant but totally insufficient.  And AI safety, for all its importance, has less than quantum computing does in the way of difficult-to-understand concepts and results that basically everyone in the field agrees about.  And if I &lt;em&gt;did&lt;/em&gt; someday write such a book, I’d be pretty terrified of getting stuff wrong, and would have multiple expert colleagues read drafts.&lt;/p&gt;
-
-
-
-&lt;p&gt;In case this wasn’t clear enough from my post, Kaku appears to have had zero prior engagement with quantum computing, &lt;strong&gt;and also &lt;/strong&gt;to have consulted zero relevant experts who could’ve fixed his misconceptions.&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By Scott&lt;/p&gt;
-  </content>
-    <author>
-      <name>Scott Aaronson</name>
-      <uri>https://scottaaronson.blog</uri>
     </author>
   </entry>
 
