@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-04T02:30:29Z">Sunday, June 04 2023, 02:30</time>
+          <time class='timeago' datetime="2023-06-04T03:10:38Z">Sunday, June 04 2023, 03:10</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -341,6 +341,102 @@
 
   <div class="tr-articles tr-shrink">
     
+    
+    <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Sunday, June 04
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/084'>TR23-084 |  Time-Space Lower Bounds for Bounded-Error Computation in the Random-Query Model | 
+
+	Itai Dinur</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          The random-query model was introduced by Raz and Zhan at ITCS 2020 as a new model of space-bounded computation. In this model, a branching program of length $T$ and width $2^{S}$ attempts to compute a function $f:\{0,1\}^n \rightarrow \{0,1 \}$. However, instead of receiving direct access to the input bits $(x_1,\ldots,x_n)$, the input is given in pairs of the form $(i_j, x_{i_j}) \in \{1,\ldots,n\} \times \{0,1\}$ for $j = 1,2,\ldots,T$, where the indices $i_1,\ldots,i_T$ are chosen at random from a pre-fixed distribution. 
+
+Raz and Zhan proved that any branching program in the random-query model with the independent distribution (where $\{i_j\}_{j = 1,\ldots,T}$ are uniform and independent) that computes a function $f$ with  sensitivity $k$ satisfies $T \cdot (S + \log n) \geq \Omega(n \cdot k)$. 
+This gives a quadratic time-space lower bound for many natural functions which have sensitivity $\Omega(n)$, such as XOR and Majority. The bound was proved in the zero-error regime, where for each input, the branching program is required to output a value with high probability, and given that a value is output, it must be correct with probability $1$. 
+
+Furthermore, Raz and Zhan conjectured that (up to logarithmic factors in $n$) a quadratic time-space lower bound still holds for the XOR function in the more conventional bounded-error regime, where for each input, the output must be correct with high probability.
+
+In this paper, we prove this conjecture. More generally, let $f:\{0,1\}^n \rightarrow \{0,1 \}$ have average sensitivity (or total influence) $\mathrm{I}[f]$. We prove that any branching program in the random-query model with the independent distribution that computes $f$ in the bounded-error regime satisfies $T \cdot S  \geq \tilde{\Omega}(n) \cdot \mathrm{I}[f]$ (where $\tilde{\Omega}$ hides logarithmic factors in $n$). Moreover, we prove a quadratic time-space lower bound for the Majority function, even though its total influence is $\Theta(\sqrt{n})$.
+
+Our proof is based on a reduction from a communication complexity problem.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          The random-query model was introduced by Raz and Zhan at ITCS 2020 as a new model of space-bounded computation. In this model, a branching program of length $T$ and width $2^{S}$ attempts to compute a function $f:\{0,1\}^n \rightarrow \{0,1 \}$. However, instead of receiving direct access to the input bits $(x_1,\ldots,x_n)$, the input is given in pairs of the form $(i_j, x_{i_j}) \in \{1,\ldots,n\} \times \{0,1\}$ for $j = 1,2,\ldots,T$, where the indices $i_1,\ldots,i_T$ are chosen at random from a pre-fixed distribution. 
+
+Raz and Zhan proved that any branching program in the random-query model with the independent distribution (where $\{i_j\}_{j = 1,\ldots,T}$ are uniform and independent) that computes a function $f$ with  sensitivity $k$ satisfies $T \cdot (S + \log n) \geq \Omega(n \cdot k)$. 
+This gives a quadratic time-space lower bound for many natural functions which have sensitivity $\Omega(n)$, such as XOR and Majority. The bound was proved in the zero-error regime, where for each input, the branching program is required to output a value with high probability, and given that a value is output, it must be correct with probability $1$. 
+
+Furthermore, Raz and Zhan conjectured that (up to logarithmic factors in $n$) a quadratic time-space lower bound still holds for the XOR function in the more conventional bounded-error regime, where for each input, the output must be correct with high probability.
+
+In this paper, we prove this conjecture. More generally, let $f:\{0,1\}^n \rightarrow \{0,1 \}$ have average sensitivity (or total influence) $\mathrm{I}[f]$. We prove that any branching program in the random-query model with the independent distribution that computes $f$ in the bounded-error regime satisfies $T \cdot S  \geq \tilde{\Omega}(n) \cdot \mathrm{I}[f]$ (where $\tilde{\Omega}$ hides logarithmic factors in $n$). Moreover, we prove a quadratic time-space lower bound for the Majority function, even though its total influence is $\Theta(\sqrt{n})$.
+
+Our proof is based on a reduction from a communication complexity problem.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-04T02:29:40Z">Sunday, June 04 2023, 02:29</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/083'>TR23-083 |  Trade-offs between Entanglement and Communication | 
+
+	Srinivasan A, 
+
+	Uma Girish</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          We study the advantages of quantum communication models over classical communication models that are equipped with a limited number of qubits of entanglement. In this direction, we give explicit partial functions on $n$ bits for which reducing the entanglement increases the classical communication complexity exponentially. Our separations are as follows. For every $k\ge 1$:
+  $Q\|^*$ versus $R2^*$: We show that quantum simultaneous protocols with $\tilde{\Theta}(k^5 \log^3 n)$ qubits of entanglement can exponentially outperform two-way randomized protocols with $O(k)$ qubits of entanglement. This resolves an open problem from [Gav08] and improves the state-of-the-art separations between quantum simultaneous protocols with entanglement and two-way randomized protocols without entanglement [Gav19, GRT22].
+  $R\|^*$ versus $Q\|^*$: We show that classical simultaneous protocols with $\tilde{\Theta}(k \log n)$ qubits of entanglement can exponentially outperform quantum simultaneous protocols with $O(k)$ qubits of entanglement, resolving an open question from [GKRW06, Gav19]. The best result prior to our work was a relational separation against protocols without entanglement [GKRW06].
+  $R\|^*$ versus $R1^*$: We show that classical simultaneous protocols with $\tilde{\Theta}(k\log n)$ qubits of entanglement can exponentially outperform randomized one-way protocols with $O(k)$ qubits of entanglement. Prior to our work, only a relational separation was known [Gav08].
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          We study the advantages of quantum communication models over classical communication models that are equipped with a limited number of qubits of entanglement. In this direction, we give explicit partial functions on $n$ bits for which reducing the entanglement increases the classical communication complexity exponentially. Our separations are as follows. For every $k\ge 1$:
+  $Q\|^*$ versus $R2^*$: We show that quantum simultaneous protocols with $\tilde{\Theta}(k^5 \log^3 n)$ qubits of entanglement can exponentially outperform two-way randomized protocols with $O(k)$ qubits of entanglement. This resolves an open problem from [Gav08] and improves the state-of-the-art separations between quantum simultaneous protocols with entanglement and two-way randomized protocols without entanglement [Gav19, GRT22].
+  $R\|^*$ versus $Q\|^*$: We show that classical simultaneous protocols with $\tilde{\Theta}(k \log n)$ qubits of entanglement can exponentially outperform quantum simultaneous protocols with $O(k)$ qubits of entanglement, resolving an open question from [GKRW06, Gav19]. The best result prior to our work was a relational separation against protocols without entanglement [GKRW06].
+  $R\|^*$ versus $R1^*$: We show that classical simultaneous protocols with $\tilde{\Theta}(k\log n)$ qubits of entanglement can exponentially outperform randomized one-way protocols with $O(k)$ qubits of entanglement. Prior to our work, only a relational separation was known [Gav08].
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-04T02:27:27Z">Sunday, June 04 2023, 02:27</time>
+        </div>
+      </div>
+    </details>
+  
     
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Saturday, June 03
@@ -3368,81 +3464,6 @@ All of our results stem from a common framework showing how to transform a batch
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-05-27T08:16:05Z">Saturday, May 27 2023, 08:16</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Friday, May 26
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://tcsplus.wordpress.com/2023/05/26/tcs-talk-wednesday-may-31-paul-golz-harvard-university/'>TCS+ talk: Wednesday, May 31 — Paul Gölz, Harvard University</a></h3>
-        <p class='tr-article-feed'>from <a href='https://tcsplus.wordpress.com'>TCS+ Seminar Series</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          The next TCS+ talk will take place this coming Wednesday, May 31th at 1:00 PM Eastern Time (10:00 AM Pacific Time, 19:00 Central European Time, 17:00 UTC). Paul Gölz from Harvard University will speak about &#8220;News from Algorithmic Democracy: Proportional Representation for Preferences and Demographics&#8221; (abstract below). You can reserve a spot as an individual [&#8230;]
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>The next TCS+ talk will take place this coming Wednesday, May 31th at 1:00 PM Eastern Time (10:00 AM Pacific Time, 19:00 Central European Time, 17:00 UTC). <strong>Paul Gölz</strong> from Harvard University will speak about &#8220;<em>News from Algorithmic Democracy: Proportional Representation for Preferences and Demographics</em>&#8221; (abstract below).</p>
-<p>You can reserve a spot as an individual or a group to join us live by signing up on <a href="https://sites.google.com/view/tcsplus/welcome/next-tcs-talk">the online form</a>. Registration is <em>not</em> required to attend the interactive talk, and the link will be posted on the website the day prior to the talk; however, by registering in the form, you will receive a reminder, along with the link. (The recorded talk will also be posted <a href="https://sites.google.com/view/tcsplus/welcome/past-talks">on our website</a> afterwards) As usual, for more information about the TCS+ online seminar series and the upcoming talks, or to <a href="https://sites.google.com/view/tcsplus/welcome/suggest-a-talk">suggest</a> a possible topic or speaker, please see <a href="https://sites.google.com/view/tcsplus/">the website</a>.</p>
-<blockquote class="wp-block-quote"><p>Abstract: How do you fill a knapsack with city projects to fund, in a way that aligns with voters’ preferences? And how do you choose a committee that represents the population’s makeup in terms of gender, age, etc.? Both questions are central to experiments with new forms of democracy in practice, and both have spurred an exploration for the right algorithms in computational social choice. In this talk, I will survey advances along these thrusts: proposed algorithms, guarantees offered and sought after, as well as technical challenges and connections.</p></blockquote>
-<p class="authors">By plustcs</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-26T06:40:08Z">Friday, May 26 2023, 06:40</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.15861'>On the Weisfeiler-Leman dimension of permutation graphs</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Jin Guo, Alexander L. Gavrilyuk, Ilia Ponomarenko</p><p>It is proved that the Weisfeiler-Leman dimension of the class of permutation
-graphs is at most 18. Previously it was only known that this dimension is
-finite (Gru{\ss}ien, 2017).
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/math/1/au:+Guo_J/0/1/0/all/0/1">Jin Guo</a>, <a href="http://arxiv.org/find/math/1/au:+Gavrilyuk_A/0/1/0/all/0/1">Alexander L. Gavrilyuk</a>, <a href="http://arxiv.org/find/math/1/au:+Ponomarenko_I/0/1/0/all/0/1">Ilia Ponomarenko</a></p><p>It is proved that the Weisfeiler-Leman dimension of the class of permutation
-graphs is at most 18. Previously it was only known that this dimension is
-finite (Gru{\ss}ien, 2017).
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-26T00:30:00Z">Friday, May 26 2023, 00:30</time>
         </div>
       </div>
     </details>
