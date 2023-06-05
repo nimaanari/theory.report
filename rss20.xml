@@ -9,6 +9,124 @@
 
 
 <item>
+  <title>The (local) unit of intelligence is FLOPs</title>
+  <guid>http://windowsontheory.org/?p=8630</guid>
+  <link>https://windowsontheory.org/2023/06/05/the-local-unit-of-intelligence-is-flops/</link>
+  <description>
+    &lt;p&gt;&lt;em&gt;[Crossposting again on&amp;nbsp;&lt;/em&gt;&lt;a href=&quot;https://www.lesswrong.com/&quot;&gt;&lt;em&gt;&lt;u&gt;Lesswrong&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt; and&amp;nbsp;&lt;/em&gt;&lt;a href=&quot;https://windowsontheory.org/&quot;&gt;&lt;em&gt;&lt;u&gt;Windowsontheory&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt;, with the hope I am not overstaying my welcome in LW.]&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;Wealth can be measured by &lt;em&gt;dollars&lt;/em&gt;. This is not a perfect measurement: it’s hard to account for purchasing power and circumstances when comparing people across varying countries or time periods. However, within a particular place and time, one can measure wealth in the local currency. It still does not capture everything (e.g., future earnings, social connections). But generally, all else being roughly equal, the more dollars one has, the wealthier one is.&lt;/p&gt;
+
+
+
+&lt;p&gt;How do we measure intelligence? I am not interested in measuring the intelligence of individual humans or individual animals. Nor am I looking for a universal absolute scale of intelligence on which we could rank humans, elephants, and GPT4. (Indeed, it doesn’t seem that a one-dimensional comparison can be made; for example, we seem to be more intelligent than elephants on most dimensions, but they do have an&amp;nbsp;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S014976340700070X&quot;&gt;&lt;u&gt;impressive memory&lt;/u&gt;&lt;/a&gt;.)&amp;nbsp; Rather, I want to compare different&amp;nbsp;&lt;em&gt;species&lt;/em&gt; within the same genus or different&amp;nbsp;&lt;em&gt;models&lt;/em&gt; within the same general architecture (e.g., Transformers).&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;I think it’s fair to say that the local unit of intelligence for animal species is&amp;nbsp;&lt;em&gt;neurons&lt;/em&gt;. While elephants have larger brains than humans, within the genus&amp;nbsp;&lt;em&gt;Homo&lt;/em&gt;, to a first approximation, the bigger the brain, the more intelligent the species.&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://39669.cdn.cke-cs.com/rQvD3VnunXZu34m86e5f/images/e5d88d991fc175c7676c6ada658142cd44b9887c69c15521.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;(Figure from&amp;nbsp;&lt;a href=&quot;https://chomsky.info/20140826/&quot;&gt;&lt;u&gt;Bolihus et al.&lt;/u&gt;&lt;/a&gt;)&lt;/p&gt;
+
+
+
+&lt;p&gt;I claim that within the current architectures and training frameworks of large language models,&amp;nbsp;&lt;strong&gt;the local unit of intelligence is FLOPs&lt;/strong&gt;. That is, as long as we follow the current paradigm of training transformer-based architectures within best practices of scaling compute and data, the more compute resources (FLOPs) invested in training the model, the more intelligent it is. This is an imperfect measurement, but probably one that is better than trying to give models “IQ exams” that were designed for humans (and even there have&amp;nbsp;&lt;a href=&quot;https://erikhoel.substack.com/p/your-iq-isnt-160-no-ones-is&quot;&gt;&lt;u&gt;dubious value&lt;/u&gt;&lt;/a&gt;).&amp;nbsp; Another way to say this is that the intelligence of the model scales with the number of&amp;nbsp;&lt;strong&gt;“load-bearing gradient steps”&lt;/strong&gt; that have gone into training it.&lt;/p&gt;
+
+
+
+&lt;p&gt;So far, it might seem like a tautology, but as I claimed in the&amp;nbsp;&lt;a href=&quot;https://windowsontheory.org/2023/05/19/gpt-as-an-intelligence-forklift/&quot;&gt;&lt;u&gt;“intelligence forklift” post&lt;/u&gt;&lt;/a&gt;, this does have some implications. In particular, current general-purpose models such as ChatGPT are built in two phases. The first phase is a&amp;nbsp;&lt;strong&gt;pretraining phase&lt;/strong&gt;, in which the model is trained in a Trillion or more gradient steps on the next-token prediction task. The second phase is the&amp;nbsp;&lt;strong&gt;adaptation/fine-tuning phase&lt;/strong&gt;, in which, whether through instruction-tuning, reinforcement learning on human feedback (RLHF) or other methods, the model is “fine tuned” using fewer than a million gradient steps to be a better instruction-following or chatting agent. In other words, more than 99.9% (maybe as much as 99.9999%) of the FLOPs / gradient steps in training the model are invested during its pretraining phase. (One reason that the fine-tuning phase involves much fewer gradient steps is that, while the first phase can use any static data grabbed from the Internet, the second phase requires data that was especially collected for this task and often needs human labeling as well.)&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;The adaptation phase can make a huge difference in the usefulness of the model. The&amp;nbsp;&lt;a href=&quot;https://chat.lmsys.org/?arena&quot;&gt;&lt;u&gt;chatbot arena&lt;/u&gt;&lt;/a&gt; doesn’t even contain non-fine-tuned models, and we can see that smaller but well-tuned models can put up a decent fight against ones that have at least 10 times the parameters (and so roughly at least 100 times the training compute). Unlike sashimi, language models should not be consumed raw. &amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://39669.cdn.cke-cs.com/rQvD3VnunXZu34m86e5f/images/fb47b643997a81bbcc3b8b7ef043ec132b28ff4071de246f.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;&lt;br&gt;However, their “intelligence” is ultimately derived from the FLOPs invested in the base models. (See also &lt;a href=&quot;https://arxiv.org/abs/2305.15717&quot;&gt;&lt;u&gt;this paper &lt;/u&gt;&lt;/a&gt;on the limitations of fine-tuning to close capability gaps.) Fine-tuning, whether using RL or not, is the proverbial “&lt;a href=&quot;https://medium.com/syncedreview/yann-lecun-cake-analogy-2-0-a361da560dae&quot;&gt;&lt;u&gt;cherry on the cake&lt;/u&gt;&lt;/a&gt;” and the pre-trained model captures more than 99.9% of the intelligence of the model.  That pretrained model is &lt;a href=&quot;https://www.lesswrong.com/s/N7nDePaNabJdnbXeE/p/vJFdjigzmcXMhNTsx&quot;&gt;&lt;u&gt;not an agent&lt;/u&gt;&lt;/a&gt; and &lt;a href=&quot;https://astralcodexten.substack.com/p/janus-simulators&quot;&gt;&lt;u&gt;does not have goals&lt;/u&gt;&lt;/a&gt; though it can “play one on TV” in the sense of coming up with plans and proposed actions if prompted to do so. (In LW language, a &lt;a href=&quot;https://www.lesswrong.com/tag/simulator-theory&quot;&gt;simulator&lt;/a&gt;.) This is why a pretrained model can be modeled as an &lt;a href=&quot;https://www.lesswrong.com/posts/wDL6wiqg3c6WFisHq/gpt-as-an-intelligence-forklift&quot;&gt;&lt;u&gt;“intelligence forklift”&lt;/u&gt;&lt;/a&gt;. Just like a forklift supplies strength but is useless without someone driving it, so does the pretrained model supply intelligence, but that intelligence needs to be directed via fine-tuning, conditioning on prompts, etc.  Another way to think of the pre-trained model is as the bee colony and the adapter as the queen. (That is, if the queen bee was actually telling bees what to do rather than just &lt;a href=&quot;https://www.perfectbee.com/learn-about-bees/the-life-of-bees/role-queen-bee&quot;&gt;&lt;u&gt;laying eggs&lt;/u&gt;&lt;/a&gt;.)&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://39669.cdn.cke-cs.com/rQvD3VnunXZu34m86e5f/images/da45c0196d68d4c0a178bc2d54360510fa6ca80b2caa40ec.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;In that sense, while I agree with&amp;nbsp;&lt;a href=&quot;https://gwern.net/tool-ai&quot;&gt;&lt;u&gt;Gwern&lt;/u&gt;&lt;/a&gt; that agentic models are more&amp;nbsp;&lt;em&gt;useful&lt;/em&gt; and that&lt;em&gt; “we don’t want low log-loss error on ImageNet, we want to refind a particular personal photo”&lt;/em&gt; , I disagree that&amp;nbsp;&lt;em&gt;“Agent AIs [will be] more intelligent than Tool AIs.”&amp;nbsp;&lt;/em&gt;Intelligence and usefulness are not the same thing.&lt;/p&gt;
+
+
+
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;Implications for alignment&lt;/h2&gt;
+
+
+
+&lt;p&gt;If the pre-trained model does not have goals, then there is no sense in “aligning” it. Rather, there is a separation of concerns, with a highly intelligent but goal-less pre-trained model (“forklift”) and a not-so-intelligent but goal-directed adaptor (“driver”). It is the latter one that we need to align:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;The component of an AI system that needs to be aligned is not the component that accounts for its intelligence.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;That is a hopeful lesson since the adaptor can be a much smaller (e.g. have drastically&amp;nbsp;&lt;a href=&quot;https://arxiv.org/abs/2106.09685&quot;&gt;&lt;u&gt;fewer parameters&lt;/u&gt;&lt;/a&gt;) and tractable object. However, it does not mean that the alignment problem is easy and that we are insulated from the complexities of the pretrained model:&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;A forklift with a speed of 1000mph might not be actively trying to kill you, but this could still be the end result.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;In particular, we don’t understand the biases the pre-trained model inherits from the data, nor the way that these may play out when we use the model in applications. However, it does seem that for a pretrained model to be as good at its job as possible, it should learn all the biases in its data but not be constrained to any of them. It should be able to adapt to any context real or imagined and be the “perfect actor” that can take on any character’s personality.&lt;/p&gt;
+
+
+
+&lt;p&gt;The traditional “anthropomorphic” view of intelligence is as something that “belongs” to an individual or&amp;nbsp;&lt;em&gt;agent&amp;nbsp;&lt;/em&gt;and that this agent has some sort of preferences or goals (a.k.a a&amp;nbsp;&lt;em&gt;utility function&lt;/em&gt;). Hence a potential future super-intelligent AI was thought of as an “alien” that pursues some goals. Under this viewpoint, we want to either “box” the alien to control its impact or “align” its goals to ours. Both of these options treat the AI system as a single component encompassing both goals and intelligence. However, if goals and intelligence parts correspond to different components, we may be able to&amp;nbsp;&lt;strong&gt;“take the alien’s brain for a ride”&lt;/strong&gt; and build a variety of systems that share the same&amp;nbsp;&lt;em&gt;capabilities&lt;/em&gt; but have very different objectives and profiles.&lt;/p&gt;
+
+
+
+&lt;p&gt;To be clear, the “intelligence forklift” view does not preclude building an “anti-aligned” agent on top of a pre-trained model that is&amp;nbsp;&lt;em&gt;malicious&lt;/em&gt;,&amp;nbsp;&lt;em&gt;dishonest&lt;/em&gt;, and&amp;nbsp;&lt;em&gt;harmful&lt;/em&gt;. It just means that such an agent would not have an automatic intelligence advantage over other agents (including humans) since all of them can have access to a shared “intelligence engine” provided by the goal-less pretrained models. This is what I illustrated as “scenario 2” in this figure (taken from my&amp;nbsp;&lt;a href=&quot;https://www.lesswrong.com/posts/wDL6wiqg3c6WFisHq/gpt-as-an-intelligence-forklift&quot;&gt;&lt;u&gt;previous post&lt;/u&gt;&lt;/a&gt;):&lt;/p&gt;
+
+
+
+&lt;figure class=&quot;wp-block-image&quot;&gt;&lt;img src=&quot;https://39669.cdn.cke-cs.com/rQvD3VnunXZu34m86e5f/images/67505f5594ae360d8e9d1949c3e201489116d2d8c1ee48ba.png&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
+
+
+
+&lt;h2 class=&quot;wp-block-heading&quot;&gt;&lt;strong&gt;What about “self play”?&lt;/strong&gt;&lt;/h2&gt;
+
+
+
+&lt;p&gt;The above assumes that the intelligence component of a model is obtained by executing gradient steps on static data, but what if this data is itself generated by the model? This is what happened with games such as Go and Chess. Originally models were trained by predicting the next move of human games scraped from the Internet, but to improve beyond the quality of these data, models needed to play against themselves and generate new games. They could then filter out only the most successful ones and hence generate data that is of higher quality than the original games they trained on. (Eventually, it turned out that with this approach you don’t need to start with&amp;nbsp;&lt;em&gt;any&lt;/em&gt; data for games such as Chess and Go, hence the “Zero” in AlphaZero.)&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+
+
+
+&lt;p&gt;Self-play makes a lot of sense in games where there is a very clear notion of winning and losing, but what would be the analog for language models? I don’t know the answer to this in general, but in the realm of scientific literature, there is an analogous process. The model could play the roles of authors and reviewers alike, generate new papers, subject them to peer review, revise and resubmit, etc. At least in fields that don’t require “wet labs”, this could lead to the model simulating the scientific literature of 2024, then 2025, and so on and so forth. Models that manage to do this would be amazing and would speed up scientific progress tremendously. However, I believe they could still be (just more powerful) “intelligence forklifts”. Model outputs influencing its inputs can lead to a &amp;#8220;positive feedback loop,&amp;#8221; and so this is not certain. But I do not see an inherent reason why models could not be arbitrarily intelligent and still completely without goals. In the &lt;a href=&quot;https://astralcodexten.substack.com/p/janus-simulators&quot;&gt;&lt;u&gt;words of Scott Alexander&lt;/u&gt;&lt;/a&gt;, no matter how intelligent they are, models could still be “enlightened” and realize that&lt;/p&gt;
+
+
+
+&lt;blockquote class=&quot;wp-block-quote&quot;&gt;
+&lt;p&gt;&lt;strong&gt;“once you stop obsessing over the character you’re playing, you notice the GIANT SUPER-ACCURATE WORLD MODEL TAKING UP 99.99% OF YOUR BRAIN.”&lt;/strong&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p class=&quot;authors&quot;&gt;By Boaz Barak&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-05 18:22:58 UTC</pubDate>
+  <author>Windows on Theory</author>
+</item>
+
+<item>
   <title>Mathematics of the impossible, draft of a book</title>
   <guid>http://emanueleviola.wordpress.com/?p=1259</guid>
   <link>https://emanueleviola.wordpress.com/2023/06/05/mathematics-of-the-impossible-draft-of-a-book/</link>
@@ -1465,23 +1583,6 @@ $\widetilde{O}(d/\epsilon)$.
   </description>
   <pubDate>2023-05-31 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>TR23-078 |  Toward Better Depth Lower Bounds: A KRW-like theorem for Strong Composition | 
-
-	Or Meir</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/078</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/078</link>
-  <description>
-    One of the major open problems in complexity theory is proving super-logarithmic lower bounds on the depth of circuits (i.e., $\mathbf{P}\not\subseteq \mathbf{NC}^{1}$). Karchmer, Raz, and Wigderson (Computational Complexity 5(3/4), 1995) suggested to approach this problem by proving that depth complexity of a composition of functions $f \diamond g$ is roughly the sum of the depth complexities of $f$ and $g$. They showed that the validity of this conjecture would imply that $\mathbf{P}\not\subseteq\mathbf{NC}^{1}$.
-
-The intuition that underlies the KRW conjecture is that the composition $f \diamond g$ should behave like a &amp;quot;direct-sum problem&amp;quot;, in a certain sense, and therefore the depth complexity of $f \diamond g$ should be the sum of the individual depth complexities. Nevertheless, there are two obstacles toward turning this intuition into a proof: first, we do not know how to prove that $f \diamond g$ must behave like a direct-sum problem; second, we do not know how to prove that the complexity of the latter direct-sum problem is indeed the sum of the individual complexities.
-
-In this work, we focus on the second obstacle. To this end, we study a notion called ``strong composition&amp;#39;&amp;#39;, which is the same as $f \diamond g$ except that it is forced to behave like a direct-sum problem. We prove a variant of the KRW conjecture for strong composition, thus overcoming the above second obstacle. This result demonstrates that the first obstacle above is the crucial barrier toward resolving the KRW conjecture. Along the way, we develop some general techniques that might be of independent interest.
-  </description>
-  <pubDate>2023-05-30 15:41:38 UTC</pubDate>
-  <author>ECCC Papers</author>
 </item>
 
 </channel>
