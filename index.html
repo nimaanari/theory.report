@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-05T02:30:17Z">Monday, June 05 2023, 02:30</time>
+          <time class='timeago' datetime="2023-06-05T02:59:14Z">Monday, June 05 2023, 02:59</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,37 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Monday, June 05
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/06/quantifiers-to-parenthesize-or-not-to.html'>Quantifiers: To Parenthesize or not to Parenthesize?  Matrix of Formula: To Bracket or not to Bracket?</a></h3>
+        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>&nbsp;For the book&nbsp;</p><p>Computational&nbsp; Intractability: A Guide to Algorithmic Lower Bounds</p><p>by Demaine-Gasarch-Hajiaghayi&nbsp;</p><p>(See&nbsp; here&nbsp;for a link to a first draft.)&nbsp;</p><p>we had to make some choices about which notation to use. One of the least important ones was the following:&nbsp;</p><p>When defining NP, and in a few other places should we use:&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (\exists y)(\forall y)[B(x,y)]</p><p>or&nbsp;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;\exists x : \forall y : B(x,y)<br></p><p>or&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; something else.</p><p>We ended up doing it the second way.&nbsp; But I wondered, which, if either, is standard. So I looked in many math and theoretical CS books looking for places they used quantifiers. Here is what I found</p><p>a) Most papers and books really don't use quantifiers at all!&nbsp; This surprised me.&nbsp;</p><p>b) When quantifiers are used, they are used in definitions, not theorems.&nbsp;</p><p>c) One exception is in logic when they deal with formulas as objects onto themselves.&nbsp; For example, the inductive definition of a formula will have a step:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;If f(x_1,...,x_n) is a formula then (\exists x_i)[f(x_1,...,x_n)] is a formula.&nbsp;</p><p>d) Here is a list of the few places I saw quantifiers used and if they used parenthesis or not. I say if it has parenthesis (abbreviated Parens)&nbsp; or not, and if the matrix of the formula is in square brackets, no brackets, or something ese.&nbsp;</p><p>Cook's classic paper&nbsp;.&nbsp;Page 154 Parens, no Brackets (1971)&nbsp;</p><p>Stockmeyer's paper where he defines PH.&nbsp; Page 6 Parens and Brackets&nbsp; (1976)<br></p><p>Computers and Intractability by Garey &amp; Johnson. Page 164. Parens and Brackets (1979)</p><p>Morass-like construction of aleph_2 trees in L by Devlin.&nbsp; Page 2 Parens and matrix in Parens (1979)</p><p>Descriptive Complexity by Immerman.&nbsp;Page 38 Parens no Brackets (1999)&nbsp;</p><p>Bounded Queries in Recursion Theory by Gasarch and Martin. Parens and Brackets&nbsp; Throughout the book.&nbsp; (1999)</p><p>Complexity Theory from Godel to Feynman&nbsp;by Rudich. No Parens, No Brackets in Def of PH. (2003)&nbsp;</p><p>Parameterized Complexity Theory&nbsp;by Flum &amp; Grohe. Page 81 no Parens and no Brackets.&nbsp;</p><p>Computational Complexity: A Modern Approach&nbsp;by Arora &amp; Barak. Page 40. No Parens No Brackets.(2007)&nbsp;</p><p>Computational Complexity: A Conceptual Prospective&nbsp;by Goldreich.&nbsp; Page 114 no parents, no brackets (2008)&nbsp;</p><p>On Quantifer Rank Equivalence between linear orders by Siders.&nbsp;On page 417 they use quantifiers to state a theorem, which is unusual. Parens no brackets.<br></p><p>Presburger arithmetic, Rational Generating Functions, and quasi polynomials&nbsp;by Woods. Parens no&nbsp; Brackets. (2012)&nbsp;<br></p><p>Who witness's the Witness by Abel et al.&nbsp;On Page 69 (which the pointer takes you to) No Parens, no brackets. Colons between quantifiers (2018).</p><p>e) What to make of all this?</p><p>First off- the RARITY of the use of quantifiers really surprised me. The only place I saw them used a lot was my book, co-authored with Georgie Martin,&nbsp;&nbsp;Bounded Queries in Recursion Theory. Perhaps it would have sold better if I didn't use so many quantifiers. Oh well.&nbsp;</p><p>Second off- Later works don't use parens and brackets. This is most clear if you just look at Complexity Theory Books&nbsp;</p><p>Garey &amp; Johnson - 1979- parens and brackets</p><p>Flun &amp; Grohe- 1998- no parens and no brackts</p><p>Immerman- 1999 - parens but no brackets (this is the one exception)&nbsp;</p><p>Arora &amp; Barack- 2007 no parens and&nbsp; no brackets</p><p>Goldreich-2008- no parens and no brackets</p><p>If you have a complexity theory book around that is not on this list, look up the definition of NP and the definition of the Poly Hierarchy and see (a) if they use parens around the quantifiers, and (b) if they use square brackets or no brackets of something else. Please leave a comment about it so I test the conjecture that parenthesis are just so 1979.&nbsp;</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>By gasarch</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>&nbsp;For the book&nbsp;</p><p><b>Computational&nbsp; Intractability: A Guide to Algorithmic Lower Bounds</b></p><p>by Demaine-Gasarch-Hajiaghayi&nbsp;</p><p>(See&nbsp; <a href="https://hardness.mit.edu/">here</a>&nbsp;for a link to a first draft.)&nbsp;</p><p>we had to make some choices about which notation to use. One of the least important ones was the following:&nbsp;</p><p>When defining NP, and in a few other places should we use:&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (\exists y)(\forall y)[B(x,y)]</p><p>or&nbsp;</p><p><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp;\exists x : \forall y : B(x,y)</span><br /></p><p><span>or&nbsp;</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; something else.</span></p><p>We ended up doing it the second way.&nbsp; But I wondered, which, if either, is standard. So I looked in many math and theoretical CS books looking for places they used quantifiers. Here is what I found</p><p>a) Most papers and books really don't use quantifiers at all!&nbsp; This surprised me.&nbsp;</p><p>b) When quantifiers are used, they are used in definitions, not theorems.&nbsp;</p><p>c) One exception is in logic when they deal with formulas as objects onto themselves.&nbsp; For example, the inductive definition of a formula will have a step:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;If f(x_1,...,x_n) is a formula then (\exists x_i)[f(x_1,...,x_n)] is a formula.&nbsp;</p><p>d) Here is a list of the few places I saw quantifiers used and if they used parenthesis or not. I say if it has parenthesis (abbreviated Parens)&nbsp; or not, and if the matrix of the formula is in square brackets, no brackets, or something ese.&nbsp;</p><p><i><a href="https://dl.acm.org/doi/pdf/10.1145/800157.805047">Cook's classic paper</a>&nbsp;.&nbsp;</i>Page 154 Parens, no Brackets (1971)&nbsp;</p><p><a href="https://www.sciencedirect.com/science/article/pii/030439757690061X?via%3Dihub"><i>Stockmeyer's paper where he defines PH</i></a>.&nbsp; Page 6 Parens and Brackets&nbsp; (1976)<br /></p><p><i>Computers and Intractability</i> by Garey &amp; Johnson. Page 164. Parens and Brackets (1979)</p><p><i>Morass-like construction of aleph_2 trees in L</i> by Devlin.&nbsp; Page 2 Parens and matrix in Parens (1979)</p><p><i>Descriptive Complexity by Immerman.</i>&nbsp;Page 38 Parens no Brackets (1999)&nbsp;</p><p><i>Bounded Queries in Recursion Theory </i>by Gasarch and Martin. Parens and Brackets&nbsp; Throughout the book.&nbsp; (1999)</p><p><i>Complexity Theory from Godel to Feynman</i>&nbsp;by Rudich. No Parens, No Brackets in Def of PH. (2003)&nbsp;</p><p><a href="http://yaroslavvb.com/upload/flum.pdf">Parameterized Complexity Theory</a>&nbsp;by Flum &amp; Grohe. Page 81 no Parens and no Brackets.&nbsp;</p><p><i><a href="https://theory.cs.princeton.edu/complexity/book.pdf">Computational Complexity: A Modern Approach</a>&nbsp;</i>by Arora &amp; Barak. Page 40. No Parens No Brackets.(2007)&nbsp;</p><p><a href="https://theswissbay.ch/pdf/Gentoomen%20Library/Theory%20Of%20Computation/Oded_Goldreich-Computational_Complexity__A_Conceptual_Perspective%282008%29.pdf">Computational Complexity: A Conceptual Prospective</a>&nbsp;by Goldreich.&nbsp; Page 114 no parents, no brackets (2008)&nbsp;</p><p><i><a href="https://www.sciencedirect.com/science/article/pii/S0890540109002338">On Quantifer Rank Equivalence between linear orders by Siders</a>.&nbsp;</i>On page 417 they use quantifiers to state a theorem, which is unusual. Parens no brackets.<br /></p><p><a href="https://arxiv.org/abs/1211.0020"><i>Presburger arithmetic, Rational Generating Functions, and quasi polynomials</i></a>&nbsp;by Woods. Parens no&nbsp; Brackets. (2012)&nbsp;<br /></p><p><a href="https://erikdemaine.org/papers/Witness_TCS/paper.pdf#page=69">Who witness's the Witness by Abel et al.</a>&nbsp;On Page 69 (which the pointer takes you to) No Parens, no brackets. Colons between quantifiers (2018).</p><p>e) What to make of all this?</p><p>First off- the RARITY of the use of quantifiers really surprised me. The only place I saw them used a lot was my book, co-authored with Georgie Martin,&nbsp;&nbsp;<i>Bounded Queries in Recursion Theory. </i>Perhaps it would have sold better if I didn't use so many quantifiers. Oh well.&nbsp;</p><p>Second off- Later works don't use parens and brackets. This is most clear if you just look at Complexity Theory Books&nbsp;</p><p>Garey &amp; Johnson - 1979- parens and brackets</p><p>Flun &amp; Grohe- 1998- no parens and no brackts</p><p>Immerman- 1999 - parens but no brackets (this is the one exception)&nbsp;</p><p>Arora &amp; Barack- 2007 no parens and&nbsp; no brackets</p><p>Goldreich-2008- no parens and no brackets</p><p>If you have a complexity theory book around that is not on this list, look up the definition of NP and the definition of the Poly Hierarchy and see (a) if they use parens around the quantifiers, and (b) if they use square brackets or no brackets of something else. Please leave a comment about it so I test the conjecture that parenthesis are just so 1979.&nbsp;</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><span><br /></span></p><p><br /></p><p><br /></p><p class="authors">By gasarch</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-05T02:42:00Z">Monday, June 05 2023, 02:42</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3443,81 +3474,6 @@ Email: hubie.chen@kcl.ac.uk</p>
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-05-30T05:38:33Z">Tuesday, May 30 2023, 05:38</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2305.17239'>Irreducibility of Recombination Markov Chains in the Triangular Lattice</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Sarah Cannon</p><p>In the United States, regions are frequently divided into districts for the
-purpose of electing representatives. How the districts are drawn can affect
-who's elected, and drawing districts to give an advantage to a certain group is
-known as gerrymandering. It can be surprisingly difficult to detect
-gerrymandering, but one algorithmic method is to compare a current districting
-plan to a large number of randomly sampled plans to see whether it is an
-outlier. Recombination Markov chains are often used for this random sampling:
-randomly choose two districts, consider their union, and split this union in a
-new way. This works well in practice, but the theory behind it remains
-underdeveloped. For example, it's not known if recombination Markov chains are
-irreducible, that is, if recombination moves suffice to move from any
-districting plan to any other.
-</p>
-<p>Irreducibility of recombination Markov chains can be formulated as a graph
-problem: for a graph $G$, is the space of all partitions of $G$ into $k$
-connected subgraphs ($k$ districts) connected by recombination moves? We
-consider three simply connected districts and district sizes $k_1\pm 1$
-vertices, $k_2\pm 1$ vertices, and $k3\pm 1$ vertices. We prove for arbitrarily
-large triangular regions in the triangular lattice, recombination Markov chains
-are irreducible. This is the first proof of irreducibility under tight district
-size constraints for recombination Markov chains beyond small or trivial
-examples.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Cannon_S/0/1/0/all/0/1">Sarah Cannon</a></p><p>In the United States, regions are frequently divided into districts for the
-purpose of electing representatives. How the districts are drawn can affect
-who's elected, and drawing districts to give an advantage to a certain group is
-known as gerrymandering. It can be surprisingly difficult to detect
-gerrymandering, but one algorithmic method is to compare a current districting
-plan to a large number of randomly sampled plans to see whether it is an
-outlier. Recombination Markov chains are often used for this random sampling:
-randomly choose two districts, consider their union, and split this union in a
-new way. This works well in practice, but the theory behind it remains
-underdeveloped. For example, it's not known if recombination Markov chains are
-irreducible, that is, if recombination moves suffice to move from any
-districting plan to any other.
-</p>
-<p>Irreducibility of recombination Markov chains can be formulated as a graph
-problem: for a graph $G$, is the space of all partitions of $G$ into $k$
-connected subgraphs ($k$ districts) connected by recombination moves? We
-consider three simply connected districts and district sizes $k_1\pm 1$
-vertices, $k_2\pm 1$ vertices, and $k3\pm 1$ vertices. We prove for arbitrarily
-large triangular regions in the triangular lattice, recombination Markov chains
-are irreducible. This is the first proof of irreducibility under tight district
-size constraints for recombination Markov chains beyond small or trivial
-examples.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-05-30T00:30:00Z">Tuesday, May 30 2023, 00:30</time>
         </div>
       </div>
     </details>
