@@ -9,6 +9,108 @@
 
 
 <item>
+  <title>A survey of approximation algorithms for capacitated vehicle routing problems</title>
+  <guid>http://arxiv.org/abs/2306.01826</guid>
+  <link>http://arxiv.org/abs/2306.01826</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chen_Y/0/1/0/all/0/1&quot;&gt;Yongyu Chen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Finding the shortest travelling tour of vehicles with capacity k from the
+depot to the customers is called the Capacity vehicle routing problem (CVRP).
+CVRP plays an essential position in logistics systems, and it is the most
+intensively studied problem in combinatorial optimization. In complexity, CVRP
+with k $\ge$ 3 is an NP-hard problem, and it is APX-hard as well. We already
+knew that it could not be approximated in metric space. Moreover, it is the
+first problem resisting Arora&#39;s famous approximation framework. So, whether
+there is, a polynomial-time (1+$\epsilon$)-approximation for the Euclidean CVRP
+for any $\epsilon&amp;gt;0$ is still an open problem. This paper will summarize the
+research progress from history to up-to-date developments. The survey will be
+updated periodically.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-06 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Revisiting Garg&#39;s 2-Approximation Algorithm for the k-MST Problem in Graphs</title>
+  <guid>http://arxiv.org/abs/2306.01867</guid>
+  <link>http://arxiv.org/abs/2306.01867</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Breen_E/0/1/0/all/0/1&quot;&gt;Emmett Breen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mirka_R/0/1/0/all/0/1&quot;&gt;Renee Mirka&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_Z/0/1/0/all/0/1&quot;&gt;Zichen Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Williamson_D/0/1/0/all/0/1&quot;&gt;David P. Williamson&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper revisits the 2-approximation algorithm for $k$-MST presented by
+Garg in light of a recent paper of Paul et al.. In the $k$-MST problem, the
+goal is to return a tree spanning $k$ vertices of minimum total edge cost. Paul
+et al. extend Garg&#39;s primal-dual subroutine to improve the approximation ratios
+for the budgeted prize-collecting traveling salesman and minimum spanning tree
+problems. We follow their algorithm and analysis to provide a cleaner version
+of Garg&#39;s result. Additionally, we introduce the novel concept of a kernel
+which allows an easier visualization of the stages of the algorithm and a
+clearer understanding of the pruning phase. Other notable updates include
+presenting a linear programming formulation of the $k$-MST problem, including
+pseudocode, replacing the coloring scheme used by Garg with the simpler concept
+of neutral sets, and providing an explicit potential function.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-06 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Fast $(1+\varepsilon)$-Approximation Algorithms for Binary Matrix Factorization</title>
+  <guid>http://arxiv.org/abs/2306.01869</guid>
+  <link>http://arxiv.org/abs/2306.01869</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Velingker_A/0/1/0/all/0/1&quot;&gt;Ameya Velingker&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Votsch_M/0/1/0/all/0/1&quot;&gt;Maximilian V&amp;#xf6;tsch&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Woodruff_D/0/1/0/all/0/1&quot;&gt;David P. Woodruff&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_S/0/1/0/all/0/1&quot;&gt;Samson Zhou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We introduce efficient $(1+\varepsilon)$-approximation algorithms for the
+binary matrix factorization (BMF) problem, where the inputs are a matrix
+$\mathbf{A}\in\{0,1\}^{n\times d}$, a rank parameter $k&amp;gt;0$, as well as an
+accuracy parameter $\varepsilon&amp;gt;0$, and the goal is to approximate $\mathbf{A}$
+as a product of low-rank factors $\mathbf{U}\in\{0,1\}^{n\times k}$ and
+$\mathbf{V}\in\{0,1\}^{k\times d}$. Equivalently, we want to find $\mathbf{U}$
+and $\mathbf{V}$ that minimize the Frobenius loss $\|\mathbf{U}\mathbf{V} -
+\mathbf{A}\|_F^2$. Before this work, the state-of-the-art for this problem was
+the approximation algorithm of Kumar et. al. [ICML 2019], which achieves a
+$C$-approximation for some constant $C\ge 576$. We give the first
+$(1+\varepsilon)$-approximation algorithm using running time singly exponential
+in $k$, where $k$ is typically a small integer. Our techniques generalize to
+other common variants of the BMF problem, admitting bicriteria
+$(1+\varepsilon)$-approximation algorithms for $L_p$ loss functions and the
+setting where matrix operations are performed in $\mathbb{F}_2$. Our approach
+can be implemented in standard big data models, such as the streaming or
+distributed models.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-06 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Auditable data structures: theory and applications</title>
+  <guid>http://arxiv.org/abs/2306.01886</guid>
+  <link>http://arxiv.org/abs/2306.01886</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Canciani_A/0/1/0/all/0/1&quot;&gt;Andrea Canciani&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Felicioli_C/0/1/0/all/0/1&quot;&gt;Claudio Felicioli&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Severino_F/0/1/0/all/0/1&quot;&gt;Fabio Severino&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Tortola_D/0/1/0/all/0/1&quot;&gt;Domenico Tortola&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Every digital process needs to consume some data in order to work properly.
+It is very common for applications to use some external data in their
+processes, getting them by sources such as external APIs. Therefore, trusting
+the received data becomes crucial in such scenarios, considering that if the
+data are not self-produced by the consumer, the trust in the external data
+source, or in the data that the source produces, can not always be taken for
+granted. The most used approach to generate trust in the external source is
+based on authenticated data structures, that are able to authenticate the
+source when queried through the generation of proofs. Such proofs are useful to
+assess authenticity or integrity, however, an external user could also be
+interested in verifying the data history and its consistency. This problem
+seems to be unaddressed by current literature, which proposes some approaches
+aimed at executing audits by internal actors with prior knowledge about the
+data structures. In this paper, we address the scenario of an external auditor
+with no data knowledge that wants to verify the data history consistency. We
+analyze the terminology and the current state of the art of the auditable data
+structures, then we will propose a general framework to support external audits
+from both internal and external users.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-06 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>The (local) unit of intelligence is FLOPs</title>
   <guid>http://windowsontheory.org/?p=8630</guid>
   <link>https://windowsontheory.org/2023/06/05/the-local-unit-of-intelligence-is-flops/</link>
@@ -1488,101 +1590,6 @@ the number of qubits is n &amp;gt; 16) than the distance between the experimenta
   </description>
   <pubDate>2023-05-31 17:36:59 UTC</pubDate>
   <author>Gil Kalai</author>
-</item>
-
-<item>
-  <title>Postdoc at Warwick (apply by June 25, 2023) at University of Warwick (apply by June 25, 2023)</title>
-  <guid>http://cstheory-jobs.org/2023/05/31/postdoc-at-warwick-apply-by-june-25-2023-at-university-of-warwick-apply-by-june-25-2023/</guid>
-  <link>https://cstheory-jobs.org/2023/05/31/postdoc-at-warwick-apply-by-june-25-2023-at-university-of-warwick-apply-by-june-25-2023/</link>
-  <description>
-    &lt;p&gt;A postdoc position in algebraic/geometric complexity theory at the University of Warwick, under the supervision of Christian Ikenmeyer, is available. Listed as &amp;#8220;Research Fellow (107507-0523)&amp;#8221; on Warwick&amp;#8217;s website.&lt;/p&gt;
-&lt;p&gt;Website: &lt;a href=&quot;https://atsv7.wcn.co.uk/search_engine/jobs.cgi?SID=amNvZGU9MTg5MTIyMCZ2dF90ZW1wbGF0ZT0xNDU3Jm93bmVyPTUwNjI0NTImb3duZXJ0eXBlPWZhaXImYnJhbmRfaWQ9MCZ2YWNfeHRyYTUwNjI0NTIuNTJfNTA2MjQ1Mj0yMzk5MjEmcG9zdGluZ19jb2RlPTYzNQ==&quot;&gt;https://atsv7.wcn.co.uk/search_engine/jobs.cgi?SID=amNvZGU9MTg5MTIyMCZ2dF90ZW1wbGF0ZT0xNDU3Jm93bmVyPTUwNjI0NTImb3duZXJ0eXBlPWZhaXImYnJhbmRfaWQ9MCZ2YWNfeHRyYTUwNjI0NTIuNTJfNTA2MjQ1Mj0yMzk5MjEmcG9zdGluZ19jb2RlPTYzNQ==&lt;/a&gt;&lt;br /&gt;
-Email: christian.ikenmeyer@warwick.ac.uk&lt;/p&gt;
-&lt;p class=&quot;authors&quot;&gt;By shacharlovett&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-31 11:12:58 UTC</pubDate>
-  <author>CCI: jobs</author>
-</item>
-
-<item>
-  <title>Polynomial-time classical sampling of high-temperature quantum Gibbs states</title>
-  <guid>http://arxiv.org/abs/2305.18514</guid>
-  <link>http://arxiv.org/abs/2305.18514</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Yin_C/0/1/0/all/0/1&quot;&gt;Chao Yin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Lucas_A/0/1/0/all/0/1&quot;&gt;Andrew Lucas&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The computational complexity of simulating quantum many-body systems
-generally scales exponentially with the number of particles. This enormous
-computational cost prohibits first principles simulations of many important
-problems throughout science, ranging from simulating quantum chemistry to
-discovering the thermodynamic phase diagram of quantum materials or
-high-density neutron stars. We present a classical algorithm that samples from
-a high-temperature quantum Gibbs state in a computational (product state)
-basis. The runtime grows polynomially with the number of particles, while error
-vanishes polynomially. This algorithm provides an alternative strategy to
-existing quantum Monte Carlo methods for overcoming the sign problem. Our
-result implies that measurement-based quantum computation on a Gibbs state can
-provide exponential speed up only at sufficiently low temperature, and further
-constrains what tasks can be exponentially faster on quantum computers.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-31 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>RT-kNNS Unbound: Using RT Cores to Accelerate Unrestricted Neighbor Search</title>
-  <guid>http://arxiv.org/abs/2305.18356</guid>
-  <link>http://arxiv.org/abs/2305.18356</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nagarajan_V/0/1/0/all/0/1&quot;&gt;Vani Nagarajan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mandarapu_D/0/1/0/all/0/1&quot;&gt;Durga Mandarapu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kulkarni_M/0/1/0/all/0/1&quot;&gt;Milind Kulkarni&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The problem of identifying the k-Nearest Neighbors (kNNS) of a point has
-proven to be very useful both as a standalone application and as a subroutine
-in larger applications. Given its far-reaching applicability in areas such as
-machine learning and point clouds, extensive research has gone into leveraging
-GPU acceleration to solve this problem. Recent work has shown that using Ray
-Tracing cores in recent GPUs to accelerate kNNS is much more efficient compared
-to traditional acceleration using shader cores. However, the existing
-translation of kNNS to a ray tracing problem imposes a constraint on the search
-space for neighbors. Due to this, we can only use RT cores to accelerate
-fixed-radius kNNS, which requires the user to set a search radius a priori and
-hence can miss neighbors. In this work, we propose TrueKNN, the first unbounded
-RT-accelerated neighbor search. TrueKNN adopts an iterative approach where we
-incrementally grow the search space until all points have found their k
-neighbors. We show that our approach is orders of magnitude faster than
-existing approaches and can even be used to accelerate fixed-radius neighbor
-searches.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-31 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Geometry</author>
-</item>
-
-<item>
-  <title>Quantum chi-squared tomography and mutual information testing</title>
-  <guid>http://arxiv.org/abs/2305.18519</guid>
-  <link>http://arxiv.org/abs/2305.18519</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Flammia_S/0/1/0/all/0/1&quot;&gt;Steven T. Flammia&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+ODonnell_R/0/1/0/all/0/1&quot;&gt;Ryan O&amp;#x27;Donnell&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For quantum state tomography on rank-$r$ dimension-$d$ states, we show that
-$\widetilde{O}(r^{.5}d^{1.5}/\epsilon) \leq \widetilde{O}(d^2/\epsilon)$ copies
-suffice for accuracy $\epsilon$ with respect to (Bures) $\chi^2$-divergence,
-and $\widetilde{O}(rd/\epsilon)$ copies suffice for accuracy $\epsilon$ with
-respect to quantum relative entropy. The best previous bound was
-$\widetilde{O}(rd/\epsilon) \leq \widetilde{O}(d^2/\epsilon)$ with respect to
-infidelity; our results are an improvement since \[ \text{infidelity} \leq
-\text{relative entropy} \leq \text{$\chi^2$-divergence}.\] For algorithms that
-are required to use single-copy measurements, we show that
-$\widetilde{O}(r^{1.5} d^{1.5}/\epsilon) \leq \widetilde{O}(d^3/\epsilon)$
-copies suffice for $\chi^2$-divergence, and $\widetilde{O}(r^{2} d/\epsilon)$
-suffice for relative entropy.
-&lt;/p&gt;
-&lt;p&gt;Using this tomography algorithm, we show that
-$\widetilde{O}(d^{2.5}/\epsilon)$ copies of a $d\times d$-dimensional bipartite
-state suffice to test if it has quantum mutual information 0 or at least
-$\epsilon$. As a corollary, we also improve the best known sample complexity
-for the classical version of mutual information testing to
-$\widetilde{O}(d/\epsilon)$.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-05-31 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
 </item>
 
 </channel>
