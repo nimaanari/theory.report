@@ -9,6 +9,19 @@
 
 
 <item>
+  <title>TR23-086 |  Random $(\log n)$-CNF are Hard for Cutting Planes (Again) | 
+
+	Dmitry Sokolov</title>
+  <guid>https://eccc.weizmann.ac.il/report/2023/086</guid>
+  <link>https://eccc.weizmann.ac.il/report/2023/086</link>
+  <description>
+    The random $\Delta$-CNF model is one of the most important distribution over $\Delta\text{-}\mathrm{SAT}$ instances. It is closely connected to various areas of computer science, statistical physics, and is a benchmark for satisfiability algorithms. Fleming, Pankratov, Pitassi, and Robere and independently Hrubes and Pudlak showed that when $\Delta = \Theta(\log n)$, any Cutting Planes proof for random $\Delta$-CNF on $n$ variables requires size $2^{n / \mathrm{polylog} n}$ in the regime where the number of clauses guarantees that the formula is unsatisfiable with high probability. In this paper we show tight lower bound $2^{\Omega(n)}$ on size CP-proofs for random $(\log n)$-CNF formulas. Moreover, our proof is much simpler and self-contained in contrast with previous results based on Jukna&amp;#39;s lower bound for monotone circuits.
+  </description>
+  <pubDate>2023-06-08 13:55:09 UTC</pubDate>
+  <author>ECCC Papers</author>
+</item>
+
+<item>
   <title>Summer School on Formal Methods for Cyber-Physical Systems and Workshop on Synthesis, Monitoring and Learning in Udine</title>
   <guid>tag:blogger.com,1999:blog-27705661.post-3832339170920067475</guid>
   <link>http://processalgebra.blogspot.com/2023/06/summer-school-on-formal-methods-for.html</link>
@@ -1424,28 +1437,6 @@ protocol to complete.
   </description>
   <pubDate>2023-06-04 17:30:00 UTC</pubDate>
   <author>David Eppstein</author>
-</item>
-
-<item>
-  <title>TR23-084 |  Time-Space Lower Bounds for Bounded-Error Computation in the Random-Query Model | 
-
-	Itai Dinur</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/084</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/084</link>
-  <description>
-    The random-query model was introduced by Raz and Zhan at ITCS 2020 as a new model of space-bounded computation. In this model, a branching program of length $T$ and width $2^{S}$ attempts to compute a function $f:\{0,1\}^n \rightarrow \{0,1 \}$. However, instead of receiving direct access to the input bits $(x_1,\ldots,x_n)$, the input is given in pairs of the form $(i_j, x_{i_j}) \in \{1,\ldots,n\} \times \{0,1\}$ for $j = 1,2,\ldots,T$, where the indices $i_1,\ldots,i_T$ are chosen at random from a pre-fixed distribution. 
-
-Raz and Zhan proved that any branching program in the random-query model with the independent distribution (where $\{i_j\}_{j = 1,\ldots,T}$ are uniform and independent) that computes a function $f$ with  sensitivity $k$ satisfies $T \cdot (S + \log n) \geq \Omega(n \cdot k)$. 
-This gives a quadratic time-space lower bound for many natural functions which have sensitivity $\Omega(n)$, such as XOR and Majority. The bound was proved in the zero-error regime, where for each input, the branching program is required to output a value with high probability, and given that a value is output, it must be correct with probability $1$. 
-
-Furthermore, Raz and Zhan conjectured that (up to logarithmic factors in $n$) a quadratic time-space lower bound still holds for the XOR function in the more conventional bounded-error regime, where for each input, the output must be correct with high probability.
-
-In this paper, we prove this conjecture. More generally, let $f:\{0,1\}^n \rightarrow \{0,1 \}$ have average sensitivity (or total influence) $\mathrm{I}[f]$. We prove that any branching program in the random-query model with the independent distribution that computes $f$ in the bounded-error regime satisfies $T \cdot S  \geq \tilde{\Omega}(n) \cdot \mathrm{I}[f]$ (where $\tilde{\Omega}$ hides logarithmic factors in $n$). Moreover, we prove a quadratic time-space lower bound for the Majority function, even though its total influence is $\Theta(\sqrt{n})$.
-
-Our proof is based on a reduction from a communication complexity problem.
-  </description>
-  <pubDate>2023-06-04 02:29:40 UTC</pubDate>
-  <author>ECCC Papers</author>
 </item>
 
 </channel>
