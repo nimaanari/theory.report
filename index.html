@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-09T12:47:10Z">Friday, June 09 2023, 12:47</time>
+          <time class='timeago' datetime="2023-06-09T13:30:29Z">Friday, June 09 2023, 13:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,51 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Friday, June 09
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/087'>TR23-087 |  How to Recover a Secret with $O(n)$ Additions | 
+
+	Benny Applebaum, 
+
+	Oded Nir, 
+
+	Benny Pinkas</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          Threshold cryptography is typically based on the idea of secret-sharing a private-key $s\in F$ ``in the exponent&#39;&#39; of some cryptographic group $G$, or more generally, encoding $s$ in some linearly homomorphic domain. In each invocation of the threshold system (e.g., for signing or decrypting) an ``encoding&#39;&#39; of the secret is being recovered and so the complexity, measured as the number of group multiplications over $G$, is equal to the number of $F$-additions that are needed to reconstruct the secret. Motivated by this scenario, we initiate the study of $n$-party secret-sharing schemes whose reconstruction algorithm makes a minimal number of \emph{additions}. The complexity of existing schemes either scales linearly with $n\log |F|$ (e.g., Shamir, CACM&#39;79) or, at least, quadratically with $n$ independently of the size of the domain $F$ (e.g., Cramer-Xing, EUROCRYPT &#39;20). This leaves open the existence of a secret sharing whose recovery algorithm can be computed by performing only $O(n)$ additions.
+
+We resolve the question in the affirmative and present such a near-threshold secret sharing scheme that provides privacy against unauthorized sets of density at most $\tau_p$, and correctness for  authorized sets of density at least $\tau_c$, for any given arbitrarily close constants $\tau_p&lt;\tau_c$. Reconstruction can be computed by making at most $O(n)$ additions and, in addition, (1) the share size is constant, (2) the sharing procedure also makes only $O(n)$ additions, and (3) the scheme is a blackbox secret-sharing scheme, i.e., the sharing and reconstruction algorithms work universally for all finite abelian groups $F$. Prior to our work, no such scheme was known even without features (1)--(3) and even for the ramp setting where $\tau_p$ and $\tau_c$ are far apart. As a by-product, we derive the first blackbox near-threshold secret-sharing scheme with linear-time sharing. We also present several concrete instantiations of our approach that seem practically efficient (e.g., for threshold discrete-log-based signatures).
+
+Our constructions are combinatorial in nature. We combine graph-based erasure codes that support ``peeling-based&#39;&#39; decoding with a new randomness extraction method that is based on inner-product with a small-integer vector. We also introduce a general concatenation-like transform for secret-sharing schemes that allows us to arbitrarily shrink the privacy-correctness gap with a minor overhead. Our techniques enrich the secret-sharing toolbox and, in the context of blackbox secret sharing, provide a new alternative to existing number-theoretic approaches.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          Threshold cryptography is typically based on the idea of secret-sharing a private-key $s\in F$ ``in the exponent&#39;&#39; of some cryptographic group $G$, or more generally, encoding $s$ in some linearly homomorphic domain. In each invocation of the threshold system (e.g., for signing or decrypting) an ``encoding&#39;&#39; of the secret is being recovered and so the complexity, measured as the number of group multiplications over $G$, is equal to the number of $F$-additions that are needed to reconstruct the secret. Motivated by this scenario, we initiate the study of $n$-party secret-sharing schemes whose reconstruction algorithm makes a minimal number of \emph{additions}. The complexity of existing schemes either scales linearly with $n\log |F|$ (e.g., Shamir, CACM&#39;79) or, at least, quadratically with $n$ independently of the size of the domain $F$ (e.g., Cramer-Xing, EUROCRYPT &#39;20). This leaves open the existence of a secret sharing whose recovery algorithm can be computed by performing only $O(n)$ additions.
+
+We resolve the question in the affirmative and present such a near-threshold secret sharing scheme that provides privacy against unauthorized sets of density at most $\tau_p$, and correctness for  authorized sets of density at least $\tau_c$, for any given arbitrarily close constants $\tau_p&lt;\tau_c$. Reconstruction can be computed by making at most $O(n)$ additions and, in addition, (1) the share size is constant, (2) the sharing procedure also makes only $O(n)$ additions, and (3) the scheme is a blackbox secret-sharing scheme, i.e., the sharing and reconstruction algorithms work universally for all finite abelian groups $F$. Prior to our work, no such scheme was known even without features (1)--(3) and even for the ramp setting where $\tau_p$ and $\tau_c$ are far apart. As a by-product, we derive the first blackbox near-threshold secret-sharing scheme with linear-time sharing. We also present several concrete instantiations of our approach that seem practically efficient (e.g., for threshold discrete-log-based signatures).
+
+Our constructions are combinatorial in nature. We combine graph-based erasure codes that support ``peeling-based&#39;&#39; decoding with a new randomness extraction method that is based on inner-product with a small-integer vector. We also introduce a general concatenation-like transform for secret-sharing schemes that allows us to arbitrarily shrink the privacy-correctness gap with a minor overhead. Our techniques enrich the secret-sharing toolbox and, in the context of blackbox secret sharing, provide a new alternative to existing number-theoretic approaches.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-09T13:12:55Z">Friday, June 09 2023, 13:12</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3505,37 +3550,6 @@ Additionally, our work contributes to a better understanding of the optimal para
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-06-05T05:39:55Z">Monday, June 05 2023, 05:39</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/06/quantifiers-to-parenthesize-or-not-to.html'>Quantifiers: To Parenthesize or not to Parenthesize?  Matrix of Formula: To Bracket or not to Bracket?</a></h3>
-        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>&nbsp;For the book&nbsp;</p><p>Computational&nbsp; Intractability: A Guide to Algorithmic Lower Bounds</p><p>by Demaine-Gasarch-Hajiaghayi&nbsp;</p><p>(See&nbsp; here&nbsp;for a link to a first draft.)&nbsp;</p><p>we had to make some choices about which notation to use. One of the least important ones was the following:&nbsp;</p><p>When defining NP, and in a few other places should we use:&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (\exists y)(\forall y)[B(x,y)]</p><p>or&nbsp;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;\exists x : \forall y : B(x,y)<br></p><p>or&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; something else.</p><p>We ended up doing it the second way.&nbsp; But I wondered, which, if either, is standard. So I looked in many math and theoretical CS books looking for places they used quantifiers. Here is what I found</p><p>a) Most papers and books really don't use quantifiers at all!&nbsp; This surprised me.&nbsp;</p><p>b) When quantifiers are used, they are used in definitions, not theorems.&nbsp;</p><p>c) One exception is in logic when they deal with formulas as objects onto themselves.&nbsp; For example, the inductive definition of a formula will have a step:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;If f(x_1,...,x_n) is a formula then (\exists x_i)[f(x_1,...,x_n)] is a formula.&nbsp;</p><p>d) Here is a list of the few places I saw quantifiers used and if they used parenthesis or not. I say if it has parenthesis (abbreviated Parens)&nbsp; or not, and if the matrix of the formula is in square brackets, no brackets, or something ese.&nbsp;</p><p>Cook's classic paper&nbsp;.&nbsp;Page 154 Parens, no Brackets (1971)&nbsp;</p><p>Stockmeyer's paper where he defines PH.&nbsp; Page 6 Parens and Brackets&nbsp; (1976)<br></p><p>Computers and Intractability by Garey &amp; Johnson. Page 164. Parens and Brackets (1979)</p><p>Morass-like construction of aleph_2 trees in L by Devlin.&nbsp; Page 2 Parens and matrix in Parens (1979)</p><p>Descriptive Complexity by Immerman.&nbsp;Page 38 Parens no Brackets (1999)&nbsp;</p><p>Bounded Queries in Recursion Theory by Gasarch and Martin. Parens and Brackets&nbsp; Throughout the book.&nbsp; (1999)</p><p>Complexity Theory from Godel to Feynman&nbsp;by Rudich. No Parens, No Brackets in Def of PH. (2003)&nbsp;</p><p>Parameterized Complexity Theory&nbsp;by Flum &amp; Grohe. Page 81 no Parens and no Brackets.&nbsp;</p><p>Computational Complexity: A Modern Approach&nbsp;by Arora &amp; Barak. Page 40. No Parens No Brackets.(2007)&nbsp;</p><p>Computational Complexity: A Conceptual Prospective&nbsp;by Goldreich.&nbsp; Page 114 no parents, no brackets (2008)&nbsp;</p><p>On Quantifer Rank Equivalence between linear orders by Siders.&nbsp;On page 417 they use quantifiers to state a theorem, which is unusual. Parens no brackets.<br></p><p>Presburger arithmetic, Rational Generating Functions, and quasi polynomials&nbsp;by Woods. Parens no&nbsp; Brackets. (2012)&nbsp;<br></p><p>Who witness's the Witness by Abel et al.&nbsp;On Page 69 (which the pointer takes you to) No Parens, no brackets. Colons between quantifiers (2018).</p><p>e) What to make of all this?</p><p>First off- the RARITY of the use of quantifiers really surprised me. The only place I saw them used a lot was my book, co-authored with Georgie Martin,&nbsp;&nbsp;Bounded Queries in Recursion Theory. Perhaps it would have sold better if I didn't use so many quantifiers. Oh well.&nbsp;</p><p>Second off- Later works don't use parens and brackets. This is most clear if you just look at Complexity Theory Books&nbsp;</p><p>Garey &amp; Johnson - 1979- parens and brackets</p><p>Flun &amp; Grohe- 1998- no parens and no brackts</p><p>Immerman- 1999 - parens but no brackets (this is the one exception)&nbsp;</p><p>Arora &amp; Barack- 2007 no parens and&nbsp; no brackets</p><p>Goldreich-2008- no parens and no brackets</p><p>If you have a complexity theory book around that is not on this list, look up the definition of NP and the definition of the Poly Hierarchy and see (a) if they use parens around the quantifiers, and (b) if they use square brackets or no brackets of something else. Please leave a comment about it so I test the conjecture that parenthesis are just so 1979.&nbsp;</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>By gasarch</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>&nbsp;For the book&nbsp;</p><p><b>Computational&nbsp; Intractability: A Guide to Algorithmic Lower Bounds</b></p><p>by Demaine-Gasarch-Hajiaghayi&nbsp;</p><p>(See&nbsp; <a href="https://hardness.mit.edu/">here</a>&nbsp;for a link to a first draft.)&nbsp;</p><p>we had to make some choices about which notation to use. One of the least important ones was the following:&nbsp;</p><p>When defining NP, and in a few other places should we use:&nbsp;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (\exists y)(\forall y)[B(x,y)]</p><p>or&nbsp;</p><p><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp; &nbsp;\exists x : \forall y : B(x,y)</span><br /></p><p><span>or&nbsp;</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; something else.</span></p><p>We ended up doing it the second way.&nbsp; But I wondered, which, if either, is standard. So I looked in many math and theoretical CS books looking for places they used quantifiers. Here is what I found</p><p>a) Most papers and books really don't use quantifiers at all!&nbsp; This surprised me.&nbsp;</p><p>b) When quantifiers are used, they are used in definitions, not theorems.&nbsp;</p><p>c) One exception is in logic when they deal with formulas as objects onto themselves.&nbsp; For example, the inductive definition of a formula will have a step:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;If f(x_1,...,x_n) is a formula then (\exists x_i)[f(x_1,...,x_n)] is a formula.&nbsp;</p><p>d) Here is a list of the few places I saw quantifiers used and if they used parenthesis or not. I say if it has parenthesis (abbreviated Parens)&nbsp; or not, and if the matrix of the formula is in square brackets, no brackets, or something ese.&nbsp;</p><p><i><a href="https://dl.acm.org/doi/pdf/10.1145/800157.805047">Cook's classic paper</a>&nbsp;.&nbsp;</i>Page 154 Parens, no Brackets (1971)&nbsp;</p><p><a href="https://www.sciencedirect.com/science/article/pii/030439757690061X?via%3Dihub"><i>Stockmeyer's paper where he defines PH</i></a>.&nbsp; Page 6 Parens and Brackets&nbsp; (1976)<br /></p><p><i>Computers and Intractability</i> by Garey &amp; Johnson. Page 164. Parens and Brackets (1979)</p><p><i>Morass-like construction of aleph_2 trees in L</i> by Devlin.&nbsp; Page 2 Parens and matrix in Parens (1979)</p><p><i>Descriptive Complexity by Immerman.</i>&nbsp;Page 38 Parens no Brackets (1999)&nbsp;</p><p><i>Bounded Queries in Recursion Theory </i>by Gasarch and Martin. Parens and Brackets&nbsp; Throughout the book.&nbsp; (1999)</p><p><i>Complexity Theory from Godel to Feynman</i>&nbsp;by Rudich. No Parens, No Brackets in Def of PH. (2003)&nbsp;</p><p><a href="http://yaroslavvb.com/upload/flum.pdf">Parameterized Complexity Theory</a>&nbsp;by Flum &amp; Grohe. Page 81 no Parens and no Brackets.&nbsp;</p><p><i><a href="https://theory.cs.princeton.edu/complexity/book.pdf">Computational Complexity: A Modern Approach</a>&nbsp;</i>by Arora &amp; Barak. Page 40. No Parens No Brackets.(2007)&nbsp;</p><p><a href="https://theswissbay.ch/pdf/Gentoomen%20Library/Theory%20Of%20Computation/Oded_Goldreich-Computational_Complexity__A_Conceptual_Perspective%282008%29.pdf">Computational Complexity: A Conceptual Prospective</a>&nbsp;by Goldreich.&nbsp; Page 114 no parents, no brackets (2008)&nbsp;</p><p><i><a href="https://www.sciencedirect.com/science/article/pii/S0890540109002338">On Quantifer Rank Equivalence between linear orders by Siders</a>.&nbsp;</i>On page 417 they use quantifiers to state a theorem, which is unusual. Parens no brackets.<br /></p><p><a href="https://arxiv.org/abs/1211.0020"><i>Presburger arithmetic, Rational Generating Functions, and quasi polynomials</i></a>&nbsp;by Woods. Parens no&nbsp; Brackets. (2012)&nbsp;<br /></p><p><a href="https://erikdemaine.org/papers/Witness_TCS/paper.pdf#page=69">Who witness's the Witness by Abel et al.</a>&nbsp;On Page 69 (which the pointer takes you to) No Parens, no brackets. Colons between quantifiers (2018).</p><p>e) What to make of all this?</p><p>First off- the RARITY of the use of quantifiers really surprised me. The only place I saw them used a lot was my book, co-authored with Georgie Martin,&nbsp;&nbsp;<i>Bounded Queries in Recursion Theory. </i>Perhaps it would have sold better if I didn't use so many quantifiers. Oh well.&nbsp;</p><p>Second off- Later works don't use parens and brackets. This is most clear if you just look at Complexity Theory Books&nbsp;</p><p>Garey &amp; Johnson - 1979- parens and brackets</p><p>Flun &amp; Grohe- 1998- no parens and no brackts</p><p>Immerman- 1999 - parens but no brackets (this is the one exception)&nbsp;</p><p>Arora &amp; Barack- 2007 no parens and&nbsp; no brackets</p><p>Goldreich-2008- no parens and no brackets</p><p>If you have a complexity theory book around that is not on this list, look up the definition of NP and the definition of the Poly Hierarchy and see (a) if they use parens around the quantifiers, and (b) if they use square brackets or no brackets of something else. Please leave a comment about it so I test the conjecture that parenthesis are just so 1979.&nbsp;</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><span><br /></span></p><p><br /></p><p><br /></p><p class="authors">By gasarch</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-05T02:42:00Z">Monday, June 05 2023, 02:42</time>
         </div>
       </div>
     </details>
