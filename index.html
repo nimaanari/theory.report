@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-13T23:30:26Z">Tuesday, June 13 2023, 23:30</time>
+          <time class='timeago' datetime="2023-06-14T01:00:20Z">Wednesday, June 14 2023, 01:00</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -341,6 +341,461 @@
 
   <div class="tr-articles tr-shrink">
     
+    
+    <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Wednesday, June 14
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07583'>Invertible Bloom Lookup Tables with Less Memory and Less Randomness</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Nils Fleischhacker, Kasper Green Larsen, Maciej Obremski, Mark Simkin</p><p>In this work we study Invertible Bloom Lookup Tables (IBLTs) with small
+failure probabilities. IBLTs are highly versatile data structures that have
+found applications in set reconciliation protocols, error-correcting codes, and
+even the design of advanced cryptographic primitives. For storing $n$ elements
+and ensuring correctness with probability at least $1 - \delta$, existing IBLT
+constructions require $\Omega(n(\frac{\log(1/\delta)}{\log(n)}+1))$ space and
+they crucially rely on fully random hash functions.
+</p>
+<p>We present new constructions of IBLTs that are simultaneously more space
+efficient and require less randomness. For storing $n$ elements with a failure
+probability of at most $\delta$, our data structure only requires
+$\mathcal{O}(n + \log(1/\delta)\log\log(1/\delta))$ space and
+$\mathcal{O}(\log(\log(n)/\delta))$-wise independent hash functions.
+</p>
+<p>As a key technical ingredient we show that hashing $n$ keys with any $k$-wise
+independent hash function $h:U \to [Cn]$ for some sufficiently large constant
+$C$ guarantees with probability $1 - 2^{-\Omega(k)}$ that at least $n/2$ keys
+will have a unique hash value. Proving this is highly non-trivial as $k$
+approaches $n$. We believe that the techniques used to prove this statement may
+be of independent interest.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Fleischhacker_N/0/1/0/all/0/1">Nils Fleischhacker</a>, <a href="http://arxiv.org/find/cs/1/au:+Larsen_K/0/1/0/all/0/1">Kasper Green Larsen</a>, <a href="http://arxiv.org/find/cs/1/au:+Obremski_M/0/1/0/all/0/1">Maciej Obremski</a>, <a href="http://arxiv.org/find/cs/1/au:+Simkin_M/0/1/0/all/0/1">Mark Simkin</a></p><p>In this work we study Invertible Bloom Lookup Tables (IBLTs) with small
+failure probabilities. IBLTs are highly versatile data structures that have
+found applications in set reconciliation protocols, error-correcting codes, and
+even the design of advanced cryptographic primitives. For storing $n$ elements
+and ensuring correctness with probability at least $1 - \delta$, existing IBLT
+constructions require $\Omega(n(\frac{\log(1/\delta)}{\log(n)}+1))$ space and
+they crucially rely on fully random hash functions.
+</p>
+<p>We present new constructions of IBLTs that are simultaneously more space
+efficient and require less randomness. For storing $n$ elements with a failure
+probability of at most $\delta$, our data structure only requires
+$\mathcal{O}(n + \log(1/\delta)\log\log(1/\delta))$ space and
+$\mathcal{O}(\log(\log(n)/\delta))$-wise independent hash functions.
+</p>
+<p>As a key technical ingredient we show that hashing $n$ keys with any $k$-wise
+independent hash function $h:U \to [Cn]$ for some sufficiently large constant
+$C$ guarantees with probability $1 - 2^{-\Omega(k)}$ that at least $n/2$ keys
+will have a unique hash value. Proving this is highly non-trivial as $k$
+approaches $n$. We believe that the techniques used to prove this statement may
+be of independent interest.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07674'>Differentially Private One Permutation Hashing and Bin-wise Consistent Weighted Sampling</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Xiaoyun Li, Ping Li</p><p>Minwise hashing (MinHash) is a standard algorithm widely used in the
+industry, for large-scale search and learning applications with the binary
+(0/1) Jaccard similarity. One common use of MinHash is for processing massive
+n-gram text representations so that practitioners do not have to materialize
+the original data (which would be prohibitive). Another popular use of MinHash
+is for building hash tables to enable sub-linear time approximate near neighbor
+(ANN) search. MinHash has also been used as a tool for building large-scale
+machine learning systems. The standard implementation of MinHash requires
+applying $K$ random permutations. In comparison, the method of one permutation
+hashing (OPH), is an efficient alternative of MinHash which splits the data
+vectors into $K$ bins and generates hash values within each bin. OPH is
+substantially more efficient and also more convenient to use.
+</p>
+<p>In this paper, we combine the differential privacy (DP) with OPH (as well as
+MinHash), to propose the DP-OPH framework with three variants: DP-OPH-fix,
+DP-OPH-re and DP-OPH-rand, depending on which densification strategy is adopted
+to deal with empty bins in OPH. A detailed roadmap to the algorithm design is
+presented along with the privacy analysis. An analytical comparison of our
+proposed DP-OPH methods with the DP minwise hashing (DP-MH) is provided to
+justify the advantage of DP-OPH. Experiments on similarity search confirm the
+merits of DP-OPH, and guide the choice of the proper variant in different
+practical scenarios. Our technique is also extended to bin-wise consistent
+weighted sampling (BCWS) to develop a new DP algorithm called DP-BCWS for
+non-binary data. Experiments on classification tasks demonstrate that DP-BCWS
+is able to achieve excellent utility at around $\epsilon = 5\sim 10$, where
+$\epsilon$ is the standard parameter in the language of $(\epsilon,
+\delta)$-DP.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/stat/1/au:+Li_X/0/1/0/all/0/1">Xiaoyun Li</a>, <a href="http://arxiv.org/find/stat/1/au:+Li_P/0/1/0/all/0/1">Ping Li</a></p><p>Minwise hashing (MinHash) is a standard algorithm widely used in the
+industry, for large-scale search and learning applications with the binary
+(0/1) Jaccard similarity. One common use of MinHash is for processing massive
+n-gram text representations so that practitioners do not have to materialize
+the original data (which would be prohibitive). Another popular use of MinHash
+is for building hash tables to enable sub-linear time approximate near neighbor
+(ANN) search. MinHash has also been used as a tool for building large-scale
+machine learning systems. The standard implementation of MinHash requires
+applying $K$ random permutations. In comparison, the method of one permutation
+hashing (OPH), is an efficient alternative of MinHash which splits the data
+vectors into $K$ bins and generates hash values within each bin. OPH is
+substantially more efficient and also more convenient to use.
+</p>
+<p>In this paper, we combine the differential privacy (DP) with OPH (as well as
+MinHash), to propose the DP-OPH framework with three variants: DP-OPH-fix,
+DP-OPH-re and DP-OPH-rand, depending on which densification strategy is adopted
+to deal with empty bins in OPH. A detailed roadmap to the algorithm design is
+presented along with the privacy analysis. An analytical comparison of our
+proposed DP-OPH methods with the DP minwise hashing (DP-MH) is provided to
+justify the advantage of DP-OPH. Experiments on similarity search confirm the
+merits of DP-OPH, and guide the choice of the proper variant in different
+practical scenarios. Our technique is also extended to bin-wise consistent
+weighted sampling (BCWS) to develop a new DP algorithm called DP-BCWS for
+non-binary data. Experiments on classification tasks demonstrate that DP-BCWS
+is able to achieve excellent utility at around $\epsilon = 5\sim 10$, where
+$\epsilon$ is the standard parameter in the language of $(\epsilon,
+\delta)$-DP.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07872'>Expanding the Scope of DAWN: A Novel Version for Weighted Shortest Path Problem</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Yelai Feng</p><p>The shortest path problem is a typical problem in graph theory with wide
+potential applications. The state-of-the-art single-source shortest paths
+algorithm on the weight graph is the $\Delta$-stepping algorithm, which can
+efficiently process weighted graphs in parallel. DAWN is an algorithm that
+addresses the shortest path problem on unweighted graphs, and we propose a
+weighted version that can handle graphs with weights edges, while maintaining
+the high scalability and parallelism features as DAWN. The novel version
+requires $O(\mu m)$ and $O(\mu \cdot E_{wcc})$ times on the connected and
+unconnected graphs for SSSP problems, respectively. $E_{wcc}$ denote the number
+of edges included in the largest weakly connected component, and $\mu$ is a
+constant denoting the average number of path transformations in the tasks. We
+tested the weighted version on the real graphs from Stanford Network Analysis
+Platform and SuiteSparse Matrix Collection, which outperformed the solution of
+$\Delta$-stepping algorithm from Gunrock, achieving a speedup of
+43.163$\times$.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Feng_Y/0/1/0/all/0/1">Yelai Feng</a></p><p>The shortest path problem is a typical problem in graph theory with wide
+potential applications. The state-of-the-art single-source shortest paths
+algorithm on the weight graph is the $\Delta$-stepping algorithm, which can
+efficiently process weighted graphs in parallel. DAWN is an algorithm that
+addresses the shortest path problem on unweighted graphs, and we propose a
+weighted version that can handle graphs with weights edges, while maintaining
+the high scalability and parallelism features as DAWN. The novel version
+requires $O(\mu m)$ and $O(\mu \cdot E_{wcc})$ times on the connected and
+unconnected graphs for SSSP problems, respectively. $E_{wcc}$ denote the number
+of edges included in the largest weakly connected component, and $\mu$ is a
+constant denoting the average number of path transformations in the tasks. We
+tested the weighted version on the real graphs from Stanford Network Analysis
+Platform and SuiteSparse Matrix Collection, which outperformed the solution of
+$\Delta$-stepping algorithm from Gunrock, achieving a speedup of
+43.163$\times$.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07884'>Continual Release of Differentially Private Synthetic Data</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Mark Bun, Marco Gaboardi, Marcel Neunhoeffer, Wanrong Zhang</p><p>Motivated by privacy concerns in long-term longitudinal studies in medical
+and social science research, we study the problem of continually releasing
+differentially private synthetic data. We introduce a model where, in every
+time step, each individual reports a new data element, and the goal of the
+synthesizer is to incrementally update a synthetic dataset to capture a rich
+class of statistical properties. We give continual synthetic data generation
+algorithms that preserve two basic types of queries: fixed time window queries
+and cumulative time queries. We show nearly tight upper bounds on the error
+rates of these algorithms and demonstrate their empirical performance on
+realistically sized datasets from the U.S. Census Bureau's Survey of Income and
+Program Participation.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bun_M/0/1/0/all/0/1">Mark Bun</a>, <a href="http://arxiv.org/find/cs/1/au:+Gaboardi_M/0/1/0/all/0/1">Marco Gaboardi</a>, <a href="http://arxiv.org/find/cs/1/au:+Neunhoeffer_M/0/1/0/all/0/1">Marcel Neunhoeffer</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhang_W/0/1/0/all/0/1">Wanrong Zhang</a></p><p>Motivated by privacy concerns in long-term longitudinal studies in medical
+and social science research, we study the problem of continually releasing
+differentially private synthetic data. We introduce a model where, in every
+time step, each individual reports a new data element, and the goal of the
+synthesizer is to incrementally update a synthetic dataset to capture a rich
+class of statistical properties. We give continual synthetic data generation
+algorithms that preserve two basic types of queries: fixed time window queries
+and cumulative time queries. We show nearly tight upper bounds on the error
+rates of these algorithms and demonstrate their empirical performance on
+realistically sized datasets from the U.S. Census Bureau's Survey of Income and
+Program Participation.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07891'>Online Matching in Geometric Random Graphs</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Flore Sentenac, Nathan Noiry, Matthieu Lerasle, Laurent M&#xe9;nard, Vianney Perchet</p><p>In online advertisement, ad campaigns are sequentially displayed to users.
+Both users and campaigns have inherent features, and the former is eligible to
+the latter if they are ``similar enough''. We model these interactions as a
+bipartite geometric random graph: the features of the $2N$ vertices ($N$ users
+and $N$ campaigns) are drawn independently in a metric space and an edge is
+present between a campaign and a user node if the distance between their
+features is smaller than $c/N$, where $c&gt;0$ is the parameter of the model. Our
+contributions are two-fold. In the one-dimensional case, with uniform
+distribution over the segment $[0,1]$, we derive the size of the optimal
+offline matching in these bipartite random geometric graphs, and we build an
+algorithm achieving it (as a benchmark), and analyze precisely its performance.
+We then turn to the online setting where one side of the graph is known at the
+beginning while the other part is revealed sequentially. We study the number of
+matches of the online algorithm closest, which matches any incoming point to
+its closest available neighbor. We show that its performances can be compared
+to its fluid limit, completely described as the solution of an explicit PDE.
+From the latter, we can compute the competitive ratio of closest.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Sentenac_F/0/1/0/all/0/1">Flore Sentenac</a>, <a href="http://arxiv.org/find/cs/1/au:+Noiry_N/0/1/0/all/0/1">Nathan Noiry</a>, <a href="http://arxiv.org/find/cs/1/au:+Lerasle_M/0/1/0/all/0/1">Matthieu Lerasle</a>, <a href="http://arxiv.org/find/cs/1/au:+Menard_L/0/1/0/all/0/1">Laurent M&#xe9;nard</a>, <a href="http://arxiv.org/find/cs/1/au:+Perchet_V/0/1/0/all/0/1">Vianney Perchet</a></p><p>In online advertisement, ad campaigns are sequentially displayed to users.
+Both users and campaigns have inherent features, and the former is eligible to
+the latter if they are ``similar enough''. We model these interactions as a
+bipartite geometric random graph: the features of the $2N$ vertices ($N$ users
+and $N$ campaigns) are drawn independently in a metric space and an edge is
+present between a campaign and a user node if the distance between their
+features is smaller than $c/N$, where $c&gt;0$ is the parameter of the model. Our
+contributions are two-fold. In the one-dimensional case, with uniform
+distribution over the segment $[0,1]$, we derive the size of the optimal
+offline matching in these bipartite random geometric graphs, and we build an
+algorithm achieving it (as a benchmark), and analyze precisely its performance.
+We then turn to the online setting where one side of the graph is known at the
+beginning while the other part is revealed sequentially. We study the number of
+matches of the online algorithm closest, which matches any incoming point to
+its closest available neighbor. We show that its performances can be compared
+to its fluid limit, completely described as the solution of an explicit PDE.
+From the latter, we can compute the competitive ratio of closest.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07892'>Robustly Learning a Single Neuron via Sharpness</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Puqian Wang, Nikos Zarifis, Ilias Diakonikolas, Jelena Diakonikolas</p><p>We study the problem of learning a single neuron with respect to the
+$L_2^2$-loss in the presence of adversarial label noise. We give an efficient
+algorithm that, for a broad family of activations including ReLUs, approximates
+the optimal $L_2^2$-error within a constant factor. Our algorithm applies under
+much milder distributional assumptions compared to prior work. The key
+ingredient enabling our results is a novel connection to local error bounds
+from optimization theory.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Wang_P/0/1/0/all/0/1">Puqian Wang</a>, <a href="http://arxiv.org/find/cs/1/au:+Zarifis_N/0/1/0/all/0/1">Nikos Zarifis</a>, <a href="http://arxiv.org/find/cs/1/au:+Diakonikolas_I/0/1/0/all/0/1">Ilias Diakonikolas</a>, <a href="http://arxiv.org/find/cs/1/au:+Diakonikolas_J/0/1/0/all/0/1">Jelena Diakonikolas</a></p><p>We study the problem of learning a single neuron with respect to the
+$L_2^2$-loss in the presence of adversarial label noise. We give an efficient
+algorithm that, for a broad family of activations including ReLUs, approximates
+the optimal $L_2^2$-error within a constant factor. Our algorithm applies under
+much milder distributional assumptions compared to prior work. The key
+ingredient enabling our results is a novel connection to local error bounds
+from optimization theory.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07930'>Reducing Exposure to Harmful Content via Graph Rewiring</a></h3>
+        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Authors: Corinna Coupette, Stefan Neumann, Aristides Gionis</p><p>Most media content consumed today is provided by digital platforms that
+aggregate input from diverse sources, where access to information is mediated
+by recommendation algorithms. One principal challenge in this context is
+dealing with content that is considered harmful. Striking a balance between
+competing stakeholder interests, rather than block harmful content altogether,
+one approach is to minimize the exposure to such content that is induced
+specifically by algorithmic recommendations. Hence, modeling media items and
+recommendations as a directed graph, we study the problem of reducing the
+exposure to harmful content via edge rewiring. We formalize this problem using
+absorbing random walks, and prove that it is NP-hard and NP-hard to approximate
+to within an additive error, while under realistic assumptions, the greedy
+method yields a (1-1/e)-approximation. Thus, we introduce Gamine, a fast greedy
+algorithm that can reduce the exposure to harmful content with or without
+quality constraints on recommendations. By performing just 100 rewirings on
+YouTube graphs with several hundred thousand edges, Gamine reduces the initial
+exposure by 50%, while ensuring that its recommendations are at most 5% less
+relevant than the original recommendations. Through extensive experiments on
+synthetic data and real-world data from video recommendation and news feed
+applications, we confirm the effectiveness, robustness, and efficiency of
+Gamine in practice.
+</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Coupette_C/0/1/0/all/0/1">Corinna Coupette</a>, <a href="http://arxiv.org/find/cs/1/au:+Neumann_S/0/1/0/all/0/1">Stefan Neumann</a>, <a href="http://arxiv.org/find/cs/1/au:+Gionis_A/0/1/0/all/0/1">Aristides Gionis</a></p><p>Most media content consumed today is provided by digital platforms that
+aggregate input from diverse sources, where access to information is mediated
+by recommendation algorithms. One principal challenge in this context is
+dealing with content that is considered harmful. Striking a balance between
+competing stakeholder interests, rather than block harmful content altogether,
+one approach is to minimize the exposure to such content that is induced
+specifically by algorithmic recommendations. Hence, modeling media items and
+recommendations as a directed graph, we study the problem of reducing the
+exposure to harmful content via edge rewiring. We formalize this problem using
+absorbing random walks, and prove that it is NP-hard and NP-hard to approximate
+to within an additive error, while under realistic assumptions, the greedy
+method yields a (1-1/e)-approximation. Thus, we introduce Gamine, a fast greedy
+algorithm that can reduce the exposure to harmful content with or without
+quality constraints on recommendations. By performing just 100 rewirings on
+YouTube graphs with several hundred thousand edges, Gamine reduces the initial
+exposure by 50%, while ensuring that its recommendations are at most 5% less
+relevant than the original recommendations. Through extensive experiments on
+synthetic data and real-world data from video recommendation and news feed
+applications, we confirm the effectiveness, robustness, and efficiency of
+Gamine in practice.
+</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
+        </div>
+      </div>
+    </details>
+  
     
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Monday, June 12
@@ -2823,501 +3278,6 @@ $\alpha(G)$.
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-06-08T00:30:00Z">Thursday, June 08 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.04049'>One-sided Matrix Completion from Two Observations Per Row</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Steven Cao, Percy Liang, Gregory Valiant</p><p>Given only a few observed entries from a low-rank matrix $X$, matrix
-completion is the problem of imputing the missing entries, and it formalizes a
-wide range of real-world settings that involve estimating missing data.
-However, when there are too few observed entries to complete the matrix, what
-other aspects of the underlying matrix can be reliably recovered? We study one
-such problem setting, that of "one-sided" matrix completion, where our goal is
-to recover the right singular vectors of $X$, even in the regime where
-recovering the left singular vectors is impossible, which arises when there are
-more rows than columns and very few observations. We propose a natural
-algorithm that involves imputing the missing values of the matrix $X^TX$ and
-show that even with only two observations per row in $X$, we can provably
-recover $X^TX$ as long as we have at least $\Omega(r^2 d \log d)$ rows, where
-$r$ is the rank and $d$ is the number of columns. We evaluate our algorithm on
-one-sided recovery of synthetic data and low-coverage genome sequencing. In
-these settings, our algorithm substantially outperforms standard matrix
-completion and a variety of direct factorization methods.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Cao_S/0/1/0/all/0/1">Steven Cao</a>, <a href="http://arxiv.org/find/cs/1/au:+Liang_P/0/1/0/all/0/1">Percy Liang</a>, <a href="http://arxiv.org/find/cs/1/au:+Valiant_G/0/1/0/all/0/1">Gregory Valiant</a></p><p>Given only a few observed entries from a low-rank matrix $X$, matrix
-completion is the problem of imputing the missing entries, and it formalizes a
-wide range of real-world settings that involve estimating missing data.
-However, when there are too few observed entries to complete the matrix, what
-other aspects of the underlying matrix can be reliably recovered? We study one
-such problem setting, that of "one-sided" matrix completion, where our goal is
-to recover the right singular vectors of $X$, even in the regime where
-recovering the left singular vectors is impossible, which arises when there are
-more rows than columns and very few observations. We propose a natural
-algorithm that involves imputing the missing values of the matrix $X^TX$ and
-show that even with only two observations per row in $X$, we can provably
-recover $X^TX$ as long as we have at least $\Omega(r^2 d \log d)$ rows, where
-$r$ is the rank and $d$ is the number of columns. We evaluate our algorithm on
-one-sided recovery of synthetic data and low-coverage genome sequencing. In
-these settings, our algorithm substantially outperforms standard matrix
-completion and a variety of direct factorization methods.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-08T00:30:00Z">Thursday, June 08 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.04290'>Quantum Distance Calculation for $\epsilon$-Graph Construction</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Naomi Mona Chmielewski (EDF R&amp;D OSIRIS, L2S), Nina Amini (CNRS, L2S), Paulin Jacquot (EDF R&amp;D OSIRIS), Joseph Mikael (EDF R&amp;D OSIRIS)</p><p>In machine learning and particularly in topological data analysis,
-$\epsilon$-graphs are important tools but are generally hard to compute as the
-distance calculation between n points takes time O(n^2) classically. Recently,
-quantum approaches for calculating distances between n quantum states have been
-proposed, taking advantage of quantum superposition and entanglement. We
-investigate the potential for quantum advantage in the case of quantum distance
-calculation for computing $\epsilon$-graphs. We show that, relying on existing
-quantum multi-state SWAP test based algorithms, the query complexity for
-correctly identifying (with a given probability) that two points are not
-$\epsilon$-neighbours is at least O(n^3 / ln n), showing that this approach, if
-used directly for $\epsilon$-graph construction, does not bring a computational
-advantage when compared to a classical approach.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chmielewski_N/0/1/0/all/0/1">Naomi Mona Chmielewski</a> (EDF R&amp;D OSIRIS, L2S), <a href="http://arxiv.org/find/cs/1/au:+Amini_N/0/1/0/all/0/1">Nina Amini</a> (CNRS, L2S), <a href="http://arxiv.org/find/cs/1/au:+Jacquot_P/0/1/0/all/0/1">Paulin Jacquot</a> (EDF R&amp;D OSIRIS), <a href="http://arxiv.org/find/cs/1/au:+Mikael_J/0/1/0/all/0/1">Joseph Mikael</a> (EDF R&amp;D OSIRIS)</p><p>In machine learning and particularly in topological data analysis,
-$\epsilon$-graphs are important tools but are generally hard to compute as the
-distance calculation between n points takes time O(n^2) classically. Recently,
-quantum approaches for calculating distances between n quantum states have been
-proposed, taking advantage of quantum superposition and entanglement. We
-investigate the potential for quantum advantage in the case of quantum distance
-calculation for computing $\epsilon$-graphs. We show that, relying on existing
-quantum multi-state SWAP test based algorithms, the query complexity for
-correctly identifying (with a given probability) that two points are not
-$\epsilon$-neighbours is at least O(n^3 / ln n), showing that this approach, if
-used directly for $\epsilon$-graph construction, does not bring a computational
-advantage when compared to a classical approach.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-08T00:30:00Z">Thursday, June 08 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.04342'>Matroid-Constrained Vertex Cover</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Chien-Chung Huang, Fran&#xe7;ois Sellier</p><p>In this paper, we introduce the problem of Matroid-Constrained Vertex Cover:
-given a graph with weights on the edges and a matroid imposed on the vertices,
-our problem is to choose a subset of vertices that is independent in the
-matroid, with the objective of maximizing the total weight of covered edges.
-This problem is a generalization of the much studied max $k$-vertex cover
-problem, in which the matroid is the simple uniform matroid, and it is also a
-special case of the problem of maximizing a monotone submodular function under
-a matroid constraint.
-</p>
-<p>First, we give a Fixed-Parameter Tractable Approximation Scheme (FPT-AS) when
-the given matroid is a partition matroid, a laminar matroid, or a transversal
-matroid. Precisely, if $k$ is the rank of the matroid, we obtain $(1 -
-\varepsilon)$ approximation using $(1/\varepsilon)^{O(k)}n^{O(1)}$ time for
-partition and laminar matroids and using $(1/\varepsilon+k)^{O(k)}n^{O(1)}$
-time for transversal matroids. This extends a result of Manurangsi for uniform
-matroids [Manurangsi, 2018]. We also show that these ideas can be applied in
-the context of (single-pass) streaming algorithms. Besides, our FPT-AS
-introduces a new technique based on matroid union, which may be of independent
-interest in extremal combinatorics.
-</p>
-<p>In the second part, we consider general matroids. We propose a simple local
-search algorithm that guarantees $2/3 \approx 0.66$ approximation. For the more
-general problem where two matroids are imposed on the vertices and a feasible
-solution must be a common independent set, we show that a local search
-algorithm gives a $2/3 \cdot (1 - 1/(p+1))$ approximation in $n^{O(p)}$ time,
-for any integer $p$. We also provide some evidence to show that with the
-constraint of one or two matroids, the approximation ratio of $2/3$ is likely
-the best possible, using the currently known techniques of local search.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Huang_C/0/1/0/all/0/1">Chien-Chung Huang</a>, <a href="http://arxiv.org/find/cs/1/au:+Sellier_F/0/1/0/all/0/1">Fran&#xe7;ois Sellier</a></p><p>In this paper, we introduce the problem of Matroid-Constrained Vertex Cover:
-given a graph with weights on the edges and a matroid imposed on the vertices,
-our problem is to choose a subset of vertices that is independent in the
-matroid, with the objective of maximizing the total weight of covered edges.
-This problem is a generalization of the much studied max $k$-vertex cover
-problem, in which the matroid is the simple uniform matroid, and it is also a
-special case of the problem of maximizing a monotone submodular function under
-a matroid constraint.
-</p>
-<p>First, we give a Fixed-Parameter Tractable Approximation Scheme (FPT-AS) when
-the given matroid is a partition matroid, a laminar matroid, or a transversal
-matroid. Precisely, if $k$ is the rank of the matroid, we obtain $(1 -
-\varepsilon)$ approximation using $(1/\varepsilon)^{O(k)}n^{O(1)}$ time for
-partition and laminar matroids and using $(1/\varepsilon+k)^{O(k)}n^{O(1)}$
-time for transversal matroids. This extends a result of Manurangsi for uniform
-matroids [Manurangsi, 2018]. We also show that these ideas can be applied in
-the context of (single-pass) streaming algorithms. Besides, our FPT-AS
-introduces a new technique based on matroid union, which may be of independent
-interest in extremal combinatorics.
-</p>
-<p>In the second part, we consider general matroids. We propose a simple local
-search algorithm that guarantees $2/3 \approx 0.66$ approximation. For the more
-general problem where two matroids are imposed on the vertices and a feasible
-solution must be a common independent set, we show that a local search
-algorithm gives a $2/3 \cdot (1 - 1/(p+1))$ approximation in $n^{O(p)}$ time,
-for any integer $p$. We also provide some evidence to show that with the
-constraint of one or two matroids, the approximation ratio of $2/3$ is likely
-the best possible, using the currently known techniques of local search.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-08T00:30:00Z">Thursday, June 08 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.04423'>On Computing Optimal Tree Ensembles</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Christian Komusiewicz, Pascal Kunz, Frank Sommer, Manuel Sorge</p><p>Random forests and, more generally, (decision\nobreakdash-)tree ensembles are
-widely used methods for classification and regression. Recent algorithmic
-advances allow to compute decision trees that are optimal for various measures
-such as their size or depth. We are not aware of such research for tree
-ensembles and aim to contribute to this area. Mainly, we provide two novel
-algorithms and corresponding lower bounds. First, we are able to carry over and
-substantially improve on tractability results for decision trees, obtaining a
-$(6\delta D S)^S \cdot poly$-time algorithm, where $S$ is the number of cuts in
-the tree ensemble, $D$ the largest domain size, and $\delta$ is the largest
-number of features in which two examples differ. To achieve this, we introduce
-the witness-tree technique which also seems promising for practice. Second, we
-show that dynamic programming, which has been successful for decision trees,
-may also be viable for tree ensembles, providing an $\ell^n \cdot poly$-time
-algorithm, where $\ell$ is the number of trees and $n$ the number of examples.
-Finally, we compare the number of cuts necessary to classify training data sets
-for decision trees and tree ensembles, showing that ensembles may need
-exponentially fewer cuts for increasing number of trees.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Komusiewicz_C/0/1/0/all/0/1">Christian Komusiewicz</a>, <a href="http://arxiv.org/find/cs/1/au:+Kunz_P/0/1/0/all/0/1">Pascal Kunz</a>, <a href="http://arxiv.org/find/cs/1/au:+Sommer_F/0/1/0/all/0/1">Frank Sommer</a>, <a href="http://arxiv.org/find/cs/1/au:+Sorge_M/0/1/0/all/0/1">Manuel Sorge</a></p><p>Random forests and, more generally, (decision\nobreakdash-)tree ensembles are
-widely used methods for classification and regression. Recent algorithmic
-advances allow to compute decision trees that are optimal for various measures
-such as their size or depth. We are not aware of such research for tree
-ensembles and aim to contribute to this area. Mainly, we provide two novel
-algorithms and corresponding lower bounds. First, we are able to carry over and
-substantially improve on tractability results for decision trees, obtaining a
-$(6\delta D S)^S \cdot poly$-time algorithm, where $S$ is the number of cuts in
-the tree ensemble, $D$ the largest domain size, and $\delta$ is the largest
-number of features in which two examples differ. To achieve this, we introduce
-the witness-tree technique which also seems promising for practice. Second, we
-show that dynamic programming, which has been successful for decision trees,
-may also be viable for tree ensembles, providing an $\ell^n \cdot poly$-time
-algorithm, where $\ell$ is the number of trees and $n$ the number of examples.
-Finally, we compare the number of cuts necessary to classify training data sets
-for decision trees and tree ensembles, showing that ensembles may need
-exponentially fewer cuts for increasing number of trees.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-08T00:30:00Z">Thursday, June 08 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.04470'>Maintaining the cycle structure of dynamic permutations</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Zsuzsanna Lipt&#xe1;k, Francesco Masillo, Gonzalo Navarro</p><p>We present a new data structure for maintaining dynamic permutations, which
-we call a $\textit{forest of splay trees (FST)}$. The FST allows one to
-efficiently maintain the cycle structure of a permutation $\pi$ when the
-allowed updates are transpositions. The structure stores one conceptual splay
-tree for each cycle of $\pi$, using the position within the cycle as the key.
-Updating $\pi$ to $\tau\cdot\pi$, for a transposition $\tau$, takes
-$\mathcal{O}(\log n)$ amortized time, where $n$ is the size of $\pi$. The FST
-computes any $\pi(i)$, $\pi^{-1}(i)$, $\pi^k(i)$ and $\pi^{-k}(i)$, in
-$\mathcal{O}(\log n)$ amortized time. Further, it supports cycle-specific
-queries such as determining whether two elements belong to the same cycle, flip
-a segment of a cycle, and others, again within $\mathcal{O}(\log n)$ amortized
-time.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Liptak_Z/0/1/0/all/0/1">Zsuzsanna Lipt&#xe1;k</a>, <a href="http://arxiv.org/find/cs/1/au:+Masillo_F/0/1/0/all/0/1">Francesco Masillo</a>, <a href="http://arxiv.org/find/cs/1/au:+Navarro_G/0/1/0/all/0/1">Gonzalo Navarro</a></p><p>We present a new data structure for maintaining dynamic permutations, which
-we call a $\textit{forest of splay trees (FST)}$. The FST allows one to
-efficiently maintain the cycle structure of a permutation $\pi$ when the
-allowed updates are transpositions. The structure stores one conceptual splay
-tree for each cycle of $\pi$, using the position within the cycle as the key.
-Updating $\pi$ to $\tau\cdot\pi$, for a transposition $\tau$, takes
-$\mathcal{O}(\log n)$ amortized time, where $n$ is the size of $\pi$. The FST
-computes any $\pi(i)$, $\pi^{-1}(i)$, $\pi^k(i)$ and $\pi^{-k}(i)$, in
-$\mathcal{O}(\log n)$ amortized time. Further, it supports cycle-specific
-queries such as determining whether two elements belong to the same cycle, flip
-a segment of a cycle, and others, again within $\mathcal{O}(\log n)$ amortized
-time.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-08T00:30:00Z">Thursday, June 08 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Wednesday, June 07
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.03135'>On the complexity of isomorphism problems for tensors, groups, and polynomials III: actions by classical groups</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Zhili Chen, Joshua A. Grochow, Youming Qiao, Gang Tang, Chuanqi Zhang</p><p>We study the complexity of isomorphism problems for d-way arrays, or tensors,
-under natural actions by classical groups such as orthogonal, unitary, and
-symplectic groups. Such problems arise naturally in statistical data analysis
-and quantum information. We study two types of complexity-theoretic questions.
-First, for a fixed action type (isomorphism, conjugacy, etc.), we relate the
-complexity of the isomorphism problem over a classical group to that over the
-general linear group. Second, for a fixed group type (orthogonal, unitary, or
-symplectic), we compare the complexity of the decision problems for different
-actions.
-</p>
-<p>Our main results are as follows. First, for orthogonal and symplectic groups
-acting on 3-way arrays, the isomorphism problems reduce to the corresponding
-problem over the general linear group. Second, for orthogonal and unitary
-groups, the isomorphism problems of five natural actions on 3-way arrays are
-polynomial-time equivalent, and the d-tensor isomorphism problem reduces to the
-3-tensor isomorphism problem for any fixed d&gt;3. For unitary groups, the
-preceding result implies that LOCC classification of tripartite quantum states
-is at least as difficult as LOCC classification of d-partite quantum states for
-any d. Lastly, we also show that the graph isomorphism problem reduces to the
-tensor isomorphism problem over orthogonal and unitary groups.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Chen_Z/0/1/0/all/0/1">Zhili Chen</a>, <a href="http://arxiv.org/find/cs/1/au:+Grochow_J/0/1/0/all/0/1">Joshua A. Grochow</a>, <a href="http://arxiv.org/find/cs/1/au:+Qiao_Y/0/1/0/all/0/1">Youming Qiao</a>, <a href="http://arxiv.org/find/cs/1/au:+Tang_G/0/1/0/all/0/1">Gang Tang</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhang_C/0/1/0/all/0/1">Chuanqi Zhang</a></p><p>We study the complexity of isomorphism problems for d-way arrays, or tensors,
-under natural actions by classical groups such as orthogonal, unitary, and
-symplectic groups. Such problems arise naturally in statistical data analysis
-and quantum information. We study two types of complexity-theoretic questions.
-First, for a fixed action type (isomorphism, conjugacy, etc.), we relate the
-complexity of the isomorphism problem over a classical group to that over the
-general linear group. Second, for a fixed group type (orthogonal, unitary, or
-symplectic), we compare the complexity of the decision problems for different
-actions.
-</p>
-<p>Our main results are as follows. First, for orthogonal and symplectic groups
-acting on 3-way arrays, the isomorphism problems reduce to the corresponding
-problem over the general linear group. Second, for orthogonal and unitary
-groups, the isomorphism problems of five natural actions on 3-way arrays are
-polynomial-time equivalent, and the d-tensor isomorphism problem reduces to the
-3-tensor isomorphism problem for any fixed d&gt;3. For unitary groups, the
-preceding result implies that LOCC classification of tripartite quantum states
-is at least as difficult as LOCC classification of d-partite quantum states for
-any d. Lastly, we also show that the graph isomorphism problem reduces to the
-tensor isomorphism problem over orthogonal and unitary groups.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-07T00:30:00Z">Wednesday, June 07 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.03161'>On the Role of Entanglement and Statistics in Learning</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CC/recent'>arXiv: Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Srinivasan Arunachalam, Vojtech Havlicek, Louis Schatzki</p><p>In this work we make progress in understanding the relationship between
-learning models with access to entangled, separable and statistical
-measurements in the quantum statistical query (QSQ) model. To this end, we show
-the following results.
-</p>
-<p>$\textbf{Entangled versus separable measurements.}$ The goal here is to learn
-an unknown $f$ from the concept class $C\subseteq \{f:\{0,1\}^n\rightarrow
-[k]\}$ given copies of $\frac{1}{\sqrt{2^n}}\sum_x \vert x,f(x)\rangle$. We
-show that, if $T$ copies suffice to learn $f$ using entangled measurements,
-then $O(nT^2)$ copies suffice to learn $f$ using just separable measurements.
-</p>
-<p>$\textbf{Entangled versus statistical measurements}$ The goal here is to
-learn a function $f \in C$ given access to separable measurements and
-statistical measurements. We exhibit a class $C$ that gives an exponential
-separation between QSQ learning and quantum learning with entangled
-measurements (even in the presence of noise). This proves the "quantum
-analogue" of the seminal result of Blum et al. [BKW'03]. that separates
-classical SQ and PAC learning with classification noise.
-</p>
-<p>$\textbf{QSQ lower bounds for learning states.}$ We introduce a quantum
-statistical query dimension (QSD), which we use to give lower bounds on the QSQ
-learning. With this we prove superpolynomial QSQ lower bounds for testing
-purity, shadow tomography, Abelian hidden subgroup problem, degree-$2$
-functions, planted bi-clique states and output states of Clifford circuits of
-depth $\textsf{polylog}(n)$.
-</p>
-<p>$\textbf{Further applications.}$ We give and $\textit{unconditional}$
-separation between weak and strong error mitigation and prove lower bounds for
-learning distributions in the QSQ model. Prior works by Quek et al. [QFK+'22],
-Hinsche et al. [HIN+'22], and Nietner et al. [NIS+'23] proved the analogous
-results $\textit{assuming}$ diagonal measurements and our work removes this
-assumption.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/quant-ph/1/au:+Arunachalam_S/0/1/0/all/0/1">Srinivasan Arunachalam</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Havlicek_V/0/1/0/all/0/1">Vojtech Havlicek</a>, <a href="http://arxiv.org/find/quant-ph/1/au:+Schatzki_L/0/1/0/all/0/1">Louis Schatzki</a></p><p>In this work we make progress in understanding the relationship between
-learning models with access to entangled, separable and statistical
-measurements in the quantum statistical query (QSQ) model. To this end, we show
-the following results.
-</p>
-<p>$\textbf{Entangled versus separable measurements.}$ The goal here is to learn
-an unknown $f$ from the concept class $C\subseteq \{f:\{0,1\}^n\rightarrow
-[k]\}$ given copies of $\frac{1}{\sqrt{2^n}}\sum_x \vert x,f(x)\rangle$. We
-show that, if $T$ copies suffice to learn $f$ using entangled measurements,
-then $O(nT^2)$ copies suffice to learn $f$ using just separable measurements.
-</p>
-<p>$\textbf{Entangled versus statistical measurements}$ The goal here is to
-learn a function $f \in C$ given access to separable measurements and
-statistical measurements. We exhibit a class $C$ that gives an exponential
-separation between QSQ learning and quantum learning with entangled
-measurements (even in the presence of noise). This proves the "quantum
-analogue" of the seminal result of Blum et al. [BKW'03]. that separates
-classical SQ and PAC learning with classification noise.
-</p>
-<p>$\textbf{QSQ lower bounds for learning states.}$ We introduce a quantum
-statistical query dimension (QSD), which we use to give lower bounds on the QSQ
-learning. With this we prove superpolynomial QSQ lower bounds for testing
-purity, shadow tomography, Abelian hidden subgroup problem, degree-$2$
-functions, planted bi-clique states and output states of Clifford circuits of
-depth $\textsf{polylog}(n)$.
-</p>
-<p>$\textbf{Further applications.}$ We give and $\textit{unconditional}$
-separation between weak and strong error mitigation and prove lower bounds for
-learning distributions in the QSQ model. Prior works by Quek et al. [QFK+'22],
-Hinsche et al. [HIN+'22], and Nietner et al. [NIS+'23] proved the analogous
-results $\textit{assuming}$ diagonal measurements and our work removes this
-assumption.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-07T00:30:00Z">Wednesday, June 07 2023, 00:30</time>
         </div>
       </div>
     </details>
