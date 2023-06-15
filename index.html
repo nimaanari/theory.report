@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-15T20:30:22Z">Thursday, June 15 2023, 20:30</time>
+          <time class='timeago' datetime="2023-06-15T21:30:29Z">Thursday, June 15 2023, 21:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -345,6 +345,37 @@
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Thursday, June 15
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/06/randomized-acceptances.html'>Randomized Acceptances</a></h3>
+        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>NeurIPS recently released their 2021 consistency report, a sequel to the 2014 experiment. While the conference has grown dramatically, the results remain "consistent", about 23% disagreement from two separated program committee groups. As before I don't find this too surprising--different committee members have different tastes.</p><p>Roughly conference submissions fall into three categories</p><p></p><ol><li>Clearly strong papers</li><li>Clear rejects</li><li>A bunch that could go either way.</li></ol>A typical program committee quickly sorts out the first two groups and then painfully spends considerable time arguing over the others.<p></p><p>What if instead we took a different approach. Accept all the strong papers and reject the weak ones. Choose the rest randomly, either with a uniform or weighted distribution based on the ranking. Maybe reduce the probability of those who submit multiple papers.</p><p>Choosing randomly reduces biases and can increase diversity, if there is diversity in submissions. Knowing there is randomness in the process allows those with rejected papers to blame the randomness and those whose papers gets in claim they were in the first group. Randomness encourages more submissions and is fair over time.</p><p>Note we're just acknowledging the randomness in the process instead of pretending there is a perfect linear order to the papers that only a lengthy program committee discussion can suss out.</p><p>We should do the same for grant proposals--all worthy proposals should get a chance to be funded.</p><p>I doubt any of this will ever happen. People would rather trust human decisions with all their inconsistencies over pure randomness.&nbsp;</p><p>By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>NeurIPS recently released their <a href="https://arxiv.org/abs/2306.03262">2021 consistency report</a>, a sequel to the <a href="https://inverseprobability.com/2014/12/16/the-nips-experiment">2014 experiment</a>. While the conference has grown dramatically, the results remain "consistent", about 23% disagreement from two separated program committee groups. As <a href="https://blog.computationalcomplexity.org/2014/12/the-nips-experiment.html">before</a> I don't find this too surprising--different committee members have different tastes.</p><p>Roughly conference submissions fall into three categories</p><p></p><ol style="text-align: left;"><li>Clearly strong papers</li><li>Clear rejects</li><li>A bunch that could go either way.</li></ol>A typical program committee quickly sorts out the first two groups and then painfully spends considerable time arguing over the others.<p></p><p>What if instead we took a different approach. Accept all the strong papers and reject the weak ones. Choose the rest randomly, either with a uniform or weighted distribution based on the ranking. Maybe reduce the probability of those who submit multiple papers.</p><p>Choosing randomly reduces biases and can increase diversity, if there is diversity in submissions. Knowing there is randomness in the process allows those with rejected papers to blame the randomness and those whose papers gets in claim they were in the first group. Randomness encourages more submissions and is fair over time.</p><p>Note we're just acknowledging the randomness in the process instead of pretending there is a perfect linear order to the papers that only a lengthy program committee discussion can suss out.</p><p>We should do the same for grant proposals--all worthy proposals should get a chance to be funded.</p><p>I doubt any of this will ever happen. People would rather trust human decisions with all their inconsistencies over pure randomness.&nbsp;</p><p class="authors">By Lance Fortnow</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-15T21:04:00Z">Thursday, June 15 2023, 21:04</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3302,75 +3333,6 @@ any triangulation of a Seifert fibered space with boundary there is both a
 fundamental horizontal surface of small degree and a complete collection of
 normal vertical annuli whose total weight is bounded by an exponential in the
 square of the triangulation size.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-08T00:30:00Z">Thursday, June 08 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.04178'>Optimal Transport Model Distributional Robustness</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.CG/recent'>arXiv: Computational Geometry</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Van-Anh Nguyen, Trung Le, Anh Tuan Bui, Thanh-Toan Do, Dinh Phung</p><p>Distributional robustness is a promising framework for training deep learning
-models that are less vulnerable to adversarial examples and data distribution
-shifts. Previous works have mainly focused on exploiting distributional
-robustness in data space. In this work, we explore an optimal transport-based
-distributional robustness framework on model spaces. Specifically, we examine a
-model distribution in a Wasserstein ball of a given center model distribution
-that maximizes the loss. We have developed theories that allow us to learn the
-optimal robust center model distribution. Interestingly, through our developed
-theories, we can flexibly incorporate the concept of sharpness awareness into
-training a single model, ensemble models, and Bayesian Neural Networks by
-considering specific forms of the center model distribution, such as a Dirac
-delta distribution over a single model, a uniform distribution over several
-models, and a general Bayesian Neural Network. Furthermore, we demonstrate that
-sharpness-aware minimization (SAM) is a specific case of our framework when
-using a Dirac delta distribution over a single model, while our framework can
-be viewed as a probabilistic extension of SAM. We conduct extensive experiments
-to demonstrate the usefulness of our framework in the aforementioned settings,
-and the results show remarkable improvements in our approaches to the
-baselines.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Nguyen_V/0/1/0/all/0/1">Van-Anh Nguyen</a>, <a href="http://arxiv.org/find/cs/1/au:+Le_T/0/1/0/all/0/1">Trung Le</a>, <a href="http://arxiv.org/find/cs/1/au:+Bui_A/0/1/0/all/0/1">Anh Tuan Bui</a>, <a href="http://arxiv.org/find/cs/1/au:+Do_T/0/1/0/all/0/1">Thanh-Toan Do</a>, <a href="http://arxiv.org/find/cs/1/au:+Phung_D/0/1/0/all/0/1">Dinh Phung</a></p><p>Distributional robustness is a promising framework for training deep learning
-models that are less vulnerable to adversarial examples and data distribution
-shifts. Previous works have mainly focused on exploiting distributional
-robustness in data space. In this work, we explore an optimal transport-based
-distributional robustness framework on model spaces. Specifically, we examine a
-model distribution in a Wasserstein ball of a given center model distribution
-that maximizes the loss. We have developed theories that allow us to learn the
-optimal robust center model distribution. Interestingly, through our developed
-theories, we can flexibly incorporate the concept of sharpness awareness into
-training a single model, ensemble models, and Bayesian Neural Networks by
-considering specific forms of the center model distribution, such as a Dirac
-delta distribution over a single model, a uniform distribution over several
-models, and a general Bayesian Neural Network. Furthermore, we demonstrate that
-sharpness-aware minimization (SAM) is a specific case of our framework when
-using a Dirac delta distribution over a single model, while our framework can
-be viewed as a probabilistic extension of SAM. We conduct extensive experiments
-to demonstrate the usefulness of our framework in the aforementioned settings,
-and the results show remarkable improvements in our approaches to the
-baselines.
 </p>
         
         </div>
