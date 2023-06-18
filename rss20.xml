@@ -9,6 +9,42 @@
 
 
 <item>
+  <title>News for May 2023</title>
+  <guid>https://ptreview.sublinear.info/?p=1884</guid>
+  <link>https://ptreview.sublinear.info/2023/06/news-for-may-2023/</link>
+  <description>
+    &lt;p&gt;Apologies, dear readers for the delay in getting out this month&amp;#8217;s post. This month we had three papers &amp;#8212; all on testing properties of graphs! One of the featured papers this month revisits the problem of testing the properties of directed graphs and comes back with a happy progress report. Alright, let&amp;#8217;s dig in.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;A Distributed Conductance Tester Without Global Information Collection&lt;/strong&gt; by Tugkan Batu, Chhaya Trehan (&lt;a href=&quot;https://arxiv.org/abs/2305.14178&quot;&gt;arXiv&lt;/a&gt;) One of the classic questions in property testing considers the task of testing expansion. Here, you are interested in knowing whether the input graph has conductance at least \(\alpha\) or it is far from having conductance at most \(\alpha^2\). On a parallel track, we recall that thanks to the classic work of Parnas and Ron, we know there are connections between distributed algorithms and graph property testing. Meditating on these connections led to the emergence of distributed graph property testing as an active area of research. The featured paper considers the task of testing expansion in the distributed framework. The algorithms presented give a distributed implementation of multiple random walks from all vertices, and controls the congestion of the implementation. In particular, this leads to a \(O(\log n/\alpha^2)\) round expansion-tester. In a first attempt at such an implementation, you might note that you need to track how well short random walks mix when started from a bunch of randomly chosen vertices. This seems to require maintaining some global state/global aggregate information. One of the important features of their algorithm (as mentioned in the title) does away with the need to maintain such global states. As a closing remark, I note the algorithm presented in this paper does not require the graph to be bounded degree.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Testing versus estimation of graph properties, revisited&lt;/strong&gt; by Lior Gishboliner, Nick Kushnir, Asaf Shapira (&lt;a href=&quot;https://arxiv.org/abs/2305.05487&quot;&gt;arXiv&lt;/a&gt;) This paper considers the task of additively estimating the distance to a property \(\mathcal{P}\) of a dense graph. Let me set up some context to view the results in the featured paper by summarizing what was known before. One of the early important results in this area is the original result of Fischer and Newman which shows that any testable graph property admits a \(\pm \varepsilon\) distance approximation algorithm, which follows from the regularity lemma. However, the query complexity of the resulting algorithm is a Tower-style bound. Later, Hoppen et al., building upon tools from the classic work of Conlon and Fox, demonstrated that this bound of \(twr(poly(1/\varepsilon))\) also holds for testable hereditary properties. Fiat and Ron introduced a decomposition machinery that allowed them to decompose a &amp;#8220;complex&amp;#8221; property into a collection of simpler properties. They used this decomposition to estimate distances to a vast collection of graph properties. They also asked if it was possible to find a transformation using which one can bypass the blowup in query complexity incurred by Fischer and Newman for some rich class of graph properties. The featured paper proves that for a hereditary graph property, you can in fact get algorithms where the query complexity for distance estimation only grows as \(\exp(1/\varepsilon)\). Additionally, for every testable graph property, you can get distance estimators for that property whose query complexity only grows doubly exponentially in \(1/\varepsilon\) (as opposed to the tower bound earlier).  &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;An Optimal Separation between Two Property Testing Models for Bounded Degree Directed Graphs&lt;/strong&gt; by Pan Peng, Yuyang Wang (&lt;a href=&quot;https://arxiv.org/abs/2305.13089&quot;&gt;arXiv&lt;/a&gt;) Unlike undirected graphs, directed graph properties have not received as much attention in the property testing community. In a classic work, Bender and Ron considered two natural models for studying property testing on directed graphs. The first model is one where you can only follow the &amp;#8220;out&amp;#8221; edges or the so-called &lt;em&gt;unidirectional model&lt;/em&gt;. In the other model, you are allowed to follow both the &amp;#8220;out&amp;#8221; edges and the &amp;#8220;in&amp;#8221; edges incident on the vertex which is also called the &lt;em&gt;bidirectional model&lt;/em&gt;. The featured paper considers directed graphs where the in-degree and the out-degrees are both bounded in both of the models mentioned above. The graph is presented to you in the adjacency list format (tailored for the model you consider). The paper shows that even for the fundamental task of subgraph-freeness, the directed world has some interesting behavior with respect to the two models above. Let me showcase one of the catchy results from the paper which illustrates this separation nicely. Take a connected directed graph \(H\) with \(k\) source components. The paper shows that for sufficiently small \(\varepsilon\), testing whether a directed graph \(G\) is \(H\)-free or \(\varepsilon\)-far from being \(H\)-free requires \(\Omega(n^{1-1/k})\) unidirectional queries. On the other hand, in the bidirectional model, this can be done with a mere \(O_{\varepsilon, d, k}(1)\) number of queries.&lt;/p&gt;
+&lt;p class=&quot;authors&quot;&gt;By Akash&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-18 07:14:46 UTC</pubDate>
+  <author>Property Testing Review</author>
+</item>
+
+<item>
   <title>TR23-090 |  HDX Condensers | 
 
 	Itay Cohen, 
@@ -1485,24 +1521,6 @@ Participation application is available at &lt;a href=&quot;https://www.cism.it/e
   </description>
   <pubDate>2023-06-08 09:21:00 UTC</pubDate>
   <author>Luca Aceto</author>
-</item>
-
-<item>
-  <title>Optimizing Sphere Valued Gaussian Noise Stability</title>
-  <guid>http://arxiv.org/abs/2306.03912</guid>
-  <link>http://arxiv.org/abs/2306.03912</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Heilman_S/0/1/0/all/0/1&quot;&gt;Steven Heilman&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove a vector-valued inequality for the Gaussian noise stability (i.e. we
-prove a vector-valued Borell inequality) for Euclidean functions taking values
-in the two-dimensional sphere, for all correlation parameters at most $1/10$ in
-absolute value. This inequality was conjectured (for all correlation parameters
-at most $1$ in absolute value) by Hwang, Neeman, Parekh, Thompson and Wright.
-Such an inequality is needed to prove sharp computational hardness of the
-product state Quantum MAX-CUT problem, assuming the Unique Games Conjecture.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-08 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
 </item>
 
 </channel>
