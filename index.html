@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-19T17:30:22Z">Monday, June 19 2023, 17:30</time>
+          <time class='timeago' datetime="2023-06-19T18:30:57Z">Monday, June 19 2023, 18:30</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -1267,6 +1267,8 @@ Shor&#8217;s algorithm easily breaks RSA as used on the Internet today. The ques
 See also <a href="https://math.mit.edu/~apost/courses/18.204-2016/18.204_Jeremy_Wohlwend_final_paper.pdf">this</a>. A 2019 <a href="https://arxiv.org/abs/1905.09749">paper</a> by Craig Gidney and Martin Eker&aring; argues that implementations of Shor on 2,048-bit integers <img decoding="async" src="https://s0.wp.com/latex.php?latex=%7BN%7D&#038;bg=ffffff&#038;fg=000000&#038;s=0&#038;c=20201002" alt="{N}" class="latex" /> is within reach of current technology using noisy qubits&#8212;needing only some millions of them. However, this presumes an error-free implementation of the Quantum Fourier Transform (QFT). They say:</p>
 <blockquote><p><b> </b> <em> Note furthermore that when we analyze the success probabilities of Shor’s algorithms, and the various derivatives, we assume the use of an ideal QFT even though the implemented QFT is technically an approximation. </em>
 </p></blockquote>
+<p>
+[<b>Added 6/19:</b> This quotation is taken somewhat out of context, because the paper&#8217;s main concern is optimizing and dealing with the much greater noise and precision issues in the superposed modular exponentiation step.  See Craig Gidney&#8217;s <a href="https://rjlipton.wpcomstaging.com/2023/06/14/a-little-noise-makes-quantum-factoring-fail/#comment-120009">comment</a> below for more information on that and on how the QFT step is executed.]</p>
 <p>
 <p><H2> Quantum Factoring Impossible? </H2></p>
 <p>Now enter Jin-Yi. He has a new <a href="https://pages.cs.wisc.edu/~jyc/Shor-Algorithm-with-Noise.pdf">paper</a> that says:</p>
