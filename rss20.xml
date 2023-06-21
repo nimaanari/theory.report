@@ -378,7 +378,7 @@ lower running time.
   <guid>https://ptreview.sublinear.info/?p=1884</guid>
   <link>https://ptreview.sublinear.info/2023/06/news-for-may-2023/</link>
   <description>
-    &lt;p&gt;Apologies, dear readers for the delay in getting out this month&amp;#8217;s post. This month we had three papers &amp;#8212; all on testing properties of graphs! One of the featured papers this month revisits the problem of testing the properties of directed graphs and comes back with a happy progress report. Alright, let&amp;#8217;s dig in.&lt;/p&gt;
+    &lt;p&gt;Apologies, dear readers for the delay in getting out this month&amp;#8217;s post. This month we had &lt;s&gt;three papers &amp;#8212; all on testing properties of graphs!&lt;/s&gt; (&lt;em&gt;&lt;strong&gt;EDIT:&lt;/strong&gt; Updated later&lt;/em&gt;) four papers: three on property testing problems on graphs and the last one on testing convexity. One of the featured papers this month revisits the problem of testing the properties of directed graphs and comes back with a happy progress report. Alright, let&amp;#8217;s dig in.&lt;/p&gt;
 
 
 
@@ -403,6 +403,14 @@ lower running time.
 
 
 &lt;p&gt;&lt;strong&gt;An Optimal Separation between Two Property Testing Models for Bounded Degree Directed Graphs&lt;/strong&gt; by Pan Peng, Yuyang Wang (&lt;a href=&quot;https://arxiv.org/abs/2305.13089&quot;&gt;arXiv&lt;/a&gt;) Unlike undirected graphs, directed graph properties have not received as much attention in the property testing community. In a classic work, Bender and Ron considered two natural models for studying property testing on directed graphs. The first model is one where you can only follow the &amp;#8220;out&amp;#8221; edges or the so-called &lt;em&gt;unidirectional model&lt;/em&gt;. In the other model, you are allowed to follow both the &amp;#8220;out&amp;#8221; edges and the &amp;#8220;in&amp;#8221; edges incident on the vertex which is also called the &lt;em&gt;bidirectional model&lt;/em&gt;. The featured paper considers directed graphs where the in-degree and the out-degrees are both bounded in both of the models mentioned above. The graph is presented to you in the adjacency list format (tailored for the model you consider). The paper shows that even for the fundamental task of subgraph-freeness, the directed world has some interesting behavior with respect to the two models above. Let me showcase one of the catchy results from the paper which illustrates this separation nicely. Take a connected directed graph \(H\) with \(k\) source components. The paper shows that for sufficiently small \(\varepsilon\), testing whether a directed graph \(G\) is \(H\)-free or \(\varepsilon\)-far from being \(H\)-free requires \(\Omega(n^{1-1/k})\) unidirectional queries. On the other hand, in the bidirectional model, this can be done with a mere \(O_{\varepsilon, d, k}(1)\) number of queries.&lt;/p&gt;
+
+
+
+&lt;p&gt;(&lt;em&gt;&lt;strong&gt;EDIT:&lt;/strong&gt; Added later&lt;/em&gt;)&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Testing Convexity of Discrete Sets in High Dimensions&lt;/strong&gt; by Hadley Black, Eric Blais, Nathaniel Harms (&lt;a href=&quot;https://arxiv.org/abs/2305.03194&quot;&gt;arXiv&lt;/a&gt;) As the title suggests, this paper explores the problem of testing convexity. To understand the notion of convexity explored in the paper, consider the following setup: You call a set \(S \subseteq \{-1, 0, 1\}^n\) &lt;em&gt;convex&lt;/em&gt; if there exists a convex set \(S&amp;#8217; \subseteq \mathbb{R}^n\) such that \(S = S&amp;#8217; \cap \{-1,0,1\}^n\). And you call a set \(S \subseteq \{-1,0,1\}^n\) &lt;em&gt;far from being convex&lt;/em&gt; if for every convex \(T \subseteq \{-1,0,1\}^n\), you have \(|S \oplus T| \geq \varepsilon 3^n\). The paper shows that when you are allowed membership queries, you can test convexity non-adaptively with a one-sided error by issuing \(3^{O(\sqrt{n \log(1/\varepsilon)})}\) queries. Also, they prove an almost matching lower bound. Finally, with a lower bound of \(3^{\Omega(n)}\) when confined to using sample-based testers, authors provably demonstrate that membership queries indeed buy you some undeniable power for testing convexity in high dimensions. &lt;/p&gt;
 &lt;p class=&quot;authors&quot;&gt;By Akash&lt;/p&gt;
   </description>
   <pubDate>2023-06-18 07:14:46 UTC</pubDate>
