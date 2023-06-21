@@ -9,6 +9,51 @@
 
 
 <item>
+  <title>All-but-clique-universal graphs</title>
+  <guid>https://11011110.github.io/blog/2023/06/20/all-but-clique</guid>
+  <link>https://11011110.github.io/blog/2023/06/20/all-but-clique.html</link>
+  <description>
+    &lt;p&gt;When he visited UCI last May, Noga Alon gave two talks: a technical seminar on &lt;a href=&quot;https://en.wikipedia.org/wiki/Universal_graph&quot;&gt;universal graphs&lt;/a&gt; and a more general talk on some of his work in the theory of machine learning. The seminar talk was based in part on his paper “Asymptotically optimal induced universal graphs” (&lt;a href=&quot;https://doi.org/10.1007/s00039-017-0396-9&quot;&gt;&lt;em&gt;Geom. Funct. Anal.&lt;/em&gt; 2017&lt;/a&gt;) in which he proves that the smallest graphs containing all \(k\)-vertex graphs as induced subgraphs have size&lt;/p&gt;
+
+\[2^{(k-1)/2}\bigl(1+o(1)\bigr),\]
+
+&lt;p&gt;tight except possibly for the \(o(1)\) term. At the talk I asked him whether the same bound also worked for graphs that contain all &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k\)-vertex&lt;/span&gt; graphs except for the &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k\)-clique,&lt;/span&gt; but do not contain the &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k\)-clique.&lt;/span&gt; He came back a day later with the answer: Yes.&lt;/p&gt;
+
+&lt;p&gt;The reason for my question was that I needed these all-but-clique-universal graphs for a paper, now on arXiv: “Quasipolynomiality of the smallest missing induced subgraph”, with Andrea Lincoln and Virginia Vassilevska Williams, &lt;a href=&quot;https://arxiv.org/abs/2306.11185&quot;&gt;arXiv:2306.11185&lt;/a&gt;, to appear in &lt;em&gt;J. Graph Alg. Appl.&lt;/em&gt; This is a followup to &lt;a href=&quot;/blog/2019/05/27/shattering-quasipolynomiality.html&quot;&gt;an earlier blog post on quasipolynomiality&lt;/a&gt; in which I observed that the smallest graph that is not an induced subgraph of some given graph could be found in quasipolynomial time. It necessarily has at most logarithmic size, so you can just do a brute force search of all subgraphs of that size to see which ones are missing. The new paper proves that, under the &lt;a href=&quot;https://en.wikipedia.org/wiki/Exponential_time_hypothesis&quot;&gt;exponential time hypothesis&lt;/a&gt;, this sort of quasipolynomial time bound is necessary: you cannot solve the problem faster than the input size to a logarithmic power. The proof is an easy reduction from clique-finding in which one adds an all-but-clique-universal graph to the input to force the smallest missing graph to be a clique.&lt;/p&gt;
+
+&lt;p&gt;Another way of describing our paper is that it finds tight time bounds for determining the largest subgraph size for which a given graph is induced-universal. This adds to the small but growing repertoire of problems for which a quasipolynomial time bound is the correct time bound, under standard complexity theory assumptions. Others cited in the paper include finding approximate Nash equilibria, and finding maximum independent sets in hyperbolic unit disk graphs.&lt;/p&gt;
+
+&lt;p&gt;In our paper we use a recursive construction for all-but-clique-universal graphs that produces bigger graphs than Alon’s, of size &lt;span style=&quot;white-space:nowrap&quot;&gt;roughly \(2^k\),&lt;/span&gt; for two reasons: first, because we need a deterministic construction (Alon’s is randomized), and second, because our paper was almost completely through the reviewing process when I found out about Alon’s construction. For proving quasipolynomiality, the bigger exponent in our construction isn’t important. But I thought this post would be a good place to describe Alon’s construction instead. Keep in mind that this is based on my faulty recollection of a conversation several weeks ago, so this will read more like half-baked research notes than like a completed result. I’ve probably introduced multiple mistakes into the construction: these are my fault, not Alon’s.&lt;/p&gt;
+
+&lt;p&gt;The main idea of Alon’s paper is to cover most induced subgraphs of size at most \(k\) by a big random graph, chosen with the specified number of vertices and with each edge present or absent independently with &lt;span style=&quot;white-space:nowrap&quot;&gt;probability \(\tfrac12\).&lt;/span&gt; As he proves, this is (with high probability) a universal graph for all of the subgraphs that have few symmetries. But it may miss some highly symmetric subgraphs. To cover those, he shows that (regardless of its actual symmetries) every symmetric subgraph has three moderately-large ordered sets of vertices \(A\), \(B\), and \(C\) such that the &lt;span style=&quot;white-space:nowrap&quot;&gt;\(A\)–\(B\)&lt;/span&gt; adjacencies have exactly the same pattern as the &lt;span style=&quot;white-space:nowrap&quot;&gt;\(A\)–\(C\)&lt;/span&gt; adjacencies. Storing only one of these two sets of adjacencies saves enough information that he can use a less-efficient construction for a universal graph for the symmetric subgraphs. The result has size \(O(1/k)\) times the size of the big random part. Because it’s so much smaller, adding it to the big random graph only increases the \(o(1)\) term in their combined size bound.&lt;/p&gt;
+
+&lt;p&gt;Modifying this to produce an all-but-clique-universal graph requires only a few more ideas.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;First, the big random part can contain a &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k\)-clique.&lt;/span&gt; But the expected number of copies of any graph in this part is inversely proportional to its number of symmetries. The size of this part is specifically chosen by a formula (equation 1 of Alon’s paper) that makes the expected number of copies equal to one when the number of symmetries is moderate, &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k^{16\sqrt{k\log k}}\).&lt;/span&gt; In this way, there are many expected copies for graphs with few symmetries &lt;span style=&quot;white-space:nowrap&quot;&gt;(\(\le k^{8\sqrt{k\log k}}\)),&lt;/span&gt; which with some care leads to a proof that all such graphs are covered with high probability. But because the number of symmetries of a clique &lt;span style=&quot;white-space:nowrap&quot;&gt;is \(k!\),&lt;/span&gt; much larger than the moderate size bound above, the expected number of cliques is much smaller than one. So choosing a random graph conditioned to have no clique doesn’t really change the high probability of covering all the few-symmetry graphs.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Second, the part \(S\) of Alon’s construction that covers the high-symmetry subgraphs will also contain a &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k\)-clique,&lt;/span&gt; but one can fix that by using the graph product \(S\times (K_{k}-e)\) with a clique minus an edge. Any &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k\)-vertex&lt;/span&gt; subgraph of this product either uses one copy of each clique vertex, and is missing the same edge, or it has two vertices coming from the same clique vertex, which cannot be adjacent in the product. Therefore, there are no &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k\)-cliques&lt;/span&gt; in the product, but all other &lt;span style=&quot;white-space:nowrap&quot;&gt;\(k\)-vertex&lt;/span&gt; induced subgraphs remain present.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Third, the product blows up the symmetric part by a factor &lt;span style=&quot;white-space:nowrap&quot;&gt;of \(k\),&lt;/span&gt; big enough to increase the multiplier in the size of the overall graph from \(1+o(1)\) &lt;span style=&quot;white-space:nowrap&quot;&gt;to \(O(1)\).&lt;/span&gt; To avoid this increase, we need to compensate by being more careful in the construction of \(S\) to make it even smaller. I didn’t hear about the details of this part.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Putting these ideas together should give an all-but-clique-universal graph of size&lt;/p&gt;
+
+\[2^{(k-1)/2}\bigl(1+o(1)\bigr),\]
+
+&lt;p&gt;the same bound as for the induced-universal graphs. If that’s all too sketchy to be relied on, you could always just use the product of any induced-universal graph &lt;span style=&quot;white-space:nowrap&quot;&gt;with \(K_k-e\).&lt;/span&gt; It’s bigger by a factor &lt;span style=&quot;white-space:nowrap&quot;&gt;of \(k\),&lt;/span&gt; but it has the right exponent and doesn’t have any gaps in my recollection of its construction.&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/110580932664089904&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-20 23:49:00 UTC</pubDate>
+  <author>David Eppstein</author>
+</item>
+
+<item>
   <title>Computer Science Marches On</title>
   <guid>https://rjlipton.wpcomstaging.com/?p=21790</guid>
   <link>https://rjlipton.wpcomstaging.com/2023/06/20/computer-science-marches-on/</link>
@@ -1373,7 +1418,7 @@ Our constructions are combinatorial in nature. We combine graph-based erasure co
   <guid>http://gilkalai.wordpress.com/2023/06/09/the-asymptotics-of-r4t/</guid>
   <link>https://gilkalai.wordpress.com/2023/06/09/the-asymptotics-of-r4t/</link>
   <description>
-    &lt;div class=&quot;wpcom-reblog-snapshot&quot;&gt;&lt;div class=&quot;reblogger-note&quot;&gt;&lt;div class=&#39;reblogger-note-content&#39;&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href=&quot;https://sammattheus.wordpress.com/&quot;&gt;&lt;img loading=&quot;lazy&quot; class=&quot;alignnone size-full wp-image-24567&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/06/pal.png&quot; alt=&quot;pal&quot; width=&quot;955&quot; height=&quot;323&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/06/pal.png 955w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=150&amp;amp;h=51 150w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=300&amp;amp;h=101 300w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=768&amp;amp;h=260 768w&quot; sizes=&quot;(max-width: 955px) 100vw, 955px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;div class=&quot;wpcom-reblog-snapshot&quot;&gt;&lt;div class=&quot;reblogger-note&quot;&gt;&lt;div class=&#39;reblogger-note-content&#39;&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href=&quot;https://sammattheus.wordpress.com/&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-24567&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/06/pal.png&quot; alt=&quot;pal&quot; width=&quot;955&quot; height=&quot;323&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/06/pal.png 955w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=150&amp;amp;h=51 150w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=300&amp;amp;h=101 300w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=768&amp;amp;h=260 768w&quot; sizes=&quot;(max-width: 955px) 100vw, 955px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
 &lt;p&gt;Sam Mattheus wrote on his blog &amp;#8220;Points and Lines&amp;#8221; a summary with a general overview of the proof for his breakthrough with Jacques Verstraete about &lt;img src=&quot;https://s0.wp.com/latex.php?latex=r%284%2Ct%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;r(4,t)&quot; class=&quot;latex&quot; /&gt;. &lt;/p&gt;
 &lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
@@ -1445,38 +1490,6 @@ mixture-of-superpositions examples do not lead to sample complexity
 improvements over classical data. Our results demonstrate that the potential
 power of quantum data for learning tasks, while not unlimited, can be utilized
 by classical agents through interaction with untrusted quantum entities.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-09 00:30:00 UTC</pubDate>
-  <author>arXiv: Computational Complexity</author>
-</item>
-
-<item>
-  <title>Quantum computing algorithms for inverse problems on graphs and an NP-complete inverse problem</title>
-  <guid>http://arxiv.org/abs/2306.05253</guid>
-  <link>http://arxiv.org/abs/2306.05253</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Ilmavirta_J/0/1/0/all/0/1&quot;&gt;Joonas Ilmavirta&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lassas_M/0/1/0/all/0/1&quot;&gt;Matti Lassas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Lu_J/0/1/0/all/0/1&quot;&gt;Jinpeng Lu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Oksanen_L/0/1/0/all/0/1&quot;&gt;Lauri Oksanen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Ylinen_L/0/1/0/all/0/1&quot;&gt;Lauri Ylinen&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider an inverse problem for a finite graph $(X,E)$ where we are given
-a subset of vertices $B\subset X$ and the distances $d_{(X,E)}(b_1,b_2)$ of all
-vertices $b_1,b_2\in B$. The distance of points $x_1,x_2\in X$ is defined as
-the minimal number of edges needed to connect two vertices, so all edges have
-length 1. The inverse problem is a discrete version of the boundary rigidity
-problem in Riemannian geometry or the inverse travel time problem in
-geophysics. We will show that this problem has unique solution under certain
-conditions and develop quantum computing methods to solve it. We prove the
-following uniqueness result: when $(X,E)$ is a tree and $B$ is the set of
-leaves of the tree, the graph $(X,E)$ can be uniquely determined in the class
-of all graphs having a fixed number of vertices. We present a quantum computing
-algorithm which produces a graph $(X,E)$, or one of those, which has a given
-number of vertices and the required distances between vertices in $B$. To this
-end we develop an algorithm that takes in a qubit representation of a graph and
-combine it with Grover&#39;s search algorithm. The algorithm can be implemented
-using only $O(|X|^2)$ qubits, the same order as the number of elements in the
-adjacency matrix of $(X,E)$. It also has a quadratic improvement in
-computational cost compared to standard classical algorithms. Finally, we
-consider applications in theory of computation, and show that a slight
-modification of the above inverse problem is NP-complete: all NP-problems can
-be reduced to a discrete inverse problem we consider.
 &lt;/p&gt;
   </description>
   <pubDate>2023-06-09 00:30:00 UTC</pubDate>
