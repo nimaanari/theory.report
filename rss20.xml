@@ -20,6 +20,300 @@
 </item>
 
 <item>
+  <title>Quantum and classical query complexities for determining connectedness of matroids</title>
+  <guid>http://arxiv.org/abs/2306.12103</guid>
+  <link>http://arxiv.org/abs/2306.12103</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Huang_X/0/1/0/all/0/1&quot;&gt;Xiaowei Huang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Feng_S/0/1/0/all/0/1&quot;&gt;Shiguang Feng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Li_L/0/1/0/all/0/1&quot;&gt;Lvzhou Li&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Connectivity is a fundamental structural property of matroids, and has been
+studied algorithmically over 50 years. In 1974, Cunningham proposed a
+deterministic algorithm consuming $O(n^{2})$ queries to the independence oracle
+to determine whether a matroid is connected. Since then, no algorithm, not even
+a random one, has worked better. To the best of our knowledge, the classical
+query complexity lower bound and the quantum complexity for this problem have
+not been considered. Thus, in this paper we are devoted to addressing these
+issues, and our contributions are threefold as follows: (i) First, we prove
+that the randomized query complexity of determining whether a matroid is
+connected is $\Omega(n^2)$ and thus the algorithm proposed by Cunningham is
+optimal in classical computing. (ii) Second, we present a quantum algorithm
+with $O(n^{3/2})$ queries, which exhibits provable quantum speedups over
+classical ones. (iii) Third, we prove that any quantum algorithm requires
+$\Omega(n)$ queries, which indicates that quantum algorithms can achieve at
+most a quadratic speedup over classical ones. Therefore, we have a relatively
+comprehensive understanding of the potential of quantum computing in
+determining the connectedness of matroids.\
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Complexity</author>
+</item>
+
+<item>
+  <title>Geometric Algorithms for $k$-NN Poisoning</title>
+  <guid>http://arxiv.org/abs/2306.12377</guid>
+  <link>http://arxiv.org/abs/2306.12377</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Centurion_D/0/1/0/all/0/1&quot;&gt;Diego Ihara Centurion&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chubarian_K/0/1/0/all/0/1&quot;&gt;Karine Chubarian&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fan_B/0/1/0/all/0/1&quot;&gt;Bohan Fan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sgherzi_F/0/1/0/all/0/1&quot;&gt;Francesco Sgherzi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Radhakrishnan_T/0/1/0/all/0/1&quot;&gt;Thiruvenkadam S Radhakrishnan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sidiropoulos_A/0/1/0/all/0/1&quot;&gt;Anastasios Sidiropoulos&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Straight_A/0/1/0/all/0/1&quot;&gt;Angelo Straight&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose a label poisoning attack on geometric data sets against
+$k$-nearest neighbor classification. We provide an algorithm that can compute
+an $\varepsilon n$-additive approximation of the optimal poisoning in $n\cdot
+2^{2^{O(d+k/\varepsilon)}}$ time for a given data set $X \in \mathbb{R}^d$,
+where $|X| = n$. Our algorithm achieves its objectives through the application
+of multi-scale random partitions.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Computational Geometry</author>
+</item>
+
+<item>
+  <title>Fast quantum algorithm for differential equations</title>
+  <guid>http://arxiv.org/abs/2306.11802</guid>
+  <link>http://arxiv.org/abs/2306.11802</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Bagherimehrab_M/0/1/0/all/0/1&quot;&gt;Mohsen Bagherimehrab&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nakaji_K/0/1/0/all/0/1&quot;&gt;Kouhei Nakaji&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Wiebe_N/0/1/0/all/0/1&quot;&gt;Nathan Wiebe&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Aspuru_Guzik_A/0/1/0/all/0/1&quot;&gt;Al&amp;#xe1;n Aspuru-Guzik&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Partial differential equations (PDEs) are ubiquitous in science and
+engineering. Prior quantum algorithms for solving the system of linear
+algebraic equations obtained from discretizing a PDE have a computational
+complexity that scales at least linearly with the condition number $\kappa$ of
+the matrices involved in the computation. For many practical applications,
+$\kappa$ scales polynomially with the size $N$ of the matrices, rendering a
+polynomial-in-$N$ complexity for these algorithms. Here we present a quantum
+algorithm with a complexity that is polylogarithmic in $N$ but is independent
+of $\kappa$ for a large class of PDEs. Our algorithm generates a quantum state
+that enables extracting features of the solution. Central to our methodology is
+using a wavelet basis as an auxiliary system of coordinates in which the
+condition number of associated matrices is independent of $N$ by a simple
+diagonal preconditioner. We present numerical simulations showing the effect of
+the wavelet preconditioner for several differential equations. Our work could
+provide a practical way to boost the performance of quantum-simulation
+algorithms where standard methods are used for discretization.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>A Parameterized Algorithm for Flat Folding</title>
+  <guid>http://arxiv.org/abs/2306.11939</guid>
+  <link>http://arxiv.org/abs/2306.11939</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Eppstein_D/0/1/0/all/0/1&quot;&gt;David Eppstein&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove that testing the flat foldability of an origami crease pattern
+(either labeled with mountain and valley folds, or unlabeled) is
+fixed-parameter tractable when parameterized by the ply of the flat-folded
+state and by the treewidth of an associated planar graph, the cell adjacency
+graph of an arrangement of polygons formed by the flat-folded state. For flat
+foldings of bounded ply, our algorithm is single-exponential in the treewidth;
+this dependence on treewidth is necessary under the exponential time
+hypothesis.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Near-Optimal Dynamic Rounding of Fractional Matchings in Bipartite Graphs</title>
+  <guid>http://arxiv.org/abs/2306.11828</guid>
+  <link>http://arxiv.org/abs/2306.11828</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhattacharya_S/0/1/0/all/0/1&quot;&gt;Sayan Bhattacharya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kiss_P/0/1/0/all/0/1&quot;&gt;Peter Kiss&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sidford_A/0/1/0/all/0/1&quot;&gt;Aaron Sidford&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wajc_D/0/1/0/all/0/1&quot;&gt;David Wajc&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study dynamic $(1-\epsilon)$-approximate rounding of fractional matchings
+-- a key ingredient in numerous breakthroughs in the dynamic graph algorithms
+literature. Our first contribution is a surprisingly simple deterministic
+rounding algorithm in bipartite graphs with amortized update time
+$O(\epsilon^{-1} \log^2 (\epsilon^{-1} \cdot n))$, matching an (unconditional)
+recourse lower bound of $\Omega(\epsilon^{-1})$ up to logarithmic factors.
+Moreover, this algorithm&#39;s update time improves provided the minimum (non-zero)
+weight in the fractional matching is lower bounded throughout. Combining this
+algorithm with novel dynamic \emph{partial rounding} algorithms to increase
+this minimum weight, we obtain several algorithms that improve this dependence
+on $n$. For example, we give a high-probability randomized algorithm with
+$\tilde{O}(\epsilon^{-1}\cdot (\log\log n)^2)$-update time against adaptive
+adversaries. (We use Soft-Oh notation, $\tilde{O}$, to suppress polylogarithmic
+factors in the argument, i.e., $\tilde{O}(f)=O(f\cdot \mathrm{poly}(\log f))$.)
+Using our rounding algorithms, we also round known $(1-\epsilon)$-decremental
+fractional bipartite matching algorithms with no asymptotic overhead, thus
+improving on state-of-the-art algorithms for the decremental bipartite matching
+problem. Further, we provide extensions of our results to general graphs and to
+maintaining almost-maximal matchings.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>On the Optimal Bounds for Noisy Computing</title>
+  <guid>http://arxiv.org/abs/2306.11951</guid>
+  <link>http://arxiv.org/abs/2306.11951</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhu_B/0/1/0/all/0/1&quot;&gt;Banghua Zhu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_Z/0/1/0/all/0/1&quot;&gt;Ziao Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghaddar_N/0/1/0/all/0/1&quot;&gt;Nadim Ghaddar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiao_J/0/1/0/all/0/1&quot;&gt;Jiantao Jiao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_L/0/1/0/all/0/1&quot;&gt;Lele Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We revisit the problem of computing with noisy information considered in
+Feige et al. 1994, which includes computing the OR function from noisy queries,
+and computing the MAX, SEARCH and SORT functions from noisy pairwise
+comparisons. For $K$ given elements, the goal is to correctly recover the
+desired function with probability at least $1-\delta$ when the outcome of each
+query is flipped with probability $p$. We consider both the adaptive sampling
+setting where each query can be adaptively designed based on past outcomes, and
+the non-adaptive sampling setting where the query cannot depend on past
+outcomes. The prior work provides tight bounds on the worst-case query
+complexity in terms of the dependence on $K$. However, the upper and lower
+bounds do not match in terms of the dependence on $\delta$ and $p$. We improve
+the lower bounds for all the four functions under both adaptive and
+non-adaptive query models. Most of our lower bounds match the upper bounds up
+to constant factors when either $p$ or $\delta$ is bounded away from $0$, while
+the ratio between the best prior upper and lower bounds goes to infinity when
+$p\rightarrow 0$ or $p\rightarrow 1/2$. On the other hand, we also provide
+matching upper and lower bounds for the number of queries in expectation,
+improving both the upper and lower bounds for the variable-length query model.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Sampling Individually-Fair Rankings that are Always Group Fair</title>
+  <guid>http://arxiv.org/abs/2306.11964</guid>
+  <link>http://arxiv.org/abs/2306.11964</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gorantla_S/0/1/0/all/0/1&quot;&gt;Sruthi Gorantla&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mehrotra_A/0/1/0/all/0/1&quot;&gt;Anay Mehrotra&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deshpande_A/0/1/0/all/0/1&quot;&gt;Amit Deshpande&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Louis_A/0/1/0/all/0/1&quot;&gt;Anand Louis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Rankings on online platforms help their end-users find the relevant
+information -- people, news, media, and products -- quickly. Fair ranking
+tasks, which ask to rank a set of items to maximize utility subject to
+satisfying group-fairness constraints, have gained significant interest in the
+Algorithmic Fairness, Information Retrieval, and Machine Learning literature.
+Recent works, however, identify uncertainty in the utilities of items as a
+primary cause of unfairness and propose introducing randomness in the output.
+This randomness is carefully chosen to guarantee an adequate representation of
+each item (while accounting for the uncertainty). However, due to this
+randomness, the output rankings may violate group fairness constraints. We give
+an efficient algorithm that samples rankings from an individually-fair
+distribution while ensuring that every output ranking is group fair. The
+expected utility of the output ranking is at least $\alpha$ times the utility
+of the optimal fair solution. Here, $\alpha$ depends on the utilities,
+position-discounts, and constraints -- it approaches 1 as the range of
+utilities or the position-discounts shrinks, or when utilities satisfy
+distributional assumptions. Empirically, we observe that our algorithm achieves
+individual and group fairness and that Pareto dominates the state-of-the-art
+baselines.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Block-Wise Index Modulation and Receiver Design for High-Mobility OTFS Communications</title>
+  <guid>http://arxiv.org/abs/2306.12042</guid>
+  <link>http://arxiv.org/abs/2306.12042</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Qian_M/0/1/0/all/0/1&quot;&gt;Mi Qian&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ji_F/0/1/0/all/0/1&quot;&gt;Fei Ji&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ge_Y/0/1/0/all/0/1&quot;&gt;Yao Ge&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wen_M/0/1/0/all/0/1&quot;&gt;Miaowen Wen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cheng_X/0/1/0/all/0/1&quot;&gt;Xiang Cheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Poor_H/0/1/0/all/0/1&quot;&gt;H. Vincent Poor&lt;/a&gt;&lt;/p&gt;&lt;p&gt;As a promising technique for high-mobility wireless communications,
+orthogonal time frequency space (OTFS) has been proved to enjoy excellent
+advantages with respect to traditional orthogonal frequency division
+multiplexing (OFDM). Although multiple studies have considered index modulation
+(IM) based OTFS (IM-OTFS) schemes to further improve system performance, a
+challenging and open problem is the development of effective IM schemes and
+efficient receivers for practical OTFS systems that must operate in the
+presence of channel delays and Doppler shifts. In this paper, we propose two
+novel block-wise IM schemes for OTFS systems, named delay-IM with OTFS
+(DeIM-OTFS) and Doppler-IM with OTFS (DoIM-OTFS), where a block of
+delay/Doppler resource bins are activated simultaneously. Based on a maximum
+likelihood (ML) detector, we analyze upper bounds on the average bit error
+rates for the proposed DeIM-OTFS and DoIM-OTFS schemes, and verify their
+performance advantages over the existing IM-OTFS systems. We also develop a
+multi-layer joint symbol and activation pattern detection (MLJSAPD) algorithm
+and a customized message passing detection (CMPD) algorithm for our proposed
+DeIMOTFS and DoIM-OTFS systems with low complexity. Simulation results
+demonstrate that our proposed MLJSAPD and CMPD algorithms can achieve desired
+performance with robustness to the imperfect channel state information (CSI).
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Optimal (degree+1)-Coloring in Congested Clique</title>
+  <guid>http://arxiv.org/abs/2306.12071</guid>
+  <link>http://arxiv.org/abs/2306.12071</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Coy_S/0/1/0/all/0/1&quot;&gt;Sam Coy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Czumaj_A/0/1/0/all/0/1&quot;&gt;Artur Czumaj&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Davies_P/0/1/0/all/0/1&quot;&gt;Peter Davies&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mishra_G/0/1/0/all/0/1&quot;&gt;Gopinath Mishra&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the distributed complexity of the (degree+1)-list coloring
+problem, in which each node $u$ of degree $d(u)$ is assigned a palette of
+$d(u)+1$ colors, and the goal is to find a proper coloring using these color
+palettes. The (degree+1)-list coloring problem is a natural generalization of
+the classical $(\Delta+1)$-coloring and $(\Delta+1)$-list coloring problems,
+both being benchmark problems extensively studied in distributed and parallel
+computing. In this paper we settle the complexity of the (degree+1)-list
+coloring problem in the Congested Clique model by showing that it can be solved
+deterministically in a constant number of rounds.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>Online Resource Allocation with Convex-set Machine-Learned Advice</title>
+  <guid>http://arxiv.org/abs/2306.12282</guid>
+  <link>http://arxiv.org/abs/2306.12282</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Golrezaei_N/0/1/0/all/0/1&quot;&gt;Negin Golrezaei&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jaillet_P/0/1/0/all/0/1&quot;&gt;Patrick Jaillet&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_Z/0/1/0/all/0/1&quot;&gt;Zijie Zhou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Decision-makers often have access to a machine-learned prediction about
+demand, referred to as advice, which can potentially be utilized in online
+decision-making processes for resource allocation. However, exploiting such
+advice poses challenges due to its potential inaccuracy. To address this issue,
+we propose a framework that enhances online resource allocation decisions with
+potentially unreliable machine-learned (ML) advice. We assume here that this
+advice is represented by a general convex uncertainty set for the demand
+vector.
+&lt;/p&gt;
+&lt;p&gt;We introduce a parameterized class of Pareto optimal online resource
+allocation algorithms that strike a balance between consistent and robust
+ratios. The consistent ratio measures the algorithm&#39;s performance (compared to
+the optimal hindsight solution) when the ML advice is accurate, while the
+robust ratio captures performance under an adversarial demand process when the
+advice is inaccurate. Specifically, in a C-Pareto optimal setting, we maximize
+the robust ratio while ensuring that the consistent ratio is at least C. Our
+proposed C-Pareto optimal algorithm is an adaptive protection level algorithm,
+which extends the classical fixed protection level algorithm introduced in
+Littlewood (2005) and Ball and Queyranne (2009). Solving a complex non-convex
+continuous optimization problem characterizes the adaptive protection level
+algorithm. To complement our algorithms, we present a simple method for
+computing the maximum achievable consistent ratio, which serves as an estimate
+for the maximum value of the ML advice. Additionally, we present numerical
+studies to evaluate the performance of our algorithm in comparison to benchmark
+algorithms. The results demonstrate that by adjusting the parameter C, our
+algorithms effectively strike a balance between worst-case and average
+performance, outperforming the benchmark algorithms.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
+  <title>An efficient, provably exact algorithm for the 0-1 loss linear classification problem</title>
+  <guid>http://arxiv.org/abs/2306.12344</guid>
+  <link>http://arxiv.org/abs/2306.12344</link>
+  <description>
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+He_X/0/1/0/all/0/1&quot;&gt;Xi He&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Little_M/0/1/0/all/0/1&quot;&gt;Max A. Little&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Algorithms for solving the linear classification problem have a long history,
+dating back at least to 1936 with linear discriminant analysis. For linearly
+separable data, many algorithms can obtain the exact solution to the
+corresponding 0-1 loss classification problem efficiently, but for data which
+is not linearly separable, it has been shown that this problem, in full
+generality, is NP-hard. Alternative approaches all involve approximations of
+some kind, including the use of surrogates for the 0-1 loss (for example, the
+hinge or logistic loss) or approximate combinatorial search, none of which can
+be guaranteed to solve the problem exactly. Finding efficient algorithms to
+obtain an exact i.e. globally optimal solution for the 0-1 loss linear
+classification problem with fixed dimension, remains an open problem. In
+research we report here, we detail the construction of a new algorithm,
+incremental cell enumeration (ICE), that can solve the 0-1 loss classification
+problem exactly in polynomial time. To our knowledge, this is the first,
+rigorously-proven polynomial time algorithm for this long-standing problem.
+&lt;/p&gt;
+  </description>
+  <pubDate>2023-06-22 00:30:00 UTC</pubDate>
+  <author>arXiv: Data Structures and Algorithms</author>
+</item>
+
+<item>
   <title>Flat folding and map folding</title>
   <guid>https://11011110.github.io/blog/2023/06/21/flat-folding-map</guid>
   <link>https://11011110.github.io/blog/2023/06/21/flat-folding-map.html</link>
@@ -1238,264 +1532,6 @@ naturally to the bounded size interventions.
   </description>
   <pubDate>2023-06-12 00:30:00 UTC</pubDate>
   <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Expectation-Complete Graph Representations with Homomorphisms</title>
-  <guid>http://arxiv.org/abs/2306.05838</guid>
-  <link>http://arxiv.org/abs/2306.05838</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Welke_P/0/1/0/all/0/1&quot;&gt;Pascal Welke&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Thiessen_M/0/1/0/all/0/1&quot;&gt;Maximilian Thiessen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jogl_F/0/1/0/all/0/1&quot;&gt;Fabian Jogl&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gartner_T/0/1/0/all/0/1&quot;&gt;Thomas G&amp;#xe4;rtner&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We investigate novel random graph embeddings that can be computed in expected
-polynomial time and that are able to distinguish all non-isomorphic graphs in
-expectation. Previous graph embeddings have limited expressiveness and either
-cannot distinguish all graphs or cannot be computed efficiently for every
-graph. To be able to approximate arbitrary functions on graphs, we are
-interested in efficient alternatives that become arbitrarily expressive with
-increasing resources. Our approach is based on Lov\&#39;asz&#39; characterisation of
-graph isomorphism through an infinite dimensional vector of homomorphism
-counts. Our empirical evaluation shows competitive results on several benchmark
-graph learning tasks.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-12 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Faster Discrete Convex Function Minimization with Predictions: The M-Convex Case</title>
-  <guid>http://arxiv.org/abs/2306.05865</guid>
-  <link>http://arxiv.org/abs/2306.05865</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Oki_T/0/1/0/all/0/1&quot;&gt;Taihei Oki&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sakaue_S/0/1/0/all/0/1&quot;&gt;Shinsaku Sakaue&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Recent years have seen a growing interest in accelerating optimization
-algorithms with machine-learned predictions. Sakaue and Oki (NeurIPS 2022) have
-developed a general framework that warm-starts the L-convex function
-minimization method with predictions, revealing the idea&#39;s usefulness for
-various discrete optimization problems. In this paper, we present a framework
-for using predictions to accelerate M-convex function minimization, thus
-complementing previous research and extending the range of discrete
-optimization algorithms that can benefit from predictions. Our framework is
-particularly effective for an important subclass called laminar convex
-minimization, which appears in many operations research applications. Our
-methods can improve time complexity bounds upon the best worst-case results by
-using predictions and even have potential to go beyond a lower-bound result.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-12 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Differentially Private All-Pairs Shortest Distances for Low Tree-Width Graphs</title>
-  <guid>http://arxiv.org/abs/2306.05916</guid>
-  <link>http://arxiv.org/abs/2306.05916</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ebrahimi_J/0/1/0/all/0/1&quot;&gt;Javad B. Ebrahimi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mohammadi_A/0/1/0/all/0/1&quot;&gt;Alireza Tofighi Mohammadi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kermani_F/0/1/0/all/0/1&quot;&gt;Fatemeh Kermani&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In this paper, we present a polynomial time algorithm for the problem of
-differentially private all pair shortest distances over the class of low
-tree-width graphs. Our result generalizes the result of Sealfon 2016 for the
-case of trees to a much larger family of graphs. Furthermore, if we restrict to
-the class of low tree-width graphs, the additive error of our algorithm is
-significantly smaller than that of the best known algorithm for this problem,
-proposed by Chen et. al. 2023.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-12 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Optimal distance query reconstruction for graphs without long induced cycles</title>
-  <guid>http://arxiv.org/abs/2306.05979</guid>
-  <link>http://arxiv.org/abs/2306.05979</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bastide_P/0/1/0/all/0/1&quot;&gt;Paul Bastide&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Groenland_C/0/1/0/all/0/1&quot;&gt;Carla Groenland&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Let $G=(V,E)$ be an $n$-vertex connected graph of maximum degree $\Delta$.
-Given access to $V$ and an oracle that given two vertices $u,v\in V$, returns
-the shortest path distance between $u$ and $v$, how many queries are needed to
-reconstruct $E$? We give a simple deterministic algorithm to reconstruct trees
-using $\Delta n\log_\Delta n+(\Delta+2)n$ distance queries and show that even
-randomised algorithms need to use at least $\frac1{100} \Delta n\log_\Delta n$
-queries in expectation. The best previous lower bound was an
-information-theoretic lower bound of $\Omega(n\log n/\log \log n)$. Our lower
-bound also extends to related query models including distance queries for
-phylogenetic trees, membership queries for learning partitions and path queries
-in directed trees.
-&lt;/p&gt;
-&lt;p&gt;We extend our deterministic algorithm to reconstruct graphs without induced
-cycles of length at least $k$ using $O_{\Delta,k}(n\log n)$ queries, which
-includes various graph classes of interest such as chordal graphs, permutation
-graphs and AT-free graphs. Since the previously best known randomised algorithm
-for chordal graphs uses $O_{\Delta}(n\log^2 n)$ queries in expectation, we both
-get rid off the randomness and get the optimal dependency in $n$ for chordal
-graphs and various other graph classes.
-&lt;/p&gt;
-&lt;p&gt;Finally, we build on an algorithm of Kannan, Mathieu, and Zhou [ICALP, 2015]
-to give a randomised algorithm for reconstructing graphs of treelength $k$
-using $O_{\Delta,k}(n\log^2n)$ queries in expectation.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-12 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Fair Allocation with Binary Valuations for Mixed Divisible and Indivisible Goods</title>
-  <guid>http://arxiv.org/abs/2306.05986</guid>
-  <link>http://arxiv.org/abs/2306.05986</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kawase_Y/0/1/0/all/0/1&quot;&gt;Yasushi Kawase&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Nishimura_K/0/1/0/all/0/1&quot;&gt;Koichi Nishimura&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sumita_H/0/1/0/all/0/1&quot;&gt;Hanna Sumita&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The fair allocation of mixed goods, consisting of both divisible and
-indivisible goods, among agents with heterogeneous preferences, has been a
-prominent topic of study in economics and computer science. In this paper, we
-investigate the nature of fair allocations when agents have binary valuations.
-We define an allocation as fair if its utility vector minimizes a symmetric
-strictly convex function, which includes conventional fairness criteria such as
-maximum egalitarian social welfare and maximum Nash social welfare. While a
-good structure is known for the continuous case (where only divisible goods
-exist) or the discrete case (where only indivisible goods exist), deriving such
-a structure in the hybrid case remains challenging. Our contributions are
-twofold. First, we demonstrate that the hybrid case does not inherit some of
-the nice properties of continuous or discrete cases, while it does inherit the
-proximity theorem. Second, we analyze the computational complexity of finding a
-fair allocation of mixed goods based on the proximity theorem. In particular,
-we provide a polynomial-time algorithm for the case when all divisible goods
-are identical and homogeneous, and demonstrate that the problem is NP-hard in
-general. Our results also contribute to a deeper understanding of the hybrid
-convex analysis.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-12 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Semi-online Scheduling with Lookahead</title>
-  <guid>http://arxiv.org/abs/2306.06003</guid>
-  <link>http://arxiv.org/abs/2306.06003</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dwibedy_D/0/1/0/all/0/1&quot;&gt;Debasis Dwibedy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mohanty_R/0/1/0/all/0/1&quot;&gt;Rakesh Mohanty&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The knowledge of future partial information in the form of a lookahead to
-design efficient online algorithms is a theoretically-efficient and realistic
-approach to solving computational problems. Design and analysis of semi-online
-algorithms with extra-piece-of-information (EPI) as a new input parameter has
-gained the attention of the theoretical computer science community in the last
-couple of decades. Though competitive analysis is a pessimistic worst-case
-performance measure to analyze online algorithms, it has immense theoretical
-value in developing the foundation and advancing the state-of-the-art
-contributions in online and semi-online scheduling. In this paper, we study and
-explore the impact of lookahead as an EPI in the context of online scheduling
-in identical machine frameworks. We introduce a $k$-lookahead model and design
-improved competitive semi-online algorithms. For a $2$-identical machine
-setting, we prove a lower bound of $\frac{4}{3}$ and design an optimal
-algorithm with a matching upper bound of $\frac{4}{3}$ on the competitive
-ratio. For a $3$-identical machine setting, we show a lower bound of
-$\frac{15}{11}$ and design a $\frac{16}{11}$-competitive improved semi-online
-algorithm.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-12 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>Branching via Cutting Plane Selection: Improving Hybrid Branching</title>
-  <guid>http://arxiv.org/abs/2306.06050</guid>
-  <link>http://arxiv.org/abs/2306.06050</link>
-  <description>
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Turner_M/0/1/0/all/0/1&quot;&gt;Mark Turner&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Berthold_T/0/1/0/all/0/1&quot;&gt;Timo Berthold&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Besancon_M/0/1/0/all/0/1&quot;&gt;Mathieu Besan&amp;#xe7;on&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Koch_T/0/1/0/all/0/1&quot;&gt;Thorsten Koch&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Cutting planes and branching are two of the most important algorithms for
-solving mixed-integer linear programs. For both algorithms, disjunctions play
-an important role, being used both as branching candidates and as the
-foundation for some cutting planes. We relate branching decisions and cutting
-planes to each other through the underlying disjunctions that they are based
-on, with a focus on Gomory mixed-integer cuts and their corresponding split
-disjunctions. We show that selecting branching decisions based on quality
-measures of Gomory mixed-integer cuts leads to relatively small
-branch-and-bound trees, and that the result improves when using cuts that more
-accurately represent the branching decisions. Finally, we show how the history
-of previously computed Gomory mixed-integer cuts can be used to improve the
-performance of the state-of-the-art hybrid branching rule of SCIP. Our results
-show a 4\% decrease in solve time, and an 8\% decrease in number of nodes over
-affected instances of MIPLIB 2017.
-&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-12 00:30:00 UTC</pubDate>
-  <author>arXiv: Data Structures and Algorithms</author>
-</item>
-
-<item>
-  <title>TR23-088 |  A High Dimensional Goldreich-Levin Theorem | 
-
-	Silas Richelson, 
-
-	Parker Newton, 
-
-	Chase Wilson</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/088</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/088</link>
-  <description>
-    In this work we prove a high dimensional analogue of the beloved Goldreich-Levin theorem (STOC 1989).  We consider the following algorithmic problem: given oracle access to a function $f:\mathbb{Z}_q^m\rightarrow\mathbb{Z}_q^n$ such that ${\rm Prob}_{{\bf x}\sim\mathbb{Z}_q^m}\bigl[f({\bf x})={\bf Ax}\bigr]\geq\varepsilon$ for some ${\bf A}\in\mathbb{Z}_q^{n\times m}$ and $\varepsilon&amp;gt;0$, recover ${\bf A}$ (or a list of all such matrices).  We focus on the case $\varepsilon\leq1/q$ since when $\varepsilon\geq1/q+\delta$, the problem is solved by the original Goldreich-Levin theorem.  As stated, this problem cannot be efficiently solved, since when $\varepsilon\leq1/q$ the list of ${\bf A}$ with good agreement with $f$ might be exponentially large.  Our main theorem gives an algorithm which efficiently recovers a list of linear maps of size $\mathcal{O}\bigl(1/\varepsilon\bigr)$ which have good agreement with $f$, and such that every linear map which has good agreement with $f$, also has good agreement with some map in our list.  Our proof makes novel use of Fourier analysis.
-  </description>
-  <pubDate>2023-06-11 04:10:05 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>Posting a book online with a password- that you broadcast.</title>
-  <guid>tag:blogger.com,1999:blog-3722233.post-1128876991296414088</guid>
-  <link>https://blog.computationalcomplexity.org/2023/06/posting-book-online-with-password-that.html</link>
-  <description>
-    &lt;p&gt;&amp;nbsp;Recently Lance, at the request of&amp;nbsp; Vijay Vazirani, tweeted the following (I paraphrase)&lt;/p&gt;&lt;p&gt;---------------------------------------------------------------------------------------&lt;/p&gt;&lt;p&gt;Online and Matching-based Market Design book now available as free PDF&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://www.cambridge.org/files/9216/8487/6990/matching_book_pw.pdf&quot;&gt;cambridge.org/files/9216/848&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;The password is OMBMD_CUP&lt;/p&gt;&lt;p&gt;---------------------------------------------------------------------------------------------&lt;/p&gt;&lt;p&gt;This tweet raises two questions.&lt;/p&gt;&lt;p&gt;1) When a book is put online, does it cut into sales? I&#39;ve heard that people still like paper so the posting on line might be like an ad for the book. Also, for academic books, the authors WANT it to be out there and don&#39;t care so much about sales.&amp;nbsp; If Gasarch &amp;amp; Martin&#39;s &lt;i&gt;Bounded Queries in Recursion Theory &lt;/i&gt;was available for illegal download I would be delighted. And surprised.&amp;nbsp;&lt;/p&gt;&lt;p&gt;2) SO, they post it to make it more available and generate buzz. So why have a password? Was this a compromise:&amp;nbsp;&lt;/p&gt;&lt;p&gt;a) We want people to BUY the book so we&#39;ll post it with a password and limit access.&amp;nbsp;&lt;/p&gt;&lt;p&gt;b) We want people to SEE the book since as academics we don&#39;t care about sales, and it might generate buzz, so we don&#39;t want a password&lt;/p&gt;&lt;p&gt;c) COMPROMISE: Have a password but tell everyone what it is.&amp;nbsp;&lt;/p&gt;&lt;p&gt;If you can think of a more plausible scenario, leave a comment.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By gasarch&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-10 15:16:00 UTC</pubDate>
-  <author>Computational Complexity</author>
-</item>
-
-<item>
-  <title>TR23-087 |  How to Recover a Secret with $O(n)$ Additions | 
-
-	Benny Applebaum, 
-
-	Oded Nir, 
-
-	Benny Pinkas</title>
-  <guid>https://eccc.weizmann.ac.il/report/2023/087</guid>
-  <link>https://eccc.weizmann.ac.il/report/2023/087</link>
-  <description>
-    Threshold cryptography is typically based on the idea of secret-sharing a private-key $s\in F$ ``in the exponent&amp;#39;&amp;#39; of some cryptographic group $G$, or more generally, encoding $s$ in some linearly homomorphic domain. In each invocation of the threshold system (e.g., for signing or decrypting) an ``encoding&amp;#39;&amp;#39; of the secret is being recovered and so the complexity, measured as the number of group multiplications over $G$, is equal to the number of $F$-additions that are needed to reconstruct the secret. Motivated by this scenario, we initiate the study of $n$-party secret-sharing schemes whose reconstruction algorithm makes a minimal number of \emph{additions}. The complexity of existing schemes either scales linearly with $n\log |F|$ (e.g., Shamir, CACM&amp;#39;79) or, at least, quadratically with $n$ independently of the size of the domain $F$ (e.g., Cramer-Xing, EUROCRYPT &amp;#39;20). This leaves open the existence of a secret sharing whose recovery algorithm can be computed by performing only $O(n)$ additions.
-
-We resolve the question in the affirmative and present such a near-threshold secret sharing scheme that provides privacy against unauthorized sets of density at most $\tau_p$, and correctness for  authorized sets of density at least $\tau_c$, for any given arbitrarily close constants $\tau_p&amp;lt;\tau_c$. Reconstruction can be computed by making at most $O(n)$ additions and, in addition, (1) the share size is constant, (2) the sharing procedure also makes only $O(n)$ additions, and (3) the scheme is a blackbox secret-sharing scheme, i.e., the sharing and reconstruction algorithms work universally for all finite abelian groups $F$. Prior to our work, no such scheme was known even without features (1)--(3) and even for the ramp setting where $\tau_p$ and $\tau_c$ are far apart. As a by-product, we derive the first blackbox near-threshold secret-sharing scheme with linear-time sharing. We also present several concrete instantiations of our approach that seem practically efficient (e.g., for threshold discrete-log-based signatures).
-
-Our constructions are combinatorial in nature. We combine graph-based erasure codes that support ``peeling-based&amp;#39;&amp;#39; decoding with a new randomness extraction method that is based on inner-product with a small-integer vector. We also introduce a general concatenation-like transform for secret-sharing schemes that allows us to arbitrarily shrink the privacy-correctness gap with a minor overhead. Our techniques enrich the secret-sharing toolbox and, in the context of blackbox secret sharing, provide a new alternative to existing number-theoretic approaches.
-  </description>
-  <pubDate>2023-06-09 13:12:55 UTC</pubDate>
-  <author>ECCC Papers</author>
-</item>
-
-<item>
-  <title>The asymptotics of r(4,t)</title>
-  <guid>http://gilkalai.wordpress.com/2023/06/09/the-asymptotics-of-r4t/</guid>
-  <link>https://gilkalai.wordpress.com/2023/06/09/the-asymptotics-of-r4t/</link>
-  <description>
-    &lt;div class=&quot;wpcom-reblog-snapshot&quot;&gt;&lt;div class=&quot;reblogger-note&quot;&gt;&lt;div class=&#39;reblogger-note-content&#39;&gt;&lt;blockquote&gt;&lt;p&gt;&lt;a href=&quot;https://sammattheus.wordpress.com/&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-24567&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/06/pal.png&quot; alt=&quot;pal&quot; width=&quot;955&quot; height=&quot;323&quot; srcset=&quot;https://gilkalai.files.wordpress.com/2023/06/pal.png 955w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=150&amp;amp;h=51 150w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=300&amp;amp;h=101 300w, https://gilkalai.files.wordpress.com/2023/06/pal.png?w=768&amp;amp;h=260 768w&quot; sizes=&quot;(max-width: 955px) 100vw, 955px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
-&lt;p&gt;Sam Mattheus wrote on his blog &amp;#8220;Points and Lines&amp;#8221; a summary with a general overview of the proof for his breakthrough with Jacques Verstraete about &lt;img src=&quot;https://s0.wp.com/latex.php?latex=r%284%2Ct%29&amp;#038;bg=ffffff&amp;#038;fg=333333&amp;#038;s=0&amp;#038;c=20201002&quot; alt=&quot;r(4,t)&quot; class=&quot;latex&quot; /&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;reblog-post&quot;&gt;&lt;p class=&quot;reblog-from&quot;&gt;&lt;img alt=&#39;&#39; src=&#39;https://1.gravatar.com/avatar/46f67c6ee65d82a59f10b8438d0bdfb7676121b31aff9968cd1dfff4b11acaf7?s=32&amp;#038;d=identicon&amp;#038;r=PG&#39; class=&#39;avatar avatar-32&#39; height=&#39;32&#39; width=&#39;32&#39; /&gt;&lt;a href=&quot;https://sammattheus.wordpress.com/2023/06/07/the-asymptotics-of-r4t/&quot;&gt;Points And Lines&lt;/a&gt;&lt;/p&gt;&lt;div class=&quot;reblogged-content&quot;&gt;
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;Jacques Verstraete and I posted a &lt;a href=&quot;https://arxiv.org/abs/2306.04007&quot;&gt;preprint&lt;/a&gt; on the arXiv today on the off-diagonal Ramsey number $latex r(4,t)$. In short, we show that $latex r(4,t) = Omega(t^3/log^4t)$, which is just a $latex log^2t$ factor shy from the upper bound $latex r(4,t) = O (t^3/log^2t)$ proved by Ajtai, Komlós and Szemerédi in 1980. Erdős [1] conjectured that up to logarithmic factors, $latex t^3$ is the order of growth:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p class=&quot;has-text-align-center&quot;&gt;&lt;img class=&quot;wp-image-1130&quot; style=&quot;width: 600px&quot; src=&quot;https://gilkalai.files.wordpress.com/2023/06/erdos-prize-r4t.png&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;We thus confirm this conjecture. The previous best lower bound was due to Bohman and Keevash who studied the random $latex K_4$-free process and obtained $latex r(4,t) = widetilde{Omega}(t^{5/2})$, where the tilde hides logarithmic factors. It is not clear whether our methods can be pushed further to obtain asymptotically sharp bounds. In any case, that’s not what I want to speculate about, but rather sketch the proof of our result. It’s in my very biased opinion a nice combination of ideas that existed…&lt;/p&gt;
-&lt;/div&gt;&lt;p class=&quot;reblog-source&quot;&gt;&lt;a href=&quot;https://sammattheus.wordpress.com/2023/06/07/the-asymptotics-of-r4t/&quot;&gt;View original post&lt;/a&gt; &lt;span class=&quot;more-words&quot;&gt;1,481 more words&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;authors&quot;&gt;By Gil Kalai&lt;/p&gt;
-  </description>
-  <pubDate>2023-06-09 06:17:30 UTC</pubDate>
-  <author>Gil Kalai</author>
 </item>
 
 </channel>
