@@ -10,6 +10,45 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">David Eppstein: Flat folding and map folding</title>
+    <link href="https://11011110.github.io/blog/2023/06/21/flat-folding-map.html"/>
+    <id>https://11011110.github.io/blog/2023/06/21/flat-folding-map</id>
+    <updated>2023-06-21T18:34:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p&gt;Another day, another new arXiv preprint. Today’s is “A parameterized algorithm for flat folding” (&lt;a href=&quot;https://arxiv.org/abs/2306.11939&quot;&gt;arXiv:2306.11939&lt;/a&gt;, to appear at CCCG 2023), a paper I mentioned in the last slide of my recent talk on &lt;a href=&quot;https://www.ics.uci.edu/~eppstein/pubs/Epp-WPAGP-23.pdf&quot;&gt;graph width parameters for parameterized geometric algorithms&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s been known since the work of Marshall Bern and Barry Hayes in SODA 1996 that it’s NP-complete to test whether a given origami pattern (with or without an assignment of a mountain or valley fold to each crease) can be folded flat. Of course, many origami structures are not intended to be flat, but they still often start with a flat base, and testing flatness is a prerequisite for any more complicated foldability question you might have. On the other hand, if a pattern does fold flat, it’s very easy to determine where in plane each piece of paper folds to; the hard part is determining the above-below relation between different pieces of paper that fold to the same points.&lt;/p&gt;
+
+&lt;p&gt;The new paper defines a graph from any folding pattern, whose vertices represent connected regions of the plane that should be covered by the same pieces of paper in the folded state and whose edges represent adjacencies between those regions. An example is shown below.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/folding-graph.svg&quot; alt=&quot;A folding pattern and its graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The left side is the folding pattern (blue for valley folds and red for mountain folds): first, fold the right edge of the paper on top of the rest, along the vertical blue crease, and then second, fold the top right corner down, along the two diagonal creases. The right side is how it should map to a folded state (without an assignment of an above-below relation to the layers in that state) and the resulting graph. The goal of the algorithm is to figure out that the regions of the folding pattern should be layered (bottom to top) in the order: big pentagon, lower right trapezoid, upper right trapezoid, triangle. It determines whether a folded state like that exists, but not the sequence of moves you would need to make to get there. But some care is needed in defining the layer order: it has to be local, because there exist folding patterns where different regions are layered differently in different parts of the folded state.&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/over-under.svg&quot; alt=&quot;A folding pattern where two regions have different over-under relations at two different parts of the folded state&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The paper shows that finding a valid above-below relation for each region can be done using a dynamic programming algorithm in time exponential in the treewidth of this graph, where the base of the exponential is factorial in the &lt;em&gt;ply&lt;/em&gt; of the folding pattern, the maximum number of pieces of paper that all fold on top of each other at any single point. As it also shows, even for patterns of bounded ply, the exponential dependence on treewidth is necessary under standard complexity-theoretic assumptions.&lt;/p&gt;
+
+&lt;p&gt;But what about the dependence on ply? Is that necessary? Why should it be difficult to fold patterns that have many layers, but simple region adjacency graphs?&lt;/p&gt;
+
+&lt;p&gt;Unlike for treewidth, I don’t have a proof that high ply makes the problem hard. But there is a natural class of problems for which the ply is very high, the treewidth is tiny, and the complexity of finding a flat folding is a famous open problem. This is the &lt;a href=&quot;https://en.wikipedia.org/wiki/Map_folding&quot;&gt;map folding problem&lt;/a&gt;, where the input is just a rectangular grid with labeled creases, and the desired output is a flat-folded state respecting the given labeling. Its region adjacency graph is just a single vertex (everything should fold onto a single square), but its ply can be big (the number of squares in the entire grid). Even for a very simple case, a \(2\times 2\) grid, Wikipedia provides the following illustration of the many vertical orderings among the squares of the grid that are possible. Each square is shown with a different color, visible on both of its sides:&lt;/p&gt;
+
+&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/map-foldings.png&quot; alt=&quot;Eight solutions to the 2x2 map folding problem&quot; title=&quot;CC-BY-SA 3.0 image File:MapFoldings-2x2.png by Robert Dickau from Wikimedia commons&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The \(1\times n\) map folding problem is easy: just fold over one square from the end of a strip of \(n\) squares, according to the label of its crease, and then solve the remaining \(1\times (n-1)\) problem recursively, treating the folded-over square and the next square that it is folded onto as a single unit. In a 2012 MIT master’s thesis supervised by Erik Demaine, Thomas Morgan &lt;a href=&quot;http://dspace.mit.edu/handle/1721.1/77030&quot;&gt;announced a solution to the \(2\times n\) map folding problem&lt;/a&gt;, although I don’t know that it was ever published in any other form. The algorithm is complicated, with time bound \(O(n^9)\), and the writing is not always clear.&lt;/p&gt;
+
+&lt;p&gt;The techniques from Morgan’s thesis are very specific to the \(2\times n\) case. Basically, everything you need to know can be recovered from a one-dimensional flat folding of the central crease of the \(2\times n\) grid. At the end of the thesis there is a single paragraph on higher order grids, which (after removing unnecessary complications) boils down to testing all orderings of the squares that are consistent with the above-below relations forced by the crease labels of adjacent squares. The number of orderings can be very small (for instance, if you accordion-fold in one direction and then the other, there is only one consistent ordering) and when it is the algorithm is fast. Beyond that observation, the map folding problem for grids larger than \(2\times n\) appears to be wide open.&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/110585322158385767&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
+  </content>
+    <author>
+      <name>David Eppstein</name>
+      <uri>https://11011110.github.io/blog/</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">David Eppstein: All-but-clique-universal graphs</title>
     <link href="https://11011110.github.io/blog/2023/06/20/all-but-clique.html"/>
     <id>https://11011110.github.io/blog/2023/06/20/all-but-clique</id>
@@ -1659,43 +1698,6 @@ result for the general task of learning from expectation values and, in the
 more general case when the algorithm is given access to samples, we give a
 computational hardness result based on the LPN assumption for learning the
 probability density function.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Classical Verification of Quantum Learning</title>
-    <link href="http://arxiv.org/abs/2306.04843"/>
-    <id>http://arxiv.org/abs/2306.04843</id>
-    <updated>2023-06-09T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Caro_M/0/1/0/all/0/1&quot;&gt;Matthias C. Caro&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Hinsche_M/0/1/0/all/0/1&quot;&gt;Marcel Hinsche&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Ioannou_M/0/1/0/all/0/1&quot;&gt;Marios Ioannou&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nietner_A/0/1/0/all/0/1&quot;&gt;Alexander Nietner&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Sweke_R/0/1/0/all/0/1&quot;&gt;Ryan Sweke&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Quantum data access and quantum processing can make certain classically
-intractable learning tasks feasible. However, quantum capabilities will only be
-available to a select few in the near future. Thus, reliable schemes that allow
-classical clients to delegate learning to untrusted quantum servers are
-required to facilitate widespread access to quantum learning advantages.
-Building on a recently introduced framework of interactive proof systems for
-classical machine learning, we develop a framework for classical verification
-of quantum learning. We exhibit learning problems that a classical learner
-cannot efficiently solve on their own, but that they can efficiently and
-reliably solve when interacting with an untrusted quantum prover. Concretely,
-we consider the problems of agnostic learning parities and Fourier-sparse
-functions with respect to distributions with uniform input marginal. We propose
-a new quantum data access model that we call &quot;mixture-of-superpositions&quot;
-quantum examples, based on which we give efficient quantum learning algorithms
-for these tasks. Moreover, we prove that agnostic quantum parity and
-Fourier-sparse learning can be efficiently verified by a classical verifier
-with only random example or statistical query access. Finally, we showcase two
-general scenarios in learning and verification in which quantum
-mixture-of-superpositions examples do not lead to sample complexity
-improvements over classical data. Our results demonstrate that the potential
-power of quantum data for learning tasks, while not unlimited, can be utilized
-by classical agents through interaction with untrusted quantum entities.
 &lt;/p&gt;
   </content>
     <author>
