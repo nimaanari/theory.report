@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-25T01:30:23Z">Sunday, June 25 2023, 01:30</time>
+          <time class='timeago' datetime="2023-06-25T02:00:25Z">Sunday, June 25 2023, 02:00</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -341,6 +341,71 @@
 
   <div class="tr-articles tr-shrink">
     
+    
+    <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Sunday, June 25
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://eccc.weizmann.ac.il/report/2023/091'>TR23-091 |  Succinct Computational Secret Sharing | 
+
+	Benny Applebaum, 
+
+	Amos Beimel, 
+
+	Yuval Ishai, 
+
+	Eyal Kushilevitz, 
+
+	Tianren Liu, 
+
+	Vinod Vaikuntanathan</a></h3>
+        <p class='tr-article-feed'>from <a href='https://eccc.weizmann.ac.il/'>ECCC Papers</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          A secret-sharing scheme enables a dealer to share a secret $s$ among $n$ parties such that only authorized subsets of parties, specified by a monotone access structure $f:\{0,1\}^n\to\{0,1\}$, can reconstruct $s$ from their shares. Other subsets of parties learn nothing about $s$.
+
+The question of minimizing the (largest) share size for a given $f$ has been the subject of a large body of work. However, in most existing constructions for general access structures $f$, the share size is not much smaller than the size of some natural computational representation of $f$, a fact that has often been referred to as the ``representation size barrier&#39;&#39; in secret sharing.
+
+In this work, we initiate a systematic study of succinct computational  secret sharing (SCSS), where the secrecy requirement is computational and the goal is to substantially beat the representation size barrier. We obtain the following main results.
+
+(1) SCSS via Projective PRGs. We introduce the notion of a *projective PRG*, a pseudorandom generator for which any subset of the output bits can be revealed while keeping the other output bits hidden, using a *short* projective seed. We construct projective PRGs with different levels of succinctness under a variety of computational assumptions, and apply them towards constructing SCSS for graph access structures, monotone CNF formulas, and (less succinctly) useful subclasses of monotone circuits and branching programs. Most notably, under the sub-exponential RSA assumption, we obtain a SCSS scheme that, given an arbitrary access structure $f$, represented by a truth table of size $N=2^n$, produces shares of size $\polylog(N)=\poly(n)$ in time $\tilde O(N)$. For comparison, the share size of the best known information-theoretic schemes is $O(N^{0.58})$.
+
+(2) SCSS via One-way Functions. Under the (minimal) assumption that one-way functions exist, we obtain a near-quadratic separation between the total share size of computational and information-theoretic secret sharing. This is the strongest separation one can hope for, given the state of the art in secret sharing lower bounds.
+We also construct SCSS schemes from one-way functions for useful classes of access structures, including forbidden graphs and monotone DNF formulas.  This leads to constructions of fully-decomposable conditional disclosure of secrets (also known as privacy-free garbled circuits) for general functions, represented by a truth table of size $N=2^n$, with share size $\polylog(N)$ and computation time $\tilde O(N)$, assuming sub-exponentially secure one-way functions.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          A secret-sharing scheme enables a dealer to share a secret $s$ among $n$ parties such that only authorized subsets of parties, specified by a monotone access structure $f:\{0,1\}^n\to\{0,1\}$, can reconstruct $s$ from their shares. Other subsets of parties learn nothing about $s$.
+
+The question of minimizing the (largest) share size for a given $f$ has been the subject of a large body of work. However, in most existing constructions for general access structures $f$, the share size is not much smaller than the size of some natural computational representation of $f$, a fact that has often been referred to as the ``representation size barrier&#39;&#39; in secret sharing.
+
+In this work, we initiate a systematic study of succinct computational  secret sharing (SCSS), where the secrecy requirement is computational and the goal is to substantially beat the representation size barrier. We obtain the following main results.
+
+(1) SCSS via Projective PRGs. We introduce the notion of a *projective PRG*, a pseudorandom generator for which any subset of the output bits can be revealed while keeping the other output bits hidden, using a *short* projective seed. We construct projective PRGs with different levels of succinctness under a variety of computational assumptions, and apply them towards constructing SCSS for graph access structures, monotone CNF formulas, and (less succinctly) useful subclasses of monotone circuits and branching programs. Most notably, under the sub-exponential RSA assumption, we obtain a SCSS scheme that, given an arbitrary access structure $f$, represented by a truth table of size $N=2^n$, produces shares of size $\polylog(N)=\poly(n)$ in time $\tilde O(N)$. For comparison, the share size of the best known information-theoretic schemes is $O(N^{0.58})$.
+
+(2) SCSS via One-way Functions. Under the (minimal) assumption that one-way functions exist, we obtain a near-quadratic separation between the total share size of computational and information-theoretic secret sharing. This is the strongest separation one can hope for, given the state of the art in secret sharing lower bounds.
+We also construct SCSS schemes from one-way functions for useful classes of access structures, including forbidden graphs and monotone DNF formulas.  This leads to constructions of fully-decomposable conditional disclosure of secrets (also known as privacy-free garbled circuits) for general functions, represented by a truth table of size $N=2^n$, with share size $\polylog(N)$ and computation time $\tilde O(N)$, assuming sub-exponentially secure one-way functions.
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-25T01:21:48Z">Sunday, June 25 2023, 01:21</time>
+        </div>
+      </div>
+    </details>
+  
     
     <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Saturday, June 24
@@ -3453,59 +3518,6 @@ tested the weighted version on the real graphs from Stanford Network Analysis
 Platform and SuiteSparse Matrix Collection, which outperformed the solution of
 $\Delta$-stepping algorithm from Gunrock, achieving a speedup of
 43.163$\times$.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07884'>Continual Release of Differentially Private Synthetic Data</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Mark Bun, Marco Gaboardi, Marcel Neunhoeffer, Wanrong Zhang</p><p>Motivated by privacy concerns in long-term longitudinal studies in medical
-and social science research, we study the problem of continually releasing
-differentially private synthetic data. We introduce a model where, in every
-time step, each individual reports a new data element, and the goal of the
-synthesizer is to incrementally update a synthetic dataset to capture a rich
-class of statistical properties. We give continual synthetic data generation
-algorithms that preserve two basic types of queries: fixed time window queries
-and cumulative time queries. We show nearly tight upper bounds on the error
-rates of these algorithms and demonstrate their empirical performance on
-realistically sized datasets from the U.S. Census Bureau's Survey of Income and
-Program Participation.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Bun_M/0/1/0/all/0/1">Mark Bun</a>, <a href="http://arxiv.org/find/cs/1/au:+Gaboardi_M/0/1/0/all/0/1">Marco Gaboardi</a>, <a href="http://arxiv.org/find/cs/1/au:+Neunhoeffer_M/0/1/0/all/0/1">Marcel Neunhoeffer</a>, <a href="http://arxiv.org/find/cs/1/au:+Zhang_W/0/1/0/all/0/1">Wanrong Zhang</a></p><p>Motivated by privacy concerns in long-term longitudinal studies in medical
-and social science research, we study the problem of continually releasing
-differentially private synthetic data. We introduce a model where, in every
-time step, each individual reports a new data element, and the goal of the
-synthesizer is to incrementally update a synthetic dataset to capture a rich
-class of statistical properties. We give continual synthetic data generation
-algorithms that preserve two basic types of queries: fixed time window queries
-and cumulative time queries. We show nearly tight upper bounds on the error
-rates of these algorithms and demonstrate their empirical performance on
-realistically sized datasets from the U.S. Census Bureau's Survey of Income and
-Program Participation.
 </p>
         
         </div>
