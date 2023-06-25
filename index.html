@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-24T23:30:34Z">Saturday, June 24 2023, 23:30</time>
+          <time class='timeago' datetime="2023-06-25T01:00:23Z">Sunday, June 25 2023, 01:00</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -400,7 +400,7 @@ In the meantime, the NSA&#8217;s own tribute, dated <a href="https://media.defen
 <p>
 <p><H2> How She Started </H2></p>
 <p><p>
-Her origin story is amazing as well. She was one of only two in her Midwest farming family of none to attend college and obtained a degree in English after transferring to a school closer to home. Her first job opportunity, a brief stint as substitute principal at a public high school in Indiana, did not lead to other teaching positions, so she moved back with her family. She journeyed to Chicago to look for work, using the <a href="https://en.wikipedia.org/wiki/Newberry_Library">Newberry Library</a> as a hub.</p>
+Her origin story is amazing as well. She was one of only two in her Midwest farming family of nine to attend college and obtained a degree in English after transferring to a school closer to home. Her first job opportunity, a brief stint as substitute principal at a public high school in Indiana, did not lead to other teaching positions, so she moved back with her family. She journeyed to Chicago to look for work, using the <a href="https://en.wikipedia.org/wiki/Newberry_Library">Newberry Library</a> as a hub.</p>
 <p>
 In one of her last days there, a librarian tipped her that a visiting millionaire, George Fabyan, was looking for help on a project involving Shakespeare. She connected with him and the scholarly director of the project, Elizabeth Gallup, and became employed at Fabyan&#8217;s private Riverbank Research Laboratory.</p>
 <p>
@@ -426,6 +426,63 @@ I hope that in the future credit will be given equally to women as well as to me
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-06-24T21:53:47Z">Saturday, June 24 2023, 21:53</time>
+        </div>
+      </div>
+    </details>
+  
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://11011110.github.io/blog/2023/06/24/geometric-flip-width.html'>Geometric flip-width revisited</a></h3>
+        <p class='tr-article-feed'>from <a href='https://11011110.github.io/blog/'>David Eppstein</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          I recently posted here about the flip-width of geometric graphs, and to readers of that post, my new preprint “Geometric Graphs with Unbounded Flip-Width” (arXiv:2306.12611, with Rose McCarty, to appear in CCCG 2023) will look very familiar. It even has the same title! However, the process of turning it into a paper led to some improvements. Let me summarize them briefly here.
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>I recently posted here about the <a href="/blog/2023/02/20/geometric-graphs-unbounded.html">flip-width of geometric graphs</a>, and to readers of that post, my new preprint “Geometric Graphs with Unbounded Flip-Width” (<a href="http://arxiv.org/abs/2306.12611">arXiv:2306.12611</a>, with Rose McCarty, to appear in CCCG 2023) will look very familiar. It even has the same title! However, the process of turning it into a paper led to some improvements. Let me summarize them briefly here.</p>
+
+<p>First, a reminder of the main concept, flip-width. This is defined using a pursuit–evasion game in which a robber tries to escape cops by following paths in a graph. At each turn, the cops have made a fixed number of “flips” to the graph. Each flip applies to a subset of vertices (possibly overlapping with other flips), removes edges from its adjacent vertices, and adds edges connecting its non-adjacent vertices. A turn consists of three steps: the cops announce what they will flip next, the robber moves along a path of length at most \(s\), and then the cops undo their current flips and perform the new flips that they announced. The goal of the cops is to leave the robber stuck on an isolated vertex, while the goal of the robber is to escape forever. If a class of graphs has a function \(f(s)\) such that \(f(s)\) cops can win against a robber of speed \(s\), then it has bounded flip-width. If there is a speed \(s\) for which arbitrarily many cops may be needed to catch a speed-\(s\) robber, then the class has unbounded flip-width.</p>
+
+<p>Beyond a more careful attention to detail and rigor, new developments are:</p>
+
+<ul>
+  <li>
+    <p>Three-dimensional Delaunay triangulations have unbounded flip-width. This uses a construction from another recent blog post on <a href="/blog/2023/02/25/isohedral-delaunay-complexes.html">isohedral Delaunay complexes</a>.</p>
+  </li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/Beta_skeleton">Beta-skeletons</a> have unbounded flip-width. There are actually two different kinds of beta-skeleton but the interesting case is for parameter values \(\beta&lt;1\), for which the two definitions agree.</p>
+  </li>
+  <li>
+    <p>Another type of geometric graph for which we can prove unbounded flip-width, not mentioned in the previous post, is the rectangle of influence graphs. These connect pairs of points in their plane when their axis-aligned bounding box is empty of other points. We find a recursive construction for rectangle of influence graphs containing hypercube induced subgraphs of arbitrarily large dimension, which in turn have unbounded flip-width. As with the beta-skeletons, definitions for rectangle of influence graphs disagree (about what to do with points on the boundary of the bounding box) but our hypercube construction doesn’t need that ambiguity.</p>
+
+    <p style="text-align:center"><img src="/blog/assets/2023/empty-rectangle.svg" alt="Hypercube in a rectangle of influence graph" /></p>
+  </li>
+  <li>
+    <p>For most of the families of geometric graphs that we study, the robber can escape by stepping across only one edge per turn (\(s=1\)). This is a big improvement over the \(s=4\) from the blog post, and a much more natural speed limitation. The exception is for three-dimensional Delaunay triangulations; for these \(s=2\) works but we don’t know about \(s=1\). An \(s=2\) escape strategy for all of these graphs is very simple: move to a “lane” (one of two special types of vertex in the “interchange” graphs constructed in the previous blog post) that has two-edge paths to many other lanes. The \(s=1\) strategy is different, and for some of the geometric graphs is based on hypercube subgraphs rather than interchanges.</p>
+  </li>
+  <li>
+    <p>An appendix extends the results on all of these graph classes (even 3d Delaunay triangulations) from unbounded flip-width to monadic independence, meaning that it is possible to use <em>transductions</em>, a certain kind of translation system defined using logical formulas, to get arbitrary graphs from graphs in these classes. The main ideas (from Szymon Toruńczyk) are to use Ramsey theory to simplify the interchange subgraphs into two cases, “sparse” and “dense”, to use the structure of these graphs to find a logical translation from the dense case to the sparse case, and to find a subdivision of any given graph as an induced subgraph of a sparse interchange.</p>
+  </li>
+</ul>
+
+<p>(<a href="https://mathstodon.xyz/@11011110/110602049050780927">Discuss on Mastodon</a>)</p><p class="authors">By David Eppstein</p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-24T18:07:00Z">Saturday, June 24 2023, 18:07</time>
         </div>
       </div>
     </details>
@@ -3449,71 +3506,6 @@ and cumulative time queries. We show nearly tight upper bounds on the error
 rates of these algorithms and demonstrate their empirical performance on
 realistically sized datasets from the U.S. Census Bureau's Survey of Income and
 Program Participation.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-14T00:30:00Z">Wednesday, June 14 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.07891'>Online Matching in Geometric Random Graphs</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Flore Sentenac, Nathan Noiry, Matthieu Lerasle, Laurent M&#xe9;nard, Vianney Perchet</p><p>In online advertisement, ad campaigns are sequentially displayed to users.
-Both users and campaigns have inherent features, and the former is eligible to
-the latter if they are ``similar enough''. We model these interactions as a
-bipartite geometric random graph: the features of the $2N$ vertices ($N$ users
-and $N$ campaigns) are drawn independently in a metric space and an edge is
-present between a campaign and a user node if the distance between their
-features is smaller than $c/N$, where $c&gt;0$ is the parameter of the model. Our
-contributions are two-fold. In the one-dimensional case, with uniform
-distribution over the segment $[0,1]$, we derive the size of the optimal
-offline matching in these bipartite random geometric graphs, and we build an
-algorithm achieving it (as a benchmark), and analyze precisely its performance.
-We then turn to the online setting where one side of the graph is known at the
-beginning while the other part is revealed sequentially. We study the number of
-matches of the online algorithm closest, which matches any incoming point to
-its closest available neighbor. We show that its performances can be compared
-to its fluid limit, completely described as the solution of an explicit PDE.
-From the latter, we can compute the competitive ratio of closest.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Sentenac_F/0/1/0/all/0/1">Flore Sentenac</a>, <a href="http://arxiv.org/find/cs/1/au:+Noiry_N/0/1/0/all/0/1">Nathan Noiry</a>, <a href="http://arxiv.org/find/cs/1/au:+Lerasle_M/0/1/0/all/0/1">Matthieu Lerasle</a>, <a href="http://arxiv.org/find/cs/1/au:+Menard_L/0/1/0/all/0/1">Laurent M&#xe9;nard</a>, <a href="http://arxiv.org/find/cs/1/au:+Perchet_V/0/1/0/all/0/1">Vianney Perchet</a></p><p>In online advertisement, ad campaigns are sequentially displayed to users.
-Both users and campaigns have inherent features, and the former is eligible to
-the latter if they are ``similar enough''. We model these interactions as a
-bipartite geometric random graph: the features of the $2N$ vertices ($N$ users
-and $N$ campaigns) are drawn independently in a metric space and an edge is
-present between a campaign and a user node if the distance between their
-features is smaller than $c/N$, where $c&gt;0$ is the parameter of the model. Our
-contributions are two-fold. In the one-dimensional case, with uniform
-distribution over the segment $[0,1]$, we derive the size of the optimal
-offline matching in these bipartite random geometric graphs, and we build an
-algorithm achieving it (as a benchmark), and analyze precisely its performance.
-We then turn to the online setting where one side of the graph is known at the
-beginning while the other part is revealed sequentially. We study the number of
-matches of the online algorithm closest, which matches any incoming point to
-its closest available neighbor. We show that its performances can be compared
-to its fluid limit, completely described as the solution of an explicit PDE.
-From the latter, we can compute the competitive ratio of closest.
 </p>
         
         </div>
