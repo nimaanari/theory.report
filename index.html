@@ -38,7 +38,7 @@
       <span>Last Update</span>
       <div class="tr-small">
         
-          <time class='timeago' datetime="2023-06-26T15:30:58Z">Monday, June 26 2023, 15:30</time>
+          <time class='timeago' datetime="2023-06-26T16:40:16Z">Monday, June 26 2023, 16:40</time>
         
       </div>
       <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
@@ -343,8 +343,256 @@
     
     
     <h2 class='tr-new-date'>
+      <i class='fa-regular fa-calendar'></i> Tuesday, June 27
+    </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://differentialprivacy.org/open-problem-better-privacy-guarantees-for-larger-groups/'>Open problem - Better privacy guarantees for larger groups</a></h3>
+        <p class='tr-article-feed'>from <a href='https://differentialprivacy.org'>DifferentialPrivacy.org</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          <p>Consider a simple query counting the number of people in various mutually exclusive groups.
+In the differential privacy literature, it is typical to assume that each of these groups should be subject to the same privacy loss: the noise added to each count has the same magnitude, and everyone gets the same privacy guarantees.
+However, in settings where these groups have vastly different population sizes, larger populations may be willing to accept more error in exchange for stronger privacy protections.
+In particular, in many use cases, relative error (the noisy count is within 5% of the true value) matters more than absolute error (the noisy count is at a distance of at most 100 of the true value).
+This leads to a natural question: can we use this fact to develop a mechanism that improves the privacy guarantees of individuals in larger groups, subject to a constraint on relative error?</p>
+
+Problem definition
+
+<p>Our goal is to obtain a mechanism which minimizes the overall privacy loss for each group without exceeding a relative error threshold for each group.
+To formalize this goal, we first define a notion of per-group privacy we call group-wise zero-concentrated differential privacy as follows.</p>
+
+<p>Definition. Group-wise zero-concentrated differential privacy.
+Assume possible datasets consist of records from domain \(U\), and \(U\) can be partitioned into \(k\) fixed, disjoint groups \(U_1\), …, \(U_k\). Let \(v : \mathcal{D} \rightarrow \mathbb{R}^k\) be a function associating a dataset to a vector of privacy budgets (one per group). We say a mechanism \(\mathcal{M}\) satisfies \(v\)-group-wise zero-concentrated differential privacy (zCDP) if for any two datasets \(D\), \(D’\) differing in the addition or removal of a record in \(U_i\), and for all \(\alpha&gt;1\), we have:
+\[
+D_\alpha\left(\mathcal{M}(D||\mathcal{M}(D’)\right) \le \alpha \cdot {v(D)}_i
+\]
+\[
+D_\alpha\left(\mathcal{M}(D’)||\mathcal{M}(D)\right) \le \alpha \cdot {v(D)}_i
+\]
+where \(D_\alpha\) is the Rényi divergence of order \(\alpha\).</p>
+
+<p>This definition is similar to tailored DP, defined in [LP15]: each individual gets a different privacy guarantee, depending on which group they belong to;
+this guarantee also depends on how many people are in this group.
+We use zCDP as our definition of privacy due to its compatibility with the Gaussian mechanism; the same idea could easily be applied to other definitions like with Rényi DP or pure DP.</p>
+
+<p>From there we can give a more formal definition of the problem as follows. The goal is to minimize the privacy loss for each individual group, while keeping the error under a given threshold.
+For larger groups that can accept more noise, this means adding more noise to achieve the smallest possible privacy loss.</p>
+
+<p>Problem.
+Let \(r \in (0,1]\) be an acceptable level of relative error, and \(k\) be the number of distinct, mutually-exclusive partitions of domain \(X\).
+Given a dataset \(D\), let \(x(D)\) be a vector containing the count of records in each partition.
+The objective is to find a mechanism \(\mathcal{M}\) which takes in \(r\), \(k\), and \(D\) and outputs \(\hat{x}(D)\) such that \(E\left[\left|{x(D)}_i-{\hat{x}(D)}_i\right|\right]&lt;r\cdot {x(D)}_i\) for all \(i\), and satisfies \(v\)-group-wise zCDP where \(v(D)_i\) is as small as possible for all \(i\).
+<br>
+To prevent pathological mechanisms that optimize for specific datasets, we add two constraints to the problem: the privacy guarantee \(v(D)_i\) should only depend on \(x(D)_i\), and should be nonincreasing with \(x(D)_i\).</p>
+
+<p>Since the relative error thresholds are proportional to the population size, each population can tolerate a different amount of noise.
+This means that to minimize the privacy loss for each group, the mechanism must add noise of different scales to each group.
+Of course, directly using \(x(D)_i\) to determine the scale of the noise for group \(i\) leads to a privacy loss which is data dependent, similarly to e.g. PATE [PAEGT17], and as such should be treated as a protected value.</p>
+
+An example mechanism
+
+<p>An example mechanism that seems like it could address this problem is as follows.
+First, perform the original counting query and add Gaussian noise to satisfy \(\rho\)-zCDP.
+Then, add additional Gaussian noise to each count, with a variance that depends on the noisy count itself — adding more noise to larger groups.
+This mechanism is outlined in Algorithm 1.</p>
+
+<p>Algorithm 1.
+Adding data-dependent noise as a post-processing step.
+<br>
+Require: A dataset \(D\) where each data point belongs to one of \(k\) groups, a privacy parameter \(\rho\), and a relative error rate \(r\).</p>
+<ol>
+  <li>Let \(\sigma^2 = 1/(2\rho)\)</li>
+  <li>For \(i=1\) to \(k\) do</li>
+  <li>\(\qquad\) Let \(x_i\) be the number of people in \(D\) in group \(i\)</li>
+  <li>\(\qquad\) Sample \(X_i \sim \mathcal{N}(x_i, \sigma^2)\)</li>
+  <li>\(\qquad\) Sample \(Y_i \sim \mathcal{N}_{k}(X_i, (rX_i)^2)\)</li>
+  <li>end for</li>
+  <li>return \(Y_1,\dots,Y_k\)</li>
+</ol>
+
+<p>Algorithm 1 achieves this goal of having approximately \(r\) error in each group: the total variance error of the mechanism is \(\sigma^2 + (rX)^2\), and \(X\) is a zCDP measure of \(f(D)\).
+This mechanism satisfies at least \(\rho\)-zCDP: line 4 is an invocation of the Gaussian mechanism with privacy parameter \(\rho\), and line 5 is a post processing step and as such preserves the zCDP guarantee.
+We would like to show that this algorithm also satisfies a stronger group-wise zCDP guarantee.</p>
+
+<p>This makes intuitive sense: line 5 adds additional Gaussian noise without using the private data directly.
+Since the noise scale in line 5 is proportional to the total count in line 4, we expect the privacy guarantee to be significantly stronger for large groups with more noise.
+Further, we can verify experimentally that when the data magnitude is large compared to the noise, the output distribution for each group is close to a Gaussian distribution.</p>
+
+<p>The below figure illustrates this finding.
+We plot 1,000,000 sample outputs of Algorithm 1 (red) with parameters \(\sigma^2 = 100\) and \(r= 0.3\), and compare it to the best fit Gaussian distribution (black outline) with mean \(10,002.6\) and standard deviation of \(2995.1\).</p>
+
+<p>♦</p>
+
+<p>With parameters such as these, the output of the mechanism looks and behaves like a Gaussian distribution, which should be ideal to characterize the zCDP guarantee.
+However, it is difficult to directly quantify this guarantee, due to the changing variance which is also a random variable.
+Likewise, if the true count is close to zero or if the first instance of noise is large compared to the true count than the resulting distribution takes on a heavy skew and is no longer similar to a single Gaussian distribution.
+Such distributions with randomized variances have not, to the best of our knowledge, been considered much in the literature, and we do not know whether the mechanism’s output distribution follows some well-studied distribution.</p>
+
+<p>The randomized variance also makes it difficult to bound the Rényi divergence of the distribution and characterize the zCDP guarantees directly.
+Current privacy amplification techniques are insufficient, as those techniques consider adding additional noise where the noise parameters are independent of the data itself.</p>
+
+<p>Perhaps the most promising direction to understand more about such processes is the area of stochastic differential equations, where it is common to study noise with data-dependent variance.
+The Bessel process [Øks03] is an example of such a process, where the noise is dependent on the current value.
+This process captures the noise added as post-processing (Line 5), but not the initial noise-addition step (Line 4).
+Furthermore, to the best of our knowledge, the Bessel process and other value-dependent stochastic differential equations do not have closed-form solutions.</p>
+
+Goal
+
+<p>We see two possible paths forward to address the original question. One path would be to obtain an analysis of Algorithm 1 which shows non-trivial improved privacy guarantees for larger groups.
+We tried multiple approaches, but could not prove such a result.</p>
+
+<p>An alternative path would be to develop a different algorithm, which achieves better privacy guarantees for larger groups while maintaining the error below the relative error threshold for all groups.</p><p>By </p>
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          <p>Consider a simple query counting the number of people in various mutually exclusive groups.
+In the differential privacy literature, it is typical to assume that each of these groups should be subject to the same privacy loss: the noise added to each count has the same magnitude, and everyone gets the same privacy guarantees.
+However, in settings where these groups have vastly different population sizes, larger populations may be willing to accept more error in exchange for stronger privacy protections.
+In particular, in many use cases, <em>relative</em> error (the noisy count is within 5% of the true value) matters more than absolute error (the noisy count is at a distance of at most 100 of the true value).
+This leads to a natural question: can we use this fact to develop a mechanism that improves the privacy guarantees of individuals in larger groups, subject to a constraint on relative error?</p>
+
+<h3 id="problem-definition">Problem definition</h3>
+
+<p>Our goal is to obtain a mechanism which minimizes the overall privacy loss for each group without exceeding a relative error threshold for each group.
+To formalize this goal, we first define a notion of per-group privacy we call group-wise zero-concentrated differential privacy as follows.</p>
+
+<p><strong>Definition.</strong> <em>Group-wise zero-concentrated differential privacy.</em>
+Assume possible datasets consist of records from domain \(U\), and \(U\) can be partitioned into \(k\) fixed, disjoint groups \(U_1\), …, \(U_k\). Let \(v : \mathcal{D} \rightarrow \mathbb{R}^k\) be a function associating a dataset to a vector of privacy budgets (one per group). We say a mechanism \(\mathcal{M}\) satisfies \(v\)-group-wise zero-concentrated differential privacy (zCDP) if for any two datasets \(D\), \(D’\) differing in the addition or removal of a record in \(U_i\), and for all \(\alpha&gt;1\), we have:
+\[
+D_\alpha\left(\mathcal{M}(D||\mathcal{M}(D’)\right) \le \alpha \cdot {v(D)}_i
+\]
+\[
+D_\alpha\left(\mathcal{M}(D’)||\mathcal{M}(D)\right) \le \alpha \cdot {v(D)}_i
+\]
+where \(D_\alpha\) is the Rényi divergence of order \(\alpha\).</p>
+
+<p>This definition is similar to <em>tailored DP</em>, defined in [<a href="https://eprint.iacr.org/2014/982.pdf">LP15</a>]: each individual gets a different privacy guarantee, depending on which group they belong to;
+this guarantee also depends on how many people are in this group.
+We use zCDP as our definition of privacy due to its compatibility with the Gaussian mechanism; the same idea could easily be applied to other definitions like with Rényi DP or pure DP.</p>
+
+<p>From there we can give a more formal definition of the problem as follows. The goal is to minimize the privacy loss for each individual group, while keeping the error under a given threshold.
+For larger groups that can accept more noise, this means adding more noise to achieve the smallest possible privacy loss.</p>
+
+<p><strong>Problem.</strong>
+Let \(r \in (0,1]\) be an acceptable level of relative error, and \(k\) be the number of distinct, mutually-exclusive partitions of domain \(X\).
+Given a dataset \(D\), let \(x(D)\) be a vector containing the count of records in each partition.
+The objective is to find a mechanism \(\mathcal{M}\) which takes in \(r\), \(k\), and \(D\) and outputs \(\hat{x}(D)\) such that \(E\left[\left|{x(D)}_i-{\hat{x}(D)}_i\right|\right]&lt;r\cdot {x(D)}_i\) for all \(i\), and satisfies \(v\)-group-wise zCDP where \(v(D)_i\) is as small as possible for all \(i\).
+<br />
+To prevent pathological mechanisms that optimize for specific datasets, we add two constraints to the problem: the privacy guarantee \(v(D)_i\) should only depend on \(x(D)_i\), and should be nonincreasing with \(x(D)_i\).</p>
+
+<p>Since the relative error thresholds are proportional to the population size, each population can tolerate a different amount of noise.
+This means that to minimize the privacy loss for each group, the mechanism must add noise of different scales to each group.
+Of course, directly using \(x(D)_i\) to determine the scale of the noise for group \(i\) leads to a privacy loss which is data dependent, similarly to e.g. PATE [<a href="https://openreview.net/forum?id=HkwoSDPg">PAEGT17</a>], and as such should be treated as a protected value.</p>
+
+<h3 id="an-example-mechanism">An example mechanism</h3>
+
+<p>An example mechanism that seems like it could address this problem is as follows.
+First, perform the original counting query and add Gaussian noise to satisfy \(\rho\)-zCDP.
+Then, add additional Gaussian noise to each count, with a variance that depends on the noisy count itself — adding more noise to larger groups.
+This mechanism is outlined in Algorithm 1.</p>
+
+<p><strong>Algorithm 1.</strong>
+<em>Adding data-dependent noise as a post-processing step.</em>
+<br />
+Require: A dataset \(D\) where each data point belongs to one of \(k\) groups, a privacy parameter \(\rho\), and a relative error rate \(r\).</p>
+<ol>
+  <li>Let \(\sigma^2 = 1/(2\rho)\)</li>
+  <li><strong>For</strong> \(i=1\) to \(k\) <strong>do</strong></li>
+  <li>\(\qquad\) Let \(x_i\) be the number of people in \(D\) in group \(i\)</li>
+  <li>\(\qquad\) Sample \(X_i \sim \mathcal{N}(x_i, \sigma^2)\)</li>
+  <li>\(\qquad\) Sample \(Y_i \sim \mathcal{N}_{k}(X_i, (rX_i)^2)\)</li>
+  <li><strong>end for</strong></li>
+  <li><strong>return</strong> \(Y_1,\dots,Y_k\)</li>
+</ol>
+
+<p>Algorithm 1 achieves this goal of having approximately \(r\) error in each group: the total variance error of the mechanism is \(\sigma^2 + (rX)^2\), and \(X\) is a zCDP measure of \(f(D)\).
+This mechanism satisfies at least \(\rho\)-zCDP: line 4 is an invocation of the Gaussian mechanism with privacy parameter \(\rho\), and line 5 is a post processing step and as such preserves the zCDP guarantee.
+We would like to show that this algorithm also satisfies a stronger group-wise zCDP guarantee.</p>
+
+<p>This makes intuitive sense: line 5 adds additional Gaussian noise without using the private data directly.
+Since the noise scale in line 5 is proportional to the total count in line 4, we expect the privacy guarantee to be significantly stronger for large groups with more noise.
+Further, we can verify experimentally that when the data magnitude is large compared to the noise, the output distribution for each group is close to a Gaussian distribution.</p>
+
+<p>The below figure illustrates this finding.
+We plot 1,000,000 sample outputs of Algorithm 1 (red) with parameters \(\sigma^2 = 100\) and \(r= 0.3\), and compare it to the best fit Gaussian distribution (black outline) with mean \(10,002.6\) and standard deviation of \(2995.1\).</p>
+
+<p><img src="../images/two-stage-noise-gaussian.png" width="70%" alt="A comparison between sample outputs of Algorithm 1 and the best-fit Gaussian distribution, showing that both match very closely." style="margin:auto;display: block;" /></p>
+
+<p>With parameters such as these, the output of the mechanism looks and behaves like a Gaussian distribution, which should be ideal to characterize the zCDP guarantee.
+However, it is difficult to directly quantify this guarantee, due to the changing variance which is also a random variable.
+Likewise, if the true count is close to zero or if the first instance of noise is large compared to the true count than the resulting distribution takes on a heavy skew and is no longer similar to a single Gaussian distribution.
+Such distributions with randomized variances have not, to the best of our knowledge, been considered much in the literature, and we do not know whether the mechanism’s output distribution follows some well-studied distribution.</p>
+
+<p>The randomized variance also makes it difficult to bound the Rényi divergence of the distribution and characterize the zCDP guarantees directly.
+Current privacy amplification techniques are insufficient, as those techniques consider adding additional noise where the noise parameters are independent of the data itself.</p>
+
+<p>Perhaps the most promising direction to understand more about such processes is the area of stochastic differential equations, where it is common to study noise with data-dependent variance.
+The Bessel process [<a href="http://www.stat.ucla.edu/~ywu/research/documents/StochasticDifferentialEquations.pdf">Øks03</a>] is an example of such a process, where the noise is dependent on the current value.
+This process captures the noise added as post-processing (Line 5), but not the initial noise-addition step (Line 4).
+Furthermore, to the best of our knowledge, the Bessel process and other value-dependent stochastic differential equations do not have closed-form solutions.</p>
+
+<h3 id="goal">Goal</h3>
+
+<p>We see two possible paths forward to address the original question. One path would be to obtain an analysis of Algorithm 1 which shows non-trivial improved privacy guarantees for larger groups.
+We tried multiple approaches, but could not prove such a result.</p>
+
+<p>An alternative path would be to develop a different algorithm, which achieves better privacy guarantees for larger groups while maintaining the error below the relative error threshold for all groups.</p><p class="authors">By </p>
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-27T01:00:00Z">Tuesday, June 27 2023, 01:00</time>
+        </div>
+      </div>
+    </details>
+  
+    
+    <h2 class='tr-new-date'>
       <i class='fa-regular fa-calendar'></i> Monday, June 26
     </h2>
+    
+
+    <details class='tr-article' open>
+      <summary class='tr-article-header'>
+        <h3 class='tr-article-title'><a href='https://decentralizedthoughts.github.io/2023-06-26-dls-meets-rollback/'>$3f+1$ is needed in Partial Synchrony even against a Rollback adversary</a></h3>
+        <p class='tr-article-feed'>from <a href='https://decentralizedthoughts.github.io'>Decentralized Thoughts</a></p>
+        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
+      </summary>
+
+      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
+
+      <div class='tr-article-body'>
+        <div class='tr-article-snippet'>
+        
+          We covered the classic DLS88 split brain impossibility result against a Byzantine adversary in a previous post: DLS88: (Theorem 4.4) It is impossible to solve Agreement under partial synchrony against a Byzantine adversary if $f \geq n/3$. In a follow up, we discussed how CJKR12 strengthen this result by observing...
+        
+        </div>
+
+        <div class='tr-article-summary'>
+        
+          
+          We covered the classic DLS88 split brain impossibility result against a Byzantine adversary in a previous post: DLS88: (Theorem 4.4) It is impossible to solve Agreement under partial synchrony against a Byzantine adversary if $f \geq n/3$. In a follow up, we discussed how CJKR12 strengthen this result by observing...
+        
+        </div>
+
+        <div class='tr-article-footer'>
+          <time class='timeago' datetime="2023-06-26T11:00:00Z">Monday, June 26 2023, 11:00</time>
+        </div>
+      </div>
+    </details>
+  
     
 
     <details class='tr-article' open>
@@ -3323,88 +3571,6 @@ this.
 
         <div class='tr-article-footer'>
           <time class='timeago' datetime="2023-06-19T00:30:00Z">Monday, June 19 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='http://arxiv.org/abs/2306.09950'>Nearly-Optimal Hierarchical Clustering for Well-Clustered Graphs</a></h3>
-        <p class='tr-article-feed'>from <a href='https://arxiv.org/list/cs.DS/recent'>arXiv: Data Structures and Algorithms</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>Authors: Steinar Laenen, Bogdan-Adrian Manghiuc, He Sun</p><p>This paper presents two efficient hierarchical clustering (HC) algorithms
-with respect to Dasgupta's cost function. For any input graph $G$ with a clear
-cluster-structure, our designed algorithms run in nearly-linear time in the
-input size of $G$, and return an $O(1)$-approximate HC tree with respect to
-Dasgupta's cost function. We compare the performance of our algorithm against
-the previous state-of-the-art on synthetic and real-world datasets and show
-that our designed algorithm produces comparable or better HC trees with much
-lower running time.
-</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p class="arxiv-authors"><b>Authors:</b> <a href="http://arxiv.org/find/cs/1/au:+Laenen_S/0/1/0/all/0/1">Steinar Laenen</a>, <a href="http://arxiv.org/find/cs/1/au:+Manghiuc_B/0/1/0/all/0/1">Bogdan-Adrian Manghiuc</a>, <a href="http://arxiv.org/find/cs/1/au:+Sun_H/0/1/0/all/0/1">He Sun</a></p><p>This paper presents two efficient hierarchical clustering (HC) algorithms
-with respect to Dasgupta's cost function. For any input graph $G$ with a clear
-cluster-structure, our designed algorithms run in nearly-linear time in the
-input size of $G$, and return an $O(1)$-approximate HC tree with respect to
-Dasgupta's cost function. We compare the performance of our algorithm against
-the previous state-of-the-art on synthetic and real-world datasets and show
-that our designed algorithm produces comparable or better HC trees with much
-lower running time.
-</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-19T00:30:00Z">Monday, June 19 2023, 00:30</time>
-        </div>
-      </div>
-    </details>
-  
-    
-    <h2 class='tr-new-date'>
-      <i class='fa-regular fa-calendar'></i> Sunday, June 18
-    </h2>
-    
-
-    <details class='tr-article' open>
-      <summary class='tr-article-header'>
-        <h3 class='tr-article-title'><a href='https://blog.computationalcomplexity.org/2023/06/ted-kaczynski-was-at-one-time-worlds.html'>Ted Kaczynski was at one time the worlds most famous living mathematician</a></h3>
-        <p class='tr-article-feed'>from <a href='http://blog.computationalcomplexity.org/'>Computational Complexity</a></p>
-        <i class="fa-solid fa-fw fa-chevron-down tr-chevron"></i>
-      </summary>
-
-      <i class="fa-solid fa-fw fa-chevron-up tr-chevron"></i>
-
-      <div class='tr-article-body'>
-        <div class='tr-article-snippet'>
-        
-          <p>(This post is inspired by the death of Ted Kaczynski who died on June 10, 2023.)&nbsp;</p><p>From 1978 until 1995 23 mailbombs were sent to various people. 3 caused deaths, the rest caused injuries. The culprit was nicknamed The Unabomber (I wonder if he liked that nickname.) For more on his story see&nbsp;here.</p><p>The culprit was Ted Kaczynski. He had a BS in Math from Harvard in Mathematics in 1962, and a PhD in Math from The Univ of Michigan in 1967. He got a job in the Berkeley math dept but resigned in 1969. He soon thereafter moved to a shack in the woods (I wonder if his prison accommodations were better) and began sending out the mailbombs.&nbsp;</p><p>When he was caught in 1995 he was (a) famous and (b) a mathematician. That last point is debatable in that I doubt he was doing math while living in his shack. But we will ignore that point for now. Would you call him a famous mathematician? If so then he was, in 1995, the most famous living mathematician.&nbsp;</p><p>In&nbsp; 1995 Andrew Wiles proved Fermat's Last theorem (this is not quite right- there was a bug and it was fixed with help from Richard Taylor) and he was, for a brief time, the world's most famous living mathematician, though perhaps Wiles and Kaczinski were tied. Wiles made People magazine's 25 most intriguing people of the year! (NOTE- I originally had, incorrectly that Wiles had proven it in 1986. A comment alerted me to the error which makes the story MORE interesting since Ted and Andrew were competing for Most Famous Living Mathemticians!)</p><p>Terry Tao won the Fields medal (2006) AND the MacArthur Genius award (2006) AND the breakthrough award (2015). The last one got him a spot on&nbsp;&nbsp;The Colbert Report (2014) (See&nbsp;here,) For those 15 minutes he might have been the most famous living mathematician. He did not have much competition for the honor.&nbsp;&nbsp;</p><p>And then there is Grigori Perelman who solved the Ponicare Conjecture and declined the Fields Medal and the Millennium prize (Colbert commented on this, see&nbsp;here.) For a very brief time Perelman may have been the most famous living mathematician. He did not have much competition for the honor.&nbsp;</p><p>The most famous mathematicians of all time: Pythagoras of Samos, Euclid, Lewis Carroll.&nbsp;</p><p>1) Pythagoras might not count since its not clear how much he had to do with his theorem.</p><p>2) Lewis Carroll is the most interesting case. He IS famous. He DID do Mathematics. He DID mathematics while he wrote the books that made him famous. So he is a famous mathematician but he is not famous for his math. But that does not quite seem right.&nbsp;</p><p>3) The Math version of AND and the English version of AND are different. Lewis Carroll is FAMOUS and Lewis Caroll is A MATHEMATICIAN but it doesn't seem quite right to call him a FAMOUS MATHEMATICIAN. Same for Ted K.&nbsp; Andrew W was, for a short time, a legit FAMOUS MATHEMATICIAN.&nbsp;</p><p>3) Stephen Hawkings has appeared on ST:TNG and his voice on The Simpsons, Futurama, The Big Bang Theory. He is famous for a combination of his disability, his expository work, and his Physics. Is he a famous actor?&nbsp;</p><p>4) Science expositors like Carl Sagan and Neil deGrasse Tyson are famous for being expositors of science, not quite for their science. How do Professor Proton and Bill Nye the Science Guy fit into this?</p><p>5) Looking at Ted K, Andrew W, Terry T, Grigori P one other point comes up: All of them were famous for a short time but it faded QUICKLY. So- fame is fleeting!</p><p><br></p><p>By gasarch</p>
-        
-        </div>
-
-        <div class='tr-article-summary'>
-        
-          
-          <p>(This post is inspired by the death of Ted Kaczynski who died on June 10, 2023.)&nbsp;</p><p>From 1978 until 1995 23 mailbombs were sent to various people. 3 caused deaths, the rest caused injuries. The culprit was nicknamed <i>The Unabomber</i> (I wonder if he liked that nickname.) For more on his story see&nbsp;<a href="https://en.wikipedia.org/wiki/Ted_Kaczynski">here</a>.</p><p>The culprit was Ted Kaczynski. He had a BS in Math from Harvard in Mathematics in 1962, and a PhD in Math from The Univ of Michigan in 1967. He got a job in the Berkeley math dept but resigned in 1969. He soon thereafter moved to a shack in the woods (I wonder if his prison accommodations were better) and began sending out the mailbombs.&nbsp;</p><p>When he was caught in 1995 he was (a) famous and (b) a mathematician. That last point is debatable in that I doubt he was doing math while living in his shack. But we will ignore that point for now. Would you call him a famous mathematician? If so then he was, in 1995, the most famous living mathematician.&nbsp;</p><p>In&nbsp; 1995 Andrew Wiles proved Fermat's Last theorem (this is not quite right- there was a bug and it was fixed with help from Richard Taylor) and he was, for a brief time, the world's most famous living mathematician, though perhaps Wiles and Kaczinski were tied. Wiles made People magazine's 25 most intriguing people of the year! (NOTE- I originally had, incorrectly that Wiles had proven it in 1986. A comment alerted me to the error which makes the story MORE interesting since Ted and Andrew were competing for Most Famous Living Mathemticians!)</p><p>Terry Tao won the Fields medal (2006) AND the MacArthur Genius award (2006) AND the breakthrough award (2015). The last one got him a spot on&nbsp;&nbsp;<i>The Colbert Report (2014)</i> (See&nbsp;<a href="https://www.cc.com/video/6wtwlg/the-colbert-report-terence-tao">here</a>,) For those 15 minutes he might have been the most famous living mathematician. He did not have much competition for the honor.&nbsp;&nbsp;</p><p>And then there is Grigori Perelman who solved the Ponicare Conjecture and declined the Fields Medal and the Millennium prize (Colbert commented on this, see&nbsp;<a href="https://www.cc.com/video/xr6owy/the-colbert-report-cheating-death-fields-medal">here</a>.) For a very brief time Perelman may have been the most famous living mathematician. He did not have much competition for the honor.&nbsp;</p><p>The most famous mathematicians of all time: Pythagoras of Samos, Euclid, Lewis Carroll.&nbsp;</p><p>1) Pythagoras might not count since its not clear how much he had to do with his theorem.</p><p>2) Lewis Carroll is the most interesting case. He IS famous. He DID do Mathematics. He DID mathematics while he wrote the books that made him famous. So he is a <i>famous mathematician </i>but he is not famous for his math. But that does not quite seem right.&nbsp;</p><p>3) The Math version of AND and the English version of AND are different. Lewis Carroll is FAMOUS and Lewis Caroll is A MATHEMATICIAN but it doesn't seem quite right to call him a FAMOUS MATHEMATICIAN. Same for Ted K.&nbsp; Andrew W was, for a short time, a legit FAMOUS MATHEMATICIAN.&nbsp;</p><p>3) Stephen Hawkings has appeared on ST:TNG and his voice on The Simpsons, Futurama, The Big Bang Theory. He is famous for a combination of his disability, his expository work, and his Physics. Is he a <i>famous actor</i>?&nbsp;</p><p>4) Science expositors like Carl Sagan and Neil deGrasse Tyson are famous for being expositors of science, not quite for their science. How do Professor Proton and Bill Nye the Science Guy fit into this?</p><p>5) Looking at Ted K, Andrew W, Terry T, Grigori P one other point comes up: All of them were famous for a short time but it faded QUICKLY. So- fame is fleeting!</p><p><br /></p><p class="authors">By gasarch</p>
-        
-        </div>
-
-        <div class='tr-article-footer'>
-          <time class='timeago' datetime="2023-06-18T13:37:00Z">Sunday, June 18 2023, 13:37</time>
         </div>
       </div>
     </details>
