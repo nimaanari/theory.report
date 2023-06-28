@@ -10,6 +10,462 @@
 
 
   <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: One-step replica symmetry breaking in the language of tensor networks</title>
+    <link href="http://arxiv.org/abs/2306.15004"/>
+    <id>http://arxiv.org/abs/2306.15004</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Pancotti_N/0/1/0/all/0/1&quot;&gt;Nicola Pancotti&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Gray_J/0/1/0/all/0/1&quot;&gt;Johnnie Gray&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We develop an exact mapping between the one-step replica symmetry breaking
+cavity method and tensor networks. The two schemes come with complementary
+mathematical and numerical toolboxes that could be leveraged to improve the
+respective states of the art. As an example, we construct a tensor-network
+representation of Survey Propagation, one of the best deterministic k-SAT
+solvers. The resulting algorithm outperforms any existent tensor-network solver
+by several orders of magnitude. We comment on the generality of these ideas,
+and we show how to extend them to the context of quantum tensor networks.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: From $O(\sqrt n)$ to $O(\log n)$ in Quadratic Programming</title>
+    <link href="http://arxiv.org/abs/2306.15079"/>
+    <id>http://arxiv.org/abs/2306.15079</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Wu_L/0/1/0/all/0/1&quot;&gt;Liang Wu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;A &quot;dark cloud&quot; hangs over numerical optimization theory for decades, namely,
+whether an optimization algorithm $O(\log(n))$ iteration complexity exists.
+&quot;Yes&quot;, this paper answers, with a new optimization algorithm and strict theory
+proof. It starts with box-constrained quadratic programming (Box-QP), and many
+practical optimization problems fall into Box-QP. Smooth quadratic programming
+(QP) and nonsmooth Lasso can be reformulated as Box-QP via duality theory. It
+is the first time to present an $O(\log(n))$ iteration complexity QP algorithm,
+in particular, which behaves like a &quot;direct&quot; method: the required number of
+iterations is deterministic with exact value
+$\left\lceil\log\left(\frac{3.125n}{\epsilon}\right)/\log(1.5625)\right\rceil$.
+This significant breakthrough enables us to transition from the $O(\sqrt{n})$
+to the $O(\log(n))$ optimization algorithm, whose amazing scalability is
+particularly relevant in today&#39;s era of big data and artificial intelligence.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: A Note on the Complexity of One-Sided Crossing Minimization of Trees</title>
+    <link href="http://arxiv.org/abs/2306.15339"/>
+    <id>http://arxiv.org/abs/2306.15339</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dobler_A/0/1/0/all/0/1&quot;&gt;Alexander Dobler&lt;/a&gt;&lt;/p&gt;&lt;p&gt;In 2011, Harrigan and Healy published a polynomial-time algorithm for
+one-sided crossing minimization for trees. We point out a counterexample to
+that algorithm, and show that one-sided crossing minimization is NP-hard for
+trees.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Complexity: SparseOptimizer: Sparsify Language Models through Moreau-Yosida Regularization and Accelerate through Compiler Co-design</title>
+    <link href="http://arxiv.org/abs/2306.15656"/>
+    <id>http://arxiv.org/abs/2306.15656</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Guo_F/0/1/0/all/0/1&quot;&gt;Fu-Ming Guo&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper introduces SparseOptimizer, a novel deep learning optimizer that
+exploits Moreau-Yosida regularization to naturally induce sparsity in large
+language models such as BERT, ALBERT and GPT. Key to the design of
+SparseOptimizer is an embedded shrinkage operator, which imparts sparsity
+directly within the optimization process. This operator, backed by a sound
+theoretical framework, includes an analytical solution, thereby reinforcing the
+optimizer&#39;s robustness and efficacy. Crucially, SparseOptimizer&#39;s plug-and-play
+functionality eradicates the need for code modifications, making it a
+universally adaptable tool for a wide array of large language models. Empirical
+evaluations on benchmark datasets such as GLUE, RACE, SQuAD1, and SQuAD2
+confirm that SparseBERT and SparseALBERT, when sparsified using
+SparseOptimizer, achieve performance comparable to their dense counterparts,
+BERT and ALBERT, while significantly reducing their parameter count. Further,
+this work proposes an innovative optimizer-compiler co-design strategy,
+demonstrating the potential of inference acceleration (\textbf{3.37x},
+\textbf{6.30x}, and \textbf{7.15x} in comparison with Pytorch, TensorFlow, and
+LLVM generic compile, respectively) in SparseBERT when paired with an
+appropriately designed compiler. This study represents a significant step
+forward in the evolution of efficient, scalable, and high-performing large
+language models, setting a precedent for future exploration and optimization in
+this domain. The SparseOptimizer code and SparseALBERT model will be made
+available upon paper acceptance.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Complexity</name>
+      <uri>https://arxiv.org/list/cs.CC/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Approximating Median Points in a Convex Polygon</title>
+    <link href="http://arxiv.org/abs/2306.15097"/>
+    <id>http://arxiv.org/abs/2306.15097</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Mohammadi_R/0/1/0/all/0/1&quot;&gt;Reyhaneh Mohammadi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Devulapalli_R/0/1/0/all/0/1&quot;&gt;Raghuveer Devulapalli&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Behroozi_M/0/1/0/all/0/1&quot;&gt;Mehdi Behroozi&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We develop two simple and efficient approximation algorithms for the
+continuous $k$-medians problems, where we seek to find the optimal location of
+$k$ facilities among a continuum of client points in a convex polygon $C$ with
+$n$ vertices in a way that the total (average) Euclidean distance between
+clients and their nearest facility is minimized. Both algorithms run in
+$\mathcal{O}(n + k + k \log n)$ time. Our algorithms produce solutions within a
+factor of 2.002 of optimality. In addition, our simulation results applied to
+the convex hulls of the State of Massachusetts and the Town of Brookline, MA
+show that our algorithms generally perform within a range of 5\% to 22\% of
+optimality in practice.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Heuristic Approaches to Obtain Low-Discrepancy Point Sets via Subset Selection</title>
+    <link href="http://arxiv.org/abs/2306.15276"/>
+    <id>http://arxiv.org/abs/2306.15276</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Clement_F/0/1/0/all/0/1&quot;&gt;Fran&amp;#xe7;ois Cl&amp;#xe9;ment&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Doerr_C/0/1/0/all/0/1&quot;&gt;Carola Doerr&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Paquete_L/0/1/0/all/0/1&quot;&gt;Lu&amp;#xed;s Paquete&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Building upon the exact methods presented in our earlier work [J. Complexity,
+2022], we introduce a heuristic approach for the star discrepancy subset
+selection problem. The heuristic gradually improves the current-best subset by
+replacing one of its elements at a time. While we prove that the heuristic does
+not necessarily return an optimal solution, we obtain very promising results
+for all tested dimensions. For example, for moderate point set sizes $30 \leq n
+\leq 240$ in dimension 6, we obtain point sets with $L_{\infty}$ star
+discrepancy up to 35% better than that of the first $n$ points of the Sobol&#39;
+sequence. Our heuristic works in all dimensions, the main limitation being the
+precision of the discrepancy calculation algorithms.
+&lt;/p&gt;
+&lt;p&gt;We also provide a comparison with a recent energy functional introduced by
+Steinerberger [J. Complexity, 2019], showing that our heuristic performs better
+on all tested instances.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Insertion-Only Dynamic Connectivity in General Disk Graphs</title>
+    <link href="http://arxiv.org/abs/2306.15338"/>
+    <id>http://arxiv.org/abs/2306.15338</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kaplan_H/0/1/0/all/0/1&quot;&gt;Haim Kaplan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Klost_K/0/1/0/all/0/1&quot;&gt;Katharina Klost&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Knorr_K/0/1/0/all/0/1&quot;&gt;Kristin Knorr&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mulzer_W/0/1/0/all/0/1&quot;&gt;Wolfgang Mulzer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Roditty_L/0/1/0/all/0/1&quot;&gt;Liam Roditty&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Let $S \subseteq \mathbb{R}^2$ be a set of $n$ \emph{sites} in the plane, so
+that every site $s \in S$ has an \emph{associated radius} $r_s &amp;gt; 0$. Let $D(S)$
+be the \emph{disk intersection graph} defined by $S$, i.e., the graph with
+vertex set $S$ and an edge between two distinct sites $s, t \in S$ if and only
+if the disks with centers $s$, $t$ and radii $r_s$, $r_t$ intersect. Our goal
+is to design data structures that maintain the connectivity structure of $D(S)$
+as $S$ changes dynamically over time. We consider the incremental case, where
+new sites can be inserted into $S$. While previous work focuses on data
+structures whose running time depends on the ratio between the smallest and the
+largest site in $S$, we present a data structure with $O(\alpha(n))$ amortized
+query time and $O(\log^6 n)$ expected amortized insertion time.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Approximate Nearest Neighbor Searching with Non-Euclidean and Weighted Distances</title>
+    <link href="http://arxiv.org/abs/2306.15621"/>
+    <id>http://arxiv.org/abs/2306.15621</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Abdelkader_A/0/1/0/all/0/1&quot;&gt;Ahmed Abdelkader&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arya_S/0/1/0/all/0/1&quot;&gt;Sunil Arya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fonseca_G/0/1/0/all/0/1&quot;&gt;Guilherme D. da Fonseca&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mount_D/0/1/0/all/0/1&quot;&gt;David M. Mount&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We present a new approach to approximate nearest-neighbor queries in fixed
+dimension under a variety of non-Euclidean distances. We are given a set $S$ of
+$n$ points in $\mathbb{R}^d$, an approximation parameter $\varepsilon &amp;gt; 0$, and
+a distance function that satisfies certain smoothness and growth-rate
+assumptions. The objective is to preprocess $S$ into a data structure so that
+for any query point $q$ in $\mathbb{R}^d$, it is possible to efficiently report
+any point of $S$ whose distance from $q$ is within a factor of $1+\varepsilon$
+of the actual closest point.
+&lt;/p&gt;
+&lt;p&gt;Prior to this work, the most efficient data structures for approximate
+nearest-neighbor searching in spaces of constant dimensionality applied only to
+the Euclidean metric. This paper overcomes this limitation through a method
+called convexification. For admissible distance functions, the proposed data
+structures answer queries in logarithmic time using $O(n \log (1 / \varepsilon)
+/ \varepsilon^{d/2})$ space, nearly matching the best known bounds for the
+Euclidean metric. These results apply to both convex scaling distance functions
+(including the Mahalanobis distance and weighted Minkowski metrics) and Bregman
+divergences (including the Kullback-Leibler divergence and the Itakura-Saito
+distance).
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Computational Geometry: Optimal Area-Sensitive Bounds for Polytope Approximation</title>
+    <link href="http://arxiv.org/abs/2306.15648"/>
+    <id>http://arxiv.org/abs/2306.15648</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Arya_S/0/1/0/all/0/1&quot;&gt;Sunil Arya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fonseca_G/0/1/0/all/0/1&quot;&gt;Guilherme D. da Fonseca&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mount_D/0/1/0/all/0/1&quot;&gt;David M. Mount&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Approximating convex bodies is a fundamental question in geometry and has a
+wide variety of applications. Given a convex body $K$ of diameter $\Delta$ in
+$\mathbb{R}^d$ for fixed $d$, the objective is to minimize the number of
+vertices (alternatively, the number of facets) of an approximating polytope for
+a given Hausdorff error $\varepsilon$. The best known uniform bound, due to
+Dudley (1974), shows that $O((\Delta/\varepsilon)^{(d-1)/2})$ facets suffice.
+While this bound is optimal in the case of a Euclidean ball, it is far from
+optimal for ``skinny&#39;&#39; convex bodies.
+&lt;/p&gt;
+&lt;p&gt;A natural way to characterize a convex object&#39;s skinniness is in terms of its
+relationship to the Euclidean ball. Given a convex body $K$, define its surface
+diameter $\Delta_{d-1}$ to be the diameter of a Euclidean ball of the same
+surface area as $K$. It follows from generalizations of the isoperimetric
+inequality that $\Delta \geq \Delta_{d-1}$.
+&lt;/p&gt;
+&lt;p&gt;We show that, under the assumption that the width of the body in any
+direction is at least $\varepsilon$, it is possible to approximate a convex
+body using $O((\Delta_{d-1}/\varepsilon)^{(d-1)/2})$ facets. This bound is
+never worse than the previous bound and may be significantly better for skinny
+bodies. The bound is tight, in the sense that for any value of $\Delta_{d-1}$,
+there exist convex bodies that, up to constant factors, require this many
+facets.
+&lt;/p&gt;
+&lt;p&gt;The improvement arises from a novel approach to sampling points on the
+boundary of a convex body. We employ a classical concept from convexity, called
+Macbeath regions. We demonstrate that Macbeath regions in $K$ and $K$&#39;s polar
+behave much like polar pairs. We then apply known results on the Mahler volume
+to bound their number.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Computational Geometry</name>
+      <uri>https://arxiv.org/list/cs.CG/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Optimally Repurposing Existing Algorithms to Obtain Exponential-Time Approximations</title>
+    <link href="http://arxiv.org/abs/2306.15331"/>
+    <id>http://arxiv.org/abs/2306.15331</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Esmer_B/0/1/0/all/0/1&quot;&gt;Bar&amp;#x131;&amp;#x15f; Can Esmer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kulik_A/0/1/0/all/0/1&quot;&gt;Ariel Kulik&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Marx_D/0/1/0/all/0/1&quot;&gt;D&amp;#xe1;niel Marx&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Neuen_D/0/1/0/all/0/1&quot;&gt;Daniel Neuen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sharma_R/0/1/0/all/0/1&quot;&gt;Roohani Sharma&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The goal of this paper is to understand how exponential-time approximation
+algorithms can be obtained from existing polynomial-time approximation
+algorithms, existing parameterized exact algorithms, and existing parameterized
+approximation algorithms. More formally, we consider a monotone subset
+minimization problem over a universe of size $n$ (e.g., Vertex Cover or
+Feedback Vertex Set). We have access to an algorithm that finds an
+$\alpha$-approximate solution in time $c^k \cdot n^{O(1)}$ if a solution of
+size $k$ exists (and more generally, an extension algorithm that can
+approximate in a similar way if a set can be extended to a solution with $k$
+further elements). Our goal is to obtain a $d^n \cdot n^{O(1)}$ time
+$\beta$-approximation algorithm for the problem with $d$ as small as possible.
+That is, for every fixed $\alpha,c,\beta \geq 1$, we would like to determine
+the smallest possible $d$ that can be achieved in a model where our
+problem-specific knowledge is limited to checking the feasibility of a solution
+and invoking the $\alpha$-approximate extension algorithm. Our results
+completely resolve this question:
+&lt;/p&gt;
+&lt;p&gt;(1) For every fixed $\alpha,c,\beta \geq 1$, a simple algorithm
+(``approximate monotone local search&#39;&#39;) achieves the optimum value of $d$.
+&lt;/p&gt;
+&lt;p&gt;(2) Given $\alpha,c,\beta \geq 1$, we can efficiently compute the optimum $d$
+up to any precision $\varepsilon &amp;gt; 0$.
+&lt;/p&gt;
+&lt;p&gt;Earlier work presented algorithms (but no lower bounds) for the special case
+$\alpha = \beta = 1$ [Fomin et al., J. ACM 2019] and for the special case
+$\alpha = \beta &amp;gt; 1$ [Esmer et al., ESA 2022]. Our work generalizes these
+results and in particular confirms that the earlier algorithms are optimal in
+these special cases.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Robust and Space-Efficient Dual Adversary Quantum Query Algorithms</title>
+    <link href="http://arxiv.org/abs/2306.15040"/>
+    <id>http://arxiv.org/abs/2306.15040</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Czekanski_M/0/1/0/all/0/1&quot;&gt;Michael Czekanski&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Kimmel_S/0/1/0/all/0/1&quot;&gt;Shelby Kimmel&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Witter_R/0/1/0/all/0/1&quot;&gt;R. Teal Witter&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The general adversary dual is a powerful tool in quantum computing because it
+gives a query-optimal bounded-error quantum algorithm for deciding any Boolean
+function. Unfortunately, the algorithm uses linear qubits in the worst case,
+and only works if the constraints of the general adversary dual are exactly
+satisfied. The challenge of improving the algorithm is that it is brittle to
+arbitrarily small errors since it relies on a reflection over a span of
+vectors. We overcome this challenge and build a robust dual adversary algorithm
+that can handle approximately satisfied constraints. As one application of our
+robust algorithm, we prove that for any Boolean function with polynomially many
+1-valued inputs (or in fact a slightly weaker condition) there is a
+query-optimal algorithm that uses logarithmic qubits. As another application,
+we prove that numerically derived, approximate solutions to the general
+adversary dual give a bounded-error quantum algorithm under certain conditions.
+Further, we show that these conditions empirically hold with reasonable
+iterations for Boolean functions with small domains. We also develop several
+tools that may be of independent interest, including a robust approximate
+spectral gap lemma, a method to compress a general adversary dual solution
+using the Johnson-Lindenstrauss lemma, and open-source code to find solutions
+to the general adversary dual.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Synthesis of Quantum Vector Databases Based on Grovers Algorithm</title>
+    <link href="http://arxiv.org/abs/2306.15295"/>
+    <id>http://arxiv.org/abs/2306.15295</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Pronin_C/0/1/0/all/0/1&quot;&gt;Cesar Borisovich Pronin&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Ostroukh_A/0/1/0/all/0/1&quot;&gt;Andrey Vladimirovich Ostroukh&lt;/a&gt;&lt;/p&gt;&lt;p&gt;This paper describes a method for using Grovers algorithm to create a quantum
+vector database, the database stores embeddings based on Controlled-S gates,
+which represent a binary numerical value. This value represents the embeddings
+value. The process of creating meaningful embeddings is handled by a classical
+computer and the search process is handled by the quantum computer. This search
+approach might be beneficial for a large enough database, or it could be seen
+as a very qubit-efficient (super dense) way for storing data on a quantum
+computer, since the proposed circuit stores many embeddings inside one quantum
+register simultaneously.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On the Deque and Rique Numbers of Complete and Complete Bipartite Graphs</title>
+    <link href="http://arxiv.org/abs/2306.15395"/>
+    <id>http://arxiv.org/abs/2306.15395</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bekos_M/0/1/0/all/0/1&quot;&gt;Michael A. Bekos&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kaufmann_M/0/1/0/all/0/1&quot;&gt;Michael Kaufmann&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pavlidi_M/0/1/0/all/0/1&quot;&gt;Maria Eleni Pavlidi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Rieger_X/0/1/0/all/0/1&quot;&gt;Xenia Rieger&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Several types of linear layouts of graphs are obtained by leveraging known
+data structures; the most notable representatives are the stack and the queue
+layouts. In this content, given a data structure, one seeks to specify an order
+of the vertices of the graph and a partition of its edges into pages, such that
+the endpoints of the edges assigned to each page can be processed by the given
+data structure in the underlying order. In this paper, we study deque and rique
+layouts of graphs obtained by leveraging the double-ended queue and the
+restricted-input double-ended queue (or deque and rique, for short),
+respectively. Hence, they generalize both the stack and the queue layouts. We
+focus on complete and complete bipartite graphs and present bounds on their
+deque- and rique-numbers, that is, on the minimum number of pages needed by any
+of these two types of linear layouts.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Scheduling with a Limited Testing Budget</title>
+    <link href="http://arxiv.org/abs/2306.15597"/>
+    <id>http://arxiv.org/abs/2306.15597</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Damerius_C/0/1/0/all/0/1&quot;&gt;Christoph Damerius&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kling_P/0/1/0/all/0/1&quot;&gt;Peter Kling&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Li_M/0/1/0/all/0/1&quot;&gt;Minming Li&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Xu_C/0/1/0/all/0/1&quot;&gt;Chenyang Xu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhang_R/0/1/0/all/0/1&quot;&gt;Ruilong Zhang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Scheduling with testing falls under the umbrella of the research on
+optimization with explorable uncertainty. In this model, each job has an upper
+limit on its processing time that can be decreased to a lower limit (possibly
+unknown) by some preliminary action (testing). Recently, D{\&quot;{u}}rr et al.
+\cite{DBLP:journals/algorithmica/DurrEMM20} has studied a setting where testing
+a job takes a unit time, and the goal is to minimize total completion time or
+makespan on a single machine. In this paper, we extend their problem to the
+budget setting in which each test consumes a job-specific cost, and we require
+that the total testing cost cannot exceed a given budget. We consider the
+offline variant (the lower processing time is known) and the oblivious variant
+(the lower processing time is unknown) and aim to minimize the total completion
+time or makespan on a single machine.
+&lt;/p&gt;
+&lt;p&gt;For the total completion time objective, we show NP-hardness and derive a
+PTAS for the offline variant based on a novel LP rounding scheme. We give a
+$(4+\epsilon)$-competitive algorithm for the oblivious variant based on a
+framework inspired by the worst-case lower-bound instance. For the makespan
+objective, we give an FPTAS for the offline variant and a
+$(2+\epsilon)$-competitive algorithm for the oblivious variant. Our algorithms
+for the oblivious variants under both objectives run in time
+$O(poly(n/\epsilon))$. Lastly, we show that our results are essentially optimal
+by providing matching lower bounds.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
+    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Asynchronous Algorithmic Alignment with Cocycles</title>
+    <link href="http://arxiv.org/abs/2306.15632"/>
+    <id>http://arxiv.org/abs/2306.15632</id>
+    <updated>2023-06-28T00:30:00+00:00</updated>
+    <content type="html" xml:lang="en">
+    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Dudzik_A/0/1/0/all/0/1&quot;&gt;Andrew Dudzik&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Glehn_T/0/1/0/all/0/1&quot;&gt;Tamara von Glehn&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pascanu_R/0/1/0/all/0/1&quot;&gt;Razvan Pascanu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Velickovic_P/0/1/0/all/0/1&quot;&gt;Petar Veli&amp;#x10d;kovi&amp;#x107;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;State-of-the-art neural algorithmic reasoners make use of message passing in
+graph neural networks (GNNs). But typical GNNs blur the distinction between the
+definition and invocation of the message function, forcing a node to send
+messages to its neighbours at every layer, synchronously. When applying GNNs to
+learn to execute dynamic programming algorithms, however, on most steps only a
+handful of the nodes would have meaningful updates to send. One, hence, runs
+the risk of inefficiencies by sending too much irrelevant data across the graph
+-- with many intermediate GNN steps having to learn identity functions. In this
+work, we explicitly separate the concepts of node state update and message
+function invocation. With this separation, we obtain a mathematical formulation
+that allows us to reason about asynchronous computation in both algorithms and
+neural networks.
+&lt;/p&gt;
+  </content>
+    <author>
+      <name>arXiv: Data Structures and Algorithms</name>
+      <uri>https://arxiv.org/list/cs.DS/recent</uri>
+    </author>
+  </entry>
+
+
+  <entry xml:lang="en">
     <title type="html" xml:lang="en">DifferentialPrivacy.org: Open problem - Better privacy guarantees for larger groups</title>
     <link href="https://differentialprivacy.org/open-problem-better-privacy-guarantees-for-larger-groups/"/>
     <id>https://differentialprivacy.org/open-problem-better-privacy-guarantees-for-larger-groups/</id>
@@ -1172,451 +1628,6 @@ some cases.
     <author>
       <name>arXiv: Data Structures and Algorithms</name>
       <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On boundedness of zeros of the independence polynomial of tor</title>
-    <link href="http://arxiv.org/abs/2306.12934"/>
-    <id>http://arxiv.org/abs/2306.12934</id>
-    <updated>2023-06-23T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Boer_D/0/1/0/all/0/1&quot;&gt;David de Boer&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Buys_P/0/1/0/all/0/1&quot;&gt;Pjotr Buys&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Peters_H/0/1/0/all/0/1&quot;&gt;Han Peters&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/math/1/au:+Regts_G/0/1/0/all/0/1&quot;&gt;Guus Regts&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study boundedness of zeros of the independence polynomial of tori for
-sequences of tori converging to the integer lattice. We prove that zeros are
-bounded for sequences of balanced tori, but unbounded for sequences of highly
-unbalanced tori. Here balanced means that the size of the torus is at most
-exponential in the shortest side length, while highly unbalanced means that the
-longest side length of the torus is super exponential in the product over the
-other side lengths cubed. We discuss implications of our results to the
-existence of efficient algorithms for approximating the independence polynomial
-on tori.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: SQ Lower Bounds for Learning Bounded Covariance GMMs</title>
-    <link href="http://arxiv.org/abs/2306.13057"/>
-    <id>http://arxiv.org/abs/2306.13057</id>
-    <updated>2023-06-23T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Diakonikolas_I/0/1/0/all/0/1&quot;&gt;Ilias Diakonikolas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kane_D/0/1/0/all/0/1&quot;&gt;Daniel M. Kane&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Pittas_T/0/1/0/all/0/1&quot;&gt;Thanasis Pittas&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zarifis_N/0/1/0/all/0/1&quot;&gt;Nikos Zarifis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study the complexity of learning mixtures of separated Gaussians with
-common unknown bounded covariance matrix. Specifically, we focus on learning
-Gaussian mixture models (GMMs) on $\mathbb{R}^d$ of the form $P= \sum_{i=1}^k
-w_i \mathcal{N}(\boldsymbol \mu_i,\mathbf \Sigma_i)$, where $\mathbf \Sigma_i =
-\mathbf \Sigma \preceq \mathbf I$ and $\min_{i \neq j} \| \boldsymbol \mu_i -
-\boldsymbol \mu_j\|_2 \geq k^\epsilon$ for some $\epsilon&amp;gt;0$. Known learning
-algorithms for this family of GMMs have complexity $(dk)^{O(1/\epsilon)}$. In
-this work, we prove that any Statistical Query (SQ) algorithm for this problem
-requires complexity at least $d^{\Omega(1/\epsilon)}$. In the special case
-where the separation is on the order of $k^{1/2}$, we additionally obtain
-fine-grained SQ lower bounds with the correct exponent. Our SQ lower bounds
-imply similar lower bounds for low-degree polynomial tests. Conceptually, our
-results provide evidence that known algorithms for this problem are nearly best
-possible.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">Computational Complexity: Don&#39;t Negotiate with Logic</title>
-    <link href="https://blog.computationalcomplexity.org/2023/06/dont-negotiate-with-logic.html"/>
-    <id>tag:blogger.com,1999:blog-3722233.post-1971310189381809136</id>
-    <updated>2023-06-22T17:15:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Computer science and mathematicians often try to use logic to negotiate whether it be at a university or life in general. I&#39;ve tried it myself and it doesn&#39;t usually work. Even if you have that (rare) perfect argument, remember &lt;a href=&quot;https://www.goodreads.com/quotes/21810-it-is-difficult-to-get-a-man-to-understand-something&quot;&gt;Upton Sinclair&#39;s words&lt;/a&gt;:&amp;nbsp;&lt;i&gt;It is difficult to get a man to understand something, when his salary depends on his not understanding it&lt;/i&gt;.&lt;/p&gt;&lt;p&gt;So make sure their salary depends on them understanding it. Or more to the point, in a world with limited resources, why it makes sense for them to help you.&amp;nbsp;&lt;/p&gt;&lt;ol style=&quot;text-align: left;&quot;&gt;&lt;li&gt;Ideally go for the win-win. Why a certain decision helps the department/college/university as well as yourself. Asking for a small investment as a seed towards a large grant for example.&lt;/li&gt;&lt;li&gt;How would the decision make you or your students more successful? The success of a department is measured by the success of the faculty and students. On the other hand, why would a different decision hold you and your students back.&lt;/li&gt;&lt;/ol&gt;&lt;div&gt;Even outside the university, make your objectives in line with the objectives of the person you are negotiating with to lead to a better outcome.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Of course sometimes you are haggling over a price or a salary when it really is a zero-sum game. There it&#39;s good to know the &lt;a href=&quot;https://www.investopedia.com/terms/b/best-alternative-to-a-negotiated-agreement-batna.asp&quot;&gt;BATNA&lt;/a&gt;, Best Alternative To a Negotiated Agreement, for yourself and the other entity. In other words, if they aren&#39;t selling to you what other options do you and they have?&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;There are whole books written about negotiating strategies. Mostly it comes down to making it work for both parties. That&#39;s what matters, not the logic.&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By Lance Fortnow&lt;/p&gt;
-  </content>
-    <author>
-      <name>Computational Complexity</name>
-      <uri>http://blog.computationalcomplexity.org/</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Complexity: Quantum and classical query complexities for determining connectedness of matroids</title>
-    <link href="http://arxiv.org/abs/2306.12103"/>
-    <id>http://arxiv.org/abs/2306.12103</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Huang_X/0/1/0/all/0/1&quot;&gt;Xiaowei Huang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Feng_S/0/1/0/all/0/1&quot;&gt;Shiguang Feng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Li_L/0/1/0/all/0/1&quot;&gt;Lvzhou Li&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Connectivity is a fundamental structural property of matroids, and has been
-studied algorithmically over 50 years. In 1974, Cunningham proposed a
-deterministic algorithm consuming $O(n^{2})$ queries to the independence oracle
-to determine whether a matroid is connected. Since then, no algorithm, not even
-a random one, has worked better. To the best of our knowledge, the classical
-query complexity lower bound and the quantum complexity for this problem have
-not been considered. Thus, in this paper we are devoted to addressing these
-issues, and our contributions are threefold as follows: (i) First, we prove
-that the randomized query complexity of determining whether a matroid is
-connected is $\Omega(n^2)$ and thus the algorithm proposed by Cunningham is
-optimal in classical computing. (ii) Second, we present a quantum algorithm
-with $O(n^{3/2})$ queries, which exhibits provable quantum speedups over
-classical ones. (iii) Third, we prove that any quantum algorithm requires
-$\Omega(n)$ queries, which indicates that quantum algorithms can achieve at
-most a quadratic speedup over classical ones. Therefore, we have a relatively
-comprehensive understanding of the potential of quantum computing in
-determining the connectedness of matroids.\
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Complexity</name>
-      <uri>https://arxiv.org/list/cs.CC/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Computational Geometry: Geometric Algorithms for $k$-NN Poisoning</title>
-    <link href="http://arxiv.org/abs/2306.12377"/>
-    <id>http://arxiv.org/abs/2306.12377</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Centurion_D/0/1/0/all/0/1&quot;&gt;Diego Ihara Centurion&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Chubarian_K/0/1/0/all/0/1&quot;&gt;Karine Chubarian&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Fan_B/0/1/0/all/0/1&quot;&gt;Bohan Fan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sgherzi_F/0/1/0/all/0/1&quot;&gt;Francesco Sgherzi&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Radhakrishnan_T/0/1/0/all/0/1&quot;&gt;Thiruvenkadam S Radhakrishnan&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sidiropoulos_A/0/1/0/all/0/1&quot;&gt;Anastasios Sidiropoulos&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Straight_A/0/1/0/all/0/1&quot;&gt;Angelo Straight&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We propose a label poisoning attack on geometric data sets against
-$k$-nearest neighbor classification. We provide an algorithm that can compute
-an $\varepsilon n$-additive approximation of the optimal poisoning in $n\cdot
-2^{2^{O(d+k/\varepsilon)}}$ time for a given data set $X \in \mathbb{R}^d$,
-where $|X| = n$. Our algorithm achieves its objectives through the application
-of multi-scale random partitions.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Computational Geometry</name>
-      <uri>https://arxiv.org/list/cs.CG/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Fast quantum algorithm for differential equations</title>
-    <link href="http://arxiv.org/abs/2306.11802"/>
-    <id>http://arxiv.org/abs/2306.11802</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Bagherimehrab_M/0/1/0/all/0/1&quot;&gt;Mohsen Bagherimehrab&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Nakaji_K/0/1/0/all/0/1&quot;&gt;Kouhei Nakaji&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Wiebe_N/0/1/0/all/0/1&quot;&gt;Nathan Wiebe&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/quant-ph/1/au:+Aspuru_Guzik_A/0/1/0/all/0/1&quot;&gt;Al&amp;#xe1;n Aspuru-Guzik&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Partial differential equations (PDEs) are ubiquitous in science and
-engineering. Prior quantum algorithms for solving the system of linear
-algebraic equations obtained from discretizing a PDE have a computational
-complexity that scales at least linearly with the condition number $\kappa$ of
-the matrices involved in the computation. For many practical applications,
-$\kappa$ scales polynomially with the size $N$ of the matrices, rendering a
-polynomial-in-$N$ complexity for these algorithms. Here we present a quantum
-algorithm with a complexity that is polylogarithmic in $N$ but is independent
-of $\kappa$ for a large class of PDEs. Our algorithm generates a quantum state
-that enables extracting features of the solution. Central to our methodology is
-using a wavelet basis as an auxiliary system of coordinates in which the
-condition number of associated matrices is independent of $N$ by a simple
-diagonal preconditioner. We present numerical simulations showing the effect of
-the wavelet preconditioner for several differential equations. Our work could
-provide a practical way to boost the performance of quantum-simulation
-algorithms where standard methods are used for discretization.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: A Parameterized Algorithm for Flat Folding</title>
-    <link href="http://arxiv.org/abs/2306.11939"/>
-    <id>http://arxiv.org/abs/2306.11939</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Eppstein_D/0/1/0/all/0/1&quot;&gt;David Eppstein&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We prove that testing the flat foldability of an origami crease pattern
-(either labeled with mountain and valley folds, or unlabeled) is
-fixed-parameter tractable when parameterized by the ply of the flat-folded
-state and by the treewidth of an associated planar graph, the cell adjacency
-graph of an arrangement of polygons formed by the flat-folded state. For flat
-foldings of bounded ply, our algorithm is single-exponential in the treewidth;
-this dependence on treewidth is necessary under the exponential time
-hypothesis.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Near-Optimal Dynamic Rounding of Fractional Matchings in Bipartite Graphs</title>
-    <link href="http://arxiv.org/abs/2306.11828"/>
-    <id>http://arxiv.org/abs/2306.11828</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Bhattacharya_S/0/1/0/all/0/1&quot;&gt;Sayan Bhattacharya&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Kiss_P/0/1/0/all/0/1&quot;&gt;Peter Kiss&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Sidford_A/0/1/0/all/0/1&quot;&gt;Aaron Sidford&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wajc_D/0/1/0/all/0/1&quot;&gt;David Wajc&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We study dynamic $(1-\epsilon)$-approximate rounding of fractional matchings
--- a key ingredient in numerous breakthroughs in the dynamic graph algorithms
-literature. Our first contribution is a surprisingly simple deterministic
-rounding algorithm in bipartite graphs with amortized update time
-$O(\epsilon^{-1} \log^2 (\epsilon^{-1} \cdot n))$, matching an (unconditional)
-recourse lower bound of $\Omega(\epsilon^{-1})$ up to logarithmic factors.
-Moreover, this algorithm&#39;s update time improves provided the minimum (non-zero)
-weight in the fractional matching is lower bounded throughout. Combining this
-algorithm with novel dynamic \emph{partial rounding} algorithms to increase
-this minimum weight, we obtain several algorithms that improve this dependence
-on $n$. For example, we give a high-probability randomized algorithm with
-$\tilde{O}(\epsilon^{-1}\cdot (\log\log n)^2)$-update time against adaptive
-adversaries. (We use Soft-Oh notation, $\tilde{O}$, to suppress polylogarithmic
-factors in the argument, i.e., $\tilde{O}(f)=O(f\cdot \mathrm{poly}(\log f))$.)
-Using our rounding algorithms, we also round known $(1-\epsilon)$-decremental
-fractional bipartite matching algorithms with no asymptotic overhead, thus
-improving on state-of-the-art algorithms for the decremental bipartite matching
-problem. Further, we provide extensions of our results to general graphs and to
-maintaining almost-maximal matchings.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: On the Optimal Bounds for Noisy Computing</title>
-    <link href="http://arxiv.org/abs/2306.11951"/>
-    <id>http://arxiv.org/abs/2306.11951</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhu_B/0/1/0/all/0/1&quot;&gt;Banghua Zhu&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_Z/0/1/0/all/0/1&quot;&gt;Ziao Wang&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ghaddar_N/0/1/0/all/0/1&quot;&gt;Nadim Ghaddar&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jiao_J/0/1/0/all/0/1&quot;&gt;Jiantao Jiao&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wang_L/0/1/0/all/0/1&quot;&gt;Lele Wang&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We revisit the problem of computing with noisy information considered in
-Feige et al. 1994, which includes computing the OR function from noisy queries,
-and computing the MAX, SEARCH and SORT functions from noisy pairwise
-comparisons. For $K$ given elements, the goal is to correctly recover the
-desired function with probability at least $1-\delta$ when the outcome of each
-query is flipped with probability $p$. We consider both the adaptive sampling
-setting where each query can be adaptively designed based on past outcomes, and
-the non-adaptive sampling setting where the query cannot depend on past
-outcomes. The prior work provides tight bounds on the worst-case query
-complexity in terms of the dependence on $K$. However, the upper and lower
-bounds do not match in terms of the dependence on $\delta$ and $p$. We improve
-the lower bounds for all the four functions under both adaptive and
-non-adaptive query models. Most of our lower bounds match the upper bounds up
-to constant factors when either $p$ or $\delta$ is bounded away from $0$, while
-the ratio between the best prior upper and lower bounds goes to infinity when
-$p\rightarrow 0$ or $p\rightarrow 1/2$. On the other hand, we also provide
-matching upper and lower bounds for the number of queries in expectation,
-improving both the upper and lower bounds for the variable-length query model.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Sampling Individually-Fair Rankings that are Always Group Fair</title>
-    <link href="http://arxiv.org/abs/2306.11964"/>
-    <id>http://arxiv.org/abs/2306.11964</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Gorantla_S/0/1/0/all/0/1&quot;&gt;Sruthi Gorantla&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mehrotra_A/0/1/0/all/0/1&quot;&gt;Anay Mehrotra&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Deshpande_A/0/1/0/all/0/1&quot;&gt;Amit Deshpande&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Louis_A/0/1/0/all/0/1&quot;&gt;Anand Louis&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Rankings on online platforms help their end-users find the relevant
-information -- people, news, media, and products -- quickly. Fair ranking
-tasks, which ask to rank a set of items to maximize utility subject to
-satisfying group-fairness constraints, have gained significant interest in the
-Algorithmic Fairness, Information Retrieval, and Machine Learning literature.
-Recent works, however, identify uncertainty in the utilities of items as a
-primary cause of unfairness and propose introducing randomness in the output.
-This randomness is carefully chosen to guarantee an adequate representation of
-each item (while accounting for the uncertainty). However, due to this
-randomness, the output rankings may violate group fairness constraints. We give
-an efficient algorithm that samples rankings from an individually-fair
-distribution while ensuring that every output ranking is group fair. The
-expected utility of the output ranking is at least $\alpha$ times the utility
-of the optimal fair solution. Here, $\alpha$ depends on the utilities,
-position-discounts, and constraints -- it approaches 1 as the range of
-utilities or the position-discounts shrinks, or when utilities satisfy
-distributional assumptions. Empirically, we observe that our algorithm achieves
-individual and group fairness and that Pareto dominates the state-of-the-art
-baselines.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Block-Wise Index Modulation and Receiver Design for High-Mobility OTFS Communications</title>
-    <link href="http://arxiv.org/abs/2306.12042"/>
-    <id>http://arxiv.org/abs/2306.12042</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Qian_M/0/1/0/all/0/1&quot;&gt;Mi Qian&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ji_F/0/1/0/all/0/1&quot;&gt;Fei Ji&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Ge_Y/0/1/0/all/0/1&quot;&gt;Yao Ge&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Wen_M/0/1/0/all/0/1&quot;&gt;Miaowen Wen&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Cheng_X/0/1/0/all/0/1&quot;&gt;Xiang Cheng&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Poor_H/0/1/0/all/0/1&quot;&gt;H. Vincent Poor&lt;/a&gt;&lt;/p&gt;&lt;p&gt;As a promising technique for high-mobility wireless communications,
-orthogonal time frequency space (OTFS) has been proved to enjoy excellent
-advantages with respect to traditional orthogonal frequency division
-multiplexing (OFDM). Although multiple studies have considered index modulation
-(IM) based OTFS (IM-OTFS) schemes to further improve system performance, a
-challenging and open problem is the development of effective IM schemes and
-efficient receivers for practical OTFS systems that must operate in the
-presence of channel delays and Doppler shifts. In this paper, we propose two
-novel block-wise IM schemes for OTFS systems, named delay-IM with OTFS
-(DeIM-OTFS) and Doppler-IM with OTFS (DoIM-OTFS), where a block of
-delay/Doppler resource bins are activated simultaneously. Based on a maximum
-likelihood (ML) detector, we analyze upper bounds on the average bit error
-rates for the proposed DeIM-OTFS and DoIM-OTFS schemes, and verify their
-performance advantages over the existing IM-OTFS systems. We also develop a
-multi-layer joint symbol and activation pattern detection (MLJSAPD) algorithm
-and a customized message passing detection (CMPD) algorithm for our proposed
-DeIMOTFS and DoIM-OTFS systems with low complexity. Simulation results
-demonstrate that our proposed MLJSAPD and CMPD algorithms can achieve desired
-performance with robustness to the imperfect channel state information (CSI).
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Optimal (degree+1)-Coloring in Congested Clique</title>
-    <link href="http://arxiv.org/abs/2306.12071"/>
-    <id>http://arxiv.org/abs/2306.12071</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Coy_S/0/1/0/all/0/1&quot;&gt;Sam Coy&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Czumaj_A/0/1/0/all/0/1&quot;&gt;Artur Czumaj&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Davies_P/0/1/0/all/0/1&quot;&gt;Peter Davies&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Mishra_G/0/1/0/all/0/1&quot;&gt;Gopinath Mishra&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We consider the distributed complexity of the (degree+1)-list coloring
-problem, in which each node $u$ of degree $d(u)$ is assigned a palette of
-$d(u)+1$ colors, and the goal is to find a proper coloring using these color
-palettes. The (degree+1)-list coloring problem is a natural generalization of
-the classical $(\Delta+1)$-coloring and $(\Delta+1)$-list coloring problems,
-both being benchmark problems extensively studied in distributed and parallel
-computing. In this paper we settle the complexity of the (degree+1)-list
-coloring problem in the Congested Clique model by showing that it can be solved
-deterministically in a constant number of rounds.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: Online Resource Allocation with Convex-set Machine-Learned Advice</title>
-    <link href="http://arxiv.org/abs/2306.12282"/>
-    <id>http://arxiv.org/abs/2306.12282</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Golrezaei_N/0/1/0/all/0/1&quot;&gt;Negin Golrezaei&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Jaillet_P/0/1/0/all/0/1&quot;&gt;Patrick Jaillet&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Zhou_Z/0/1/0/all/0/1&quot;&gt;Zijie Zhou&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Decision-makers often have access to a machine-learned prediction about
-demand, referred to as advice, which can potentially be utilized in online
-decision-making processes for resource allocation. However, exploiting such
-advice poses challenges due to its potential inaccuracy. To address this issue,
-we propose a framework that enhances online resource allocation decisions with
-potentially unreliable machine-learned (ML) advice. We assume here that this
-advice is represented by a general convex uncertainty set for the demand
-vector.
-&lt;/p&gt;
-&lt;p&gt;We introduce a parameterized class of Pareto optimal online resource
-allocation algorithms that strike a balance between consistent and robust
-ratios. The consistent ratio measures the algorithm&#39;s performance (compared to
-the optimal hindsight solution) when the ML advice is accurate, while the
-robust ratio captures performance under an adversarial demand process when the
-advice is inaccurate. Specifically, in a C-Pareto optimal setting, we maximize
-the robust ratio while ensuring that the consistent ratio is at least C. Our
-proposed C-Pareto optimal algorithm is an adaptive protection level algorithm,
-which extends the classical fixed protection level algorithm introduced in
-Littlewood (2005) and Ball and Queyranne (2009). Solving a complex non-convex
-continuous optimization problem characterizes the adaptive protection level
-algorithm. To complement our algorithms, we present a simple method for
-computing the maximum achievable consistent ratio, which serves as an estimate
-for the maximum value of the ML advice. Additionally, we present numerical
-studies to evaluate the performance of our algorithm in comparison to benchmark
-algorithms. The results demonstrate that by adjusting the parameter C, our
-algorithms effectively strike a balance between worst-case and average
-performance, outperforming the benchmark algorithms.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">arXiv: Data Structures and Algorithms: An efficient, provably exact algorithm for the 0-1 loss linear classification problem</title>
-    <link href="http://arxiv.org/abs/2306.12344"/>
-    <id>http://arxiv.org/abs/2306.12344</id>
-    <updated>2023-06-22T00:30:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p class=&quot;arxiv-authors&quot;&gt;&lt;b&gt;Authors:&lt;/b&gt; &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+He_X/0/1/0/all/0/1&quot;&gt;Xi He&lt;/a&gt;, &lt;a href=&quot;http://arxiv.org/find/cs/1/au:+Little_M/0/1/0/all/0/1&quot;&gt;Max A. Little&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Algorithms for solving the linear classification problem have a long history,
-dating back at least to 1936 with linear discriminant analysis. For linearly
-separable data, many algorithms can obtain the exact solution to the
-corresponding 0-1 loss classification problem efficiently, but for data which
-is not linearly separable, it has been shown that this problem, in full
-generality, is NP-hard. Alternative approaches all involve approximations of
-some kind, including the use of surrogates for the 0-1 loss (for example, the
-hinge or logistic loss) or approximate combinatorial search, none of which can
-be guaranteed to solve the problem exactly. Finding efficient algorithms to
-obtain an exact i.e. globally optimal solution for the 0-1 loss linear
-classification problem with fixed dimension, remains an open problem. In
-research we report here, we detail the construction of a new algorithm,
-incremental cell enumeration (ICE), that can solve the 0-1 loss classification
-problem exactly in polynomial time. To our knowledge, this is the first,
-rigorously-proven polynomial time algorithm for this long-standing problem.
-&lt;/p&gt;
-  </content>
-    <author>
-      <name>arXiv: Data Structures and Algorithms</name>
-      <uri>https://arxiv.org/list/cs.DS/recent</uri>
-    </author>
-  </entry>
-
-
-  <entry xml:lang="en">
-    <title type="html" xml:lang="en">David Eppstein: Flat folding and map folding</title>
-    <link href="https://11011110.github.io/blog/2023/06/21/flat-folding-map.html"/>
-    <id>https://11011110.github.io/blog/2023/06/21/flat-folding-map</id>
-    <updated>2023-06-21T18:34:00+00:00</updated>
-    <content type="html" xml:lang="en">
-    &lt;p&gt;Another day, another new arXiv preprint. Today’s is “A parameterized algorithm for flat folding” (&lt;a href=&quot;https://arxiv.org/abs/2306.11939&quot;&gt;arXiv:2306.11939&lt;/a&gt;, to appear at CCCG 2023), a paper I mentioned in the last slide of my recent talk on &lt;a href=&quot;https://www.ics.uci.edu/~eppstein/pubs/Epp-WPAGP-23.pdf&quot;&gt;graph width parameters for parameterized geometric algorithms&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It’s been known since the work of Marshall Bern and Barry Hayes in SODA 1996 that it’s NP-complete to test whether a given origami pattern (with or without an assignment of a mountain or valley fold to each crease) can be folded flat. Of course, many origami structures are not intended to be flat, but they still often start with a flat base, and testing flatness is a prerequisite for any more complicated foldability question you might have. On the other hand, if a pattern does fold flat, it’s very easy to determine where in plane each piece of paper folds to; the hard part is determining the above-below relation between different pieces of paper that fold to the same points.&lt;/p&gt;
-
-&lt;p&gt;The new paper defines a graph from any folding pattern, whose vertices represent connected regions of the plane that should be covered by the same pieces of paper in the folded state and whose edges represent adjacencies between those regions. An example is shown below.&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/folding-graph.svg&quot; alt=&quot;A folding pattern and its graph&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The left side is the folding pattern (blue for valley folds and red for mountain folds): first, fold the right edge of the paper on top of the rest, along the vertical blue crease, and then second, fold the top right corner down, along the two diagonal creases. The right side is how it should map to a folded state (without an assignment of an above-below relation to the layers in that state) and the resulting graph. The goal of the algorithm is to figure out that the regions of the folding pattern should be layered (bottom to top) in the order: big pentagon, lower right trapezoid, upper right trapezoid, triangle. It determines whether a folded state like that exists, but not the sequence of moves you would need to make to get there. But some care is needed in defining the layer order: it has to be local, because there exist folding patterns where different regions are layered differently in different parts of the folded state.&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/over-under.svg&quot; alt=&quot;A folding pattern where two regions have different over-under relations at two different parts of the folded state&quot; style=&quot;width:100%;max-width:720px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The paper shows that finding a valid above-below relation for each region can be done using a dynamic programming algorithm in time exponential in the treewidth of this graph, where the base of the exponential is factorial in the &lt;em&gt;ply&lt;/em&gt; of the folding pattern, the maximum number of pieces of paper that all fold on top of each other at any single point. As it also shows, even for patterns of bounded ply, the exponential dependence on treewidth is necessary under standard complexity-theoretic assumptions.&lt;/p&gt;
-
-&lt;p&gt;But what about the dependence on ply? Is that necessary? Why should it be difficult to fold patterns that have many layers, but simple region adjacency graphs?&lt;/p&gt;
-
-&lt;p&gt;Unlike for treewidth, I don’t have a proof that high ply makes the problem hard. But there is a natural class of problems for which the ply is very high, the treewidth is tiny, and the complexity of finding a flat folding is a famous open problem. This is the &lt;a href=&quot;https://en.wikipedia.org/wiki/Map_folding&quot;&gt;map folding problem&lt;/a&gt;, where the input is just a rectangular grid with labeled creases, and the desired output is a flat-folded state respecting the given labeling. Its region adjacency graph is just a single vertex (everything should fold onto a single square), but its ply can be big (the number of squares in the entire grid). Even for a very simple case, a \(2\times 2\) grid, Wikipedia provides the following illustration of the many vertical orderings among the squares of the grid that are possible. Each square is shown with a different color, visible on both of its sides:&lt;/p&gt;
-
-&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/blog/assets/2023/map-foldings.png&quot; alt=&quot;Eight solutions to the 2x2 map folding problem&quot; title=&quot;CC-BY-SA 3.0 image File:MapFoldings-2x2.png by Robert Dickau from Wikimedia commons&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The \(1\times n\) map folding problem is easy: just fold over one square from the end of a strip of \(n\) squares, according to the label of its crease, and then solve the remaining \(1\times (n-1)\) problem recursively, treating the folded-over square and the next square that it is folded onto as a single unit. In a 2012 MIT master’s thesis supervised by Erik Demaine, Thomas Morgan &lt;a href=&quot;http://dspace.mit.edu/handle/1721.1/77030&quot;&gt;announced a solution to the \(2\times n\) map folding problem&lt;/a&gt;, although I don’t know that it was ever published in any other form. The algorithm is complicated, with time bound \(O(n^9)\), and the writing is not always clear.&lt;/p&gt;
-
-&lt;p&gt;The techniques from Morgan’s thesis are very specific to the \(2\times n\) case. Basically, everything you need to know can be recovered from a one-dimensional flat folding of the central crease of the \(2\times n\) grid. At the end of the thesis there is a single paragraph on higher order grids, which (after removing unnecessary complications) boils down to testing all orderings of the squares that are consistent with the above-below relations forced by the crease labels of adjacent squares. The number of orderings can be very small (for instance, if you accordion-fold in one direction and then the other, there is only one consistent ordering) and when it is the algorithm is fast. Beyond that observation, the map folding problem for grids larger than \(2\times n\) appears to be wide open.&lt;/p&gt;
-
-&lt;p&gt;(&lt;a href=&quot;https://mathstodon.xyz/@11011110/110585322158385767&quot;&gt;Discuss on Mastodon&lt;/a&gt;)&lt;/p&gt;&lt;p class=&quot;authors&quot;&gt;By David Eppstein&lt;/p&gt;
-  </content>
-    <author>
-      <name>David Eppstein</name>
-      <uri>https://11011110.github.io/blog/</uri>
     </author>
   </entry>
 
