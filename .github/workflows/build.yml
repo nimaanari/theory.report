@@ -36,8 +36,6 @@ jobs:
           make build
       - name: Setup Pages
         uses: actions/configure-pages@v3
-        with:
-          host: theory.report
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
