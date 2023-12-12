@@ -6,22 +6,30 @@ module Pluto
 module Model
 class Feed < ActiveRecord::Base
     alias_method :old_deep_update_from_struct!, :deep_update_from_struct!
-    ARXIV_UPDATE_RE = %r{\([^\]\(]*\].+\)\z}
-    TITLE_RE = %r{(.*)\. \([^\(]*\)\z}
     def deep_update_from_struct!(data)
         if self.location == 'arxiv' then
-            date = DateTime.parse(self.http_last_modified)
-            data.items = data.items.select {|item| !ARXIV_UPDATE_RE.match?(item.title)}
+            data.items = data.items.select {|item| item.id.end_with?('v1')}
             data.items.each do |item|
-                if item.updated.nil? &&
-                   item.published.nil?
-                   item.published_local = date
-                   item.published = date
+                # convert to eastern time
+                date = item.published.in_time_zone('Eastern Time (US & Canada)')
+                # if time is before 2pm, then add a day
+                if date.hour >= 14 then
+                    date = date + 1.day
                 end
-                if TITLE_RE.match?(item.title) then
-                    item.title = TITLE_RE.match(item.title)[1]
+                date = date.change(hour: 20, min: 0, sec: 0)
+                if date.wday == 0 then
+                    date = date + 1.day
+                elsif date.wday == 5 then
+                    date = date + 2.day
+                elsif date.wday == 6 then
+                    date = date + 2.day
                 end
-                item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors[0].text + '</p>' +
+                # convert back to UTC
+                date = date.in_time_zone('UTC')
+                item.published = date
+                item.updated = date
+                item.published_local = date
+                item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors.map{|author| '<a href="https://dblp.uni-trier.de/search?q='+CGI.escape(author.to_s)+'">'+author.to_s+'</a>'}.join(", ") + '</p>' +
                                item.summary
             end
         else
