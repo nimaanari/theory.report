@@ -60,7 +60,9 @@ class Feed < ActiveRecord::Base
             end
         end
         data.items.each do |item|
-            item.content = globalize_imgs(item.content, item.url)
+            if !item.content.nil? then
+                item.content = globalize_imgs(item.content, item.url)
+            end
         end
         old_deep_update_from_struct!(data)
     end
