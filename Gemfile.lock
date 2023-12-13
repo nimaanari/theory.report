@@ -36,6 +36,10 @@ GEM
       activerecord
       logutils (>= 0.6.1)
     minitest (5.16.2)
+    nokogiri (1.15.5-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.5-x86_64-linux)
+      racc (~> 1.4)
     opmlparser (1.0.1)
     pakman (1.1.0)
       fetcher (>= 0.4.5)
@@ -79,6 +83,7 @@ GEM
     props-activerecord (0.2.0)
       activerecord
       props (>= 1.2.0)
+    racc (1.7.3)
     rexml (3.2.4)
     rss (0.2.9)
       rexml
@@ -99,6 +104,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  nokogiri
   pluto
   rss
   sqlite3

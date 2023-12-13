@@ -1,6 +1,20 @@
 # encoding: utf-8
 
 require 'pluto'
+require 'nokogiri'
+require 'uri'
+
+def globalize_imgs(src, base_url)
+    begin
+        doc = Nokogiri::HTML(src)
+        doc.xpath('//img/@src').each do |node|
+            node.value = URI(base_url).merge(node.value).to_s
+        end
+        return doc.to_s
+    rescue
+        return src
+    end
+end
 
 module Pluto
 module Model
@@ -44,6 +58,9 @@ class Feed < ActiveRecord::Base
                 end
                 item.updated = item.published
             end
+        end
+        data.items.each do |item|
+            item.content = globalize_imgs(item.content, item.url)
         end
         old_deep_update_from_struct!(data)
     end
