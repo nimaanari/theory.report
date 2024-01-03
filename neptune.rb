@@ -16,12 +16,34 @@ def globalize_imgs(src, base_url)
     end
 end
 
+def quote_dc_creators(src)
+    begin
+        doc = Nokogiri::XML(src)
+        doc.xpath('//dc:creator').each do |node|
+            node.content = node.children.select{|child| !child.text?}.map{|child| child.to_s}.join(', ')
+        end
+        return doc.to_s
+    rescue
+        return src
+    end
+end
+
 module Pluto
+class FeedFetcherCondGetWithCache
+    alias_method :old_fetch, :fetch
+    def fetch(feed_rec)
+        text = old_fetch(feed_rec)
+        if feed_rec.location == 'arxiv-rss' then
+            text = quote_dc_creators(text)
+        end
+        return text
+    end
+end
 module Model
 class Feed < ActiveRecord::Base
     alias_method :old_deep_update_from_struct!, :deep_update_from_struct!
     def deep_update_from_struct!(data)
-        if self.location == 'arxiv' then
+        if self.location == 'arxiv-api' then
             data.items = data.items.select {|item| item.id.end_with?('v1')}
             data.items.each do |item|
                 # convert to eastern time
@@ -44,6 +66,15 @@ class Feed < ActiveRecord::Base
                 item.updated = date
                 item.published_local = date
                 item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors.map{|author| '<a href="https://dblp.uni-trier.de/search?q='+CGI.escape(author.to_s)+'">'+author.to_s+'</a>'}.join(", ") + '</p>' +
+                               item.summary
+            end
+        elsif self.location == 'arxiv-rss' then
+            data.items = data.items.select {|item| item.id.end_with?('v1')}
+            date = data.published
+            data.items.each do |item|
+                item.published = date
+                item.updated = date
+                item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors[0].text + '</p>' +
                                item.summary
             end
         else
