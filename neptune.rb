@@ -118,7 +118,7 @@ class Feed < ActiveRecord::Base
     def deep_update_from_struct!(data)
         if self.location == 'arxiv-rss2' then
             puts data.inspect
-            date = data.updated
+            date = data.published
             data.items.select {|item| item.id.end_with?('v1')}
             data.items.each do |item|
                 item.published = date
