@@ -185,6 +185,18 @@ class Feed < ActiveRecord::Base
             if !item.summary.nil? then
                 item.summary = globalize_imgs(item.summary, item.url)
             end
+            if item.published then
+                if item.published > Time.now then
+                    # set it to a ten days ago
+                    item.published = Time.now - 10.days
+                end
+            end
+            if item.updated then
+                if item.updated > Time.now then
+                    # set it to a ten days ago
+                    item.updated = Time.now - 10.days
+                end
+            end
         end
         old_deep_update_from_struct!(data)
     end
