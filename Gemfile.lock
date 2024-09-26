@@ -1,24 +1,34 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (6.1.6.1)
-      activesupport (= 6.1.6.1)
-    activerecord (6.1.6.1)
-      activemodel (= 6.1.6.1)
-      activesupport (= 6.1.6.1)
+    activemodel (7.2.1)
+      activesupport (= 7.2.1)
+    activerecord (7.2.1)
+      activemodel (= 7.2.1)
+      activesupport (= 7.2.1)
+      timeout (>= 0.4.0)
     activerecord-utils (0.4.1)
       activerecord
       logutils
-    activesupport (6.1.6.1)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
+    activesupport (7.2.1)
+      base64
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
       minitest (>= 5.1)
-      tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
     activityutils (0.1.2)
       logutils (>= 0.6.1)
-    concurrent-ruby (1.1.10)
+    base64 (0.2.0)
+    bigdecimal (3.1.8)
+    concurrent-ruby (1.3.4)
+    connection_pool (2.4.1)
     date-formatter (0.1.1)
+    drb (2.2.1)
     feedfilter (1.1.1)
       textutils (>= 1.0.1)
     feedparser (2.2.0)
@@ -26,23 +36,28 @@ GEM
       textutils (>= 1.0.0)
     fetcher (0.4.5)
       logutils (>= 0.6)
-    gli (2.21.0)
-    i18n (1.12.0)
+    gli (2.21.5)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     iniparser (1.0.1)
-    liquid (5.4.0)
+    liquid (5.5.1)
+    logger (1.6.1)
     logutils (0.6.1)
     logutils-activerecord (0.2.1)
       activerecord
       logutils (>= 0.6.1)
-    mini_portile2 (2.8.5)
-    minitest (5.16.2)
-    nokogiri (1.15.5)
-      mini_portile2 (~> 2.8.2)
+    minitest (5.25.1)
+    nokogiri (1.16.7-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-darwin)
+    nokogiri (1.16.7-arm-linux)
       racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-linux)
+    nokogiri (1.16.7-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.7-x86-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.7-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
     opmlparser (1.0.1)
     pakman (1.1.0)
@@ -56,14 +71,14 @@ GEM
       pluto-tasks (>= 1.5.3)
       pluto-update (>= 1.6.3)
       sqlite3
-    pluto-feedfetcher (0.1.6)
+    pluto-feedfetcher (0.1.7)
       fetcher (>= 0.4.5)
       pluto-models (>= 1.5.4)
     pluto-merge (1.1.0)
       fetcher (>= 0.4.4)
       pakman (>= 0.5.0)
       pluto-models (>= 1.2.2)
-    pluto-models (1.6.2)
+    pluto-models (1.6.3)
       activerecord
       activerecord-utils (>= 0.4.0)
       activityutils (>= 0.1.1)
@@ -87,25 +102,46 @@ GEM
     props-activerecord (0.2.0)
       activerecord
       props (>= 1.2.0)
-    racc (1.7.3)
-    rexml (3.2.4)
-    rss (0.2.9)
+    racc (1.8.1)
+    rexml (3.3.7)
+    rss (0.3.1)
       rexml
     rubyzip (2.3.2)
-    sqlite3 (1.4.4)
+    securerandom (0.3.1)
+    sqlite3 (2.1.0-aarch64-linux-gnu)
+    sqlite3 (2.1.0-aarch64-linux-musl)
+    sqlite3 (2.1.0-arm-linux-gnu)
+    sqlite3 (2.1.0-arm-linux-musl)
+    sqlite3 (2.1.0-arm64-darwin)
+    sqlite3 (2.1.0-x86-linux-gnu)
+    sqlite3 (2.1.0-x86-linux-musl)
+    sqlite3 (2.1.0-x86_64-darwin)
+    sqlite3 (2.1.0-x86_64-linux-gnu)
+    sqlite3 (2.1.0-x86_64-linux-musl)
     textutils (1.4.0)
       activesupport
       logutils (>= 0.6.1)
       props (>= 1.1.2)
       rubyzip (>= 1.0.0)
-    tzinfo (2.0.5)
+    timeout (0.4.1)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    zeitwerk (2.6.0)
 
 PLATFORMS
-  arm64-darwin-23
-  x86_64-darwin-20
+  aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  x86-linux
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
   x86_64-linux
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   activerecord
@@ -115,4 +151,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   2.2.4
+   2.5.4
