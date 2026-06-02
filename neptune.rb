@@ -3,17 +3,105 @@
 require 'pluto'
 require 'nokogiri'
 require 'uri'
+require 'cgi'
 require 'i18n'
 
-def globalize_imgs(src, base_url)
-    begin
-        doc = Nokogiri::HTML(src)
-        doc.xpath('//img/@src').each do |node|
-            node.value = URI(base_url).merge(node.value).to_s
+ALLOWED_HTML_TAGS = %w[
+    a b blockquote br cite code div em i img li ol p pre q span strong sub sup
+    table tbody td th thead tr ul
+].freeze
+ALLOWED_HTML_CLASSES = %w[arxiv-authors authors].freeze
+DANGEROUS_HTML_TAGS = %w[
+    base button embed form iframe input link meta object script select style svg
+    textarea
+].freeze
+
+def absolute_feed_url(value, base_url)
+    value = value.to_s.strip
+    return value if value.empty? || base_url.nil? || base_url.to_s.empty?
+    URI(base_url).merge(value).to_s
+rescue URI::Error
+    value
+end
+
+def safe_url?(value, schemes)
+    uri = URI.parse(value.to_s.strip)
+    uri.scheme.nil? || schemes.include?(uri.scheme.downcase)
+rescue URI::Error
+    false
+end
+
+def sanitize_node_attributes(node, base_url)
+    name = node.name.downcase
+    attrs = node.attribute_nodes.to_h { |attr| [attr.name.downcase, attr.value] }
+    node.attribute_nodes.each { |attr| node.remove_attribute(attr.name) }
+
+    if name == 'a'
+        href = absolute_feed_url(attrs['href'], base_url)
+        if !href.empty? && safe_url?(href, %w[http https mailto])
+            node['href'] = href
+            node['rel'] = 'noopener noreferrer'
         end
-        return doc.to_s
-    rescue
-        return src
+        node['title'] = attrs['title'] if attrs['title'] && !attrs['title'].empty?
+    elsif name == 'img'
+        src = absolute_feed_url(attrs['src'], base_url)
+        return node.remove if src.empty? || !safe_url?(src, %w[http https])
+
+        node['src'] = src
+        node['alt'] = attrs['alt'] if attrs['alt'] && !attrs['alt'].empty?
+        node['title'] = attrs['title'] if attrs['title'] && !attrs['title'].empty?
+        %w[width height].each do |dimension|
+            value = attrs[dimension]
+            node[dimension] = value if value&.match?(/\A\d{1,4}\z/)
+        end
+        node['loading'] = 'lazy'
+    elsif name == 'p'
+        classes = attrs['class'].to_s.split.select { |klass| ALLOWED_HTML_CLASSES.include?(klass) }
+        node['class'] = classes.join(' ') unless classes.empty?
+    end
+end
+
+def sanitize_html_fragment(src, base_url = nil)
+    fragment = Nokogiri::HTML.fragment(src.to_s)
+    nodes = []
+    fragment.traverse { |node| nodes << node }
+    nodes.reverse_each do |node|
+        next if node == fragment
+
+        if node.comment?
+            node.remove
+        elsif node.element?
+            name = node.name.downcase
+            if DANGEROUS_HTML_TAGS.include?(name)
+                node.remove
+            elsif ALLOWED_HTML_TAGS.include?(name)
+                sanitize_node_attributes(node, base_url)
+            else
+                node.replace(node.children)
+            end
+        end
+    end
+    fragment.to_html
+rescue
+    CGI.escapeHTML(src.to_s)
+end
+
+def globalize_imgs(src, base_url)
+    sanitize_html_fragment(src, base_url)
+end
+
+def author_link(author)
+    author = author.to_s
+    '<a href="https://dblp.uni-trier.de/search?q=' + CGI.escape(author) + '">' +
+        CGI.escapeHTML(author) + '</a>'
+end
+
+def sanitize_stored_items!
+    Pluto::Model::Item.find_each do |item|
+        attrs = {}
+        attrs[:summary] = sanitize_html_fragment(item.summary, item.url) if item.summary.present?
+        attrs[:content] = sanitize_html_fragment(item.content, item.url) if item.content.present?
+        item.update_columns(attrs) unless attrs.empty?
     end
 end
 
@@ -102,6 +190,13 @@ def replace_latex_accents(s)
 end
 
 module Pluto
+class Formatter
+    alias_method :old_make_for, :make_for
+    def make_for(site_key, manifest_name, output_path)
+        sanitize_stored_items!
+        old_make_for(site_key, manifest_name, output_path)
+    end
+end
 class FeedFetcherCondGetWithCache
     alias_method :old_fetch, :fetch
     def fetch(feed_rec)
@@ -127,7 +222,7 @@ class Feed < ActiveRecord::Base
                 item.summary = item.summary.split("\n")[1..-1].join("\n")
                 # remove the beginning word abstract
                 item.summary = item.summary[10..-1]
-                authors = item.authors[0].text.split(', ').map{|author| replace_latex_accents(author)}.map{|author| '<a href="https://dblp.uni-trier.de/search?q='+CGI.escape(author.to_s)+'">'+author.to_s+'</a>'}
+                authors = item.authors[0].text.split(', ').map{|author| replace_latex_accents(author)}.map{|author| author_link(author)}
                 item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + authors.join(', ') + '</p>' +
                                  item.summary
             end
@@ -153,7 +248,7 @@ class Feed < ActiveRecord::Base
                 item.published = date
                 item.updated = date
                 item.published_local = date
-                item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors.map{|author| '<a href="https://dblp.uni-trier.de/search?q='+CGI.escape(author.to_s)+'">'+author.to_s+'</a>'}.join(", ") + '</p>' +
+                item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors.map{|author| author_link(author)}.join(", ") + '</p>' +
                                item.summary
             end
         elsif self.location == 'arxiv-rss' then
@@ -162,13 +257,13 @@ class Feed < ActiveRecord::Base
             data.items.each do |item|
                 item.published = date
                 item.updated = date
-                item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + item.authors[0].text + '</p>' +
+                item.summary = '<p class="arxiv-authors"><b>Authors:</b> ' + CGI.escapeHTML(item.authors[0].text.to_s) + '</p>' +
                                item.summary
             end
         else
             data.items.each do |item|
                 if !item.authors.nil? && !item.authors.empty? then
-                    authors = item.authors.join(", ")
+                    authors = CGI.escapeHTML(item.authors.join(", "))
                     if !item.content.nil? then
                         item.content = item.content + '<p class="authors">By '+authors+'</p>'
                     elsif !item.summary.nil? then

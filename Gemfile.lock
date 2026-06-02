@@ -1,34 +1,36 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (7.2.1)
-      activesupport (= 7.2.1)
-    activerecord (7.2.1)
-      activemodel (= 7.2.1)
-      activesupport (= 7.2.1)
+    activemodel (7.2.3.1)
+      activesupport (= 7.2.3.1)
+    activerecord (7.2.3.1)
+      activemodel (= 7.2.3.1)
+      activesupport (= 7.2.3.1)
       timeout (>= 0.4.0)
     activerecord-utils (0.4.1)
       activerecord
       logutils
-    activesupport (7.2.1)
+    activesupport (7.2.3.1)
       base64
+      benchmark (>= 0.3)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.3.1)
       connection_pool (>= 2.2.5)
       drb
       i18n (>= 1.6, < 2)
       logger (>= 1.4.2)
-      minitest (>= 5.1)
+      minitest (>= 5.1, < 6)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
     activityutils (0.1.2)
       logutils (>= 0.6.1)
-    base64 (0.2.0)
-    bigdecimal (3.1.8)
-    concurrent-ruby (1.3.4)
-    connection_pool (2.4.1)
+    base64 (0.3.0)
+    benchmark (0.5.0)
+    bigdecimal (4.1.2)
+    concurrent-ruby (1.3.6)
+    connection_pool (3.0.2)
     date-formatter (0.1.1)
-    drb (2.2.1)
+    drb (2.2.3)
     feedfilter (1.1.1)
       textutils (>= 1.0.1)
     feedparser (2.2.0)
@@ -37,27 +39,35 @@ GEM
     fetcher (0.4.5)
       logutils (>= 0.6)
     gli (2.21.5)
-    i18n (1.14.6)
+    i18n (1.14.8)
       concurrent-ruby (~> 1.0)
     iniparser (1.0.1)
     liquid (5.5.1)
-    logger (1.6.1)
+    logger (1.7.0)
     logutils (0.6.1)
     logutils-activerecord (0.2.1)
       activerecord
       logutils (>= 0.6.1)
-    minitest (5.25.1)
-    nokogiri (1.16.7-aarch64-linux)
+    mini_portile2 (2.8.9)
+    minitest (5.27.0)
+    nokogiri (1.19.3)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.16.7-arm-linux)
+    nokogiri (1.19.3-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.16.7-arm64-darwin)
+    nokogiri (1.19.3-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86-linux)
+    nokogiri (1.19.3-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-darwin)
+    nokogiri (1.19.3-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-linux)
+    nokogiri (1.19.3-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.3-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.3-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.3-x86_64-linux-musl)
       racc (~> 1.4)
     opmlparser (1.0.1)
     pakman (1.1.0)
@@ -103,11 +113,11 @@ GEM
       activerecord
       props (>= 1.2.0)
     racc (1.8.1)
-    rexml (3.3.7)
+    rexml (3.4.4)
     rss (0.3.1)
       rexml
     rubyzip (2.3.2)
-    securerandom (0.3.1)
+    securerandom (0.4.1)
     sqlite3 (2.1.0-aarch64-linux-gnu)
     sqlite3 (2.1.0-aarch64-linux-musl)
     sqlite3 (2.1.0-arm-linux-gnu)
@@ -123,7 +133,7 @@ GEM
       logutils (>= 0.6.1)
       props (>= 1.1.2)
       rubyzip (>= 1.0.0)
-    timeout (0.4.1)
+    timeout (0.6.1)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
 
@@ -144,9 +154,10 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  activerecord
-  nokogiri
+  activerecord (~> 7.2.3, >= 7.2.3.1)
+  nokogiri (>= 1.19.3)
   pluto
+  rexml (>= 3.4.4)
   rss
   sqlite3
 
