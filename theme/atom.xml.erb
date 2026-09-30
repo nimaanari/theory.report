@@ -9,7 +9,7 @@
   <generator uri="http://feedreader.github.io/"><%= Pluto.generator %></generator>
 
 <%
-   items = site.items.latest.limit(50)
+   items = site.items.latest.limit(500)
    ItemCursor.new( items ).each do |item, new_date, new_feed|
 %>
   <entry xml:lang="en">
