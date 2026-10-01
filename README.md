@@ -11,14 +11,14 @@ Pull requests to update the list of feeds are welcome. Please only make changes 
 ## Recent-post limits
 
 Each arXiv category in `theory.ini` requests the latest 1,000 entries by submission
-date, up from 200. The HTML page, RSS feed, and Atom feed each include the latest
-500 posts across all feeds, up from 50. Keep the output limits in
+date. The HTML page, RSS feed, and Atom feed each include the latest
+200 posts across all feeds. Keep the output limits in
 `theme/index.html.erb`, `theme/rss.xml.erb`, and `theme/atom.xml.erb` in sync.
 
-These bounded increases provide more room during conference submission surges
-while retaining one request per category per fetch and a static site. They allow
-up to five times as many arXiv entries to be downloaded and processed, and ten
-times as many posts to be rendered. The 1,000-entry requests stay within the
+The larger input window preserves coverage during conference submission surges,
+with one request per category per fetch. The smaller output window limits page
+size and the number of articles updated by the display controls. It does not
+remove cached posts from the database. The 1,000-entry requests stay within the
 [arXiv API's recommended result size](https://info.arxiv.org/help/api/user-manual.html#3112-start-and-max_results-paging).
 The existing first-version filter still applies, so fewer than 1,000 entries per
 category may be retained. This is a larger recent-post window, not a complete

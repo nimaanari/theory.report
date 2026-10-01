@@ -73,7 +73,7 @@
 
   <div class="tr-articles tr-shrink">
     <%
-      items = site.items.latest.limit(500)
+      items = site.items.latest.limit(200)
       ItemCursor.new( items ).each do |item, new_date, new_feed|
     %>
     <% if new_date %>
